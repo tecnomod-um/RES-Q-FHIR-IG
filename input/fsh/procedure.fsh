@@ -49,7 +49,7 @@ Id: carotid-imaging-modality-vs
 * ^status = #active
 * include SCT#58920005 "Angiography of carotid artery (procedure)"
 * include SCT#9171000087102 "Doppler ultrasonography of carotid arteries (procedure)"
-* include SCT#419949007 "Computed tomography angiography of intracranial artery with contrast (procedure)"
+* include SCT#396205005 "Computed tomography of brain without radiopaque contrast (procedure)"
 * include SCT#1366357009 "Magnetic resonance imaging angiography of intracranial artery (procedure)"
 
 

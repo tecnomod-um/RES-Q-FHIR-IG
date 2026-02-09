@@ -31,7 +31,7 @@ Codes specifying the specific complications of thrombectomy to record.
   "name" : "ThrombectomyComplicationCS",
   "title" : "Thrombectomy Complication Code System",
   "status" : "active",
-  "date" : "2026-02-09T11:30:19+00:00",
+  "date" : "2026-02-09T12:15:55+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

@@ -50,7 +50,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "name" : "AfibFlutterStatusVS",
   "title" : "Atrial Fibrillation or Flutter Status ValueSet",
   "status" : "active",
-  "date" : "2026-02-09T11:30:19+00:00",
+  "date" : "2026-02-09T12:15:55+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "MTICICodeVS"] ; # 
   fhir:title [ fhir:v "mTICI Score Codes ValueSet"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-02-09T11:30:19+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-09T12:15:55+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;

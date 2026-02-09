@@ -3,7 +3,7 @@ RESQIG : Validation Results
 
 err = 4, warn = 125, info = 42
 IG Publisher Version: 2.1.0
-Generated Mon Feb 09 11:32:44 UTC 2026. FHIR version 5.0.0 for RES-Q-FHIR-IG#0.1.0 (canonical = http://tecnomod-um.org)
+Generated Mon Feb 09 12:21:51 UTC 2026. FHIR version 5.0.0 for RES-Q-FHIR-IG#0.1.0 (canonical = http://tecnomod-um.org)
  Build Errors : 1 / 706 / 0
  /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/CodeSystem-assessment-context-cs : 0 / 0 / 1
  /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/CodeSystem-brain-imaging-type-cs : 0 / 2 / 2

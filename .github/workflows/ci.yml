@@ -119,9 +119,11 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ig-package
+          path: output/package.tgz
     
       - name: Mostrar estructura de archivos
         run: ls -R .
         
+
 
 

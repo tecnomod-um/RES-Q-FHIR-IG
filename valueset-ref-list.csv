@@ -1,4 +1,4 @@
-URL,Version,Status,OIDs,Name,Title,Descriptino,Uses,Used,Sources
+URL,Version,Status,OIDs,Name,Title,Description,Uses,Used,Sources
 http://hl7.org/fhir/ValueSet/event-status,5.0.0,draft,"2.16.840.1.113883.4.642.3.109",EventStatus,EventStatus,"Codes identifying the lifecycle stage of an event.","StructureDefinition/stroke-mechanical-procedure-profile,StructureDefinition/stroke-carotid-imaging-procedure-profile,StructureDefinition/stroke-brain-imaging-procedure-profile,StructureDefinition/stroke-swallow-procedure-profile","hl7.fhir.r5.core"
 http://hl7.org/fhir/ValueSet/medication-statement-adherence,5.0.0,draft,"2.16.840.1.113883.4.642.3.3090",MedicationStatementAdherenceCodes,MedicationStatement Adherence Codes,"MedicationStatement Adherence Codes","StructureDefinition/prior-medication-statement-profile","hl7.fhir.r5.core"
 http://tecnomod-um.org/ValueSet/admission-source-vs,0.1.0,draft,,AdmissionSourceValueSet,Admission Sources ValueSet,"Defines the modes of transport or pathways by which the patient arrived.",,"SCT"

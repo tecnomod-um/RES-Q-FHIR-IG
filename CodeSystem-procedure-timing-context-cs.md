@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/CodeSystem/procedure-timing-context-cs | *Version*:0.1.0 |
-| Active as of 2025-11-19 | *Computable Name*:ProcedureTimingContextCS |
+| Active as of 2026-02-09 | *Computable Name*:ProcedureTimingContextCS |
 
  
 Codes defining the timing phase of a procedure relative to the encounter start (e.g., acute vs. post-acute). 
@@ -32,7 +32,7 @@ Codes defining the timing phase of a procedure relative to the encounter start (
   "title" : "Procedure Timing Context Code System",
   "status" : "active",
   "experimental" : true,
-  "date" : "2025-11-19T10:08:33+00:00",
+  "date" : "2026-02-09T11:30:19+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

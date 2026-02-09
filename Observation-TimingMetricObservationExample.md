@@ -18,7 +18,7 @@ Profile: [Stroke Timing Metric Observation Profile (R5)](StructureDefinition-tim
 
 **encounter**: [Encounter: extension = true,ICU / Stroke Unit,false,Neurology; status = completed; type = Inpatient Encounter; actualPeriod = 2025-03-01 08:00:00+0000 --> 2025-03-10 12:00:00+0000](Encounter-StrokeEncounterExample.md)
 
-**value**: 30 minute(Details: ucum codemin = 'min')
+**value**: 30 minute (Details: ucum codemin = 'min')
 
 
 

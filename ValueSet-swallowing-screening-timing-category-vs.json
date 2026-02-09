@@ -3,14 +3,14 @@
   "id" : "swallowing-screening-timing-category-vs",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet swallowing-screening-timing-category-vs</b></p><a name=\"swallowing-screening-timing-category-vs\"> </a><a name=\"hcswallowing-screening-timing-category-vs\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include all codes defined in <a href=\"CodeSystem-swallow-screen-time-cs.html\"><code>http://tecnomod-um.org/CodeSystem/swallow-screen-time-cs</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;0.1.0</span></li><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicity stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/281380002\">281380002</a></td><td>24 hours post admission (qualifier value)</td></tr><tr><td><a href=\"http://snomed.info/id/281381003\">281381003</a></td><td>More than 24 hours after admission (qualifier value)</td></tr></table></li></ul></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet swallowing-screening-timing-category-vs</b></p><a name=\"swallowing-screening-timing-category-vs\"> </a><a name=\"hcswallowing-screening-timing-category-vs\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include all codes defined in <a href=\"CodeSystem-swallow-screen-time-cs.html\"><code>http://tecnomod-um.org/CodeSystem/swallow-screen-time-cs</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;0.1.0</span></li><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/281380002\">281380002</a></td><td>24 hours post admission (qualifier value)</td></tr><tr><td><a href=\"http://snomed.info/id/281381003\">281381003</a></td><td>More than 24 hours after admission (qualifier value)</td></tr></table></li></ul></div>"
   },
   "url" : "http://tecnomod-um.org/ValueSet/swallowing-screening-timing-category-vs",
   "version" : "0.1.0",
   "name" : "SwallowingScreeningTimingCategoryVS",
   "title" : "Swallowing Screening Timing Category ValueSet",
   "status" : "active",
-  "date" : "2025-11-19T10:08:33+00:00",
+  "date" : "2026-02-09T11:30:19+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

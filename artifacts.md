@@ -17,7 +17,7 @@ These define constraints on FHIR resources for systems conforming to this implem
 | [Base Profile for Stroke-Related Observations](StructureDefinition-base-stroke-observation.md) | Constraints for observations recorded in the context of stroke care. |
 | [Discharge Medication Request Profile](StructureDefinition-discharge-medication-request-profile.md) | Represents a medication prescription made as part of the patient's discharge plan, categorized as community administration. |
 | [Patient with SNOMED Gender and Age (extensions)](StructureDefinition-patient-age-gender-snomed-profile.md) | Profile that adds an integer age extension and a SNOMED-based gender extension. |
-| [Prior Medication Statement Profile (R5)](StructureDefinition-prior-medication-statement-profile.md) | Represents a statement about the patient's medication use**before**the index event. |
+| [Prior Medication Statement Profile (R5)](StructureDefinition-prior-medication-statement-profile.md) | Represents a statement about the patient's medication use **before** the index event. |
 | [Specific Stroke Finding Observation Profile (R5)](StructureDefinition-specific-finding-observation-profile.md) | Profile for specific coded findings like Afib/Flutter status or mTICI score. |
 | [Stroke Brain Imaging Procedure Profile (R5)](StructureDefinition-stroke-brain-imaging-procedure-profile.md) | Procedure profile to record key stroke procedures, including status, timing, complications, reasons, and context. |
 | [Stroke Carotid Imaging Procedure Profile (R5)](StructureDefinition-stroke-carotid-imaging-procedure-profile.md) | Procedure profile to record key stroke procedures, including status, timing, complications, reasons, and context. |

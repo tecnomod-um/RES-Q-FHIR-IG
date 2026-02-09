@@ -28,10 +28,6 @@ To provide a standardized set of SNOMED CT concepts representing stroke-related 
 
 ### Expansion
 
-Expansion from tx.fhir.org based on SNOMED CT International edition 01-Feb 2025
-
-This value set contains 11 concepts
-
 -------
 
  Explanation of the columns that may appear on this page: 

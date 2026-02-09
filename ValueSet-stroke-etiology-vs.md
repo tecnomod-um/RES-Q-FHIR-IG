@@ -28,13 +28,6 @@ To support classification of stroke etiology using a mix of local codes and sele
 
 ### Expansion
 
-Expansion from tx.fhir.org based on:
-
-* SNOMED CT International edition 01-Feb 2025
-* [codesystem Stroke Etiology Code System v0.1.0 (CodeSystem)](CodeSystem-stroke-etiology-cs.md)
-
-This value set contains 5 concepts
-
 -------
 
  Explanation of the columns that may appear on this page: 

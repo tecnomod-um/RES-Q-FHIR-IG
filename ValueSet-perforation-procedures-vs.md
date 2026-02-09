@@ -24,10 +24,6 @@ ValueSet containing SNOMED CT codes representing a range of perforation procedur
 
 ### Expansion
 
-Expansion from tx.fhir.org based on SNOMED CT International edition 01-Feb 2025
-
-This value set contains 2 concepts
-
 -------
 
  Explanation of the columns that may appear on this page: 

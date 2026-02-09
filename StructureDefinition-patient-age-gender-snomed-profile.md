@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/patient-age-gender-snomed-profile | *Version*:0.1.0 |
-| Draft as of 2025-11-19 | *Computable Name*:PatientAgeGenderSNOMEDProfile |
+| Draft as of 2026-02-09 | *Computable Name*:PatientAgeGenderSNOMEDProfile |
 
  
 Profile that adds an integer age extension and a SNOMED-based gender extension. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-patient-age-gender-s
   "name" : "PatientAgeGenderSNOMEDProfile",
   "title" : "Patient with SNOMED Gender and Age (extensions)",
   "status" : "draft",
-  "date" : "2025-11-19T10:08:33+00:00",
+  "date" : "2026-02-09T11:30:19+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

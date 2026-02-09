@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/thrombectomy-complication-vs | *Version*:0.1.0 |
-| Active as of 2025-11-19 | *Computable Name*:ThrombectomyComplicationVS |
+| Active as of 2026-02-09 | *Computable Name*:ThrombectomyComplicationVS |
 
  
 Defines the specific complications of thrombectomy to record. 
@@ -23,10 +23,6 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
  
 
 ### Expansion
-
-Expansion from tx.fhir.org based on SNOMED CT International edition 01-Feb 2025
-
-This value set contains 1 concepts
 
 -------
 
@@ -54,7 +50,7 @@ This value set contains 1 concepts
   "name" : "ThrombectomyComplicationVS",
   "title" : "Thrombectomy Complication ValueSet",
   "status" : "active",
-  "date" : "2025-11-19T10:08:33+00:00",
+  "date" : "2026-02-09T11:30:19+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

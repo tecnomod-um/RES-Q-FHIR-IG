@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/carotid-imaging-modality-vs | *Version*:0.1.0 |
-| Active as of 2025-11-19 | *Computable Name*:CarotidImagingModalityVS |
+| Active as of 2026-02-09 | *Computable Name*:CarotidImagingModalityVS |
 
  
 Defines codes for different types of carotid artery imaging. 
@@ -23,10 +23,6 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
  
 
 ### Expansion
-
-Expansion from tx.fhir.org based on SNOMED CT International edition 01-Feb 2025
-
-This value set contains 3 concepts
 
 -------
 
@@ -54,7 +50,7 @@ This value set contains 3 concepts
   "name" : "CarotidImagingModalityVS",
   "title" : "Carotid Arteries Imaging Modality ValueSet",
   "status" : "active",
-  "date" : "2025-11-19T10:08:33+00:00",
+  "date" : "2026-02-09T11:30:19+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -82,8 +78,8 @@ This value set contains 3 concepts
             "display" : "Doppler ultrasonography of carotid arteries (procedure)"
           },
           {
-            "code" : "419949007",
-            "display" : "Computed tomography angiography of intracranial artery with contrast (procedure)"
+            "code" : "396205005",
+            "display" : "Computed tomography of brain without radiopaque contrast (procedure)"
           },
           {
             "code" : "1366357009",

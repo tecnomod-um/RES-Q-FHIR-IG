@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/stroke-circumstance-observation-profile | *Version*:0.1.0 |
-| Draft as of 2025-11-19 | *Computable Name*:StrokeCircumstanceObservationProfile |
+| Draft as of 2026-02-09 | *Computable Name*:StrokeCircumstanceObservationProfile |
 
  
 Profile for recording findings about stroke onset circumstances (In-hospital, Wake-up). 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-stroke-circumstance-
   "name" : "StrokeCircumstanceObservationProfile",
   "title" : "Stroke Circumstance Observation Profile (R5)",
   "status" : "draft",
-  "date" : "2025-11-19T10:08:33+00:00",
+  "date" : "2026-02-09T11:30:19+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

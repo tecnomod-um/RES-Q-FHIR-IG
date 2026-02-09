@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/mtici-code-vs | *Version*:0.1.0 |
-| Active as of 2025-11-19 | *Computable Name*:MTICICodeVS |
+| Active as of 2026-02-09 | *Computable Name*:MTICICodeVS |
 
  
 ValueSet containing the codes to represent the mTICI score used to assess the degree of reperfusion after a thrombectomy procedure. 
@@ -19,8 +19,6 @@ ValueSet containing the codes to represent the mTICI score used to assess the de
 * Included into [StrokeFindingCodesVS](ValueSet-stroke-finding-codes-vs.md)
 
 ### Logical Definition (CLD)
-
-* Include all codes defined in [`http://tecnomod-um.org/CodeSystem/mtici-code-cs`](CodeSystem-mtici-code-cs.md)version 📦0.1.0
 
  
 
@@ -52,7 +50,7 @@ ValueSet containing the codes to represent the mTICI score used to assess the de
   "name" : "MTICICodeVS",
   "title" : "mTICI Score Codes ValueSet",
   "status" : "active",
-  "date" : "2025-11-19T10:08:33+00:00",
+  "date" : "2026-02-09T11:30:19+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

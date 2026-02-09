@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/mrs-score-vs | *Version*:0.1.0 |
-| Active as of 2025-11-19 | *Computable Name*:MRsScoreVS |
+| Active as of 2026-02-09 | *Computable Name*:MRsScoreVS |
 
  
 ValueSet containing the codes for the modified Rankin Scale (mRS) score. 
@@ -19,8 +19,6 @@ ValueSet containing the codes for the modified Rankin Scale (mRS) score.
 * [Stroke Functional Score Observation Profile (R5, Timing Ext)](StructureDefinition-functional-score-observation-profile.md)
 
 ### Logical Definition (CLD)
-
-* Include all codes defined in [`http://tecnomod-um.org/CodeSystem/mrs-score-cs`](CodeSystem-mrs-score-cs.md)version 📦0.1.0
 
  
 
@@ -52,7 +50,7 @@ ValueSet containing the codes for the modified Rankin Scale (mRS) score.
   "name" : "MRsScoreVS",
   "title" : "modified Rankin Scale (mRS) Score ValueSet",
   "status" : "active",
-  "date" : "2025-11-19T10:08:33+00:00",
+  "date" : "2026-02-09T11:30:19+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

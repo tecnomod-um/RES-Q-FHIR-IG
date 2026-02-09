@@ -28,10 +28,6 @@ To provide a consistent set of SNOMED CT concepts for coding definitive stroke-r
 
 ### Expansion
 
-Expansion from tx.fhir.org based on SNOMED CT International edition 01-Feb 2025
-
-This value set contains 5 concepts
-
 -------
 
  Explanation of the columns that may appear on this page: 

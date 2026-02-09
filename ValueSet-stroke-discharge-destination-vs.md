@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/stroke-discharge-destination-vs | *Version*:0.1.0 |
-| Active as of 2025-11-19 | *Computable Name*:StrokeDischargeDestinationVS |
+| Active as of 2026-02-09 | *Computable Name*:StrokeDischargeDestinationVS |
 
  
 Defines the possible destinations of the patient upon discharge from the encounter. 
@@ -23,13 +23,6 @@ Defines the possible destinations of the patient upon discharge from the encount
  
 
 ### Expansion
-
-Expansion from tx.fhir.org based on:
-
-* SNOMED CT International edition 01-Feb 2025
-* [codesystem Stroke Discharge Destination Code System v0.1.0 (CodeSystem)](CodeSystem-stroke-discharge-destination-cs.md)
-
-This value set contains 5 concepts
 
 -------
 
@@ -57,7 +50,7 @@ This value set contains 5 concepts
   "name" : "StrokeDischargeDestinationVS",
   "title" : "Stroke Discharge Destination ValueSet",
   "status" : "active",
-  "date" : "2025-11-19T10:08:33+00:00",
+  "date" : "2026-02-09T11:30:19+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

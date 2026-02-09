@@ -28,10 +28,6 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
 
 ### Expansion
 
-Expansion from tx.fhir.org based on SNOMED CT International edition 01-Feb 2025
-
-This value set contains 5 concepts
-
 -------
 
  Explanation of the columns that may appear on this page: 

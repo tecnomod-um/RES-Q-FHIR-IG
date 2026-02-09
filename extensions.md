@@ -17,7 +17,7 @@ Extensions let you add well-defined data elements beyond the base FHIR resources
 * **Examples:** look for instances showing the extension “in action” in the Examples section or on each extension’s page.
 * **Versioning & governance:** check `status` (draft/active) and change notes to assess maturity and impact.
 
-> 💡**Tip:**Prefer HL7 standard extensions where possible. Create a custom extension only when no suitable standard one exists.
+> 💡 **Tip:** Prefer HL7 standard extensions where possible. Create a custom extension only when no suitable standard one exists.
 
 * **No entries found (srcpath=extensions)**
 

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/stroke-finding-codes-vs | *Version*:0.1.0 |
-| Active as of 2025-11-19 | *Computable Name*:StrokeFindingCodesVS |
+| Active as of 2026-02-09 | *Computable Name*:StrokeFindingCodesVS |
 
  
 ValueSet for specific coded findings like Afib/Flutter status or mTICI score. 
@@ -20,23 +20,9 @@ ValueSet for specific coded findings like Afib/Flutter status or mTICI score.
 
 ### Logical Definition (CLD)
 
-This value set includes codes based on the following rules:
-
-* Import all the codes that are contained in [Specific Stroke Finding Codes ValueSet](ValueSet-specific-finding-codes-vs.md)
-* Import all the codes that are contained in [mTICI Score Codes ValueSet](ValueSet-mtici-code-vs.md)
-
  
 
 ### Expansion
-
-Expansion from tx.fhir.org based on:
-
-* SNOMED CT International edition 01-Feb 2025
-* [codesystem mTICI Score Codes CodeSystem v0.1.0 (CodeSystem)](CodeSystem-mtici-code-cs.md)
-* [valueset mTICI Score Codes ValueSet v0.1.0 (ValueSet)](ValueSet-mtici-code-vs.md)
-* [valueset Specific Stroke Finding Codes ValueSet v0.1.0 (ValueSet)](ValueSet-specific-finding-codes-vs.md)
-
-This value set contains 3 concepts
 
 -------
 
@@ -64,7 +50,7 @@ This value set contains 3 concepts
   "name" : "StrokeFindingCodesVS",
   "title" : "Specific Stroke Finding Codes ValueSet",
   "status" : "active",
-  "date" : "2025-11-19T10:08:33+00:00",
+  "date" : "2026-02-09T11:30:19+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

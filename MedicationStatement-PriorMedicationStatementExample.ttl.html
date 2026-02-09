@@ -214,47 +214,47 @@
 
  a fhir:MedicationStatement ;
   <a href="http://hl7.org/fhir/R5/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot ;
-  <a href="http://hl7.org/fhir/R5/medicationstatement.html#MedicationStatement.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#id">fhir:v</a> &quot;PriorMedicationStatementExample&quot;] ; # 
-  <a href="http://hl7.org/fhir/R5/medicationstatement.html#MedicationStatement.meta">fhir:meta</a> [
-    ( <a href="http://hl7.org/fhir/R5/resource.html#Meta#Meta.profile">fhir:profile</a> [
+  <a href="http://hl7.org/fhir/R5/resource.html#XMedicationStatement.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#id">fhir:v</a> &quot;PriorMedicationStatementExample&quot;] ; # 
+  <a href="http://hl7.org/fhir/R5/resource.html#XMedicationStatement.meta">fhir:meta</a> [
+    ( <a href="http://hl7.org/fhir/R5/resource.html#Meta#XMeta.profile">fhir:profile</a> [
 <a href="http://hl7.org/fhir/R5/datatypes.html#canonical">fhir:v</a> &quot;http://tecnomod-um.org/StructureDefinition/prior-medication-statement-profile&quot;^^xsd:anyURI ;
 <a href="http://hl7.org/fhir/R5/datatypes.html#canonical">fhir:l</a> &lt;http://tecnomod-um.org/StructureDefinition/prior-medication-statement-profile&gt;     ] )
   ] ; # 
-  <a href="http://hl7.org/fhir/R5/medicationstatement.html#MedicationStatement.text">fhir:text</a> [
-<a href="http://hl7.org/fhir/R5/narrative.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
-<a href="http://hl7.org/fhir/R5/narrative.html#Narrative#Narrative.div">fhir:div</a> [ <a href="http://hl7.org/fhir/R5/narrative.html#xhtml">fhir:v</a> &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: MedicationStatement PriorMedicationStatementExample&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;PriorMedicationStatementExample\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcPriorMedicationStatementExample\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-prior-medication-statement-profile.html\&quot;&gt;Prior Medication Statement Profile (R5)&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Recorded&lt;/p&gt;&lt;h3&gt;Medications&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Concept&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes:{http://snomed.info/sct 372756006}\&quot;&gt;Warfarin (substance)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-example-patient.html\&quot;&gt;Anonymous Patient (no stated gender), DoB Unknown&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;encounter&lt;/b&gt;: &lt;code&gt;EncounterExample&lt;/code&gt;&lt;/p&gt;&lt;h3&gt;Reasons&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Reference&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;Condition-StrokeDiagnosisConditionExample.html\&quot;&gt;Condition Transient ischemic attack (disorder)&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;h3&gt;Adherences&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes:{http://hl7.org/fhir/CodeSystem/medication-statement-adherence taking}\&quot;&gt;Taking&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral ]
+  <a href="http://hl7.org/fhir/R5/domainresource.html#XMedicationStatement.text">fhir:text</a> [
+<a href="http://hl7.org/fhir/R5/narrative.html#Narrative#XNarrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
+<a href="http://hl7.org/fhir/R5/narrative.html#Narrative#XNarrative.div">fhir:div</a> [ <a href="http://hl7.org/fhir/R5/narrative.html#xhtml">fhir:v</a> &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: MedicationStatement PriorMedicationStatementExample&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;PriorMedicationStatementExample\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcPriorMedicationStatementExample\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-prior-medication-statement-profile.html\&quot;&gt;Prior Medication Statement Profile (R5)&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Recorded&lt;/p&gt;&lt;h3&gt;Medications&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Concept&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes:{http://snomed.info/sct 372756006}\&quot;&gt;Warfarin (substance)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-example-patient.html\&quot;&gt;Anonymous Patient (no stated gender), DoB Unknown&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;encounter&lt;/b&gt;: &lt;code&gt;EncounterExample&lt;/code&gt;&lt;/p&gt;&lt;h3&gt;Reasons&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Reference&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;Condition-StrokeDiagnosisConditionExample.html\&quot;&gt;Condition Transient ischemic attack (disorder)&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;h3&gt;Adherences&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes:{http://hl7.org/fhir/CodeSystem/medication-statement-adherence taking}\&quot;&gt;Taking&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral ]
   ] ; # 
-  <a href="http://hl7.org/fhir/R5/medicationstatement.html#MedicationStatement.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;recorded&quot;] ; # 
-  <a href="http://hl7.org/fhir/R5/medicationstatement.html#MedicationStatement.medication">fhir:medication</a> [
-<a href="http://hl7.org/fhir/R5/references.html#CodeableReference#CodeableReference.concept">fhir:concept</a> [
-      ( <a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
+  <a href="http://hl7.org/fhir/R5/medicationstatement.html#XMedicationStatement.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;recorded&quot;] ; # 
+  <a href="http://hl7.org/fhir/R5/medicationstatement.html#XMedicationStatement.medication">fhir:medication</a> [
+<a href="http://hl7.org/fhir/R5/references.html#CodeableReference#XCodeableReference.concept">fhir:concept</a> [
+      ( <a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#XCodeableConcept.coding">fhir:coding</a> [
 a sct:372756006 ;
-<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">fhir:system</a> [
+<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#XCoding.system">fhir:system</a> [
 <a href="http://hl7.org/fhir/R5/datatypes.html#uri">fhir:v</a> &quot;http://snomed.info/sct&quot;^^xsd:anyURI ;
 <a href="http://hl7.org/fhir/R5/datatypes.html#uri">fhir:l</a> &lt;http://snomed.info/sct&gt;         ] ;
-<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;372756006&quot; ] ;
-<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;Warfarin (substance)&quot; ]       ] )     ]
+<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#XCoding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;372756006&quot; ] ;
+<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#XCoding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;Warfarin (substance)&quot; ]       ] )     ]
   ] ; # 
-  <a href="http://hl7.org/fhir/R5/medicationstatement.html#MedicationStatement.subject">fhir:subject</a> [
+  <a href="http://hl7.org/fhir/R5/medicationstatement.html#XMedicationStatement.subject">fhir:subject</a> [
 <a href="http://hl7.org/fhir/R5/rdf.html#reference">fhir:l</a> fhir:Patient/example-patient ;
-<a href="http://hl7.org/fhir/R5/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;Patient/example-patient&quot; ]
+<a href="http://hl7.org/fhir/R5/references.html#Reference#XReference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;Patient/example-patient&quot; ]
   ] ; # 
-  <a href="http://hl7.org/fhir/R5/medicationstatement.html#MedicationStatement.encounter">fhir:encounter</a> [
+  <a href="http://hl7.org/fhir/R5/medicationstatement.html#XMedicationStatement.encounter">fhir:encounter</a> [
 <a href="http://hl7.org/fhir/R5/rdf.html#reference">fhir:l</a> fhir:EncounterExample ;
-<a href="http://hl7.org/fhir/R5/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;EncounterExample&quot; ]
+<a href="http://hl7.org/fhir/R5/references.html#Reference#XReference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;EncounterExample&quot; ]
   ] ; # 
-  <a href="http://hl7.org/fhir/R5/medicationstatement.html#MedicationStatement.reason">fhir:reason</a> ( [
-<a href="http://hl7.org/fhir/R5/references.html#CodeableReference#CodeableReference.reference">fhir:reference</a> [
+  <a href="http://hl7.org/fhir/R5/medicationstatement.html#XMedicationStatement.reason">fhir:reason</a> ( [
+<a href="http://hl7.org/fhir/R5/references.html#CodeableReference#XCodeableReference.reference">fhir:reference</a> [
 <a href="http://hl7.org/fhir/R5/rdf.html#reference">fhir:l</a> fhir:Condition/StrokeDiagnosisConditionExample ;
-<a href="http://hl7.org/fhir/R5/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;Condition/StrokeDiagnosisConditionExample&quot; ]     ]
+<a href="http://hl7.org/fhir/R5/references.html#Reference#XReference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;Condition/StrokeDiagnosisConditionExample&quot; ]     ]
   ] ) ; # 
-  <a href="http://hl7.org/fhir/R5/medicationstatement.html#MedicationStatement.adherence">fhir:adherence</a> [
-<a href="http://hl7.org/fhir/R5/medicationstatement.html#MedicationStatement.adherence.code">fhir:code</a> [
-      ( <a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">fhir:system</a> [
+  <a href="http://hl7.org/fhir/R5/medicationstatement.html#XMedicationStatement.adherence">fhir:adherence</a> [
+<a href="http://hl7.org/fhir/R5/medicationstatement.html#XMedicationStatement.adherence.code">fhir:code</a> [
+      ( <a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#XCodeableConcept.coding">fhir:coding</a> [
+<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#XCoding.system">fhir:system</a> [
 <a href="http://hl7.org/fhir/R5/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/CodeSystem/medication-statement-adherence&quot;^^xsd:anyURI ;
 <a href="http://hl7.org/fhir/R5/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/CodeSystem/medication-statement-adherence&gt;         ] ;
-<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;taking&quot; ]       ] )     ]
+<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#XCoding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;taking&quot; ]       ] )     ]
   ] . # 
 
 </code></pre>
@@ -282,7 +282,7 @@ a sct:372756006 ;
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Wed, Nov 19, 2025 10:08+0000">2025-11-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Mon, Feb 9, 2026 11:30+0000">2026-02-09</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

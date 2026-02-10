@@ -44,6 +44,7 @@ Description: "SNOMED CT concepts representing final stroke-related diagnoses int
 * include SCT#266257000 "Transient ischemic attack (disorder)"
 * include SCT#21454007 "Subarachnoid intracranial hemorrhage (disorder)"
 * include SCT#95455008 "Thrombosis of cerebral veins (disorder)"
+* include SCT#373068000 "Undetermined (qualifier value)"
 
 // ValueSet for Stroke Risk Factors (with Displays)
 ValueSet: StrokeRiskFactorVS

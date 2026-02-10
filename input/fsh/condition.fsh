@@ -140,8 +140,6 @@ Id: hemorrhagic-stroke-bleeding-reason-cs
 * ^copyright = "© Tecnomod. This CodeSystem is provided for use within this Implementation Guide."
 * ^caseSensitive = false
 * ^content = #complete
-* #aneurysm "Bleeding Reason Aneurysm" "A cerebral aneurysm was identified as the cause of the patient's hemorrhagic stroke"
-* #malformation "Bleeding Reason Malformation" "A vascular malformation was identified as the cause of the patient's hemorrhagic stroke"
 * #other "Bleeding Reason Other" "Another, less common or unspecified cause of intracranial hemorrhage was identified"
 
 
@@ -164,7 +162,8 @@ Title: "Hemorrhagic Stroke Bleeding Reason ValueSet"
 * ^copyright = "© Tecnomod. This value set includes locally defined codes."
 * ^immutable = false
 * include codes from system HemorrhagicStrokeBleedingReasonCS_URL
-
+* include SCT#128609009 "Intracranial aneurysm (disorder)"
+* include SCT#703221003 "Congenital intracranial vascular malformation (disorder)"
 
 
 CodeSystem: StrokeEtiologyCS

@@ -12,9 +12,9 @@
       "sources" : ["2.16.840.1.113883.4.642.3.109"],
       "uses" : {
       },
-      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile (R5)",
       "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile (R5)",
       "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile (R5)",
+      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile (R5)",
       "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile (R5)"
     },
     {
@@ -128,7 +128,8 @@
       "title" : "Hemorrhagic Stroke Bleeding Reason ValueSet",
       "description" : "Specifies the identified cause of a hemorrhagic stroke, typically used with an extension.",
       "systems" : [
-        "http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs"
+        "http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs",
+        "http://snomed.info/sct"
       ],
       "uses" : {
       },
@@ -330,9 +331,9 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile (R5)",
       "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile (R5)",
       "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile (R5)",
+      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile (R5)",
       "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile (R5)"
     },
     {

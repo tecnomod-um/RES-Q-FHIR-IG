@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/afib-flutter-status-vs | *Version*:0.1.0 |
-| Active as of 2026-02-09 | *Computable Name*:AfibFlutterStatusVS |
+| Active as of 2026-02-10 | *Computable Name*:AfibFlutterStatusVS |
 
  
 ValueSet for the status of Atrial Fibrillation or Flutter assessment. 
@@ -50,7 +50,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "name" : "AfibFlutterStatusVS",
   "title" : "Atrial Fibrillation or Flutter Status ValueSet",
   "status" : "active",
-  "date" : "2026-02-09T12:28:26+00:00",
+  "date" : "2026-02-10T07:57:24+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

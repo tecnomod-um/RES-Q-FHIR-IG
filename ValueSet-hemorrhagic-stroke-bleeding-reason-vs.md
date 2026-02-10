@@ -76,6 +76,19 @@ To enable consistent capture of the underlying cause of bleeding in hemorrhagic 
     "include" : [
       {
         "system" : "http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs"
+      },
+      {
+        "system" : "http://snomed.info/sct",
+        "concept" : [
+          {
+            "code" : "128609009",
+            "display" : "Intracranial aneurysm (disorder)"
+          },
+          {
+            "code" : "703221003",
+            "display" : "Congenital intracranial vascular malformation (disorder)"
+          }
+        ]
       }
     ]
   }

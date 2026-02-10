@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/vital-sign-codes-vs | *Version*:0.1.0 |
-| Active as of 2026-02-09 | *Computable Name*:VitalSignCodesVS |
+| Active as of 2026-02-10 | *Computable Name*:VitalSignCodesVS |
 
  
 Codes for key vital signs relevant to stroke assessment (Systolic, Diastolic BP). 
@@ -51,7 +51,7 @@ Codes for key vital signs relevant to stroke assessment (Systolic, Diastolic BP)
   "title" : "Stroke Vital Sign Codes ValueSet",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-09T12:28:26+00:00",
+  "date" : "2026-02-10T07:57:24+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

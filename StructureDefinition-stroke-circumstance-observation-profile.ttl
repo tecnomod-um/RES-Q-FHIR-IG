@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "StrokeCircumstanceObservationProfile"] ; # 
   fhir:title [ fhir:v "Stroke Circumstance Observation Profile (R5)"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-02-09T12:28:26+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-10T07:57:24+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;

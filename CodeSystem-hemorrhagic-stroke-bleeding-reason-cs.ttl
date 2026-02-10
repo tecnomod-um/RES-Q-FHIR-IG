@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "hemorrhagic-stroke-bleeding-reason-cs"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem hemorrhagic-stroke-bleeding-reason-cs</b></p><a name=\"hemorrhagic-stroke-bleeding-reason-cs\"> </a><a name=\"hchemorrhagic-stroke-bleeding-reason-cs\"> </a><p>This case-insensitive code system <code>http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">aneurysm<a name=\"hemorrhagic-stroke-bleeding-reason-cs-aneurysm\"> </a></td><td>Bleeding Reason Aneurysm</td><td>A cerebral aneurysm was identified as the cause of the patient's hemorrhagic stroke</td></tr><tr><td style=\"white-space:nowrap\">malformation<a name=\"hemorrhagic-stroke-bleeding-reason-cs-malformation\"> </a></td><td>Bleeding Reason Malformation</td><td>A vascular malformation was identified as the cause of the patient's hemorrhagic stroke</td></tr><tr><td style=\"white-space:nowrap\">other<a name=\"hemorrhagic-stroke-bleeding-reason-cs-other\"> </a></td><td>Bleeding Reason Other</td><td>Another, less common or unspecified cause of intracranial hemorrhage was identified</td></tr></table></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem hemorrhagic-stroke-bleeding-reason-cs</b></p><a name=\"hemorrhagic-stroke-bleeding-reason-cs\"> </a><a name=\"hchemorrhagic-stroke-bleeding-reason-cs\"> </a><p>This case-insensitive code system <code>http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs</code> defines the following code:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">other<a name=\"hemorrhagic-stroke-bleeding-reason-cs-other\"> </a></td><td>Bleeding Reason Other</td><td>Another, less common or unspecified cause of intracranial hemorrhage was identified</td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:url [
      fhir:v "http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs"^^xsd:anyURI ;
@@ -36,16 +36,8 @@
   fhir:copyright [ fhir:v "© Tecnomod. This CodeSystem is provided for use within this Implementation Guide."] ; # 
   fhir:caseSensitive [ fhir:v false] ; # 
   fhir:content [ fhir:v "complete"] ; # 
-  fhir:count [ fhir:v "3"^^xsd:nonNegativeInteger] ; # 
+  fhir:count [ fhir:v "1"^^xsd:nonNegativeInteger] ; # 
   fhir:concept ( [
-     fhir:code [ fhir:v "aneurysm" ] ;
-     fhir:display [ fhir:v "Bleeding Reason Aneurysm" ] ;
-     fhir:definition [ fhir:v "A cerebral aneurysm was identified as the cause of the patient's hemorrhagic stroke" ]
-  ] [
-     fhir:code [ fhir:v "malformation" ] ;
-     fhir:display [ fhir:v "Bleeding Reason Malformation" ] ;
-     fhir:definition [ fhir:v "A vascular malformation was identified as the cause of the patient's hemorrhagic stroke" ]
-  ] [
      fhir:code [ fhir:v "other" ] ;
      fhir:display [ fhir:v "Bleeding Reason Other" ] ;
      fhir:definition [ fhir:v "Another, less common or unspecified cause of intracranial hemorrhage was identified" ]

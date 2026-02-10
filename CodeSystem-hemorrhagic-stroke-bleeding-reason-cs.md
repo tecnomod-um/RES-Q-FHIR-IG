@@ -54,18 +54,8 @@ To provide locally governed codes for the identified cause of bleeding in hemorr
   "copyright" : "© Tecnomod. This CodeSystem is provided for use within this Implementation Guide.",
   "caseSensitive" : false,
   "content" : "complete",
-  "count" : 3,
+  "count" : 1,
   "concept" : [
-    {
-      "code" : "aneurysm",
-      "display" : "Bleeding Reason Aneurysm",
-      "definition" : "A cerebral aneurysm was identified as the cause of the patient's hemorrhagic stroke"
-    },
-    {
-      "code" : "malformation",
-      "display" : "Bleeding Reason Malformation",
-      "definition" : "A vascular malformation was identified as the cause of the patient's hemorrhagic stroke"
-    },
     {
       "code" : "other",
       "display" : "Bleeding Reason Other",

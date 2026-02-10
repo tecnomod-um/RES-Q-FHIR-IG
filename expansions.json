@@ -1,8 +1,8 @@
 {
   "resourceType" : "Bundle",
-  "id" : "2548405a-4d2d-481f-be95-855909b23692",
+  "id" : "bcc92237-40f7-4f11-b63c-328759b2248d",
   "meta" : {
-    "lastUpdated" : "2026-02-09T12:28:26.519+00:00"
+    "lastUpdated" : "2026-02-10T07:57:24.438+00:00"
   },
   "type" : "collection",
   "entry" : [{
@@ -22,8 +22,8 @@
       "date" : "2025-03-31",
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:447b9ca0-9ac1-42e5-82e2-07f759c414d4",
-        "timestamp" : "2026-02-09T12:29:51+00:00",
+        "identifier" : "urn:uuid:9c9ae51e-f943-4bcb-bd72-0da494d526aa",
+        "timestamp" : "2026-02-10T07:58:52+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -81,10 +81,10 @@
       "name" : "AfibFlutterStatusVS",
       "title" : "Atrial Fibrillation or Flutter Status ValueSet",
       "status" : "active",
-      "date" : "2026-02-09T12:28:26+00:00",
+      "date" : "2026-02-10T07:57:24+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:1d8ff207-13fb-4a42-b743-726710faad5b",
-        "timestamp" : "2026-02-09T12:29:51+00:00",
+        "identifier" : "urn:uuid:d8f807ae-fab8-4dc4-912f-e207fdeba641",
+        "timestamp" : "2026-02-10T07:58:52+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -142,10 +142,10 @@
       "name" : "AssessmentContextVS",
       "title" : "Assessment Context ValueSet",
       "status" : "active",
-      "date" : "2026-02-09T12:28:26+00:00",
+      "date" : "2026-02-10T07:57:24+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:5e5e6e30-ab91-41bb-9703-05bcc3e16640",
-        "timestamp" : "2026-02-09T12:29:52+00:00",
+        "identifier" : "urn:uuid:d209e895-3325-410c-b34e-36df4651ae58",
+        "timestamp" : "2026-02-10T07:58:53+00:00",
         "total" : 4,
         "offset" : 0,
         "parameter" : [{
@@ -208,10 +208,10 @@
       "name" : "BrainImagingModalityVS",
       "title" : "Brain Imaging Modality ValueSet",
       "status" : "active",
-      "date" : "2026-02-09T12:28:26+00:00",
+      "date" : "2026-02-10T07:57:24+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:14024c89-3f70-4d8c-8a9b-3f0c6e88b527",
-        "timestamp" : "2026-02-09T12:29:52+00:00",
+        "identifier" : "urn:uuid:9ea8d23a-25f1-4af5-a604-94e089fd3ce9",
+        "timestamp" : "2026-02-10T07:58:53+00:00",
         "total" : 6,
         "offset" : 0,
         "parameter" : [{
@@ -288,10 +288,10 @@
       "name" : "CarotidImagingModalityVS",
       "title" : "Carotid Arteries Imaging Modality ValueSet",
       "status" : "active",
-      "date" : "2026-02-09T12:28:26+00:00",
+      "date" : "2026-02-10T07:57:24+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:942ee5b8-5bbd-4690-ba89-c9fcb0d99fd1",
-        "timestamp" : "2026-02-09T12:29:52+00:00",
+        "identifier" : "urn:uuid:7c8ceef2-2d5f-4625-9dfe-ec8215c5effc",
+        "timestamp" : "2026-02-10T07:58:53+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -349,10 +349,10 @@
       "name" : "DischargeDeptVS",
       "title" : "Discharge Department/Service ValueSet",
       "status" : "active",
-      "date" : "2026-02-09T12:28:26+00:00",
+      "date" : "2026-02-10T07:57:24+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:f69eada9-3c91-47a0-a141-cfc46ec9808f",
-        "timestamp" : "2026-02-09T12:29:53+00:00",
+        "identifier" : "urn:uuid:feba6667-f551-4083-b4d0-1edaef29e906",
+        "timestamp" : "2026-02-10T07:58:53+00:00",
         "total" : 4,
         "offset" : 0,
         "parameter" : [{
@@ -415,8 +415,8 @@
       "date" : "2025-03-31",
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:f874c3e9-00ea-4838-8aa4-b797914c8c1a",
-        "timestamp" : "2026-02-09T12:29:53+00:00",
+        "identifier" : "urn:uuid:20177733-873e-4645-8a07-ebd75e31cfa8",
+        "timestamp" : "2026-02-10T07:58:53+00:00",
         "total" : 5,
         "offset" : 0,
         "parameter" : [{
@@ -484,10 +484,10 @@
       "name" : "FunctionalScoreCodesVS",
       "title" : "Stroke Functional Score Codes ValueSet",
       "status" : "active",
-      "date" : "2026-02-09T12:28:26+00:00",
+      "date" : "2026-02-10T07:57:24+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:43fbcc24-7fc5-4699-930b-c10d46bbb75b",
-        "timestamp" : "2026-02-09T12:29:45+00:00",
+        "identifier" : "urn:uuid:9b0a2943-9d6f-409f-9917-63456f9aada9",
+        "timestamp" : "2026-02-10T07:58:45+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -533,7 +533,7 @@
       "resourceType" : "ValueSet",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-hemorrhagic-stroke-bleeding-reason-cs.html\">codesystem Hemorrhagic Stroke Bleeding Reason Code System v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 3 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs-aneurysm\"> </a><code>http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-hemorrhagic-stroke-bleeding-reason-cs.html#hemorrhagic-stroke-bleeding-reason-cs-aneurysm\">aneurysm</a></td><td>Bleeding Reason Aneurysm</td><td>A cerebral aneurysm was identified as the cause of the patient's hemorrhagic stroke</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;aneurysm&quot;, &quot;display&quot;: &quot;Bleeding Reason Aneurysm&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;aneurysm&quot;&gt;&lt;display value=&quot;Bleeding Reason Aneurysm&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs-malformation\"> </a><code>http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-hemorrhagic-stroke-bleeding-reason-cs.html#hemorrhagic-stroke-bleeding-reason-cs-malformation\">malformation</a></td><td>Bleeding Reason Malformation</td><td>A vascular malformation was identified as the cause of the patient's hemorrhagic stroke</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;malformation&quot;, &quot;display&quot;: &quot;Bleeding Reason Malformation&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;malformation&quot;&gt;&lt;display value=&quot;Bleeding Reason Malformation&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs-other\"> </a><code>http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-hemorrhagic-stroke-bleeding-reason-cs.html#hemorrhagic-stroke-bleeding-reason-cs-other\">other</a></td><td>Bleeding Reason Other</td><td>Another, less common or unspecified cause of intracranial hemorrhage was identified</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;other&quot;, &quot;display&quot;: &quot;Bleeding Reason Other&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;other&quot;&gt;&lt;display value=&quot;Bleeding Reason Other&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><div style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\"><p>Expansion from tx.fhir.org based on:</p><ul><li>SNOMED CT International edition 01-Feb 2025<span class=\"copy-text-inline\"><button data-clipboard-text=\"http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></li><li><a href=\"CodeSystem-hemorrhagic-stroke-bleeding-reason-cs.html\">codesystem Hemorrhagic Stroke Bleeding Reason Code System v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></li></ul></div><p>This value set contains 3 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs-other\"> </a><code>http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-hemorrhagic-stroke-bleeding-reason-cs.html#hemorrhagic-stroke-bleeding-reason-cs-other\">other</a></td><td>Bleeding Reason Other</td><td>Another, less common or unspecified cause of intracranial hemorrhage was identified</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;other&quot;, &quot;display&quot;: &quot;Bleeding Reason Other&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;other&quot;&gt;&lt;display value=&quot;Bleeding Reason Other&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://snomed.info/sct-128609009\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/128609009\">128609009</a></td><td>Cerebral aneurysm</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;128609009&quot;, &quot;display&quot;: &quot;Cerebral aneurysm&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;128609009&quot;&gt;&lt;display value=&quot;Cerebral aneurysm&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://snomed.info/sct-703221003\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/703221003\">703221003</a></td><td>Intracranial vascular malformation</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;703221003&quot;, &quot;display&quot;: &quot;Intracranial vascular malformation&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;703221003&quot;&gt;&lt;display value=&quot;Intracranial vascular malformation&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
       },
       "url" : "http://tecnomod-um.org/ValueSet/hemorrhagic-stroke-bleeding-reason-vs",
       "version" : "0.1.0",
@@ -544,8 +544,8 @@
       "date" : "2025-09-08",
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:e6a26fb3-f8f6-44f7-bfa9-1ac97ba6e377",
-        "timestamp" : "2026-02-09T12:29:53+00:00",
+        "identifier" : "urn:uuid:ae07bd3b-abeb-456e-984a-52be1fd81a0c",
+        "timestamp" : "2026-02-10T07:58:53+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -567,21 +567,33 @@
         {
           "name" : "used-codesystem",
           "valueUri" : "http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs|0.1.0"
+        },
+        {
+          "name" : "used-valueset",
+          "valueUri" : "null"
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : true
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
         }],
         "contains" : [{
           "system" : "http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs",
-          "code" : "aneurysm",
-          "display" : "Bleeding Reason Aneurysm"
-        },
-        {
-          "system" : "http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs",
-          "code" : "malformation",
-          "display" : "Bleeding Reason Malformation"
-        },
-        {
-          "system" : "http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs",
           "code" : "other",
           "display" : "Bleeding Reason Other"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "128609009",
+          "display" : "Cerebral aneurysm"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "703221003",
+          "display" : "Intracranial vascular malformation"
         }]
       }
     }
@@ -599,10 +611,10 @@
       "name" : "InitialCareIntensityVS",
       "title" : "Initial Care Intensity ValueSet",
       "status" : "active",
-      "date" : "2026-02-09T12:28:26+00:00",
+      "date" : "2026-02-10T07:57:24+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:e97dc254-2d6c-418b-88d4-4681e90750f4",
-        "timestamp" : "2026-02-09T12:29:53+00:00",
+        "identifier" : "urn:uuid:c77f99a0-ea44-4605-91a1-2ac341bfa921",
+        "timestamp" : "2026-02-10T07:58:54+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -660,10 +672,10 @@
       "name" : "MedicationVS",
       "title" : "Medications ValueSet",
       "status" : "draft",
-      "date" : "2026-02-09T12:28:26+00:00",
+      "date" : "2026-02-10T07:57:24+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:7d1190aa-0af4-47d4-85ca-31bb31c44645",
-        "timestamp" : "2026-02-09T12:29:53+00:00",
+        "identifier" : "urn:uuid:46fed0db-dd18-4281-b6ae-3668f61a0975",
+        "timestamp" : "2026-02-10T07:58:54+00:00",
         "total" : 12,
         "offset" : 0,
         "parameter" : [{
@@ -770,10 +782,10 @@
       "name" : "MRsScoreVS",
       "title" : "modified Rankin Scale (mRS) Score ValueSet",
       "status" : "active",
-      "date" : "2026-02-09T12:28:26+00:00",
+      "date" : "2026-02-10T07:57:24+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:e6660a4e-8bfe-4af0-9b0a-43ccf291b7ce",
-        "timestamp" : "2026-02-09T12:29:45+00:00",
+        "identifier" : "urn:uuid:8f2c3fd4-6aad-47c9-b53d-aebc91f5db4c",
+        "timestamp" : "2026-02-10T07:58:46+00:00",
         "total" : 7,
         "offset" : 0,
         "parameter" : [{
@@ -851,10 +863,10 @@
       "name" : "MTICICodeVS",
       "title" : "mTICI Score Codes ValueSet",
       "status" : "active",
-      "date" : "2026-02-09T12:28:26+00:00",
+      "date" : "2026-02-10T07:57:24+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:8f4fb008-ae44-40ad-9f37-f1e18327b27d",
-        "timestamp" : "2026-02-09T12:29:54+00:00",
+        "identifier" : "urn:uuid:62d6f940-b6bf-422e-b24a-b49f35482030",
+        "timestamp" : "2026-02-10T07:58:54+00:00",
         "total" : 1,
         "offset" : 0,
         "parameter" : [{
@@ -905,8 +917,8 @@
       "experimental" : true,
       "date" : "2025-03-31",
       "expansion" : {
-        "identifier" : "urn:uuid:f5f3e9ee-04ff-4cc0-a1f1-81059d711329",
-        "timestamp" : "2026-02-09T12:29:54+00:00",
+        "identifier" : "urn:uuid:ccf254e4-fb0d-4afe-9dd3-8d765a64ffae",
+        "timestamp" : "2026-02-10T07:58:54+00:00",
         "total" : 6,
         "offset" : 0,
         "parameter" : [{
@@ -978,8 +990,8 @@
       "experimental" : true,
       "date" : "2025-03-31",
       "expansion" : {
-        "identifier" : "urn:uuid:5b6d7368-e293-4ab7-9f70-c7abbc699fe8",
-        "timestamp" : "2026-02-09T12:29:54+00:00",
+        "identifier" : "urn:uuid:d87e0d6d-a4df-4c5c-8b2a-ab144de97c07",
+        "timestamp" : "2026-02-10T07:58:54+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -1032,10 +1044,10 @@
       "name" : "ProcedureTimingContextVS",
       "title" : "Procedure Timing Context ValueSet",
       "status" : "active",
-      "date" : "2026-02-09T12:28:26+00:00",
+      "date" : "2026-02-10T07:57:24+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:5041c2f1-4513-4259-b3b6-1d710bf665fc",
-        "timestamp" : "2026-02-09T12:29:54+00:00",
+        "identifier" : "urn:uuid:b831d5ab-ba35-41b5-b540-d867a7a738ba",
+        "timestamp" : "2026-02-10T07:58:55+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -1093,10 +1105,10 @@
       "name" : "SpecificFindingCodesVS",
       "title" : "Specific Stroke Finding Codes ValueSet",
       "status" : "active",
-      "date" : "2026-02-09T12:28:26+00:00",
+      "date" : "2026-02-10T07:57:24+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:01d3adcf-09e8-4ba0-bca9-c4267bfeaa43",
-        "timestamp" : "2026-02-09T12:29:54+00:00",
+        "identifier" : "urn:uuid:ad7d78f1-b1dd-4706-8eff-085f304c4cdd",
+        "timestamp" : "2026-02-10T07:58:55+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -1149,10 +1161,10 @@
       "name" : "StrokeArrivalModeVS",
       "title" : "Stroke Arrival Mode ValueSet",
       "status" : "active",
-      "date" : "2026-02-09T12:28:26+00:00",
+      "date" : "2026-02-10T07:57:24+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:d3bfca31-928c-4302-8d2b-a3309a072eee",
-        "timestamp" : "2026-02-09T12:29:54+00:00",
+        "identifier" : "urn:uuid:d786e302-d7ad-4108-8475-f7070313017e",
+        "timestamp" : "2026-02-10T07:58:55+00:00",
         "total" : 6,
         "offset" : 0,
         "parameter" : [{
@@ -1225,10 +1237,10 @@
       "name" : "StrokeCircumstanceCodesVS",
       "title" : "Stroke Circumstance Codes ValueSet",
       "status" : "active",
-      "date" : "2026-02-09T12:28:26+00:00",
+      "date" : "2026-02-10T07:57:24+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:59578d7f-e098-4713-853e-3342ab30113f",
-        "timestamp" : "2026-02-09T12:29:48+00:00",
+        "identifier" : "urn:uuid:d11e1001-d859-458e-8de8-3c3385f41633",
+        "timestamp" : "2026-02-10T07:58:49+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -1281,8 +1293,8 @@
       "date" : "2025-10-07",
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:64d3e9c1-6f32-4f26-94ce-9c8830303355",
-        "timestamp" : "2026-02-09T12:29:48+00:00",
+        "identifier" : "urn:uuid:d857f75e-fe43-4e9d-97dd-a5d57f2c9c06",
+        "timestamp" : "2026-02-10T07:58:49+00:00",
         "total" : 5,
         "offset" : 0,
         "parameter" : [{
@@ -1350,10 +1362,10 @@
       "name" : "StrokeDischargeDestinationVS",
       "title" : "Stroke Discharge Destination ValueSet",
       "status" : "active",
-      "date" : "2026-02-09T12:28:26+00:00",
+      "date" : "2026-02-10T07:57:24+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:a1e85d17-7f94-4d99-a189-a33d15b91154",
-        "timestamp" : "2026-02-09T12:29:54+00:00",
+        "identifier" : "urn:uuid:530af2eb-453e-487d-8744-6ad6bd049be7",
+        "timestamp" : "2026-02-10T07:58:55+00:00",
         "total" : 5,
         "offset" : 0,
         "parameter" : [{
@@ -1433,8 +1445,8 @@
       "date" : "2025-03-31",
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:f4c52b1e-bba1-44f9-a325-87e8dba61488",
-        "timestamp" : "2026-02-09T12:29:55+00:00",
+        "identifier" : "urn:uuid:4677e3c5-687d-401f-addd-75617cc727e6",
+        "timestamp" : "2026-02-10T07:58:55+00:00",
         "total" : 5,
         "offset" : 0,
         "parameter" : [{
@@ -1510,10 +1522,10 @@
       "name" : "StrokeFindingCodesVS",
       "title" : "Specific Stroke Finding Codes ValueSet",
       "status" : "active",
-      "date" : "2026-02-09T12:28:26+00:00",
+      "date" : "2026-02-10T07:57:24+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:b25e161a-a631-48b3-b544-eaa2e9bb8178",
-        "timestamp" : "2026-02-09T12:29:47+00:00",
+        "identifier" : "urn:uuid:e309557f-e94c-4a7e-9faa-8a629c0876b5",
+        "timestamp" : "2026-02-10T07:58:47+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -1587,10 +1599,10 @@
       "name" : "StrokeProcNotDoneReasonVS",
       "title" : "Stroke Procedure Not Done Reason ValueSet",
       "status" : "active",
-      "date" : "2026-02-09T12:28:26+00:00",
+      "date" : "2026-02-10T07:57:24+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:a9d3af67-2b02-4208-bd7d-2d58d4dc303e",
-        "timestamp" : "2026-02-09T12:29:55+00:00",
+        "identifier" : "urn:uuid:39cdddca-5e79-4352-b0e9-eb433fcf3aa0",
+        "timestamp" : "2026-02-10T07:58:55+00:00",
         "total" : 16,
         "offset" : 0,
         "parameter" : [{
@@ -1717,8 +1729,8 @@
       "date" : "2025-10-07",
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:16c6b49d-25cf-4d34-bba5-396170fde557",
-        "timestamp" : "2026-02-09T12:29:50+00:00",
+        "identifier" : "urn:uuid:c5f02dbf-a559-4629-bfc7-d7681db3ed49",
+        "timestamp" : "2026-02-10T07:58:50+00:00",
         "total" : 11,
         "offset" : 0,
         "parameter" : [{
@@ -1819,8 +1831,8 @@
       "experimental" : true,
       "date" : "2025-03-31",
       "expansion" : {
-        "identifier" : "urn:uuid:b4a3b9d7-c676-4c21-a708-ad4819df8743",
-        "timestamp" : "2026-02-09T12:29:55+00:00",
+        "identifier" : "urn:uuid:42e700fe-3893-4d56-88b3-c6e1e4b07838",
+        "timestamp" : "2026-02-10T07:58:55+00:00",
         "total" : 5,
         "offset" : 0,
         "parameter" : [{
@@ -1892,10 +1904,10 @@
       "name" : "SwallowingScreeningTimingCategoryVS",
       "title" : "Swallowing Screening Timing Category ValueSet",
       "status" : "active",
-      "date" : "2026-02-09T12:28:26+00:00",
+      "date" : "2026-02-10T07:57:24+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:1f34cdc8-abeb-4e0b-94d0-0ec98eac49f5",
-        "timestamp" : "2026-02-09T12:29:55+00:00",
+        "identifier" : "urn:uuid:f2f7bffd-5e7f-4a2d-9fc1-eaf935547459",
+        "timestamp" : "2026-02-10T07:58:56+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -1965,10 +1977,10 @@
       "name" : "ThrombectomyComplicationVS",
       "title" : "Thrombectomy Complication ValueSet",
       "status" : "active",
-      "date" : "2026-02-09T12:28:26+00:00",
+      "date" : "2026-02-10T07:57:24+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:4c6401fb-2d37-457d-b696-a8dc2c064dbe",
-        "timestamp" : "2026-02-09T12:29:56+00:00",
+        "identifier" : "urn:uuid:2fa91345-5629-4937-b2ec-5a057febf196",
+        "timestamp" : "2026-02-10T07:58:56+00:00",
         "total" : 1,
         "offset" : 0,
         "parameter" : [{
@@ -2016,10 +2028,10 @@
       "name" : "TimingMetricCodesVS",
       "title" : "Stroke Timing Metric Codes ValueSet",
       "status" : "active",
-      "date" : "2026-02-09T12:28:26+00:00",
+      "date" : "2026-02-10T07:57:24+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:541a9fc8-d372-465f-b1c9-8774050372b2",
-        "timestamp" : "2026-02-09T12:29:50+00:00",
+        "identifier" : "urn:uuid:4c090bcf-5caf-4a78-aafe-8893f35a4c6a",
+        "timestamp" : "2026-02-10T07:58:51+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -2069,10 +2081,10 @@
       "title" : "Stroke Vital Sign Codes ValueSet",
       "status" : "active",
       "experimental" : true,
-      "date" : "2026-02-09T12:28:26+00:00",
+      "date" : "2026-02-10T07:57:24+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:549c40f5-9e9a-4e09-809b-c25eb7ff2814",
-        "timestamp" : "2026-02-09T12:29:56+00:00",
+        "identifier" : "urn:uuid:bf34c586-bc74-4723-9792-4dd82a1f75b5",
+        "timestamp" : "2026-02-10T07:58:56+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -2126,10 +2138,10 @@
       "title" : "Gender (SNOMED CT)",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-02-09T12:28:26+00:00",
+      "date" : "2026-02-10T07:57:24+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:d58740cb-3a95-464f-bf99-f04852f2ae61",
-        "timestamp" : "2026-02-09T12:29:57+00:00",
+        "identifier" : "urn:uuid:67a6d701-f041-4596-8e22-225ba826b17d",
+        "timestamp" : "2026-02-10T07:58:56+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{

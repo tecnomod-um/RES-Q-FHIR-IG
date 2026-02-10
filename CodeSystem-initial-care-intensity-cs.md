@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs | *Version*:0.1.0 |
-| Active as of 2026-02-09 | *Computable Name*:InitialCareIntensityCS |
+| Active as of 2026-02-10 | *Computable Name*:InitialCareIntensityCS |
 
  
 Codes indicating the level of care provided during the patient's initial day(s) in the hospital. 
@@ -32,7 +32,7 @@ Codes indicating the level of care provided during the patient's initial day(s) 
   "title" : "Initial Care Intensity Code System",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-09T12:28:26+00:00",
+  "date" : "2026-02-10T07:57:24+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

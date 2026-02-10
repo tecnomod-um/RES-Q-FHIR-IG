@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/required-post-acute-care-ext | *Version*:0.1.0 |
-| Draft as of 2026-02-09 | *Computable Name*:RequiredPostAcuteCareExtension |
+| Draft as of 2026-02-10 | *Computable Name*:RequiredPostAcuteCareExtension |
 
 Indicates whether the patient required hospitalization beyond 24 hours after the designated acute phase of stroke care for this encounter.
 
@@ -53,7 +53,7 @@ Other representations of profile: [CSV](StructureDefinition-required-post-acute-
   "name" : "RequiredPostAcuteCareExtension",
   "title" : "Required Post-Acute Care Extension",
   "status" : "draft",
-  "date" : "2026-02-09T12:28:26+00:00",
+  "date" : "2026-02-10T07:57:24+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

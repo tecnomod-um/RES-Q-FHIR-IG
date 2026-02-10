@@ -3,7 +3,7 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="hemorrhagic-stroke-bleeding-reason-vs"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet hemorrhagic-stroke-bleeding-reason-vs</b></p><a name="hemorrhagic-stroke-bleeding-reason-vs"> </a><a name="hchemorrhagic-stroke-bleeding-reason-vs"> </a><ul><li>Include all codes defined in <a href="CodeSystem-hemorrhagic-stroke-bleeding-reason-cs.html"><code>http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;0.1.0</span></li></ul></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet hemorrhagic-stroke-bleeding-reason-vs</b></p><a name="hemorrhagic-stroke-bleeding-reason-vs"> </a><a name="hchemorrhagic-stroke-bleeding-reason-vs"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include all codes defined in <a href="CodeSystem-hemorrhagic-stroke-bleeding-reason-cs.html"><code>http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;0.1.0</span></li><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/128609009">128609009</a></td><td>Intracranial aneurysm (disorder)</td></tr><tr><td><a href="http://snomed.info/id/703221003">703221003</a></td><td>Congenital intracranial vascular malformation (disorder)</td></tr></table></li></ul></div>
   </text>
   <url value="http://tecnomod-um.org/ValueSet/hemorrhagic-stroke-bleeding-reason-vs"/>
   <version value="0.1.0"/>
@@ -27,6 +27,17 @@
   <compose>
     <include>
       <system value="http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs"/>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="128609009"/>
+        <display value="Intracranial aneurysm (disorder)"/>
+      </concept>
+      <concept>
+        <code value="703221003"/>
+        <display value="Congenital intracranial vascular malformation (disorder)"/>
+      </concept>
     </include>
   </compose>
 </ValueSet>

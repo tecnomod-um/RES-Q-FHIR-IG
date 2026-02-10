@@ -83,7 +83,8 @@
       "title" : "Hemorrhagic Stroke Bleeding Reason ValueSet",
       "description" : "Specifies the identified cause of a hemorrhagic stroke, typically used with an extension.",
       "systems" : [
-        "http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs"
+        "http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs",
+        "http://snomed.info/sct"
       ]
     },
     {

@@ -3,7 +3,7 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
   <id value="hemorrhagic-stroke-bleeding-reason-cs"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem hemorrhagic-stroke-bleeding-reason-cs</b></p><a name="hemorrhagic-stroke-bleeding-reason-cs"> </a><a name="hchemorrhagic-stroke-bleeding-reason-cs"> </a><p>This case-insensitive code system <code>http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">aneurysm<a name="hemorrhagic-stroke-bleeding-reason-cs-aneurysm"> </a></td><td>Bleeding Reason Aneurysm</td><td>A cerebral aneurysm was identified as the cause of the patient's hemorrhagic stroke</td></tr><tr><td style="white-space:nowrap">malformation<a name="hemorrhagic-stroke-bleeding-reason-cs-malformation"> </a></td><td>Bleeding Reason Malformation</td><td>A vascular malformation was identified as the cause of the patient's hemorrhagic stroke</td></tr><tr><td style="white-space:nowrap">other<a name="hemorrhagic-stroke-bleeding-reason-cs-other"> </a></td><td>Bleeding Reason Other</td><td>Another, less common or unspecified cause of intracranial hemorrhage was identified</td></tr></table></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem hemorrhagic-stroke-bleeding-reason-cs</b></p><a name="hemorrhagic-stroke-bleeding-reason-cs"> </a><a name="hchemorrhagic-stroke-bleeding-reason-cs"> </a><p>This case-insensitive code system <code>http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs</code> defines the following code:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">other<a name="hemorrhagic-stroke-bleeding-reason-cs-other"> </a></td><td>Bleeding Reason Other</td><td>Another, less common or unspecified cause of intracranial hemorrhage was identified</td></tr></table></div>
   </text>
   <url value="http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs"/>
   <version value="0.1.0"/>
@@ -25,17 +25,7 @@
   <copyright value="© Tecnomod. This CodeSystem is provided for use within this Implementation Guide."/>
   <caseSensitive value="false"/>
   <content value="complete"/>
-  <count value="3"/>
-  <concept>
-    <code value="aneurysm"/>
-    <display value="Bleeding Reason Aneurysm"/>
-    <definition value="A cerebral aneurysm was identified as the cause of the patient's hemorrhagic stroke"/>
-  </concept>
-  <concept>
-    <code value="malformation"/>
-    <display value="Bleeding Reason Malformation"/>
-    <definition value="A vascular malformation was identified as the cause of the patient's hemorrhagic stroke"/>
-  </concept>
+  <count value="1"/>
   <concept>
     <code value="other"/>
     <display value="Bleeding Reason Other"/>

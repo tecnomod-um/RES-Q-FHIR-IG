@@ -55,7 +55,7 @@ Other representations of profile: [CSV](StructureDefinition-swallowing-screening
   "name" : "SwallowingScreeningTimingCategoryExt",
   "title" : "Swallowing Screening Timing Category",
   "status" : "draft",
-  "date" : "2026-02-10T07:57:24+00:00",
+  "date" : "2026-02-10T12:50:25+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

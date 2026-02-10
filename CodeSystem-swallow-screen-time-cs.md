@@ -32,7 +32,7 @@ Temporal categories relative to stroke onset for swallowing screening.
   "title" : "Swallowing Screening Timing Category Code System",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-10T07:57:24+00:00",
+  "date" : "2026-02-10T12:50:25+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

@@ -96,6 +96,10 @@ To provide a consistent set of SNOMED CT concepts for coding definitive stroke-r
           {
             "code" : "95455008",
             "display" : "Thrombosis of cerebral veins (disorder)"
+          },
+          {
+            "code" : "373068000",
+            "display" : "Undetermined (qualifier value)"
           }
         ]
       }

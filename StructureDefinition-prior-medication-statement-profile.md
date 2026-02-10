@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-prior-medication-sta
   "title" : "Prior Medication Statement Profile (R5)",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-10T07:57:24+00:00",
+  "date" : "2026-02-10T12:50:25+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

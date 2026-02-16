@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/base-stroke-observation | *Version*:0.1.0 |
-| Active as of 2026-02-10 | *Computable Name*:BaseStrokeObservation |
+| Active as of 2026-02-16 | *Computable Name*:BaseStrokeObservation |
 
  
 Constraints for observations recorded in the context of stroke care. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-base-stroke-observat
   "name" : "BaseStrokeObservation",
   "title" : "Base Profile for Stroke-Related Observations",
   "status" : "active",
-  "date" : "2026-02-10T12:50:25+00:00",
+  "date" : "2026-02-16T11:22:57+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

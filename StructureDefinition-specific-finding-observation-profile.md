@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/specific-finding-observation-profile | *Version*:0.1.0 |
-| Draft as of 2026-02-10 | *Computable Name*:SpecificFindingObservationProfile |
+| Draft as of 2026-02-16 | *Computable Name*:SpecificFindingObservationProfile |
 
  
 Profile for specific coded findings like Afib/Flutter status or mTICI score. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-specific-finding-obs
   "name" : "SpecificFindingObservationProfile",
   "title" : "Specific Stroke Finding Observation Profile (R5)",
   "status" : "draft",
-  "date" : "2026-02-10T12:50:25+00:00",
+  "date" : "2026-02-16T11:22:57+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

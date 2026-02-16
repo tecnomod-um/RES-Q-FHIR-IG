@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/functional-score-codes-vs | *Version*:0.1.0 |
-| Active as of 2026-02-10 | *Computable Name*:FunctionalScoreCodesVS |
+| Active as of 2026-02-16 | *Computable Name*:FunctionalScoreCodesVS |
 
  
 Codes for key functional scores used in stroke (mRS, NIHSS). 
@@ -50,7 +50,7 @@ Codes for key functional scores used in stroke (mRS, NIHSS).
   "name" : "FunctionalScoreCodesVS",
   "title" : "Stroke Functional Score Codes ValueSet",
   "status" : "active",
-  "date" : "2026-02-10T12:50:25+00:00",
+  "date" : "2026-02-16T11:22:57+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

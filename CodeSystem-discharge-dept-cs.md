@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/CodeSystem/discharge-dept-cs | *Version*:0.1.0 |
-| Active as of 2026-02-10 | *Computable Name*:DischargeDeptCS |
+| Active as of 2026-02-16 | *Computable Name*:DischargeDeptCS |
 
  
 Code system specifying the type of department or service the patient was discharged or transferred to. 
@@ -31,7 +31,7 @@ Code system specifying the type of department or service the patient was dischar
   "name" : "DischargeDeptCS",
   "title" : "Discharge Department/Service Code System",
   "status" : "active",
-  "date" : "2026-02-10T12:50:25+00:00",
+  "date" : "2026-02-16T11:22:57+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

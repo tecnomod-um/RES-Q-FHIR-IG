@@ -3,16 +3,16 @@
 ## Pages
 
 * [Index](index.md)
-* [Guidance](guidance.md)
-* [Profiles](profiles.md)
-* [Valuesets](valuesets.md)
-* [Extensions](extensions.md)
-* [Artifacts Summary](artifacts.md)
-* [Codesystems](codesystems.md)
-* [Conformance](conformance.md)
-* [History](history.md)
 * [Examples](examples.md)
+* [Valuesets](valuesets.md)
+* [Codesystems](codesystems.md)
+* [Guidance](guidance.md)
+* [Artifacts Summary](artifacts.md)
+* [Extensions](extensions.md)
 * [Downloads](downloads.md)
+* [Profiles](profiles.md)
+* [History](history.md)
+* [Conformance](conformance.md)
 
 ## Resources
 

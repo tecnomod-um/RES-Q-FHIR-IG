@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/discharge-medication-request-profile | *Version*:0.1.0 |
-| Active as of 2026-02-10 | *Computable Name*:DischargeMedicationRequestProfile |
+| Active as of 2026-02-16 | *Computable Name*:DischargeMedicationRequestProfile |
 
  
 Represents a medication prescription made as part of the patient's discharge plan, categorized as community administration. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-discharge-medication
   "name" : "DischargeMedicationRequestProfile",
   "title" : "Discharge Medication Request Profile",
   "status" : "active",
-  "date" : "2026-02-10T12:50:25+00:00",
+  "date" : "2026-02-16T11:22:57+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

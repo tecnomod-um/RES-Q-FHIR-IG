@@ -77,6 +77,10 @@ ValueSet containing SNOMED CT codes representing a range of procedures used in t
           {
             "code" : "63913004",
             "display" : "Tonography with water provocation (procedure)"
+          },
+          {
+            "code" : "261665006",
+            "display" : "Unknown (qualifier value)"
           }
         ]
       },

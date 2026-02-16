@@ -3,7 +3,7 @@ RESQIG : Validation Results
 
 err = 4, warn = 125, info = 42
 IG Publisher Version: 2.1.0
-Generated Tue Feb 10 12:52:28 UTC 2026. FHIR version 5.0.0 for RES-Q-FHIR-IG#0.1.0 (canonical = http://tecnomod-um.org)
+Generated Mon Feb 16 11:25:11 UTC 2026. FHIR version 5.0.0 for RES-Q-FHIR-IG#0.1.0 (canonical = http://tecnomod-um.org)
  Build Errors : 1 / 706 / 0
  /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/CodeSystem-assessment-context-cs : 0 / 0 / 1
  /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/CodeSystem-brain-imaging-type-cs : 0 / 2 / 2
@@ -769,9 +769,9 @@ WARNING: ValueSet-stroke-risk-factor-vs.xml.html#/html/body/div/div/div/p/a at L
 WARNING: ValueSet-swallow-procedures-vs-testing.html#/html/body/div/div/div/p/a at Line 251, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 WARNING: ValueSet-swallow-procedures-vs.change.history.html#/html/body/div/div/div/p/a at Line 220, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 WARNING: ValueSet-swallow-procedures-vs.html#/html/body/div/div/div/p/a at Line 321, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
-WARNING: ValueSet-swallow-procedures-vs.json.html#/html/body/div/div/div/p/a at Line 291, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
-WARNING: ValueSet-swallow-procedures-vs.ttl.html#/html/body/div/div/div/p/a at Line 294, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
-WARNING: ValueSet-swallow-procedures-vs.xml.html#/html/body/div/div/div/p/a at Line 286, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
+WARNING: ValueSet-swallow-procedures-vs.json.html#/html/body/div/div/div/p/a at Line 295, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
+WARNING: ValueSet-swallow-procedures-vs.ttl.html#/html/body/div/div/div/p/a at Line 296, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
+WARNING: ValueSet-swallow-procedures-vs.xml.html#/html/body/div/div/div/p/a at Line 290, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 WARNING: ValueSet-swallowing-screening-timing-category-vs-testing.html#/html/body/div/div/div/p/a at Line 251, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 WARNING: ValueSet-swallowing-screening-timing-category-vs.change.history.html#/html/body/div/div/div/p/a at Line 220, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 WARNING: ValueSet-swallowing-screening-timing-category-vs.html#/html/body/div/div/div/p/a at Line 326, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions

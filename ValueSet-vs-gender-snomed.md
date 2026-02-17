@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/vs-gender-snomed | *Version*:0.1.0 |
-| Active as of 2026-02-16 | *Computable Name*:GenderSNOMEDVS |
+| Active as of 2026-02-17 | *Computable Name*:GenderSNOMEDVS |
 
  
 Value set to represent patient gender using SNOMED CT codes, analogous to AdministrativeGender. 
@@ -51,7 +51,7 @@ Value set to represent patient gender using SNOMED CT codes, analogous to Admini
   "title" : "Gender (SNOMED CT)",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-02-16T11:22:57+00:00",
+  "date" : "2026-02-17T08:49:13+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

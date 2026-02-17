@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/stroke-carotid-imaging-procedure-profile | *Version*:0.1.0 |
-| Active as of 2026-02-16 | *Computable Name*:StrokeCarotidImagingProcedureProfile |
+| Active as of 2026-02-17 | *Computable Name*:StrokeCarotidImagingProcedureProfile |
 
  
 Procedure profile to record key stroke procedures, including status, timing, complications, reasons, and context. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-stroke-carotid-imagi
   "name" : "StrokeCarotidImagingProcedureProfile",
   "title" : "Stroke Carotid Imaging Procedure Profile (R5)",
   "status" : "active",
-  "date" : "2026-02-16T11:22:57+00:00",
+  "date" : "2026-02-17T08:49:13+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

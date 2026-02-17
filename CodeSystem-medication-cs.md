@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/CodeSystem/medication-cs | *Version*:0.1.0 |
-| Draft as of 2026-02-16 | *Computable Name*:MedicationCS |
+| Draft as of 2026-02-17 | *Computable Name*:MedicationCS |
 
  
 Codes for drug products or substances representing the Medications on the patient discharge. 
@@ -31,7 +31,7 @@ Codes for drug products or substances representing the Medications on the patien
   "name" : "MedicationCS",
   "title" : "Medications CodeSystem",
   "status" : "draft",
-  "date" : "2026-02-16T11:22:57+00:00",
+  "date" : "2026-02-17T08:49:13+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/CodeSystem/thrombectomy-complication-cs | *Version*:0.1.0 |
-| Active as of 2026-02-16 | *Computable Name*:ThrombectomyComplicationCS |
+| Active as of 2026-02-17 | *Computable Name*:ThrombectomyComplicationCS |
 
  
 Codes specifying the specific complications of thrombectomy to record. 
@@ -31,7 +31,7 @@ Codes specifying the specific complications of thrombectomy to record.
   "name" : "ThrombectomyComplicationCS",
   "title" : "Thrombectomy Complication Code System",
   "status" : "active",
-  "date" : "2026-02-16T11:22:57+00:00",
+  "date" : "2026-02-17T08:49:13+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs | *Version*:0.1.0 |
-| Active as of 2026-02-16 | *Computable Name*:BrainImagingTypeCS |
+| Active as of 2026-02-17 | *Computable Name*:BrainImagingTypeCS |
 
  
 Codes specifying the type of brain imaging performed (e.g., CT, MRI). 
@@ -31,7 +31,7 @@ Codes specifying the type of brain imaging performed (e.g., CT, MRI).
   "name" : "BrainImagingTypeCS",
   "title" : "Brain Imaging Type Code System",
   "status" : "active",
-  "date" : "2026-02-16T11:22:57+00:00",
+  "date" : "2026-02-17T08:49:13+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

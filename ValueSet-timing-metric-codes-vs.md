@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/timing-metric-codes-vs | *Version*:0.1.0 |
-| Active as of 2026-02-16 | *Computable Name*:TimingMetricCodesVS |
+| Active as of 2026-02-17 | *Computable Name*:TimingMetricCodesVS |
 
  
 ValueSet for key process timing metrics in acute stroke care (D2N, D2G). 
@@ -50,7 +50,7 @@ ValueSet for key process timing metrics in acute stroke care (D2N, D2G).
   "name" : "TimingMetricCodesVS",
   "title" : "Stroke Timing Metric Codes ValueSet",
   "status" : "active",
-  "date" : "2026-02-16T11:22:57+00:00",
+  "date" : "2026-02-17T08:49:13+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

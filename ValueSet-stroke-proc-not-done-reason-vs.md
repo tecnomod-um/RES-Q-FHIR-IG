@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/stroke-proc-not-done-reason-vs | *Version*:0.1.0 |
-| Active as of 2026-02-16 | *Computable Name*:StrokeProcNotDoneReasonVS |
+| Active as of 2026-02-17 | *Computable Name*:StrokeProcNotDoneReasonVS |
 
  
 ValueSet containing specific codes to indicate why thrombolysis or thrombectomy was not performed. 
@@ -53,7 +53,7 @@ ValueSet containing specific codes to indicate why thrombolysis or thrombectomy 
   "name" : "StrokeProcNotDoneReasonVS",
   "title" : "Stroke Procedure Not Done Reason ValueSet",
   "status" : "active",
-  "date" : "2026-02-16T11:22:57+00:00",
+  "date" : "2026-02-17T08:49:13+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/stroke-finding-codes-vs | *Version*:0.1.0 |
-| Active as of 2026-02-16 | *Computable Name*:StrokeFindingCodesVS |
+| Active as of 2026-02-17 | *Computable Name*:StrokeFindingCodesVS |
 
  
 ValueSet for specific coded findings like Afib/Flutter status or mTICI score. 
@@ -50,7 +50,7 @@ ValueSet for specific coded findings like Afib/Flutter status or mTICI score.
   "name" : "StrokeFindingCodesVS",
   "title" : "Specific Stroke Finding Codes ValueSet",
   "status" : "active",
-  "date" : "2026-02-16T11:22:57+00:00",
+  "date" : "2026-02-17T08:49:13+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

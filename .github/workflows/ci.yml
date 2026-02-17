@@ -83,6 +83,10 @@ jobs:
         run: |
           java -jar publisher.jar -ig ./ -tx https://tx.fhir.org -no-sushi
 
+      - name: Copy CNAME to output
+        run: |
+          cp CNAME output/CNAME
+
       - name: Upload IG package (tgz)
         uses: actions/upload-artifact@v4
         with:

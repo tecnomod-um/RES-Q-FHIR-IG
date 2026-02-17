@@ -449,7 +449,6 @@ Expression: "code.coding.where($this.system = 'http://snomed.info/sct' and $this
 
 Instance: AgeAtOnsetObservationExample
 InstanceOf: AgeAtOnsetObservationProfile
-* ^description = "This instance represents that at the time of stroke onset, the patient was 65 years old."
 * valueInteger = 65
 * subject = Reference(PatientExample)
 * encounter = Reference(StrokeEncounterExample)

@@ -13,7 +13,7 @@ These define constraints on FHIR resources for systems conforming to this implem
 
 | | |
 | :--- | :--- |
-| [Age at Stroke Onset Observation Profile (R5)](StructureDefinition-age-at-onset-observation-profile.md) | Profile specifically for recording the patient's age at stroke onset. |
+| [Age at Stroke Onset Observation Profile (R5)](StructureDefinition-age-at-onset-observation-profile.md) | Profile specifically for recording the patient's age at stroke onset. The value is represented as an integer (age in years) with a fixed SNOMED CT code indicating that this observation represents age at onset. |
 | [Base Profile for Stroke-Related Observations](StructureDefinition-base-stroke-observation.md) | Constraints for observations recorded in the context of stroke care. |
 | [Discharge Medication Request Profile](StructureDefinition-discharge-medication-request-profile.md) | Represents a medication prescription made as part of the patient's discharge plan, categorized as community administration. |
 | [Patient with SNOMED Gender and Age (extensions)](StructureDefinition-patient-age-gender-snomed-profile.md) | Profile that adds an integer age extension and a SNOMED-based gender extension. |
@@ -60,7 +60,7 @@ These define sets of codes used by systems conforming to this implementation gui
 | :--- | :--- |
 | [Admission Sources ValueSet](ValueSet-admission-source-vs.md) | Defines the modes of transport or pathways by which the patient arrived. |
 | [Assessment Context ValueSet](ValueSet-assessment-context-vs.md) | ValueSet for assessment context codes (e.g., timing of functional scores). |
-| [Atrial Fibrillation or Flutter Status ValueSet](ValueSet-afib-flutter-status-vs.md) | ValueSet for the status of Atrial Fibrillation or Flutter assessment. |
+| [Atrial Fibrillation or Flutter Status ValueSet](ValueSet-afib-flutter-status-vs.md) | ValueSet defining the allowed coded outcomes for documenting the status of an Atrial Fibrillation (AF) or Atrial Flutter assessment. It is intentionally restricted to SNOMED CT qualifier values to express: (1) known present, (2) known absent, or (3) unknown. The ValueSet supports harmonized recording across systems, improves comparability for clinical decision support and research, and enables consistent reporting in contexts where AF/flutter materially influences thromboembolic risk and subsequent management. |
 | [Brain Imaging Modality ValueSet](ValueSet-brain-imaging-modality-vs.md) | Defines the SNOMED CT codes for individual brain imaging modalities performed as procedures. |
 | [Carotid Arteries Imaging Modality ValueSet](ValueSet-carotid-imaging-modality-vs.md) | Defines codes for different types of carotid artery imaging. |
 | [Discharge Department/Service ValueSet](ValueSet-discharge-dept-vs.md) | ValueSet specifying the type of department or service the patient was discharged or transferred to. |

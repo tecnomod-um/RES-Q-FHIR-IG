@@ -31,7 +31,7 @@
   fhir:name [ fhir:v "ProcedureTimingContextExtension"] ; # 
   fhir:title [ fhir:v "Procedure Timing Context Extension"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-02-17T08:59:32+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-17T12:24:33+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;

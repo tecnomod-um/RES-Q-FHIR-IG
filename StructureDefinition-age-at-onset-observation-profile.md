@@ -12,7 +12,7 @@
 | Draft as of 2026-02-17 | *Computable Name*:AgeAtOnsetObservationProfile |
 
  
-Profile specifically for recording the patient's age at stroke onset. 
+Profile specifically for recording the patient's age at stroke onset. The value is represented as an integer (age in years) with a fixed SNOMED CT code indicating that this observation represents age at onset. 
 
 **Usages:**
 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-age-at-onset-observa
   "name" : "AgeAtOnsetObservationProfile",
   "title" : "Age at Stroke Onset Observation Profile (R5)",
   "status" : "draft",
-  "date" : "2026-02-17T08:59:32+00:00",
+  "date" : "2026-02-17T12:24:33+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -54,7 +54,7 @@ Other representations of profile: [CSV](StructureDefinition-age-at-onset-observa
       ]
     }
   ],
-  "description" : "Profile specifically for recording the patient's age at stroke onset.",
+  "description" : "Profile specifically for recording the patient's age at stroke onset. The value is represented as an integer (age in years) with a fixed SNOMED CT code indicating that this observation represents age at onset.",
   "fhirVersion" : "5.0.0",
   "mapping" : [
     {

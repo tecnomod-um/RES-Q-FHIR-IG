@@ -19,5 +19,5 @@ Extensions let you add well-defined data elements beyond the base FHIR resources
 
 > 💡 **Tip:** Prefer HL7 standard extensions where possible. Create a custom extension only when no suitable standard one exists.
 
-* **No entries found (srcpath=extensions)**
+* **No entries found (srcpath=Extension)**
 

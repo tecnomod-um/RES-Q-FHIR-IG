@@ -12,7 +12,7 @@
 | Active as of 2026-02-17 | *Computable Name*:AfibFlutterStatusVS |
 
  
-ValueSet for the status of Atrial Fibrillation or Flutter assessment. 
+ValueSet defining the allowed coded outcomes for documenting the status of an Atrial Fibrillation (AF) or Atrial Flutter assessment. It is intentionally restricted to SNOMED CT qualifier values to express: (1) known present, (2) known absent, or (3) unknown. The ValueSet supports harmonized recording across systems, improves comparability for clinical decision support and research, and enables consistent reporting in contexts where AF/flutter materially influences thromboembolic risk and subsequent management. 
 
  **References** 
 
@@ -50,7 +50,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "name" : "AfibFlutterStatusVS",
   "title" : "Atrial Fibrillation or Flutter Status ValueSet",
   "status" : "active",
-  "date" : "2026-02-17T08:59:32+00:00",
+  "date" : "2026-02-17T12:24:33+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -63,7 +63,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
       ]
     }
   ],
-  "description" : "ValueSet for the status of Atrial Fibrillation or Flutter assessment.",
+  "description" : "ValueSet defining the allowed coded outcomes for documenting the status of an Atrial Fibrillation (AF) or Atrial Flutter assessment. It is intentionally restricted to SNOMED CT qualifier values to express: (1) known present, (2) known absent, or (3) unknown. The ValueSet supports harmonized recording across systems, improves comparability for clinical decision support and research, and enables consistent reporting in contexts where AF/flutter materially influences thromboembolic risk and subsequent management.",
   "compose" : {
     "include" : [
       {

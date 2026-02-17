@@ -17,4 +17,4 @@ In this guide you’ll find the extensions referenced by the profiles and exampl
 
 > 💡 **Tip:** Prefer HL7 standard extensions where possible. Create a custom extension only when no suitable standard one exists.
 
-{% include list-folder.html srcpath='extensions' %}
+{% include list-folder.html srcpath='Extension' %}

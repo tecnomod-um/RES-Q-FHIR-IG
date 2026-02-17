@@ -62,8 +62,13 @@ Id: afib-flutter-status-vs
 * ^url = AfibFlutterStatusVS_URL
 * ^version = "1.0.0"
 * ^title = "Atrial Fibrillation or Flutter Status ValueSet"
-* ^description = "ValueSet for the status of Atrial Fibrillation or Flutter assessment."
+* ^description = "ValueSet defining the allowed coded outcomes for documenting the status of an Atrial Fibrillation (AF) or Atrial Flutter assessment. It is intentionally restricted to SNOMED CT qualifier values to express: (1) known present, (2) known absent, or (3) unknown. The ValueSet supports harmonized recording across systems, improves comparability for clinical decision support and research, and enables consistent reporting in contexts where AF/flutter materially influences thromboembolic risk and subsequent management."
 * ^status = #active
+* ^publisher = "Tecnomod"
+* ^contact[0].name = "Tecnomod"
+* ^contact[0].telecom[0].system = #email
+* ^contact[0].telecom[0].value = "alvaro.riquelmet@um.es"
+* ^contact[0].telecom[1].value = "cmartinezcosta@um.es"
 * SCT#410515003 "Known present (qualifier value)"
 * SCT#410516002 "Known absent (qualifier value)"
 * SCT#261665006 "Unknown (qualifier value)"
@@ -411,7 +416,7 @@ Parent: BaseStrokeObservation
 * ^version = "1.0.0"
 * ^name = "AgeAtOnsetObservationProfile"
 * ^title = "Age at Stroke Onset Observation Profile (R5)"
-* ^description = "Profile specifically for recording the patient's age at stroke onset."
+* ^description = "Profile specifically for recording the patient's age at stroke onset. The value is represented as an integer (age in years) with a fixed SNOMED CT code indicating that this observation represents age at onset."
 * code = SCT#445518008 "Age at onset of clinical finding (observable entity)"
 * code 1..1 MS
 * value[x] 1..1 MS
@@ -444,6 +449,7 @@ Expression: "code.coding.where($this.system = 'http://snomed.info/sct' and $this
 
 Instance: AgeAtOnsetObservationExample
 InstanceOf: AgeAtOnsetObservationProfile
+* ^description = "This instance represents that at the time of stroke onset, the patient was 65 years old."
 * valueInteger = 65
 * subject = Reference(PatientExample)
 * encounter = Reference(StrokeEncounterExample)

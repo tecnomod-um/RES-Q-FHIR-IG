@@ -55,7 +55,7 @@ Other representations of profile: [CSV](StructureDefinition-initial-care-intensi
   "name" : "InitialCareIntensityExtension",
   "title" : "Initial Care Intensity Extension",
   "status" : "draft",
-  "date" : "2026-02-17T08:49:13+00:00",
+  "date" : "2026-02-17T08:59:32+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

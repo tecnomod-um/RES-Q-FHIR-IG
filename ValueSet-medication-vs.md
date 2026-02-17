@@ -51,7 +51,7 @@ SNOMED CT codes for drug products or substances.
   "name" : "MedicationVS",
   "title" : "Medications ValueSet",
   "status" : "draft",
-  "date" : "2026-02-17T08:49:13+00:00",
+  "date" : "2026-02-17T08:59:32+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

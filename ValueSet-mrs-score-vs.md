@@ -50,7 +50,7 @@ ValueSet containing the codes for the modified Rankin Scale (mRS) score.
   "name" : "MRsScoreVS",
   "title" : "modified Rankin Scale (mRS) Score ValueSet",
   "status" : "active",
-  "date" : "2026-02-18T13:09:07+00:00",
+  "date" : "2026-02-18T13:35:35+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-vital-sign-observati
   "name" : "VitalSignObservationProfile",
   "title" : "Stroke Vital Sign Observation Profile (R5)",
   "status" : "draft",
-  "date" : "2026-02-18T13:09:07+00:00",
+  "date" : "2026-02-18T13:35:35+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

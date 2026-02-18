@@ -31,7 +31,7 @@
   fhir:name [ fhir:v "SwallowingScreeningTimingCategoryExt"] ; # 
   fhir:title [ fhir:v "Swallowing Screening Timing Category"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-02-18T13:09:07+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-18T13:35:35+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;

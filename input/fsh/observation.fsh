@@ -604,13 +604,13 @@ Severity: #error
 Expression: "code.coding.where($this.system = 'http://snomed.info/sct' and $this.code = '1255866005').exists() implies value.ofType(CodeableConcept).exists()"
 
 Invariant: obs-nihss-code
-Description:  "Enforces NIHSS total score as integer for consistent analytics and reporting of severity."
+Description: "Enforces NIHSS total score as integer for consistent analytics and reporting of severity."
 Severity: #error
 Expression: "code.coding.where($this.system = 'http://snomed.info/sct' and $this.code = '450743008').exists() implies value.ofType(integer).exists()"
 
 // Invariants for SpecificFindingObservationProfile
 Invariant: obs-afib-code
-Description:"Ensures AF/flutter assessment observations use controlled status values to avoid free-text and improve interoperability."
+Description: "Ensures AF/flutter assessment observations use controlled status values to avoid free-text and improve interoperability."
 Severity: #error
 Expression: "code.coding.where($this.system = 'http://snomed.info/sct' and $this.code = '1290101000000101').exists() implies value.coding.where($this.system = %AfibFlutterStatusCS_URL).exists()"
 

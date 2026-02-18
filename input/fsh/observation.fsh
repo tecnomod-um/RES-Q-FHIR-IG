@@ -599,27 +599,23 @@ Record age-at-onset in years as a simple, computable value used in etiologic ass
 // ------------------------- Invariants ---------------------------------
 // Invariant for FunctionalScoreObservationProfile slicing
 Invariant: obs-mrs-code
-* ^requirements = "Enforces consistent datatype for mRS (ordinal category) to support ValueSet binding and avoid ambiguous numeric representations."
-Description: "If the observation code is for mRS, the value must be a CodeableConcept."
+Description: "Enforces consistent datatype for mRS (ordinal category) to support ValueSet binding and avoid ambiguous numeric representations."
 Severity: #error
 Expression: "code.coding.where($this.system = 'http://snomed.info/sct' and $this.code = '1255866005').exists() implies value.ofType(CodeableConcept).exists()"
 
 Invariant: obs-nihss-code
-* ^requirements = "Enforces NIHSS total score as integer for consistent analytics and reporting of severity."
-Description: "If the observation code is for NIHSS, the value must be an Integer."
+Description:  "Enforces NIHSS total score as integer for consistent analytics and reporting of severity."
 Severity: #error
 Expression: "code.coding.where($this.system = 'http://snomed.info/sct' and $this.code = '450743008').exists() implies value.ofType(integer).exists()"
 
 // Invariants for SpecificFindingObservationProfile
 Invariant: obs-afib-code
-* ^requirements = "Ensures AF/flutter assessment observations use controlled status values to avoid free-text and improve interoperability."
-Description: "If the observation code is for Afib/Flutter Assessment, the value must be from the AfibFlutterStatusVS."
+Description:"Ensures AF/flutter assessment observations use controlled status values to avoid free-text and improve interoperability."
 Severity: #error
 Expression: "code.coding.where($this.system = 'http://snomed.info/sct' and $this.code = '1290101000000101').exists() implies value.coding.where($this.system = %AfibFlutterStatusCS_URL).exists()"
 
-Invariant: obs-mtici-code
-* ^requirements = "Ensures mTICI observations carry a valid mTICI grade code to support registry reporting and outcome analytics."
-Description: "If the observation code is for mTICI Score Assessment, the value must be from the MticiScoreVS."
+Invariant: obs-mtici-code 
+Description: "Ensures mTICI observations carry a valid mTICI grade code to support registry reporting and outcome analytics."
 Severity: #error
 Expression: "code.coding.where($this.system = 'http://snomed.info/sct' and $this.code = '1156911000').exists() implies value.coding.where($this.system = %MticiScoreCS_URL).exists()"
 

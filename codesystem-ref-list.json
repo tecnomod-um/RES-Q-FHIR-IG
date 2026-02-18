@@ -30,7 +30,7 @@
       "status" : "active",
       "name" : "AssessmentContextCS",
       "title" : "Assessment Context Code System",
-      "description" : "Codes defining the context or timing of a clinical assessment, particularly functional scores.",
+      "description" : "This CodeSystem defines normalized codes for the clinical context / relative timepoint at which a stroke-related assessment was performed. It is primarily used to contextualize functional and severity instruments (e.g., mRS and NIHSS) where interpretation depends on whether the score reflects baseline status, acute presentation, discharge status, or follow-up.\n\nThese codes represent *relative phases* (pre-stroke baseline, admission, discharge, ~3-month follow-up) rather than precise timestamps. The actual date/time of measurement should be recorded in Observation.effective[x] when known; the context code complements effective[x] by expressing the clinical phase, which is often necessary for reporting and comparability (e.g., “mRS pre-stroke” vs “mRS at discharge”).\n\nScope note: This CodeSystem is intentionally small and focused on common stroke pathway milestones; implementers may extend it (with additional codes and governance) if other standardized follow-up timepoints are required (e.g., 6 months, 1 year).",
       "uses" : {
       },
       "ValueSet-assessment-context-vs.html" : "Assessment Context ValueSet"
@@ -96,7 +96,7 @@
       "status" : "active",
       "name" : "MRsScoreCS",
       "title" : "modified Rankin Scale (mRS) Score Code System",
-      "description" : "Codes representing the modified Rankin Scale (mRS) score for functional outcome.",
+      "description" : "This CodeSystem defines codes for the modified Rankin Scale (mRS), an ordinal measure of global disability and functional outcome widely used in stroke care and research. mRS grades functional status from 0 (no symptoms) through 5 (severe disability), with 6 indicating death.\n\nWithin this implementation guide, mRS is intended to be captured as Observation.valueCodeableConcept (bound to the MRsScoreVS ValueSet), with the assessment timepoint represented explicitly (e.g., via effective[x]) and/or via an assessment context indicator (e.g., pre-stroke baseline, discharge, ~90-day follow-up). This supports standard reporting (e.g., “mRS at 90 days”), comparability across sites, and consistent downstream analytics.\n\nScope and modeling notes:\n- mRS is a coarse, global disability scale; it does not encode detailed domain-specific functional limitations (mobility, cognition, ADLs) which should be captured via additional instruments/Observations if required.\n- The CodeSystem defines only the *score*; method of ascertainment (in-person, telephone, structured interview) and assessor details should be captured separately when relevant.",
       "uses" : {
       },
       "ValueSet-mrs-score-vs.html" : "modified Rankin Scale (mRS) Score ValueSet"
@@ -107,7 +107,7 @@
       "status" : "active",
       "name" : "MTICICodeCS",
       "title" : "mTICI Score Codes CodeSystem",
-      "description" : "Codes representing the mTICI score used to assess the degree of reperfusion after a thrombectomy procedure.",
+      "description" : "This CodeSystem defines the assessment concept code(s) used to indicate that an Observation is reporting an mTICI reperfusion grade. It is intentionally separated from the MticiScoreCS CodeSystem, which contains the actual mTICI grade values (0–3 with 2a/2b/2c).\n\nIn practice:\n- Observation.code identifies the *kind of measurement/assessment* (“mTICI reperfusion grade”).\n- Observation.valueCodeableConcept carries the *result* (one of the mTICI grades from MticiScoreVS).\n\nThis separation improves semantic clarity and supports consistent validation and analytics across systems.",
       "uses" : {
       },
       "ValueSet-mtici-code-vs.html" : "mTICI Score Codes ValueSet"
@@ -118,7 +118,7 @@
       "status" : "draft",
       "name" : "MticiScoreCS",
       "title" : "MTICI Score Code System",
-      "description" : "This CodeSystem defines the codes for the modified Treatment in Cerebral Ischemia / modified Thrombolysis in Cerebral Infarction (mTICI) reperfusion score, an ordinal angiographic scale used to grade the extent of downstream tissue reperfusion after endovascular therapy (e.g., mechanical thrombectomy) in acute ischemic stroke. The scale ranges from 0 (no perfusion) to 3 (complete reperfusion) and includes the 2a/2b/2c subgrades to differentiate partial, substantial, and near-complete reperfusion. These codes are intended for consistent, structured capture in HL7® FHIR® resources such as Observation (valueCodeableConcept), Procedure reports, registries, and research datasets. The CodeSystem represents only the final reperfusion grade for the target downstream territory assessed on post-procedural angiography (commonly DSA). It does not encode vessel location, imaging modality details, timing, technique/device used, or adjudication method; those aspects should be modeled separately. Any local definition of “successful reperfusion” (often mTICI ≥ 2b, depending on protocol) should be implemented via ValueSets, decision support logic, or reporting rules rather than by altering the meaning of the underlying codes.",
+      "description" : "This CodeSystem defines codes for the modified Treatment in Cerebral Ischemia / modified Thrombolysis in Cerebral Infarction (mTICI) reperfusion grade. mTICI is an ordinal angiographic scale used to quantify the extent of antegrade reperfusion of the downstream ischemic territory after endovascular therapy for acute ischemic stroke (e.g., mechanical thrombectomy).\n\nThe scale ranges from 0 (no perfusion) to 3 (complete reperfusion), with 2a/2b/2c subgrades to distinguish partial, substantial, and near-complete reperfusion. These codes are intended for consistent, interoperable capture in HL7® FHIR® resources—most commonly Observation.valueCodeableConcept—supporting procedural documentation, registry submission, audit/quality improvement, and research.\n\nScope and modeling notes:\n- This CodeSystem represents the *final* angiographic reperfusion grade for the target downstream territory, typically assigned from the final post-procedural angiographic run (commonly DSA).\n- It does not encode target vessel location, imaging modality details, timestamps, technique/device, number of passes, collateral status, or adjudication process; those elements should be recorded separately (e.g., Procedure, ImagingStudy, Observation.method, extensions).\n- Any local definition of “successful reperfusion” (often operationalized as mTICI ≥ 2b, depending on protocol) should be implemented via ValueSets, rules, or reporting logic without altering code meanings.",
       "uses" : {
       },
       "ValueSet-mtici-score-vs.html" : "MTICI Score ValueSet"
@@ -151,7 +151,7 @@
       "status" : "active",
       "name" : "StrokeCircumstanceCodesCS",
       "title" : "Stroke Circumstance Codes CodeSystem",
-      "description" : "Codes for findings related to the circumstances of stroke onset (In-hospital, Wake-up).",
+      "description" : "This CodeSystem defines coded circumstances related to stroke symptom onset that are clinically relevant for eligibility decisions, diagnostic reasoning, and reporting—particularly when the exact onset time is unknown or atypical.\n\nThese codes are intended to be used as Observation.code in the StrokeCircumstanceObservationProfile to assert that a given onset circumstance applies to the index stroke event. They do not encode the precise onset timestamp, last-known-well time, or location of onset; those details should be represented separately (e.g., dedicated Observations, Encounter/Condition attributes, or extensions).",
       "uses" : {
       },
       "ValueSet-stroke-circumstance-codes-vs.html" : "Stroke Circumstance Codes ValueSet"
@@ -217,7 +217,7 @@
       "status" : "active",
       "name" : "TimingMetricCodesCS",
       "title" : "Stroke Timing Metric Codes ValueSet",
-      "description" : "Codes for key process timing metrics in acute stroke care (D2N, D2G).",
+      "description" : "This CodeSystem defines codes for key time-interval process metrics in acute stroke care used for quality monitoring and pathway optimization. Each code represents a duration measured in minutes between two clinically meaningful events (e.g., hospital arrival to thrombolysis start).\n\nThese metrics are commonly used in performance dashboards, registry submissions, and quality improvement programs. The intent is to store the *measured interval* (a duration) in Observation.valueQuantity (UCUM minutes), while event timestamps (arrival time, needle time, groin puncture time) may be stored separately when available.\n\nImplementation note: Exact operational definitions can vary by institution (e.g., “needle time” as alteplase bolus vs infusion start; “door time” as ED arrival vs triage time). Implementers should align local measurement definitions and document them (e.g., in metadata, profiles, or implementation guidance) to ensure comparability across sites.",
       "uses" : {
       },
       "ValueSet-timing-metric-codes-vs.html" : "Stroke Timing Metric Codes ValueSet"

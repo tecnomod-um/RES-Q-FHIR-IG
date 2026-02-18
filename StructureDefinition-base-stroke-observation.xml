@@ -16,7 +16,7 @@
   <name value="BaseStrokeObservation"/>
   <title value="Base Profile for Stroke-Related Observations"/>
   <status value="active"/>
-  <date value="2026-02-18T13:35:35+00:00"/>
+  <date value="2026-02-18T14:43:59+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>
@@ -25,7 +25,7 @@
       <value value="http://tecnomod-um.org"/>
     </telecom>
   </contact>
-  <description value="Constraints for observations recorded in the context of stroke care."/>
+  <description value="Common constraints for Observations captured in the context of stroke care across acute management and follow-up. This profile establishes a consistent minimum dataset and reference structure so that downstream profiles (vital signs, functional scores, timing metrics, onset circumstances, and specific findings) behave uniformly across systems.&#xA;&#xA;Key modeling intent:&#xA;- Observation.status is fixed to final to indicate recorded results suitable for clinical reporting and analytics.&#xA;- Observation.subject (Patient) and Observation.encounter (index stroke encounter) are mandatory to ensure every observation is attributable to a specific person and care episode.&#xA;- Observation.partOf optionally links the observation to a Procedure (e.g., mechanical thrombectomy) when the observation represents a procedural outcome (e.g., mTICI grade) or a process metric.&#xA;- Observation.effective[x] is optional to accommodate cases where only a phase label is known; when available, effective[x] should be populated to support accurate sequencing and time-based analysis."/>
   <fhirVersion value="5.0.0"/>
   <mapping>
     <identity value="workflow"/>

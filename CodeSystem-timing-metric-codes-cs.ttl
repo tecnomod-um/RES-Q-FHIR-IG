@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "timing-metric-codes-cs"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem timing-metric-codes-cs</b></p><a name=\"timing-metric-codes-cs\"> </a><a name=\"hctiming-metric-codes-cs\"> </a><p>This  code system <code>http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">D2G<a name=\"timing-metric-codes-cs-D2G\"> </a></td><td>Door to Groin</td><td>Time (in minutes) from hospital arrival to the groin puncture for mechanical thrombectomy</td></tr><tr><td style=\"white-space:nowrap\">D2N<a name=\"timing-metric-codes-cs-D2N\"> </a></td><td>Door to Needle</td><td>Time (in minutes) from the patient’s arrival at the hospital to the start of intravenous thrombolysis</td></tr></table></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem timing-metric-codes-cs</b></p><a name=\"timing-metric-codes-cs\"> </a><a name=\"hctiming-metric-codes-cs\"> </a><p>This  code system <code>http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">D2G<a name=\"timing-metric-codes-cs-D2G\"> </a></td><td>Door to Groin</td><td>Elapsed time (minutes) from documented hospital arrival (‘door’) to arterial groin puncture for mechanical thrombectomy (first puncture attempt).</td></tr><tr><td style=\"white-space:nowrap\">D2N<a name=\"timing-metric-codes-cs-D2N\"> </a></td><td>Door to Needle</td><td>Elapsed time (minutes) from documented hospital arrival (‘door’) to initiation of intravenous thrombolysis (commonly alteplase/tenecteplase administration start, per local definition).</td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:url [
      fhir:v "http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs"^^xsd:anyURI ;
@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "TimingMetricCodesCS"] ; # 
   fhir:title [ fhir:v "Stroke Timing Metric Codes ValueSet"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-02-18T13:35:35+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-18T14:43:59+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;
@@ -30,17 +30,17 @@
        fhir:value [ fhir:v "http://tecnomod-um.org" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "Codes for key process timing metrics in acute stroke care (D2N, D2G)."] ; # 
+  fhir:description [ fhir:v "This CodeSystem defines codes for key time-interval process metrics in acute stroke care used for quality monitoring and pathway optimization. Each code represents a duration measured in minutes between two clinically meaningful events (e.g., hospital arrival to thrombolysis start).\n\nThese metrics are commonly used in performance dashboards, registry submissions, and quality improvement programs. The intent is to store the *measured interval* (a duration) in Observation.valueQuantity (UCUM minutes), while event timestamps (arrival time, needle time, groin puncture time) may be stored separately when available.\n\nImplementation note: Exact operational definitions can vary by institution (e.g., “needle time” as alteplase bolus vs infusion start; “door time” as ED arrival vs triage time). Implementers should align local measurement definitions and document them (e.g., in metadata, profiles, or implementation guidance) to ensure comparability across sites."] ; # 
   fhir:content [ fhir:v "complete"] ; # 
   fhir:count [ fhir:v "2"^^xsd:nonNegativeInteger] ; # 
   fhir:concept ( [
      fhir:code [ fhir:v "D2G" ] ;
      fhir:display [ fhir:v "Door to Groin" ] ;
-     fhir:definition [ fhir:v "Time (in minutes) from hospital arrival to the groin puncture for mechanical thrombectomy" ]
+     fhir:definition [ fhir:v "Elapsed time (minutes) from documented hospital arrival (‘door’) to arterial groin puncture for mechanical thrombectomy (first puncture attempt)." ]
   ] [
      fhir:code [ fhir:v "D2N" ] ;
      fhir:display [ fhir:v "Door to Needle" ] ;
-     fhir:definition [ fhir:v "Time (in minutes) from the patient’s arrival at the hospital to the start of intravenous thrombolysis" ]
+     fhir:definition [ fhir:v "Elapsed time (minutes) from documented hospital arrival (‘door’) to initiation of intravenous thrombolysis (commonly alteplase/tenecteplase administration start, per local definition)." ]
   ] ) . # 
 
 # -------------------------------------------------------------------------------------

@@ -229,7 +229,11 @@
   </table>
 
 <p>
-<p>Codes defining the context or timing of a clinical assessment, particularly functional scores.</p>
+<p>This CodeSystem defines normalized codes for the clinical context / relative timepoint at which a stroke-related assessment was performed. It is primarily used to contextualize functional and severity instruments (e.g., mRS and NIHSS) where interpretation depends on whether the score reflects baseline status, acute presentation, discharge status, or follow-up.</p>
+
+<p>These codes represent <em>relative phases</em> (pre-stroke baseline, admission, discharge, ~3-month follow-up) rather than precise timestamps. The actual date/time of measurement should be recorded in Observation.effective[x] when known; the context code complements effective[x] by expressing the clinical phase, which is often necessary for reporting and comparability (e.g., “mRS pre-stroke” vs “mRS at discharge”).</p>
+
+<p>Scope note: This CodeSystem is intentionally small and focused on common stroke pathway milestones; implementers may extend it (with additional codes and governance) if other standardized follow-up timepoints are required (e.g., 6 months, 1 year).</p>
 
 </p>
 
@@ -252,16 +256,16 @@
 <table class="codes" data-fhir="generated"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr>
 <tr><td style="white-space:nowrap">pre-stroke<a name="assessment-context-cs-pre-stroke"> </a></td>
 <td>Pre-stroke</td>
-<td>Assessment reflects patient state before the current stroke event.</td></tr>
+<td>Assessment reflects the patient’s baseline state prior to the index stroke event (pre-morbid status), typically derived from history or collateral information.</td></tr>
 <tr><td style="white-space:nowrap">admission<a name="assessment-context-cs-admission"> </a></td>
 <td>Admission</td>
-<td>Assessment performed upon or shortly after hospital admission for the stroke event.</td></tr>
+<td>Assessment performed at, or shortly after, presentation/admission for the index stroke event (acute phase baseline for in-hospital care).</td></tr>
 <tr><td style="white-space:nowrap">discharge<a name="assessment-context-cs-discharge"> </a></td>
 <td>Discharge</td>
-<td>Assessment performed at the time of hospital discharge.</td></tr>
+<td>Assessment performed at the time of discharge from the acute admission (or the end of the index hospitalization episode).</td></tr>
 <tr><td style="white-space:nowrap">3-month<a name="assessment-context-cs-3-month"> </a></td>
 <td>3-Month Follow-up</td>
-<td>Assessment performed approximately 3 months post-discharge.</td></tr></table></div>
+<td>Assessment performed at approximately 3 months (≈90 days) after discharge/index event, acknowledging operational windows used in routine follow-up and research.</td></tr></table></div>
 
   
 
@@ -288,7 +292,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Wed, Feb 18, 2026 13:35+0000">2026-02-18</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Wed, Feb 18, 2026 14:43+0000">2026-02-18</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

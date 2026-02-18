@@ -12,7 +12,8 @@
 | Active as of 2026-02-18 | *Computable Name*:AssessmentContextVS |
 
  
-ValueSet for assessment context codes (e.g., timing of functional scores). 
+This ValueSet includes all context/timepoint codes defined in AssessmentContextCS. It is intended for required binding to elements (e.g., extensions) that must indicate the clinical phase of an assessment, enabling consistent stratification and reporting of outcomes and severity over the stroke care pathway. 
+The ValueSet is used to validate that only supported context categories are recorded, improving interoperability when exchanging stroke assessments between systems and across care settings. 
 
  **References** 
 
@@ -50,7 +51,7 @@ ValueSet for assessment context codes (e.g., timing of functional scores).
   "name" : "AssessmentContextVS",
   "title" : "Assessment Context ValueSet",
   "status" : "active",
-  "date" : "2026-02-18T13:35:35+00:00",
+  "date" : "2026-02-18T14:43:59+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -63,7 +64,7 @@ ValueSet for assessment context codes (e.g., timing of functional scores).
       ]
     }
   ],
-  "description" : "ValueSet for assessment context codes (e.g., timing of functional scores).",
+  "description" : "This ValueSet includes all context/timepoint codes defined in AssessmentContextCS. It is intended for required binding to elements (e.g., extensions) that must indicate the clinical phase of an assessment, enabling consistent stratification and reporting of outcomes and severity over the stroke care pathway.\n\nThe ValueSet is used to validate that only supported context categories are recorded, improving interoperability when exchanging stroke assessments between systems and across care settings.",
   "compose" : {
     "include" : [
       {

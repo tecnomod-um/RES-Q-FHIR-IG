@@ -12,7 +12,8 @@
 | Active as of 2026-02-18 | *Computable Name*:VitalSignCodesVS |
 
  
-Codes for key vital signs relevant to stroke assessment (Systolic, Diastolic BP). 
+This ValueSet defines SNOMED CT observable-entity codes for the blood pressure components captured as vital signs in the acute stroke setting (systolic and diastolic blood pressure). It is intended for use as Observation.component.code in a single vital-sign Observation that records both components using UCUM units (mm[Hg]). 
+Including only the component codes (rather than full LOINC panels) keeps the representation lightweight while remaining semantically precise, and supports repeated measurements across time (e.g., triage, post-thrombolysis monitoring) by repeating the Observation with different effective[x] timestamps. 
 
  **References** 
 
@@ -51,7 +52,7 @@ Codes for key vital signs relevant to stroke assessment (Systolic, Diastolic BP)
   "title" : "Stroke Vital Sign Codes ValueSet",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-18T13:35:35+00:00",
+  "date" : "2026-02-18T14:43:59+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -64,7 +65,7 @@ Codes for key vital signs relevant to stroke assessment (Systolic, Diastolic BP)
       ]
     }
   ],
-  "description" : "Codes for key vital signs relevant to stroke assessment (Systolic, Diastolic BP).",
+  "description" : "This ValueSet defines SNOMED CT observable-entity codes for the blood pressure components captured as vital signs in the acute stroke setting (systolic and diastolic blood pressure). It is intended for use as Observation.component.code in a single vital-sign Observation that records both components using UCUM units (mm[Hg]).\n\nIncluding only the component codes (rather than full LOINC panels) keeps the representation lightweight while remaining semantically precise, and supports repeated measurements across time (e.g., triage, post-thrombolysis monitoring) by repeating the Observation with different effective[x] timestamps.",
   "compose" : {
     "include" : [
       {

@@ -235,11 +235,11 @@ RESQIG - Local Development build (v0.1.0) built by the FHIR (HL7&reg; FHIR&reg; 
 )
       </li>
       <li>
-There are examples where a medication request may include the option of an oral dose or an Intravenous or Intramuscular dose.  For example, "Ondansetron 8mg orally or IV twice a day as needed for nausea" or "Compazine&reg; (prochlorperazine) 5-10mg PO or 25mg PR bid prn nausea or vomiting".  In these cases, two medication requests would be created that could be grouped together.  The decision on which dose and route of administration to use is based on the patient's condition at the time the dose is needed. In general, each prescribed drug will be a separate Medication Request. (        <a href="StructureDefinition-discharge-medication-request-profile-definitions.html">src</a>
+The scale ranges from 0 (no perfusion) to 3 (complete reperfusion), with 2a/2b/2c subgrades to distinguish partial, substantial, and near-complete reperfusion. These codes are intended for consistent, interoperable capture in HL7&reg; FHIR&reg; resources—most commonly Observation.valueCodeableConcept—supporting procedural documentation, registry submission, audit/quality improvement, and research. (        <a href="artifacts.html">src</a>
 )
       </li>
       <li>
-This CodeSystem defines the codes for the modified Treatment in Cerebral Ischemia / modified Thrombolysis in Cerebral Infarction (mTICI) reperfusion score, an ordinal angiographic scale used to grade the extent of downstream tissue reperfusion after endovascular therapy (e.g., mechanical thrombectomy) in acute ischemic stroke. The scale ranges from 0 (no perfusion) to 3 (complete reperfusion) and includes the 2a/2b/2c subgrades to differentiate partial, substantial, and near-complete reperfusion. These codes are intended for consistent, structured capture in HL7&reg; FHIR&reg; resources such as Observation (valueCodeableConcept), Procedure reports, registries, and research datasets. The CodeSystem represents only the final reperfusion grade for the target downstream territory assessed on post-procedural angiography (commonly DSA). It does not encode vessel location, imaging modality details, timing, technique/device used, or adjudication method; those aspects should be modeled separately. Any local definition of “successful reperfusion” (often mTICI ≥ 2b, depending on protocol) should be implemented via ValueSets, decision support logic, or reporting rules rather than by altering the meaning of the underlying codes. (        <a href="artifacts.html">src</a>
+There are examples where a medication request may include the option of an oral dose or an Intravenous or Intramuscular dose.  For example, "Ondansetron 8mg orally or IV twice a day as needed for nausea" or "Compazine&reg; (prochlorperazine) 5-10mg PO or 25mg PR bid prn nausea or vomiting".  In these cases, two medication requests would be created that could be grouped together.  The decision on which dose and route of administration to use is based on the patient's condition at the time the dose is needed. In general, each prescribed drug will be a separate Medication Request. (        <a href="StructureDefinition-discharge-medication-request-profile-definitions.html">src</a>
 )
       </li>
     </ul>
@@ -927,7 +927,7 @@ This CodeSystem defines the codes for the modified Treatment in Cerebral Ischemi
 
           IG &copy; 2025+           <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>
 .  Package RES-Q-FHIR-IG#0.1.0 based on           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>
-. Generated           <span title="Wed, Feb 18, 2026 13:35+0000">2026-02-18</span>
+. Generated           <span title="Wed, Feb 18, 2026 14:43+0000">2026-02-18</span>
 
                     <br/>
 

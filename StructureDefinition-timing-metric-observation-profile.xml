@@ -21,7 +21,7 @@
   <name value="TimingMetricObservationProfile"/>
   <title value="Stroke Timing Metric Observation Profile (R5)"/>
   <status value="draft"/>
-  <date value="2026-02-18T13:35:35+00:00"/>
+  <date value="2026-02-18T14:43:59+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>
@@ -30,7 +30,7 @@
       <value value="http://tecnomod-um.org"/>
     </telecom>
   </contact>
-  <description value="Profile for recording key process timing metrics (D2N, D2G)."/>
+  <description value="Profile for recording acute stroke process timing metrics as measured durations (e.g., Door-to-Needle, Door-to-Groin). Observation.code is bound to TimingMetricCodesVS, and Observation.valueQuantity represents the elapsed time as a duration in UCUM minutes.&#xA;&#xA;This representation is optimized for quality monitoring and analytics, where the interval value is the primary datum. The profile allows hasMember references to associate related sub-metrics or supporting Observations when a composite metric is derived from multiple recorded steps.&#xA;&#xA;Scope note: This profile records the interval value; it does not require recording the underlying event timestamps. If timestamp provenance is needed, implementers should capture the source event times separately (e.g., additional Observations or extensions) to support auditing and cross-site comparability."/>
   <fhirVersion value="5.0.0"/>
   <mapping>
     <identity value="workflow"/>

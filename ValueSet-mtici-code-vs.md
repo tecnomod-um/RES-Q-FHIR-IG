@@ -12,7 +12,8 @@
 | Active as of 2026-02-18 | *Computable Name*:MTICICodeVS |
 
  
-ValueSet containing the codes to represent the mTICI score used to assess the degree of reperfusion after a thrombectomy procedure. 
+This ValueSet includes the mTICI assessment concept code(s) from MTICICodeCS for use as Observation.code when recording an mTICI reperfusion grade. It is intended to be paired with a binding of Observation.valueCodeableConcept to MticiScoreVS. 
+Separating the “assessment concept” ValueSet (this ValueSet) from the “assessment result” ValueSet (MticiScoreVS) enables clearer validation rules, consistent UI behavior, and safer reuse of the mTICI scoring system across profiles. 
 
  **References** 
 
@@ -50,7 +51,7 @@ ValueSet containing the codes to represent the mTICI score used to assess the de
   "name" : "MTICICodeVS",
   "title" : "mTICI Score Codes ValueSet",
   "status" : "active",
-  "date" : "2026-02-18T13:35:35+00:00",
+  "date" : "2026-02-18T14:43:59+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -63,7 +64,7 @@ ValueSet containing the codes to represent the mTICI score used to assess the de
       ]
     }
   ],
-  "description" : "ValueSet containing the codes to represent the mTICI score used to assess the degree of reperfusion after a thrombectomy procedure.",
+  "description" : "This ValueSet includes the mTICI assessment concept code(s) from MTICICodeCS for use as Observation.code when recording an mTICI reperfusion grade. It is intended to be paired with a binding of Observation.valueCodeableConcept to MticiScoreVS.\n\nSeparating the “assessment concept” ValueSet (this ValueSet) from the “assessment result” ValueSet (MticiScoreVS) enables clearer validation rules, consistent UI behavior, and safer reuse of the mTICI scoring system across profiles.",
   "compose" : {
     "include" : [
       {

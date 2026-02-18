@@ -6,17 +6,7 @@
 
 ## Example Observation: AgeAtOnsetObservationExample
 
-Profile: [Age at Stroke Onset Observation Profile (R5)](StructureDefinition-age-at-onset-observation-profile.md)
-
-**status**: Final
-
-**code**: Age at onset of clinical finding (observable entity)
-
-**subject**: [Anonymous Patient (no stated gender), DoB Unknown](Patient-example-patient.md)
-
-**encounter**: [Encounter: extension = true,ICU / Stroke Unit,false,Neurology; status = completed; type = Inpatient Encounter; actualPeriod = 2025-03-01 08:00:00+0000 --> 2025-03-10 12:00:00+0000](Encounter-StrokeEncounterExample.md)
-
-**value**: 65
+**Example:** Age at stroke onset recorded as 65 years, linked to the stroke encounter.
 
 
 

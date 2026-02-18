@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "assessment-context-cs"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem assessment-context-cs</b></p><a name=\"assessment-context-cs\"> </a><a name=\"hcassessment-context-cs\"> </a><p>This case-insensitive code system <code>http://tecnomod-um.org/CodeSystem/assessment-context-cs</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">pre-stroke<a name=\"assessment-context-cs-pre-stroke\"> </a></td><td>Pre-stroke</td><td>Assessment reflects patient state before the current stroke event.</td></tr><tr><td style=\"white-space:nowrap\">admission<a name=\"assessment-context-cs-admission\"> </a></td><td>Admission</td><td>Assessment performed upon or shortly after hospital admission for the stroke event.</td></tr><tr><td style=\"white-space:nowrap\">discharge<a name=\"assessment-context-cs-discharge\"> </a></td><td>Discharge</td><td>Assessment performed at the time of hospital discharge.</td></tr><tr><td style=\"white-space:nowrap\">3-month<a name=\"assessment-context-cs-3-month\"> </a></td><td>3-Month Follow-up</td><td>Assessment performed approximately 3 months post-discharge.</td></tr></table></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem assessment-context-cs</b></p><a name=\"assessment-context-cs\"> </a><a name=\"hcassessment-context-cs\"> </a><p>This case-insensitive code system <code>http://tecnomod-um.org/CodeSystem/assessment-context-cs</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">pre-stroke<a name=\"assessment-context-cs-pre-stroke\"> </a></td><td>Pre-stroke</td><td>Assessment reflects the patient’s baseline state prior to the index stroke event (pre-morbid status), typically derived from history or collateral information.</td></tr><tr><td style=\"white-space:nowrap\">admission<a name=\"assessment-context-cs-admission\"> </a></td><td>Admission</td><td>Assessment performed at, or shortly after, presentation/admission for the index stroke event (acute phase baseline for in-hospital care).</td></tr><tr><td style=\"white-space:nowrap\">discharge<a name=\"assessment-context-cs-discharge\"> </a></td><td>Discharge</td><td>Assessment performed at the time of discharge from the acute admission (or the end of the index hospitalization episode).</td></tr><tr><td style=\"white-space:nowrap\">3-month<a name=\"assessment-context-cs-3-month\"> </a></td><td>3-Month Follow-up</td><td>Assessment performed at approximately 3 months (≈90 days) after discharge/index event, acknowledging operational windows used in routine follow-up and research.</td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:url [
      fhir:v "http://tecnomod-um.org/CodeSystem/assessment-context-cs"^^xsd:anyURI ;
@@ -22,7 +22,7 @@
   fhir:title [ fhir:v "Assessment Context Code System"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:experimental [ fhir:v true] ; # 
-  fhir:date [ fhir:v "2026-02-18T13:35:35+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-18T14:43:59+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;
@@ -31,26 +31,26 @@
        fhir:value [ fhir:v "http://tecnomod-um.org" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "Codes defining the context or timing of a clinical assessment, particularly functional scores."] ; # 
+  fhir:description [ fhir:v "This CodeSystem defines normalized codes for the clinical context / relative timepoint at which a stroke-related assessment was performed. It is primarily used to contextualize functional and severity instruments (e.g., mRS and NIHSS) where interpretation depends on whether the score reflects baseline status, acute presentation, discharge status, or follow-up.\n\nThese codes represent *relative phases* (pre-stroke baseline, admission, discharge, ~3-month follow-up) rather than precise timestamps. The actual date/time of measurement should be recorded in Observation.effective[x] when known; the context code complements effective[x] by expressing the clinical phase, which is often necessary for reporting and comparability (e.g., “mRS pre-stroke” vs “mRS at discharge”).\n\nScope note: This CodeSystem is intentionally small and focused on common stroke pathway milestones; implementers may extend it (with additional codes and governance) if other standardized follow-up timepoints are required (e.g., 6 months, 1 year)."] ; # 
   fhir:caseSensitive [ fhir:v false] ; # 
   fhir:content [ fhir:v "complete"] ; # 
   fhir:count [ fhir:v "4"^^xsd:nonNegativeInteger] ; # 
   fhir:concept ( [
      fhir:code [ fhir:v "pre-stroke" ] ;
      fhir:display [ fhir:v "Pre-stroke" ] ;
-     fhir:definition [ fhir:v "Assessment reflects patient state before the current stroke event." ]
+     fhir:definition [ fhir:v "Assessment reflects the patient’s baseline state prior to the index stroke event (pre-morbid status), typically derived from history or collateral information." ]
   ] [
      fhir:code [ fhir:v "admission" ] ;
      fhir:display [ fhir:v "Admission" ] ;
-     fhir:definition [ fhir:v "Assessment performed upon or shortly after hospital admission for the stroke event." ]
+     fhir:definition [ fhir:v "Assessment performed at, or shortly after, presentation/admission for the index stroke event (acute phase baseline for in-hospital care)." ]
   ] [
      fhir:code [ fhir:v "discharge" ] ;
      fhir:display [ fhir:v "Discharge" ] ;
-     fhir:definition [ fhir:v "Assessment performed at the time of hospital discharge." ]
+     fhir:definition [ fhir:v "Assessment performed at the time of discharge from the acute admission (or the end of the index hospitalization episode)." ]
   ] [
      fhir:code [ fhir:v "3-month" ] ;
      fhir:display [ fhir:v "3-Month Follow-up" ] ;
-     fhir:definition [ fhir:v "Assessment performed approximately 3 months post-discharge." ]
+     fhir:definition [ fhir:v "Assessment performed at approximately 3 months (≈90 days) after discharge/index event, acknowledging operational windows used in routine follow-up and research." ]
   ] ) . # 
 
 # -------------------------------------------------------------------------------------

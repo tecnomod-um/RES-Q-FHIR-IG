@@ -1,8 +1,8 @@
 {
   "resourceType" : "Bundle",
-  "id" : "ad585f52-91fa-4651-b999-c8fdf2850699",
+  "id" : "3c573f84-fda6-4818-8a44-02fb65f49248",
   "meta" : {
-    "lastUpdated" : "2026-02-18T13:35:35.307+00:00"
+    "lastUpdated" : "2026-02-18T14:43:59.425+00:00"
   },
   "type" : "collection",
   "entry" : [{
@@ -22,8 +22,8 @@
       "date" : "2025-03-31",
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:d4fd6b29-6656-440b-85ce-7a969ef064b5",
-        "timestamp" : "2026-02-18T13:36:40+00:00",
+        "identifier" : "urn:uuid:b9ff59ab-c921-4f93-8c88-4291c68de0eb",
+        "timestamp" : "2026-02-18T14:45:03+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -83,8 +83,8 @@
       "status" : "active",
       "date" : "2025-03-31",
       "expansion" : {
-        "identifier" : "urn:uuid:1b1ac1b8-9c18-4f02-a62d-d1866b8f5a45",
-        "timestamp" : "2026-02-18T13:36:40+00:00",
+        "identifier" : "urn:uuid:c9de0493-0cd7-4c37-9963-1752ca259cdc",
+        "timestamp" : "2026-02-18T14:45:03+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -135,17 +135,17 @@
       "resourceType" : "ValueSet",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-assessment-context-cs.html\">codesystem Assessment Context Code System v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://tecnomod-um.org/CodeSystem/assessment-context-cs|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 4 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/assessment-context-cs-pre-stroke\"> </a><code>http://tecnomod-um.org/CodeSystem/assessment-context-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-assessment-context-cs.html#assessment-context-cs-pre-stroke\">pre-stroke</a></td><td>Pre-stroke</td><td>Assessment reflects patient state before the current stroke event.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/assessment-context-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;pre-stroke&quot;, &quot;display&quot;: &quot;Pre-stroke&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/assessment-context-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;pre-stroke&quot;&gt;&lt;display value=&quot;Pre-stroke&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/assessment-context-cs-admission\"> </a><code>http://tecnomod-um.org/CodeSystem/assessment-context-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-assessment-context-cs.html#assessment-context-cs-admission\">admission</a></td><td>Admission</td><td>Assessment performed upon or shortly after hospital admission for the stroke event.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/assessment-context-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;admission&quot;, &quot;display&quot;: &quot;Admission&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/assessment-context-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;admission&quot;&gt;&lt;display value=&quot;Admission&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/assessment-context-cs-discharge\"> </a><code>http://tecnomod-um.org/CodeSystem/assessment-context-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-assessment-context-cs.html#assessment-context-cs-discharge\">discharge</a></td><td>Discharge</td><td>Assessment performed at the time of hospital discharge.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/assessment-context-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;discharge&quot;, &quot;display&quot;: &quot;Discharge&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/assessment-context-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;discharge&quot;&gt;&lt;display value=&quot;Discharge&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/assessment-context-cs-3-month\"> </a><code>http://tecnomod-um.org/CodeSystem/assessment-context-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-assessment-context-cs.html#assessment-context-cs-3-month\">3-month</a></td><td>3-Month Follow-up</td><td>Assessment performed approximately 3 months post-discharge.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/assessment-context-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;3-month&quot;, &quot;display&quot;: &quot;3-Month Follow-up&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/assessment-context-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;3-month&quot;&gt;&lt;display value=&quot;3-Month Follow-up&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-assessment-context-cs.html\">codesystem Assessment Context Code System v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://tecnomod-um.org/CodeSystem/assessment-context-cs|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 4 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/assessment-context-cs-pre-stroke\"> </a><code>http://tecnomod-um.org/CodeSystem/assessment-context-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-assessment-context-cs.html#assessment-context-cs-pre-stroke\">pre-stroke</a></td><td>Pre-stroke</td><td>Assessment reflects the patient’s baseline state prior to the index stroke event (pre-morbid status), typically derived from history or collateral information.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/assessment-context-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;pre-stroke&quot;, &quot;display&quot;: &quot;Pre-stroke&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/assessment-context-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;pre-stroke&quot;&gt;&lt;display value=&quot;Pre-stroke&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/assessment-context-cs-admission\"> </a><code>http://tecnomod-um.org/CodeSystem/assessment-context-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-assessment-context-cs.html#assessment-context-cs-admission\">admission</a></td><td>Admission</td><td>Assessment performed at, or shortly after, presentation/admission for the index stroke event (acute phase baseline for in-hospital care).</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/assessment-context-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;admission&quot;, &quot;display&quot;: &quot;Admission&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/assessment-context-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;admission&quot;&gt;&lt;display value=&quot;Admission&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/assessment-context-cs-discharge\"> </a><code>http://tecnomod-um.org/CodeSystem/assessment-context-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-assessment-context-cs.html#assessment-context-cs-discharge\">discharge</a></td><td>Discharge</td><td>Assessment performed at the time of discharge from the acute admission (or the end of the index hospitalization episode).</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/assessment-context-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;discharge&quot;, &quot;display&quot;: &quot;Discharge&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/assessment-context-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;discharge&quot;&gt;&lt;display value=&quot;Discharge&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/assessment-context-cs-3-month\"> </a><code>http://tecnomod-um.org/CodeSystem/assessment-context-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-assessment-context-cs.html#assessment-context-cs-3-month\">3-month</a></td><td>3-Month Follow-up</td><td>Assessment performed at approximately 3 months (≈90 days) after discharge/index event, acknowledging operational windows used in routine follow-up and research.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/assessment-context-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;3-month&quot;, &quot;display&quot;: &quot;3-Month Follow-up&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/assessment-context-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;3-month&quot;&gt;&lt;display value=&quot;3-Month Follow-up&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
       },
       "url" : "http://tecnomod-um.org/ValueSet/assessment-context-vs",
       "version" : "0.1.0",
       "name" : "AssessmentContextVS",
       "title" : "Assessment Context ValueSet",
       "status" : "active",
-      "date" : "2026-02-18T13:35:35+00:00",
+      "date" : "2026-02-18T14:43:59+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:01bf4427-7a35-4cb8-9a09-1311bbefd94d",
-        "timestamp" : "2026-02-18T13:36:41+00:00",
+        "identifier" : "urn:uuid:faa3d46a-5e01-4198-a373-fe68c67cda7b",
+        "timestamp" : "2026-02-18T14:45:03+00:00",
         "total" : 4,
         "offset" : 0,
         "parameter" : [{
@@ -208,10 +208,10 @@
       "name" : "BrainImagingModalityVS",
       "title" : "Brain Imaging Modality ValueSet",
       "status" : "active",
-      "date" : "2026-02-18T13:35:35+00:00",
+      "date" : "2026-02-18T14:43:59+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:0e4b9b78-4b60-4f2d-9043-473817465be4",
-        "timestamp" : "2026-02-18T13:36:41+00:00",
+        "identifier" : "urn:uuid:52483778-aa77-4c5d-8bb0-0cab798aca93",
+        "timestamp" : "2026-02-18T14:45:04+00:00",
         "total" : 6,
         "offset" : 0,
         "parameter" : [{
@@ -288,10 +288,10 @@
       "name" : "CarotidImagingModalityVS",
       "title" : "Carotid Arteries Imaging Modality ValueSet",
       "status" : "active",
-      "date" : "2026-02-18T13:35:35+00:00",
+      "date" : "2026-02-18T14:43:59+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:fdd40e0f-b60d-4fef-b9a2-d987fbc0b9ac",
-        "timestamp" : "2026-02-18T13:36:41+00:00",
+        "identifier" : "urn:uuid:4628f4c7-7ef0-4b3a-a470-74ec3a5275ee",
+        "timestamp" : "2026-02-18T14:45:04+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -349,10 +349,10 @@
       "name" : "DischargeDeptVS",
       "title" : "Discharge Department/Service ValueSet",
       "status" : "active",
-      "date" : "2026-02-18T13:35:35+00:00",
+      "date" : "2026-02-18T14:43:59+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:4d4c406a-367f-4e82-a5ed-6e10a6637a16",
-        "timestamp" : "2026-02-18T13:36:41+00:00",
+        "identifier" : "urn:uuid:d4ca0fc9-b352-40cf-8b16-6af077d39ede",
+        "timestamp" : "2026-02-18T14:45:04+00:00",
         "total" : 4,
         "offset" : 0,
         "parameter" : [{
@@ -415,8 +415,8 @@
       "date" : "2025-03-31",
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:6f60de41-d8de-41de-98f3-e8ce900922d8",
-        "timestamp" : "2026-02-18T13:36:41+00:00",
+        "identifier" : "urn:uuid:8dd01de4-8a37-4091-938d-72423aac2b4b",
+        "timestamp" : "2026-02-18T14:45:04+00:00",
         "total" : 5,
         "offset" : 0,
         "parameter" : [{
@@ -484,10 +484,10 @@
       "name" : "FunctionalScoreCodesVS",
       "title" : "Stroke Functional Score Codes ValueSet",
       "status" : "active",
-      "date" : "2026-02-18T13:35:35+00:00",
+      "date" : "2026-02-18T14:43:59+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:f63f87ed-7aac-47d2-ad69-fd4a52d0360b",
-        "timestamp" : "2026-02-18T13:36:34+00:00",
+        "identifier" : "urn:uuid:65dd5a17-c593-4a98-a2c8-51343b3dfe0f",
+        "timestamp" : "2026-02-18T14:44:57+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -544,8 +544,8 @@
       "date" : "2025-09-08",
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:b875df8f-9055-434a-91fe-85a76c8259e7",
-        "timestamp" : "2026-02-18T13:36:42+00:00",
+        "identifier" : "urn:uuid:d9459f85-e06f-422b-95b3-9a563b11a61f",
+        "timestamp" : "2026-02-18T14:45:04+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -611,10 +611,10 @@
       "name" : "InitialCareIntensityVS",
       "title" : "Initial Care Intensity ValueSet",
       "status" : "active",
-      "date" : "2026-02-18T13:35:35+00:00",
+      "date" : "2026-02-18T14:43:59+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:bc525158-fa6b-4a75-8e83-f8969d71716d",
-        "timestamp" : "2026-02-18T13:36:42+00:00",
+        "identifier" : "urn:uuid:736fa8d5-6695-47aa-9737-de4355b5146c",
+        "timestamp" : "2026-02-18T14:45:05+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -672,10 +672,10 @@
       "name" : "MedicationVS",
       "title" : "Medications ValueSet",
       "status" : "draft",
-      "date" : "2026-02-18T13:35:35+00:00",
+      "date" : "2026-02-18T14:43:59+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:37a55087-7a02-4ea9-9e58-bb4790d1f1b8",
-        "timestamp" : "2026-02-18T13:36:42+00:00",
+        "identifier" : "urn:uuid:46087421-e08a-4ce3-800d-96085ea19512",
+        "timestamp" : "2026-02-18T14:45:05+00:00",
         "total" : 12,
         "offset" : 0,
         "parameter" : [{
@@ -782,10 +782,10 @@
       "name" : "MRsScoreVS",
       "title" : "modified Rankin Scale (mRS) Score ValueSet",
       "status" : "active",
-      "date" : "2026-02-18T13:35:35+00:00",
+      "date" : "2026-02-18T14:43:59+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:27339761-5f33-4c60-82f8-3fba3f847940",
-        "timestamp" : "2026-02-18T13:36:34+00:00",
+        "identifier" : "urn:uuid:5ac2464a-7627-4f9e-92ba-ca5d6da70388",
+        "timestamp" : "2026-02-18T14:44:57+00:00",
         "total" : 7,
         "offset" : 0,
         "parameter" : [{
@@ -856,17 +856,17 @@
       "resourceType" : "ValueSet",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-mtici-code-cs.html\">codesystem mTICI Score Codes CodeSystem v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://tecnomod-um.org/CodeSystem/mtici-code-cs|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 1 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/mtici-code-cs-mTICI\"> </a><code>http://tecnomod-um.org/CodeSystem/mtici-code-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mtici-code-cs.html#mtici-code-cs-mTICI\">mTICI</a></td><td>mTICI</td><td>Modified Thrombolysis in Cerebral Infarction</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/mtici-code-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;mTICI&quot;, &quot;display&quot;: &quot;mTICI&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/mtici-code-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;mTICI&quot;&gt;&lt;display value=&quot;mTICI&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-mtici-code-cs.html\">codesystem mTICI Score Codes CodeSystem v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://tecnomod-um.org/CodeSystem/mtici-code-cs|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 1 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/mtici-code-cs-mTICI\"> </a><code>http://tecnomod-um.org/CodeSystem/mtici-code-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mtici-code-cs.html#mtici-code-cs-mTICI\">mTICI</a></td><td>mTICI</td><td>Assessment concept representing the modified Thrombolysis in Cerebral Infarction reperfusion grade to be reported as an Observation value.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/mtici-code-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;mTICI&quot;, &quot;display&quot;: &quot;mTICI&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/mtici-code-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;mTICI&quot;&gt;&lt;display value=&quot;mTICI&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
       },
       "url" : "http://tecnomod-um.org/ValueSet/mtici-code-vs",
       "version" : "0.1.0",
       "name" : "MTICICodeVS",
       "title" : "mTICI Score Codes ValueSet",
       "status" : "active",
-      "date" : "2026-02-18T13:35:35+00:00",
+      "date" : "2026-02-18T14:43:59+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:3f7d3b83-215d-4b75-841a-909b84d7374b",
-        "timestamp" : "2026-02-18T13:36:42+00:00",
+        "identifier" : "urn:uuid:fbee7c90-fec3-44e6-a997-d4c582035420",
+        "timestamp" : "2026-02-18T14:45:05+00:00",
         "total" : 1,
         "offset" : 0,
         "parameter" : [{
@@ -907,7 +907,7 @@
       "resourceType" : "ValueSet",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-mtici-score-cs.html\">codesystem MTICI Score Code System v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://tecnomod-um.org/CodeSystem/mtici-score-cs|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 6 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/mtici-score-cs-0\"> </a><code>http://tecnomod-um.org/CodeSystem/mtici-score-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mtici-score-cs.html#mtici-score-cs-0\">0</a></td><td>Grade 0: No perfusion</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/mtici-score-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;0&quot;, &quot;display&quot;: &quot;Grade 0: No perfusion&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/mtici-score-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;0&quot;&gt;&lt;display value=&quot;Grade 0: No perfusion&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/mtici-score-cs-1\"> </a><code>http://tecnomod-um.org/CodeSystem/mtici-score-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mtici-score-cs.html#mtici-score-cs-1\">1</a></td><td>Grade 1: Antegrade reperfusion past the initial occlusion, but limited distal branch filling with little or slow distal reperfusion</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/mtici-score-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;1&quot;, &quot;display&quot;: &quot;Grade 1: Antegrade reperfusion past the initial occlusion, but limited distal branch filling with little or slow distal reperfusion&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/mtici-score-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;1&quot;&gt;&lt;display value=&quot;Grade 1: Antegrade reperfusion past the initial occlusion, but limited distal branch filling with little or slow distal reperfusion&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/mtici-score-cs-2a\"> </a><code>http://tecnomod-um.org/CodeSystem/mtici-score-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mtici-score-cs.html#mtici-score-cs-2a\">2a</a></td><td>Grade 2a: Antegrade reperfusion of less than half of the occluded target artery previously ischemic territory</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/mtici-score-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;2a&quot;, &quot;display&quot;: &quot;Grade 2a: Antegrade reperfusion of less than half of the occluded target artery previously ischemic territory&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/mtici-score-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;2a&quot;&gt;&lt;display value=&quot;Grade 2a: Antegrade reperfusion of less than half of the occluded target artery previously ischemic territory&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/mtici-score-cs-2b\"> </a><code>http://tecnomod-um.org/CodeSystem/mtici-score-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mtici-score-cs.html#mtici-score-cs-2b\">2b</a></td><td>Grade 2b: Antegrade reperfusion of more than half of the previously occluded target artery ischemic territory</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/mtici-score-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;2b&quot;, &quot;display&quot;: &quot;Grade 2b: Antegrade reperfusion of more than half of the previously occluded target artery ischemic territory&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/mtici-score-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;2b&quot;&gt;&lt;display value=&quot;Grade 2b: Antegrade reperfusion of more than half of the previously occluded target artery ischemic territory&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/mtici-score-cs-2c\"> </a><code>http://tecnomod-um.org/CodeSystem/mtici-score-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mtici-score-cs.html#mtici-score-cs-2c\">2c</a></td><td>Grade 2c: Near complete perfusion except for slow flow or distal emboli in a few distal cortical vessels</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/mtici-score-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;2c&quot;, &quot;display&quot;: &quot;Grade 2c: Near complete perfusion except for slow flow or distal emboli in a few distal cortical vessels&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/mtici-score-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;2c&quot;&gt;&lt;display value=&quot;Grade 2c: Near complete perfusion except for slow flow or distal emboli in a few distal cortical vessels&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/mtici-score-cs-3\"> </a><code>http://tecnomod-um.org/CodeSystem/mtici-score-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mtici-score-cs.html#mtici-score-cs-3\">3</a></td><td>Grade 3: Complete antegrade reperfusion of the previously occluded target artery ischemic territory, with absence of visualized occlusion in all distal branches</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/mtici-score-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;3&quot;, &quot;display&quot;: &quot;Grade 3: Complete antegrade reperfusion of the previously occluded target artery ischemic territory, with absence of visualized occlusion in all distal branches&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/mtici-score-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;3&quot;&gt;&lt;display value=&quot;Grade 3: Complete antegrade reperfusion of the previously occluded target artery ischemic territory, with absence of visualized occlusion in all distal branches&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-mtici-score-cs.html\">codesystem MTICI Score Code System v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://tecnomod-um.org/CodeSystem/mtici-score-cs|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 6 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/mtici-score-cs-0\"> </a><code>http://tecnomod-um.org/CodeSystem/mtici-score-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mtici-score-cs.html#mtici-score-cs-0\">0</a></td><td>Grade 0: No perfusion</td><td>No antegrade flow beyond the occlusion; no angiographic reperfusion of the downstream territory attributable to the treated vessel.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/mtici-score-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;0&quot;, &quot;display&quot;: &quot;Grade 0: No perfusion&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/mtici-score-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;0&quot;&gt;&lt;display value=&quot;Grade 0: No perfusion&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/mtici-score-cs-1\"> </a><code>http://tecnomod-um.org/CodeSystem/mtici-score-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mtici-score-cs.html#mtici-score-cs-1\">1</a></td><td>Grade 1: Antegrade reperfusion past the initial occlusion, but limited distal branch filling with little or slow distal reperfusion</td><td>Minimal reperfusion: contrast passes the original occlusion with limited distal branch opacification and little or delayed tissue-level reperfusion.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/mtici-score-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;1&quot;, &quot;display&quot;: &quot;Grade 1: Antegrade reperfusion past the initial occlusion, but limited distal branch filling with little or slow distal reperfusion&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/mtici-score-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;1&quot;&gt;&lt;display value=&quot;Grade 1: Antegrade reperfusion past the initial occlusion, but limited distal branch filling with little or slow distal reperfusion&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/mtici-score-cs-2a\"> </a><code>http://tecnomod-um.org/CodeSystem/mtici-score-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mtici-score-cs.html#mtici-score-cs-2a\">2a</a></td><td>Grade 2a: Antegrade reperfusion of less than half of the occluded target artery previously ischemic territory</td><td>Partial reperfusion of &lt;50% of the downstream ischemic territory supplied by the previously occluded target artery.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/mtici-score-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;2a&quot;, &quot;display&quot;: &quot;Grade 2a: Antegrade reperfusion of less than half of the occluded target artery previously ischemic territory&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/mtici-score-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;2a&quot;&gt;&lt;display value=&quot;Grade 2a: Antegrade reperfusion of less than half of the occluded target artery previously ischemic territory&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/mtici-score-cs-2b\"> </a><code>http://tecnomod-um.org/CodeSystem/mtici-score-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mtici-score-cs.html#mtici-score-cs-2b\">2b</a></td><td>Grade 2b: Antegrade reperfusion of more than half of the previously occluded target artery ischemic territory</td><td>Substantial reperfusion of ≥50% of the downstream ischemic territory supplied by the previously occluded target artery.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/mtici-score-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;2b&quot;, &quot;display&quot;: &quot;Grade 2b: Antegrade reperfusion of more than half of the previously occluded target artery ischemic territory&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/mtici-score-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;2b&quot;&gt;&lt;display value=&quot;Grade 2b: Antegrade reperfusion of more than half of the previously occluded target artery ischemic territory&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/mtici-score-cs-2c\"> </a><code>http://tecnomod-um.org/CodeSystem/mtici-score-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mtici-score-cs.html#mtici-score-cs-2c\">2c</a></td><td>Grade 2c: Near complete perfusion except for slow flow or distal emboli in a few distal cortical vessels</td><td>Near-complete reperfusion with only minor residual deficits, typically due to slow flow and/or small distal emboli affecting a limited number of distal cortical vessels.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/mtici-score-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;2c&quot;, &quot;display&quot;: &quot;Grade 2c: Near complete perfusion except for slow flow or distal emboli in a few distal cortical vessels&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/mtici-score-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;2c&quot;&gt;&lt;display value=&quot;Grade 2c: Near complete perfusion except for slow flow or distal emboli in a few distal cortical vessels&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/mtici-score-cs-3\"> </a><code>http://tecnomod-um.org/CodeSystem/mtici-score-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mtici-score-cs.html#mtici-score-cs-3\">3</a></td><td>Grade 3: Complete antegrade reperfusion of the previously occluded target artery ischemic territory, with absence of visualized occlusion in all distal branches</td><td>Complete reperfusion of the downstream ischemic territory with normal/near-normal antegrade flow and no visualized occlusion in distal branches of the treated vascular territory.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/mtici-score-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;3&quot;, &quot;display&quot;: &quot;Grade 3: Complete antegrade reperfusion of the previously occluded target artery ischemic territory, with absence of visualized occlusion in all distal branches&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/mtici-score-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;3&quot;&gt;&lt;display value=&quot;Grade 3: Complete antegrade reperfusion of the previously occluded target artery ischemic territory, with absence of visualized occlusion in all distal branches&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
       },
       "url" : "http://tecnomod-um.org/ValueSet/mtici-score-vs",
       "version" : "0.1.0",
@@ -917,8 +917,8 @@
       "experimental" : true,
       "date" : "2025-03-31",
       "expansion" : {
-        "identifier" : "urn:uuid:06d35470-fdc1-40f4-b005-6328a951696e",
-        "timestamp" : "2026-02-18T13:36:42+00:00",
+        "identifier" : "urn:uuid:6307714e-1f48-4b97-b5f9-9626cc9c3a3c",
+        "timestamp" : "2026-02-18T14:45:05+00:00",
         "total" : 6,
         "offset" : 0,
         "parameter" : [{
@@ -990,8 +990,8 @@
       "experimental" : true,
       "date" : "2025-03-31",
       "expansion" : {
-        "identifier" : "urn:uuid:3e106580-0e2d-4988-8817-baad0a701e8b",
-        "timestamp" : "2026-02-18T13:36:42+00:00",
+        "identifier" : "urn:uuid:2cf2363f-74df-4aa6-a3b9-4d9dbf8bbd5a",
+        "timestamp" : "2026-02-18T14:45:05+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -1044,10 +1044,10 @@
       "name" : "ProcedureTimingContextVS",
       "title" : "Procedure Timing Context ValueSet",
       "status" : "active",
-      "date" : "2026-02-18T13:35:35+00:00",
+      "date" : "2026-02-18T14:43:59+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:236c3811-75d2-4ae9-991c-9b0146a83c25",
-        "timestamp" : "2026-02-18T13:36:42+00:00",
+        "identifier" : "urn:uuid:15ae01f6-8796-4e34-8170-b510bd601685",
+        "timestamp" : "2026-02-18T14:45:05+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -1105,10 +1105,10 @@
       "name" : "SpecificFindingCodesVS",
       "title" : "Specific Stroke Finding Codes ValueSet",
       "status" : "active",
-      "date" : "2026-02-18T13:35:35+00:00",
+      "date" : "2026-02-18T14:43:59+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:d3d06887-e069-4bbd-8e6d-b2f237e99324",
-        "timestamp" : "2026-02-18T13:36:43+00:00",
+        "identifier" : "urn:uuid:2d9b88bb-1cde-44d9-a184-7806870c08aa",
+        "timestamp" : "2026-02-18T14:45:05+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -1161,10 +1161,10 @@
       "name" : "StrokeArrivalModeVS",
       "title" : "Stroke Arrival Mode ValueSet",
       "status" : "active",
-      "date" : "2026-02-18T13:35:35+00:00",
+      "date" : "2026-02-18T14:43:59+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:568b8276-3819-48ac-93a7-44fe97e7e131",
-        "timestamp" : "2026-02-18T13:36:43+00:00",
+        "identifier" : "urn:uuid:1ba31f6d-cbb2-4413-8080-aacbc8f6d7a8",
+        "timestamp" : "2026-02-18T14:45:05+00:00",
         "total" : 6,
         "offset" : 0,
         "parameter" : [{
@@ -1230,17 +1230,17 @@
       "resourceType" : "ValueSet",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-stroke-circumstance-codes-cs.html\">codesystem Stroke Circumstance Codes CodeSystem v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 2 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs-in-hospital\"> </a><code>http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-stroke-circumstance-codes-cs.html#stroke-circumstance-codes-cs-in-hospital\">in-hospital</a></td><td>In-hospital Stroke</td><td>Indicates that the stroke occurred while the patient was already admitted to the hospital for another reason.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;in-hospital&quot;, &quot;display&quot;: &quot;In-hospital Stroke&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;in-hospital&quot;&gt;&lt;display value=&quot;In-hospital Stroke&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs-wake-up\"> </a><code>http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-stroke-circumstance-codes-cs.html#stroke-circumstance-codes-cs-wake-up\">wake-up</a></td><td>Wake-up Stroke</td><td>Indicates that the stroke symptoms were first noticed upon waking from sleep, with an unknown time of onset.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;wake-up&quot;, &quot;display&quot;: &quot;Wake-up Stroke&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;wake-up&quot;&gt;&lt;display value=&quot;Wake-up Stroke&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-stroke-circumstance-codes-cs.html\">codesystem Stroke Circumstance Codes CodeSystem v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 2 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs-in-hospital\"> </a><code>http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-stroke-circumstance-codes-cs.html#stroke-circumstance-codes-cs-in-hospital\">in-hospital</a></td><td>In-hospital Stroke</td><td>Indicates that stroke onset occurred while the patient was already admitted to the hospital for another reason (inpatient onset).</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;in-hospital&quot;, &quot;display&quot;: &quot;In-hospital Stroke&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;in-hospital&quot;&gt;&lt;display value=&quot;In-hospital Stroke&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs-wake-up\"> </a><code>http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-stroke-circumstance-codes-cs.html#stroke-circumstance-codes-cs-wake-up\">wake-up</a></td><td>Wake-up Stroke</td><td>Indicates that stroke symptoms were first recognized on awakening from sleep, implying an unknown onset time within the sleep interval (time last known well precedes symptom recognition).</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;wake-up&quot;, &quot;display&quot;: &quot;Wake-up Stroke&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;wake-up&quot;&gt;&lt;display value=&quot;Wake-up Stroke&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
       },
       "url" : "http://tecnomod-um.org/ValueSet/stroke-circumstance-codes-vs",
       "version" : "0.1.0",
       "name" : "StrokeCircumstanceCodesVS",
       "title" : "Stroke Circumstance Codes ValueSet",
       "status" : "active",
-      "date" : "2026-02-18T13:35:35+00:00",
+      "date" : "2026-02-18T14:43:59+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:edce5300-1efa-4b54-98ed-5fd589edce98",
-        "timestamp" : "2026-02-18T13:36:37+00:00",
+        "identifier" : "urn:uuid:fa8c33e8-5ba8-46e6-a128-f1c91709a07c",
+        "timestamp" : "2026-02-18T14:45:00+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -1293,8 +1293,8 @@
       "date" : "2025-10-07",
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:2c100b11-fff8-437e-a3c6-e4d17ef3ceef",
-        "timestamp" : "2026-02-18T13:36:37+00:00",
+        "identifier" : "urn:uuid:95b3a6f3-f83c-42b6-a381-1c44521dd49f",
+        "timestamp" : "2026-02-18T14:45:00+00:00",
         "total" : 6,
         "offset" : 0,
         "parameter" : [{
@@ -1367,10 +1367,10 @@
       "name" : "StrokeDischargeDestinationVS",
       "title" : "Stroke Discharge Destination ValueSet",
       "status" : "active",
-      "date" : "2026-02-18T13:35:35+00:00",
+      "date" : "2026-02-18T14:43:59+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:4c74f375-5175-402f-84ee-d95f0bf9bbfb",
-        "timestamp" : "2026-02-18T13:36:43+00:00",
+        "identifier" : "urn:uuid:5b7bc762-9d68-4c91-87a2-4903097b225c",
+        "timestamp" : "2026-02-18T14:45:05+00:00",
         "total" : 5,
         "offset" : 0,
         "parameter" : [{
@@ -1450,8 +1450,8 @@
       "date" : "2025-03-31",
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:84f73aa3-3b64-43ec-9b39-277d2604feed",
-        "timestamp" : "2026-02-18T13:36:43+00:00",
+        "identifier" : "urn:uuid:6935e4b4-9db4-4e7e-92ae-91d897b01273",
+        "timestamp" : "2026-02-18T14:45:06+00:00",
         "total" : 5,
         "offset" : 0,
         "parameter" : [{
@@ -1520,17 +1520,17 @@
       "resourceType" : "ValueSet",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><div style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\"><p>Expansion from tx.fhir.org based on:</p><ul><li>SNOMED CT International edition 01-Feb 2025<span class=\"copy-text-inline\"><button data-clipboard-text=\"http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></li><li><a href=\"CodeSystem-mtici-code-cs.html\">codesystem mTICI Score Codes CodeSystem v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://tecnomod-um.org/CodeSystem/mtici-code-cs|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></li><li><a href=\"ValueSet-mtici-code-vs.html\">valueset mTICI Score Codes ValueSet v0.1.0 (ValueSet)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://tecnomod-um.org/ValueSet/mtici-code-vs|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></li><li><a href=\"ValueSet-specific-finding-codes-vs.html\">valueset Specific Stroke Finding Codes ValueSet v0.1.0 (ValueSet)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://tecnomod-um.org/ValueSet/specific-finding-codes-vs|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></li></ul></div><p>This value set contains 3 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://snomed.info/sct-49436004\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/49436004\">49436004</a></td><td>Atrial fibrillation</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;49436004&quot;, &quot;display&quot;: &quot;Atrial fibrillation&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;49436004&quot;&gt;&lt;display value=&quot;Atrial fibrillation&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://snomed.info/sct-5370000\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/5370000\">5370000</a></td><td>Atrial flutter</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;5370000&quot;, &quot;display&quot;: &quot;Atrial flutter&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;5370000&quot;&gt;&lt;display value=&quot;Atrial flutter&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/mtici-code-cs-mTICI\"> </a><code>http://tecnomod-um.org/CodeSystem/mtici-code-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mtici-code-cs.html#mtici-code-cs-mTICI\">mTICI</a></td><td>mTICI</td><td>Modified Thrombolysis in Cerebral Infarction</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/mtici-code-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;mTICI&quot;, &quot;display&quot;: &quot;mTICI&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/mtici-code-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;mTICI&quot;&gt;&lt;display value=&quot;mTICI&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><div style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\"><p>Expansion from tx.fhir.org based on:</p><ul><li>SNOMED CT International edition 01-Feb 2025<span class=\"copy-text-inline\"><button data-clipboard-text=\"http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></li><li><a href=\"CodeSystem-mtici-code-cs.html\">codesystem mTICI Score Codes CodeSystem v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://tecnomod-um.org/CodeSystem/mtici-code-cs|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></li><li><a href=\"ValueSet-mtici-code-vs.html\">valueset mTICI Score Codes ValueSet v0.1.0 (ValueSet)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://tecnomod-um.org/ValueSet/mtici-code-vs|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></li><li><a href=\"ValueSet-specific-finding-codes-vs.html\">valueset Specific Stroke Finding Codes ValueSet v0.1.0 (ValueSet)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://tecnomod-um.org/ValueSet/specific-finding-codes-vs|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></li></ul></div><p>This value set contains 3 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://snomed.info/sct-49436004\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/49436004\">49436004</a></td><td>Atrial fibrillation</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;49436004&quot;, &quot;display&quot;: &quot;Atrial fibrillation&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;49436004&quot;&gt;&lt;display value=&quot;Atrial fibrillation&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://snomed.info/sct-5370000\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/5370000\">5370000</a></td><td>Atrial flutter</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;5370000&quot;, &quot;display&quot;: &quot;Atrial flutter&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;5370000&quot;&gt;&lt;display value=&quot;Atrial flutter&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/mtici-code-cs-mTICI\"> </a><code>http://tecnomod-um.org/CodeSystem/mtici-code-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-mtici-code-cs.html#mtici-code-cs-mTICI\">mTICI</a></td><td>mTICI</td><td>Assessment concept representing the modified Thrombolysis in Cerebral Infarction reperfusion grade to be reported as an Observation value.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/mtici-code-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;mTICI&quot;, &quot;display&quot;: &quot;mTICI&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/mtici-code-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;mTICI&quot;&gt;&lt;display value=&quot;mTICI&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
       },
       "url" : "http://tecnomod-um.org/ValueSet/stroke-finding-codes-vs",
       "version" : "0.1.0",
       "name" : "StrokeFindingCodesVS",
       "title" : "Specific Stroke Finding Codes ValueSet",
       "status" : "active",
-      "date" : "2026-02-18T13:35:35+00:00",
+      "date" : "2026-02-18T14:43:59+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:fe3784de-692c-4379-b6ad-5027a7e3162b",
-        "timestamp" : "2026-02-18T13:36:36+00:00",
+        "identifier" : "urn:uuid:be22e433-3447-41a3-80e7-f4cc887193cd",
+        "timestamp" : "2026-02-18T14:44:59+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -1604,10 +1604,10 @@
       "name" : "StrokeProcNotDoneReasonVS",
       "title" : "Stroke Procedure Not Done Reason ValueSet",
       "status" : "active",
-      "date" : "2026-02-18T13:35:35+00:00",
+      "date" : "2026-02-18T14:43:59+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:c88fb95c-921b-4acd-a5b5-97f721979d19",
-        "timestamp" : "2026-02-18T13:36:43+00:00",
+        "identifier" : "urn:uuid:1822fe61-185d-4ed4-8570-12a93ab3bc29",
+        "timestamp" : "2026-02-18T14:45:06+00:00",
         "total" : 16,
         "offset" : 0,
         "parameter" : [{
@@ -1734,8 +1734,8 @@
       "date" : "2025-10-07",
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:ae9c73f4-a293-4d77-a11a-398bd09acb94",
-        "timestamp" : "2026-02-18T13:36:39+00:00",
+        "identifier" : "urn:uuid:0d61b073-d5c2-4a3a-b4c0-ede3d3863827",
+        "timestamp" : "2026-02-18T14:45:01+00:00",
         "total" : 11,
         "offset" : 0,
         "parameter" : [{
@@ -1836,8 +1836,8 @@
       "experimental" : true,
       "date" : "2025-03-31",
       "expansion" : {
-        "identifier" : "urn:uuid:cbfa2571-3818-4562-abc2-2cf9da3b3287",
-        "timestamp" : "2026-02-18T13:36:43+00:00",
+        "identifier" : "urn:uuid:13d61629-c898-40d0-a2a0-957a75378596",
+        "timestamp" : "2026-02-18T14:45:06+00:00",
         "total" : 6,
         "offset" : 0,
         "parameter" : [{
@@ -1914,10 +1914,10 @@
       "name" : "SwallowingScreeningTimingCategoryVS",
       "title" : "Swallowing Screening Timing Category ValueSet",
       "status" : "active",
-      "date" : "2026-02-18T13:35:35+00:00",
+      "date" : "2026-02-18T14:43:59+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:1a85d42e-808e-4c64-ab3f-e89ef028375b",
-        "timestamp" : "2026-02-18T13:36:44+00:00",
+        "identifier" : "urn:uuid:f3821164-f6a7-492c-b28f-3df2159b1827",
+        "timestamp" : "2026-02-18T14:45:06+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -1987,10 +1987,10 @@
       "name" : "ThrombectomyComplicationVS",
       "title" : "Thrombectomy Complication ValueSet",
       "status" : "active",
-      "date" : "2026-02-18T13:35:35+00:00",
+      "date" : "2026-02-18T14:43:59+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:ab7d2f87-930d-4b33-baef-a05dcc28e934",
-        "timestamp" : "2026-02-18T13:36:44+00:00",
+        "identifier" : "urn:uuid:9bb05b63-1c3c-4772-b4ce-d2ee44a58fef",
+        "timestamp" : "2026-02-18T14:45:06+00:00",
         "total" : 1,
         "offset" : 0,
         "parameter" : [{
@@ -2031,17 +2031,17 @@
       "resourceType" : "ValueSet",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-timing-metric-codes-cs.html\">codesystem Stroke Timing Metric Codes ValueSet v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 2 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs-D2G\"> </a><code>http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-timing-metric-codes-cs.html#timing-metric-codes-cs-D2G\">D2G</a></td><td>Door to Groin</td><td>Time (in minutes) from hospital arrival to the groin puncture for mechanical thrombectomy</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;D2G&quot;, &quot;display&quot;: &quot;Door to Groin&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;D2G&quot;&gt;&lt;display value=&quot;Door to Groin&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs-D2N\"> </a><code>http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-timing-metric-codes-cs.html#timing-metric-codes-cs-D2N\">D2N</a></td><td>Door to Needle</td><td>Time (in minutes) from the patient’s arrival at the hospital to the start of intravenous thrombolysis</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;D2N&quot;, &quot;display&quot;: &quot;Door to Needle&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;D2N&quot;&gt;&lt;display value=&quot;Door to Needle&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-timing-metric-codes-cs.html\">codesystem Stroke Timing Metric Codes ValueSet v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 2 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs-D2G\"> </a><code>http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-timing-metric-codes-cs.html#timing-metric-codes-cs-D2G\">D2G</a></td><td>Door to Groin</td><td>Elapsed time (minutes) from documented hospital arrival (‘door’) to arterial groin puncture for mechanical thrombectomy (first puncture attempt).</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;D2G&quot;, &quot;display&quot;: &quot;Door to Groin&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;D2G&quot;&gt;&lt;display value=&quot;Door to Groin&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs-D2N\"> </a><code>http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-timing-metric-codes-cs.html#timing-metric-codes-cs-D2N\">D2N</a></td><td>Door to Needle</td><td>Elapsed time (minutes) from documented hospital arrival (‘door’) to initiation of intravenous thrombolysis (commonly alteplase/tenecteplase administration start, per local definition).</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;D2N&quot;, &quot;display&quot;: &quot;Door to Needle&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;D2N&quot;&gt;&lt;display value=&quot;Door to Needle&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
       },
       "url" : "http://tecnomod-um.org/ValueSet/timing-metric-codes-vs",
       "version" : "0.1.0",
       "name" : "TimingMetricCodesVS",
       "title" : "Stroke Timing Metric Codes ValueSet",
       "status" : "active",
-      "date" : "2026-02-18T13:35:35+00:00",
+      "date" : "2026-02-18T14:43:59+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:939268d5-aa0f-487b-a8d5-6bd15849af26",
-        "timestamp" : "2026-02-18T13:36:39+00:00",
+        "identifier" : "urn:uuid:963695be-2e08-4ff6-89dd-805bc8b3be79",
+        "timestamp" : "2026-02-18T14:45:02+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -2091,10 +2091,10 @@
       "title" : "Stroke Vital Sign Codes ValueSet",
       "status" : "active",
       "experimental" : true,
-      "date" : "2026-02-18T13:35:35+00:00",
+      "date" : "2026-02-18T14:43:59+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:2f695b9d-980d-4bc0-9fda-a57f0af2329d",
-        "timestamp" : "2026-02-18T13:36:44+00:00",
+        "identifier" : "urn:uuid:00a1429a-d3a4-4720-9f20-bacfb4ee445e",
+        "timestamp" : "2026-02-18T14:45:07+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -2148,10 +2148,10 @@
       "title" : "Gender (SNOMED CT)",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-02-18T13:35:35+00:00",
+      "date" : "2026-02-18T14:43:59+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:518906e4-9421-4641-9e0d-aab58ac67d70",
-        "timestamp" : "2026-02-18T13:36:44+00:00",
+        "identifier" : "urn:uuid:ca6eae15-999b-4da4-8bc4-010d4ae9295d",
+        "timestamp" : "2026-02-18T14:45:07+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{

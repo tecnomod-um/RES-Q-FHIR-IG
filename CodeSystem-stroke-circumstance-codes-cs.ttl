@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "stroke-circumstance-codes-cs"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem stroke-circumstance-codes-cs</b></p><a name=\"stroke-circumstance-codes-cs\"> </a><a name=\"hcstroke-circumstance-codes-cs\"> </a><p>This  code system <code>http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">in-hospital<a name=\"stroke-circumstance-codes-cs-in-hospital\"> </a></td><td>In-hospital Stroke</td><td>Indicates that the stroke occurred while the patient was already admitted to the hospital for another reason.</td></tr><tr><td style=\"white-space:nowrap\">wake-up<a name=\"stroke-circumstance-codes-cs-wake-up\"> </a></td><td>Wake-up Stroke</td><td>Indicates that the stroke symptoms were first noticed upon waking from sleep, with an unknown time of onset.</td></tr></table></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem stroke-circumstance-codes-cs</b></p><a name=\"stroke-circumstance-codes-cs\"> </a><a name=\"hcstroke-circumstance-codes-cs\"> </a><p>This  code system <code>http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">in-hospital<a name=\"stroke-circumstance-codes-cs-in-hospital\"> </a></td><td>In-hospital Stroke</td><td>Indicates that stroke onset occurred while the patient was already admitted to the hospital for another reason (inpatient onset).</td></tr><tr><td style=\"white-space:nowrap\">wake-up<a name=\"stroke-circumstance-codes-cs-wake-up\"> </a></td><td>Wake-up Stroke</td><td>Indicates that stroke symptoms were first recognized on awakening from sleep, implying an unknown onset time within the sleep interval (time last known well precedes symptom recognition).</td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:url [
      fhir:v "http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs"^^xsd:anyURI ;
@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "StrokeCircumstanceCodesCS"] ; # 
   fhir:title [ fhir:v "Stroke Circumstance Codes CodeSystem"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-02-18T13:35:35+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-18T14:43:59+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;
@@ -30,17 +30,17 @@
        fhir:value [ fhir:v "http://tecnomod-um.org" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "Codes for findings related to the circumstances of stroke onset (In-hospital, Wake-up)."] ; # 
+  fhir:description [ fhir:v "This CodeSystem defines coded circumstances related to stroke symptom onset that are clinically relevant for eligibility decisions, diagnostic reasoning, and reporting—particularly when the exact onset time is unknown or atypical.\n\nThese codes are intended to be used as Observation.code in the StrokeCircumstanceObservationProfile to assert that a given onset circumstance applies to the index stroke event. They do not encode the precise onset timestamp, last-known-well time, or location of onset; those details should be represented separately (e.g., dedicated Observations, Encounter/Condition attributes, or extensions)."] ; # 
   fhir:content [ fhir:v "complete"] ; # 
   fhir:count [ fhir:v "2"^^xsd:nonNegativeInteger] ; # 
   fhir:concept ( [
      fhir:code [ fhir:v "in-hospital" ] ;
      fhir:display [ fhir:v "In-hospital Stroke" ] ;
-     fhir:definition [ fhir:v "Indicates that the stroke occurred while the patient was already admitted to the hospital for another reason." ]
+     fhir:definition [ fhir:v "Indicates that stroke onset occurred while the patient was already admitted to the hospital for another reason (inpatient onset)." ]
   ] [
      fhir:code [ fhir:v "wake-up" ] ;
      fhir:display [ fhir:v "Wake-up Stroke" ] ;
-     fhir:definition [ fhir:v "Indicates that the stroke symptoms were first noticed upon waking from sleep, with an unknown time of onset." ]
+     fhir:definition [ fhir:v "Indicates that stroke symptoms were first recognized on awakening from sleep, implying an unknown onset time within the sleep interval (time last known well precedes symptom recognition)." ]
   ] ) . # 
 
 # -------------------------------------------------------------------------------------

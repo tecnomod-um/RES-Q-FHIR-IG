@@ -3,14 +3,14 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
   <id value="stroke-circumstance-codes-cs"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem stroke-circumstance-codes-cs</b></p><a name="stroke-circumstance-codes-cs"> </a><a name="hcstroke-circumstance-codes-cs"> </a><p>This  code system <code>http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">in-hospital<a name="stroke-circumstance-codes-cs-in-hospital"> </a></td><td>In-hospital Stroke</td><td>Indicates that the stroke occurred while the patient was already admitted to the hospital for another reason.</td></tr><tr><td style="white-space:nowrap">wake-up<a name="stroke-circumstance-codes-cs-wake-up"> </a></td><td>Wake-up Stroke</td><td>Indicates that the stroke symptoms were first noticed upon waking from sleep, with an unknown time of onset.</td></tr></table></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem stroke-circumstance-codes-cs</b></p><a name="stroke-circumstance-codes-cs"> </a><a name="hcstroke-circumstance-codes-cs"> </a><p>This  code system <code>http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">in-hospital<a name="stroke-circumstance-codes-cs-in-hospital"> </a></td><td>In-hospital Stroke</td><td>Indicates that stroke onset occurred while the patient was already admitted to the hospital for another reason (inpatient onset).</td></tr><tr><td style="white-space:nowrap">wake-up<a name="stroke-circumstance-codes-cs-wake-up"> </a></td><td>Wake-up Stroke</td><td>Indicates that stroke symptoms were first recognized on awakening from sleep, implying an unknown onset time within the sleep interval (time last known well precedes symptom recognition).</td></tr></table></div>
   </text>
   <url value="http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs"/>
   <version value="0.1.0"/>
   <name value="StrokeCircumstanceCodesCS"/>
   <title value="Stroke Circumstance Codes CodeSystem"/>
   <status value="active"/>
-  <date value="2026-02-18T13:35:35+00:00"/>
+  <date value="2026-02-18T14:43:59+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>
@@ -19,17 +19,17 @@
       <value value="http://tecnomod-um.org"/>
     </telecom>
   </contact>
-  <description value="Codes for findings related to the circumstances of stroke onset (In-hospital, Wake-up)."/>
+  <description value="This CodeSystem defines coded circumstances related to stroke symptom onset that are clinically relevant for eligibility decisions, diagnostic reasoning, and reporting—particularly when the exact onset time is unknown or atypical.&#xA;&#xA;These codes are intended to be used as Observation.code in the StrokeCircumstanceObservationProfile to assert that a given onset circumstance applies to the index stroke event. They do not encode the precise onset timestamp, last-known-well time, or location of onset; those details should be represented separately (e.g., dedicated Observations, Encounter/Condition attributes, or extensions)."/>
   <content value="complete"/>
   <count value="2"/>
   <concept>
     <code value="in-hospital"/>
     <display value="In-hospital Stroke"/>
-    <definition value="Indicates that the stroke occurred while the patient was already admitted to the hospital for another reason."/>
+    <definition value="Indicates that stroke onset occurred while the patient was already admitted to the hospital for another reason (inpatient onset)."/>
   </concept>
   <concept>
     <code value="wake-up"/>
     <display value="Wake-up Stroke"/>
-    <definition value="Indicates that the stroke symptoms were first noticed upon waking from sleep, with an unknown time of onset."/>
+    <definition value="Indicates that stroke symptoms were first recognized on awakening from sleep, implying an unknown onset time within the sleep interval (time last known well precedes symptom recognition)."/>
   </concept>
 </CodeSystem>

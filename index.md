@@ -43,7 +43,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
   "version" : "0.1.0",
   "name" : "RESQIG",
   "status" : "draft",
-  "date" : "2026-02-18T13:35:35+00:00",
+  "date" : "2026-02-18T14:43:59+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -118,7 +118,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "StructureDefinition/age-at-onset-observation-profile"
         },
         "name" : "Age at Stroke Onset Observation Profile (R5)",
-        "description" : "Profile specifically for recording the patient's age at stroke onset. The value is represented as an integer (age in years) with a fixed SNOMED CT code indicating that this observation represents age at onset.",
+        "description" : "Profile for recording the patient’s age at the time of stroke onset as a simple integer value in years. The Observation.code is fixed to the SNOMED CT observable entity “Age at onset of clinical finding,” ensuring a clear and interoperable semantic meaning.\n\nThe age at onset may be derived from date of birth and an onset/reference timepoint (e.g., symptom onset, last known well, or discovery time depending on local policy). This profile records the resulting age value, not the derivation method; if the derivation is clinically important, implementers should capture the underlying reference timepoint(s) and provenance separately.",
         "isExample" : false
       },
       {
@@ -148,7 +148,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "CodeSystem/assessment-context-cs"
         },
         "name" : "Assessment Context Code System",
-        "description" : "Codes defining the context or timing of a clinical assessment, particularly functional scores.",
+        "description" : "This CodeSystem defines normalized codes for the clinical context / relative timepoint at which a stroke-related assessment was performed. It is primarily used to contextualize functional and severity instruments (e.g., mRS and NIHSS) where interpretation depends on whether the score reflects baseline status, acute presentation, discharge status, or follow-up.\n\nThese codes represent *relative phases* (pre-stroke baseline, admission, discharge, ~3-month follow-up) rather than precise timestamps. The actual date/time of measurement should be recorded in Observation.effective[x] when known; the context code complements effective[x] by expressing the clinical phase, which is often necessary for reporting and comparability (e.g., “mRS pre-stroke” vs “mRS at discharge”).\n\nScope note: This CodeSystem is intentionally small and focused on common stroke pathway milestones; implementers may extend it (with additional codes and governance) if other standardized follow-up timepoints are required (e.g., 6 months, 1 year).",
         "isExample" : false
       },
       {
@@ -162,7 +162,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "ValueSet/assessment-context-vs"
         },
         "name" : "Assessment Context ValueSet",
-        "description" : "ValueSet for assessment context codes (e.g., timing of functional scores).",
+        "description" : "This ValueSet includes all context/timepoint codes defined in AssessmentContextCS. It is intended for required binding to elements (e.g., extensions) that must indicate the clinical phase of an assessment, enabling consistent stratification and reporting of outcomes and severity over the stroke care pathway.\n\nThe ValueSet is used to validate that only supported context categories are recorded, improving interoperability when exchanging stroke assessments between systems and across care settings.",
         "isExample" : false
       },
       {
@@ -176,7 +176,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "ValueSet/afib-flutter-status-vs"
         },
         "name" : "Atrial Fibrillation or Flutter Status ValueSet",
-        "description" : "ValueSet defining the allowed coded outcomes for documenting the status of an Atrial Fibrillation (AF) or Atrial Flutter assessment. It is intentionally restricted to SNOMED CT qualifier values to express: (1) known present, (2) known absent, or (3) unknown. The ValueSet supports harmonized recording across systems, improves comparability for clinical decision support and research, and enables consistent reporting in contexts where AF/flutter materially influences thromboembolic risk and subsequent management.",
+        "description" : "This ValueSet constrains the allowed coded outcomes for documenting the status of an atrial fibrillation (AF) / atrial flutter assessment within the stroke workflow. It is intentionally limited to SNOMED CT qualifier values that express the epistemic status of the finding: (1) known present, (2) known absent, or (3) unknown.\n\nThe ValueSet is designed to support harmonized recording across systems when AF/flutter materially influences ischemic stroke etiology workup, thromboembolic risk stratification, and downstream management decisions (e.g., anticoagulation). It is appropriate for use as Observation.valueCodeableConcept to represent the result of screening, monitoring, or review of prior documentation.\n\nScope and modeling notes:\n- The qualifier values do not encode the rhythm subtype, chronicity, burden, or method of detection (e.g., ECG vs telemetry); those aspects should be represented using additional elements (e.g., Observation.method, device data) or separate Observations/Conditions as appropriate.\n- The ValueSet represents “status of assessment” rather than the disorder concept itself; if the clinical intent is to assert a diagnosis of AF/flutter, use a Condition resource with an appropriate SNOMED CT disorder code instead of (or in addition to) this status.",
         "isExample" : false
       },
       {
@@ -190,7 +190,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "StructureDefinition/base-stroke-observation"
         },
         "name" : "Base Profile for Stroke-Related Observations",
-        "description" : "Constraints for observations recorded in the context of stroke care.",
+        "description" : "Common constraints for Observations captured in the context of stroke care across acute management and follow-up. This profile establishes a consistent minimum dataset and reference structure so that downstream profiles (vital signs, functional scores, timing metrics, onset circumstances, and specific findings) behave uniformly across systems.\n\nKey modeling intent:\n- Observation.status is fixed to final to indicate recorded results suitable for clinical reporting and analytics.\n- Observation.subject (Patient) and Observation.encounter (index stroke encounter) are mandatory to ensure every observation is attributable to a specific person and care episode.\n- Observation.partOf optionally links the observation to a Procedure (e.g., mechanical thrombectomy) when the observation represents a procedural outcome (e.g., mTICI grade) or a process metric.\n- Observation.effective[x] is optional to accommodate cases where only a phase label is known; when available, effective[x] should be populated to support accurate sequencing and time-based analysis.",
         "isExample" : false
       },
       {
@@ -547,7 +547,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "CodeSystem/mrs-score-cs"
         },
         "name" : "modified Rankin Scale (mRS) Score Code System",
-        "description" : "Codes representing the modified Rankin Scale (mRS) score for functional outcome.",
+        "description" : "This CodeSystem defines codes for the modified Rankin Scale (mRS), an ordinal measure of global disability and functional outcome widely used in stroke care and research. mRS grades functional status from 0 (no symptoms) through 5 (severe disability), with 6 indicating death.\n\nWithin this implementation guide, mRS is intended to be captured as Observation.valueCodeableConcept (bound to the MRsScoreVS ValueSet), with the assessment timepoint represented explicitly (e.g., via effective[x]) and/or via an assessment context indicator (e.g., pre-stroke baseline, discharge, ~90-day follow-up). This supports standard reporting (e.g., “mRS at 90 days”), comparability across sites, and consistent downstream analytics.\n\nScope and modeling notes:\n- mRS is a coarse, global disability scale; it does not encode detailed domain-specific functional limitations (mobility, cognition, ADLs) which should be captured via additional instruments/Observations if required.\n- The CodeSystem defines only the *score*; method of ascertainment (in-person, telephone, structured interview) and assessor details should be captured separately when relevant.",
         "isExample" : false
       },
       {
@@ -561,7 +561,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "ValueSet/mrs-score-vs"
         },
         "name" : "modified Rankin Scale (mRS) Score ValueSet",
-        "description" : "ValueSet containing the codes for the modified Rankin Scale (mRS) score.",
+        "description" : "This ValueSet includes all modified Rankin Scale (mRS) grades defined in the MRsScoreCS CodeSystem (0–6). It is intended to be bound to Observation.valueCodeableConcept when the Observation.code indicates that the observation represents an mRS score.\n\nBinding mRS to a dedicated ValueSet supports strict validation (only valid mRS grades can be recorded), improves semantic consistency across implementations, and simplifies downstream cohorting and outcome reporting (e.g., dichotomized mRS 0–2 vs 3–6), without changing the meaning of individual grades.",
         "isExample" : false
       },
       {
@@ -575,7 +575,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "CodeSystem/mtici-score-cs"
         },
         "name" : "MTICI Score Code System",
-        "description" : "This CodeSystem defines the codes for the modified Treatment in Cerebral Ischemia / modified Thrombolysis in Cerebral Infarction (mTICI) reperfusion score, an ordinal angiographic scale used to grade the extent of downstream tissue reperfusion after endovascular therapy (e.g., mechanical thrombectomy) in acute ischemic stroke. The scale ranges from 0 (no perfusion) to 3 (complete reperfusion) and includes the 2a/2b/2c subgrades to differentiate partial, substantial, and near-complete reperfusion. These codes are intended for consistent, structured capture in HL7® FHIR® resources such as Observation (valueCodeableConcept), Procedure reports, registries, and research datasets. The CodeSystem represents only the final reperfusion grade for the target downstream territory assessed on post-procedural angiography (commonly DSA). It does not encode vessel location, imaging modality details, timing, technique/device used, or adjudication method; those aspects should be modeled separately. Any local definition of “successful reperfusion” (often mTICI ≥ 2b, depending on protocol) should be implemented via ValueSets, decision support logic, or reporting rules rather than by altering the meaning of the underlying codes.",
+        "description" : "This CodeSystem defines codes for the modified Treatment in Cerebral Ischemia / modified Thrombolysis in Cerebral Infarction (mTICI) reperfusion grade. mTICI is an ordinal angiographic scale used to quantify the extent of antegrade reperfusion of the downstream ischemic territory after endovascular therapy for acute ischemic stroke (e.g., mechanical thrombectomy).\n\nThe scale ranges from 0 (no perfusion) to 3 (complete reperfusion), with 2a/2b/2c subgrades to distinguish partial, substantial, and near-complete reperfusion. These codes are intended for consistent, interoperable capture in HL7® FHIR® resources—most commonly Observation.valueCodeableConcept—supporting procedural documentation, registry submission, audit/quality improvement, and research.\n\nScope and modeling notes:\n- This CodeSystem represents the *final* angiographic reperfusion grade for the target downstream territory, typically assigned from the final post-procedural angiographic run (commonly DSA).\n- It does not encode target vessel location, imaging modality details, timestamps, technique/device, number of passes, collateral status, or adjudication process; those elements should be recorded separately (e.g., Procedure, ImagingStudy, Observation.method, extensions).\n- Any local definition of “successful reperfusion” (often operationalized as mTICI ≥ 2b, depending on protocol) should be implemented via ValueSets, rules, or reporting logic without altering code meanings.",
         "isExample" : false
       },
       {
@@ -589,7 +589,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "CodeSystem/mtici-code-cs"
         },
         "name" : "mTICI Score Codes CodeSystem",
-        "description" : "Codes representing the mTICI score used to assess the degree of reperfusion after a thrombectomy procedure.",
+        "description" : "This CodeSystem defines the assessment concept code(s) used to indicate that an Observation is reporting an mTICI reperfusion grade. It is intentionally separated from the MticiScoreCS CodeSystem, which contains the actual mTICI grade values (0–3 with 2a/2b/2c).\n\nIn practice:\n- Observation.code identifies the *kind of measurement/assessment* (“mTICI reperfusion grade”).\n- Observation.valueCodeableConcept carries the *result* (one of the mTICI grades from MticiScoreVS).\n\nThis separation improves semantic clarity and supports consistent validation and analytics across systems.",
         "isExample" : false
       },
       {
@@ -603,7 +603,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "ValueSet/mtici-code-vs"
         },
         "name" : "mTICI Score Codes ValueSet",
-        "description" : "ValueSet containing the codes to represent the mTICI score used to assess the degree of reperfusion after a thrombectomy procedure.",
+        "description" : "This ValueSet includes the mTICI assessment concept code(s) from MTICICodeCS for use as Observation.code when recording an mTICI reperfusion grade. It is intended to be paired with a binding of Observation.valueCodeableConcept to MticiScoreVS.\n\nSeparating the “assessment concept” ValueSet (this ValueSet) from the “assessment result” ValueSet (MticiScoreVS) enables clearer validation rules, consistent UI behavior, and safer reuse of the mTICI scoring system across profiles.",
         "isExample" : false
       },
       {
@@ -617,7 +617,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "ValueSet/mtici-score-vs"
         },
         "name" : "MTICI Score ValueSet",
-        "description" : "ValueSet containing the codes to represent the MTICI score used to assess the degree of reperfusion after a thrombectomy procedure.",
+        "description" : "This ValueSet enumerates all allowable mTICI reperfusion grades (0, 1, 2a, 2b, 2c, 3) from the MticiScoreCS CodeSystem. It is intended to be bound (typically as required) to Observation.valueCodeableConcept when recording the final angiographic reperfusion outcome after endovascular therapy for acute ischemic stroke.\n\nUsing a dedicated ValueSet ensures:\n- consistent coding across implementations and sites,\n- reliable downstream interpretation for analytics/registry submission, and\n- clear separation between the *assessment concept* (e.g., “mTICI reperfusion grade”) and the *assessment result* (the specific grade).\n\nThis ValueSet does not convey timing, vessel location, modality, or technique; those must be represented elsewhere in the clinical model.",
         "isExample" : false
       },
       {
@@ -631,7 +631,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "StructureDefinition/observation-timing-context-ext"
         },
         "name" : "Observation Timing Context Extension",
-        "description" : "Specifies the timing context or phase (e.g., pre-stroke, admission, discharge, 3-month) in which an observation or assessment was made.",
+        "description" : "This extension captures the clinical timing context (relative phase) in which an observation or assessment was made (e.g., pre-stroke baseline, admission, discharge, ~3-month follow-up). It is particularly important for functional outcomes and severity scores whose interpretation depends on *when* they were assessed.\n\nThe extension complements Observation.effective[x]:\n- effective[x] records the actual date/time (when known),\n- this extension records the standardized phase label used for reporting and comparability across sites.\n\nThe value is a required CodeableConcept bound to AssessmentContextVS (required), ensuring only supported timing contexts are used in this implementation guide.",
         "isExample" : false
       },
       {
@@ -802,7 +802,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "ValueSet/specific-finding-codes-vs"
         },
         "name" : "Specific Stroke Finding Codes ValueSet",
-        "description" : "Codes for specific clinical findings relevant to stroke (Afib/Flutter status, MTICI score).",
+        "description" : "This ValueSet provides SNOMED CT disorder concepts for specific clinically relevant findings often referenced in the stroke workup, currently limited to atrial fibrillation and atrial flutter disorders.\n\nThese codes are suitable when the intent is to reference the disorder concepts themselves (e.g., as a focus finding or a coded problem). When the intent is to capture the *status of an assessment* (present/absent/unknown) rather than assert a diagnosis, implementers should use an Observation with a dedicated assessment concept as Observation.code and bind Observation.valueCodeableConcept to an appropriate status ValueSet (e.g., AfibFlutterStatusVS).",
         "isExample" : false
       },
       {
@@ -816,7 +816,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "ValueSet/stroke-finding-codes-vs"
         },
         "name" : "Specific Stroke Finding Codes ValueSet",
-        "description" : "ValueSet for specific coded findings like Afib/Flutter status or mTICI score.",
+        "description" : "This ValueSet aggregates a small set of coded “finding/assessment concepts” used by the SpecificFindingObservationProfile for stroke-related documentation. It currently includes:\n- specific disorder concepts relevant to stroke workup (from SpecificFindingCodesVS), and\n- the mTICI assessment concept code (from MTICICodeVS).\n\nImplementer note: This ValueSet is used to constrain Observation.code. Where Observation.code is a disorder concept (e.g., AF disorder), the Observation instance should be interpreted as capturing an *assessment about that finding* (with the assessment result carried in Observation.valueCodeableConcept, per profile constraints). Where Observation.code is an assessment concept (e.g., mTICI), the Observation.valueCodeableConcept carries the corresponding score/result.",
         "isExample" : false
       },
       {
@@ -830,7 +830,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "StructureDefinition/specific-finding-observation-profile"
         },
         "name" : "Specific Stroke Finding Observation Profile (R5)",
-        "description" : "Profile for specific coded findings like Afib/Flutter status or mTICI score.",
+        "description" : "Profile for recording discrete, coded stroke-related findings and assessment outcomes that do not fit naturally into the vital-sign, functional-score, or timing-metric profiles. Observation.code is constrained to StrokeFindingCodesVS, and Observation.valueCodeableConcept carries the corresponding assessment result or status.\n\nTypical use cases include:\n- documenting AF/flutter assessment status as present/absent/unknown (valueCodeableConcept bound to an AF/flutter status ValueSet), and\n- documenting procedural outcome grades such as mTICI (valueCodeableConcept bound to MticiScoreVS).\n\nThis profile deliberately encodes the result as a CodeableConcept to support categorical outcomes and interoperability. It does not replace Condition for asserting diagnoses; when a durable diagnosis is established (e.g., confirmed AF), represent it as a Condition and optionally link supporting Observations (screening results, monitoring runs) using hasMember, derivedFrom, or Provenance.",
         "isExample" : false
       },
       {
@@ -918,7 +918,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "CodeSystem/stroke-circumstance-codes-cs"
         },
         "name" : "Stroke Circumstance Codes CodeSystem",
-        "description" : "Codes for findings related to the circumstances of stroke onset (In-hospital, Wake-up).",
+        "description" : "This CodeSystem defines coded circumstances related to stroke symptom onset that are clinically relevant for eligibility decisions, diagnostic reasoning, and reporting—particularly when the exact onset time is unknown or atypical.\n\nThese codes are intended to be used as Observation.code in the StrokeCircumstanceObservationProfile to assert that a given onset circumstance applies to the index stroke event. They do not encode the precise onset timestamp, last-known-well time, or location of onset; those details should be represented separately (e.g., dedicated Observations, Encounter/Condition attributes, or extensions).",
         "isExample" : false
       },
       {
@@ -932,7 +932,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "ValueSet/stroke-circumstance-codes-vs"
         },
         "name" : "Stroke Circumstance Codes ValueSet",
-        "description" : "Codes for findings related to the circumstances of stroke onset (In-hospital, Wake-up).",
+        "description" : "This ValueSet includes all onset-circumstance codes defined in StrokeCircumstanceCodesCS for use in stroke documentation and analytics. It is intended to be bound to Observation.code in the StrokeCircumstanceObservationProfile, enabling consistent classification of onset scenarios such as in-hospital stroke and wake-up stroke.\n\nConsistent coding supports cohort definition (e.g., wake-up stroke protocols), audit/quality reporting, and research where onset uncertainty is a key stratification variable.",
         "isExample" : false
       },
       {
@@ -946,7 +946,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "StructureDefinition/stroke-circumstance-observation-profile"
         },
         "name" : "Stroke Circumstance Observation Profile (R5)",
-        "description" : "Profile for recording findings about stroke onset circumstances (In-hospital, Wake-up).",
+        "description" : "Profile for documenting clinically relevant circumstances of stroke symptom onset (e.g., wake-up stroke, in-hospital onset). The circumstance is represented by Observation.code (bound to StrokeCircumstanceCodesVS); the presence of the Observation asserts that the circumstance applies to the index event within the associated Encounter.\n\nThe profile supports linking supporting evidence via hasMember (e.g., Observations capturing last-known-well time, symptom discovery time, or other onset-related details) without overloading the circumstance code itself. This profile intentionally does not encode onset timestamps in the code; temporal details should be modeled separately for precision and auditability.",
         "isExample" : false
       },
       {
@@ -1058,7 +1058,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "ValueSet/functional-score-codes-vs"
         },
         "name" : "Stroke Functional Score Codes ValueSet",
-        "description" : "Codes for key functional scores used in stroke (mRS, NIHSS).",
+        "description" : "This ValueSet defines the allowable Observation.code concepts for stroke functional and severity scoring instruments represented in this guide: modified Rankin Scale (mRS) and NIH Stroke Scale (NIHSS), expressed as SNOMED CT observable entities.\n\nIt is intended to be bound to Observation.code in the FunctionalScoreObservationProfile. Downstream validation/invariants then enforce the appropriate datatype of Observation.value[x]:\n- mRS is captured as a coded ordinal category (valueCodeableConcept bound to MRsScoreVS).\n- NIHSS is captured as a numeric total score (valueInteger), representing the summed NIHSS total rather than item-level subscores.",
         "isExample" : false
       },
       {
@@ -1072,7 +1072,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "StructureDefinition/functional-score-observation-profile"
         },
         "name" : "Stroke Functional Score Observation Profile (R5, Timing Ext)",
-        "description" : "Profile for recording functional scores (mRS, NIHSS), using an extension for timing context.",
+        "description" : "Profile for recording stroke functional outcome and severity scores, currently mRS and NIHSS, in a way that is both interoperable and context-aware. The profile requires a timing context extension (ObservationTimingContextExtension) to explicitly state the clinical phase (e.g., pre-stroke baseline, admission, discharge, ~3-month follow-up), enabling unambiguous interpretation and standardized reporting.\n\nObservation.code is bound to FunctionalScoreCodesVS, and invariants constrain Observation.value[x] by instrument:\n- For mRS (SNOMED CT observable entity), the result is represented as a CodeableConcept bound to MRsScoreVS (ordinal categories 0–6).\n- For NIHSS (SNOMED CT observable entity), the result is represented as an integer total score (valueInteger), reflecting the overall NIHSS total rather than item-level subscores.\n\nThe profile does not model itemized NIHSS components, assessor training, or interview method; implementers may represent those details separately when needed (e.g., additional Observations, extensions, or provenance).",
         "isExample" : false
       },
       {
@@ -1212,7 +1212,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "ValueSet/timing-metric-codes-vs"
         },
         "name" : "Stroke Timing Metric Codes ValueSet",
-        "description" : "ValueSet for key process timing metrics in acute stroke care (D2N, D2G).",
+        "description" : "This ValueSet includes all timing metric codes defined in TimingMetricCodesCS for use as Observation.code when recording acute stroke process intervals (e.g., D2N, D2G). It supports required binding in the TimingMetricObservationProfile, ensuring only approved timing metrics are recorded.\n\nThe ValueSet is intentionally constrained to promote consistent, comparable reporting across implementations and to reduce ambiguity in downstream analytics.",
         "isExample" : false
       },
       {
@@ -1226,7 +1226,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "CodeSystem/timing-metric-codes-cs"
         },
         "name" : "Stroke Timing Metric Codes ValueSet",
-        "description" : "Codes for key process timing metrics in acute stroke care (D2N, D2G).",
+        "description" : "This CodeSystem defines codes for key time-interval process metrics in acute stroke care used for quality monitoring and pathway optimization. Each code represents a duration measured in minutes between two clinically meaningful events (e.g., hospital arrival to thrombolysis start).\n\nThese metrics are commonly used in performance dashboards, registry submissions, and quality improvement programs. The intent is to store the *measured interval* (a duration) in Observation.valueQuantity (UCUM minutes), while event timestamps (arrival time, needle time, groin puncture time) may be stored separately when available.\n\nImplementation note: Exact operational definitions can vary by institution (e.g., “needle time” as alteplase bolus vs infusion start; “door time” as ED arrival vs triage time). Implementers should align local measurement definitions and document them (e.g., in metadata, profiles, or implementation guidance) to ensure comparability across sites.",
         "isExample" : false
       },
       {
@@ -1240,7 +1240,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "StructureDefinition/timing-metric-observation-profile"
         },
         "name" : "Stroke Timing Metric Observation Profile (R5)",
-        "description" : "Profile for recording key process timing metrics (D2N, D2G).",
+        "description" : "Profile for recording acute stroke process timing metrics as measured durations (e.g., Door-to-Needle, Door-to-Groin). Observation.code is bound to TimingMetricCodesVS, and Observation.valueQuantity represents the elapsed time as a duration in UCUM minutes.\n\nThis representation is optimized for quality monitoring and analytics, where the interval value is the primary datum. The profile allows hasMember references to associate related sub-metrics or supporting Observations when a composite metric is derived from multiple recorded steps.\n\nScope note: This profile records the interval value; it does not require recording the underlying event timestamps. If timestamp provenance is needed, implementers should capture the source event times separately (e.g., additional Observations or extensions) to support auditing and cross-site comparability.",
         "isExample" : false
       },
       {
@@ -1254,7 +1254,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "ValueSet/vital-sign-codes-vs"
         },
         "name" : "Stroke Vital Sign Codes ValueSet",
-        "description" : "Codes for key vital signs relevant to stroke assessment (Systolic, Diastolic BP).",
+        "description" : "This ValueSet defines SNOMED CT observable-entity codes for the blood pressure components captured as vital signs in the acute stroke setting (systolic and diastolic blood pressure). It is intended for use as Observation.component.code in a single vital-sign Observation that records both components using UCUM units (mm[Hg]).\n\nIncluding only the component codes (rather than full LOINC panels) keeps the representation lightweight while remaining semantically precise, and supports repeated measurements across time (e.g., triage, post-thrombolysis monitoring) by repeating the Observation with different effective[x] timestamps.",
         "isExample" : false
       },
       {
@@ -1268,7 +1268,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "StructureDefinition/vital-sign-observation-profile"
         },
         "name" : "Stroke Vital Sign Observation Profile (R5)",
-        "description" : "Profile for recording key vital signs (Systolic/Diastolic BP) in stroke patients.",
+        "description" : "Profile for recording key blood pressure vital signs in stroke patients using a single Observation with components. The Observation is categorized as vital-signs and uses component slices for systolic and diastolic blood pressure, each represented as a Quantity in UCUM mm[Hg].\n\nThis profile supports repeated measurements over time by recording separate Observations at different effective[x] timestamps (e.g., arrival, post-thrombolysis monitoring, ICU). It intentionally does not model measurement conditions such as body position, cuff site, or device; such details may be captured via Observation.method, device references, or additional extensions if required by local workflows.",
         "isExample" : false
       },
       {

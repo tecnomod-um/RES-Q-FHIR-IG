@@ -12,7 +12,9 @@
 | Active as of 2026-02-18 | *Computable Name*:AssessmentContextCS |
 
  
-Codes defining the context or timing of a clinical assessment, particularly functional scores. 
+This CodeSystem defines normalized codes for the clinical context / relative timepoint at which a stroke-related assessment was performed. It is primarily used to contextualize functional and severity instruments (e.g., mRS and NIHSS) where interpretation depends on whether the score reflects baseline status, acute presentation, discharge status, or follow-up. 
+These codes represent **relative phases** (pre-stroke baseline, admission, discharge, ~3-month follow-up) rather than precise timestamps. The actual date/time of measurement should be recorded in Observation.effective[x] when known; the context code complements effective[x] by expressing the clinical phase, which is often necessary for reporting and comparability (e.g., “mRS pre-stroke” vs “mRS at discharge”). 
+Scope note: This CodeSystem is intentionally small and focused on common stroke pathway milestones; implementers may extend it (with additional codes and governance) if other standardized follow-up timepoints are required (e.g., 6 months, 1 year). 
 
  This Code system is referenced in the content logical definition of the following value sets: 
 
@@ -32,7 +34,7 @@ Codes defining the context or timing of a clinical assessment, particularly func
   "title" : "Assessment Context Code System",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-18T13:35:35+00:00",
+  "date" : "2026-02-18T14:43:59+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -45,7 +47,7 @@ Codes defining the context or timing of a clinical assessment, particularly func
       ]
     }
   ],
-  "description" : "Codes defining the context or timing of a clinical assessment, particularly functional scores.",
+  "description" : "This CodeSystem defines normalized codes for the clinical context / relative timepoint at which a stroke-related assessment was performed. It is primarily used to contextualize functional and severity instruments (e.g., mRS and NIHSS) where interpretation depends on whether the score reflects baseline status, acute presentation, discharge status, or follow-up.\n\nThese codes represent *relative phases* (pre-stroke baseline, admission, discharge, ~3-month follow-up) rather than precise timestamps. The actual date/time of measurement should be recorded in Observation.effective[x] when known; the context code complements effective[x] by expressing the clinical phase, which is often necessary for reporting and comparability (e.g., “mRS pre-stroke” vs “mRS at discharge”).\n\nScope note: This CodeSystem is intentionally small and focused on common stroke pathway milestones; implementers may extend it (with additional codes and governance) if other standardized follow-up timepoints are required (e.g., 6 months, 1 year).",
   "caseSensitive" : false,
   "content" : "complete",
   "count" : 4,
@@ -53,22 +55,22 @@ Codes defining the context or timing of a clinical assessment, particularly func
     {
       "code" : "pre-stroke",
       "display" : "Pre-stroke",
-      "definition" : "Assessment reflects patient state before the current stroke event."
+      "definition" : "Assessment reflects the patient’s baseline state prior to the index stroke event (pre-morbid status), typically derived from history or collateral information."
     },
     {
       "code" : "admission",
       "display" : "Admission",
-      "definition" : "Assessment performed upon or shortly after hospital admission for the stroke event."
+      "definition" : "Assessment performed at, or shortly after, presentation/admission for the index stroke event (acute phase baseline for in-hospital care)."
     },
     {
       "code" : "discharge",
       "display" : "Discharge",
-      "definition" : "Assessment performed at the time of hospital discharge."
+      "definition" : "Assessment performed at the time of discharge from the acute admission (or the end of the index hospitalization episode)."
     },
     {
       "code" : "3-month",
       "display" : "3-Month Follow-up",
-      "definition" : "Assessment performed approximately 3 months post-discharge."
+      "definition" : "Assessment performed at approximately 3 months (≈90 days) after discharge/index event, acknowledging operational windows used in routine follow-up and research."
     }
   ]
 }

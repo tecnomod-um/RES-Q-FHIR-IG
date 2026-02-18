@@ -81,7 +81,7 @@ Reflex | Repeat | Re-run.","","","","","","","","","",,"required","The type of T
 "
 "age-at-onset-observation-profile","Observation.code","Observation.code","","Name
 ","",1,1,"Y","","Y","CodeableConcept {[]} {[]}
-","Type of observation (code / type)","Describes what was observed. Sometimes this is called the observation ""name"".","*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.","Knowing what kind of observation is being made is essential to understanding the observation.","","","","<valueCodeableConcept xmlns=""http://hl7.org/fhir"">
+","Age-at-onset concept.","Fixed to the SNOMED CT observable entity indicating the observation represents age at onset.","*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.","Knowing what kind of observation is being made is essential to understanding the observation.","","","","<valueCodeableConcept xmlns=""http://hl7.org/fhir"">
   <coding>
     <system value=""http://snomed.info/sct""/>
     <code value=""445518008""/>
@@ -111,7 +111,7 @@ Period {[]} {[]}Timing {[]} {[]}instant {[]} {[]}","Clinically relevant time/tim
 ","Who is responsible for the observation","Who was responsible for asserting the observed value as ""true"".","","May give a degree of confidence in the observation and also indicates where follow-up questions should be directed.","","","","","","","",,,,,"",,,,"Observation.performer",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "age-at-onset-observation-profile","Observation.value[x]","Observation.value[x]","","","",1,1,"Y","","Y","integer {[]} {[]}
-","Actual result","The information determined as a result of making the observation, if the information has a simple value.","- An observation may have:
+","Age in completed years.","Integer age in years at the chosen onset reference point (per local operational definition).","- An observation may have:
   1.  a single value here
   1.  both a value and a set of related or component values
   1.  only a set of related or component values.

@@ -12,7 +12,9 @@
 | Draft as of 2026-02-18 | *Computable Name*:TimingMetricObservationProfile |
 
  
-Profile for recording key process timing metrics (D2N, D2G). 
+Profile for recording acute stroke process timing metrics as measured durations (e.g., Door-to-Needle, Door-to-Groin). Observation.code is bound to TimingMetricCodesVS, and Observation.valueQuantity represents the elapsed time as a duration in UCUM minutes. 
+This representation is optimized for quality monitoring and analytics, where the interval value is the primary datum. The profile allows hasMember references to associate related sub-metrics or supporting Observations when a composite metric is derived from multiple recorded steps. 
+Scope note: This profile records the interval value; it does not require recording the underlying event timestamps. If timestamp provenance is needed, implementers should capture the source event times separately (e.g., additional Observations or extensions) to support auditing and cross-site comparability. 
 
 **Usages:**
 
@@ -41,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-timing-metric-observ
   "name" : "TimingMetricObservationProfile",
   "title" : "Stroke Timing Metric Observation Profile (R5)",
   "status" : "draft",
-  "date" : "2026-02-18T13:35:35+00:00",
+  "date" : "2026-02-18T14:43:59+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -54,7 +56,7 @@ Other representations of profile: [CSV](StructureDefinition-timing-metric-observ
       ]
     }
   ],
-  "description" : "Profile for recording key process timing metrics (D2N, D2G).",
+  "description" : "Profile for recording acute stroke process timing metrics as measured durations (e.g., Door-to-Needle, Door-to-Groin). Observation.code is bound to TimingMetricCodesVS, and Observation.valueQuantity represents the elapsed time as a duration in UCUM minutes.\n\nThis representation is optimized for quality monitoring and analytics, where the interval value is the primary datum. The profile allows hasMember references to associate related sub-metrics or supporting Observations when a composite metric is derived from multiple recorded steps.\n\nScope note: This profile records the interval value; it does not require recording the underlying event timestamps. If timestamp provenance is needed, implementers should capture the source event times separately (e.g., additional Observations or extensions) to support auditing and cross-site comparability.",
   "fhirVersion" : "5.0.0",
   "mapping" : [
     {

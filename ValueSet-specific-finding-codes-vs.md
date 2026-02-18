@@ -12,7 +12,8 @@
 | Active as of 2026-02-18 | *Computable Name*:SpecificFindingCodesVS |
 
  
-Codes for specific clinical findings relevant to stroke (Afib/Flutter status, MTICI score). 
+This ValueSet provides SNOMED CT disorder concepts for specific clinically relevant findings often referenced in the stroke workup, currently limited to atrial fibrillation and atrial flutter disorders. 
+These codes are suitable when the intent is to reference the disorder concepts themselves (e.g., as a focus finding or a coded problem). When the intent is to capture the **status of an assessment** (present/absent/unknown) rather than assert a diagnosis, implementers should use an Observation with a dedicated assessment concept as Observation.code and bind Observation.valueCodeableConcept to an appropriate status ValueSet (e.g., AfibFlutterStatusVS). 
 
  **References** 
 
@@ -50,7 +51,7 @@ Codes for specific clinical findings relevant to stroke (Afib/Flutter status, MT
   "name" : "SpecificFindingCodesVS",
   "title" : "Specific Stroke Finding Codes ValueSet",
   "status" : "active",
-  "date" : "2026-02-18T13:35:35+00:00",
+  "date" : "2026-02-18T14:43:59+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -63,7 +64,7 @@ Codes for specific clinical findings relevant to stroke (Afib/Flutter status, MT
       ]
     }
   ],
-  "description" : "Codes for specific clinical findings relevant to stroke (Afib/Flutter status, MTICI score).",
+  "description" : "This ValueSet provides SNOMED CT disorder concepts for specific clinically relevant findings often referenced in the stroke workup, currently limited to atrial fibrillation and atrial flutter disorders.\n\nThese codes are suitable when the intent is to reference the disorder concepts themselves (e.g., as a focus finding or a coded problem). When the intent is to capture the *status of an assessment* (present/absent/unknown) rather than assert a diagnosis, implementers should use an Observation with a dedicated assessment concept as Observation.code and bind Observation.valueCodeableConcept to an appropriate status ValueSet (e.g., AfibFlutterStatusVS).",
   "compose" : {
     "include" : [
       {

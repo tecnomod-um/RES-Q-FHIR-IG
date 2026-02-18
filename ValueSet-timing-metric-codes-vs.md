@@ -12,7 +12,8 @@
 | Active as of 2026-02-18 | *Computable Name*:TimingMetricCodesVS |
 
  
-ValueSet for key process timing metrics in acute stroke care (D2N, D2G). 
+This ValueSet includes all timing metric codes defined in TimingMetricCodesCS for use as Observation.code when recording acute stroke process intervals (e.g., D2N, D2G). It supports required binding in the TimingMetricObservationProfile, ensuring only approved timing metrics are recorded. 
+The ValueSet is intentionally constrained to promote consistent, comparable reporting across implementations and to reduce ambiguity in downstream analytics. 
 
  **References** 
 
@@ -50,7 +51,7 @@ ValueSet for key process timing metrics in acute stroke care (D2N, D2G).
   "name" : "TimingMetricCodesVS",
   "title" : "Stroke Timing Metric Codes ValueSet",
   "status" : "active",
-  "date" : "2026-02-18T13:35:35+00:00",
+  "date" : "2026-02-18T14:43:59+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -63,7 +64,7 @@ ValueSet for key process timing metrics in acute stroke care (D2N, D2G).
       ]
     }
   ],
-  "description" : "ValueSet for key process timing metrics in acute stroke care (D2N, D2G).",
+  "description" : "This ValueSet includes all timing metric codes defined in TimingMetricCodesCS for use as Observation.code when recording acute stroke process intervals (e.g., D2N, D2G). It supports required binding in the TimingMetricObservationProfile, ensuring only approved timing metrics are recorded.\n\nThe ValueSet is intentionally constrained to promote consistent, comparable reporting across implementations and to reduce ambiguity in downstream analytics.",
   "compose" : {
     "include" : [
       {

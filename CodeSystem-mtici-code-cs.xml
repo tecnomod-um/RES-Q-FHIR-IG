@@ -3,7 +3,7 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
   <id value="mtici-code-cs"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem mtici-code-cs</b></p><a name="mtici-code-cs"> </a><a name="hcmtici-code-cs"> </a><p>This case-insensitive code system <code>http://tecnomod-um.org/CodeSystem/mtici-code-cs</code> defines the following code:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">mTICI<a name="mtici-code-cs-mTICI"> </a></td><td>Modified Thrombolysis in Cerebral Infarction</td></tr></table></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem mtici-code-cs</b></p><a name="mtici-code-cs"> </a><a name="hcmtici-code-cs"> </a><p>This case-insensitive code system <code>http://tecnomod-um.org/CodeSystem/mtici-code-cs</code> defines the following code:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">mTICI<a name="mtici-code-cs-mTICI"> </a></td><td>Assessment concept representing the modified Thrombolysis in Cerebral Infarction reperfusion grade to be reported as an Observation value.</td></tr></table></div>
   </text>
   <url value="http://tecnomod-um.org/CodeSystem/mtici-code-cs"/>
   <version value="0.1.0"/>
@@ -11,7 +11,7 @@
   <title value="mTICI Score Codes CodeSystem"/>
   <status value="active"/>
   <experimental value="true"/>
-  <date value="2026-02-18T13:35:35+00:00"/>
+  <date value="2026-02-18T14:43:59+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>
@@ -20,13 +20,13 @@
       <value value="http://tecnomod-um.org"/>
     </telecom>
   </contact>
-  <description value="Codes representing the mTICI score used to assess the degree of reperfusion after a thrombectomy procedure."/>
+  <description value="This CodeSystem defines the assessment concept code(s) used to indicate that an Observation is reporting an mTICI reperfusion grade. It is intentionally separated from the MticiScoreCS CodeSystem, which contains the actual mTICI grade values (0–3 with 2a/2b/2c).&#xA;&#xA;In practice:&#xA;- Observation.code identifies the *kind of measurement/assessment* (“mTICI reperfusion grade”).&#xA;- Observation.valueCodeableConcept carries the *result* (one of the mTICI grades from MticiScoreVS).&#xA;&#xA;This separation improves semantic clarity and supports consistent validation and analytics across systems."/>
   <caseSensitive value="false"/>
   <content value="complete"/>
   <count value="1"/>
   <concept>
     <code value="mTICI"/>
     <display value="mTICI"/>
-    <definition value="Modified Thrombolysis in Cerebral Infarction"/>
+    <definition value="Assessment concept representing the modified Thrombolysis in Cerebral Infarction reperfusion grade to be reported as an Observation value."/>
   </concept>
 </CodeSystem>

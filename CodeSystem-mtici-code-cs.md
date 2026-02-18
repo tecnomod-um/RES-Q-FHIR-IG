@@ -12,7 +12,12 @@
 | Active as of 2026-02-18 | *Computable Name*:MTICICodeCS |
 
  
-Codes representing the mTICI score used to assess the degree of reperfusion after a thrombectomy procedure. 
+This CodeSystem defines the assessment concept code(s) used to indicate that an Observation is reporting an mTICI reperfusion grade. It is intentionally separated from the MticiScoreCS CodeSystem, which contains the actual mTICI grade values (0–3 with 2a/2b/2c). 
+In practice: 
+* Observation.code identifies the **kind of measurement/assessment** (“mTICI reperfusion grade”).
+* Observation.valueCodeableConcept carries the **result** (one of the mTICI grades from MticiScoreVS).
+ 
+This separation improves semantic clarity and supports consistent validation and analytics across systems. 
 
  This Code system is referenced in the content logical definition of the following value sets: 
 
@@ -32,7 +37,7 @@ Codes representing the mTICI score used to assess the degree of reperfusion afte
   "title" : "mTICI Score Codes CodeSystem",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-18T13:35:35+00:00",
+  "date" : "2026-02-18T14:43:59+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -45,7 +50,7 @@ Codes representing the mTICI score used to assess the degree of reperfusion afte
       ]
     }
   ],
-  "description" : "Codes representing the mTICI score used to assess the degree of reperfusion after a thrombectomy procedure.",
+  "description" : "This CodeSystem defines the assessment concept code(s) used to indicate that an Observation is reporting an mTICI reperfusion grade. It is intentionally separated from the MticiScoreCS CodeSystem, which contains the actual mTICI grade values (0–3 with 2a/2b/2c).\n\nIn practice:\n- Observation.code identifies the *kind of measurement/assessment* (“mTICI reperfusion grade”).\n- Observation.valueCodeableConcept carries the *result* (one of the mTICI grades from MticiScoreVS).\n\nThis separation improves semantic clarity and supports consistent validation and analytics across systems.",
   "caseSensitive" : false,
   "content" : "complete",
   "count" : 1,
@@ -53,7 +58,7 @@ Codes representing the mTICI score used to assess the degree of reperfusion afte
     {
       "code" : "mTICI",
       "display" : "mTICI",
-      "definition" : "Modified Thrombolysis in Cerebral Infarction"
+      "definition" : "Assessment concept representing the modified Thrombolysis in Cerebral Infarction reperfusion grade to be reported as an Observation value."
     }
   ]
 }

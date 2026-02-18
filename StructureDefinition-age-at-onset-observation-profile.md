@@ -12,7 +12,11 @@
 | Draft as of 2026-02-18 | *Computable Name*:AgeAtOnsetObservationProfile |
 
  
-Profile specifically for recording the patient's age at stroke onset. The value is represented as an integer (age in years) with a fixed SNOMED CT code indicating that this observation represents age at onset. 
+Profile for recording the patient’s age at the time of stroke onset as a simple integer value in years. The Observation.code is fixed to the SNOMED CT observable entity “Age at onset of clinical finding,” ensuring a clear and interoperable semantic meaning. 
+The age at onset may be derived from date of birth and an onset/reference timepoint (e.g., symptom onset, last known well, or discovery time depending on local policy). This profile records the resulting age value, not the derivation method; if the derivation is clinically important, implementers should capture the underlying reference timepoint(s) and provenance separately. 
+
+ 
+Record age-at-onset in years as a simple, computable value used in etiologic assessment and risk stratification. 
 
 **Usages:**
 
@@ -41,7 +45,7 @@ Other representations of profile: [CSV](StructureDefinition-age-at-onset-observa
   "name" : "AgeAtOnsetObservationProfile",
   "title" : "Age at Stroke Onset Observation Profile (R5)",
   "status" : "draft",
-  "date" : "2026-02-18T13:35:35+00:00",
+  "date" : "2026-02-18T14:43:59+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -54,7 +58,8 @@ Other representations of profile: [CSV](StructureDefinition-age-at-onset-observa
       ]
     }
   ],
-  "description" : "Profile specifically for recording the patient's age at stroke onset. The value is represented as an integer (age in years) with a fixed SNOMED CT code indicating that this observation represents age at onset.",
+  "description" : "Profile for recording the patient’s age at the time of stroke onset as a simple integer value in years. The Observation.code is fixed to the SNOMED CT observable entity “Age at onset of clinical finding,” ensuring a clear and interoperable semantic meaning.\n\nThe age at onset may be derived from date of birth and an onset/reference timepoint (e.g., symptom onset, last known well, or discovery time depending on local policy). This profile records the resulting age value, not the derivation method; if the derivation is clinically important, implementers should capture the underlying reference timepoint(s) and provenance separately.",
+  "purpose" : "Record age-at-onset in years as a simple, computable value used in etiologic assessment and risk stratification.",
   "fhirVersion" : "5.0.0",
   "mapping" : [
     {
@@ -102,6 +107,8 @@ Other representations of profile: [CSV](StructureDefinition-age-at-onset-observa
       {
         "id" : "Observation.code",
         "path" : "Observation.code",
+        "short" : "Age-at-onset concept.",
+        "definition" : "Fixed to the SNOMED CT observable entity indicating the observation represents age at onset.",
         "patternCodeableConcept" : {
           "coding" : [
             {
@@ -116,6 +123,8 @@ Other representations of profile: [CSV](StructureDefinition-age-at-onset-observa
       {
         "id" : "Observation.value[x]",
         "path" : "Observation.value[x]",
+        "short" : "Age in completed years.",
+        "definition" : "Integer age in years at the chosen onset reference point (per local operational definition).",
         "min" : 1,
         "type" : [
           {

@@ -12,7 +12,8 @@
 | Active as of 2026-02-18 | *Computable Name*:StrokeCircumstanceCodesVS |
 
  
-Codes for findings related to the circumstances of stroke onset (In-hospital, Wake-up). 
+This ValueSet includes all onset-circumstance codes defined in StrokeCircumstanceCodesCS for use in stroke documentation and analytics. It is intended to be bound to Observation.code in the StrokeCircumstanceObservationProfile, enabling consistent classification of onset scenarios such as in-hospital stroke and wake-up stroke. 
+Consistent coding supports cohort definition (e.g., wake-up stroke protocols), audit/quality reporting, and research where onset uncertainty is a key stratification variable. 
 
  **References** 
 
@@ -50,7 +51,7 @@ Codes for findings related to the circumstances of stroke onset (In-hospital, Wa
   "name" : "StrokeCircumstanceCodesVS",
   "title" : "Stroke Circumstance Codes ValueSet",
   "status" : "active",
-  "date" : "2026-02-18T13:35:35+00:00",
+  "date" : "2026-02-18T14:43:59+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -63,7 +64,7 @@ Codes for findings related to the circumstances of stroke onset (In-hospital, Wa
       ]
     }
   ],
-  "description" : "Codes for findings related to the circumstances of stroke onset (In-hospital, Wake-up).",
+  "description" : "This ValueSet includes all onset-circumstance codes defined in StrokeCircumstanceCodesCS for use in stroke documentation and analytics. It is intended to be bound to Observation.code in the StrokeCircumstanceObservationProfile, enabling consistent classification of onset scenarios such as in-hospital stroke and wake-up stroke.\n\nConsistent coding supports cohort definition (e.g., wake-up stroke protocols), audit/quality reporting, and research where onset uncertainty is a key stratification variable.",
   "compose" : {
     "include" : [
       {

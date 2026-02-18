@@ -229,7 +229,15 @@
   </table>
 
 <p>
-<p>Codes representing the mTICI score used to assess the degree of reperfusion after a thrombectomy procedure.</p>
+<p>This CodeSystem defines the assessment concept code(s) used to indicate that an Observation is reporting an mTICI reperfusion grade. It is intentionally separated from the MticiScoreCS CodeSystem, which contains the actual mTICI grade values (0–3 with 2a/2b/2c).</p>
+
+<p>In practice:</p>
+<ul>
+  <li>Observation.code identifies the <em>kind of measurement/assessment</em> (“mTICI reperfusion grade”).</li>
+  <li>Observation.valueCodeableConcept carries the <em>result</em> (one of the mTICI grades from MticiScoreVS).</li>
+</ul>
+
+<p>This separation improves semantic clarity and supports consistent validation and analytics across systems.</p>
 
 </p>
 
@@ -251,7 +259,7 @@
   <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated"><p class="res-header-id"></p><a name="mtici-code-cs"> </a><a name="hcmtici-code-cs"> </a><p>This case-insensitive code system <code>http://tecnomod-um.org/CodeSystem/mtici-code-cs</code> defines the following code:</p>
 <table class="codes" data-fhir="generated"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Definition</b></td></tr>
 <tr><td style="white-space:nowrap">mTICI<a name="mtici-code-cs-mTICI"> </a></td>
-<td>Modified Thrombolysis in Cerebral Infarction</td></tr></table></div>
+<td>Assessment concept representing the modified Thrombolysis in Cerebral Infarction reperfusion grade to be reported as an Observation value.</td></tr></table></div>
 
   
 
@@ -278,7 +286,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Wed, Feb 18, 2026 13:35+0000">2026-02-18</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Wed, Feb 18, 2026 14:43+0000">2026-02-18</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

@@ -12,7 +12,12 @@
 | Draft as of 2026-02-18 | *Computable Name*:FunctionalScoreObservationProfile |
 
  
-Profile for recording functional scores (mRS, NIHSS), using an extension for timing context. 
+Profile for recording stroke functional outcome and severity scores, currently mRS and NIHSS, in a way that is both interoperable and context-aware. The profile requires a timing context extension (ObservationTimingContextExtension) to explicitly state the clinical phase (e.g., pre-stroke baseline, admission, discharge, ~3-month follow-up), enabling unambiguous interpretation and standardized reporting. 
+Observation.code is bound to FunctionalScoreCodesVS, and invariants constrain Observation.value[x] by instrument: 
+* For mRS (SNOMED CT observable entity), the result is represented as a CodeableConcept bound to MRsScoreVS (ordinal categories 0–6).
+* For NIHSS (SNOMED CT observable entity), the result is represented as an integer total score (valueInteger), reflecting the overall NIHSS total rather than item-level subscores.
+ 
+The profile does not model itemized NIHSS components, assessor training, or interview method; implementers may represent those details separately when needed (e.g., additional Observations, extensions, or provenance). 
 
 **Usages:**
 
@@ -41,7 +46,7 @@ Other representations of profile: [CSV](StructureDefinition-functional-score-obs
   "name" : "FunctionalScoreObservationProfile",
   "title" : "Stroke Functional Score Observation Profile (R5, Timing Ext)",
   "status" : "draft",
-  "date" : "2026-02-18T13:35:35+00:00",
+  "date" : "2026-02-18T14:43:59+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -54,7 +59,7 @@ Other representations of profile: [CSV](StructureDefinition-functional-score-obs
       ]
     }
   ],
-  "description" : "Profile for recording functional scores (mRS, NIHSS), using an extension for timing context.",
+  "description" : "Profile for recording stroke functional outcome and severity scores, currently mRS and NIHSS, in a way that is both interoperable and context-aware. The profile requires a timing context extension (ObservationTimingContextExtension) to explicitly state the clinical phase (e.g., pre-stroke baseline, admission, discharge, ~3-month follow-up), enabling unambiguous interpretation and standardized reporting.\n\nObservation.code is bound to FunctionalScoreCodesVS, and invariants constrain Observation.value[x] by instrument:\n- For mRS (SNOMED CT observable entity), the result is represented as a CodeableConcept bound to MRsScoreVS (ordinal categories 0–6).\n- For NIHSS (SNOMED CT observable entity), the result is represented as an integer total score (valueInteger), reflecting the overall NIHSS total rather than item-level subscores.\n\nThe profile does not model itemized NIHSS components, assessor training, or interview method; implementers may represent those details separately when needed (e.g., additional Observations, extensions, or provenance).",
   "fhirVersion" : "5.0.0",
   "mapping" : [
     {

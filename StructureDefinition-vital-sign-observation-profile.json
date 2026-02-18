@@ -10,7 +10,7 @@
   "name" : "VitalSignObservationProfile",
   "title" : "Stroke Vital Sign Observation Profile (R5)",
   "status" : "draft",
-  "date" : "2026-02-18T13:35:35+00:00",
+  "date" : "2026-02-18T14:43:59+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",
@@ -19,7 +19,7 @@
       "value" : "http://tecnomod-um.org"
     }]
   }],
-  "description" : "Profile for recording key vital signs (Systolic/Diastolic BP) in stroke patients.",
+  "description" : "Profile for recording key blood pressure vital signs in stroke patients using a single Observation with components. The Observation is categorized as vital-signs and uses component slices for systolic and diastolic blood pressure, each represented as a Quantity in UCUM mm[Hg].\n\nThis profile supports repeated measurements over time by recording separate Observations at different effective[x] timestamps (e.g., arrival, post-thrombolysis monitoring, ICU). It intentionally does not model measurement conditions such as body position, cuff site, or device; such details may be captured via Observation.method, device references, or additional extensions if required by local workflows.",
   "fhirVersion" : "5.0.0",
   "mapping" : [{
     "identity" : "workflow",

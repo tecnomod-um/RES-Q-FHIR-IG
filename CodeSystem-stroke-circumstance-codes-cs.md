@@ -12,7 +12,8 @@
 | Active as of 2026-02-18 | *Computable Name*:StrokeCircumstanceCodesCS |
 
  
-Codes for findings related to the circumstances of stroke onset (In-hospital, Wake-up). 
+This CodeSystem defines coded circumstances related to stroke symptom onset that are clinically relevant for eligibility decisions, diagnostic reasoning, and reporting—particularly when the exact onset time is unknown or atypical. 
+These codes are intended to be used as Observation.code in the StrokeCircumstanceObservationProfile to assert that a given onset circumstance applies to the index stroke event. They do not encode the precise onset timestamp, last-known-well time, or location of onset; those details should be represented separately (e.g., dedicated Observations, Encounter/Condition attributes, or extensions). 
 
  This Code system is referenced in the content logical definition of the following value sets: 
 
@@ -31,7 +32,7 @@ Codes for findings related to the circumstances of stroke onset (In-hospital, Wa
   "name" : "StrokeCircumstanceCodesCS",
   "title" : "Stroke Circumstance Codes CodeSystem",
   "status" : "active",
-  "date" : "2026-02-18T13:35:35+00:00",
+  "date" : "2026-02-18T14:43:59+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -44,19 +45,19 @@ Codes for findings related to the circumstances of stroke onset (In-hospital, Wa
       ]
     }
   ],
-  "description" : "Codes for findings related to the circumstances of stroke onset (In-hospital, Wake-up).",
+  "description" : "This CodeSystem defines coded circumstances related to stroke symptom onset that are clinically relevant for eligibility decisions, diagnostic reasoning, and reporting—particularly when the exact onset time is unknown or atypical.\n\nThese codes are intended to be used as Observation.code in the StrokeCircumstanceObservationProfile to assert that a given onset circumstance applies to the index stroke event. They do not encode the precise onset timestamp, last-known-well time, or location of onset; those details should be represented separately (e.g., dedicated Observations, Encounter/Condition attributes, or extensions).",
   "content" : "complete",
   "count" : 2,
   "concept" : [
     {
       "code" : "in-hospital",
       "display" : "In-hospital Stroke",
-      "definition" : "Indicates that the stroke occurred while the patient was already admitted to the hospital for another reason."
+      "definition" : "Indicates that stroke onset occurred while the patient was already admitted to the hospital for another reason (inpatient onset)."
     },
     {
       "code" : "wake-up",
       "display" : "Wake-up Stroke",
-      "definition" : "Indicates that the stroke symptoms were first noticed upon waking from sleep, with an unknown time of onset."
+      "definition" : "Indicates that stroke symptoms were first recognized on awakening from sleep, implying an unknown onset time within the sleep interval (time last known well precedes symptom recognition)."
     }
   ]
 }

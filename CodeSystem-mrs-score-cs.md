@@ -12,7 +12,12 @@
 | Active as of 2026-02-18 | *Computable Name*:MRsScoreCS |
 
  
-Codes representing the modified Rankin Scale (mRS) score for functional outcome. 
+This CodeSystem defines codes for the modified Rankin Scale (mRS), an ordinal measure of global disability and functional outcome widely used in stroke care and research. mRS grades functional status from 0 (no symptoms) through 5 (severe disability), with 6 indicating death. 
+Within this implementation guide, mRS is intended to be captured as Observation.valueCodeableConcept (bound to the MRsScoreVS ValueSet), with the assessment timepoint represented explicitly (e.g., via effective[x]) and/or via an assessment context indicator (e.g., pre-stroke baseline, discharge, ~90-day follow-up). This supports standard reporting (e.g., “mRS at 90 days”), comparability across sites, and consistent downstream analytics. 
+Scope and modeling notes: 
+* mRS is a coarse, global disability scale; it does not encode detailed domain-specific functional limitations (mobility, cognition, ADLs) which should be captured via additional instruments/Observations if required.
+* The CodeSystem defines only the **score**; method of ascertainment (in-person, telephone, structured interview) and assessor details should be captured separately when relevant.
+ 
 
  This Code system is referenced in the content logical definition of the following value sets: 
 
@@ -32,7 +37,7 @@ Codes representing the modified Rankin Scale (mRS) score for functional outcome.
   "title" : "modified Rankin Scale (mRS) Score Code System",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-18T13:35:35+00:00",
+  "date" : "2026-02-18T14:43:59+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -45,7 +50,7 @@ Codes representing the modified Rankin Scale (mRS) score for functional outcome.
       ]
     }
   ],
-  "description" : "Codes representing the modified Rankin Scale (mRS) score for functional outcome.",
+  "description" : "This CodeSystem defines codes for the modified Rankin Scale (mRS), an ordinal measure of global disability and functional outcome widely used in stroke care and research. mRS grades functional status from 0 (no symptoms) through 5 (severe disability), with 6 indicating death.\n\nWithin this implementation guide, mRS is intended to be captured as Observation.valueCodeableConcept (bound to the MRsScoreVS ValueSet), with the assessment timepoint represented explicitly (e.g., via effective[x]) and/or via an assessment context indicator (e.g., pre-stroke baseline, discharge, ~90-day follow-up). This supports standard reporting (e.g., “mRS at 90 days”), comparability across sites, and consistent downstream analytics.\n\nScope and modeling notes:\n- mRS is a coarse, global disability scale; it does not encode detailed domain-specific functional limitations (mobility, cognition, ADLs) which should be captured via additional instruments/Observations if required.\n- The CodeSystem defines only the *score*; method of ascertainment (in-person, telephone, structured interview) and assessor details should be captured separately when relevant.",
   "caseSensitive" : false,
   "content" : "complete",
   "count" : 7,

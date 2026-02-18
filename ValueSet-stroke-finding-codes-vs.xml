@@ -10,7 +10,7 @@
   <name value="StrokeFindingCodesVS"/>
   <title value="Specific Stroke Finding Codes ValueSet"/>
   <status value="active"/>
-  <date value="2026-02-18T13:35:35+00:00"/>
+  <date value="2026-02-18T14:43:59+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>
@@ -19,7 +19,7 @@
       <value value="http://tecnomod-um.org"/>
     </telecom>
   </contact>
-  <description value="ValueSet for specific coded findings like Afib/Flutter status or mTICI score."/>
+  <description value="This ValueSet aggregates a small set of coded “finding/assessment concepts” used by the SpecificFindingObservationProfile for stroke-related documentation. It currently includes:&#xA;- specific disorder concepts relevant to stroke workup (from SpecificFindingCodesVS), and&#xA;- the mTICI assessment concept code (from MTICICodeVS).&#xA;&#xA;Implementer note: This ValueSet is used to constrain Observation.code. Where Observation.code is a disorder concept (e.g., AF disorder), the Observation instance should be interpreted as capturing an *assessment about that finding* (with the assessment result carried in Observation.valueCodeableConcept, per profile constraints). Where Observation.code is an assessment concept (e.g., mTICI), the Observation.valueCodeableConcept carries the corresponding score/result."/>
   <compose>
     <include>
       <valueSet value="http://tecnomod-um.org/ValueSet/specific-finding-codes-vs"/>

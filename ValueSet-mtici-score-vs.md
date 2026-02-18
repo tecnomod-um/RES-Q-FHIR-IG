@@ -12,7 +12,13 @@
 | Draft as of 2025-03-31 | *Computable Name*:MTICIScoreValueSet |
 
  
-ValueSet containing the codes to represent the MTICI score used to assess the degree of reperfusion after a thrombectomy procedure. 
+This ValueSet enumerates all allowable mTICI reperfusion grades (0, 1, 2a, 2b, 2c, 3) from the MticiScoreCS CodeSystem. It is intended to be bound (typically as required) to Observation.valueCodeableConcept when recording the final angiographic reperfusion outcome after endovascular therapy for acute ischemic stroke. 
+Using a dedicated ValueSet ensures: 
+* consistent coding across implementations and sites,
+* reliable downstream interpretation for analytics/registry submission, and
+* clear separation between the **assessment concept** (e.g., “mTICI reperfusion grade”) and the **assessment result** (the specific grade).
+ 
+This ValueSet does not convey timing, vessel location, modality, or technique; those must be represented elsewhere in the clinical model. 
 
  **References** 
 
@@ -64,7 +70,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
       ]
     }
   ],
-  "description" : "ValueSet containing the codes to represent the MTICI score used to assess the degree of reperfusion after a thrombectomy procedure.",
+  "description" : "This ValueSet enumerates all allowable mTICI reperfusion grades (0, 1, 2a, 2b, 2c, 3) from the MticiScoreCS CodeSystem. It is intended to be bound (typically as required) to Observation.valueCodeableConcept when recording the final angiographic reperfusion outcome after endovascular therapy for acute ischemic stroke.\n\nUsing a dedicated ValueSet ensures:\n- consistent coding across implementations and sites,\n- reliable downstream interpretation for analytics/registry submission, and\n- clear separation between the *assessment concept* (e.g., “mTICI reperfusion grade”) and the *assessment result* (the specific grade).\n\nThis ValueSet does not convey timing, vessel location, modality, or technique; those must be represented elsewhere in the clinical model.",
   "compose" : {
     "include" : [
       {

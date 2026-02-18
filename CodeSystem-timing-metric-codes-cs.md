@@ -12,7 +12,9 @@
 | Active as of 2026-02-18 | *Computable Name*:TimingMetricCodesCS |
 
  
-Codes for key process timing metrics in acute stroke care (D2N, D2G). 
+This CodeSystem defines codes for key time-interval process metrics in acute stroke care used for quality monitoring and pathway optimization. Each code represents a duration measured in minutes between two clinically meaningful events (e.g., hospital arrival to thrombolysis start). 
+These metrics are commonly used in performance dashboards, registry submissions, and quality improvement programs. The intent is to store the **measured interval** (a duration) in Observation.valueQuantity (UCUM minutes), while event timestamps (arrival time, needle time, groin puncture time) may be stored separately when available. 
+Implementation note: Exact operational definitions can vary by institution (e.g., “needle time” as alteplase bolus vs infusion start; “door time” as ED arrival vs triage time). Implementers should align local measurement definitions and document them (e.g., in metadata, profiles, or implementation guidance) to ensure comparability across sites. 
 
  This Code system is referenced in the content logical definition of the following value sets: 
 
@@ -31,7 +33,7 @@ Codes for key process timing metrics in acute stroke care (D2N, D2G).
   "name" : "TimingMetricCodesCS",
   "title" : "Stroke Timing Metric Codes ValueSet",
   "status" : "active",
-  "date" : "2026-02-18T13:35:35+00:00",
+  "date" : "2026-02-18T14:43:59+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -44,19 +46,19 @@ Codes for key process timing metrics in acute stroke care (D2N, D2G).
       ]
     }
   ],
-  "description" : "Codes for key process timing metrics in acute stroke care (D2N, D2G).",
+  "description" : "This CodeSystem defines codes for key time-interval process metrics in acute stroke care used for quality monitoring and pathway optimization. Each code represents a duration measured in minutes between two clinically meaningful events (e.g., hospital arrival to thrombolysis start).\n\nThese metrics are commonly used in performance dashboards, registry submissions, and quality improvement programs. The intent is to store the *measured interval* (a duration) in Observation.valueQuantity (UCUM minutes), while event timestamps (arrival time, needle time, groin puncture time) may be stored separately when available.\n\nImplementation note: Exact operational definitions can vary by institution (e.g., “needle time” as alteplase bolus vs infusion start; “door time” as ED arrival vs triage time). Implementers should align local measurement definitions and document them (e.g., in metadata, profiles, or implementation guidance) to ensure comparability across sites.",
   "content" : "complete",
   "count" : 2,
   "concept" : [
     {
       "code" : "D2G",
       "display" : "Door to Groin",
-      "definition" : "Time (in minutes) from hospital arrival to the groin puncture for mechanical thrombectomy"
+      "definition" : "Elapsed time (minutes) from documented hospital arrival (‘door’) to arterial groin puncture for mechanical thrombectomy (first puncture attempt)."
     },
     {
       "code" : "D2N",
       "display" : "Door to Needle",
-      "definition" : "Time (in minutes) from the patient’s arrival at the hospital to the start of intravenous thrombolysis"
+      "definition" : "Elapsed time (minutes) from documented hospital arrival (‘door’) to initiation of intravenous thrombolysis (commonly alteplase/tenecteplase administration start, per local definition)."
     }
   ]
 }

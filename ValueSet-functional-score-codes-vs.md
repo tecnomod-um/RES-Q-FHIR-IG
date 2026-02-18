@@ -12,7 +12,11 @@
 | Active as of 2026-02-18 | *Computable Name*:FunctionalScoreCodesVS |
 
  
-Codes for key functional scores used in stroke (mRS, NIHSS). 
+This ValueSet defines the allowable Observation.code concepts for stroke functional and severity scoring instruments represented in this guide: modified Rankin Scale (mRS) and NIH Stroke Scale (NIHSS), expressed as SNOMED CT observable entities. 
+It is intended to be bound to Observation.code in the FunctionalScoreObservationProfile. Downstream validation/invariants then enforce the appropriate datatype of Observation.value[x]: 
+* mRS is captured as a coded ordinal category (valueCodeableConcept bound to MRsScoreVS).
+* NIHSS is captured as a numeric total score (valueInteger), representing the summed NIHSS total rather than item-level subscores.
+ 
 
  **References** 
 
@@ -50,7 +54,7 @@ Codes for key functional scores used in stroke (mRS, NIHSS).
   "name" : "FunctionalScoreCodesVS",
   "title" : "Stroke Functional Score Codes ValueSet",
   "status" : "active",
-  "date" : "2026-02-18T13:35:35+00:00",
+  "date" : "2026-02-18T14:43:59+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -63,7 +67,7 @@ Codes for key functional scores used in stroke (mRS, NIHSS).
       ]
     }
   ],
-  "description" : "Codes for key functional scores used in stroke (mRS, NIHSS).",
+  "description" : "This ValueSet defines the allowable Observation.code concepts for stroke functional and severity scoring instruments represented in this guide: modified Rankin Scale (mRS) and NIH Stroke Scale (NIHSS), expressed as SNOMED CT observable entities.\n\nIt is intended to be bound to Observation.code in the FunctionalScoreObservationProfile. Downstream validation/invariants then enforce the appropriate datatype of Observation.value[x]:\n- mRS is captured as a coded ordinal category (valueCodeableConcept bound to MRsScoreVS).\n- NIHSS is captured as a numeric total score (valueInteger), representing the summed NIHSS total rather than item-level subscores.",
   "compose" : {
     "include" : [
       {

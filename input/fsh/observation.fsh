@@ -64,6 +64,7 @@ Id: afib-flutter-status-vs
 * ^title = "Atrial Fibrillation or Flutter Status ValueSet"
 * ^description = "ValueSet defining the allowed coded outcomes for documenting the status of an Atrial Fibrillation (AF) or Atrial Flutter assessment. It is intentionally restricted to SNOMED CT qualifier values to express: (1) known present, (2) known absent, or (3) unknown. The ValueSet supports harmonized recording across systems, improves comparability for clinical decision support and research, and enables consistent reporting in contexts where AF/flutter materially influences thromboembolic risk and subsequent management."
 * ^status = #active
+* ^date = "2025-03-31"
 * ^publisher = "Tecnomod"
 * ^contact[0].name = "Tecnomod"
 * ^contact[0].telecom[0].system = #email
@@ -79,15 +80,17 @@ Id: mtici-score-cs
 * ^url = MticiScoreCS_URL
 * ^version = "1.0.0"
 * ^title = "MTICI Score Code System"
-* ^description = "CodeSystem containing the codes to represent the MTICI score."
-* ^status = #draft
+* ^description = "This CodeSystem defines the codes for the modified Treatment in Cerebral Ischemia / modified Thrombolysis in Cerebral Infarction (mTICI) reperfusion score, an ordinal angiographic scale used to grade the extent of downstream tissue reperfusion after endovascular therapy (e.g., mechanical thrombectomy) in acute ischemic stroke. The scale ranges from 0 (no perfusion) to 3 (complete reperfusion) and includes the 2a/2b/2c subgrades to differentiate partial, substantial, and near-complete reperfusion.
+These codes are intended for consistent, structured capture in HL7® FHIR® resources such as Observation (valueCodeableConcept), Procedure reports, registries, and research datasets. The CodeSystem represents only the final reperfusion grade for the target downstream territory assessed on post-procedural angiography (commonly DSA). It does not encode vessel location, imaging modality details, timing, technique/device used, or adjudication method; those aspects should be modeled separately. Any local definition of “successful reperfusion” (often mTICI ≥ 2b, depending on protocol) should be implemented via ValueSets, decision support logic, or reporting rules rather than by altering the meaning of the underlying codes."
+* ^purpose = "To support interoperable, unambiguous representation of mTICI reperfusion grades in stroke endovascular therapy documentation, registries, and research datasets."* ^status = #draft
 * ^experimental = true
 * ^caseSensitive = false  
 * ^date = "2025-03-31"
-* ^publisher = "Example Organization"
-* ^contact[0].name = "Example Organization"
+* ^publisher = "Tecnomod"
+* ^contact[0].name = "Tecnomod"
 * ^contact[0].telecom[0].system = #email
-* ^contact[0].telecom[0].value = "info@example.org"
+* ^contact[0].telecom[0].value = "alvaro.riquelmet@um.es"
+* ^contact[0].telecom[1].value = "cmartinezcosta@um.es"
 * #0 "Grade 0: No perfusion"
 * #1 "Grade 1: Antegrade reperfusion past the initial occlusion, but limited distal branch filling with little or slow distal reperfusion"
 * #2a "Grade 2a: Antegrade reperfusion of less than half of the occluded target artery previously ischemic territory"

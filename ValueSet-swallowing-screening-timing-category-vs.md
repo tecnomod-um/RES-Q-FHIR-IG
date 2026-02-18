@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/swallowing-screening-timing-category-vs | *Version*:0.1.0 |
-| Active as of 2026-02-17 | *Computable Name*:SwallowingScreeningTimingCategoryVS |
+| Active as of 2026-02-18 | *Computable Name*:SwallowingScreeningTimingCategoryVS |
 
  
 Temporal categories relative to stroke onset for swallowing screening. 
@@ -50,7 +50,7 @@ Temporal categories relative to stroke onset for swallowing screening.
   "name" : "SwallowingScreeningTimingCategoryVS",
   "title" : "Swallowing Screening Timing Category ValueSet",
   "status" : "active",
-  "date" : "2026-02-17T12:24:33+00:00",
+  "date" : "2026-02-18T13:09:07+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

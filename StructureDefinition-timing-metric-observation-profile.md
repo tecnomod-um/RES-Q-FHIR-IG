@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/timing-metric-observation-profile | *Version*:0.1.0 |
-| Draft as of 2026-02-17 | *Computable Name*:TimingMetricObservationProfile |
+| Draft as of 2026-02-18 | *Computable Name*:TimingMetricObservationProfile |
 
  
 Profile for recording key process timing metrics (D2N, D2G). 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-timing-metric-observ
   "name" : "TimingMetricObservationProfile",
   "title" : "Stroke Timing Metric Observation Profile (R5)",
   "status" : "draft",
-  "date" : "2026-02-17T12:24:33+00:00",
+  "date" : "2026-02-18T13:09:07+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

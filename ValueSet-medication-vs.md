@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/medication-vs | *Version*:0.1.0 |
-| Draft as of 2026-02-17 | *Computable Name*:MedicationVS |
+| Draft as of 2026-02-18 | *Computable Name*:MedicationVS |
 
  
 SNOMED CT codes for drug products or substances. 
@@ -51,7 +51,7 @@ SNOMED CT codes for drug products or substances.
   "name" : "MedicationVS",
   "title" : "Medications ValueSet",
   "status" : "draft",
-  "date" : "2026-02-17T12:24:33+00:00",
+  "date" : "2026-02-18T13:09:07+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

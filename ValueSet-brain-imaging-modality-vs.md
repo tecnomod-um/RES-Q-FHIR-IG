@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/brain-imaging-modality-vs | *Version*:0.1.0 |
-| Active as of 2026-02-17 | *Computable Name*:BrainImagingModalityVS |
+| Active as of 2026-02-18 | *Computable Name*:BrainImagingModalityVS |
 
  
 Defines the SNOMED CT codes for individual brain imaging modalities performed as procedures. 
@@ -50,7 +50,7 @@ Defines the SNOMED CT codes for individual brain imaging modalities performed as
   "name" : "BrainImagingModalityVS",
   "title" : "Brain Imaging Modality ValueSet",
   "status" : "active",
-  "date" : "2026-02-17T12:24:33+00:00",
+  "date" : "2026-02-18T13:09:07+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

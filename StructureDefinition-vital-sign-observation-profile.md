@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/vital-sign-observation-profile | *Version*:0.1.0 |
-| Draft as of 2026-02-17 | *Computable Name*:VitalSignObservationProfile |
+| Draft as of 2026-02-18 | *Computable Name*:VitalSignObservationProfile |
 
  
 Profile for recording key vital signs (Systolic/Diastolic BP) in stroke patients. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-vital-sign-observati
   "name" : "VitalSignObservationProfile",
   "title" : "Stroke Vital Sign Observation Profile (R5)",
   "status" : "draft",
-  "date" : "2026-02-17T12:24:33+00:00",
+  "date" : "2026-02-18T13:09:07+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

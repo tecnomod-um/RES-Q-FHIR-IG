@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs | *Version*:0.1.0 |
-| Active as of 2026-02-17 | *Computable Name*:StrokeCircumstanceCodesCS |
+| Active as of 2026-02-18 | *Computable Name*:StrokeCircumstanceCodesCS |
 
  
 Codes for findings related to the circumstances of stroke onset (In-hospital, Wake-up). 
@@ -31,7 +31,7 @@ Codes for findings related to the circumstances of stroke onset (In-hospital, Wa
   "name" : "StrokeCircumstanceCodesCS",
   "title" : "Stroke Circumstance Codes CodeSystem",
   "status" : "active",
-  "date" : "2026-02-17T12:24:33+00:00",
+  "date" : "2026-02-18T13:09:07+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

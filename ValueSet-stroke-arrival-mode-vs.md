@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/stroke-arrival-mode-vs | *Version*:0.1.0 |
-| Active as of 2026-02-17 | *Computable Name*:StrokeArrivalModeVS |
+| Active as of 2026-02-18 | *Computable Name*:StrokeArrivalModeVS |
 
  
 ValueSet specifying the mode and origin of the patient's arrival. 
@@ -50,7 +50,7 @@ ValueSet specifying the mode and origin of the patient's arrival.
   "name" : "StrokeArrivalModeVS",
   "title" : "Stroke Arrival Mode ValueSet",
   "status" : "active",
-  "date" : "2026-02-17T12:24:33+00:00",
+  "date" : "2026-02-18T13:09:07+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

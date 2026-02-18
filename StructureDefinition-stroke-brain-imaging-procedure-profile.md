@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/stroke-brain-imaging-procedure-profile | *Version*:0.1.0 |
-| Active as of 2026-02-17 | *Computable Name*:StrokeBrainImagingProcedureProfile |
+| Active as of 2026-02-18 | *Computable Name*:StrokeBrainImagingProcedureProfile |
 
  
 Procedure profile to record key stroke procedures, including status, timing, complications, reasons, and context. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-stroke-brain-imaging
   "name" : "StrokeBrainImagingProcedureProfile",
   "title" : "Stroke Brain Imaging Procedure Profile (R5)",
   "status" : "active",
-  "date" : "2026-02-17T12:24:33+00:00",
+  "date" : "2026-02-18T13:09:07+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

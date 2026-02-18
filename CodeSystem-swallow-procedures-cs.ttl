@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "SwallowProceduresCS"] ; # 
   fhir:title [ fhir:v "Swallow Procedures Code System"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-02-17T12:24:33+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-18T13:09:07+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;

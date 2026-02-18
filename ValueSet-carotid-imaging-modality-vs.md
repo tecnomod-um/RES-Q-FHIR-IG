@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/carotid-imaging-modality-vs | *Version*:0.1.0 |
-| Active as of 2026-02-17 | *Computable Name*:CarotidImagingModalityVS |
+| Active as of 2026-02-18 | *Computable Name*:CarotidImagingModalityVS |
 
  
 Defines codes for different types of carotid artery imaging. 
@@ -50,7 +50,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "name" : "CarotidImagingModalityVS",
   "title" : "Carotid Arteries Imaging Modality ValueSet",
   "status" : "active",
-  "date" : "2026-02-17T12:24:33+00:00",
+  "date" : "2026-02-18T13:09:07+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

@@ -6,7 +6,7 @@
 
 ## Example Observation: VitalSignObservationExample
 
-Profile: [Stroke Vital Sign Observation Profile (R5)](StructureDefinition-vital-sign-observation-profile.md)
+Profile: [Stroke Vital Sign Observation Profile](StructureDefinition-vital-sign-observation-profile.md)
 
 **status**: Final
 

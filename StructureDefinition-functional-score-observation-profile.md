@@ -1,10 +1,10 @@
-# Stroke Functional Score Observation Profile (R5, Timing Ext) - v0.1.0
+# Stroke Functional Score Observation Profile - v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **Stroke Functional Score Observation Profile (R5, Timing Ext)**
+* **Stroke Functional Score Observation Profile**
 
-## Resource Profile: Stroke Functional Score Observation Profile (R5, Timing Ext) 
+## Resource Profile: Stroke Functional Score Observation Profile 
 
 | | |
 | :--- | :--- |
@@ -44,9 +44,9 @@ Other representations of profile: [CSV](StructureDefinition-functional-score-obs
   "url" : "http://tecnomod-um.org/StructureDefinition/functional-score-observation-profile",
   "version" : "0.1.0",
   "name" : "FunctionalScoreObservationProfile",
-  "title" : "Stroke Functional Score Observation Profile (R5, Timing Ext)",
+  "title" : "Stroke Functional Score Observation Profile",
   "status" : "draft",
-  "date" : "2026-02-19T09:19:55+00:00",
+  "date" : "2026-02-19T09:59:51+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

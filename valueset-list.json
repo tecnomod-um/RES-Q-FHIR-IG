@@ -124,7 +124,7 @@
       "version" : "0.1.0",
       "status" : "active",
       "name" : "MTICICodeVS",
-      "title" : "mTICI Score Codes ValueSet",
+      "title" : "Modified Thrombolysis in Cerebral Infarction Assessment ValueSet",
       "description" : "This ValueSet includes the mTICI assessment concept code(s) from MTICICodeCS for use as Observation.code when recording an mTICI reperfusion grade. It is intended to be paired with a binding of Observation.valueCodeableConcept to MticiScoreVS.\n\nSeparating the “assessment concept” ValueSet (this ValueSet) from the “assessment result” ValueSet (MticiScoreVS) enables clearer validation rules, consistent UI behavior, and safer reuse of the mTICI scoring system across profiles.",
       "systems" : ["http://tecnomod-um.org/CodeSystem/mtici-code-cs"]
     },

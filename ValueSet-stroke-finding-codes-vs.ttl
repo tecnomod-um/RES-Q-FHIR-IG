@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "stroke-finding-codes-vs"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet stroke-finding-codes-vs</b></p><a name=\"stroke-finding-codes-vs\"> </a><a name=\"hcstroke-finding-codes-vs\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in <a href=\"ValueSet-specific-finding-codes-vs.html\">Specific Stroke Finding Codes ValueSet</a></li><li>Import all the codes that are contained in <a href=\"ValueSet-mtici-code-vs.html\">mTICI Score Codes ValueSet</a></li></ul></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet stroke-finding-codes-vs</b></p><a name=\"stroke-finding-codes-vs\"> </a><a name=\"hcstroke-finding-codes-vs\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in <a href=\"ValueSet-specific-finding-codes-vs.html\">Specific Stroke Finding Codes ValueSet</a></li><li>Import all the codes that are contained in <a href=\"ValueSet-mtici-code-vs.html\">Modified Thrombolysis in Cerebral Infarction Assessment ValueSet</a></li></ul></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:url [
      fhir:v "http://tecnomod-um.org/ValueSet/stroke-finding-codes-vs"^^xsd:anyURI ;
@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "StrokeFindingCodesVS"] ; # 
   fhir:title [ fhir:v "Specific Stroke Finding Codes ValueSet"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-02-19T09:19:55+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-19T09:59:51+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;

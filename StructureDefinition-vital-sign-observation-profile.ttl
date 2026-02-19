@@ -20,9 +20,9 @@
   ] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "VitalSignObservationProfile"] ; # 
-  fhir:title [ fhir:v "Stroke Vital Sign Observation Profile (R5)"] ; # 
+  fhir:title [ fhir:v "Stroke Vital Sign Observation Profile"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-02-19T09:19:55+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-19T09:59:51+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;

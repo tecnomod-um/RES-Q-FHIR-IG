@@ -55,7 +55,7 @@ Other representations of profile: [CSV](StructureDefinition-procedure-timing-con
   "name" : "ProcedureTimingContextExtension",
   "title" : "Procedure Timing Context Extension",
   "status" : "draft",
-  "date" : "2026-02-19T09:19:55+00:00",
+  "date" : "2026-02-19T09:59:51+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

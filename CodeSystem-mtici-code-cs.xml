@@ -8,10 +8,10 @@
   <url value="http://tecnomod-um.org/CodeSystem/mtici-code-cs"/>
   <version value="0.1.0"/>
   <name value="MTICICodeCS"/>
-  <title value="mTICI Score Codes CodeSystem"/>
+  <title value="Modified Thrombolysis in Cerebral Infarction Assessment CodeSystem"/>
   <status value="active"/>
   <experimental value="true"/>
-  <date value="2026-02-19T09:19:55+00:00"/>
+  <date value="2026-02-19T09:59:51+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>

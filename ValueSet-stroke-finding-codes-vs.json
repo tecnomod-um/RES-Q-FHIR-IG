@@ -3,14 +3,14 @@
   "id" : "stroke-finding-codes-vs",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet stroke-finding-codes-vs</b></p><a name=\"stroke-finding-codes-vs\"> </a><a name=\"hcstroke-finding-codes-vs\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in <a href=\"ValueSet-specific-finding-codes-vs.html\">Specific Stroke Finding Codes ValueSet</a></li><li>Import all the codes that are contained in <a href=\"ValueSet-mtici-code-vs.html\">mTICI Score Codes ValueSet</a></li></ul></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet stroke-finding-codes-vs</b></p><a name=\"stroke-finding-codes-vs\"> </a><a name=\"hcstroke-finding-codes-vs\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in <a href=\"ValueSet-specific-finding-codes-vs.html\">Specific Stroke Finding Codes ValueSet</a></li><li>Import all the codes that are contained in <a href=\"ValueSet-mtici-code-vs.html\">Modified Thrombolysis in Cerebral Infarction Assessment ValueSet</a></li></ul></div>"
   },
   "url" : "http://tecnomod-um.org/ValueSet/stroke-finding-codes-vs",
   "version" : "0.1.0",
   "name" : "StrokeFindingCodesVS",
   "title" : "Specific Stroke Finding Codes ValueSet",
   "status" : "active",
-  "date" : "2026-02-19T09:19:55+00:00",
+  "date" : "2026-02-19T09:59:51+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

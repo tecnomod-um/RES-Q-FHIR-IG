@@ -25,7 +25,7 @@
 * [Initial Care Intensity Code System](CodeSystem-initial-care-intensity-cs.md)
 * [Medications CodeSystem](CodeSystem-medication-cs.md)
 * [Modified Rankin Scale Score Code System](CodeSystem-mrs-score-cs.md)
-* [mTICI Score Codes CodeSystem](CodeSystem-mtici-code-cs.md)
+* [Modified Thrombolysis in Cerebral Infarction Assessment CodeSystem](CodeSystem-mtici-code-cs.md)
 * [MTICI Score Code System](CodeSystem-mtici-score-cs.md)
 * [Procedure Timing Context Code System](CodeSystem-procedure-timing-context-cs.md)
 * [Initial Care Intensity Code System](CodeSystem-stroke-arrival-mode-cs.md)
@@ -36,7 +36,7 @@
 * [Swallow Procedures Code System](CodeSystem-swallow-procedures-cs.md)
 * [Swallowing Screening Timing Category Code System](CodeSystem-swallow-screen-time-cs.md)
 * [Thrombectomy Complication Code System](CodeSystem-thrombectomy-complication-cs.md)
-* [Stroke Timing Metric Codes ValueSet](CodeSystem-timing-metric-codes-cs.md)
+* [Stroke Timing Metric Codes CodeSystem](CodeSystem-timing-metric-codes-cs.md)
 
 ### ValueSets
 
@@ -52,7 +52,7 @@
 * [Initial Care Intensity ValueSet](ValueSet-initial-care-intensity-vs.md)
 * [Medications ValueSet](ValueSet-medication-vs.md)
 * [Modified Rankin Scale (mRS) Score ValueSet](ValueSet-mrs-score-vs.md)
-* [mTICI Score Codes ValueSet](ValueSet-mtici-code-vs.md)
+* [Modified Thrombolysis in Cerebral Infarction Assessment ValueSet](ValueSet-mtici-code-vs.md)
 * [MTICI Score ValueSet](ValueSet-mtici-score-vs.md)
 * [Perforation Procedures ValueSet](ValueSet-perforation-procedures-vs.md)
 * [Procedure Timing Context ValueSet](ValueSet-procedure-timing-context-vs.md)
@@ -77,7 +77,7 @@
 * [Age at Stroke Onset Observation Profile (R5)](StructureDefinition-age-at-onset-observation-profile.md)
 * [Base Profile for Stroke-Related Observations](StructureDefinition-base-stroke-observation.md)
 * [Discharge Medication Request Profile](StructureDefinition-discharge-medication-request-profile.md)
-* [Stroke Functional Score Observation Profile (R5, Timing Ext)](StructureDefinition-functional-score-observation-profile.md)
+* [Stroke Functional Score Observation Profile](StructureDefinition-functional-score-observation-profile.md)
 * [Patient with SNOMED Gender and Age (extensions)](StructureDefinition-patient-age-gender-snomed-profile.md)
 * [Prior Medication Statement Profile (R5)](StructureDefinition-prior-medication-statement-profile.md)
 * [Specific Stroke Finding Observation Profile (R5)](StructureDefinition-specific-finding-observation-profile.md)
@@ -91,7 +91,7 @@
 * [Stroke Risk Factor Condition Profile](StructureDefinition-stroke-risk-factor-condition-profile.md)
 * [Stroke Swallow Procedure Profile (R5)](StructureDefinition-stroke-swallow-procedure-profile.md)
 * [Stroke Timing Metric Observation Profile (R5)](StructureDefinition-timing-metric-observation-profile.md)
-* [Stroke Vital Sign Observation Profile (R5)](StructureDefinition-vital-sign-observation-profile.md)
+* [Stroke Vital Sign Observation Profile](StructureDefinition-vital-sign-observation-profile.md)
 
 ### Extensions
 

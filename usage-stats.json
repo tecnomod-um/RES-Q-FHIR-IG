@@ -103,7 +103,7 @@
       },
       {
         "url": "http://tecnomod-um.org/StructureDefinition/vital-sign-observation-profile",
-        "title": "Stroke Vital Sign Observation Profile (R5)"
+        "title": "Stroke Vital Sign Observation Profile"
       }
     ],
     "MedicationRequest": [

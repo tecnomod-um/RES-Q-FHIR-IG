@@ -1,10 +1,10 @@
-# Stroke Timing Metric Codes ValueSet - v0.1.0
+# Stroke Timing Metric Codes CodeSystem - v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **Stroke Timing Metric Codes ValueSet**
+* **Stroke Timing Metric Codes CodeSystem**
 
-## CodeSystem: Stroke Timing Metric Codes ValueSet 
+## CodeSystem: Stroke Timing Metric Codes CodeSystem 
 
 | | |
 | :--- | :--- |
@@ -14,7 +14,6 @@
  
 This CodeSystem defines codes for key time-interval process metrics in acute stroke care used for quality monitoring and pathway optimization. Each code represents a duration measured in minutes between two clinically meaningful events (e.g., hospital arrival to thrombolysis start). 
 These metrics are commonly used in performance dashboards, registry submissions, and quality improvement programs. The intent is to store the **measured interval** (a duration) in Observation.valueQuantity (UCUM minutes), while event timestamps (arrival time, needle time, groin puncture time) may be stored separately when available. 
-Implementation note: Exact operational definitions can vary by institution (e.g., “needle time” as alteplase bolus vs infusion start; “door time” as ED arrival vs triage time). Implementers should align local measurement definitions and document them (e.g., in metadata, profiles, or implementation guidance) to ensure comparability across sites. 
 
  This Code system is referenced in the content logical definition of the following value sets: 
 
@@ -31,9 +30,9 @@ Implementation note: Exact operational definitions can vary by institution (e.g.
   "url" : "http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs",
   "version" : "0.1.0",
   "name" : "TimingMetricCodesCS",
-  "title" : "Stroke Timing Metric Codes ValueSet",
+  "title" : "Stroke Timing Metric Codes CodeSystem",
   "status" : "active",
-  "date" : "2026-02-19T09:19:55+00:00",
+  "date" : "2026-02-19T09:59:51+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -46,7 +45,7 @@ Implementation note: Exact operational definitions can vary by institution (e.g.
       ]
     }
   ],
-  "description" : "This CodeSystem defines codes for key time-interval process metrics in acute stroke care used for quality monitoring and pathway optimization. Each code represents a duration measured in minutes between two clinically meaningful events (e.g., hospital arrival to thrombolysis start).\n\nThese metrics are commonly used in performance dashboards, registry submissions, and quality improvement programs. The intent is to store the *measured interval* (a duration) in Observation.valueQuantity (UCUM minutes), while event timestamps (arrival time, needle time, groin puncture time) may be stored separately when available.\n\nImplementation note: Exact operational definitions can vary by institution (e.g., “needle time” as alteplase bolus vs infusion start; “door time” as ED arrival vs triage time). Implementers should align local measurement definitions and document them (e.g., in metadata, profiles, or implementation guidance) to ensure comparability across sites.",
+  "description" : "This CodeSystem defines codes for key time-interval process metrics in acute stroke care used for quality monitoring and pathway optimization. Each code represents a duration measured in minutes between two clinically meaningful events (e.g., hospital arrival to thrombolysis start).\n\nThese metrics are commonly used in performance dashboards, registry submissions, and quality improvement programs. The intent is to store the *measured interval* (a duration) in Observation.valueQuantity (UCUM minutes), while event timestamps (arrival time, needle time, groin puncture time) may be stored separately when available.",
   "content" : "complete",
   "count" : 2,
   "concept" : [

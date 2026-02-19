@@ -13,9 +13,9 @@
       "uses" : {
       },
       "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile (R5)",
-      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile (R5)",
       "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile (R5)",
-      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile (R5)"
+      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile (R5)",
+      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile (R5)"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/medication-statement-adherence",
@@ -118,7 +118,7 @@
       "systems" : ["http://snomed.info/sct"],
       "uses" : {
       },
-      "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile (R5, Timing Ext)"
+      "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile"
     },
     {
       "url" : "http://tecnomod-um.org/ValueSet/hemorrhagic-stroke-bleeding-reason-vs",
@@ -162,8 +162,8 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-discharge-medication-request-profile.html" : "Discharge Medication Request Profile",
-      "StructureDefinition-prior-medication-statement-profile.html" : "Prior Medication Statement Profile (R5)"
+      "StructureDefinition-prior-medication-statement-profile.html" : "Prior Medication Statement Profile (R5)",
+      "StructureDefinition-discharge-medication-request-profile.html" : "Discharge Medication Request Profile"
     },
     {
       "url" : "http://tecnomod-um.org/ValueSet/mrs-score-vs",
@@ -175,14 +175,14 @@
       "systems" : ["http://tecnomod-um.org/CodeSystem/mrs-score-cs"],
       "uses" : {
       },
-      "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile (R5, Timing Ext)"
+      "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile"
     },
     {
       "url" : "http://tecnomod-um.org/ValueSet/mtici-code-vs",
       "version" : "0.1.0",
       "status" : "active",
       "name" : "MTICICodeVS",
-      "title" : "mTICI Score Codes ValueSet",
+      "title" : "Modified Thrombolysis in Cerebral Infarction Assessment ValueSet",
       "description" : "This ValueSet includes the mTICI assessment concept code(s) from MTICICodeCS for use as Observation.code when recording an mTICI reperfusion grade. It is intended to be paired with a binding of Observation.valueCodeableConcept to MticiScoreVS.\n\nSeparating the “assessment concept” ValueSet (this ValueSet) from the “assessment result” ValueSet (MticiScoreVS) enables clearer validation rules, consistent UI behavior, and safer reuse of the mTICI scoring system across profiles.",
       "systems" : ["http://tecnomod-um.org/CodeSystem/mtici-code-cs"],
       "uses" : {
@@ -332,9 +332,9 @@
       "uses" : {
       },
       "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile (R5)",
-      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile (R5)",
       "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile (R5)",
-      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile (R5)"
+      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile (R5)",
+      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile (R5)"
     },
     {
       "url" : "http://tecnomod-um.org/ValueSet/stroke-risk-factor-vs",
@@ -409,7 +409,7 @@
       "systems" : ["http://snomed.info/sct"],
       "uses" : {
       },
-      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile (R5)"
+      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile"
     },
     {
       "url" : "http://tecnomod-um.org/ValueSet/vs-gender-snomed",

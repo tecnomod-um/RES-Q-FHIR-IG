@@ -1,10 +1,10 @@
-# mTICI Score Codes CodeSystem - v0.1.0
+# Modified Thrombolysis in Cerebral Infarction Assessment CodeSystem - v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **mTICI Score Codes CodeSystem**
+* **Modified Thrombolysis in Cerebral Infarction Assessment CodeSystem**
 
-## CodeSystem: mTICI Score Codes CodeSystem (Experimental) 
+## CodeSystem: Modified Thrombolysis in Cerebral Infarction Assessment CodeSystem (Experimental) 
 
 | | |
 | :--- | :--- |
@@ -34,10 +34,10 @@ This separation improves semantic clarity and supports consistent validation and
   "url" : "http://tecnomod-um.org/CodeSystem/mtici-code-cs",
   "version" : "0.1.0",
   "name" : "MTICICodeCS",
-  "title" : "mTICI Score Codes CodeSystem",
+  "title" : "Modified Thrombolysis in Cerebral Infarction Assessment CodeSystem",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-19T09:19:55+00:00",
+  "date" : "2026-02-19T09:59:51+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

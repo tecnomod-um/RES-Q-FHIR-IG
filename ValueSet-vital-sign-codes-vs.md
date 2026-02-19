@@ -17,7 +17,7 @@ Including only the component codes (rather than full LOINC panels) keeps the rep
 
  **References** 
 
-* [Stroke Vital Sign Observation Profile (R5)](StructureDefinition-vital-sign-observation-profile.md)
+* [Stroke Vital Sign Observation Profile](StructureDefinition-vital-sign-observation-profile.md)
 
 ### Logical Definition (CLD)
 
@@ -52,7 +52,7 @@ Including only the component codes (rather than full LOINC panels) keeps the rep
   "title" : "Stroke Vital Sign Codes ValueSet",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-19T09:19:55+00:00",
+  "date" : "2026-02-19T09:59:51+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

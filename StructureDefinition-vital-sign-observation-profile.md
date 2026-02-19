@@ -1,10 +1,10 @@
-# Stroke Vital Sign Observation Profile (R5) - v0.1.0
+# Stroke Vital Sign Observation Profile - v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **Stroke Vital Sign Observation Profile (R5)**
+* **Stroke Vital Sign Observation Profile**
 
-## Resource Profile: Stroke Vital Sign Observation Profile (R5) 
+## Resource Profile: Stroke Vital Sign Observation Profile 
 
 | | |
 | :--- | :--- |
@@ -40,9 +40,9 @@ Other representations of profile: [CSV](StructureDefinition-vital-sign-observati
   "url" : "http://tecnomod-um.org/StructureDefinition/vital-sign-observation-profile",
   "version" : "0.1.0",
   "name" : "VitalSignObservationProfile",
-  "title" : "Stroke Vital Sign Observation Profile (R5)",
+  "title" : "Stroke Vital Sign Observation Profile",
   "status" : "draft",
-  "date" : "2026-02-19T09:19:55+00:00",
+  "date" : "2026-02-19T09:59:51+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

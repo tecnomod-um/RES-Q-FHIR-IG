@@ -3,14 +3,14 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="stroke-finding-codes-vs"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet stroke-finding-codes-vs</b></p><a name="stroke-finding-codes-vs"> </a><a name="hcstroke-finding-codes-vs"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in <a href="ValueSet-specific-finding-codes-vs.html">Specific Stroke Finding Codes ValueSet</a></li><li>Import all the codes that are contained in <a href="ValueSet-mtici-code-vs.html">mTICI Score Codes ValueSet</a></li></ul></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet stroke-finding-codes-vs</b></p><a name="stroke-finding-codes-vs"> </a><a name="hcstroke-finding-codes-vs"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in <a href="ValueSet-specific-finding-codes-vs.html">Specific Stroke Finding Codes ValueSet</a></li><li>Import all the codes that are contained in <a href="ValueSet-mtici-code-vs.html">Modified Thrombolysis in Cerebral Infarction Assessment ValueSet</a></li></ul></div>
   </text>
   <url value="http://tecnomod-um.org/ValueSet/stroke-finding-codes-vs"/>
   <version value="0.1.0"/>
   <name value="StrokeFindingCodesVS"/>
   <title value="Specific Stroke Finding Codes ValueSet"/>
   <status value="active"/>
-  <date value="2026-02-19T09:19:55+00:00"/>
+  <date value="2026-02-19T09:59:51+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>

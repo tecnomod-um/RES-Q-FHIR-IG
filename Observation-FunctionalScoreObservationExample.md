@@ -6,7 +6,7 @@
 
 ## Example Observation: FunctionalScoreObservationExample
 
-Profile: [Stroke Functional Score Observation Profile (R5, Timing Ext)](StructureDefinition-functional-score-observation-profile.md)
+Profile: [Stroke Functional Score Observation Profile](StructureDefinition-functional-score-observation-profile.md)
 
 **Observation Timing Context Extension**: Pre-stroke
 

@@ -26,7 +26,7 @@ The value is a required CodeableConcept bound to AssessmentContextVS (required),
 
 **Usages:**
 
-* Use this Extension: [Stroke Functional Score Observation Profile (R5, Timing Ext)](StructureDefinition-functional-score-observation-profile.md)
+* Use this Extension: [Stroke Functional Score Observation Profile](StructureDefinition-functional-score-observation-profile.md)
 * Examples for this Extension: [Observation/FunctionalScoreObservationExample](Observation-FunctionalScoreObservationExample.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/RES-Q-FHIR-IG|current/StructureDefinition/observation-timing-context-ext)
@@ -62,7 +62,7 @@ Other representations of profile: [CSV](StructureDefinition-observation-timing-c
   "name" : "ObservationTimingContextExtension",
   "title" : "Observation Timing Context Extension",
   "status" : "draft",
-  "date" : "2026-02-19T09:19:55+00:00",
+  "date" : "2026-02-19T09:59:51+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -97,6 +97,12 @@ Other representations of profile: [CSV](StructureDefinition-observation-timing-c
   "derivation" : "constraint",
   "differential" : {
     "element" : [
+      {
+        "id" : "Extension",
+        "path" : "Extension",
+        "short" : "Observation Timing Context Extension",
+        "definition" : "This extension captures the clinical timing context (relative phase) in which an observation or assessment was made (e.g., pre-stroke baseline, admission, discharge, ~3-month follow-up). It is particularly important for functional outcomes and severity scores whose interpretation depends on *when* they were assessed.\n\nThe extension complements Observation.effective[x]:\n- effective[x] records the actual date/time (when known),\n- this extension records the standardized phase label used for reporting and comparability across sites.\n\nThe value is a required CodeableConcept bound to AssessmentContextVS (required), ensuring only supported timing contexts are used in this implementation guide."
+      },
       {
         "id" : "Extension.extension",
         "path" : "Extension.extension",

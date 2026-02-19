@@ -311,7 +311,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <tr>
             <td style="column-width:30%">
                <a href="StructureDefinition-functional-score-observation-profile.html"
-                  title="StructureDefinition/functional-score-observation-profile">Stroke Functional Score Observation Profile (R5, Timing Ext)</a>
+                  title="StructureDefinition/functional-score-observation-profile">Stroke Functional Score Observation Profile</a>
             </td>
             <td>
 <p>Profile for recording stroke functional outcome and severity scores, currently mRS and NIHSS, in a way that is both interoperable and context-aware. The profile requires a timing context extension (ObservationTimingContextExtension) to explicitly state the clinical phase (e.g., pre-stroke baseline, admission, discharge, ~3-month follow-up), enabling unambiguous interpretation and standardized reporting.</p>
@@ -377,7 +377,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <tr>
             <td style="column-width:30%">
                <a href="StructureDefinition-vital-sign-observation-profile.html"
-                  title="StructureDefinition/vital-sign-observation-profile">Stroke Vital Sign Observation Profile (R5)</a>
+                  title="StructureDefinition/vital-sign-observation-profile">Stroke Vital Sign Observation Profile</a>
             </td>
             <td>
 <p>Profile for recording key blood pressure vital signs in stroke patients using a single Observation with components. The Observation is categorized as vital-signs and uses component slices for systolic and diastolic blood pressure, each represented as a Quantity in UCUM mm[Hg].</p>
@@ -658,6 +658,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="ValueSet-mtici-code-vs.html" title="ValueSet/mtici-code-vs">Modified Thrombolysis in Cerebral Infarction Assessment ValueSet</a>
+            </td>
+            <td>
+<p>This ValueSet includes the mTICI assessment concept code(s) from MTICICodeCS for use as Observation.code when recording an mTICI reperfusion grade. It is intended to be paired with a binding of Observation.valueCodeableConcept to MticiScoreVS.</p>
+
+<p>Separating the “assessment concept” ValueSet (this ValueSet) from the “assessment result” ValueSet (MticiScoreVS) enables clearer validation rules, consistent UI behavior, and safer reuse of the mTICI scoring system across profiles.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="ValueSet-perforation-procedures-vs.html"
                   title="ValueSet/perforation-procedures-vs">Perforation Procedures ValueSet</a>
             </td>
@@ -829,16 +839,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>Defines the specific complications of thrombectomy to record.</p>
 </td>
          </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="ValueSet-mtici-code-vs.html" title="ValueSet/mtici-code-vs">mTICI Score Codes ValueSet</a>
-            </td>
-            <td>
-<p>This ValueSet includes the mTICI assessment concept code(s) from MTICICodeCS for use as Observation.code when recording an mTICI reperfusion grade. It is intended to be paired with a binding of Observation.valueCodeableConcept to MticiScoreVS.</p>
-
-<p>Separating the “assessment concept” ValueSet (this ValueSet) from the “assessment result” ValueSet (MticiScoreVS) enables clearer validation rules, consistent UI behavior, and safer reuse of the mTICI scoring system across profiles.</p>
-</td>
-         </tr>
       </tbody>
    </table>
    <a name="4"> </a>
@@ -856,8 +856,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>This CodeSystem defines normalized codes for the clinical context / relative timepoint at which a stroke-related assessment was performed. It is primarily used to contextualize functional and severity instruments (e.g., mRS and NIHSS) where interpretation depends on whether the score reflects baseline status, acute presentation, discharge status, or follow-up.</p>
 
 <p>These codes represent <em>relative phases</em> (pre-stroke baseline, admission, discharge, ~3-month follow-up) rather than precise timestamps. The actual date/time of measurement should be recorded in Observation.effective[x] when known; the context code complements effective[x] by expressing the clinical phase, which is often necessary for reporting and comparability (e.g., “mRS pre-stroke” vs “mRS at discharge”).</p>
-
-<p>Scope note: This CodeSystem is intentionally small and focused on common stroke pathway milestones; implementers may extend it (with additional codes and governance) if other standardized follow-up timepoints are required (e.g., 6 months, 1 year).</p>
 </td>
          </tr>
          <tr>
@@ -948,6 +946,22 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="CodeSystem-mtici-code-cs.html" title="CodeSystem/mtici-code-cs">Modified Thrombolysis in Cerebral Infarction Assessment CodeSystem</a>
+            </td>
+            <td>
+<p>This CodeSystem defines the assessment concept code(s) used to indicate that an Observation is reporting an mTICI reperfusion grade. It is intentionally separated from the MticiScoreCS CodeSystem, which contains the actual mTICI grade values (0–3 with 2a/2b/2c).</p>
+
+<p>In practice:</p>
+<ul>
+  <li>Observation.code identifies the <em>kind of measurement/assessment</em> (“mTICI reperfusion grade”).</li>
+  <li>Observation.valueCodeableConcept carries the <em>result</em> (one of the mTICI grades from MticiScoreVS).</li>
+</ul>
+
+<p>This separation improves semantic clarity and supports consistent validation and analytics across systems.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="CodeSystem-procedure-timing-context-cs.html"
                   title="CodeSystem/procedure-timing-context-cs">Procedure Timing Context Code System</a>
             </td>
@@ -996,14 +1010,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <tr>
             <td style="column-width:30%">
                <a href="CodeSystem-timing-metric-codes-cs.html"
-                  title="CodeSystem/timing-metric-codes-cs">Stroke Timing Metric Codes ValueSet</a>
+                  title="CodeSystem/timing-metric-codes-cs">Stroke Timing Metric Codes CodeSystem</a>
             </td>
             <td>
 <p>This CodeSystem defines codes for key time-interval process metrics in acute stroke care used for quality monitoring and pathway optimization. Each code represents a duration measured in minutes between two clinically meaningful events (e.g., hospital arrival to thrombolysis start).</p>
 
 <p>These metrics are commonly used in performance dashboards, registry submissions, and quality improvement programs. The intent is to store the <em>measured interval</em> (a duration) in Observation.valueQuantity (UCUM minutes), while event timestamps (arrival time, needle time, groin puncture time) may be stored separately when available.</p>
-
-<p>Implementation note: Exact operational definitions can vary by institution (e.g., “needle time” as alteplase bolus vs infusion start; “door time” as ED arrival vs triage time). Implementers should align local measurement definitions and document them (e.g., in metadata, profiles, or implementation guidance) to ensure comparability across sites.</p>
 </td>
          </tr>
          <tr>
@@ -1031,22 +1043,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>Codes specifying the specific complications of thrombectomy to record.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="CodeSystem-mtici-code-cs.html" title="CodeSystem/mtici-code-cs">mTICI Score Codes CodeSystem</a>
-            </td>
-            <td>
-<p>This CodeSystem defines the assessment concept code(s) used to indicate that an Observation is reporting an mTICI reperfusion grade. It is intentionally separated from the MticiScoreCS CodeSystem, which contains the actual mTICI grade values (0–3 with 2a/2b/2c).</p>
-
-<p>In practice:</p>
-<ul>
-  <li>Observation.code identifies the <em>kind of measurement/assessment</em> (“mTICI reperfusion grade”).</li>
-  <li>Observation.valueCodeableConcept carries the <em>result</em> (one of the mTICI grades from MticiScoreVS).</li>
-</ul>
-
-<p>This separation improves semantic clarity and supports consistent validation and analytics across systems.</p>
 </td>
          </tr>
       </tbody>
@@ -1265,7 +1261,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 09:19+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 09:59+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

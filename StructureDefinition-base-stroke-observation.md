@@ -22,7 +22,7 @@ Key modeling intent:
 
 **Usages:**
 
-* Derived from this Profile: [Age at Stroke Onset Observation Profile (R5)](StructureDefinition-age-at-onset-observation-profile.md), [Stroke Functional Score Observation Profile (R5, Timing Ext)](StructureDefinition-functional-score-observation-profile.md), [Specific Stroke Finding Observation Profile (R5)](StructureDefinition-specific-finding-observation-profile.md), [Stroke Circumstance Observation Profile (R5)](StructureDefinition-stroke-circumstance-observation-profile.md)... Show 2 more, [Stroke Timing Metric Observation Profile (R5)](StructureDefinition-timing-metric-observation-profile.md) and [Stroke Vital Sign Observation Profile (R5)](StructureDefinition-vital-sign-observation-profile.md)
+* Derived from this Profile: [Age at Stroke Onset Observation Profile (R5)](StructureDefinition-age-at-onset-observation-profile.md), [Stroke Functional Score Observation Profile](StructureDefinition-functional-score-observation-profile.md), [Specific Stroke Finding Observation Profile (R5)](StructureDefinition-specific-finding-observation-profile.md), [Stroke Circumstance Observation Profile (R5)](StructureDefinition-stroke-circumstance-observation-profile.md)... Show 2 more, [Stroke Timing Metric Observation Profile (R5)](StructureDefinition-timing-metric-observation-profile.md) and [Stroke Vital Sign Observation Profile](StructureDefinition-vital-sign-observation-profile.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/RES-Q-FHIR-IG|current/StructureDefinition/base-stroke-observation)
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-base-stroke-observat
   "name" : "BaseStrokeObservation",
   "title" : "Base Profile for Stroke-Related Observations",
   "status" : "active",
-  "date" : "2026-02-19T09:19:55+00:00",
+  "date" : "2026-02-19T09:59:51+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

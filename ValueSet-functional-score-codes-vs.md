@@ -20,7 +20,7 @@ It is intended to be bound to Observation.code in the FunctionalScoreObservation
 
  **References** 
 
-* [Stroke Functional Score Observation Profile (R5, Timing Ext)](StructureDefinition-functional-score-observation-profile.md)
+* [Stroke Functional Score Observation Profile](StructureDefinition-functional-score-observation-profile.md)
 
 ### Logical Definition (CLD)
 
@@ -54,7 +54,7 @@ It is intended to be bound to Observation.code in the FunctionalScoreObservation
   "name" : "FunctionalScoreCodesVS",
   "title" : "Stroke Functional Score Codes ValueSet",
   "status" : "active",
-  "date" : "2026-02-19T09:19:55+00:00",
+  "date" : "2026-02-19T09:59:51+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

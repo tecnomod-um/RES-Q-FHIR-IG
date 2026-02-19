@@ -16,7 +16,7 @@ This ValueSet includes all modified Rankin Scale (mRS) grades defined in the MRs
 
  **References** 
 
-* [Stroke Functional Score Observation Profile (R5, Timing Ext)](StructureDefinition-functional-score-observation-profile.md)
+* [Stroke Functional Score Observation Profile](StructureDefinition-functional-score-observation-profile.md)
 
 ### Logical Definition (CLD)
 
@@ -51,7 +51,7 @@ This ValueSet includes all modified Rankin Scale (mRS) grades defined in the MRs
   "title" : "Modified Rankin Scale (mRS) Score ValueSet",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-19T09:19:55+00:00",
+  "date" : "2026-02-19T09:59:51+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

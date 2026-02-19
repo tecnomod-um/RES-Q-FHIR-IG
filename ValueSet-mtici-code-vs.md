@@ -1,10 +1,10 @@
-# mTICI Score Codes ValueSet - v0.1.0
+# Modified Thrombolysis in Cerebral Infarction Assessment ValueSet - v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **mTICI Score Codes ValueSet**
+* **Modified Thrombolysis in Cerebral Infarction Assessment ValueSet**
 
-## ValueSet: mTICI Score Codes ValueSet 
+## ValueSet: Modified Thrombolysis in Cerebral Infarction Assessment ValueSet 
 
 | | |
 | :--- | :--- |
@@ -49,9 +49,9 @@ Separating the “assessment concept” ValueSet (this ValueSet) from the “ass
   "url" : "http://tecnomod-um.org/ValueSet/mtici-code-vs",
   "version" : "0.1.0",
   "name" : "MTICICodeVS",
-  "title" : "mTICI Score Codes ValueSet",
+  "title" : "Modified Thrombolysis in Cerebral Infarction Assessment ValueSet",
   "status" : "active",
-  "date" : "2026-02-19T09:19:55+00:00",
+  "date" : "2026-02-19T09:59:51+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

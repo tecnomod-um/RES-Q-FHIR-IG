@@ -74,7 +74,11 @@ These define sets of codes used by systems conforming to this implementation gui
 * The ValueSet represents “status of assessment” rather than the disorder concept itself; if the clinical intent is to assert a diagnosis of AF/flutter, use a Condition resource with an appropriate SNOMED CT disorder code instead of (or in addition to) this status.
  |
 | [Brain Imaging Modality ValueSet](ValueSet-brain-imaging-modality-vs.md) | Defines the SNOMED CT codes for individual brain imaging modalities performed as procedures. |
-| [Carotid Arteries Imaging Modality ValueSet](ValueSet-carotid-imaging-modality-vs.md) | Defines codes for different types of carotid artery imaging. |
+| [Carotid Arteries Imaging Modality ValueSet](ValueSet-carotid-imaging-modality-vs.md) | This ValueSet enumerates standardized codes (primarily SNOMED CT procedures) representing **carotid imaging modalities** used in stroke workflows.**Primary use-case*** Bind to `Procedure.code` when recording a carotid imaging study performed during the stroke episode.
+**Why it matters*** Supports comparable reporting across facilities (e.g., Doppler vs angiography vs CTA/MRA usage).
+* Reduces variability from local naming conventions and free-text.
+**What it does not represent*** Imaging results/findings (e.g., stenosis severity). Findings should be modeled separately (Observation/DiagnosticReport/ImagingStudy, depending on your architecture).
+ |
 | [Discharge Department/Service ValueSet](ValueSet-discharge-dept-vs.md) | ValueSet specifying the type of department or service the patient was discharged or transferred to. |
 | [Discharge Destination ValueSet](ValueSet-discharge-destination-vs.md) | Defines possible patient discharge destinations. |
 | [Gender (SNOMED CT)](ValueSet-vs-gender-snomed.md) | Value set to represent patient gender using SNOMED CT codes, analogous to AdministrativeGender. |

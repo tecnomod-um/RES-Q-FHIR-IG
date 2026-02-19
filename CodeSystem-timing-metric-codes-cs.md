@@ -32,7 +32,7 @@ These metrics are commonly used in performance dashboards, registry submissions,
   "name" : "TimingMetricCodesCS",
   "title" : "Stroke Timing Metric Codes CodeSystem",
   "status" : "active",
-  "date" : "2026-02-19T09:59:51+00:00",
+  "date" : "2026-02-19T10:15:59+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

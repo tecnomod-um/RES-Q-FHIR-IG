@@ -576,7 +576,23 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="ValueSet/carotid-imaging-modality-vs">Carotid Arteries Imaging Modality ValueSet</a>
             </td>
             <td>
-<p>Defines codes for different types of carotid artery imaging.</p>
+<p>This ValueSet enumerates standardized codes (primarily SNOMED CT procedures) representing <strong>carotid imaging modalities</strong> used in stroke workflows.</p>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Bind to <code class="language-plaintext highlighter-rouge">Procedure.code</code> when recording a carotid imaging study performed during the stroke episode.</li>
+</ul>
+
+<p><strong>Why it matters</strong></p>
+<ul>
+  <li>Supports comparable reporting across facilities (e.g., Doppler vs angiography vs CTA/MRA usage).</li>
+  <li>Reduces variability from local naming conventions and free-text.</li>
+</ul>
+
+<p><strong>What it does not represent</strong></p>
+<ul>
+  <li>Imaging results/findings (e.g., stenosis severity). Findings should be modeled separately (Observation/DiagnosticReport/ImagingStudy, depending on your architecture).</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -1261,7 +1277,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 09:59+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 10:15+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

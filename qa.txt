@@ -3,7 +3,7 @@ RESQIG : Validation Results
 
 err = 4, warn = 127, info = 42
 IG Publisher Version: 2.1.0
-Generated Thu Feb 19 10:03:11 UTC 2026. FHIR version 5.0.0 for RES-Q-FHIR-IG#0.1.0 (canonical = http://tecnomod-um.org)
+Generated Thu Feb 19 10:18:13 UTC 2026. FHIR version 5.0.0 for RES-Q-FHIR-IG#0.1.0 (canonical = http://tecnomod-um.org)
  Build Errors : 1 / 706 / 0
  /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/CodeSystem-assessment-context-cs : 0 / 0 / 1
  /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/CodeSystem-brain-imaging-type-cs : 0 / 2 / 2
@@ -642,10 +642,10 @@ WARNING: ValueSet-brain-imaging-modality-vs.ttl.html#/html/body/div/div/div/p/a 
 WARNING: ValueSet-brain-imaging-modality-vs.xml.html#/html/body/div/div/div/p/a at Line 281, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 WARNING: ValueSet-carotid-imaging-modality-vs-testing.html#/html/body/div/div/div/p/a at Line 251, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 WARNING: ValueSet-carotid-imaging-modality-vs.change.history.html#/html/body/div/div/div/p/a at Line 220, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
-WARNING: ValueSet-carotid-imaging-modality-vs.html#/html/body/div/div/div/p/a at Line 318, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
+WARNING: ValueSet-carotid-imaging-modality-vs.html#/html/body/div/div/div/p/a at Line 334, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 WARNING: ValueSet-carotid-imaging-modality-vs.json.html#/html/body/div/div/div/p/a at Line 295, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 WARNING: ValueSet-carotid-imaging-modality-vs.ttl.html#/html/body/div/div/div/p/a at Line 294, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
-WARNING: ValueSet-carotid-imaging-modality-vs.xml.html#/html/body/div/div/div/p/a at Line 291, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
+WARNING: ValueSet-carotid-imaging-modality-vs.xml.html#/html/body/div/div/div/p/a at Line 301, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 WARNING: ValueSet-discharge-dept-vs-testing.html#/html/body/div/div/div/p/a at Line 251, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 WARNING: ValueSet-discharge-dept-vs.change.history.html#/html/body/div/div/div/p/a at Line 220, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 WARNING: ValueSet-discharge-dept-vs.html#/html/body/div/div/div/p/a at Line 320, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
@@ -802,7 +802,7 @@ WARNING: ValueSet-vs-gender-snomed.html#/html/body/div/div/div/p/a at Line 320, 
 WARNING: ValueSet-vs-gender-snomed.json.html#/html/body/div/div/div/p/a at Line 292, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 WARNING: ValueSet-vs-gender-snomed.ttl.html#/html/body/div/div/div/p/a at Line 293, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 WARNING: ValueSet-vs-gender-snomed.xml.html#/html/body/div/div/div/p/a at Line 285, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
-WARNING: artifacts.html#/html/body/div/div/div/p/a at Line 1264, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
+WARNING: artifacts.html#/html/body/div/div/div/p/a at Line 1280, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 WARNING: codesystems.html#/html/body/div/div/div/p/a at Line 198, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 WARNING: conformance.html#/html/body/div/div/div/p/a at Line 274, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 WARNING: downloads.html#/html/body/div/div/div/p/a at Line 217, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions

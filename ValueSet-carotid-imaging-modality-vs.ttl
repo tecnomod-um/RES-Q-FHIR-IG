@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "CarotidImagingModalityVS"] ; # 
   fhir:title [ fhir:v "Carotid Arteries Imaging Modality ValueSet"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-02-19T09:59:51+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-19T10:15:59+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;
@@ -30,7 +30,7 @@
        fhir:value [ fhir:v "http://tecnomod-um.org" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "Defines codes for different types of carotid artery imaging."] ; # 
+  fhir:description [ fhir:v "This ValueSet enumerates standardized codes (primarily SNOMED CT procedures) representing **carotid imaging modalities** used in stroke workflows.\n\n**Primary use-case**\n- Bind to `Procedure.code` when recording a carotid imaging study performed during the stroke episode.\n\n**Why it matters**\n- Supports comparable reporting across facilities (e.g., Doppler vs angiography vs CTA/MRA usage).\n- Reduces variability from local naming conventions and free-text.\n\n**What it does not represent**\n- Imaging results/findings (e.g., stenosis severity). Findings should be modeled separately (Observation/DiagnosticReport/ImagingStudy, depending on your architecture)."] ; # 
   fhir:compose [
      fhir:include ( [
        fhir:system [

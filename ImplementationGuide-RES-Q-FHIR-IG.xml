@@ -9,7 +9,7 @@
   <version value="0.1.0"/>
   <name value="RESQIG"/>
   <status value="draft"/>
-  <date value="2026-02-19T09:59:51+00:00"/>
+  <date value="2026-02-19T10:15:59+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>
@@ -148,7 +148,7 @@
         <reference value="ValueSet/carotid-imaging-modality-vs"/>
       </reference>
       <name value="Carotid Arteries Imaging Modality ValueSet"/>
-      <description value="Defines codes for different types of carotid artery imaging."/>
+      <description value="This ValueSet enumerates standardized codes (primarily SNOMED CT procedures) representing **carotid imaging modalities** used in stroke workflows.&#xA;&#xA;**Primary use-case**&#xA;- Bind to `Procedure.code` when recording a carotid imaging study performed during the stroke episode.&#xA;&#xA;**Why it matters**&#xA;- Supports comparable reporting across facilities (e.g., Doppler vs angiography vs CTA/MRA usage).&#xA;- Reduces variability from local naming conventions and free-text.&#xA;&#xA;**What it does not represent**&#xA;- Imaging results/findings (e.g., stenosis severity). Findings should be modeled separately (Observation/DiagnosticReport/ImagingStudy, depending on your architecture)."/>
       <isExample value="false"/>
     </resource>
     <resource>

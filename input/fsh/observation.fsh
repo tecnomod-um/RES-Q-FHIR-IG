@@ -164,8 +164,8 @@ Id: mrs-score-cs
 * ^version = "1.0.0"
 * ^title = "Modified Rankin Scale Score Code System"
 * ^status = #active
-* ^experimental = true 
-* ^caseSensitive = false  
+* ^experimental = true  
+* ^caseSensitive = false
 * #0 "No symptoms" "No symptoms at all."
 * #1 "No significant disability" "Despite symptoms; able to carry out all usual duties and activities."
 * #2 "Slight disability" "Unable to carry out all previous activities, but able to look after own affairs without assistance."
@@ -185,8 +185,7 @@ Title: "Modified Rankin Scale Score Valueset"
 * ^version = "1.0.0"
 * ^title = "Modified Rankin Scale (mRS) Score ValueSet"
 * ^status = #active
-* ^experimental = true 
-* ^caseSensitive = false  
+* ^experimental = true
 * include codes from system MRsScoreCS_URL
 
 // --- CodeSystem for Assessment Context (for mRS/NIHSS) ---
@@ -226,7 +225,6 @@ Title: "Assessment Context ValueSet"
 * ^version = "1.0.0"
 * ^status = #active
 * ^experimental = true 
-* ^caseSensitive = false   
 * include codes from system AssessmentContextCS_URL
 
 // --- ValueSets for Observation.code Groupings ---

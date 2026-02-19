@@ -78,7 +78,7 @@
       "status" : "active",
       "name" : "ProcedureTimingContextCS",
       "title" : "Procedure Timing Context CodeSystem",
-      "description" : "Local CodeSystem for classifying a procedure into a **timing context** relative to encounter start.\n\n**Primary use-case**\n- Normalize reporting into acute (<24h) vs post-acute (>=24h) phases for stroke process measures.\n\n**Why this is useful**\n- It supports consistent reporting even when onset time is uncertain.\n- It is designed for encounter-based operational KPIs rather than physiologic onset-based timelines.\n\n**FHIR placement**\n- Used in `ProcedureTimingContextExtension` attached to Procedure."
+      "description" : "Local CodeSystem for classifying a procedure into a **timing context** relative to encounter start.\n\n**Primary use-case**\n- Normalize reporting into acute (<24h) vs post-acute (>=24h) phases for stroke process measures.\n\n\n**FHIR placement**\n- Used in `ProcedureTimingContextExtension` attached to Procedure."
     },
     {
       "url" : "http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs",
@@ -126,7 +126,7 @@
       "status" : "active",
       "name" : "SwallowProceduresCS",
       "title" : "Swallow Procedures CodeSystem",
-      "description" : "Local CodeSystem representing swallowing screening/assessment tools often documented by acronym or local naming.\n\n**Primary use-case**\n- Provide stable, implementable codes when upstream systems cannot supply SNOMED CT equivalents.\n\n**FHIR placement**\n- Included in `SwallowProceduresVS` to be used in `Procedure.code` and (optionally) `Procedure.used.concept`."
+      "description" : "Local CodeSystem representing swallowing screening/assessment tools often documented by acronym or local naming.\n\n**FHIR placement**\n- Included in `SwallowProceduresVS` to be used in `Procedure.code`"
     },
     {
       "url" : "http://tecnomod-um.org/CodeSystem/swallow-screen-time-cs",

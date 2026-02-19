@@ -16,13 +16,6 @@ This ValueSet enumerates standardized codes (primarily SNOMED CT procedures) rep
 **Primary use-case** 
 * Bind to `Procedure.code` when recording a carotid imaging study performed during the stroke episode.
  
-**Why it matters** 
-* Supports comparable reporting across facilities (e.g., Doppler vs angiography vs CTA/MRA usage).
-* Reduces variability from local naming conventions and free-text.
- 
-**What it does not represent** 
-* Imaging results/findings (e.g., stenosis severity). Findings should be modeled separately (Observation/DiagnosticReport/ImagingStudy, depending on your architecture).
- 
 
  **References** 
 
@@ -60,7 +53,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "name" : "CarotidImagingModalityVS",
   "title" : "Carotid Arteries Imaging Modality ValueSet",
   "status" : "active",
-  "date" : "2026-02-19T10:59:57+00:00",
+  "date" : "2026-02-19T11:36:03+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -73,7 +66,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
       ]
     }
   ],
-  "description" : "This ValueSet enumerates standardized codes (primarily SNOMED CT procedures) representing **carotid imaging modalities** used in stroke workflows.\n\n**Primary use-case**\n- Bind to `Procedure.code` when recording a carotid imaging study performed during the stroke episode.\n\n**Why it matters**\n- Supports comparable reporting across facilities (e.g., Doppler vs angiography vs CTA/MRA usage).\n- Reduces variability from local naming conventions and free-text.\n\n**What it does not represent**\n- Imaging results/findings (e.g., stenosis severity). Findings should be modeled separately (Observation/DiagnosticReport/ImagingStudy, depending on your architecture).",
+  "description" : "This ValueSet enumerates standardized codes (primarily SNOMED CT procedures) representing **carotid imaging modalities** used in stroke workflows.\n\n**Primary use-case**\n- Bind to `Procedure.code` when recording a carotid imaging study performed during the stroke episode.",
   "compose" : {
     "include" : [
       {

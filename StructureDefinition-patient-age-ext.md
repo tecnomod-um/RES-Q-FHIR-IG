@@ -53,7 +53,7 @@ Other representations of profile: [CSV](StructureDefinition-patient-age-ext.csv)
   "name" : "PatientAge",
   "title" : "Patient Age (integer)",
   "status" : "draft",
-  "date" : "2026-02-19T10:59:57+00:00",
+  "date" : "2026-02-19T11:36:03+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

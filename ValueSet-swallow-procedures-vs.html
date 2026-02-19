@@ -230,21 +230,6 @@
 <p>
 <p>ValueSet enumerating swallowing screening/assessment procedures/tools used in stroke care.</p>
 
-<p><strong>Primary use-case</strong></p>
-<ul>
-  <li>Required binding for <code class="language-plaintext highlighter-rouge">StrokeSwallowProcedureProfile.code</code> to ensure the Procedure truly represents a swallow screening/assessment.</li>
-</ul>
-
-<p><strong>Secondary use-case</strong></p>
-<ul>
-  <li>Can also be used for <code class="language-plaintext highlighter-rouge">Procedure.used.concept</code> (R5) to explicitly document the tool used when:
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">Procedure.code</code> is generic, or</li>
-      <li>you want a consistent field for “tool used” across multiple workflow variants.</li>
-    </ul>
-  </li>
-</ul>
-
 <p><strong>Implementation note</strong></p>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">SCT#261665006 'Unknown'´ is included only as a provisional development workaround; in production, prefer FHIR </code>dataAbsentReason` for missing data rather than “Unknown” as a procedure code.</li>
@@ -338,7 +323,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 10:59+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 11:36+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

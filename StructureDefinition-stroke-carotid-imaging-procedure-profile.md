@@ -17,6 +17,7 @@ Profile for documenting **carotid angiography** within a stroke episode.
 * This profile fixes `Procedure.code` to a specific SNOMED code (angiography of carotid artery).
 * If you want multiple carotid modalities, replace the fixed code with a required binding to CarotidImagingModalityVS.
  
+**Typical scenarios** 1) Carotid angiography performed: `status=completed`, `occurrence[x]` present, `timingContext` optional. 2) Carotid angiography not performed: `status=not-done`, `statusReason` required. 3) Carotid angiography performed elsewhere: `status=not-done`, `statusReason` = performedElsewhere, `occurrence[x]` optional. 
 **Use-cases** 
 * Determining whether carotid angiography was performed during the episode.
 * Capturing structured “not done” reasons for audit and quality improvement.
@@ -49,7 +50,7 @@ Other representations of profile: [CSV](StructureDefinition-stroke-carotid-imagi
   "name" : "StrokeCarotidImagingProcedureProfile",
   "title" : "Stroke Carotid Imaging Procedure Profile",
   "status" : "active",
-  "date" : "2026-02-19T10:59:57+00:00",
+  "date" : "2026-02-19T11:36:03+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -62,7 +63,7 @@ Other representations of profile: [CSV](StructureDefinition-stroke-carotid-imagi
       ]
     }
   ],
-  "description" : " Profile for documenting **carotid angiography** within a stroke episode.\n\n**Design intent**\n- This profile fixes `Procedure.code` to a specific SNOMED code (angiography of carotid artery).\n- If you want multiple carotid modalities, replace the fixed code with a required binding to CarotidImagingModalityVS.\n\n**Use-cases**\n- Determining whether carotid angiography was performed during the episode.\n- Capturing structured “not done” reasons for audit and quality improvement.",
+  "description" : " Profile for documenting **carotid angiography** within a stroke episode.\n\n**Design intent**\n- This profile fixes `Procedure.code` to a specific SNOMED code (angiography of carotid artery).\n- If you want multiple carotid modalities, replace the fixed code with a required binding to CarotidImagingModalityVS.\n\n**Typical scenarios**\n1) Carotid angiography performed: `status=completed`, `occurrence[x]` present, `timingContext` optional.\n2) Carotid angiography not performed: `status=not-done`, `statusReason` required.\n3) Carotid angiography performed elsewhere: `status=not-done`, `statusReason` = performedElsewhere, `occurrence[x]` optional.\n\n**Use-cases**\n- Determining whether carotid angiography was performed during the episode.\n- Capturing structured “not done” reasons for audit and quality improvement.",
   "fhirVersion" : "5.0.0",
   "mapping" : [
     {

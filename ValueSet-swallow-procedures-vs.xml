@@ -20,7 +20,7 @@
       <value value="http://tecnomod-um.org"/>
     </telecom>
   </contact>
-  <description value="ValueSet enumerating swallowing screening/assessment procedures/tools used in stroke care.&#xA;&#xA;**Primary use-case**&#xA;- Required binding for `StrokeSwallowProcedureProfile.code` to ensure the Procedure truly represents a swallow screening/assessment.&#xA;&#xA;**Secondary use-case**&#xA;- Can also be used for `Procedure.used.concept` (R5) to explicitly document the tool used when:&#xA;  - `Procedure.code` is generic, or&#xA;  - you want a consistent field for “tool used” across multiple workflow variants.&#xA;&#xA;**Implementation note**&#xA;- `SCT#261665006 'Unknown'´ is included only as a provisional development workaround; in production, prefer FHIR `dataAbsentReason` for missing data rather than “Unknown” as a procedure code."/>
+  <description value="ValueSet enumerating swallowing screening/assessment procedures/tools used in stroke care.&#xA;&#xA;**Implementation note**&#xA;- `SCT#261665006 'Unknown'´ is included only as a provisional development workaround; in production, prefer FHIR `dataAbsentReason` for missing data rather than “Unknown” as a procedure code."/>
   <compose>
     <include>
       <system value="http://snomed.info/sct"/>

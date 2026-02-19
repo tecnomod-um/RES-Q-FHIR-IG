@@ -3275,9 +3275,6 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "stroke-swallow-procedure-profile","Procedure.extension:screeningTimingCategory","Procedure.extension","screeningTimingCategory","","",0,1,"Y","","","Extension {[CanonicalType[http://tecnomod-um.org/StructureDefinition/swallowing-screening-timing-category-ext]]} {[]}
 ","Swallowing Screening Timing Category Extension"," Extension capturing the **timing category** of swallowing screening relative to stroke onset/admission.
 
-**Primary use-case**
-- KPI reporting: “swallowing screening performed within 4 hours”.
-
 **When to use**
 - When you cannot reliably store an exact timestamp (or want an additional categorical indicator even if a timestamp exists).
 
@@ -3447,9 +3444,6 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "
 "swallowing-screening-timing-category-ext","Extension","Extension","","","",0,*,"","","","null {[]} {[]}
 ","Swallowing Screening Timing Category Extension"," Extension capturing the **timing category** of swallowing screening relative to stroke onset/admission.
-
-**Primary use-case**
-- KPI reporting: “swallowing screening performed within 4 hours”.
 
 **When to use**
 - When you cannot reliably store an exact timestamp (or want an additional categorical indicator even if a timestamp exists).

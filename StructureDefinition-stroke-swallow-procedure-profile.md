@@ -17,18 +17,10 @@ Profile for documenting **swallow screening / dysphagia assessment** during a st
 * `code`: the screening/assessment procedure or tool used (SwallowProceduresVS).
 * `status`: whether completed or not done.
 * `statusReason`: controlled reason set when not done.
-* `extension[screeningTimingCategory]`: timing bucket (e.g., within 4h) for KPI reporting.
+* `extension[screeningTimingCategory]`: timing bucket (e.g., within 4h).
 * `extension[timingContext]`: acute/post-acute phase relative to encounter start.
-* `used.concept` (R5): explicitly documents the tool used, especially when: 
-* `code` is generic, or
-* you want a consistent “tool used” field for analytics and comparison.
  
- 
-**Use-cases** 
-* Compliance monitoring: swallow screen performed early after stroke.
-* Tool utilization analysis (GUSS vs V-VST vs others).
-* Supporting aspiration pneumonia prevention workflows.
- 
+** Typical scenarios** 1) Screening completed on-site: `status=completed`, `extension[screeningTimingCategory]` optional, `extension[timingContext]` optional. 2) Screening not performed: `status=not-done`, `statusReason` required. 3) Screening performed elsewhere: `status=not-done`, `statusReason` = performedElsewhere, `extension[screeningTimingCategory]` optional. 
 
 **Usages:**
 
@@ -57,7 +49,7 @@ Other representations of profile: [CSV](StructureDefinition-stroke-swallow-proce
   "name" : "StrokeSwallowProcedureProfile",
   "title" : "Stroke Swallow Procedure Profile",
   "status" : "active",
-  "date" : "2026-02-19T10:59:57+00:00",
+  "date" : "2026-02-19T11:36:03+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -70,7 +62,7 @@ Other representations of profile: [CSV](StructureDefinition-stroke-swallow-proce
       ]
     }
   ],
-  "description" : " Profile for documenting **swallow screening / dysphagia assessment** during a stroke episode.\n\n**Captures**\n- `code`: the screening/assessment procedure or tool used (SwallowProceduresVS).\n- `status`: whether completed or not done.\n- `statusReason`: controlled reason set when not done.\n- `extension[screeningTimingCategory]`: timing bucket (e.g., within 4h) for KPI reporting.\n- `extension[timingContext]`: acute/post-acute phase relative to encounter start.\n- `used.concept` (R5): explicitly documents the tool used, especially when:\n  - `code` is generic, or\n  - you want a consistent “tool used” field for analytics and comparison.\n\n**Use-cases**\n- Compliance monitoring: swallow screen performed early after stroke.\n- Tool utilization analysis (GUSS vs V-VST vs others).\n- Supporting aspiration pneumonia prevention workflows.",
+  "description" : " Profile for documenting **swallow screening / dysphagia assessment** during a stroke episode.\n\n**Captures**\n- `code`: the screening/assessment procedure or tool used (SwallowProceduresVS).\n- `status`: whether completed or not done.\n- `statusReason`: controlled reason set when not done.\n- `extension[screeningTimingCategory]`: timing bucket (e.g., within 4h).\n- `extension[timingContext]`: acute/post-acute phase relative to encounter start.\n\n\n** Typical scenarios**\n1) Screening completed on-site: `status=completed`, `extension[screeningTimingCategory]` optional, `extension[timingContext]` optional.\n2) Screening not performed: `status=not-done`, `statusReason` required.\n3) Screening performed elsewhere: `status=not-done`, `statusReason` = performedElsewhere, `extension[screeningTimingCategory]` optional.\n",
   "fhirVersion" : "5.0.0",
   "mapping" : [
     {

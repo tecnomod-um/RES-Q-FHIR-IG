@@ -55,7 +55,7 @@ Other representations of profile: [CSV](StructureDefinition-swallowing-screening
   "name" : "SwallowingScreeningTimingCategoryExt",
   "title" : "Swallowing Screening Timing Category",
   "status" : "draft",
-  "date" : "2026-02-19T10:59:57+00:00",
+  "date" : "2026-02-19T11:36:03+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -94,7 +94,7 @@ Other representations of profile: [CSV](StructureDefinition-swallowing-screening
         "id" : "Extension",
         "path" : "Extension",
         "short" : "Swallowing Screening Timing Category Extension",
-        "definition" : " Extension capturing the **timing category** of swallowing screening relative to stroke onset/admission.\n\n**Primary use-case**\n- KPI reporting: “swallowing screening performed within 4 hours”.\n\n**When to use**\n- When you cannot reliably store an exact timestamp (or want an additional categorical indicator even if a timestamp exists).\n\n**How it complements base elements**\n- `Procedure.occurrence[x]` stores the exact time when available.\n- This extension stores a categorical bucket to support standardized reporting."
+        "definition" : " Extension capturing the **timing category** of swallowing screening relative to stroke onset/admission.\n\n**When to use**\n- When you cannot reliably store an exact timestamp (or want an additional categorical indicator even if a timestamp exists).\n\n**How it complements base elements**\n- `Procedure.occurrence[x]` stores the exact time when available.\n- This extension stores a categorical bucket to support standardized reporting."
       },
       {
         "id" : "Extension.extension",

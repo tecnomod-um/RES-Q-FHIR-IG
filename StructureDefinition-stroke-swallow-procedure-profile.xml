@@ -17,7 +17,7 @@
   <name value="StrokeSwallowProcedureProfile"/>
   <title value="Stroke Swallow Procedure Profile"/>
   <status value="active"/>
-  <date value="2026-02-19T10:59:57+00:00"/>
+  <date value="2026-02-19T11:36:03+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>
@@ -26,7 +26,7 @@
       <value value="http://tecnomod-um.org"/>
     </telecom>
   </contact>
-  <description value=" Profile for documenting **swallow screening / dysphagia assessment** during a stroke episode.&#xA;&#xA;**Captures**&#xA;- `code`: the screening/assessment procedure or tool used (SwallowProceduresVS).&#xA;- `status`: whether completed or not done.&#xA;- `statusReason`: controlled reason set when not done.&#xA;- `extension[screeningTimingCategory]`: timing bucket (e.g., within 4h) for KPI reporting.&#xA;- `extension[timingContext]`: acute/post-acute phase relative to encounter start.&#xA;- `used.concept` (R5): explicitly documents the tool used, especially when:&#xA;  - `code` is generic, or&#xA;  - you want a consistent “tool used” field for analytics and comparison.&#xA;&#xA;**Use-cases**&#xA;- Compliance monitoring: swallow screen performed early after stroke.&#xA;- Tool utilization analysis (GUSS vs V-VST vs others).&#xA;- Supporting aspiration pneumonia prevention workflows."/>
+  <description value=" Profile for documenting **swallow screening / dysphagia assessment** during a stroke episode.&#xA;&#xA;**Captures**&#xA;- `code`: the screening/assessment procedure or tool used (SwallowProceduresVS).&#xA;- `status`: whether completed or not done.&#xA;- `statusReason`: controlled reason set when not done.&#xA;- `extension[screeningTimingCategory]`: timing bucket (e.g., within 4h).&#xA;- `extension[timingContext]`: acute/post-acute phase relative to encounter start.&#xA;&#xA;&#xA;** Typical scenarios**&#xA;1) Screening completed on-site: `status=completed`, `extension[screeningTimingCategory]` optional, `extension[timingContext]` optional.&#xA;2) Screening not performed: `status=not-done`, `statusReason` required.&#xA;3) Screening performed elsewhere: `status=not-done`, `statusReason` = performedElsewhere, `extension[screeningTimingCategory]` optional.&#xA;"/>
   <fhirVersion value="5.0.0"/>
   <mapping>
     <identity value="workflow"/>
@@ -346,7 +346,7 @@
       <path value="Procedure.extension"/>
       <sliceName value="screeningTimingCategory"/>
       <short value="Swallowing Screening Timing Category Extension"/>
-      <definition value=" Extension capturing the **timing category** of swallowing screening relative to stroke onset/admission.&#xA;&#xA;**Primary use-case**&#xA;- KPI reporting: “swallowing screening performed within 4 hours”.&#xA;&#xA;**When to use**&#xA;- When you cannot reliably store an exact timestamp (or want an additional categorical indicator even if a timestamp exists).&#xA;&#xA;**How it complements base elements**&#xA;- `Procedure.occurrence[x]` stores the exact time when available.&#xA;- This extension stores a categorical bucket to support standardized reporting."/>
+      <definition value=" Extension capturing the **timing category** of swallowing screening relative to stroke onset/admission.&#xA;&#xA;**When to use**&#xA;- When you cannot reliably store an exact timestamp (or want an additional categorical indicator even if a timestamp exists).&#xA;&#xA;**How it complements base elements**&#xA;- `Procedure.occurrence[x]` stores the exact time when available.&#xA;- This extension stores a categorical bucket to support standardized reporting."/>
       <min value="0"/>
       <max value="1"/>
       <base>

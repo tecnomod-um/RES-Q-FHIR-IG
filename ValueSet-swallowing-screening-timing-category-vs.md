@@ -17,7 +17,7 @@ ValueSet defining allowed categories for swallowing screening timing, combining:
 * SNOMED CT qualifier concepts for post-admission timing.
  
 **Use-case** 
-* Required binding for the swallowing timing extension to standardize KPI reporting across sites.
+* Required binding for the swallowing timing extension.
  
 
  **References** 
@@ -56,7 +56,7 @@ ValueSet defining allowed categories for swallowing screening timing, combining:
   "name" : "SwallowingScreeningTimingCategoryVS",
   "title" : "Swallowing Screening Timing Category ValueSet",
   "status" : "active",
-  "date" : "2026-02-19T10:59:57+00:00",
+  "date" : "2026-02-19T11:36:03+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -69,7 +69,7 @@ ValueSet defining allowed categories for swallowing screening timing, combining:
       ]
     }
   ],
-  "description" : "ValueSet defining allowed categories for swallowing screening timing, combining:\n- local categories (e.g., within 4 hours), and\n- SNOMED CT qualifier concepts for post-admission timing.\n\n**Use-case**\n- Required binding for the swallowing timing extension to standardize KPI reporting across sites.",
+  "description" : "ValueSet defining allowed categories for swallowing screening timing, combining:\n- local categories (e.g., within 4 hours), and\n- SNOMED CT qualifier concepts for post-admission timing.\n\n**Use-case**\n- Required binding for the swallowing timing extension.",
   "compose" : {
     "include" : [
       {

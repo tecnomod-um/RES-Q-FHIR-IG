@@ -16,9 +16,6 @@ ValueSet restricting Procedure codes to stroke **reperfusion interventions**:
 * IV thrombolysis (IVT)
 * Mechanical thrombectomy (MT)
  
-**Primary use-case** 
-* Required binding for `StrokeThrombolysisProcedureProfile.code` (which covers reperfusion procedures in this IG).
- 
 
  **References** 
 
@@ -70,7 +67,7 @@ ValueSet restricting Procedure codes to stroke **reperfusion interventions**:
       ]
     }
   ],
-  "description" : "ValueSet restricting Procedure codes to stroke **reperfusion interventions**:\n- IV thrombolysis (IVT)\n- Mechanical thrombectomy (MT)\n\n**Primary use-case**\n- Required binding for `StrokeThrombolysisProcedureProfile.code` (which covers reperfusion procedures in this IG).",
+  "description" : "ValueSet restricting Procedure codes to stroke **reperfusion interventions**:\n- IV thrombolysis (IVT)\n- Mechanical thrombectomy (MT)\n",
   "compose" : {
     "include" : [
       {

@@ -265,7 +265,7 @@
   "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.name">name</a>" : "StrokeSwallowProcedureProfile",
   "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.title">title</a>" : "Stroke Swallow Procedure Profile",
   "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.status">status</a>" : "active",
-  "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.date">date</a>" : "2026-02-19T10:59:57+00:00",
+  "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.date">date</a>" : "2026-02-19T11:36:03+00:00",
   "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.publisher">publisher</a>" : "UMU",
   "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.contact">contact</a>" : [
     {
@@ -278,7 +278,7 @@
       ]
     }
   ],
-  "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.description">description</a>" : " Profile for documenting **swallow screening / dysphagia assessment** during a stroke episode.\n\n**Captures**\n- `code`: the screening/assessment procedure or tool used (SwallowProceduresVS).\n- `status`: whether completed or not done.\n- `statusReason`: controlled reason set when not done.\n- `extension[screeningTimingCategory]`: timing bucket (e.g., within 4h) for KPI reporting.\n- `extension[timingContext]`: acute/post-acute phase relative to encounter start.\n- `used.concept` (R5): explicitly documents the tool used, especially when:\n  - `code` is generic, or\n  - you want a consistent “tool used” field for analytics and comparison.\n\n**Use-cases**\n- Compliance monitoring: swallow screen performed early after stroke.\n- Tool utilization analysis (GUSS vs V-VST vs others).\n- Supporting aspiration pneumonia prevention workflows.",
+  "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.description">description</a>" : " Profile for documenting **swallow screening / dysphagia assessment** during a stroke episode.\n\n**Captures**\n- `code`: the screening/assessment procedure or tool used (SwallowProceduresVS).\n- `status`: whether completed or not done.\n- `statusReason`: controlled reason set when not done.\n- `extension[screeningTimingCategory]`: timing bucket (e.g., within 4h).\n- `extension[timingContext]`: acute/post-acute phase relative to encounter start.\n\n\n** Typical scenarios**\n1) Screening completed on-site: `status=completed`, `extension[screeningTimingCategory]` optional, `extension[timingContext]` optional.\n2) Screening not performed: `status=not-done`, `statusReason` required.\n3) Screening performed elsewhere: `status=not-done`, `statusReason` = performedElsewhere, `extension[screeningTimingCategory]` optional.\n",
   "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.fhirVersion">fhirVersion</a>" : "5.0.0",
   "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.mapping">mapping</a>" : [
     {
@@ -667,7 +667,7 @@
         "<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.path">path</a>" : "Procedure.extension",
         "<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.sliceName">sliceName</a>" : "screeningTimingCategory",
         "<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.short">short</a>" : "Swallowing Screening Timing Category Extension",
-        "<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.definition">definition</a>" : " Extension capturing the **timing category** of swallowing screening relative to stroke onset/admission.\n\n**Primary use-case**\n- KPI reporting: “swallowing screening performed within 4 hours”.\n\n**When to use**\n- When you cannot reliably store an exact timestamp (or want an additional categorical indicator even if a timestamp exists).\n\n**How it complements base elements**\n- `Procedure.occurrence[x]` stores the exact time when available.\n- This extension stores a categorical bucket to support standardized reporting.",
+        "<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.definition">definition</a>" : " Extension capturing the **timing category** of swallowing screening relative to stroke onset/admission.\n\n**When to use**\n- When you cannot reliably store an exact timestamp (or want an additional categorical indicator even if a timestamp exists).\n\n**How it complements base elements**\n- `Procedure.occurrence[x]` stores the exact time when available.\n- This extension stores a categorical bucket to support standardized reporting.",
         "<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.min">min</a>" : 0,
         "<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.max">max</a>" : "1",
         "<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.base">base</a>" : {
@@ -2849,7 +2849,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 10:59+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 11:36+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

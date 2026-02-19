@@ -2,9 +2,6 @@
 "Extension","Extension","","","",0,*,"","","","null {[]} {[]}
 ","Swallowing Screening Timing Category Extension"," Extension capturing the **timing category** of swallowing screening relative to stroke onset/admission.
 
-**Primary use-case**
-- KPI reporting: “swallowing screening performed within 4 hours”.
-
 **When to use**
 - When you cannot reliably store an exact timestamp (or want an additional categorical indicator even if a timestamp exists).
 

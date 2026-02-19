@@ -348,7 +348,7 @@
       "status" : "active",
       "name" : "ProcedureTimingContextCS",
       "title" : "Procedure Timing Context CodeSystem",
-      "description" : "Local CodeSystem for classifying a procedure into a **timing context** relative to encounter start.\n\n**Primary use-case**\n- Normalize reporting into acute (<24h) vs post-acute (>=24h) phases for stroke process measures.\n\n**Why this is useful**\n- It supports consistent reporting even when onset time is uncertain.\n- It is designed for encounter-based operational KPIs rather than physiologic onset-based timelines.\n\n**FHIR placement**\n- Used in `ProcedureTimingContextExtension` attached to Procedure.",
+      "description" : "Local CodeSystem for classifying a procedure into a **timing context** relative to encounter start.\n\n**Primary use-case**\n- Normalize reporting into acute (<24h) vs post-acute (>=24h) phases for stroke process measures.\n\n\n**FHIR placement**\n- Used in `ProcedureTimingContextExtension` attached to Procedure.",
       "uses" : {
       },
       "ValueSet-procedure-timing-context-vs.html" : "Procedure Timing Context ValueSet"
@@ -414,7 +414,7 @@
       "status" : "active",
       "name" : "SwallowProceduresCS",
       "title" : "Swallow Procedures CodeSystem",
-      "description" : "Local CodeSystem representing swallowing screening/assessment tools often documented by acronym or local naming.\n\n**Primary use-case**\n- Provide stable, implementable codes when upstream systems cannot supply SNOMED CT equivalents.\n\n**FHIR placement**\n- Included in `SwallowProceduresVS` to be used in `Procedure.code` and (optionally) `Procedure.used.concept`.",
+      "description" : "Local CodeSystem representing swallowing screening/assessment tools often documented by acronym or local naming.\n\n**FHIR placement**\n- Included in `SwallowProceduresVS` to be used in `Procedure.code`",
       "uses" : {
       },
       "ValueSet-swallow-procedures-vs.html" : "Swallow Procedures ValueSet"
@@ -429,6 +429,17 @@
       "uses" : {
       },
       "ValueSet-swallowing-screening-timing-category-vs.html" : "Swallowing Screening Timing Category ValueSet"
+    },
+    {
+      "url" : "http://tecnomod-um.org/CodeSystem/thrombectomy-complication-cs",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ThrombectomyComplicationCS",
+      "title" : "Thrombectomy Complication CodeSystem",
+      "description" : "Local CodeSystem for complications occurring during mechanical thrombectomy.\n\n**When to use**\n- If you need a controlled internal vocabulary for adverse events/complications, especially when upstream systems do not provide SNOMED-coded diagnoses.\n\n**How it is used in FHIR R5**\n- Usually referenced from `Procedure.complication` which is a `CodeableReference(Condition)` in R5.\n- You may represent the complication as a `Condition` (preferred), and/or record a code directly depending on your implementation pattern.\n\n**Why it exists**\n- Supports minimum-set reporting across sites and enables consistent quality/safety analytics.",
+      "uses" : {
+      },
+      "ValueSet-thrombectomy-complication-vs.html" : "Thrombectomy Complications ValueSet"
     },
     {
       "url" : "http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs",

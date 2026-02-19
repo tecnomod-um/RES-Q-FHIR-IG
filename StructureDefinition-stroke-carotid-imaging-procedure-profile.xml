@@ -20,7 +20,7 @@
   <name value="StrokeCarotidImagingProcedureProfile"/>
   <title value="Stroke Carotid Imaging Procedure Profile"/>
   <status value="active"/>
-  <date value="2026-02-19T10:59:57+00:00"/>
+  <date value="2026-02-19T11:36:03+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>
@@ -29,7 +29,7 @@
       <value value="http://tecnomod-um.org"/>
     </telecom>
   </contact>
-  <description value=" Profile for documenting **carotid angiography** within a stroke episode.&#xA;&#xA;**Design intent**&#xA;- This profile fixes `Procedure.code` to a specific SNOMED code (angiography of carotid artery).&#xA;- If you want multiple carotid modalities, replace the fixed code with a required binding to CarotidImagingModalityVS.&#xA;&#xA;**Use-cases**&#xA;- Determining whether carotid angiography was performed during the episode.&#xA;- Capturing structured “not done” reasons for audit and quality improvement."/>
+  <description value=" Profile for documenting **carotid angiography** within a stroke episode.&#xA;&#xA;**Design intent**&#xA;- This profile fixes `Procedure.code` to a specific SNOMED code (angiography of carotid artery).&#xA;- If you want multiple carotid modalities, replace the fixed code with a required binding to CarotidImagingModalityVS.&#xA;&#xA;**Typical scenarios**&#xA;1) Carotid angiography performed: `status=completed`, `occurrence[x]` present, `timingContext` optional.&#xA;2) Carotid angiography not performed: `status=not-done`, `statusReason` required.&#xA;3) Carotid angiography performed elsewhere: `status=not-done`, `statusReason` = performedElsewhere, `occurrence[x]` optional.&#xA;&#xA;**Use-cases**&#xA;- Determining whether carotid angiography was performed during the episode.&#xA;- Capturing structured “not done” reasons for audit and quality improvement."/>
   <fhirVersion value="5.0.0"/>
   <mapping>
     <identity value="workflow"/>

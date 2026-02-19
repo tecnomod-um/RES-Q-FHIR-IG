@@ -24,11 +24,7 @@ Profile for documenting **stroke reperfusion procedures** as FHIR Procedure:
 * `complication`: complications (as CodeableReference to Condition) — constrained by invariants.
 * `extension[timingContext]`: acute/post-acute phase classification.
  
-**Use-cases** 
-* Time-to-treatment metrics (door-to-needle, door-to-groin), service evaluation.
-* Structured documentation of “why not treated” for QI programs.
-* Safety monitoring for procedural complications.
- 
+**Typical scenarios** 1) Reperfusion performed on-site: `status=completed`, `occurrence[x]` present, `timingContext` optional. 2) Reperfusion not performed: `status=not-done`, `statusReason` required. 3) Reperfusion performed elsewhere: `status=not-done`, `statusReason` = performedElsewhere, `occurrence[x]` optional. 4) Reperfusion attempted but complicated by perforation: `status=completed`, `complication` = perforation code, `occurrence[x]` captures timing of the attempt. 
 
 **Usages:**
 
@@ -57,7 +53,7 @@ Other representations of profile: [CSV](StructureDefinition-stroke-mechanical-pr
   "name" : "StrokeThrombolysisProcedureProfile",
   "title" : "Stroke Thrombolysis Procedure Profile",
   "status" : "active",
-  "date" : "2026-02-19T10:59:57+00:00",
+  "date" : "2026-02-19T11:36:03+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -70,7 +66,7 @@ Other representations of profile: [CSV](StructureDefinition-stroke-mechanical-pr
       ]
     }
   ],
-  "description" : "Profile for documenting **stroke reperfusion procedures** as FHIR Procedure:\n- IV thrombolysis (IVT)\n- Mechanical thrombectomy (MT)\n\n**Captures**\n- `code`: restricted to reperfusion procedures (PerforationProceduresVS).\n- `status`: completed/not-done/etc.\n- `statusReason`: controlled reason set when not done.\n- `occurrence[x]` (constrained to Period): start/end time of the intervention when available.\n- `complication`: complications (as CodeableReference to Condition) — constrained by invariants.\n- `extension[timingContext]`: acute/post-acute phase classification.\n\n**Use-cases**\n- Time-to-treatment metrics (door-to-needle, door-to-groin), service evaluation.\n- Structured documentation of “why not treated” for QI programs.\n- Safety monitoring for procedural complications. ",
+  "description" : "Profile for documenting **stroke reperfusion procedures** as FHIR Procedure:\n- IV thrombolysis (IVT)\n- Mechanical thrombectomy (MT)\n\n**Captures**\n- `code`: restricted to reperfusion procedures (PerforationProceduresVS).\n- `status`: completed/not-done/etc.\n- `statusReason`: controlled reason set when not done.\n- `occurrence[x]` (constrained to Period): start/end time of the intervention when available.\n- `complication`: complications (as CodeableReference to Condition) — constrained by invariants.\n- `extension[timingContext]`: acute/post-acute phase classification.\n\n**Typical scenarios**\n1) Reperfusion performed on-site: `status=completed`, `occurrence[x]` present, `timingContext` optional.\n2) Reperfusion not performed: `status=not-done`, `statusReason` required.\n3) Reperfusion performed elsewhere: `status=not-done`, `statusReason` = performedElsewhere, `occurrence[x]` optional.\n4) Reperfusion attempted but complicated by perforation: `status=completed`, `complication` = perforation code, `occurrence[x]` captures timing of the attempt.\n",
   "fhirVersion" : "5.0.0",
   "mapping" : [
     {

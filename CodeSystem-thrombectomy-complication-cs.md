@@ -26,7 +26,7 @@ Local CodeSystem for complications occurring during mechanical thrombectomy.
 
  This Code system is referenced in the content logical definition of the following value sets: 
 
-* This CodeSystem is not used here; it may be used elsewhere (e.g. specifications and/or implementations that use this content)
+* [ThrombectomyComplicationVS](ValueSet-thrombectomy-complication-vs.md)
 
 
 
@@ -41,7 +41,7 @@ Local CodeSystem for complications occurring during mechanical thrombectomy.
   "name" : "ThrombectomyComplicationCS",
   "title" : "Thrombectomy Complication CodeSystem",
   "status" : "active",
-  "date" : "2026-02-19T10:59:57+00:00",
+  "date" : "2026-02-19T11:36:03+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

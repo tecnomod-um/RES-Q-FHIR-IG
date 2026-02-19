@@ -281,12 +281,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p><strong>Typical scenarios</strong>
 1) Imaging completed on-site: <code class="language-plaintext highlighter-rouge">status=completed</code>, <code class="language-plaintext highlighter-rouge">occurrence[x]</code> present, <code class="language-plaintext highlighter-rouge">timingContext</code> optional.
 2) Imaging not performed: <code class="language-plaintext highlighter-rouge">status=not-done</code>, <code class="language-plaintext highlighter-rouge">statusReason</code> required.
-3) Imaging performed elsewhere: if your IG uses a “performed elsewhere” indicator extension, rules may allow missing on-site timestamps.</p>
-
-<p><strong>Downstream use</strong></p>
-<ul>
-  <li>Door-to-imaging metrics, protocol utilization, cross-site comparability.</li>
-</ul>
+3) Imaging performed elsewhere: <code class="language-plaintext highlighter-rouge">status=not-done</code>, <code class="language-plaintext highlighter-rouge">statusReason</code> = performedElsewhere, <code class="language-plaintext highlighter-rouge">occurrence[x]</code> optional (may not have exact time).</p>
 </td>
          </tr>
          <tr>
@@ -302,6 +297,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li>This profile fixes <code class="language-plaintext highlighter-rouge">Procedure.code</code> to a specific SNOMED code (angiography of carotid artery).</li>
   <li>If you want multiple carotid modalities, replace the fixed code with a required binding to CarotidImagingModalityVS.</li>
 </ul>
+
+<p><strong>Typical scenarios</strong>
+1) Carotid angiography performed: <code class="language-plaintext highlighter-rouge">status=completed</code>, <code class="language-plaintext highlighter-rouge">occurrence[x]</code> present, <code class="language-plaintext highlighter-rouge">timingContext</code> optional.
+2) Carotid angiography not performed: <code class="language-plaintext highlighter-rouge">status=not-done</code>, <code class="language-plaintext highlighter-rouge">statusReason</code> required.
+3) Carotid angiography performed elsewhere: <code class="language-plaintext highlighter-rouge">status=not-done</code>, <code class="language-plaintext highlighter-rouge">statusReason</code> = performedElsewhere, <code class="language-plaintext highlighter-rouge">occurrence[x]</code> optional.</p>
 
 <p><strong>Use-cases</strong></p>
 <ul>
@@ -387,22 +387,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><code class="language-plaintext highlighter-rouge">code</code>: the screening/assessment procedure or tool used (SwallowProceduresVS).</li>
   <li><code class="language-plaintext highlighter-rouge">status</code>: whether completed or not done.</li>
   <li><code class="language-plaintext highlighter-rouge">statusReason</code>: controlled reason set when not done.</li>
-  <li><code class="language-plaintext highlighter-rouge">extension[screeningTimingCategory]</code>: timing bucket (e.g., within 4h) for KPI reporting.</li>
+  <li><code class="language-plaintext highlighter-rouge">extension[screeningTimingCategory]</code>: timing bucket (e.g., within 4h).</li>
   <li><code class="language-plaintext highlighter-rouge">extension[timingContext]</code>: acute/post-acute phase relative to encounter start.</li>
-  <li><code class="language-plaintext highlighter-rouge">used.concept</code> (R5): explicitly documents the tool used, especially when:
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">code</code> is generic, or</li>
-      <li>you want a consistent “tool used” field for analytics and comparison.</li>
-    </ul>
-  </li>
 </ul>
 
-<p><strong>Use-cases</strong></p>
-<ul>
-  <li>Compliance monitoring: swallow screen performed early after stroke.</li>
-  <li>Tool utilization analysis (GUSS vs V-VST vs others).</li>
-  <li>Supporting aspiration pneumonia prevention workflows.</li>
-</ul>
+<p>** Typical scenarios**
+1) Screening completed on-site: <code class="language-plaintext highlighter-rouge">status=completed</code>, <code class="language-plaintext highlighter-rouge">extension[screeningTimingCategory]</code> optional, <code class="language-plaintext highlighter-rouge">extension[timingContext]</code> optional.
+2) Screening not performed: <code class="language-plaintext highlighter-rouge">status=not-done</code>, <code class="language-plaintext highlighter-rouge">statusReason</code> required.
+3) Screening performed elsewhere: <code class="language-plaintext highlighter-rouge">status=not-done</code>, <code class="language-plaintext highlighter-rouge">statusReason</code> = performedElsewhere, <code class="language-plaintext highlighter-rouge">extension[screeningTimingCategory]</code> optional.</p>
 </td>
          </tr>
          <tr>
@@ -427,12 +419,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><code class="language-plaintext highlighter-rouge">extension[timingContext]</code>: acute/post-acute phase classification.</li>
 </ul>
 
-<p><strong>Use-cases</strong></p>
-<ul>
-  <li>Time-to-treatment metrics (door-to-needle, door-to-groin), service evaluation.</li>
-  <li>Structured documentation of “why not treated” for QI programs.</li>
-  <li>Safety monitoring for procedural complications.</li>
-</ul>
+<p><strong>Typical scenarios</strong>
+1) Reperfusion performed on-site: <code class="language-plaintext highlighter-rouge">status=completed</code>, <code class="language-plaintext highlighter-rouge">occurrence[x]</code> present, <code class="language-plaintext highlighter-rouge">timingContext</code> optional.
+2) Reperfusion not performed: <code class="language-plaintext highlighter-rouge">status=not-done</code>, <code class="language-plaintext highlighter-rouge">statusReason</code> required.
+3) Reperfusion performed elsewhere: <code class="language-plaintext highlighter-rouge">status=not-done</code>, <code class="language-plaintext highlighter-rouge">statusReason</code> = performedElsewhere, <code class="language-plaintext highlighter-rouge">occurrence[x]</code> optional.
+4) Reperfusion attempted but complicated by perforation: <code class="language-plaintext highlighter-rouge">status=completed</code>, <code class="language-plaintext highlighter-rouge">complication</code> = perforation code, <code class="language-plaintext highlighter-rouge">occurrence[x]</code> captures timing of the attempt.</p>
 </td>
          </tr>
          <tr>
@@ -673,17 +664,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul>
   <li>Bind to <code class="language-plaintext highlighter-rouge">Procedure.code</code> when recording a carotid imaging study performed during the stroke episode.</li>
 </ul>
-
-<p><strong>Why it matters</strong></p>
-<ul>
-  <li>Supports comparable reporting across facilities (e.g., Doppler vs angiography vs CTA/MRA usage).</li>
-  <li>Reduces variability from local naming conventions and free-text.</li>
-</ul>
-
-<p><strong>What it does not represent</strong></p>
-<ul>
-  <li>Imaging results/findings (e.g., stenosis severity). Findings should be modeled separately (Observation/DiagnosticReport/ImagingStudy, depending on your architecture).</li>
-</ul>
 </td>
          </tr>
          <tr>
@@ -783,11 +763,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul>
   <li>IV thrombolysis (IVT)</li>
   <li>Mechanical thrombectomy (MT)</li>
-</ul>
-
-<p><strong>Primary use-case</strong></p>
-<ul>
-  <li>Required binding for <code class="language-plaintext highlighter-rouge">StrokeThrombolysisProcedureProfile.code</code> (which covers reperfusion procedures in this IG).</li>
 </ul>
 </td>
          </tr>
@@ -941,21 +916,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <td>
 <p>ValueSet enumerating swallowing screening/assessment procedures/tools used in stroke care.</p>
 
-<p><strong>Primary use-case</strong></p>
-<ul>
-  <li>Required binding for <code class="language-plaintext highlighter-rouge">StrokeSwallowProcedureProfile.code</code> to ensure the Procedure truly represents a swallow screening/assessment.</li>
-</ul>
-
-<p><strong>Secondary use-case</strong></p>
-<ul>
-  <li>Can also be used for <code class="language-plaintext highlighter-rouge">Procedure.used.concept</code> (R5) to explicitly document the tool used when:
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">Procedure.code</code> is generic, or</li>
-      <li>you want a consistent field for “tool used” across multiple workflow variants.</li>
-    </ul>
-  </li>
-</ul>
-
 <p><strong>Implementation note</strong></p>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">SCT#261665006 'Unknown'´ is included only as a provisional development workaround; in production, prefer FHIR </code>dataAbsentReason` for missing data rather than “Unknown” as a procedure code.</li>
@@ -976,7 +936,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p><strong>Use-case</strong></p>
 <ul>
-  <li>Required binding for the swallowing timing extension to standardize KPI reporting across sites.</li>
+  <li>Required binding for the swallowing timing extension.</li>
 </ul>
 </td>
          </tr>
@@ -1128,12 +1088,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li>Normalize reporting into acute (&lt;24h) vs post-acute (&gt;=24h) phases for stroke process measures.</li>
 </ul>
 
-<p><strong>Why this is useful</strong></p>
-<ul>
-  <li>It supports consistent reporting even when onset time is uncertain.</li>
-  <li>It is designed for encounter-based operational KPIs rather than physiologic onset-based timelines.</li>
-</ul>
-
 <p><strong>FHIR placement</strong></p>
 <ul>
   <li>Used in <code class="language-plaintext highlighter-rouge">ProcedureTimingContextExtension</code> attached to Procedure.</li>
@@ -1215,14 +1169,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <td>
 <p>Local CodeSystem representing swallowing screening/assessment tools often documented by acronym or local naming.</p>
 
-<p><strong>Primary use-case</strong></p>
-<ul>
-  <li>Provide stable, implementable codes when upstream systems cannot supply SNOMED CT equivalents.</li>
-</ul>
-
 <p><strong>FHIR placement</strong></p>
 <ul>
-  <li>Included in <code class="language-plaintext highlighter-rouge">SwallowProceduresVS</code> to be used in <code class="language-plaintext highlighter-rouge">Procedure.code</code> and (optionally) <code class="language-plaintext highlighter-rouge">Procedure.used.concept</code>.</li>
+  <li>Included in <code class="language-plaintext highlighter-rouge">SwallowProceduresVS</code> to be used in <code class="language-plaintext highlighter-rouge">Procedure.code</code></li>
 </ul>
 </td>
          </tr>
@@ -1476,7 +1425,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 10:59+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 11:36+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

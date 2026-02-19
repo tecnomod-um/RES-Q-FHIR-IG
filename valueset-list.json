@@ -45,7 +45,7 @@
       "status" : "active",
       "name" : "CarotidImagingModalityVS",
       "title" : "Carotid Arteries Imaging Modality ValueSet",
-      "description" : "This ValueSet enumerates standardized codes (primarily SNOMED CT procedures) representing **carotid imaging modalities** used in stroke workflows.\n\n**Primary use-case**\n- Bind to `Procedure.code` when recording a carotid imaging study performed during the stroke episode.\n\n**Why it matters**\n- Supports comparable reporting across facilities (e.g., Doppler vs angiography vs CTA/MRA usage).\n- Reduces variability from local naming conventions and free-text.\n\n**What it does not represent**\n- Imaging results/findings (e.g., stenosis severity). Findings should be modeled separately (Observation/DiagnosticReport/ImagingStudy, depending on your architecture).",
+      "description" : "This ValueSet enumerates standardized codes (primarily SNOMED CT procedures) representing **carotid imaging modalities** used in stroke workflows.\n\n**Primary use-case**\n- Bind to `Procedure.code` when recording a carotid imaging study performed during the stroke episode.",
       "systems" : ["http://snomed.info/sct"]
     },
     {
@@ -143,7 +143,7 @@
       "status" : "draft",
       "name" : "PerforationProceduresValueset",
       "title" : "Perforation Procedures ValueSet",
-      "description" : "ValueSet restricting Procedure codes to stroke **reperfusion interventions**:\n- IV thrombolysis (IVT)\n- Mechanical thrombectomy (MT)\n\n**Primary use-case**\n- Required binding for `StrokeThrombolysisProcedureProfile.code` (which covers reperfusion procedures in this IG).",
+      "description" : "ValueSet restricting Procedure codes to stroke **reperfusion interventions**:\n- IV thrombolysis (IVT)\n- Mechanical thrombectomy (MT)",
       "systems" : ["http://snomed.info/sct"]
     },
     {
@@ -257,7 +257,7 @@
       "status" : "draft",
       "name" : "SwallowProceduresValueset",
       "title" : "Swallow Procedures ValueSet",
-      "description" : "ValueSet enumerating swallowing screening/assessment procedures/tools used in stroke care.\n\n**Primary use-case**\n- Required binding for `StrokeSwallowProcedureProfile.code` to ensure the Procedure truly represents a swallow screening/assessment.\n\n**Secondary use-case**\n- Can also be used for `Procedure.used.concept` (R5) to explicitly document the tool used when:\n  - `Procedure.code` is generic, or\n  - you want a consistent field for “tool used” across multiple workflow variants.\n\n**Implementation note**\n- `SCT#261665006 'Unknown'´ is included only as a provisional development workaround; in production, prefer FHIR `dataAbsentReason` for missing data rather than “Unknown” as a procedure code.",
+      "description" : "ValueSet enumerating swallowing screening/assessment procedures/tools used in stroke care.\n\n**Implementation note**\n- `SCT#261665006 'Unknown'´ is included only as a provisional development workaround; in production, prefer FHIR `dataAbsentReason` for missing data rather than “Unknown” as a procedure code.",
       "systems" : [
         "http://tecnomod-um.org/CodeSystem/swallow-procedures-cs",
         "http://snomed.info/sct"
@@ -269,7 +269,7 @@
       "status" : "active",
       "name" : "SwallowingScreeningTimingCategoryVS",
       "title" : "Swallowing Screening Timing Category ValueSet",
-      "description" : "ValueSet defining allowed categories for swallowing screening timing, combining:\n- local categories (e.g., within 4 hours), and\n- SNOMED CT qualifier concepts for post-admission timing.\n\n**Use-case**\n- Required binding for the swallowing timing extension to standardize KPI reporting across sites.",
+      "description" : "ValueSet defining allowed categories for swallowing screening timing, combining:\n- local categories (e.g., within 4 hours), and\n- SNOMED CT qualifier concepts for post-admission timing.\n\n**Use-case**\n- Required binding for the swallowing timing extension.",
       "systems" : [
         "http://tecnomod-um.org/CodeSystem/swallow-screen-time-cs",
         "http://snomed.info/sct"
@@ -282,7 +282,10 @@
       "name" : "ThrombectomyComplicationVS",
       "title" : "Thrombectomy Complications ValueSet",
       "description" : " ValueSet of SNOMED CT concepts representing complications of thrombectomy as clinical conditions.\n\n**Primary use-case**\n- Bind `Procedure.complication` (or the referenced Condition.code) to a SNOMED-based set for interoperability.",
-      "systems" : ["http://snomed.info/sct"]
+      "systems" : [
+        "http://tecnomod-um.org/CodeSystem/thrombectomy-complication-cs",
+        "http://snomed.info/sct"
+      ]
     },
     {
       "url" : "http://tecnomod-um.org/ValueSet/timing-metric-codes-vs",

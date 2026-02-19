@@ -10,7 +10,7 @@
   <name value="CarotidImagingModalityVS"/>
   <title value="Carotid Arteries Imaging Modality ValueSet"/>
   <status value="active"/>
-  <date value="2026-02-19T10:59:57+00:00"/>
+  <date value="2026-02-19T11:36:03+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>
@@ -19,7 +19,7 @@
       <value value="http://tecnomod-um.org"/>
     </telecom>
   </contact>
-  <description value="This ValueSet enumerates standardized codes (primarily SNOMED CT procedures) representing **carotid imaging modalities** used in stroke workflows.&#xA;&#xA;**Primary use-case**&#xA;- Bind to `Procedure.code` when recording a carotid imaging study performed during the stroke episode.&#xA;&#xA;**Why it matters**&#xA;- Supports comparable reporting across facilities (e.g., Doppler vs angiography vs CTA/MRA usage).&#xA;- Reduces variability from local naming conventions and free-text.&#xA;&#xA;**What it does not represent**&#xA;- Imaging results/findings (e.g., stenosis severity). Findings should be modeled separately (Observation/DiagnosticReport/ImagingStudy, depending on your architecture)."/>
+  <description value="This ValueSet enumerates standardized codes (primarily SNOMED CT procedures) representing **carotid imaging modalities** used in stroke workflows.&#xA;&#xA;**Primary use-case**&#xA;- Bind to `Procedure.code` when recording a carotid imaging study performed during the stroke episode."/>
   <compose>
     <include>
       <system value="http://snomed.info/sct"/>

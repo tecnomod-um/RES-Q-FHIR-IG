@@ -13,11 +13,8 @@
 
  
 Local CodeSystem representing swallowing screening/assessment tools often documented by acronym or local naming. 
-**Primary use-case** 
-* Provide stable, implementable codes when upstream systems cannot supply SNOMED CT equivalents.
- 
 **FHIR placement** 
-* Included in `SwallowProceduresVS` to be used in `Procedure.code` and (optionally) `Procedure.used.concept`.
+* Included in `SwallowProceduresVS` to be used in `Procedure.code`
  
 
  This Code system is referenced in the content logical definition of the following value sets: 
@@ -37,7 +34,7 @@ Local CodeSystem representing swallowing screening/assessment tools often docume
   "name" : "SwallowProceduresCS",
   "title" : "Swallow Procedures CodeSystem",
   "status" : "active",
-  "date" : "2026-02-19T10:59:57+00:00",
+  "date" : "2026-02-19T11:36:03+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -50,7 +47,7 @@ Local CodeSystem representing swallowing screening/assessment tools often docume
       ]
     }
   ],
-  "description" : "Local CodeSystem representing swallowing screening/assessment tools often documented by acronym or local naming.\n\n**Primary use-case**\n- Provide stable, implementable codes when upstream systems cannot supply SNOMED CT equivalents.\n\n**FHIR placement**\n- Included in `SwallowProceduresVS` to be used in `Procedure.code` and (optionally) `Procedure.used.concept`.",
+  "description" : "Local CodeSystem representing swallowing screening/assessment tools often documented by acronym or local naming.\n\n**FHIR placement**\n- Included in `SwallowProceduresVS` to be used in `Procedure.code` ",
   "content" : "complete",
   "count" : 3,
   "concept" : [

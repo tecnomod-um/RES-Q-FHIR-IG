@@ -20,7 +20,7 @@
   <name value="StrokeThrombolysisProcedureProfile"/>
   <title value="Stroke Thrombolysis Procedure Profile"/>
   <status value="active"/>
-  <date value="2026-02-19T10:59:57+00:00"/>
+  <date value="2026-02-19T11:36:03+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>
@@ -29,7 +29,7 @@
       <value value="http://tecnomod-um.org"/>
     </telecom>
   </contact>
-  <description value="Profile for documenting **stroke reperfusion procedures** as FHIR Procedure:&#xA;- IV thrombolysis (IVT)&#xA;- Mechanical thrombectomy (MT)&#xA;&#xA;**Captures**&#xA;- `code`: restricted to reperfusion procedures (PerforationProceduresVS).&#xA;- `status`: completed/not-done/etc.&#xA;- `statusReason`: controlled reason set when not done.&#xA;- `occurrence[x]` (constrained to Period): start/end time of the intervention when available.&#xA;- `complication`: complications (as CodeableReference to Condition) — constrained by invariants.&#xA;- `extension[timingContext]`: acute/post-acute phase classification.&#xA;&#xA;**Use-cases**&#xA;- Time-to-treatment metrics (door-to-needle, door-to-groin), service evaluation.&#xA;- Structured documentation of “why not treated” for QI programs.&#xA;- Safety monitoring for procedural complications. "/>
+  <description value="Profile for documenting **stroke reperfusion procedures** as FHIR Procedure:&#xA;- IV thrombolysis (IVT)&#xA;- Mechanical thrombectomy (MT)&#xA;&#xA;**Captures**&#xA;- `code`: restricted to reperfusion procedures (PerforationProceduresVS).&#xA;- `status`: completed/not-done/etc.&#xA;- `statusReason`: controlled reason set when not done.&#xA;- `occurrence[x]` (constrained to Period): start/end time of the intervention when available.&#xA;- `complication`: complications (as CodeableReference to Condition) — constrained by invariants.&#xA;- `extension[timingContext]`: acute/post-acute phase classification.&#xA;&#xA;**Typical scenarios**&#xA;1) Reperfusion performed on-site: `status=completed`, `occurrence[x]` present, `timingContext` optional.&#xA;2) Reperfusion not performed: `status=not-done`, `statusReason` required.&#xA;3) Reperfusion performed elsewhere: `status=not-done`, `statusReason` = performedElsewhere, `occurrence[x]` optional.&#xA;4) Reperfusion attempted but complicated by perforation: `status=completed`, `complication` = perforation code, `occurrence[x]` captures timing of the attempt.&#xA;"/>
   <fhirVersion value="5.0.0"/>
   <mapping>
     <identity value="workflow"/>

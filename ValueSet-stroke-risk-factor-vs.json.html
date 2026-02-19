@@ -243,7 +243,7 @@
       ]
     }
   ],
-  "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.description">description</a>" : "Defines the SNOMED CT codes for conditions or risk factors relevant to stroke, including an option for unknown status.",
+  "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.description">description</a>" : "This ValueSet enumerates SNOMED CT disorder concepts representing **pre-existing or concurrent conditions** that increase stroke risk.\n\n**Primary use-case**\n- Required binding to `Condition.code` in `StrokeRiskFactorConditionProfile`, used to maintain a structured problem list supporting:\n  - etiologic reasoning (e.g., cardioembolic risk),\n  - clinical decision support (e.g., anticoagulation considerations),\n  - quality reporting and research cohort definition.\n\n**Modeling notes**\n- This ValueSet is for *previously documented conditions* (problems), not for “risk factor unknown”.\n  If a risk factor assessment is unknown/not assessed, represent that as an Observation (status/result) or use `dataAbsentReason` patterns rather than a Condition with an “Unknown” code.\n- The acute stroke event itself should be represented by `StrokeDiagnosisConditionProfile`, not by this risk factor profile.",
   "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.immutable">immutable</a>" : false,
   "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.purpose">purpose</a>" : "To provide a standardized set of SNOMED CT concepts representing stroke-related risk factors for coding and validation.",
   "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.copyright">copyright</a>" : "This value set includes SNOMED CT® content. SNOMED CT® is distributed by SNOMED International.",
@@ -324,7 +324,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 12:37+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 14:25+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

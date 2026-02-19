@@ -43,7 +43,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
   "version" : "0.1.0",
   "name" : "RESQIG",
   "status" : "draft",
-  "date" : "2026-02-19T12:37:09+00:00",
+  "date" : "2026-02-19T14:25:22+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -104,7 +104,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "ValueSet/admission-source-vs"
         },
         "name" : "Admission Sources ValueSet",
-        "description" : "Defines the modes of transport or pathways by which the patient arrived.",
+        "description" : "This ValueSet enumerates modes of transport or pathways by which a patient arrived for the index stroke encounter.\n\n**Primary use-cases**\n- Bind to admission source elements (commonly `Encounter.hospitalization.admitSource` or local equivalents) to support:\n  - operational reporting (ambulance vs own transport),\n  - pathway compliance (e.g., EMS prenotification pathways),\n  - inter-facility transfer analytics.",
         "isExample" : false
       },
       {
@@ -288,7 +288,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "ValueSet/discharge-destination-vs"
         },
         "name" : "Discharge Destination ValueSet",
-        "description" : "Defines possible patient discharge destinations.",
+        "description" : "This ValueSet enumerates discharge destination concepts (primarily SNOMED CT procedure-like “discharge to …” concepts).\n\n**Primary use-cases**\n- Bind to discharge disposition elements in encounter/hospitalization modeling.\n  enabling consistent:\n  - care transition analytics,\n  - pathway reporting (home vs ward vs facility vs mortuary),\n  - downstream coordination workflows.",
         "isExample" : false
       },
       {
@@ -406,8 +406,8 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
         "reference" : {
           "reference" : "CodeSystem/hemorrhagic-stroke-bleeding-reason-cs"
         },
-        "name" : "Hemorrhagic Stroke Bleeding Reason Code System",
-        "description" : "Codes indicating the reason for bleeding in hemorrhagic stroke cases.",
+        "name" : "Hemorrhagic Stroke Bleeding Reason CodeSystem",
+        "description" : "Local CodeSystem representing **locally governed reasons/causes** for intracranial bleeding in hemorrhagic stroke.\n\n**Primary use-case**\n- Used via `HemorrhagicStrokeBleedingReasonVS` as the allowed vocabulary for `HemorrhagicStrokeBleedingReasonExt.valueCodeableConcept`\n  on a definitive hemorrhagic stroke Condition.",
         "isExample" : false
       },
       {
@@ -421,7 +421,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "ValueSet/hemorrhagic-stroke-bleeding-reason-vs"
         },
         "name" : "Hemorrhagic Stroke Bleeding Reason ValueSet",
-        "description" : "Specifies the identified cause of a hemorrhagic stroke, typically used with an extension.",
+        "description" : "This ValueSet defines allowable causes of bleeding for hemorrhagic stroke documentation.\n\n**Primary use-case**\n- Required binding for `HemorrhagicStrokeBleedingReasonExt.valueCodeableConcept` on a definitive hemorrhagic stroke Condition.\n\n**Implementation guidance**\n- Use when the cause is *identified* (e.g., aneurysm, vascular malformation).\n- If the cause is unknown/undetermined, prefer documenting that explicitly using narrative (`Condition.note`) and/or a dedicated assessment Observation;\n  if a coded placeholder is required, `Undetermined (qualifier value)` is included as an option.",
         "isExample" : false
       },
       {
@@ -435,7 +435,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "StructureDefinition/hemorrhagic-stroke-bleeding-reason-ext"
         },
         "name" : "Hemorrhagic Stroke – Bleeding Reason",
-        "description" : "Captures, as a CodeableConcept bound (required) to HemorrhagicStrokeBleedingReasonVS, the identified cause of intracranial bleeding in hemorrhagic stroke (e.g., aneurysm, vascular malformation, other). Use when coding a definitive hemorrhagic stroke Condition to support analytics and decision support; do not use for non-hemorrhagic etiologies or when the cause is unknown/undetermined.",
+        "description" : "Extension capturing the **identified cause of intracranial bleeding** in a hemorrhagic stroke.\n\n**Primary use-case**\n- Attach to a definitive hemorrhagic stroke Condition (`StrokeDiagnosisConditionProfile`) to support:\n  - etiologic stratification (aneurysm vs vascular malformation vs other),\n  - analytics and registry reporting,\n  - targeted clinical decision support pathways.\n\n**FHIR placement**\n- `Condition.extension[bleedingReason].valueCodeableConcept` (required binding to HemorrhagicStrokeBleedingReasonVS).",
         "isExample" : false
       },
       {
@@ -505,7 +505,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "StructureDefinition/ischemic-stroke-etiology-ext"
         },
         "name" : "Ischemic Stroke – Etiology",
-        "description" : "Records the determined ischemic stroke etiology as a CodeableConcept bound (required) to StrokeEtiologyVS (e.g., cardioembolic, large artery atherosclerosis, lacunar, cryptogenic). Apply to definitive ischemic stroke Conditions after diagnostic workup; avoid use for hemorrhagic strokes or provisional hypotheses not yet established.",
+        "description" : "Extension capturing the **determined ischemic stroke etiology classification**.\n\n**Primary use-case**\n- Attach to a definitive ischemic stroke Condition (`StrokeDiagnosisConditionProfile`) to support:\n  - etiologic subgroup analytics (cardioembolic vs lacunar vs cryptogenic, etc.),\n  - pathway decision support (e.g., prolonged rhythm monitoring for cryptogenic stroke),\n\n**When to use**\n- Use after etiologic workup when a classification is assigned.\n- Do not use for hemorrhagic stroke diagnoses.\n- If the etiology remains unknown/undetermined, either omit the extension or use the “Undetermined” code included in StrokeEtiologyVS.\n\n**FHIR placement**\n- `Condition.extension[ischemicEtiology].valueCodeableConcept` (required binding to StrokeEtiologyVS).",
         "isExample" : false
       },
       {
@@ -960,7 +960,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "StructureDefinition/stroke-diagnosis-condition-profile"
         },
         "name" : "Stroke Diagnosis Condition Profile",
-        "description" : "Defines a Condition profile constrained to represent the definitive diagnosis of the current stroke event during the indexed encounter. The profile fixes category to encounter-diagnosis, binds code (required) to StrokeDiagnosisVS, and prohibits onset[x] to avoid ambiguity with symptom-onset capture via dedicated extensions. Use this profile for final/confirmed stroke diagnoses recorded at discharge or after diagnostic workup; do not use it for history-of conditions, screening findings, or provisional ‘rule-out’ statements. Optional extensions capture hemorrhagic bleeding reason, ischemic etiology, and structured onset date/time when clinically known.",
+        "description" : "Profile representing the **definitive diagnosis of the current/index stroke event** during the linked encounter.\n\n**Primary use-case**\n- Use for final/confirmed stroke diagnoses recorded during the index hospitalization/encounter (e.g., at discharge or after diagnostic workup).\n\n**Key constraints**\n- `Condition.category` is fixed to `encounter-diagnosis` to indicate this is the encounter’s diagnosis, not a general problem list item.\n- `Condition.code` is required and bound (required) to StrokeDiagnosisVS.\n- `Condition.onset[x]` is prohibited to avoid ambiguity: symptom onset is captured using dedicated onset extensions (date/time).\n\n**Supported structured enrichments**\n- `extension[bleedingReason]`: for hemorrhagic stroke bleeding cause (aneurysm, malformation, other/undetermined).\n- `extension[ischemicEtiology]`: for ischemic stroke etiology classification.\n- `extension[onsetDate]` and `extension[onsetTime]`: structured symptom onset capture.",
         "isExample" : false
       },
       {
@@ -974,7 +974,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "ValueSet/stroke-diagnosis-vs"
         },
         "name" : "Stroke Diagnosis ValueSet",
-        "description" : "SNOMED CT concepts representing final stroke-related diagnoses intended for use in Condition.code (and similar elements) within this IG. The scope covers ischemic stroke, intracerebral hemorrhage, subarachnoid hemorrhage, cerebral venous thrombosis, and transient ischemic attack (TIA). This value set is designed to support consistent capture, validation, analytics, and decision support. Implementers should expand against a terminology server using the appropriate SNOMED CT edition/version and preferred language(s) for display. Localizations or national derivatives MAY provide additional designations without altering the canonical definition. This value set is not intended for history-of, screening, or procedural concepts.",
+        "description" : "This ValueSet enumerates SNOMED CT concepts representing **final stroke-related diagnoses** for use in `Condition.code` within this Implementation Guide (IG).\n\n**Primary use-case**\n- Required binding to `Condition.code` in `StrokeDiagnosisConditionProfile`, representing the *definitive diagnosis* of the index stroke event for the linked encounter.\n\n**Scope**\n- Ischemic stroke\n- Intracerebral/cerebral hemorrhage\n- Subarachnoid hemorrhage\n- Cerebral venous thrombosis\n- Transient ischemic attack (TIA)\n- “Undetermined” qualifier (use cautiously; see notes)\n\n**Modeling notes**\n- This ValueSet is intended for definitive diagnoses (e.g., at discharge or after diagnostic workup), not “rule-out”, screening, history-of, or procedural concepts.\n- Terminology expansion should be performed against the appropriate SNOMED CT edition/version and preferred language(s). Localizations MAY add designations without changing meaning.\n- If “undetermined” is used, consider adding supporting narrative in `Condition.note` and/or linking evidence in Observations/DiagnosticReports to preserve interpretability.",
         "isExample" : false
       },
       {
@@ -1029,8 +1029,8 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
         "reference" : {
           "reference" : "CodeSystem/stroke-etiology-cs"
         },
-        "name" : "Stroke Etiology Code System",
-        "description" : "Codes indicating the etiology of strokes.",
+        "name" : "Stroke Etiology CodeSystem",
+        "description" : "Local CodeSystem defining categories for **ischemic stroke etiology** classification.\n\n**Primary use-case**\n- Used via `StrokeEtiologyVS` as the required vocabulary for `StrokeStrokeEtiologyExt.valueCodeableConcept`\n  on a definitive ischemic stroke Condition.\n\n**Why it exists**\n- Stroke etiology classification often mixes internationally standard categories (cardioembolic, lacunar, cryptogenic) with local operational buckets.\n\n**Modeling notes**\n- This CodeSystem is intended for “final etiology classification” after diagnostic workup, not for provisional hypotheses.",
         "isExample" : false
       },
       {
@@ -1044,7 +1044,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "ValueSet/stroke-etiology-vs"
         },
         "name" : "Stroke Etiology ValueSet",
-        "description" : "Specifies the determined etiology of an stroke.",
+        "description" : "This ValueSet defines allowable values for recording the **determined ischemic stroke etiology**.\n\n**Primary use-case**\n- Required binding for `StrokeStrokeEtiologyExt.valueCodeableConcept` on definitive ischemic stroke Conditions.\n\n**Composition**\n- Local etiology categories (StrokeEtiologyCS), plus selected SNOMED CT disorder concepts for commonly used etiology groupings.\n\n**Implementation guidance**\n- Use after etiologic workup when a classification is assigned.\n- If etiology remains unknown/undetermined, use the included `Undetermined (qualifier value)`",
         "isExample" : false
       },
       {
@@ -1073,34 +1073,6 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
         },
         "name" : "Stroke Functional Score Observation Profile",
         "description" : "Profile for recording stroke functional outcome and severity scores (currently mRS and NIHSS) in an interoperable, context-aware way.\n\n**Primary use-case**\n- Capture outcomes by phase (baseline, admission, discharge, ~90-day follow-up) using a required timing context extension.\n\n**Key constraints**\n- `Observation.code` is bound to FunctionalScoreCodesVS (mRS or NIHSS).\n- `extension[timingContext]` is mandatory to label the clinical phase.\n- Datatype and binding rules are enforced via invariants:\n  - mRS → `valueCodeableConcept` bound to MRsScoreVS.\n  - NIHSS → `valueInteger` as total NIHSS score.\n\n**Typical scenarios**\n1) An mRS score assessed at discharge would have `Observation.code` = mRS code, `valueCodeableConcept` = mRS grade (0–6), and the timing context extension value = discharge.\n2) An NIHSS score assessed at admission would have `Observation.code` = NIHSS code, `valueInteger` = total NIHSS score, and the timing context extension value = admission.",
-        "isExample" : false
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "StructureDefinition:extension"
-          }
-        ],
-        "reference" : {
-          "reference" : "StructureDefinition/onset-date-ext"
-        },
-        "name" : "Stroke Onset Date",
-        "description" : "Captures the calendar date (value[x] = date) of symptom onset for the indexed stroke event when known, enabling calculation of onset-to-door metrics and adherence to time-sensitive pathways. Use alongside OnsetTimeExt when hour/minute precision is available; omit if onset is unknown or inapplicable.",
-        "isExample" : false
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "StructureDefinition:extension"
-          }
-        ],
-        "reference" : {
-          "reference" : "StructureDefinition/onset-time-ext"
-        },
-        "name" : "Stroke Onset Time",
-        "description" : "Captures the clock time (value[x] = time) of symptom onset for the indexed stroke event when available, complementing OnsetDateExt to support precise onset-to-treatment intervals. Use local time of the clinical setting; omit if time is unknown or estimated beyond acceptable precision.",
         "isExample" : false
       },
       {
@@ -1156,7 +1128,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "StructureDefinition/stroke-risk-factor-condition-profile"
         },
         "name" : "Stroke Risk Factor Condition Profile",
-        "description" : "Defines a Condition profile for pre-existing or concurrent conditions that increase stroke risk (e.g., atrial fibrillation/flutter, diabetes, hypertension, coronary disease). The profile fixes category to problem-list-item, binds code (required) to StrokeRiskFactorVS, and supports onset[x] and recordedDate to document chronology and longitudinal tracking. Use this profile to maintain the problem list and to support risk assessment and CDS; do not use it to code the acute stroke event itself.",
+        "description" : "Profile for **pre-existing or concurrent conditions** that increase stroke risk (e.g., AF/flutter, diabetes, hypertension, coronary disease).\n\n**Key constraints**\n- `Condition.category` is fixed to `problem-list-item` to indicate a problem list entry.\n- `Condition.code` is required and bound (required) to StrokeRiskFactorVS.\n- `Condition.onset[x]` and `Condition.recordedDate` are marked Must Support to enable chronology and longitudinal tracking.",
         "isExample" : false
       },
       {
@@ -1170,7 +1142,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "ValueSet/stroke-risk-factor-vs"
         },
         "name" : "Stroke Risk Factor ValueSet",
-        "description" : "Defines the SNOMED CT codes for conditions or risk factors relevant to stroke, including an option for unknown status.",
+        "description" : "This ValueSet enumerates SNOMED CT disorder concepts representing **pre-existing or concurrent conditions** that increase stroke risk.\n\n**Primary use-case**\n- Required binding to `Condition.code` in `StrokeRiskFactorConditionProfile`, used to maintain a structured problem list supporting:\n  - etiologic reasoning (e.g., cardioembolic risk),\n  - clinical decision support (e.g., anticoagulation considerations),\n  - quality reporting and research cohort definition.\n\n**Modeling notes**\n- This ValueSet is for *previously documented conditions* (problems), not for “risk factor unknown”.\n  If a risk factor assessment is unknown/not assessed, represent that as an Observation (status/result) or use `dataAbsentReason` patterns rather than a Condition with an “Unknown” code.\n- The acute stroke event itself should be represented by `StrokeDiagnosisConditionProfile`, not by this risk factor profile.",
         "isExample" : false
       },
       {
@@ -1185,6 +1157,34 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
         },
         "name" : "Stroke Swallow Procedure Profile",
         "description" : " Profile for documenting **swallow screening / dysphagia assessment** during a stroke episode.\n\n**Captures**\n- `code`: the screening/assessment procedure or tool used (SwallowProceduresVS).\n- `status`: whether completed or not done.\n- `statusReason`: controlled reason set when not done.\n- `extension[screeningTimingCategory]`: timing bucket (e.g., within 4h).\n- `extension[timingContext]`: acute/post-acute phase relative to encounter start.\n\n\n** Typical scenarios**\n1) Screening completed on-site: `status=completed`, `extension[screeningTimingCategory]` optional, `extension[timingContext]` optional.\n2) Screening not performed: `status=not-done`, `statusReason` required.\n3) Screening performed elsewhere: `status=not-done`, `statusReason` = performedElsewhere, `extension[screeningTimingCategory]` optional.",
+        "isExample" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:extension"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/onset-date-ext"
+        },
+        "name" : "Stroke Symptom Onset Date Extension",
+        "description" : "Extension capturing the **calendar date** of symptom onset for the index stroke event.\n\n**Primary use-cases**\n- Compute onset-to-door and onset-to-treatment metrics when combined with encounter/treatment timestamps.\n- Support time-sensitive eligibility pathways when onset is known at least to the day.\n\n**When to use**\n- Use when onset date is known with reasonable confidence.\n- Use alongside `OnsetTimeExt` when time-of-day precision is available.\n- Omit if onset is unknown, only broadly estimated, or not applicable (e.g., certain in-hospital events may use different timing constructs).\n\n**FHIR placement**\n- `Condition.extension[onsetDate].valueDate`",
+        "isExample" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:extension"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/onset-time-ext"
+        },
+        "name" : "Stroke Symptom Onset Time Extension",
+        "description" : "Extension capturing the **clock time** of symptom onset for the index stroke event.\n\n**Primary use-cases**\n- Enable precise onset-to-treatment intervals (e.g., onset-to-needle, onset-to-groin puncture).\n- Improve accuracy of eligibility assessments in time-window–dependent interventions.\n\n**When to use**\n- Use when onset time is known with sufficient precision for clinical use.\n- Omit if time is unknown or too uncertain.\n\n**FHIR placement**\n- `Condition.extension[onsetTime].valueTime`\n\n**Implementation note**\n- If `OnsetTimeExt` is present, `OnsetDateExt` should generally also be present (enforced as a warning invariant below).",
         "isExample" : false
       },
       {

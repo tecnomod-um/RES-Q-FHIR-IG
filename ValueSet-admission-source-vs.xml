@@ -20,7 +20,7 @@
       <value value="http://tecnomod-um.org"/>
     </telecom>
   </contact>
-  <description value="Defines the modes of transport or pathways by which the patient arrived."/>
+  <description value="This ValueSet enumerates modes of transport or pathways by which a patient arrived for the index stroke encounter.&#xA;&#xA;**Primary use-cases**&#xA;- Bind to admission source elements (commonly `Encounter.hospitalization.admitSource` or local equivalents) to support:&#xA;  - operational reporting (ambulance vs own transport),&#xA;  - pathway compliance (e.g., EMS prenotification pathways),&#xA;  - inter-facility transfer analytics."/>
   <immutable value="false"/>
   <purpose value="To standardize the capture of patient admission sources for workflow, reporting, and interoperability."/>
   <copyright value="This value set includes SNOMED CT® content. SNOMED CT® is distributed by SNOMED International."/>

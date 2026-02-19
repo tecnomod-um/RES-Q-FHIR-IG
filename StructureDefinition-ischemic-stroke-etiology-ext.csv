@@ -1,6 +1,19 @@
 "Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
 "Extension","Extension","","","",0,*,"","","","null {[]} {[]}
-","Ischemic Stroke – Etiology","Records the determined ischemic stroke etiology as a CodeableConcept bound (required) to StrokeEtiologyVS (e.g., cardioembolic, large artery atherosclerosis, lacunar, cryptogenic). Apply to definitive ischemic stroke Conditions after diagnostic workup; avoid use for hemorrhagic strokes or provisional hypotheses not yet established.","","","","","","","","","",,,,,"",,,,"Extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Ischemic Stroke – Etiology","Extension capturing the **determined ischemic stroke etiology classification**.
+
+**Primary use-case**
+- Attach to a definitive ischemic stroke Condition (`StrokeDiagnosisConditionProfile`) to support:
+  - etiologic subgroup analytics (cardioembolic vs lacunar vs cryptogenic, etc.),
+  - pathway decision support (e.g., prolonged rhythm monitoring for cryptogenic stroke),
+
+**When to use**
+- Use after etiologic workup when a classification is assigned.
+- Do not use for hemorrhagic stroke diagnoses.
+- If the etiology remains unknown/undetermined, either omit the extension or use the “Undetermined” code included in StrokeEtiologyVS.
+
+**FHIR placement**
+- `Condition.extension[ischemicEtiology].valueCodeableConcept` (required binding to StrokeEtiologyVS).","","","","","","","","","",,,,,"",,,,"Extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Extension.id","Extension.id","","","",0,1,"","","","id {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"ele-1

@@ -1,6 +1,20 @@
 "Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
 "Extension","Extension","","","",0,*,"","","","null {[]} {[]}
-","Stroke Onset Time","Captures the clock time (value[x] = time) of symptom onset for the indexed stroke event when available, complementing OnsetDateExt to support precise onset-to-treatment intervals. Use local time of the clinical setting; omit if time is unknown or estimated beyond acceptable precision.","","","","","","","","","",,,,,"",,,,"Extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Stroke Symptom Onset Time Extension","Extension capturing the **clock time** of symptom onset for the index stroke event.
+
+**Primary use-cases**
+- Enable precise onset-to-treatment intervals (e.g., onset-to-needle, onset-to-groin puncture).
+- Improve accuracy of eligibility assessments in time-window–dependent interventions.
+
+**When to use**
+- Use when onset time is known with sufficient precision for clinical use.
+- Omit if time is unknown or too uncertain.
+
+**FHIR placement**
+- `Condition.extension[onsetTime].valueTime`
+
+**Implementation note**
+- If `OnsetTimeExt` is present, `OnsetDateExt` should generally also be present (enforced as a warning invariant below).","","","","","","","","","",,,,,"",,,,"Extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Extension.id","Extension.id","","","",0,1,"","","","id {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"ele-1

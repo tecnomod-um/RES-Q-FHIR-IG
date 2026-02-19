@@ -13,7 +13,14 @@
 | **Copyright/Legal**: © Tecnomod. This value set includes locally defined codes. | |
 
  
-Specifies the identified cause of a hemorrhagic stroke, typically used with an extension. 
+This ValueSet defines allowable causes of bleeding for hemorrhagic stroke documentation. 
+**Primary use-case** 
+* Required binding for `HemorrhagicStrokeBleedingReasonExt.valueCodeableConcept` on a definitive hemorrhagic stroke Condition.
+ 
+**Implementation guidance** 
+* Use when the cause is **identified** (e.g., aneurysm, vascular malformation).
+* If the cause is unknown/undetermined, prefer documenting that explicitly using narrative (`Condition.note`) and/or a dedicated assessment Observation; if a coded placeholder is required, `Undetermined (qualifier value)` is included as an option.
+ 
 
  
 To enable consistent capture of the underlying cause of bleeding in hemorrhagic stroke. 
@@ -68,7 +75,7 @@ To enable consistent capture of the underlying cause of bleeding in hemorrhagic 
       ]
     }
   ],
-  "description" : "Specifies the identified cause of a hemorrhagic stroke, typically used with an extension.",
+  "description" : "This ValueSet defines allowable causes of bleeding for hemorrhagic stroke documentation.\n\n**Primary use-case**\n- Required binding for `HemorrhagicStrokeBleedingReasonExt.valueCodeableConcept` on a definitive hemorrhagic stroke Condition.\n\n**Implementation guidance**\n- Use when the cause is *identified* (e.g., aneurysm, vascular malformation).\n- If the cause is unknown/undetermined, prefer documenting that explicitly using narrative (`Condition.note`) and/or a dedicated assessment Observation;\n  if a coded placeholder is required, `Undetermined (qualifier value)` is included as an option.",
   "immutable" : false,
   "purpose" : "To enable consistent capture of the underlying cause of bleeding in hemorrhagic stroke.",
   "copyright" : "© Tecnomod. This value set includes locally defined codes.",

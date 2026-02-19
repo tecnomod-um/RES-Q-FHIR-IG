@@ -13,7 +13,14 @@
 | **Copyright/Legal**: This value set includes SNOMED CT® content. SNOMED CT® is distributed by SNOMED International. | |
 
  
-Defines possible patient discharge destinations. 
+This ValueSet enumerates discharge destination concepts (primarily SNOMED CT procedure-like “discharge to …” concepts). 
+**Primary use-cases** 
+* Bind to discharge disposition elements in encounter/hospitalization modeling. enabling consistent: 
+* care transition analytics,
+* pathway reporting (home vs ward vs facility vs mortuary),
+* downstream coordination workflows.
+ 
+ 
 
  
 To support consistent recording of discharge destinations for analytics, reporting, and care coordination. 
@@ -68,7 +75,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
       ]
     }
   ],
-  "description" : "Defines possible patient discharge destinations.",
+  "description" : "This ValueSet enumerates discharge destination concepts (primarily SNOMED CT procedure-like “discharge to …” concepts).\n\n**Primary use-cases**\n- Bind to discharge disposition elements in encounter/hospitalization modeling.\n  enabling consistent:\n  - care transition analytics,\n  - pathway reporting (home vs ward vs facility vs mortuary),\n  - downstream coordination workflows.",
   "immutable" : false,
   "purpose" : "To support consistent recording of discharge destinations for analytics, reporting, and care coordination.",
   "copyright" : "This value set includes SNOMED CT® content. SNOMED CT® is distributed by SNOMED International.",

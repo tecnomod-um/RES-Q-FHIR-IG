@@ -27,16 +27,64 @@ dom-4dom-3dom-5","","N/A"
 ","",,"open","DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Condition.extension:bleedingReason","Condition.extension","bleedingReason","","",0,1,"Y","","","Extension {[CanonicalType[http://tecnomod-um.org/StructureDefinition/hemorrhagic-stroke-bleeding-reason-ext]]} {[]}
-","Hemorrhagic Stroke – Bleeding Reason","Captures, as a CodeableConcept bound (required) to HemorrhagicStrokeBleedingReasonVS, the identified cause of intracranial bleeding in hemorrhagic stroke (e.g., aneurysm, vascular malformation, other). Use when coding a definitive hemorrhagic stroke Condition to support analytics and decision support; do not use for non-hemorrhagic etiologies or when the cause is unknown/undetermined.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Hemorrhagic Stroke – Bleeding Reason","Extension capturing the **identified cause of intracranial bleeding** in a hemorrhagic stroke.
+
+**Primary use-case**
+- Attach to a definitive hemorrhagic stroke Condition (`StrokeDiagnosisConditionProfile`) to support:
+  - etiologic stratification (aneurysm vs vascular malformation vs other),
+  - analytics and registry reporting,
+  - targeted clinical decision support pathways.
+
+**FHIR placement**
+- `Condition.extension[bleedingReason].valueCodeableConcept` (required binding to HemorrhagicStrokeBleedingReasonVS).","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Condition.extension:ischemicEtiology","Condition.extension","ischemicEtiology","","",0,1,"Y","","","Extension {[CanonicalType[http://tecnomod-um.org/StructureDefinition/ischemic-stroke-etiology-ext]]} {[]}
-","Ischemic Stroke – Etiology","Records the determined ischemic stroke etiology as a CodeableConcept bound (required) to StrokeEtiologyVS (e.g., cardioembolic, large artery atherosclerosis, lacunar, cryptogenic). Apply to definitive ischemic stroke Conditions after diagnostic workup; avoid use for hemorrhagic strokes or provisional hypotheses not yet established.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Ischemic Stroke – Etiology","Extension capturing the **determined ischemic stroke etiology classification**.
+
+**Primary use-case**
+- Attach to a definitive ischemic stroke Condition (`StrokeDiagnosisConditionProfile`) to support:
+  - etiologic subgroup analytics (cardioembolic vs lacunar vs cryptogenic, etc.),
+  - pathway decision support (e.g., prolonged rhythm monitoring for cryptogenic stroke),
+
+**When to use**
+- Use after etiologic workup when a classification is assigned.
+- Do not use for hemorrhagic stroke diagnoses.
+- If the etiology remains unknown/undetermined, either omit the extension or use the “Undetermined” code included in StrokeEtiologyVS.
+
+**FHIR placement**
+- `Condition.extension[ischemicEtiology].valueCodeableConcept` (required binding to StrokeEtiologyVS).","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Condition.extension:onsetDate","Condition.extension","onsetDate","","",0,1,"Y","","","Extension {[CanonicalType[http://tecnomod-um.org/StructureDefinition/onset-date-ext]]} {[]}
-","Stroke Onset Date","Captures the calendar date (value[x] = date) of symptom onset for the indexed stroke event when known, enabling calculation of onset-to-door metrics and adherence to time-sensitive pathways. Use alongside OnsetTimeExt when hour/minute precision is available; omit if onset is unknown or inapplicable.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Stroke Symptom Onset Date Extension","Extension capturing the **calendar date** of symptom onset for the index stroke event.
+
+**Primary use-cases**
+- Compute onset-to-door and onset-to-treatment metrics when combined with encounter/treatment timestamps.
+- Support time-sensitive eligibility pathways when onset is known at least to the day.
+
+**When to use**
+- Use when onset date is known with reasonable confidence.
+- Use alongside `OnsetTimeExt` when time-of-day precision is available.
+- Omit if onset is unknown, only broadly estimated, or not applicable (e.g., certain in-hospital events may use different timing constructs).
+
+**FHIR placement**
+- `Condition.extension[onsetDate].valueDate`","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Condition.extension:onsetTime","Condition.extension","onsetTime","","",0,1,"Y","","","Extension {[CanonicalType[http://tecnomod-um.org/StructureDefinition/onset-time-ext]]} {[]}
-","Stroke Onset Time","Captures the clock time (value[x] = time) of symptom onset for the indexed stroke event when available, complementing OnsetDateExt to support precise onset-to-treatment intervals. Use local time of the clinical setting; omit if time is unknown or estimated beyond acceptable precision.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Stroke Symptom Onset Time Extension","Extension capturing the **clock time** of symptom onset for the index stroke event.
+
+**Primary use-cases**
+- Enable precise onset-to-treatment intervals (e.g., onset-to-needle, onset-to-groin puncture).
+- Improve accuracy of eligibility assessments in time-window–dependent interventions.
+
+**When to use**
+- Use when onset time is known with sufficient precision for clinical use.
+- Omit if time is unknown or too uncertain.
+
+**FHIR placement**
+- `Condition.extension[onsetTime].valueTime`
+
+**Implementation note**
+- If `OnsetTimeExt` is present, `OnsetDateExt` should generally also be present (enforced as a warning invariant below).","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Condition.modifierExtension","Condition.modifierExtension","","extensions
 user content","",0,*,"","Y","Y","Extension {[]} {[]}

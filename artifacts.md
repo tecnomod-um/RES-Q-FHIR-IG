@@ -45,7 +45,14 @@ These define constraints on FHIR resources for systems conforming to this implem
 **Representation*** `Observation.code` bound to StrokeCircumstanceCodesVS.
 * Presence of the Observation asserts the circumstance applies to the index stroke event (within the linked Encounter).
 **Typical scenarios** 1) A patient who wakes up with stroke symptoms would have an Observation with `code` = wake-up stroke code, linked to the index stroke Encounter, indicating that the stroke onset circumstance is a wake-up stroke. 2) A patient who experiences stroke symptoms while already admitted for another reason would have an Observation with `code` = in-hospital stroke code, linked to the index stroke Encounter, indicating that the stroke onset circumstance is in-hospital onset. |
-| [Stroke Diagnosis Condition Profile](StructureDefinition-stroke-diagnosis-condition-profile.md) | Defines a Condition profile constrained to represent the definitive diagnosis of the current stroke event during the indexed encounter. The profile fixes category to encounter-diagnosis, binds code (required) to StrokeDiagnosisVS, and prohibits onset[x] to avoid ambiguity with symptom-onset capture via dedicated extensions. Use this profile for final/confirmed stroke diagnoses recorded at discharge or after diagnostic workup; do not use it for history-of conditions, screening findings, or provisional ‘rule-out’ statements. Optional extensions capture hemorrhagic bleeding reason, ischemic etiology, and structured onset date/time when clinically known. |
+| [Stroke Diagnosis Condition Profile](StructureDefinition-stroke-diagnosis-condition-profile.md) | Profile representing the **definitive diagnosis of the current/index stroke event** during the linked encounter.**Primary use-case*** Use for final/confirmed stroke diagnoses recorded during the index hospitalization/encounter (e.g., at discharge or after diagnostic workup).
+**Key constraints*** `Condition.category` is fixed to `encounter-diagnosis` to indicate this is the encounter’s diagnosis, not a general problem list item.
+* `Condition.code` is required and bound (required) to StrokeDiagnosisVS.
+* `Condition.onset[x]` is prohibited to avoid ambiguity: symptom onset is captured using dedicated onset extensions (date/time).
+**Supported structured enrichments*** `extension[bleedingReason]`: for hemorrhagic stroke bleeding cause (aneurysm, malformation, other/undetermined).
+* `extension[ischemicEtiology]`: for ischemic stroke etiology classification.
+* `extension[onsetDate]` and `extension[onsetTime]`: structured symptom onset capture.
+ |
 | [Stroke Encounter Profile](StructureDefinition-stroke-encounter-profile.md) | Profile for an Encounter resource representing a patient's hospital admission and stay for a stroke event, including key administrative and workflow details. |
 | [Stroke Functional Score Observation Profile](StructureDefinition-functional-score-observation-profile.md) | Profile for recording stroke functional outcome and severity scores (currently mRS and NIHSS) in an interoperable, context-aware way.**Primary use-case*** Capture outcomes by phase (baseline, admission, discharge, ~90-day follow-up) using a required timing context extension.
 **Key constraints*** `Observation.code` is bound to FunctionalScoreCodesVS (mRS or NIHSS).
@@ -56,7 +63,10 @@ These define constraints on FHIR resources for systems conforming to this implem
  
 **Typical scenarios** 1) An mRS score assessed at discharge would have `Observation.code` = mRS code, `valueCodeableConcept` = mRS grade (0–6), and the timing context extension value = discharge. 2) An NIHSS score assessed at admission would have `Observation.code` = NIHSS code, `valueInteger` = total NIHSS score, and the timing context extension value = admission. |
 | [Stroke Registry Organization Profile](StructureDefinition-stroke-registry-organization-profile.md) | Organization profile ensuring an active organization with a registry identifier (system=https://stroke.qualityregistry.org) and a required name, aligned with the build_organization() transformation. |
-| [Stroke Risk Factor Condition Profile](StructureDefinition-stroke-risk-factor-condition-profile.md) | Defines a Condition profile for pre-existing or concurrent conditions that increase stroke risk (e.g., atrial fibrillation/flutter, diabetes, hypertension, coronary disease). The profile fixes category to problem-list-item, binds code (required) to StrokeRiskFactorVS, and supports onset[x] and recordedDate to document chronology and longitudinal tracking. Use this profile to maintain the problem list and to support risk assessment and CDS; do not use it to code the acute stroke event itself. |
+| [Stroke Risk Factor Condition Profile](StructureDefinition-stroke-risk-factor-condition-profile.md) | Profile for **pre-existing or concurrent conditions** that increase stroke risk (e.g., AF/flutter, diabetes, hypertension, coronary disease).**Key constraints*** `Condition.category` is fixed to `problem-list-item` to indicate a problem list entry.
+* `Condition.code` is required and bound (required) to StrokeRiskFactorVS.
+* `Condition.onset[x]` and `Condition.recordedDate` are marked Must Support to enable chronology and longitudinal tracking.
+ |
 | [Stroke Swallow Procedure Profile](StructureDefinition-stroke-swallow-procedure-profile.md) | Profile for documenting **swallow screening / dysphagia assessment** during a stroke episode.**Captures*** `code`: the screening/assessment procedure or tool used (SwallowProceduresVS).
 * `status`: whether completed or not done.
 * `statusReason`: controlled reason set when not done.
@@ -90,9 +100,23 @@ These define constraints on FHIR data types for systems conforming to this imple
 | [Discharge Department/Service Extension](StructureDefinition-discharge-department-service-ext.md) | Specifies the type of department or service the patient was discharged or transferred to. |
 | [First Hospital Extension](StructureDefinition-first-hospital-ext.md) | Indicates if the reporting hospital was the first medical facility to admit the patient for this stroke episode. |
 | [Gender (SNOMED CT)](StructureDefinition-gender-snomed-ext.md) | Patient gender represented with SNOMED CT codes. |
-| [Hemorrhagic Stroke – Bleeding Reason](StructureDefinition-hemorrhagic-stroke-bleeding-reason-ext.md) | Captures, as a CodeableConcept bound (required) to HemorrhagicStrokeBleedingReasonVS, the identified cause of intracranial bleeding in hemorrhagic stroke (e.g., aneurysm, vascular malformation, other). Use when coding a definitive hemorrhagic stroke Condition to support analytics and decision support; do not use for non-hemorrhagic etiologies or when the cause is unknown/undetermined. |
+| [Hemorrhagic Stroke – Bleeding Reason](StructureDefinition-hemorrhagic-stroke-bleeding-reason-ext.md) | Extension capturing the **identified cause of intracranial bleeding** in a hemorrhagic stroke.**Primary use-case*** Attach to a definitive hemorrhagic stroke Condition (`StrokeDiagnosisConditionProfile`) to support: 
+* etiologic stratification (aneurysm vs vascular malformation vs other),
+* analytics and registry reporting,
+* targeted clinical decision support pathways.
+ 
+**FHIR placement*** `Condition.extension[bleedingReason].valueCodeableConcept` (required binding to HemorrhagicStrokeBleedingReasonVS).
+ |
 | [Initial Care Intensity Extension](StructureDefinition-initial-care-intensity-ext.md) | Specifies the level of care provided during the patient's initial day(s) in the hospital (e.g., standard bed, monitored, ICU/Stroke Unit). |
-| [Ischemic Stroke – Etiology](StructureDefinition-ischemic-stroke-etiology-ext.md) | Records the determined ischemic stroke etiology as a CodeableConcept bound (required) to StrokeEtiologyVS (e.g., cardioembolic, large artery atherosclerosis, lacunar, cryptogenic). Apply to definitive ischemic stroke Conditions after diagnostic workup; avoid use for hemorrhagic strokes or provisional hypotheses not yet established. |
+| [Ischemic Stroke – Etiology](StructureDefinition-ischemic-stroke-etiology-ext.md) | Extension capturing the **determined ischemic stroke etiology classification**.**Primary use-case*** Attach to a definitive ischemic stroke Condition (`StrokeDiagnosisConditionProfile`) to support: 
+* etiologic subgroup analytics (cardioembolic vs lacunar vs cryptogenic, etc.),
+* pathway decision support (e.g., prolonged rhythm monitoring for cryptogenic stroke),
+ 
+**When to use*** Use after etiologic workup when a classification is assigned.
+* Do not use for hemorrhagic stroke diagnoses.
+* If the etiology remains unknown/undetermined, either omit the extension or use the “Undetermined” code included in StrokeEtiologyVS.
+**FHIR placement*** `Condition.extension[ischemicEtiology].valueCodeableConcept` (required binding to StrokeEtiologyVS).
+ |
 | [Observation Timing Context Extension](StructureDefinition-observation-timing-context-ext.md) | This extension captures the **clinical timing context (phase)** in which an observation or assessment was made (e.g., pre-stroke baseline, admission, discharge, ~3-month follow-up).**Primary use-case*** Required for functional outcomes and severity scores whose interpretation depends on **when** the score was assessed.
 **How it complements Observation.effective[x]*** `effective[x]` records the actual measurement date/time (when known),
 * This extension records the standardized phase label used for reporting and cross-site comparability.
@@ -106,8 +130,20 @@ These define constraints on FHIR data types for systems conforming to this imple
 * Use `unknown` when encounter/timing data are insufficient.
  |
 | [Required Post-Acute Care Extension](StructureDefinition-required-post-acute-care-ext.md) | Indicates whether the patient required hospitalization beyond 24 hours after the designated acute phase of stroke care for this encounter. |
-| [Stroke Onset Date](StructureDefinition-onset-date-ext.md) | Captures the calendar date (value[x] = date) of symptom onset for the indexed stroke event when known, enabling calculation of onset-to-door metrics and adherence to time-sensitive pathways. Use alongside OnsetTimeExt when hour/minute precision is available; omit if onset is unknown or inapplicable. |
-| [Stroke Onset Time](StructureDefinition-onset-time-ext.md) | Captures the clock time (value[x] = time) of symptom onset for the indexed stroke event when available, complementing OnsetDateExt to support precise onset-to-treatment intervals. Use local time of the clinical setting; omit if time is unknown or estimated beyond acceptable precision. |
+| [Stroke Symptom Onset Date Extension](StructureDefinition-onset-date-ext.md) | Extension capturing the **calendar date** of symptom onset for the index stroke event.**Primary use-cases*** Compute onset-to-door and onset-to-treatment metrics when combined with encounter/treatment timestamps.
+* Support time-sensitive eligibility pathways when onset is known at least to the day.
+**When to use*** Use when onset date is known with reasonable confidence.
+* Use alongside `OnsetTimeExt` when time-of-day precision is available.
+* Omit if onset is unknown, only broadly estimated, or not applicable (e.g., certain in-hospital events may use different timing constructs).
+**FHIR placement*** `Condition.extension[onsetDate].valueDate`
+ |
+| [Stroke Symptom Onset Time Extension](StructureDefinition-onset-time-ext.md) | Extension capturing the **clock time** of symptom onset for the index stroke event.**Primary use-cases*** Enable precise onset-to-treatment intervals (e.g., onset-to-needle, onset-to-groin puncture).
+* Improve accuracy of eligibility assessments in time-window–dependent interventions.
+**When to use*** Use when onset time is known with sufficient precision for clinical use.
+* Omit if time is unknown or too uncertain.
+**FHIR placement*** `Condition.extension[onsetTime].valueTime`
+**Implementation note*** If `OnsetTimeExt` is present, `OnsetDateExt` should generally also be present (enforced as a warning invariant below).
+ |
 | [Swallowing Screening Timing Category](StructureDefinition-swallowing-screening-timing-category-ext.md) | Temporal category relative to stroke onset in which the swallowing screening was performed. |
 
 ### Terminology: Value Sets 
@@ -116,7 +152,12 @@ These define sets of codes used by systems conforming to this implementation gui
 
 | | |
 | :--- | :--- |
-| [Admission Sources ValueSet](ValueSet-admission-source-vs.md) | Defines the modes of transport or pathways by which the patient arrived. |
+| [Admission Sources ValueSet](ValueSet-admission-source-vs.md) | This ValueSet enumerates modes of transport or pathways by which a patient arrived for the index stroke encounter.**Primary use-cases*** Bind to admission source elements (commonly `Encounter.hospitalization.admitSource` or local equivalents) to support: 
+* operational reporting (ambulance vs own transport),
+* pathway compliance (e.g., EMS prenotification pathways),
+* inter-facility transfer analytics.
+ 
+ |
 | [Assessment Context ValueSet](ValueSet-assessment-context-vs.md) | This ValueSet includes all phase/context codes from AssessmentContextCS.**Primary use-case*** Required binding for elements that must indicate the clinical phase of an assessment (e.g., timing context extensions).
  |
 | [Atrial Fibrillation / Flutter Assessment Status ValueSet](ValueSet-afib-flutter-status-vs.md) | This ValueSet constrains the allowable coded outcomes for documenting the **status of an AF/flutter assessment** within the stroke workflow.**Primary use-case*** Bind to `Observation.valueCodeableConcept` in the `SpecificFindingObservationProfile` when `Observation.code` refers to AF/flutter as a finding focus.
@@ -128,9 +169,17 @@ These define sets of codes used by systems conforming to this implementation gui
 | [Carotid Arteries Imaging Modality ValueSet](ValueSet-carotid-imaging-modality-vs.md) | This ValueSet enumerates standardized codes (primarily SNOMED CT procedures) representing **carotid imaging modalities** used in stroke workflows.**Primary use-case*** Bind to `Procedure.code` when recording a carotid imaging study performed during the stroke episode.
  |
 | [Discharge Department/Service ValueSet](ValueSet-discharge-dept-vs.md) | ValueSet specifying the type of department or service the patient was discharged or transferred to. |
-| [Discharge Destination ValueSet](ValueSet-discharge-destination-vs.md) | Defines possible patient discharge destinations. |
+| [Discharge Destination ValueSet](ValueSet-discharge-destination-vs.md) | This ValueSet enumerates discharge destination concepts (primarily SNOMED CT procedure-like “discharge to …” concepts).**Primary use-cases*** Bind to discharge disposition elements in encounter/hospitalization modeling. enabling consistent: 
+* care transition analytics,
+* pathway reporting (home vs ward vs facility vs mortuary),
+* downstream coordination workflows.
+ 
+ |
 | [Gender (SNOMED CT)](ValueSet-vs-gender-snomed.md) | Value set to represent patient gender using SNOMED CT codes, analogous to AdministrativeGender. |
-| [Hemorrhagic Stroke Bleeding Reason ValueSet](ValueSet-hemorrhagic-stroke-bleeding-reason-vs.md) | Specifies the identified cause of a hemorrhagic stroke, typically used with an extension. |
+| [Hemorrhagic Stroke Bleeding Reason ValueSet](ValueSet-hemorrhagic-stroke-bleeding-reason-vs.md) | This ValueSet defines allowable causes of bleeding for hemorrhagic stroke documentation.**Primary use-case*** Required binding for `HemorrhagicStrokeBleedingReasonExt.valueCodeableConcept` on a definitive hemorrhagic stroke Condition.
+**Implementation guidance*** Use when the cause is **identified** (e.g., aneurysm, vascular malformation).
+* If the cause is unknown/undetermined, prefer documenting that explicitly using narrative (`Condition.note`) and/or a dedicated assessment Observation; if a coded placeholder is required, `Undetermined (qualifier value)` is included as an option.
+ |
 | [Initial Care Intensity ValueSet](ValueSet-initial-care-intensity-vs.md) | ValueSet indicating the level of care provided initially. |
 | [Medications ValueSet](ValueSet-medication-vs.md) | SNOMED CT codes for drug products or substances. |
 | [Modified Rankin Scale (mRS) Score ValueSet](ValueSet-mrs-score-vs.md) | This ValueSet includes all mRS grades (0–6) defined in MRsScoreCS.**Primary use-case*** Bind to `Observation.valueCodeableConcept` when `Observation.code` indicates the Observation represents an mRS score.
@@ -161,9 +210,23 @@ These define sets of codes used by systems conforming to this implementation gui
 | [Stroke Arrival Mode ValueSet](ValueSet-stroke-arrival-mode-vs.md) | ValueSet specifying the mode and origin of the patient's arrival. |
 | [Stroke Circumstance Codes ValueSet](ValueSet-stroke-circumstance-codes-vs.md) | This ValueSet includes all onset-circumstance codes from StrokeCircumstanceCodesCS.**Primary use-case*** Required binding for `StrokeCircumstanceObservationProfile.code`.
  |
-| [Stroke Diagnosis ValueSet](ValueSet-stroke-diagnosis-vs.md) | SNOMED CT concepts representing final stroke-related diagnoses intended for use in Condition.code (and similar elements) within this IG. The scope covers ischemic stroke, intracerebral hemorrhage, subarachnoid hemorrhage, cerebral venous thrombosis, and transient ischemic attack (TIA). This value set is designed to support consistent capture, validation, analytics, and decision support. Implementers should expand against a terminology server using the appropriate SNOMED CT edition/version and preferred language(s) for display. Localizations or national derivatives MAY provide additional designations without altering the canonical definition. This value set is not intended for history-of, screening, or procedural concepts. |
+| [Stroke Diagnosis ValueSet](ValueSet-stroke-diagnosis-vs.md) | This ValueSet enumerates SNOMED CT concepts representing **final stroke-related diagnoses** for use in `Condition.code` within this Implementation Guide (IG).**Primary use-case*** Required binding to `Condition.code` in `StrokeDiagnosisConditionProfile`, representing the **definitive diagnosis** of the index stroke event for the linked encounter.
+**Scope*** Ischemic stroke
+* Intracerebral/cerebral hemorrhage
+* Subarachnoid hemorrhage
+* Cerebral venous thrombosis
+* Transient ischemic attack (TIA)
+* “Undetermined” qualifier (use cautiously; see notes)
+**Modeling notes*** This ValueSet is intended for definitive diagnoses (e.g., at discharge or after diagnostic workup), not “rule-out”, screening, history-of, or procedural concepts.
+* Terminology expansion should be performed against the appropriate SNOMED CT edition/version and preferred language(s). Localizations MAY add designations without changing meaning.
+* If “undetermined” is used, consider adding supporting narrative in `Condition.note` and/or linking evidence in Observations/DiagnosticReports to preserve interpretability.
+ |
 | [Stroke Discharge Destination ValueSet](ValueSet-stroke-discharge-destination-vs.md) | Defines the possible destinations of the patient upon discharge from the encounter. |
-| [Stroke Etiology ValueSet](ValueSet-stroke-etiology-vs.md) | Specifies the determined etiology of an stroke. |
+| [Stroke Etiology ValueSet](ValueSet-stroke-etiology-vs.md) | This ValueSet defines allowable values for recording the **determined ischemic stroke etiology**.**Primary use-case*** Required binding for `StrokeStrokeEtiologyExt.valueCodeableConcept` on definitive ischemic stroke Conditions.
+**Composition*** Local etiology categories (StrokeEtiologyCS), plus selected SNOMED CT disorder concepts for commonly used etiology groupings.
+**Implementation guidance*** Use after etiologic workup when a classification is assigned.
+* If etiology remains unknown/undetermined, use the included `Undetermined (qualifier value)`
+ |
 | [Stroke Functional Score Codes ValueSet](ValueSet-functional-score-codes-vs.md) | This ValueSet constrains `Observation.code` for functional outcome and severity instruments represented in this guide:* Modified Rankin Scale score (mRS)
 * NIH Stroke Scale total score (NIHSS)
 **Primary use-case*** Bind to `Observation.code` in `FunctionalScoreObservationProfile`.
@@ -171,7 +234,14 @@ These define sets of codes used by systems conforming to this implementation gui
 * NIHSS: `Observation.valueInteger` as total NIHSS score.
  |
 | [Stroke Procedure Not Done Reason ValueSet](ValueSet-stroke-proc-not-done-reason-vs.md) | ValueSet containing the controlled vocabulary of reasons for `Procedure.statusReason` when a stroke procedure is `not-done`. |
-| [Stroke Risk Factor ValueSet](ValueSet-stroke-risk-factor-vs.md) | Defines the SNOMED CT codes for conditions or risk factors relevant to stroke, including an option for unknown status. |
+| [Stroke Risk Factor ValueSet](ValueSet-stroke-risk-factor-vs.md) | This ValueSet enumerates SNOMED CT disorder concepts representing **pre-existing or concurrent conditions** that increase stroke risk.**Primary use-case*** Required binding to `Condition.code` in `StrokeRiskFactorConditionProfile`, used to maintain a structured problem list supporting: 
+* etiologic reasoning (e.g., cardioembolic risk),
+* clinical decision support (e.g., anticoagulation considerations),
+* quality reporting and research cohort definition.
+ 
+**Modeling notes*** This ValueSet is for **previously documented conditions** (problems), not for “risk factor unknown”. If a risk factor assessment is unknown/not assessed, represent that as an Observation (status/result) or use `dataAbsentReason` patterns rather than a Condition with an “Unknown” code.
+* The acute stroke event itself should be represented by `StrokeDiagnosisConditionProfile`, not by this risk factor profile.
+ |
 | [Stroke Timing Metric Codes ValueSet](ValueSet-timing-metric-codes-vs.md) | This ValueSet includes all timing metric codes from TimingMetricCodesCS.**Primary use-case*** Required binding for `TimingMetricObservationProfile.code` to ensure only approved metrics are captured.
  |
 | [Stroke Vital Sign Codes ValueSet](ValueSet-vital-sign-codes-vs.md) | This ValueSet defines SNOMED CT observable-entity codes for blood pressure components captured as vital signs:* Systolic blood pressure
@@ -202,7 +272,8 @@ These define new code systems used by systems conforming to this implementation 
  |
 | [Brain Imaging Type Code System](CodeSystem-brain-imaging-type-cs.md) | Codes specifying the type of brain imaging performed (e.g., CT, MRI). |
 | [Discharge Department/Service Code System](CodeSystem-discharge-dept-cs.md) | Code system specifying the type of department or service the patient was discharged or transferred to. |
-| [Hemorrhagic Stroke Bleeding Reason Code System](CodeSystem-hemorrhagic-stroke-bleeding-reason-cs.md) | Codes indicating the reason for bleeding in hemorrhagic stroke cases. |
+| [Hemorrhagic Stroke Bleeding Reason CodeSystem](CodeSystem-hemorrhagic-stroke-bleeding-reason-cs.md) | Local CodeSystem representing **locally governed reasons/causes** for intracranial bleeding in hemorrhagic stroke.**Primary use-case*** Used via `HemorrhagicStrokeBleedingReasonVS` as the allowed vocabulary for `HemorrhagicStrokeBleedingReasonExt.valueCodeableConcept` on a definitive hemorrhagic stroke Condition.
+ |
 | [Initial Care Intensity Code System](CodeSystem-initial-care-intensity-cs.md) | Codes indicating the level of care provided during the patient's initial day(s) in the hospital. |
 | [Initial Care Intensity Code System](CodeSystem-stroke-arrival-mode-cs.md) | Codes indicating the level of care provided during the patient's initial day(s) in the hospital. |
 | [Medications CodeSystem](CodeSystem-medication-cs.md) | Codes for drug products or substances representing the Medications on the patient discharge. |
@@ -224,7 +295,10 @@ These define new code systems used by systems conforming to this implementation 
 * Presence of the Observation asserts that the circumstance applies to the index stroke event.
  |
 | [Stroke Discharge Destination Code System](CodeSystem-stroke-discharge-destination-cs.md) | Codes indicating the possible destinations of the patient upon discharge from the encounter. |
-| [Stroke Etiology Code System](CodeSystem-stroke-etiology-cs.md) | Codes indicating the etiology of strokes. |
+| [Stroke Etiology CodeSystem](CodeSystem-stroke-etiology-cs.md) | Local CodeSystem defining categories for **ischemic stroke etiology** classification.**Primary use-case*** Used via `StrokeEtiologyVS` as the required vocabulary for `StrokeStrokeEtiologyExt.valueCodeableConcept` on a definitive ischemic stroke Condition.
+**Why it exists*** Stroke etiology classification often mixes internationally standard categories (cardioembolic, lacunar, cryptogenic) with local operational buckets.
+**Modeling notes*** This CodeSystem is intended for “final etiology classification” after diagnostic workup, not for provisional hypotheses.
+ |
 | [Stroke Procedure Not Done Reasons CodeSystem](CodeSystem-stroke-proc-not-done-reason-cs.md) | Local CodeSystem enumerating standardized reasons why a key stroke procedure (e.g., IV thrombolysis or mechanical thrombectomy) was **not performed**.**Primary use-case*** Populate `Procedure.statusReason` when `Procedure.status = not-done`.
 **Why it matters*** Captures the difference between: 
 * clinical ineligibility (contraindication),

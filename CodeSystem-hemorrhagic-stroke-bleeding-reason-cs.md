@@ -1,10 +1,10 @@
-# Hemorrhagic Stroke Bleeding Reason Code System - v0.1.0
+# Hemorrhagic Stroke Bleeding Reason CodeSystem - v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **Hemorrhagic Stroke Bleeding Reason Code System**
+* **Hemorrhagic Stroke Bleeding Reason CodeSystem**
 
-## CodeSystem: Hemorrhagic Stroke Bleeding Reason Code System 
+## CodeSystem: Hemorrhagic Stroke Bleeding Reason CodeSystem 
 
 | | |
 | :--- | :--- |
@@ -13,7 +13,10 @@
 | **Copyright/Legal**: © Tecnomod. This CodeSystem is provided for use within this Implementation Guide. | |
 
  
-Codes indicating the reason for bleeding in hemorrhagic stroke cases. 
+Local CodeSystem representing **locally governed reasons/causes** for intracranial bleeding in hemorrhagic stroke. 
+**Primary use-case** 
+* Used via `HemorrhagicStrokeBleedingReasonVS` as the allowed vocabulary for `HemorrhagicStrokeBleedingReasonExt.valueCodeableConcept` on a definitive hemorrhagic stroke Condition.
+ 
 
  
 To provide locally governed codes for the identified cause of bleeding in hemorrhagic stroke. 
@@ -33,7 +36,7 @@ To provide locally governed codes for the identified cause of bleeding in hemorr
   "url" : "http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs",
   "version" : "0.1.0",
   "name" : "HemorrhagicStrokeBleedingReasonCS",
-  "title" : "Hemorrhagic Stroke Bleeding Reason Code System",
+  "title" : "Hemorrhagic Stroke Bleeding Reason CodeSystem",
   "status" : "active",
   "experimental" : false,
   "date" : "2025-10-07",
@@ -49,7 +52,7 @@ To provide locally governed codes for the identified cause of bleeding in hemorr
       ]
     }
   ],
-  "description" : "Codes indicating the reason for bleeding in hemorrhagic stroke cases.",
+  "description" : "Local CodeSystem representing **locally governed reasons/causes** for intracranial bleeding in hemorrhagic stroke.\n\n**Primary use-case**\n- Used via `HemorrhagicStrokeBleedingReasonVS` as the allowed vocabulary for `HemorrhagicStrokeBleedingReasonExt.valueCodeableConcept`\n  on a definitive hemorrhagic stroke Condition.",
   "purpose" : "To provide locally governed codes for the identified cause of bleeding in hemorrhagic stroke.",
   "copyright" : "© Tecnomod. This CodeSystem is provided for use within this Implementation Guide.",
   "caseSensitive" : false,

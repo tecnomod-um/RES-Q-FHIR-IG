@@ -11,7 +11,24 @@
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/ischemic-stroke-etiology-ext | *Version*:0.1.0 |
 | Active as of 2025-10-07 | *Computable Name*:StrokeStrokeEtiologyExt |
 
-Records the determined ischemic stroke etiology as a CodeableConcept bound (required) to StrokeEtiologyVS (e.g., cardioembolic, large artery atherosclerosis, lacunar, cryptogenic). Apply to definitive ischemic stroke Conditions after diagnostic workup; avoid use for hemorrhagic strokes or provisional hypotheses not yet established.
+Extension capturing the **determined ischemic stroke etiology classification**.
+
+**Primary use-case**
+
+* Attach to a definitive ischemic stroke Condition (`StrokeDiagnosisConditionProfile`) to support: 
+* etiologic subgroup analytics (cardioembolic vs lacunar vs cryptogenic, etc.),
+* pathway decision support (e.g., prolonged rhythm monitoring for cryptogenic stroke),
+ 
+
+**When to use**
+
+* Use after etiologic workup when a classification is assigned.
+* Do not use for hemorrhagic stroke diagnoses.
+* If the etiology remains unknown/undetermined, either omit the extension or use the “Undetermined” code included in StrokeEtiologyVS.
+
+**FHIR placement**
+
+* `Condition.extension[ischemicEtiology].valueCodeableConcept` (required binding to StrokeEtiologyVS).
 
 To enable consistent categorization of ischemic stroke etiology for interoperability and analysis.
 
@@ -70,7 +87,7 @@ Other representations of profile: [CSV](StructureDefinition-ischemic-stroke-etio
       ]
     }
   ],
-  "description" : "Records the determined ischemic stroke etiology as a CodeableConcept bound (required) to StrokeEtiologyVS (e.g., cardioembolic, large artery atherosclerosis, lacunar, cryptogenic). Apply to definitive ischemic stroke Conditions after diagnostic workup; avoid use for hemorrhagic strokes or provisional hypotheses not yet established.",
+  "description" : "Extension capturing the **determined ischemic stroke etiology classification**.\n\n**Primary use-case**\n- Attach to a definitive ischemic stroke Condition (`StrokeDiagnosisConditionProfile`) to support:\n  - etiologic subgroup analytics (cardioembolic vs lacunar vs cryptogenic, etc.),\n  - pathway decision support (e.g., prolonged rhythm monitoring for cryptogenic stroke),\n\n**When to use**\n- Use after etiologic workup when a classification is assigned.\n- Do not use for hemorrhagic stroke diagnoses.\n- If the etiology remains unknown/undetermined, either omit the extension or use the “Undetermined” code included in StrokeEtiologyVS.\n\n**FHIR placement**\n- `Condition.extension[ischemicEtiology].valueCodeableConcept` (required binding to StrokeEtiologyVS).",
   "purpose" : "To enable consistent categorization of ischemic stroke etiology for interoperability and analysis.",
   "fhirVersion" : "5.0.0",
   "mapping" : [
@@ -97,7 +114,7 @@ Other representations of profile: [CSV](StructureDefinition-ischemic-stroke-etio
         "id" : "Extension",
         "path" : "Extension",
         "short" : "Ischemic Stroke – Etiology",
-        "definition" : "Records the determined ischemic stroke etiology as a CodeableConcept bound (required) to StrokeEtiologyVS (e.g., cardioembolic, large artery atherosclerosis, lacunar, cryptogenic). Apply to definitive ischemic stroke Conditions after diagnostic workup; avoid use for hemorrhagic strokes or provisional hypotheses not yet established."
+        "definition" : "Extension capturing the **determined ischemic stroke etiology classification**.\n\n**Primary use-case**\n- Attach to a definitive ischemic stroke Condition (`StrokeDiagnosisConditionProfile`) to support:\n  - etiologic subgroup analytics (cardioembolic vs lacunar vs cryptogenic, etc.),\n  - pathway decision support (e.g., prolonged rhythm monitoring for cryptogenic stroke),\n\n**When to use**\n- Use after etiologic workup when a classification is assigned.\n- Do not use for hemorrhagic stroke diagnoses.\n- If the etiology remains unknown/undetermined, either omit the extension or use the “Undetermined” code included in StrokeEtiologyVS.\n\n**FHIR placement**\n- `Condition.extension[ischemicEtiology].valueCodeableConcept` (required binding to StrokeEtiologyVS)."
       },
       {
         "id" : "Extension.extension",

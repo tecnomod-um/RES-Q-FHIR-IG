@@ -13,7 +13,12 @@
 | **Copyright/Legal**: © Tecnomod. This profile is provided for use within this Implementation Guide. | |
 
  
-Defines a Condition profile for pre-existing or concurrent conditions that increase stroke risk (e.g., atrial fibrillation/flutter, diabetes, hypertension, coronary disease). The profile fixes category to problem-list-item, binds code (required) to StrokeRiskFactorVS, and supports onset[x] and recordedDate to document chronology and longitudinal tracking. Use this profile to maintain the problem list and to support risk assessment and CDS; do not use it to code the acute stroke event itself. 
+Profile for **pre-existing or concurrent conditions** that increase stroke risk (e.g., AF/flutter, diabetes, hypertension, coronary disease). 
+**Key constraints** 
+* `Condition.category` is fixed to `problem-list-item` to indicate a problem list entry.
+* `Condition.code` is required and bound (required) to StrokeRiskFactorVS.
+* `Condition.onset[x]` and `Condition.recordedDate` are marked Must Support to enable chronology and longitudinal tracking.
+ 
 
  
 To standardize capture of stroke-related risk factor conditions for longitudinal tracking, CDS, and reporting. 
@@ -59,7 +64,7 @@ Other representations of profile: [CSV](StructureDefinition-stroke-risk-factor-c
       ]
     }
   ],
-  "description" : "Defines a Condition profile for pre-existing or concurrent conditions that increase stroke risk (e.g., atrial fibrillation/flutter, diabetes, hypertension, coronary disease). The profile fixes category to problem-list-item, binds code (required) to StrokeRiskFactorVS, and supports onset[x] and recordedDate to document chronology and longitudinal tracking. Use this profile to maintain the problem list and to support risk assessment and CDS; do not use it to code the acute stroke event itself.",
+  "description" : "Profile for **pre-existing or concurrent conditions** that increase stroke risk (e.g., AF/flutter, diabetes, hypertension, coronary disease).\n\n**Key constraints**\n- `Condition.category` is fixed to `problem-list-item` to indicate a problem list entry.\n- `Condition.code` is required and bound (required) to StrokeRiskFactorVS.\n- `Condition.onset[x]` and `Condition.recordedDate` are marked Must Support to enable chronology and longitudinal tracking.",
   "purpose" : "To standardize capture of stroke-related risk factor conditions for longitudinal tracking, CDS, and reporting.",
   "copyright" : "© Tecnomod. This profile is provided for use within this Implementation Guide.",
   "fhirVersion" : "5.0.0",

@@ -68,7 +68,7 @@ Other representations of profile: [CSV](StructureDefinition-observation-timing-c
   "name" : "ObservationTimingContextExtension",
   "title" : "Observation Timing Context Extension",
   "status" : "draft",
-  "date" : "2026-02-19T12:37:09+00:00",
+  "date" : "2026-02-19T14:25:22+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

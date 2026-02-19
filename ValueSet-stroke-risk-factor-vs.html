@@ -233,7 +233,25 @@
   </table>
 
 <p>
-<p>Defines the SNOMED CT codes for conditions or risk factors relevant to stroke, including an option for unknown status.</p>
+<p>This ValueSet enumerates SNOMED CT disorder concepts representing <strong>pre-existing or concurrent conditions</strong> that increase stroke risk.</p>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Required binding to <code class="language-plaintext highlighter-rouge">Condition.code</code> in <code class="language-plaintext highlighter-rouge">StrokeRiskFactorConditionProfile</code>, used to maintain a structured problem list supporting:
+    <ul>
+      <li>etiologic reasoning (e.g., cardioembolic risk),</li>
+      <li>clinical decision support (e.g., anticoagulation considerations),</li>
+      <li>quality reporting and research cohort definition.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Modeling notes</strong></p>
+<ul>
+  <li>This ValueSet is for <em>previously documented conditions</em> (problems), not for “risk factor unknown”.
+If a risk factor assessment is unknown/not assessed, represent that as an Observation (status/result) or use <code class="language-plaintext highlighter-rouge">dataAbsentReason</code> patterns rather than a Condition with an “Unknown” code.</li>
+  <li>The acute stroke event itself should be represented by <code class="language-plaintext highlighter-rouge">StrokeDiagnosisConditionProfile</code>, not by this risk factor profile.</li>
+</ul>
 
 </p>
 
@@ -327,7 +345,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 12:37+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 14:25+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

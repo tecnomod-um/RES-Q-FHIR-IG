@@ -19,7 +19,7 @@
   ] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "StrokeEtiologyCS"] ; # 
-  fhir:title [ fhir:v "Stroke Etiology Code System"] ; # 
+  fhir:title [ fhir:v "Stroke Etiology CodeSystem"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:experimental [ fhir:v false] ; # 
   fhir:date [ fhir:v "2025-10-07"^^xsd:date] ; # 
@@ -31,7 +31,7 @@
        fhir:value [ fhir:v "http://tecnomod-um.org" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "Codes indicating the etiology of strokes."] ; # 
+  fhir:description [ fhir:v "Local CodeSystem defining categories for **ischemic stroke etiology** classification.\n\n**Primary use-case**\n- Used via `StrokeEtiologyVS` as the required vocabulary for `StrokeStrokeEtiologyExt.valueCodeableConcept`\n  on a definitive ischemic stroke Condition.\n\n**Why it exists**\n- Stroke etiology classification often mixes internationally standard categories (cardioembolic, lacunar, cryptogenic) with local operational buckets.\n\n**Modeling notes**\n- This CodeSystem is intended for “final etiology classification” after diagnostic workup, not for provisional hypotheses."] ; # 
   fhir:purpose [ fhir:v "To provide locally governed codes for classifying ischemic stroke etiology."] ; # 
   fhir:copyright [ fhir:v "© Tecnomod. This CodeSystem is provided for use within this Implementation Guide."] ; # 
   fhir:caseSensitive [ fhir:v false] ; # 

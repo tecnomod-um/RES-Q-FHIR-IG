@@ -13,7 +13,14 @@
 | **Copyright/Legal**: This value set includes SNOMED CT® content. SNOMED CT® is distributed by SNOMED International. | |
 
  
-Defines the modes of transport or pathways by which the patient arrived. 
+This ValueSet enumerates modes of transport or pathways by which a patient arrived for the index stroke encounter. 
+**Primary use-cases** 
+* Bind to admission source elements (commonly `Encounter.hospitalization.admitSource` or local equivalents) to support: 
+* operational reporting (ambulance vs own transport),
+* pathway compliance (e.g., EMS prenotification pathways),
+* inter-facility transfer analytics.
+ 
+ 
 
  
 To standardize the capture of patient admission sources for workflow, reporting, and interoperability. 
@@ -68,7 +75,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
       ]
     }
   ],
-  "description" : "Defines the modes of transport or pathways by which the patient arrived.",
+  "description" : "This ValueSet enumerates modes of transport or pathways by which a patient arrived for the index stroke encounter.\n\n**Primary use-cases**\n- Bind to admission source elements (commonly `Encounter.hospitalization.admitSource` or local equivalents) to support:\n  - operational reporting (ambulance vs own transport),\n  - pathway compliance (e.g., EMS prenotification pathways),\n  - inter-facility transfer analytics.",
   "immutable" : false,
   "purpose" : "To standardize the capture of patient admission sources for workflow, reporting, and interoperability.",
   "copyright" : "This value set includes SNOMED CT® content. SNOMED CT® is distributed by SNOMED International.",

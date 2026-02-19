@@ -54,14 +54,14 @@
     },
     {
       "url": "http://tecnomod-um.org/StructureDefinition/onset-date-ext",
-      "title": "Stroke Onset Date",
+      "title": "Stroke Symptom Onset Date Extension",
       "types": [
         "date"
       ]
     },
     {
       "url": "http://tecnomod-um.org/StructureDefinition/onset-time-ext",
-      "title": "Stroke Onset Time",
+      "title": "Stroke Symptom Onset Time Extension",
       "types": [
         "time"
       ]

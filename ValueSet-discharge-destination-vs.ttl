@@ -31,7 +31,7 @@
        fhir:value [ fhir:v "http://tecnomod-um.org" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "Defines possible patient discharge destinations."] ; # 
+  fhir:description [ fhir:v "This ValueSet enumerates discharge destination concepts (primarily SNOMED CT procedure-like “discharge to …” concepts).\n\n**Primary use-cases**\n- Bind to discharge disposition elements in encounter/hospitalization modeling.\n  enabling consistent:\n  - care transition analytics,\n  - pathway reporting (home vs ward vs facility vs mortuary),\n  - downstream coordination workflows."] ; # 
   fhir:immutable [ fhir:v false] ; # 
   fhir:purpose [ fhir:v "To support consistent recording of discharge destinations for analytics, reporting, and care coordination."] ; # 
   fhir:copyright [ fhir:v "This value set includes SNOMED CT® content. SNOMED CT® is distributed by SNOMED International."] ; # 

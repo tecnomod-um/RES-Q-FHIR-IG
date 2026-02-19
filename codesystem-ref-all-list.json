@@ -281,8 +281,8 @@
       "version" : "0.1.0",
       "status" : "active",
       "name" : "HemorrhagicStrokeBleedingReasonCS",
-      "title" : "Hemorrhagic Stroke Bleeding Reason Code System",
-      "description" : "Codes indicating the reason for bleeding in hemorrhagic stroke cases.",
+      "title" : "Hemorrhagic Stroke Bleeding Reason CodeSystem",
+      "description" : "Local CodeSystem representing **locally governed reasons/causes** for intracranial bleeding in hemorrhagic stroke.\n\n**Primary use-case**\n- Used via `HemorrhagicStrokeBleedingReasonVS` as the allowed vocabulary for `HemorrhagicStrokeBleedingReasonExt.valueCodeableConcept`\n  on a definitive hemorrhagic stroke Condition.",
       "uses" : {
       },
       "ValueSet-hemorrhagic-stroke-bleeding-reason-vs.html" : "Hemorrhagic Stroke Bleeding Reason ValueSet"
@@ -391,8 +391,8 @@
       "version" : "0.1.0",
       "status" : "active",
       "name" : "StrokeEtiologyCS",
-      "title" : "Stroke Etiology Code System",
-      "description" : "Codes indicating the etiology of strokes.",
+      "title" : "Stroke Etiology CodeSystem",
+      "description" : "Local CodeSystem defining categories for **ischemic stroke etiology** classification.\n\n**Primary use-case**\n- Used via `StrokeEtiologyVS` as the required vocabulary for `StrokeStrokeEtiologyExt.valueCodeableConcept`\n  on a definitive ischemic stroke Condition.\n\n**Why it exists**\n- Stroke etiology classification often mixes internationally standard categories (cardioembolic, lacunar, cryptogenic) with local operational buckets.\n\n**Modeling notes**\n- This CodeSystem is intended for “final etiology classification” after diagnostic workup, not for provisional hypotheses.",
       "uses" : {
       },
       "ValueSet-stroke-etiology-vs.html" : "Stroke Etiology ValueSet"

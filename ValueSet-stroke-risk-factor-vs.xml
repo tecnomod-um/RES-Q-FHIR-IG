@@ -20,7 +20,7 @@
       <value value="http://tecnomod-um.org"/>
     </telecom>
   </contact>
-  <description value="Defines the SNOMED CT codes for conditions or risk factors relevant to stroke, including an option for unknown status."/>
+  <description value="This ValueSet enumerates SNOMED CT disorder concepts representing **pre-existing or concurrent conditions** that increase stroke risk.&#xA;&#xA;**Primary use-case**&#xA;- Required binding to `Condition.code` in `StrokeRiskFactorConditionProfile`, used to maintain a structured problem list supporting:&#xA;  - etiologic reasoning (e.g., cardioembolic risk),&#xA;  - clinical decision support (e.g., anticoagulation considerations),&#xA;  - quality reporting and research cohort definition.&#xA;&#xA;**Modeling notes**&#xA;- This ValueSet is for *previously documented conditions* (problems), not for “risk factor unknown”.&#xA;  If a risk factor assessment is unknown/not assessed, represent that as an Observation (status/result) or use `dataAbsentReason` patterns rather than a Condition with an “Unknown” code.&#xA;- The acute stroke event itself should be represented by `StrokeDiagnosisConditionProfile`, not by this risk factor profile."/>
   <immutable value="false"/>
   <purpose value="To provide a standardized set of SNOMED CT concepts representing stroke-related risk factors for coding and validation."/>
   <copyright value="This value set includes SNOMED CT® content. SNOMED CT® is distributed by SNOMED International."/>

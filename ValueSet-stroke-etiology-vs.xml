@@ -20,7 +20,7 @@
       <value value="http://tecnomod-um.org"/>
     </telecom>
   </contact>
-  <description value="Specifies the determined etiology of an stroke."/>
+  <description value="This ValueSet defines allowable values for recording the **determined ischemic stroke etiology**.&#xA;&#xA;**Primary use-case**&#xA;- Required binding for `StrokeStrokeEtiologyExt.valueCodeableConcept` on definitive ischemic stroke Conditions.&#xA;&#xA;**Composition**&#xA;- Local etiology categories (StrokeEtiologyCS), plus selected SNOMED CT disorder concepts for commonly used etiology groupings.&#xA;&#xA;**Implementation guidance**&#xA;- Use after etiologic workup when a classification is assigned.&#xA;- If etiology remains unknown/undetermined, use the included `Undetermined (qualifier value)`"/>
   <immutable value="false"/>
   <purpose value="To support classification of stroke etiology using a mix of local codes and selected SNOMED CT concepts."/>
   <copyright value="This value set includes locally governed concepts and SNOMED CT® content. SNOMED CT® is distributed by SNOMED International."/>

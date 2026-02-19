@@ -8,7 +8,7 @@
   <url value="http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs"/>
   <version value="0.1.0"/>
   <name value="HemorrhagicStrokeBleedingReasonCS"/>
-  <title value="Hemorrhagic Stroke Bleeding Reason Code System"/>
+  <title value="Hemorrhagic Stroke Bleeding Reason CodeSystem"/>
   <status value="active"/>
   <experimental value="false"/>
   <date value="2025-10-07"/>
@@ -20,7 +20,7 @@
       <value value="http://tecnomod-um.org"/>
     </telecom>
   </contact>
-  <description value="Codes indicating the reason for bleeding in hemorrhagic stroke cases."/>
+  <description value="Local CodeSystem representing **locally governed reasons/causes** for intracranial bleeding in hemorrhagic stroke.&#xA;&#xA;**Primary use-case**&#xA;- Used via `HemorrhagicStrokeBleedingReasonVS` as the allowed vocabulary for `HemorrhagicStrokeBleedingReasonExt.valueCodeableConcept`&#xA;  on a definitive hemorrhagic stroke Condition."/>
   <purpose value="To provide locally governed codes for the identified cause of bleeding in hemorrhagic stroke."/>
   <copyright value="© Tecnomod. This CodeSystem is provided for use within this Implementation Guide."/>
   <caseSensitive value="false"/>

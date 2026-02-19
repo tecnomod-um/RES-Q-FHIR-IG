@@ -11,7 +11,19 @@
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/hemorrhagic-stroke-bleeding-reason-ext | *Version*:0.1.0 |
 | Active as of 2025-10-07 | *Computable Name*:HemorrhagicStrokeBleedingReasonExt |
 
-Captures, as a CodeableConcept bound (required) to HemorrhagicStrokeBleedingReasonVS, the identified cause of intracranial bleeding in hemorrhagic stroke (e.g., aneurysm, vascular malformation, other). Use when coding a definitive hemorrhagic stroke Condition to support analytics and decision support; do not use for non-hemorrhagic etiologies or when the cause is unknown/undetermined.
+Extension capturing the **identified cause of intracranial bleeding** in a hemorrhagic stroke.
+
+**Primary use-case**
+
+* Attach to a definitive hemorrhagic stroke Condition (`StrokeDiagnosisConditionProfile`) to support: 
+* etiologic stratification (aneurysm vs vascular malformation vs other),
+* analytics and registry reporting,
+* targeted clinical decision support pathways.
+ 
+
+**FHIR placement**
+
+* `Condition.extension[bleedingReason].valueCodeableConcept` (required binding to HemorrhagicStrokeBleedingReasonVS).
 
 To standardize capture of the bleeding cause in hemorrhagic stroke conditions for decision support and analytics.
 
@@ -70,7 +82,7 @@ Other representations of profile: [CSV](StructureDefinition-hemorrhagic-stroke-b
       ]
     }
   ],
-  "description" : "Captures, as a CodeableConcept bound (required) to HemorrhagicStrokeBleedingReasonVS, the identified cause of intracranial bleeding in hemorrhagic stroke (e.g., aneurysm, vascular malformation, other). Use when coding a definitive hemorrhagic stroke Condition to support analytics and decision support; do not use for non-hemorrhagic etiologies or when the cause is unknown/undetermined.",
+  "description" : "Extension capturing the **identified cause of intracranial bleeding** in a hemorrhagic stroke.\n\n**Primary use-case**\n- Attach to a definitive hemorrhagic stroke Condition (`StrokeDiagnosisConditionProfile`) to support:\n  - etiologic stratification (aneurysm vs vascular malformation vs other),\n  - analytics and registry reporting,\n  - targeted clinical decision support pathways.\n\n**FHIR placement**\n- `Condition.extension[bleedingReason].valueCodeableConcept` (required binding to HemorrhagicStrokeBleedingReasonVS).",
   "purpose" : "To standardize capture of the bleeding cause in hemorrhagic stroke conditions for decision support and analytics.",
   "fhirVersion" : "5.0.0",
   "mapping" : [
@@ -97,7 +109,7 @@ Other representations of profile: [CSV](StructureDefinition-hemorrhagic-stroke-b
         "id" : "Extension",
         "path" : "Extension",
         "short" : "Hemorrhagic Stroke – Bleeding Reason",
-        "definition" : "Captures, as a CodeableConcept bound (required) to HemorrhagicStrokeBleedingReasonVS, the identified cause of intracranial bleeding in hemorrhagic stroke (e.g., aneurysm, vascular malformation, other). Use when coding a definitive hemorrhagic stroke Condition to support analytics and decision support; do not use for non-hemorrhagic etiologies or when the cause is unknown/undetermined."
+        "definition" : "Extension capturing the **identified cause of intracranial bleeding** in a hemorrhagic stroke.\n\n**Primary use-case**\n- Attach to a definitive hemorrhagic stroke Condition (`StrokeDiagnosisConditionProfile`) to support:\n  - etiologic stratification (aneurysm vs vascular malformation vs other),\n  - analytics and registry reporting,\n  - targeted clinical decision support pathways.\n\n**FHIR placement**\n- `Condition.extension[bleedingReason].valueCodeableConcept` (required binding to HemorrhagicStrokeBleedingReasonVS)."
       },
       {
         "id" : "Extension.extension",

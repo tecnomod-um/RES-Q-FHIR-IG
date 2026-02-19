@@ -20,7 +20,7 @@
       <value value="http://tecnomod-um.org"/>
     </telecom>
   </contact>
-  <description value="Defines possible patient discharge destinations."/>
+  <description value="This ValueSet enumerates discharge destination concepts (primarily SNOMED CT procedure-like “discharge to …” concepts).&#xA;&#xA;**Primary use-cases**&#xA;- Bind to discharge disposition elements in encounter/hospitalization modeling.&#xA;  enabling consistent:&#xA;  - care transition analytics,&#xA;  - pathway reporting (home vs ward vs facility vs mortuary),&#xA;  - downstream coordination workflows."/>
   <immutable value="false"/>
   <purpose value="To support consistent recording of discharge destinations for analytics, reporting, and care coordination."/>
   <copyright value="This value set includes SNOMED CT® content. SNOMED CT® is distributed by SNOMED International."/>

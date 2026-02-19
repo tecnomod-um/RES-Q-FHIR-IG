@@ -8,7 +8,7 @@
   <url value="http://tecnomod-um.org/CodeSystem/stroke-etiology-cs"/>
   <version value="0.1.0"/>
   <name value="StrokeEtiologyCS"/>
-  <title value="Stroke Etiology Code System"/>
+  <title value="Stroke Etiology CodeSystem"/>
   <status value="active"/>
   <experimental value="false"/>
   <date value="2025-10-07"/>
@@ -20,7 +20,7 @@
       <value value="http://tecnomod-um.org"/>
     </telecom>
   </contact>
-  <description value="Codes indicating the etiology of strokes."/>
+  <description value="Local CodeSystem defining categories for **ischemic stroke etiology** classification.&#xA;&#xA;**Primary use-case**&#xA;- Used via `StrokeEtiologyVS` as the required vocabulary for `StrokeStrokeEtiologyExt.valueCodeableConcept`&#xA;  on a definitive ischemic stroke Condition.&#xA;&#xA;**Why it exists**&#xA;- Stroke etiology classification often mixes internationally standard categories (cardioembolic, lacunar, cryptogenic) with local operational buckets.&#xA;&#xA;**Modeling notes**&#xA;- This CodeSystem is intended for “final etiology classification” after diagnostic workup, not for provisional hypotheses."/>
   <purpose value="To provide locally governed codes for classifying ischemic stroke etiology."/>
   <copyright value="© Tecnomod. This CodeSystem is provided for use within this Implementation Guide."/>
   <caseSensitive value="false"/>

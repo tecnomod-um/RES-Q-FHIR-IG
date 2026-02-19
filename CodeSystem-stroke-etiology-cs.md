@@ -1,10 +1,10 @@
-# Stroke Etiology Code System - v0.1.0
+# Stroke Etiology CodeSystem - v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **Stroke Etiology Code System**
+* **Stroke Etiology CodeSystem**
 
-## CodeSystem: Stroke Etiology Code System 
+## CodeSystem: Stroke Etiology CodeSystem 
 
 | | |
 | :--- | :--- |
@@ -13,7 +13,16 @@
 | **Copyright/Legal**: © Tecnomod. This CodeSystem is provided for use within this Implementation Guide. | |
 
  
-Codes indicating the etiology of strokes. 
+Local CodeSystem defining categories for **ischemic stroke etiology** classification. 
+**Primary use-case** 
+* Used via `StrokeEtiologyVS` as the required vocabulary for `StrokeStrokeEtiologyExt.valueCodeableConcept` on a definitive ischemic stroke Condition.
+ 
+**Why it exists** 
+* Stroke etiology classification often mixes internationally standard categories (cardioembolic, lacunar, cryptogenic) with local operational buckets.
+ 
+**Modeling notes** 
+* This CodeSystem is intended for “final etiology classification” after diagnostic workup, not for provisional hypotheses.
+ 
 
  
 To provide locally governed codes for classifying ischemic stroke etiology. 
@@ -33,7 +42,7 @@ To provide locally governed codes for classifying ischemic stroke etiology.
   "url" : "http://tecnomod-um.org/CodeSystem/stroke-etiology-cs",
   "version" : "0.1.0",
   "name" : "StrokeEtiologyCS",
-  "title" : "Stroke Etiology Code System",
+  "title" : "Stroke Etiology CodeSystem",
   "status" : "active",
   "experimental" : false,
   "date" : "2025-10-07",
@@ -49,7 +58,7 @@ To provide locally governed codes for classifying ischemic stroke etiology.
       ]
     }
   ],
-  "description" : "Codes indicating the etiology of strokes.",
+  "description" : "Local CodeSystem defining categories for **ischemic stroke etiology** classification.\n\n**Primary use-case**\n- Used via `StrokeEtiologyVS` as the required vocabulary for `StrokeStrokeEtiologyExt.valueCodeableConcept`\n  on a definitive ischemic stroke Condition.\n\n**Why it exists**\n- Stroke etiology classification often mixes internationally standard categories (cardioembolic, lacunar, cryptogenic) with local operational buckets.\n\n**Modeling notes**\n- This CodeSystem is intended for “final etiology classification” after diagnostic workup, not for provisional hypotheses.",
   "purpose" : "To provide locally governed codes for classifying ischemic stroke etiology.",
   "copyright" : "© Tecnomod. This CodeSystem is provided for use within this Implementation Guide.",
   "caseSensitive" : false,

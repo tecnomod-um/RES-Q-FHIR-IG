@@ -20,7 +20,7 @@
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "RESQIG"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-02-19T12:37:09+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-19T14:25:22+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;
@@ -96,7 +96,7 @@
          fhir:reference [ fhir:v "ValueSet/admission-source-vs" ]
        ] ;
        fhir:name [ fhir:v "Admission Sources ValueSet" ] ;
-       fhir:description [ fhir:v "Defines the modes of transport or pathways by which the patient arrived." ] ;
+       fhir:description [ fhir:v "This ValueSet enumerates modes of transport or pathways by which a patient arrived for the index stroke encounter.\n\n**Primary use-cases**\n- Bind to admission source elements (commonly `Encounter.hospitalization.admitSource` or local equivalents) to support:\n  - operational reporting (ambulance vs own transport),\n  - pathway compliance (e.g., EMS prenotification pathways),\n  - inter-facility transfer analytics." ] ;
        fhir:isExample [ fhir:v false ]
      ] [
        fhir:extension ( [
@@ -333,7 +333,7 @@
          fhir:reference [ fhir:v "ValueSet/discharge-destination-vs" ]
        ] ;
        fhir:name [ fhir:v "Discharge Destination ValueSet" ] ;
-       fhir:description [ fhir:v "Defines possible patient discharge destinations." ] ;
+       fhir:description [ fhir:v "This ValueSet enumerates discharge destination concepts (primarily SNOMED CT procedure-like “discharge to …” concepts).\n\n**Primary use-cases**\n- Bind to discharge disposition elements in encounter/hospitalization modeling.\n  enabling consistent:\n  - care transition analytics,\n  - pathway reporting (home vs ward vs facility vs mortuary),\n  - downstream coordination workflows." ] ;
        fhir:isExample [ fhir:v false ]
      ] [
        fhir:extension ( [
@@ -486,8 +486,8 @@
          fhir:l <http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs> ;
          fhir:reference [ fhir:v "CodeSystem/hemorrhagic-stroke-bleeding-reason-cs" ]
        ] ;
-       fhir:name [ fhir:v "Hemorrhagic Stroke Bleeding Reason Code System" ] ;
-       fhir:description [ fhir:v "Codes indicating the reason for bleeding in hemorrhagic stroke cases." ] ;
+       fhir:name [ fhir:v "Hemorrhagic Stroke Bleeding Reason CodeSystem" ] ;
+       fhir:description [ fhir:v "Local CodeSystem representing **locally governed reasons/causes** for intracranial bleeding in hemorrhagic stroke.\n\n**Primary use-case**\n- Used via `HemorrhagicStrokeBleedingReasonVS` as the allowed vocabulary for `HemorrhagicStrokeBleedingReasonExt.valueCodeableConcept`\n  on a definitive hemorrhagic stroke Condition." ] ;
        fhir:isExample [ fhir:v false ]
      ] [
        fhir:extension ( [
@@ -505,7 +505,7 @@
          fhir:reference [ fhir:v "ValueSet/hemorrhagic-stroke-bleeding-reason-vs" ]
        ] ;
        fhir:name [ fhir:v "Hemorrhagic Stroke Bleeding Reason ValueSet" ] ;
-       fhir:description [ fhir:v "Specifies the identified cause of a hemorrhagic stroke, typically used with an extension." ] ;
+       fhir:description [ fhir:v "This ValueSet defines allowable causes of bleeding for hemorrhagic stroke documentation.\n\n**Primary use-case**\n- Required binding for `HemorrhagicStrokeBleedingReasonExt.valueCodeableConcept` on a definitive hemorrhagic stroke Condition.\n\n**Implementation guidance**\n- Use when the cause is *identified* (e.g., aneurysm, vascular malformation).\n- If the cause is unknown/undetermined, prefer documenting that explicitly using narrative (`Condition.note`) and/or a dedicated assessment Observation;\n  if a coded placeholder is required, `Undetermined (qualifier value)` is included as an option." ] ;
        fhir:isExample [ fhir:v false ]
      ] [
        fhir:extension ( [
@@ -523,7 +523,7 @@
          fhir:reference [ fhir:v "StructureDefinition/hemorrhagic-stroke-bleeding-reason-ext" ]
        ] ;
        fhir:name [ fhir:v "Hemorrhagic Stroke – Bleeding Reason" ] ;
-       fhir:description [ fhir:v "Captures, as a CodeableConcept bound (required) to HemorrhagicStrokeBleedingReasonVS, the identified cause of intracranial bleeding in hemorrhagic stroke (e.g., aneurysm, vascular malformation, other). Use when coding a definitive hemorrhagic stroke Condition to support analytics and decision support; do not use for non-hemorrhagic etiologies or when the cause is unknown/undetermined." ] ;
+       fhir:description [ fhir:v "Extension capturing the **identified cause of intracranial bleeding** in a hemorrhagic stroke.\n\n**Primary use-case**\n- Attach to a definitive hemorrhagic stroke Condition (`StrokeDiagnosisConditionProfile`) to support:\n  - etiologic stratification (aneurysm vs vascular malformation vs other),\n  - analytics and registry reporting,\n  - targeted clinical decision support pathways.\n\n**FHIR placement**\n- `Condition.extension[bleedingReason].valueCodeableConcept` (required binding to HemorrhagicStrokeBleedingReasonVS)." ] ;
        fhir:isExample [ fhir:v false ]
      ] [
        fhir:extension ( [
@@ -613,7 +613,7 @@
          fhir:reference [ fhir:v "StructureDefinition/ischemic-stroke-etiology-ext" ]
        ] ;
        fhir:name [ fhir:v "Ischemic Stroke – Etiology" ] ;
-       fhir:description [ fhir:v "Records the determined ischemic stroke etiology as a CodeableConcept bound (required) to StrokeEtiologyVS (e.g., cardioembolic, large artery atherosclerosis, lacunar, cryptogenic). Apply to definitive ischemic stroke Conditions after diagnostic workup; avoid use for hemorrhagic strokes or provisional hypotheses not yet established." ] ;
+       fhir:description [ fhir:v "Extension capturing the **determined ischemic stroke etiology classification**.\n\n**Primary use-case**\n- Attach to a definitive ischemic stroke Condition (`StrokeDiagnosisConditionProfile`) to support:\n  - etiologic subgroup analytics (cardioembolic vs lacunar vs cryptogenic, etc.),\n  - pathway decision support (e.g., prolonged rhythm monitoring for cryptogenic stroke),\n\n**When to use**\n- Use after etiologic workup when a classification is assigned.\n- Do not use for hemorrhagic stroke diagnoses.\n- If the etiology remains unknown/undetermined, either omit the extension or use the “Undetermined” code included in StrokeEtiologyVS.\n\n**FHIR placement**\n- `Condition.extension[ischemicEtiology].valueCodeableConcept` (required binding to StrokeEtiologyVS)." ] ;
        fhir:isExample [ fhir:v false ]
      ] [
        fhir:extension ( [
@@ -1200,7 +1200,7 @@
          fhir:reference [ fhir:v "StructureDefinition/stroke-diagnosis-condition-profile" ]
        ] ;
        fhir:name [ fhir:v "Stroke Diagnosis Condition Profile" ] ;
-       fhir:description [ fhir:v "Defines a Condition profile constrained to represent the definitive diagnosis of the current stroke event during the indexed encounter. The profile fixes category to encounter-diagnosis, binds code (required) to StrokeDiagnosisVS, and prohibits onset[x] to avoid ambiguity with symptom-onset capture via dedicated extensions. Use this profile for final/confirmed stroke diagnoses recorded at discharge or after diagnostic workup; do not use it for history-of conditions, screening findings, or provisional ‘rule-out’ statements. Optional extensions capture hemorrhagic bleeding reason, ischemic etiology, and structured onset date/time when clinically known." ] ;
+       fhir:description [ fhir:v "Profile representing the **definitive diagnosis of the current/index stroke event** during the linked encounter.\n\n**Primary use-case**\n- Use for final/confirmed stroke diagnoses recorded during the index hospitalization/encounter (e.g., at discharge or after diagnostic workup).\n\n**Key constraints**\n- `Condition.category` is fixed to `encounter-diagnosis` to indicate this is the encounter’s diagnosis, not a general problem list item.\n- `Condition.code` is required and bound (required) to StrokeDiagnosisVS.\n- `Condition.onset[x]` is prohibited to avoid ambiguity: symptom onset is captured using dedicated onset extensions (date/time).\n\n**Supported structured enrichments**\n- `extension[bleedingReason]`: for hemorrhagic stroke bleeding cause (aneurysm, malformation, other/undetermined).\n- `extension[ischemicEtiology]`: for ischemic stroke etiology classification.\n- `extension[onsetDate]` and `extension[onsetTime]`: structured symptom onset capture." ] ;
        fhir:isExample [ fhir:v false ]
      ] [
        fhir:extension ( [
@@ -1218,7 +1218,7 @@
          fhir:reference [ fhir:v "ValueSet/stroke-diagnosis-vs" ]
        ] ;
        fhir:name [ fhir:v "Stroke Diagnosis ValueSet" ] ;
-       fhir:description [ fhir:v "SNOMED CT concepts representing final stroke-related diagnoses intended for use in Condition.code (and similar elements) within this IG. The scope covers ischemic stroke, intracerebral hemorrhage, subarachnoid hemorrhage, cerebral venous thrombosis, and transient ischemic attack (TIA). This value set is designed to support consistent capture, validation, analytics, and decision support. Implementers should expand against a terminology server using the appropriate SNOMED CT edition/version and preferred language(s) for display. Localizations or national derivatives MAY provide additional designations without altering the canonical definition. This value set is not intended for history-of, screening, or procedural concepts." ] ;
+       fhir:description [ fhir:v "This ValueSet enumerates SNOMED CT concepts representing **final stroke-related diagnoses** for use in `Condition.code` within this Implementation Guide (IG).\n\n**Primary use-case**\n- Required binding to `Condition.code` in `StrokeDiagnosisConditionProfile`, representing the *definitive diagnosis* of the index stroke event for the linked encounter.\n\n**Scope**\n- Ischemic stroke\n- Intracerebral/cerebral hemorrhage\n- Subarachnoid hemorrhage\n- Cerebral venous thrombosis\n- Transient ischemic attack (TIA)\n- “Undetermined” qualifier (use cautiously; see notes)\n\n**Modeling notes**\n- This ValueSet is intended for definitive diagnoses (e.g., at discharge or after diagnostic workup), not “rule-out”, screening, history-of, or procedural concepts.\n- Terminology expansion should be performed against the appropriate SNOMED CT edition/version and preferred language(s). Localizations MAY add designations without changing meaning.\n- If “undetermined” is used, consider adding supporting narrative in `Condition.note` and/or linking evidence in Observations/DiagnosticReports to preserve interpretability." ] ;
        fhir:isExample [ fhir:v false ]
      ] [
        fhir:extension ( [
@@ -1289,8 +1289,8 @@
          fhir:l <http://tecnomod-um.org/CodeSystem/stroke-etiology-cs> ;
          fhir:reference [ fhir:v "CodeSystem/stroke-etiology-cs" ]
        ] ;
-       fhir:name [ fhir:v "Stroke Etiology Code System" ] ;
-       fhir:description [ fhir:v "Codes indicating the etiology of strokes." ] ;
+       fhir:name [ fhir:v "Stroke Etiology CodeSystem" ] ;
+       fhir:description [ fhir:v "Local CodeSystem defining categories for **ischemic stroke etiology** classification.\n\n**Primary use-case**\n- Used via `StrokeEtiologyVS` as the required vocabulary for `StrokeStrokeEtiologyExt.valueCodeableConcept`\n  on a definitive ischemic stroke Condition.\n\n**Why it exists**\n- Stroke etiology classification often mixes internationally standard categories (cardioembolic, lacunar, cryptogenic) with local operational buckets.\n\n**Modeling notes**\n- This CodeSystem is intended for “final etiology classification” after diagnostic workup, not for provisional hypotheses." ] ;
        fhir:isExample [ fhir:v false ]
      ] [
        fhir:extension ( [
@@ -1308,7 +1308,7 @@
          fhir:reference [ fhir:v "ValueSet/stroke-etiology-vs" ]
        ] ;
        fhir:name [ fhir:v "Stroke Etiology ValueSet" ] ;
-       fhir:description [ fhir:v "Specifies the determined etiology of an stroke." ] ;
+       fhir:description [ fhir:v "This ValueSet defines allowable values for recording the **determined ischemic stroke etiology**.\n\n**Primary use-case**\n- Required binding for `StrokeStrokeEtiologyExt.valueCodeableConcept` on definitive ischemic stroke Conditions.\n\n**Composition**\n- Local etiology categories (StrokeEtiologyCS), plus selected SNOMED CT disorder concepts for commonly used etiology groupings.\n\n**Implementation guidance**\n- Use after etiologic workup when a classification is assigned.\n- If etiology remains unknown/undetermined, use the included `Undetermined (qualifier value)`" ] ;
        fhir:isExample [ fhir:v false ]
      ] [
        fhir:extension ( [
@@ -1345,42 +1345,6 @@
        ] ;
        fhir:name [ fhir:v "Stroke Functional Score Observation Profile" ] ;
        fhir:description [ fhir:v "Profile for recording stroke functional outcome and severity scores (currently mRS and NIHSS) in an interoperable, context-aware way.\n\n**Primary use-case**\n- Capture outcomes by phase (baseline, admission, discharge, ~90-day follow-up) using a required timing context extension.\n\n**Key constraints**\n- `Observation.code` is bound to FunctionalScoreCodesVS (mRS or NIHSS).\n- `extension[timingContext]` is mandatory to label the clinical phase.\n- Datatype and binding rules are enforced via invariants:\n  - mRS → `valueCodeableConcept` bound to MRsScoreVS.\n  - NIHSS → `valueInteger` as total NIHSS score.\n\n**Typical scenarios**\n1) An mRS score assessed at discharge would have `Observation.code` = mRS code, `valueCodeableConcept` = mRS grade (0–6), and the timing context extension value = discharge.\n2) An NIHSS score assessed at admission would have `Observation.code` = NIHSS code, `valueInteger` = total NIHSS score, and the timing context extension value = admission." ] ;
-       fhir:isExample [ fhir:v false ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
-           fhir:v "StructureDefinition:extension"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <http://tecnomod-um.org/StructureDefinition/onset-date-ext> ;
-         fhir:reference [ fhir:v "StructureDefinition/onset-date-ext" ]
-       ] ;
-       fhir:name [ fhir:v "Stroke Onset Date" ] ;
-       fhir:description [ fhir:v "Captures the calendar date (value[x] = date) of symptom onset for the indexed stroke event when known, enabling calculation of onset-to-door metrics and adherence to time-sensitive pathways. Use alongside OnsetTimeExt when hour/minute precision is available; omit if onset is unknown or inapplicable." ] ;
-       fhir:isExample [ fhir:v false ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
-           fhir:v "StructureDefinition:extension"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <http://tecnomod-um.org/StructureDefinition/onset-time-ext> ;
-         fhir:reference [ fhir:v "StructureDefinition/onset-time-ext" ]
-       ] ;
-       fhir:name [ fhir:v "Stroke Onset Time" ] ;
-       fhir:description [ fhir:v "Captures the clock time (value[x] = time) of symptom onset for the indexed stroke event when available, complementing OnsetDateExt to support precise onset-to-treatment intervals. Use local time of the clinical setting; omit if time is unknown or estimated beyond acceptable precision." ] ;
        fhir:isExample [ fhir:v false ]
      ] [
        fhir:extension ( [
@@ -1452,7 +1416,7 @@
          fhir:reference [ fhir:v "StructureDefinition/stroke-risk-factor-condition-profile" ]
        ] ;
        fhir:name [ fhir:v "Stroke Risk Factor Condition Profile" ] ;
-       fhir:description [ fhir:v "Defines a Condition profile for pre-existing or concurrent conditions that increase stroke risk (e.g., atrial fibrillation/flutter, diabetes, hypertension, coronary disease). The profile fixes category to problem-list-item, binds code (required) to StrokeRiskFactorVS, and supports onset[x] and recordedDate to document chronology and longitudinal tracking. Use this profile to maintain the problem list and to support risk assessment and CDS; do not use it to code the acute stroke event itself." ] ;
+       fhir:description [ fhir:v "Profile for **pre-existing or concurrent conditions** that increase stroke risk (e.g., AF/flutter, diabetes, hypertension, coronary disease).\n\n**Key constraints**\n- `Condition.category` is fixed to `problem-list-item` to indicate a problem list entry.\n- `Condition.code` is required and bound (required) to StrokeRiskFactorVS.\n- `Condition.onset[x]` and `Condition.recordedDate` are marked Must Support to enable chronology and longitudinal tracking." ] ;
        fhir:isExample [ fhir:v false ]
      ] [
        fhir:extension ( [
@@ -1470,7 +1434,7 @@
          fhir:reference [ fhir:v "ValueSet/stroke-risk-factor-vs" ]
        ] ;
        fhir:name [ fhir:v "Stroke Risk Factor ValueSet" ] ;
-       fhir:description [ fhir:v "Defines the SNOMED CT codes for conditions or risk factors relevant to stroke, including an option for unknown status." ] ;
+       fhir:description [ fhir:v "This ValueSet enumerates SNOMED CT disorder concepts representing **pre-existing or concurrent conditions** that increase stroke risk.\n\n**Primary use-case**\n- Required binding to `Condition.code` in `StrokeRiskFactorConditionProfile`, used to maintain a structured problem list supporting:\n  - etiologic reasoning (e.g., cardioembolic risk),\n  - clinical decision support (e.g., anticoagulation considerations),\n  - quality reporting and research cohort definition.\n\n**Modeling notes**\n- This ValueSet is for *previously documented conditions* (problems), not for “risk factor unknown”.\n  If a risk factor assessment is unknown/not assessed, represent that as an Observation (status/result) or use `dataAbsentReason` patterns rather than a Condition with an “Unknown” code.\n- The acute stroke event itself should be represented by `StrokeDiagnosisConditionProfile`, not by this risk factor profile." ] ;
        fhir:isExample [ fhir:v false ]
      ] [
        fhir:extension ( [
@@ -1489,6 +1453,42 @@
        ] ;
        fhir:name [ fhir:v "Stroke Swallow Procedure Profile" ] ;
        fhir:description [ fhir:v " Profile for documenting **swallow screening / dysphagia assessment** during a stroke episode.\n\n**Captures**\n- `code`: the screening/assessment procedure or tool used (SwallowProceduresVS).\n- `status`: whether completed or not done.\n- `statusReason`: controlled reason set when not done.\n- `extension[screeningTimingCategory]`: timing bucket (e.g., within 4h).\n- `extension[timingContext]`: acute/post-acute phase relative to encounter start.\n\n\n** Typical scenarios**\n1) Screening completed on-site: `status=completed`, `extension[screeningTimingCategory]` optional, `extension[timingContext]` optional.\n2) Screening not performed: `status=not-done`, `statusReason` required.\n3) Screening performed elsewhere: `status=not-done`, `statusReason` = performedElsewhere, `extension[screeningTimingCategory]` optional." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://tecnomod-um.org/StructureDefinition/onset-date-ext> ;
+         fhir:reference [ fhir:v "StructureDefinition/onset-date-ext" ]
+       ] ;
+       fhir:name [ fhir:v "Stroke Symptom Onset Date Extension" ] ;
+       fhir:description [ fhir:v "Extension capturing the **calendar date** of symptom onset for the index stroke event.\n\n**Primary use-cases**\n- Compute onset-to-door and onset-to-treatment metrics when combined with encounter/treatment timestamps.\n- Support time-sensitive eligibility pathways when onset is known at least to the day.\n\n**When to use**\n- Use when onset date is known with reasonable confidence.\n- Use alongside `OnsetTimeExt` when time-of-day precision is available.\n- Omit if onset is unknown, only broadly estimated, or not applicable (e.g., certain in-hospital events may use different timing constructs).\n\n**FHIR placement**\n- `Condition.extension[onsetDate].valueDate`" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://tecnomod-um.org/StructureDefinition/onset-time-ext> ;
+         fhir:reference [ fhir:v "StructureDefinition/onset-time-ext" ]
+       ] ;
+       fhir:name [ fhir:v "Stroke Symptom Onset Time Extension" ] ;
+       fhir:description [ fhir:v "Extension capturing the **clock time** of symptom onset for the index stroke event.\n\n**Primary use-cases**\n- Enable precise onset-to-treatment intervals (e.g., onset-to-needle, onset-to-groin puncture).\n- Improve accuracy of eligibility assessments in time-window–dependent interventions.\n\n**When to use**\n- Use when onset time is known with sufficient precision for clinical use.\n- Omit if time is unknown or too uncertain.\n\n**FHIR placement**\n- `Condition.extension[onsetTime].valueTime`\n\n**Implementation note**\n- If `OnsetTimeExt` is present, `OnsetDateExt` should generally also be present (enforced as a warning invariant below)." ] ;
        fhir:isExample [ fhir:v false ]
      ] [
        fhir:extension ( [

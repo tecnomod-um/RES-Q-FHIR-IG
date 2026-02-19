@@ -233,7 +233,29 @@
   </table>
 
 <p>
-<p>SNOMED CT concepts representing final stroke-related diagnoses intended for use in Condition.code (and similar elements) within this IG. The scope covers ischemic stroke, intracerebral hemorrhage, subarachnoid hemorrhage, cerebral venous thrombosis, and transient ischemic attack (TIA). This value set is designed to support consistent capture, validation, analytics, and decision support. Implementers should expand against a terminology server using the appropriate SNOMED CT edition/version and preferred language(s) for display. Localizations or national derivatives MAY provide additional designations without altering the canonical definition. This value set is not intended for history-of, screening, or procedural concepts.</p>
+<p>This ValueSet enumerates SNOMED CT concepts representing <strong>final stroke-related diagnoses</strong> for use in <code class="language-plaintext highlighter-rouge">Condition.code</code> within this Implementation Guide (IG).</p>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Required binding to <code class="language-plaintext highlighter-rouge">Condition.code</code> in <code class="language-plaintext highlighter-rouge">StrokeDiagnosisConditionProfile</code>, representing the <em>definitive diagnosis</em> of the index stroke event for the linked encounter.</li>
+</ul>
+
+<p><strong>Scope</strong></p>
+<ul>
+  <li>Ischemic stroke</li>
+  <li>Intracerebral/cerebral hemorrhage</li>
+  <li>Subarachnoid hemorrhage</li>
+  <li>Cerebral venous thrombosis</li>
+  <li>Transient ischemic attack (TIA)</li>
+  <li>“Undetermined” qualifier (use cautiously; see notes)</li>
+</ul>
+
+<p><strong>Modeling notes</strong></p>
+<ul>
+  <li>This ValueSet is intended for definitive diagnoses (e.g., at discharge or after diagnostic workup), not “rule-out”, screening, history-of, or procedural concepts.</li>
+  <li>Terminology expansion should be performed against the appropriate SNOMED CT edition/version and preferred language(s). Localizations MAY add designations without changing meaning.</li>
+  <li>If “undetermined” is used, consider adding supporting narrative in <code class="language-plaintext highlighter-rouge">Condition.note</code> and/or linking evidence in Observations/DiagnosticReports to preserve interpretability.</li>
+</ul>
 
 </p>
 
@@ -327,7 +349,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 12:37+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 14:25+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

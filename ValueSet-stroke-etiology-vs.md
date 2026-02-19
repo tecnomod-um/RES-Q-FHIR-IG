@@ -13,7 +13,17 @@
 | **Copyright/Legal**: This value set includes locally governed concepts and SNOMED CT® content. SNOMED CT® is distributed by SNOMED International. | |
 
  
-Specifies the determined etiology of an stroke. 
+This ValueSet defines allowable values for recording the **determined ischemic stroke etiology**. 
+**Primary use-case** 
+* Required binding for `StrokeStrokeEtiologyExt.valueCodeableConcept` on definitive ischemic stroke Conditions.
+ 
+**Composition** 
+* Local etiology categories (StrokeEtiologyCS), plus selected SNOMED CT disorder concepts for commonly used etiology groupings.
+ 
+**Implementation guidance** 
+* Use after etiologic workup when a classification is assigned.
+* If etiology remains unknown/undetermined, use the included `Undetermined (qualifier value)`
+ 
 
  
 To support classification of stroke etiology using a mix of local codes and selected SNOMED CT concepts. 
@@ -68,7 +78,7 @@ To support classification of stroke etiology using a mix of local codes and sele
       ]
     }
   ],
-  "description" : "Specifies the determined etiology of an stroke.",
+  "description" : "This ValueSet defines allowable values for recording the **determined ischemic stroke etiology**.\n\n**Primary use-case**\n- Required binding for `StrokeStrokeEtiologyExt.valueCodeableConcept` on definitive ischemic stroke Conditions.\n\n**Composition**\n- Local etiology categories (StrokeEtiologyCS), plus selected SNOMED CT disorder concepts for commonly used etiology groupings.\n\n**Implementation guidance**\n- Use after etiologic workup when a classification is assigned.\n- If etiology remains unknown/undetermined, use the included `Undetermined (qualifier value)`",
   "immutable" : false,
   "purpose" : "To support classification of stroke etiology using a mix of local codes and selected SNOMED CT concepts.",
   "copyright" : "This value set includes locally governed concepts and SNOMED CT® content. SNOMED CT® is distributed by SNOMED International.",

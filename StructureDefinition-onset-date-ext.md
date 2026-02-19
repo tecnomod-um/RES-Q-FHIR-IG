@@ -1,17 +1,32 @@
-# Stroke Onset Date - v0.1.0
+# Stroke Symptom Onset Date Extension - v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **Stroke Onset Date**
+* **Stroke Symptom Onset Date Extension**
 
-## Extension: Stroke Onset Date 
+## Extension: Stroke Symptom Onset Date Extension 
 
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/onset-date-ext | *Version*:0.1.0 |
 | Active as of 2025-10-07 | *Computable Name*:OnsetDateExt |
 
-Captures the calendar date (value[x] = date) of symptom onset for the indexed stroke event when known, enabling calculation of onset-to-door metrics and adherence to time-sensitive pathways. Use alongside OnsetTimeExt when hour/minute precision is available; omit if onset is unknown or inapplicable.
+Extension capturing the **calendar date** of symptom onset for the index stroke event.
+
+**Primary use-cases**
+
+* Compute onset-to-door and onset-to-treatment metrics when combined with encounter/treatment timestamps.
+* Support time-sensitive eligibility pathways when onset is known at least to the day.
+
+**When to use**
+
+* Use when onset date is known with reasonable confidence.
+* Use alongside `OnsetTimeExt` when time-of-day precision is available.
+* Omit if onset is unknown, only broadly estimated, or not applicable (e.g., certain in-hospital events may use different timing constructs).
+
+**FHIR placement**
+
+* `Condition.extension[onsetDate].valueDate`
 
 To record stroke onset date for clinical decision making and quality metrics.
 
@@ -52,7 +67,7 @@ Other representations of profile: [CSV](StructureDefinition-onset-date-ext.csv),
   "url" : "http://tecnomod-um.org/StructureDefinition/onset-date-ext",
   "version" : "0.1.0",
   "name" : "OnsetDateExt",
-  "title" : "Stroke Onset Date",
+  "title" : "Stroke Symptom Onset Date Extension",
   "status" : "active",
   "experimental" : false,
   "date" : "2025-10-07",
@@ -68,7 +83,7 @@ Other representations of profile: [CSV](StructureDefinition-onset-date-ext.csv),
       ]
     }
   ],
-  "description" : "Captures the calendar date (value[x] = date) of symptom onset for the indexed stroke event when known, enabling calculation of onset-to-door metrics and adherence to time-sensitive pathways. Use alongside OnsetTimeExt when hour/minute precision is available; omit if onset is unknown or inapplicable.",
+  "description" : "Extension capturing the **calendar date** of symptom onset for the index stroke event.\n\n**Primary use-cases**\n- Compute onset-to-door and onset-to-treatment metrics when combined with encounter/treatment timestamps.\n- Support time-sensitive eligibility pathways when onset is known at least to the day.\n\n**When to use**\n- Use when onset date is known with reasonable confidence.\n- Use alongside `OnsetTimeExt` when time-of-day precision is available.\n- Omit if onset is unknown, only broadly estimated, or not applicable (e.g., certain in-hospital events may use different timing constructs).\n\n**FHIR placement**\n- `Condition.extension[onsetDate].valueDate`",
   "purpose" : "To record stroke onset date for clinical decision making and quality metrics.",
   "fhirVersion" : "5.0.0",
   "mapping" : [
@@ -94,8 +109,8 @@ Other representations of profile: [CSV](StructureDefinition-onset-date-ext.csv),
       {
         "id" : "Extension",
         "path" : "Extension",
-        "short" : "Stroke Onset Date",
-        "definition" : "Captures the calendar date (value[x] = date) of symptom onset for the indexed stroke event when known, enabling calculation of onset-to-door metrics and adherence to time-sensitive pathways. Use alongside OnsetTimeExt when hour/minute precision is available; omit if onset is unknown or inapplicable."
+        "short" : "Stroke Symptom Onset Date Extension",
+        "definition" : "Extension capturing the **calendar date** of symptom onset for the index stroke event.\n\n**Primary use-cases**\n- Compute onset-to-door and onset-to-treatment metrics when combined with encounter/treatment timestamps.\n- Support time-sensitive eligibility pathways when onset is known at least to the day.\n\n**When to use**\n- Use when onset date is known with reasonable confidence.\n- Use alongside `OnsetTimeExt` when time-of-day precision is available.\n- Omit if onset is unknown, only broadly estimated, or not applicable (e.g., certain in-hospital events may use different timing constructs).\n\n**FHIR placement**\n- `Condition.extension[onsetDate].valueDate`"
       },
       {
         "id" : "Extension.extension",

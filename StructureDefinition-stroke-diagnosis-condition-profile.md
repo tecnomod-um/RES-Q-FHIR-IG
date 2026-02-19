@@ -13,7 +13,20 @@
 | **Copyright/Legal**: © Tecnomod. This profile is provided for use within this Implementation Guide. | |
 
  
-Defines a Condition profile constrained to represent the definitive diagnosis of the current stroke event during the indexed encounter. The profile fixes category to encounter-diagnosis, binds code (required) to StrokeDiagnosisVS, and prohibits onset[x] to avoid ambiguity with symptom-onset capture via dedicated extensions. Use this profile for final/confirmed stroke diagnoses recorded at discharge or after diagnostic workup; do not use it for history-of conditions, screening findings, or provisional ‘rule-out’ statements. Optional extensions capture hemorrhagic bleeding reason, ischemic etiology, and structured onset date/time when clinically known. 
+Profile representing the **definitive diagnosis of the current/index stroke event** during the linked encounter. 
+**Primary use-case** 
+* Use for final/confirmed stroke diagnoses recorded during the index hospitalization/encounter (e.g., at discharge or after diagnostic workup).
+ 
+**Key constraints** 
+* `Condition.category` is fixed to `encounter-diagnosis` to indicate this is the encounter’s diagnosis, not a general problem list item.
+* `Condition.code` is required and bound (required) to StrokeDiagnosisVS.
+* `Condition.onset[x]` is prohibited to avoid ambiguity: symptom onset is captured using dedicated onset extensions (date/time).
+ 
+**Supported structured enrichments** 
+* `extension[bleedingReason]`: for hemorrhagic stroke bleeding cause (aneurysm, malformation, other/undetermined).
+* `extension[ischemicEtiology]`: for ischemic stroke etiology classification.
+* `extension[onsetDate]` and `extension[onsetTime]`: structured symptom onset capture.
+ 
 
  
 To standardize the representation of definitive stroke diagnoses to support interoperability, validation, and analytics. 
@@ -59,7 +72,7 @@ Other representations of profile: [CSV](StructureDefinition-stroke-diagnosis-con
       ]
     }
   ],
-  "description" : "Defines a Condition profile constrained to represent the definitive diagnosis of the current stroke event during the indexed encounter. The profile fixes category to encounter-diagnosis, binds code (required) to StrokeDiagnosisVS, and prohibits onset[x] to avoid ambiguity with symptom-onset capture via dedicated extensions. Use this profile for final/confirmed stroke diagnoses recorded at discharge or after diagnostic workup; do not use it for history-of conditions, screening findings, or provisional ‘rule-out’ statements. Optional extensions capture hemorrhagic bleeding reason, ischemic etiology, and structured onset date/time when clinically known.",
+  "description" : "Profile representing the **definitive diagnosis of the current/index stroke event** during the linked encounter.\n\n**Primary use-case**\n- Use for final/confirmed stroke diagnoses recorded during the index hospitalization/encounter (e.g., at discharge or after diagnostic workup).\n\n**Key constraints**\n- `Condition.category` is fixed to `encounter-diagnosis` to indicate this is the encounter’s diagnosis, not a general problem list item.\n- `Condition.code` is required and bound (required) to StrokeDiagnosisVS.\n- `Condition.onset[x]` is prohibited to avoid ambiguity: symptom onset is captured using dedicated onset extensions (date/time).\n\n**Supported structured enrichments**\n- `extension[bleedingReason]`: for hemorrhagic stroke bleeding cause (aneurysm, malformation, other/undetermined).\n- `extension[ischemicEtiology]`: for ischemic stroke etiology classification.\n- `extension[onsetDate]` and `extension[onsetTime]`: structured symptom onset capture.\n",
   "purpose" : "To standardize the representation of definitive stroke diagnoses to support interoperability, validation, and analytics.",
   "copyright" : "© Tecnomod. This profile is provided for use within this Implementation Guide.",
   "fhirVersion" : "5.0.0",

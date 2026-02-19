@@ -5,7 +5,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Stroke Etiology Code System - XML Representation -  v0.1.0</title>
+    <title>Stroke Etiology CodeSystem - XML Representation -  v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -133,7 +133,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Stroke Etiology Code System</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Stroke Etiology CodeSystem</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -192,7 +192,7 @@
 <a name="root"> </a>
 
 
-<h2 id="root">: Stroke Etiology Code System - XML Representation</h2>
+<h2 id="root">: Stroke Etiology CodeSystem - XML Representation</h2>
 
   <table class="colsi">
     <tr>
@@ -227,7 +227,7 @@
   &lt;<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.url">url</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;http://tecnomod-um.org/CodeSystem/stroke-etiology-cs&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.version">version</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;0.1.0&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.name">name</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;StrokeEtiologyCS&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.title">title</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Stroke Etiology Code System&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.title">title</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Stroke Etiology CodeSystem&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.status">status</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.experimental">experimental</a> <a href="http://hl7.org/fhir/R5/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.date">date</a> <a href="http://hl7.org/fhir/R5/datatypes.html#dateTime">value</a>=&quot;2025-10-07&quot;/&gt;
@@ -239,7 +239,18 @@
       &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#ContactPoint#XContactPoint.value">value</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;http://tecnomod-um.org&quot;/&gt;
     &lt;/<a href="http://hl7.org/fhir/R5/metadatatypes.html#ContactDetail#XContactDetail.telecom">telecom</a>&gt;
   &lt;/<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.contact">contact</a>&gt;
-  &lt;<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.description">description</a> <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;Codes indicating the etiology of strokes.&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.description">description</a>
+               <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;Local CodeSystem defining categories for **ischemic stroke etiology** classification.
+
+**Primary use-case**
+- Used via `StrokeEtiologyVS` as the required vocabulary for `StrokeStrokeEtiologyExt.valueCodeableConcept`
+  on a definitive ischemic stroke Condition.
+
+**Why it exists**
+- Stroke etiology classification often mixes internationally standard categories (cardioembolic, lacunar, cryptogenic) with local operational buckets.
+
+**Modeling notes**
+- This CodeSystem is intended for “final etiology classification” after diagnostic workup, not for provisional hypotheses.&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.purpose">purpose</a>
            <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;To provide locally governed codes for classifying ischemic stroke etiology.&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.copyright">copyright</a>
@@ -283,7 +294,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 12:37+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 14:25+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

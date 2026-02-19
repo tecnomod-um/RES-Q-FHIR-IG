@@ -1,17 +1,35 @@
-# Stroke Onset Time - v0.1.0
+# Stroke Symptom Onset Time Extension - v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **Stroke Onset Time**
+* **Stroke Symptom Onset Time Extension**
 
-## Extension: Stroke Onset Time 
+## Extension: Stroke Symptom Onset Time Extension 
 
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/onset-time-ext | *Version*:0.1.0 |
 | Active as of 2025-10-07 | *Computable Name*:OnsetTimeExt |
 
-Captures the clock time (value[x] = time) of symptom onset for the indexed stroke event when available, complementing OnsetDateExt to support precise onset-to-treatment intervals. Use local time of the clinical setting; omit if time is unknown or estimated beyond acceptable precision.
+Extension capturing the **clock time** of symptom onset for the index stroke event.
+
+**Primary use-cases**
+
+* Enable precise onset-to-treatment intervals (e.g., onset-to-needle, onset-to-groin puncture).
+* Improve accuracy of eligibility assessments in time-window–dependent interventions.
+
+**When to use**
+
+* Use when onset time is known with sufficient precision for clinical use.
+* Omit if time is unknown or too uncertain.
+
+**FHIR placement**
+
+* `Condition.extension[onsetTime].valueTime`
+
+**Implementation note**
+
+* If `OnsetTimeExt` is present, `OnsetDateExt` should generally also be present (enforced as a warning invariant below).
 
 To record stroke onset time for adherence to time-sensitive treatment pathways.
 
@@ -52,7 +70,7 @@ Other representations of profile: [CSV](StructureDefinition-onset-time-ext.csv),
   "url" : "http://tecnomod-um.org/StructureDefinition/onset-time-ext",
   "version" : "0.1.0",
   "name" : "OnsetTimeExt",
-  "title" : "Stroke Onset Time",
+  "title" : "Stroke Symptom Onset Time Extension",
   "status" : "active",
   "experimental" : false,
   "date" : "2025-10-07",
@@ -68,7 +86,7 @@ Other representations of profile: [CSV](StructureDefinition-onset-time-ext.csv),
       ]
     }
   ],
-  "description" : "Captures the clock time (value[x] = time) of symptom onset for the indexed stroke event when available, complementing OnsetDateExt to support precise onset-to-treatment intervals. Use local time of the clinical setting; omit if time is unknown or estimated beyond acceptable precision.",
+  "description" : "Extension capturing the **clock time** of symptom onset for the index stroke event.\n\n**Primary use-cases**\n- Enable precise onset-to-treatment intervals (e.g., onset-to-needle, onset-to-groin puncture).\n- Improve accuracy of eligibility assessments in time-window–dependent interventions.\n\n**When to use**\n- Use when onset time is known with sufficient precision for clinical use.\n- Omit if time is unknown or too uncertain.\n\n**FHIR placement**\n- `Condition.extension[onsetTime].valueTime`\n\n**Implementation note**\n- If `OnsetTimeExt` is present, `OnsetDateExt` should generally also be present (enforced as a warning invariant below).",
   "purpose" : "To record stroke onset time for adherence to time-sensitive treatment pathways.",
   "fhirVersion" : "5.0.0",
   "mapping" : [
@@ -94,8 +112,8 @@ Other representations of profile: [CSV](StructureDefinition-onset-time-ext.csv),
       {
         "id" : "Extension",
         "path" : "Extension",
-        "short" : "Stroke Onset Time",
-        "definition" : "Captures the clock time (value[x] = time) of symptom onset for the indexed stroke event when available, complementing OnsetDateExt to support precise onset-to-treatment intervals. Use local time of the clinical setting; omit if time is unknown or estimated beyond acceptable precision."
+        "short" : "Stroke Symptom Onset Time Extension",
+        "definition" : "Extension capturing the **clock time** of symptom onset for the index stroke event.\n\n**Primary use-cases**\n- Enable precise onset-to-treatment intervals (e.g., onset-to-needle, onset-to-groin puncture).\n- Improve accuracy of eligibility assessments in time-window–dependent interventions.\n\n**When to use**\n- Use when onset time is known with sufficient precision for clinical use.\n- Omit if time is unknown or too uncertain.\n\n**FHIR placement**\n- `Condition.extension[onsetTime].valueTime`\n\n**Implementation note**\n- If `OnsetTimeExt` is present, `OnsetDateExt` should generally also be present (enforced as a warning invariant below)."
       },
       {
         "id" : "Extension.extension",

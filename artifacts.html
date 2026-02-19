@@ -359,7 +359,26 @@ Use Condition to assert durable diagnoses and link supporting Observations via <
                   title="StructureDefinition/stroke-diagnosis-condition-profile">Stroke Diagnosis Condition Profile</a>
             </td>
             <td>
-<p>Defines a Condition profile constrained to represent the definitive diagnosis of the current stroke event during the indexed encounter. The profile fixes category to encounter-diagnosis, binds code (required) to StrokeDiagnosisVS, and prohibits onset[x] to avoid ambiguity with symptom-onset capture via dedicated extensions. Use this profile for final/confirmed stroke diagnoses recorded at discharge or after diagnostic workup; do not use it for history-of conditions, screening findings, or provisional ‘rule-out’ statements. Optional extensions capture hemorrhagic bleeding reason, ischemic etiology, and structured onset date/time when clinically known.</p>
+<p>Profile representing the <strong>definitive diagnosis of the current/index stroke event</strong> during the linked encounter.</p>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Use for final/confirmed stroke diagnoses recorded during the index hospitalization/encounter (e.g., at discharge or after diagnostic workup).</li>
+</ul>
+
+<p><strong>Key constraints</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Condition.category</code> is fixed to <code class="language-plaintext highlighter-rouge">encounter-diagnosis</code> to indicate this is the encounter’s diagnosis, not a general problem list item.</li>
+  <li><code class="language-plaintext highlighter-rouge">Condition.code</code> is required and bound (required) to StrokeDiagnosisVS.</li>
+  <li><code class="language-plaintext highlighter-rouge">Condition.onset[x]</code> is prohibited to avoid ambiguity: symptom onset is captured using dedicated onset extensions (date/time).</li>
+</ul>
+
+<p><strong>Supported structured enrichments</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">extension[bleedingReason]</code>: for hemorrhagic stroke bleeding cause (aneurysm, malformation, other/undetermined).</li>
+  <li><code class="language-plaintext highlighter-rouge">extension[ischemicEtiology]</code>: for ischemic stroke etiology classification.</li>
+  <li><code class="language-plaintext highlighter-rouge">extension[onsetDate]</code> and <code class="language-plaintext highlighter-rouge">extension[onsetTime]</code>: structured symptom onset capture.</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -416,7 +435,14 @@ Use Condition to assert durable diagnoses and link supporting Observations via <
                   title="StructureDefinition/stroke-risk-factor-condition-profile">Stroke Risk Factor Condition Profile</a>
             </td>
             <td>
-<p>Defines a Condition profile for pre-existing or concurrent conditions that increase stroke risk (e.g., atrial fibrillation/flutter, diabetes, hypertension, coronary disease). The profile fixes category to problem-list-item, binds code (required) to StrokeRiskFactorVS, and supports onset[x] and recordedDate to document chronology and longitudinal tracking. Use this profile to maintain the problem list and to support risk assessment and CDS; do not use it to code the acute stroke event itself.</p>
+<p>Profile for <strong>pre-existing or concurrent conditions</strong> that increase stroke risk (e.g., AF/flutter, diabetes, hypertension, coronary disease).</p>
+
+<p><strong>Key constraints</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Condition.category</code> is fixed to <code class="language-plaintext highlighter-rouge">problem-list-item</code> to indicate a problem list entry.</li>
+  <li><code class="language-plaintext highlighter-rouge">Condition.code</code> is required and bound (required) to StrokeRiskFactorVS.</li>
+  <li><code class="language-plaintext highlighter-rouge">Condition.onset[x]</code> and <code class="language-plaintext highlighter-rouge">Condition.recordedDate</code> are marked Must Support to enable chronology and longitudinal tracking.</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -561,7 +587,23 @@ The Observation is categorized as <code class="language-plaintext highlighter-ro
                   title="StructureDefinition/hemorrhagic-stroke-bleeding-reason-ext">Hemorrhagic Stroke – Bleeding Reason</a>
             </td>
             <td>
-<p>Captures, as a CodeableConcept bound (required) to HemorrhagicStrokeBleedingReasonVS, the identified cause of intracranial bleeding in hemorrhagic stroke (e.g., aneurysm, vascular malformation, other). Use when coding a definitive hemorrhagic stroke Condition to support analytics and decision support; do not use for non-hemorrhagic etiologies or when the cause is unknown/undetermined.</p>
+<p>Extension capturing the <strong>identified cause of intracranial bleeding</strong> in a hemorrhagic stroke.</p>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Attach to a definitive hemorrhagic stroke Condition (<code class="language-plaintext highlighter-rouge">StrokeDiagnosisConditionProfile</code>) to support:
+    <ul>
+      <li>etiologic stratification (aneurysm vs vascular malformation vs other),</li>
+      <li>analytics and registry reporting,</li>
+      <li>targeted clinical decision support pathways.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>FHIR placement</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Condition.extension[bleedingReason].valueCodeableConcept</code> (required binding to HemorrhagicStrokeBleedingReasonVS).</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -579,7 +621,29 @@ The Observation is categorized as <code class="language-plaintext highlighter-ro
                   title="StructureDefinition/ischemic-stroke-etiology-ext">Ischemic Stroke – Etiology</a>
             </td>
             <td>
-<p>Records the determined ischemic stroke etiology as a CodeableConcept bound (required) to StrokeEtiologyVS (e.g., cardioembolic, large artery atherosclerosis, lacunar, cryptogenic). Apply to definitive ischemic stroke Conditions after diagnostic workup; avoid use for hemorrhagic strokes or provisional hypotheses not yet established.</p>
+<p>Extension capturing the <strong>determined ischemic stroke etiology classification</strong>.</p>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Attach to a definitive ischemic stroke Condition (<code class="language-plaintext highlighter-rouge">StrokeDiagnosisConditionProfile</code>) to support:
+    <ul>
+      <li>etiologic subgroup analytics (cardioembolic vs lacunar vs cryptogenic, etc.),</li>
+      <li>pathway decision support (e.g., prolonged rhythm monitoring for cryptogenic stroke),</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>When to use</strong></p>
+<ul>
+  <li>Use after etiologic workup when a classification is assigned.</li>
+  <li>Do not use for hemorrhagic stroke diagnoses.</li>
+  <li>If the etiology remains unknown/undetermined, either omit the extension or use the “Undetermined” code included in StrokeEtiologyVS.</li>
+</ul>
+
+<p><strong>FHIR placement</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Condition.extension[ischemicEtiology].valueCodeableConcept</code> (required binding to StrokeEtiologyVS).</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -655,19 +719,59 @@ The Observation is categorized as <code class="language-plaintext highlighter-ro
          <tr>
             <td style="column-width:30%">
                <a href="StructureDefinition-onset-date-ext.html"
-                  title="StructureDefinition/onset-date-ext">Stroke Onset Date</a>
+                  title="StructureDefinition/onset-date-ext">Stroke Symptom Onset Date Extension</a>
             </td>
             <td>
-<p>Captures the calendar date (value[x] = date) of symptom onset for the indexed stroke event when known, enabling calculation of onset-to-door metrics and adherence to time-sensitive pathways. Use alongside OnsetTimeExt when hour/minute precision is available; omit if onset is unknown or inapplicable.</p>
+<p>Extension capturing the <strong>calendar date</strong> of symptom onset for the index stroke event.</p>
+
+<p><strong>Primary use-cases</strong></p>
+<ul>
+  <li>Compute onset-to-door and onset-to-treatment metrics when combined with encounter/treatment timestamps.</li>
+  <li>Support time-sensitive eligibility pathways when onset is known at least to the day.</li>
+</ul>
+
+<p><strong>When to use</strong></p>
+<ul>
+  <li>Use when onset date is known with reasonable confidence.</li>
+  <li>Use alongside <code class="language-plaintext highlighter-rouge">OnsetTimeExt</code> when time-of-day precision is available.</li>
+  <li>Omit if onset is unknown, only broadly estimated, or not applicable (e.g., certain in-hospital events may use different timing constructs).</li>
+</ul>
+
+<p><strong>FHIR placement</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Condition.extension[onsetDate].valueDate</code></li>
+</ul>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
                <a href="StructureDefinition-onset-time-ext.html"
-                  title="StructureDefinition/onset-time-ext">Stroke Onset Time</a>
+                  title="StructureDefinition/onset-time-ext">Stroke Symptom Onset Time Extension</a>
             </td>
             <td>
-<p>Captures the clock time (value[x] = time) of symptom onset for the indexed stroke event when available, complementing OnsetDateExt to support precise onset-to-treatment intervals. Use local time of the clinical setting; omit if time is unknown or estimated beyond acceptable precision.</p>
+<p>Extension capturing the <strong>clock time</strong> of symptom onset for the index stroke event.</p>
+
+<p><strong>Primary use-cases</strong></p>
+<ul>
+  <li>Enable precise onset-to-treatment intervals (e.g., onset-to-needle, onset-to-groin puncture).</li>
+  <li>Improve accuracy of eligibility assessments in time-window–dependent interventions.</li>
+</ul>
+
+<p><strong>When to use</strong></p>
+<ul>
+  <li>Use when onset time is known with sufficient precision for clinical use.</li>
+  <li>Omit if time is unknown or too uncertain.</li>
+</ul>
+
+<p><strong>FHIR placement</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Condition.extension[onsetTime].valueTime</code></li>
+</ul>
+
+<p><strong>Implementation note</strong></p>
+<ul>
+  <li>If <code class="language-plaintext highlighter-rouge">OnsetTimeExt</code> is present, <code class="language-plaintext highlighter-rouge">OnsetDateExt</code> should generally also be present (enforced as a warning invariant below).</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -693,7 +797,18 @@ The Observation is categorized as <code class="language-plaintext highlighter-ro
                   title="ValueSet/admission-source-vs">Admission Sources ValueSet</a>
             </td>
             <td>
-<p>Defines the modes of transport or pathways by which the patient arrived.</p>
+<p>This ValueSet enumerates modes of transport or pathways by which a patient arrived for the index stroke encounter.</p>
+
+<p><strong>Primary use-cases</strong></p>
+<ul>
+  <li>Bind to admission source elements (commonly <code class="language-plaintext highlighter-rouge">Encounter.hospitalization.admitSource</code> or local equivalents) to support:
+    <ul>
+      <li>operational reporting (ambulance vs own transport),</li>
+      <li>pathway compliance (e.g., EMS prenotification pathways),</li>
+      <li>inter-facility transfer analytics.</li>
+    </ul>
+  </li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -769,7 +884,19 @@ The Observation is categorized as <code class="language-plaintext highlighter-ro
                   title="ValueSet/discharge-destination-vs">Discharge Destination ValueSet</a>
             </td>
             <td>
-<p>Defines possible patient discharge destinations.</p>
+<p>This ValueSet enumerates discharge destination concepts (primarily SNOMED CT procedure-like “discharge to …” concepts).</p>
+
+<p><strong>Primary use-cases</strong></p>
+<ul>
+  <li>Bind to discharge disposition elements in encounter/hospitalization modeling.
+enabling consistent:
+    <ul>
+      <li>care transition analytics,</li>
+      <li>pathway reporting (home vs ward vs facility vs mortuary),</li>
+      <li>downstream coordination workflows.</li>
+    </ul>
+  </li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -786,7 +913,19 @@ The Observation is categorized as <code class="language-plaintext highlighter-ro
                   title="ValueSet/hemorrhagic-stroke-bleeding-reason-vs">Hemorrhagic Stroke Bleeding Reason ValueSet</a>
             </td>
             <td>
-<p>Specifies the identified cause of a hemorrhagic stroke, typically used with an extension.</p>
+<p>This ValueSet defines allowable causes of bleeding for hemorrhagic stroke documentation.</p>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Required binding for <code class="language-plaintext highlighter-rouge">HemorrhagicStrokeBleedingReasonExt.valueCodeableConcept</code> on a definitive hemorrhagic stroke Condition.</li>
+</ul>
+
+<p><strong>Implementation guidance</strong></p>
+<ul>
+  <li>Use when the cause is <em>identified</em> (e.g., aneurysm, vascular malformation).</li>
+  <li>If the cause is unknown/undetermined, prefer documenting that explicitly using narrative (<code class="language-plaintext highlighter-rouge">Condition.note</code>) and/or a dedicated assessment Observation;
+if a coded placeholder is required, <code class="language-plaintext highlighter-rouge">Undetermined (qualifier value)</code> is included as an option.</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -955,7 +1094,29 @@ with the result/status carried in <code class="language-plaintext highlighter-ro
                   title="ValueSet/stroke-diagnosis-vs">Stroke Diagnosis ValueSet</a>
             </td>
             <td>
-<p>SNOMED CT concepts representing final stroke-related diagnoses intended for use in Condition.code (and similar elements) within this IG. The scope covers ischemic stroke, intracerebral hemorrhage, subarachnoid hemorrhage, cerebral venous thrombosis, and transient ischemic attack (TIA). This value set is designed to support consistent capture, validation, analytics, and decision support. Implementers should expand against a terminology server using the appropriate SNOMED CT edition/version and preferred language(s) for display. Localizations or national derivatives MAY provide additional designations without altering the canonical definition. This value set is not intended for history-of, screening, or procedural concepts.</p>
+<p>This ValueSet enumerates SNOMED CT concepts representing <strong>final stroke-related diagnoses</strong> for use in <code class="language-plaintext highlighter-rouge">Condition.code</code> within this Implementation Guide (IG).</p>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Required binding to <code class="language-plaintext highlighter-rouge">Condition.code</code> in <code class="language-plaintext highlighter-rouge">StrokeDiagnosisConditionProfile</code>, representing the <em>definitive diagnosis</em> of the index stroke event for the linked encounter.</li>
+</ul>
+
+<p><strong>Scope</strong></p>
+<ul>
+  <li>Ischemic stroke</li>
+  <li>Intracerebral/cerebral hemorrhage</li>
+  <li>Subarachnoid hemorrhage</li>
+  <li>Cerebral venous thrombosis</li>
+  <li>Transient ischemic attack (TIA)</li>
+  <li>“Undetermined” qualifier (use cautiously; see notes)</li>
+</ul>
+
+<p><strong>Modeling notes</strong></p>
+<ul>
+  <li>This ValueSet is intended for definitive diagnoses (e.g., at discharge or after diagnostic workup), not “rule-out”, screening, history-of, or procedural concepts.</li>
+  <li>Terminology expansion should be performed against the appropriate SNOMED CT edition/version and preferred language(s). Localizations MAY add designations without changing meaning.</li>
+  <li>If “undetermined” is used, consider adding supporting narrative in <code class="language-plaintext highlighter-rouge">Condition.note</code> and/or linking evidence in Observations/DiagnosticReports to preserve interpretability.</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -973,7 +1134,23 @@ with the result/status carried in <code class="language-plaintext highlighter-ro
                   title="ValueSet/stroke-etiology-vs">Stroke Etiology ValueSet</a>
             </td>
             <td>
-<p>Specifies the determined etiology of an stroke.</p>
+<p>This ValueSet defines allowable values for recording the <strong>determined ischemic stroke etiology</strong>.</p>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Required binding for <code class="language-plaintext highlighter-rouge">StrokeStrokeEtiologyExt.valueCodeableConcept</code> on definitive ischemic stroke Conditions.</li>
+</ul>
+
+<p><strong>Composition</strong></p>
+<ul>
+  <li>Local etiology categories (StrokeEtiologyCS), plus selected SNOMED CT disorder concepts for commonly used etiology groupings.</li>
+</ul>
+
+<p><strong>Implementation guidance</strong></p>
+<ul>
+  <li>Use after etiologic workup when a classification is assigned.</li>
+  <li>If etiology remains unknown/undetermined, use the included <code class="language-plaintext highlighter-rouge">Undetermined (qualifier value)</code></li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -1015,7 +1192,25 @@ with the result/status carried in <code class="language-plaintext highlighter-ro
                   title="ValueSet/stroke-risk-factor-vs">Stroke Risk Factor ValueSet</a>
             </td>
             <td>
-<p>Defines the SNOMED CT codes for conditions or risk factors relevant to stroke, including an option for unknown status.</p>
+<p>This ValueSet enumerates SNOMED CT disorder concepts representing <strong>pre-existing or concurrent conditions</strong> that increase stroke risk.</p>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Required binding to <code class="language-plaintext highlighter-rouge">Condition.code</code> in <code class="language-plaintext highlighter-rouge">StrokeRiskFactorConditionProfile</code>, used to maintain a structured problem list supporting:
+    <ul>
+      <li>etiologic reasoning (e.g., cardioembolic risk),</li>
+      <li>clinical decision support (e.g., anticoagulation considerations),</li>
+      <li>quality reporting and research cohort definition.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Modeling notes</strong></p>
+<ul>
+  <li>This ValueSet is for <em>previously documented conditions</em> (problems), not for “risk factor unknown”.
+If a risk factor assessment is unknown/not assessed, represent that as an Observation (status/result) or use <code class="language-plaintext highlighter-rouge">dataAbsentReason</code> patterns rather than a Condition with an “Unknown” code.</li>
+  <li>The acute stroke event itself should be represented by <code class="language-plaintext highlighter-rouge">StrokeDiagnosisConditionProfile</code>, not by this risk factor profile.</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -1157,10 +1352,16 @@ It is primarily used to contextualize instruments whose interpretation depends o
          <tr>
             <td style="column-width:30%">
                <a href="CodeSystem-hemorrhagic-stroke-bleeding-reason-cs.html"
-                  title="CodeSystem/hemorrhagic-stroke-bleeding-reason-cs">Hemorrhagic Stroke Bleeding Reason Code System</a>
+                  title="CodeSystem/hemorrhagic-stroke-bleeding-reason-cs">Hemorrhagic Stroke Bleeding Reason CodeSystem</a>
             </td>
             <td>
-<p>Codes indicating the reason for bleeding in hemorrhagic stroke cases.</p>
+<p>Local CodeSystem representing <strong>locally governed reasons/causes</strong> for intracranial bleeding in hemorrhagic stroke.</p>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Used via <code class="language-plaintext highlighter-rouge">HemorrhagicStrokeBleedingReasonVS</code> as the allowed vocabulary for <code class="language-plaintext highlighter-rouge">HemorrhagicStrokeBleedingReasonExt.valueCodeableConcept</code>
+on a definitive hemorrhagic stroke Condition.</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -1290,10 +1491,26 @@ mTICI is an ordinal angiographic scale used to quantify the extent of reperfusio
          <tr>
             <td style="column-width:30%">
                <a href="CodeSystem-stroke-etiology-cs.html"
-                  title="CodeSystem/stroke-etiology-cs">Stroke Etiology Code System</a>
+                  title="CodeSystem/stroke-etiology-cs">Stroke Etiology CodeSystem</a>
             </td>
             <td>
-<p>Codes indicating the etiology of strokes.</p>
+<p>Local CodeSystem defining categories for <strong>ischemic stroke etiology</strong> classification.</p>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Used via <code class="language-plaintext highlighter-rouge">StrokeEtiologyVS</code> as the required vocabulary for <code class="language-plaintext highlighter-rouge">StrokeStrokeEtiologyExt.valueCodeableConcept</code>
+on a definitive ischemic stroke Condition.</li>
+</ul>
+
+<p><strong>Why it exists</strong></p>
+<ul>
+  <li>Stroke etiology classification often mixes internationally standard categories (cardioembolic, lacunar, cryptogenic) with local operational buckets.</li>
+</ul>
+
+<p><strong>Modeling notes</strong></p>
+<ul>
+  <li>This CodeSystem is intended for “final etiology classification” after diagnostic workup, not for provisional hypotheses.</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -1603,7 +1820,7 @@ Each code represents a duration measured between two clinically meaningful event
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 12:37+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 14:25+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

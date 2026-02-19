@@ -20,7 +20,7 @@
       <value value="http://tecnomod-um.org"/>
     </telecom>
   </contact>
-  <description value="Specifies the identified cause of a hemorrhagic stroke, typically used with an extension."/>
+  <description value="This ValueSet defines allowable causes of bleeding for hemorrhagic stroke documentation.&#xA;&#xA;**Primary use-case**&#xA;- Required binding for `HemorrhagicStrokeBleedingReasonExt.valueCodeableConcept` on a definitive hemorrhagic stroke Condition.&#xA;&#xA;**Implementation guidance**&#xA;- Use when the cause is *identified* (e.g., aneurysm, vascular malformation).&#xA;- If the cause is unknown/undetermined, prefer documenting that explicitly using narrative (`Condition.note`) and/or a dedicated assessment Observation;&#xA;  if a coded placeholder is required, `Undetermined (qualifier value)` is included as an option."/>
   <immutable value="false"/>
   <purpose value="To enable consistent capture of the underlying cause of bleeding in hemorrhagic stroke."/>
   <copyright value="© Tecnomod. This value set includes locally defined codes."/>

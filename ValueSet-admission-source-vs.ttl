@@ -31,7 +31,7 @@
        fhir:value [ fhir:v "http://tecnomod-um.org" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "Defines the modes of transport or pathways by which the patient arrived."] ; # 
+  fhir:description [ fhir:v "This ValueSet enumerates modes of transport or pathways by which a patient arrived for the index stroke encounter.\n\n**Primary use-cases**\n- Bind to admission source elements (commonly `Encounter.hospitalization.admitSource` or local equivalents) to support:\n  - operational reporting (ambulance vs own transport),\n  - pathway compliance (e.g., EMS prenotification pathways),\n  - inter-facility transfer analytics."] ; # 
   fhir:immutable [ fhir:v false] ; # 
   fhir:purpose [ fhir:v "To standardize the capture of patient admission sources for workflow, reporting, and interoperability."] ; # 
   fhir:copyright [ fhir:v "This value set includes SNOMED CT® content. SNOMED CT® is distributed by SNOMED International."] ; # 

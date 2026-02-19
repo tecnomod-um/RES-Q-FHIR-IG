@@ -19,7 +19,7 @@
   ] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "HemorrhagicStrokeBleedingReasonCS"] ; # 
-  fhir:title [ fhir:v "Hemorrhagic Stroke Bleeding Reason Code System"] ; # 
+  fhir:title [ fhir:v "Hemorrhagic Stroke Bleeding Reason CodeSystem"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:experimental [ fhir:v false] ; # 
   fhir:date [ fhir:v "2025-10-07"^^xsd:date] ; # 
@@ -31,7 +31,7 @@
        fhir:value [ fhir:v "http://tecnomod-um.org" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "Codes indicating the reason for bleeding in hemorrhagic stroke cases."] ; # 
+  fhir:description [ fhir:v "Local CodeSystem representing **locally governed reasons/causes** for intracranial bleeding in hemorrhagic stroke.\n\n**Primary use-case**\n- Used via `HemorrhagicStrokeBleedingReasonVS` as the allowed vocabulary for `HemorrhagicStrokeBleedingReasonExt.valueCodeableConcept`\n  on a definitive hemorrhagic stroke Condition."] ; # 
   fhir:purpose [ fhir:v "To provide locally governed codes for the identified cause of bleeding in hemorrhagic stroke."] ; # 
   fhir:copyright [ fhir:v "© Tecnomod. This CodeSystem is provided for use within this Implementation Guide."] ; # 
   fhir:caseSensitive [ fhir:v false] ; # 

@@ -37,7 +37,7 @@ This separation improves semantic clarity and supports consistent validation and
   "title" : "mTICI Score Codes CodeSystem",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-19T08:12:22+00:00",
+  "date" : "2026-02-19T08:49:26+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

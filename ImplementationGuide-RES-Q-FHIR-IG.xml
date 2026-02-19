@@ -9,7 +9,7 @@
   <version value="0.1.0"/>
   <name value="RESQIG"/>
   <status value="draft"/>
-  <date value="2026-02-19T08:12:22+00:00"/>
+  <date value="2026-02-19T08:49:26+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>
@@ -402,7 +402,7 @@
         <reference value="ValueSet/mrs-score-vs"/>
       </reference>
       <name value="modified Rankin Scale (mRS) Score ValueSet"/>
-      <description value="This ValueSet includes all modified Rankin Scale (mRS) grades defined in the MRsScoreCS CodeSystem (0–6). It is intended to be bound to Observation.valueCodeableConcept when the Observation.code indicates that the observation represents an mRS score.&#xA;&#xA;Binding mRS to a dedicated ValueSet supports strict validation (only valid mRS grades can be recorded), improves semantic consistency across implementations, and simplifies downstream cohorting and outcome reporting (e.g., dichotomized mRS 0–2 vs 3–6), without changing the meaning of individual grades."/>
+      <description value="This ValueSet includes all modified Rankin Scale (mRS) grades defined in the MRsScoreCS CodeSystem (0–6). It is intended to be bound to Observation.valueCodeableConcept when the Observation.code indicates that the observation represents an mRS score."/>
       <isExample value="false"/>
     </resource>
     <resource>

@@ -13,7 +13,6 @@
 
  
 This ValueSet includes all modified Rankin Scale (mRS) grades defined in the MRsScoreCS CodeSystem (0–6). It is intended to be bound to Observation.valueCodeableConcept when the Observation.code indicates that the observation represents an mRS score. 
-Binding mRS to a dedicated ValueSet supports strict validation (only valid mRS grades can be recorded), improves semantic consistency across implementations, and simplifies downstream cohorting and outcome reporting (e.g., dichotomized mRS 0–2 vs 3–6), without changing the meaning of individual grades. 
 
  **References** 
 
@@ -51,7 +50,7 @@ Binding mRS to a dedicated ValueSet supports strict validation (only valid mRS g
   "name" : "MRsScoreVS",
   "title" : "modified Rankin Scale (mRS) Score ValueSet",
   "status" : "active",
-  "date" : "2026-02-19T08:12:22+00:00",
+  "date" : "2026-02-19T08:49:26+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -64,7 +63,7 @@ Binding mRS to a dedicated ValueSet supports strict validation (only valid mRS g
       ]
     }
   ],
-  "description" : "This ValueSet includes all modified Rankin Scale (mRS) grades defined in the MRsScoreCS CodeSystem (0–6). It is intended to be bound to Observation.valueCodeableConcept when the Observation.code indicates that the observation represents an mRS score.\n\nBinding mRS to a dedicated ValueSet supports strict validation (only valid mRS grades can be recorded), improves semantic consistency across implementations, and simplifies downstream cohorting and outcome reporting (e.g., dichotomized mRS 0–2 vs 3–6), without changing the meaning of individual grades.",
+  "description" : "This ValueSet includes all modified Rankin Scale (mRS) grades defined in the MRsScoreCS CodeSystem (0–6). It is intended to be bound to Observation.valueCodeableConcept when the Observation.code indicates that the observation represents an mRS score.",
   "compose" : {
     "include" : [
       {

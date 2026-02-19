@@ -12,10 +12,10 @@
       "sources" : ["2.16.840.1.113883.4.642.3.109"],
       "uses" : {
       },
-      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile (R5)",
       "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile (R5)",
-      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile (R5)",
-      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile (R5)"
+      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile (R5)",
+      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile (R5)",
+      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile (R5)"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/medication-statement-adherence",
@@ -171,7 +171,7 @@
       "status" : "active",
       "name" : "MRsScoreVS",
       "title" : "modified Rankin Scale (mRS) Score ValueSet",
-      "description" : "This ValueSet includes all modified Rankin Scale (mRS) grades defined in the MRsScoreCS CodeSystem (0–6). It is intended to be bound to Observation.valueCodeableConcept when the Observation.code indicates that the observation represents an mRS score.\n\nBinding mRS to a dedicated ValueSet supports strict validation (only valid mRS grades can be recorded), improves semantic consistency across implementations, and simplifies downstream cohorting and outcome reporting (e.g., dichotomized mRS 0–2 vs 3–6), without changing the meaning of individual grades.",
+      "description" : "This ValueSet includes all modified Rankin Scale (mRS) grades defined in the MRsScoreCS CodeSystem (0–6). It is intended to be bound to Observation.valueCodeableConcept when the Observation.code indicates that the observation represents an mRS score.",
       "systems" : ["http://tecnomod-um.org/CodeSystem/mrs-score-cs"],
       "uses" : {
       },
@@ -331,10 +331,10 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile (R5)",
       "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile (R5)",
-      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile (R5)",
-      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile (R5)"
+      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile (R5)",
+      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile (R5)",
+      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile (R5)"
     },
     {
       "url" : "http://tecnomod-um.org/ValueSet/stroke-risk-factor-vs",

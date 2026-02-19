@@ -18,7 +18,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation SpecificFindingObservationExample</b></p><a name=\"SpecificFindingObservationExample\"> </a><a name=\"hcSpecificFindingObservationExample\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-specific-finding-observation-profile.html\">Specific Stroke Finding Observation Profile (R5)</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 49436004}\">Atrial fibrillation</span></p><p><b>subject</b>: <a href=\"Patient-example-patient.html\">Anonymous Patient (no stated gender), DoB Unknown</a></p><p><b>encounter</b>: <a href=\"Encounter-StrokeEncounterExample.html\">Encounter: extension = true,ICU / Stroke Unit,false,Neurology; status = completed; type = Inpatient Encounter; actualPeriod = 2025-03-01 08:00:00+0000 --&gt; 2025-03-10 12:00:00+0000</a></p><p><b>value</b>: <span title=\"Codes:{http://tecnomod-um.org/CodeSystem/afib-flutter-status-cs detected}\">Detected</span></p></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation SpecificFindingObservationExample</b></p><a name=\"SpecificFindingObservationExample\"> </a><a name=\"hcSpecificFindingObservationExample\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-specific-finding-observation-profile.html\">Specific Stroke Finding Observation Profile (R5)</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 49436004}\">Atrial fibrillation (disorder)</span></p><p><b>subject</b>: <a href=\"Patient-example-patient.html\">Anonymous Patient (no stated gender), DoB Unknown</a></p><p><b>encounter</b>: <a href=\"Encounter-StrokeEncounterExample.html\">Encounter: extension = true,ICU / Stroke Unit,false,Neurology; status = completed; type = Inpatient Encounter; actualPeriod = 2025-03-01 08:00:00+0000 --&gt; 2025-03-10 12:00:00+0000</a></p><p><b>value</b>: <span title=\"Codes:{http://tecnomod-um.org/CodeSystem/afib-flutter-status-cs detected}\">Detected</span></p></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
@@ -30,8 +30,7 @@
        ] ;
        fhir:code [ fhir:v "49436004" ] ;
        fhir:display [ fhir:v "Atrial fibrillation (disorder)" ]
-     ] ) ;
-     fhir:text [ fhir:v "Atrial fibrillation" ]
+     ] )
   ] ; # 
   fhir:subject [
      fhir:l <http://tecnomod-um.org/Patient/example-patient> ;
@@ -50,8 +49,7 @@
        ] ;
        fhir:code [ fhir:v "detected" ] ;
        fhir:display [ fhir:v "Detected" ]
-     ] ) ;
-     fhir:text [ fhir:v "Detected" ]
+     ] )
   ] . # 
 
 # -------------------------------------------------------------------------------------

@@ -6,8 +6,8 @@
   "status" : "draft",
   "package-id" : "RES-Q-FHIR-IG",
   "ig-ver" : "0.1.0",
-  "date" : "Thu, 19 Feb, 2026 08:12:22 +0000",
-  "dateISO8601" : "2026-02-19T08:12:22+00:00",
+  "date" : "Thu, 19 Feb, 2026 08:49:26 +0000",
+  "dateISO8601" : "2026-02-19T08:49:26+00:00",
   "errs" : 4,
   "warnings" : 125,
   "hints" : 42,
@@ -15,5 +15,5 @@
   "suppressed-warnings" : 0,
   "version" : "5.0.0",
   "tool" : "5.0.0 (3)",
-  "maxMemory" : 1465220528
+  "maxMemory" : 1955309968
 }

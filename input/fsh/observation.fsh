@@ -163,7 +163,6 @@ Id: mrs-score-cs
 * ^url = MRsScoreCS_URL
 * ^version = "1.0.0"
 * ^title = "Modified Rankin Scale Score Code System"
-* ^content = #complete
 * ^status = #active
 * ^experimental = true 
 * ^caseSensitive = false  
@@ -185,7 +184,6 @@ Title: "Modified Rankin Scale Score Valueset"
 * ^url = MRsScoreVS_URL
 * ^version = "1.0.0"
 * ^title = "Modified Rankin Scale (mRS) Score ValueSet"
-* ^content = #complete
 * ^status = #active
 * ^experimental = true 
 * ^caseSensitive = false  
@@ -205,7 +203,6 @@ Title: "Assessment Context CodeSystem"
 * ^url = AssessmentContextCS_URL
 * ^version = "1.0.0"
 * ^title = "Assessment Context Code System"
-* ^content = #complete
 * ^status = #active
 * ^experimental = true 
 * ^caseSensitive = false    
@@ -227,7 +224,6 @@ This ValueSet includes all context/timepoint codes defined in AssessmentContextC
 Title: "Assessment Context ValueSet"
 * ^url = AssessmentContextVS_URL
 * ^version = "1.0.0"
-* ^content = #complete
 * ^status = #active
 * ^experimental = true 
 * ^caseSensitive = false   

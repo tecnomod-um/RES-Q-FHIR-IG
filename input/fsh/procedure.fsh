@@ -33,7 +33,6 @@ Alias: SwallowProceduresVS_URL = http://tecnomod-um.org/ValueSet/swallow-procedu
 Alias: ProcedureTimingContextVS_URL = http://tecnomod-um.org/ValueSet/procedure-timing-context-vs
 
 // URLs for Custom Extensions
-Alias: ProcPerfElsewhereExt_URL = http://tecnomod-um.org/StructureDefinition/procedure-performed-elsewhere-indicator-ext
 Alias: SwallowScreenTimeExt_URL = http://tecnomod-um.org/StructureDefinition/swallowing-screening-timing-category-ext
 Alias: ProcTimingContextExt_URL = http://tecnomod-um.org/StructureDefinition/procedure-timing-context-ext
 
@@ -48,13 +47,6 @@ This ValueSet enumerates standardized codes (primarily SNOMED CT procedures) rep
 
 **Primary use-case**
 - Bind to `Procedure.code` when recording a carotid imaging study performed during the stroke episode.
-
-**Why it matters**
-- Supports comparable reporting across facilities (e.g., Doppler vs angiography vs CTA/MRA usage).
-- Reduces variability from local naming conventions and free-text.
-
-**What it does not represent**
-- Imaging results/findings (e.g., stenosis severity). Findings should be modeled separately (Observation/DiagnosticReport/ImagingStudy, depending on your architecture).
 """
 * ^url = CarotidImagingModalityVS_URL
 * ^status = #active
@@ -98,9 +90,6 @@ It intentionally supports two levels of coding:
 **Primary use-case**
 - Required binding to `Procedure.code` for brain imaging within the stroke episode.
 
-**Implementation guidance**
-- Prefer SNOMED CT when the source provides discrete modality/procedure entries.
-- Use local protocol codes when the source provides only bundled protocol information.
 """ 
 * ^url = BrainImagingModalityVS_URL
 * ^version = "1.0.0"
@@ -145,6 +134,7 @@ Description: """ ValueSet of SNOMED CT concepts representing complications of th
 * ^version = "1.0.0"
 * ^status = #active
 * include SCT#307312008 "Perforation of artery (disorder)"
+* include codes from system ThrombectomyComplicationCS_URL
 
 CodeSystem: StrokeProcNotDoneReasonCS
 Id: stroke-proc-not-done-reason-cs
@@ -205,10 +195,6 @@ Local CodeSystem that categorizes when a swallowing screening occurred relative 
 **Primary use-case**
 - Support process metrics such as “screening completed within 4 hours”.
 
-**Why categories instead of timestamps**
-- Some environments record a “time bucket” rather than an exact timestamp.
-- Category data can still support KPI reporting even when precise times are unavailable.
-
 **FHIR placement**
 - Used as a CodeableConcept in a Procedure extension (`SwallowingScreeningTimingCategoryExt`).
 """
@@ -232,7 +218,7 @@ ValueSet defining allowed categories for swallowing screening timing, combining:
 - SNOMED CT qualifier concepts for post-admission timing.
 
 **Use-case**
-- Required binding for the swallowing timing extension to standardize KPI reporting across sites.
+- Required binding for the swallowing timing extension.
  """ 
 * ^url = SwallowingScreeningTimingCategoryVS_URL
 * ^version = "1.0.0"
@@ -251,9 +237,6 @@ Local CodeSystem for classifying a procedure into a **timing context** relative 
 **Primary use-case**
 - Normalize reporting into acute (<24h) vs post-acute (>=24h) phases for stroke process measures.
 
-**Why this is useful**
-- It supports consistent reporting even when onset time is uncertain.
-- It is designed for encounter-based operational KPIs rather than physiologic onset-based timelines.
 
 **FHIR placement**
 - Used in `ProcedureTimingContextExtension` attached to Procedure.
@@ -289,11 +272,8 @@ Id: swallow-procedures-cs
 Title: "Swallow Procedures CodeSystem" 
 Description: """Local CodeSystem representing swallowing screening/assessment tools often documented by acronym or local naming.
 
-**Primary use-case**
-- Provide stable, implementable codes when upstream systems cannot supply SNOMED CT equivalents.
-
 **FHIR placement**
-- Included in `SwallowProceduresVS` to be used in `Procedure.code` and (optionally) `Procedure.used.concept`.
+- Included in `SwallowProceduresVS` to be used in `Procedure.code` 
 """
 * ^url = SwallowProceduresCS_URL
 * ^version = "1.0.0"
@@ -308,14 +288,6 @@ Id: swallow-procedures-vs
 Title: "Swallow Procedures ValueSet"
 Description: """ 
 ValueSet enumerating swallowing screening/assessment procedures/tools used in stroke care.
-
-**Primary use-case**
-- Required binding for `StrokeSwallowProcedureProfile.code` to ensure the Procedure truly represents a swallow screening/assessment.
-
-**Secondary use-case**
-- Can also be used for `Procedure.used.concept` (R5) to explicitly document the tool used when:
-  - `Procedure.code` is generic, or
-  - you want a consistent field for “tool used” across multiple workflow variants.
 
 **Implementation note**
 - `SCT#261665006 'Unknown'´ is included only as a provisional development workaround; in production, prefer FHIR `dataAbsentReason` for missing data rather than “Unknown” as a procedure code.
@@ -341,8 +313,6 @@ ValueSet restricting Procedure codes to stroke **reperfusion interventions**:
 - IV thrombolysis (IVT)
 - Mechanical thrombectomy (MT)
 
-**Primary use-case**
-- Required binding for `StrokeThrombolysisProcedureProfile.code` (which covers reperfusion procedures in this IG).
 """ 
 * ^url = PerforationProceduresVS_URL
 * ^name = "PerforationProceduresValueset"
@@ -360,9 +330,6 @@ Extension: SwallowingScreeningTimingCategoryExt
 Id: swallowing-screening-timing-category-ext
 Title: "Swallowing Screening Timing Category Extension"
 Description: """ Extension capturing the **timing category** of swallowing screening relative to stroke onset/admission.
-
-**Primary use-case**
-- KPI reporting: “swallowing screening performed within 4 hours”.
 
 **When to use**
 - When you cannot reliably store an exact timestamp (or want an additional categorical indicator even if a timestamp exists).
@@ -421,10 +388,8 @@ Description: """ Profile for documenting **brain imaging performed during a stro
 **Typical scenarios**
 1) Imaging completed on-site: `status=completed`, `occurrence[x]` present, `timingContext` optional.
 2) Imaging not performed: `status=not-done`, `statusReason` required.
-3) Imaging performed elsewhere: if your IG uses a “performed elsewhere” indicator extension, rules may allow missing on-site timestamps.
+3) Imaging performed elsewhere: `status=not-done`, `statusReason` = performedElsewhere, `occurrence[x]` optional (may not have exact time).
 
-**Downstream use**
-- Door-to-imaging metrics, protocol utilization, cross-site comparability.
 """
 Title: "Stroke Brain Imaging Procedure Profile" 
 Parent: FHIR_Procedure // R5 Procedure Base
@@ -450,6 +415,11 @@ Description: """ Profile for documenting **carotid angiography** within a stroke
 **Design intent**
 - This profile fixes `Procedure.code` to a specific SNOMED code (angiography of carotid artery).
 - If you want multiple carotid modalities, replace the fixed code with a required binding to CarotidImagingModalityVS.
+
+**Typical scenarios**
+1) Carotid angiography performed: `status=completed`, `occurrence[x]` present, `timingContext` optional.
+2) Carotid angiography not performed: `status=not-done`, `statusReason` required.
+3) Carotid angiography performed elsewhere: `status=not-done`, `statusReason` = performedElsewhere, `occurrence[x]` optional.
 
 **Use-cases**
 - Determining whether carotid angiography was performed during the episode.
@@ -483,10 +453,13 @@ Description: """Profile for documenting **stroke reperfusion procedures** as FHI
 - `complication`: complications (as CodeableReference to Condition) — constrained by invariants.
 - `extension[timingContext]`: acute/post-acute phase classification.
 
-**Use-cases**
-- Time-to-treatment metrics (door-to-needle, door-to-groin), service evaluation.
-- Structured documentation of “why not treated” for QI programs.
-- Safety monitoring for procedural complications. """ 
+**Typical scenarios**
+1) Reperfusion performed on-site: `status=completed`, `occurrence[x]` present, `timingContext` optional.
+2) Reperfusion not performed: `status=not-done`, `statusReason` required.
+3) Reperfusion performed elsewhere: `status=not-done`, `statusReason` = performedElsewhere, `occurrence[x]` optional.
+4) Reperfusion attempted but complicated by perforation: `status=completed`, `complication` = perforation code, `occurrence[x]` captures timing of the attempt.
+ 
+""" 
 
 Parent: FHIR_Procedure // R5 Procedure Base
 * ^fhirVersion = #5.0.0 // Specify R5
@@ -517,16 +490,15 @@ Description: """ Profile for documenting **swallow screening / dysphagia assessm
 - `code`: the screening/assessment procedure or tool used (SwallowProceduresVS).
 - `status`: whether completed or not done.
 - `statusReason`: controlled reason set when not done.
-- `extension[screeningTimingCategory]`: timing bucket (e.g., within 4h) for KPI reporting.
+- `extension[screeningTimingCategory]`: timing bucket (e.g., within 4h).
 - `extension[timingContext]`: acute/post-acute phase relative to encounter start.
-- `used.concept` (R5): explicitly documents the tool used, especially when:
-  - `code` is generic, or
-  - you want a consistent “tool used” field for analytics and comparison.
 
-**Use-cases**
-- Compliance monitoring: swallow screen performed early after stroke.
-- Tool utilization analysis (GUSS vs V-VST vs others).
-- Supporting aspiration pneumonia prevention workflows.
+
+** Typical scenarios**
+1) Screening completed on-site: `status=completed`, `extension[screeningTimingCategory]` optional, `extension[timingContext]` optional.
+2) Screening not performed: `status=not-done`, `statusReason` required.
+3) Screening performed elsewhere: `status=not-done`, `statusReason` = performedElsewhere, `extension[screeningTimingCategory]` optional.
+
 """ 
 * ^fhirVersion = #5.0.0 // Specify R5
 * ^url = "http://tecnomod-um.org/StructureDefinition/stroke-swallow-procedure-profile"

@@ -49,7 +49,7 @@ Other representations of profile: [CSV](StructureDefinition-timing-metric-observ
   "name" : "TimingMetricObservationProfile",
   "title" : "Stroke Timing Metric Observation Profile (R5)",
   "status" : "draft",
-  "date" : "2026-02-19T14:25:22+00:00",
+  "date" : "2026-02-19T14:52:32+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

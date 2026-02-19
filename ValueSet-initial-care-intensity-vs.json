@@ -10,7 +10,7 @@
   "name" : "InitialCareIntensityVS",
   "title" : "Initial Care Intensity ValueSet",
   "status" : "active",
-  "date" : "2026-02-19T14:25:22+00:00",
+  "date" : "2026-02-19T14:52:32+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",
@@ -19,7 +19,7 @@
       "value" : "http://tecnomod-um.org"
     }]
   }],
-  "description" : "ValueSet indicating the level of care provided initially.",
+  "description" : "ValueSet restricting allowed initial care intensity categories.\n\n**Primary use-case**\n- Required binding for `InitialCareIntensityExtension.valueCodeableConcept`.",
   "compose" : {
     "include" : [{
       "system" : "http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs"

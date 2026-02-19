@@ -11,7 +11,22 @@
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/initial-care-intensity-ext | *Version*:0.1.0 |
 | Draft as of 2026-02-19 | *Computable Name*:InitialCareIntensityExtension |
 
-Specifies the level of care provided during the patient's initial day(s) in the hospital (e.g., standard bed, monitored, ICU/Stroke Unit).
+Extension capturing the **initial level of care** provided during the first day(s) of hospitalization for the stroke encounter.
+
+**Primary use-cases**
+
+* Operational reporting (ICU/stroke unit utilization).
+* Case-mix adjustment for outcomes and length-of-stay analyses.
+* Benchmarking across sites.
+
+**Relationship to base Encounter**
+
+* This is not a location/ward tracker; for physical moves use `Encounter.location` with Location references.
+* This is a categorical “initial intensity” label used for reporting.
+
+**FHIR placement**
+
+* `Encounter.extension[initialCareIntensity].valueCodeableConcept` (required binding to InitialCareIntensityVS).
 
 **Context of Use**
 
@@ -55,7 +70,7 @@ Other representations of profile: [CSV](StructureDefinition-initial-care-intensi
   "name" : "InitialCareIntensityExtension",
   "title" : "Initial Care Intensity Extension",
   "status" : "draft",
-  "date" : "2026-02-19T14:25:22+00:00",
+  "date" : "2026-02-19T14:52:32+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -68,7 +83,7 @@ Other representations of profile: [CSV](StructureDefinition-initial-care-intensi
       ]
     }
   ],
-  "description" : "Specifies the level of care provided during the patient's initial day(s) in the hospital (e.g., standard bed, monitored, ICU/Stroke Unit).",
+  "description" : "Extension capturing the **initial level of care** provided during the first day(s) of hospitalization for the stroke encounter.\n\n**Primary use-cases**\n- Operational reporting (ICU/stroke unit utilization).\n- Case-mix adjustment for outcomes and length-of-stay analyses.\n- Benchmarking across sites.\n\n**Relationship to base Encounter**\n- This is not a location/ward tracker; for physical moves use `Encounter.location` with Location references.\n- This is a categorical “initial intensity” label used for reporting.\n\n**FHIR placement**\n- `Encounter.extension[initialCareIntensity].valueCodeableConcept` (required binding to InitialCareIntensityVS).",
   "fhirVersion" : "5.0.0",
   "mapping" : [
     {
@@ -92,7 +107,9 @@ Other representations of profile: [CSV](StructureDefinition-initial-care-intensi
     "element" : [
       {
         "id" : "Extension",
-        "path" : "Extension"
+        "path" : "Extension",
+        "short" : "Initial Care Intensity Extension",
+        "definition" : "Extension capturing the **initial level of care** provided during the first day(s) of hospitalization for the stroke encounter.\n\n**Primary use-cases**\n- Operational reporting (ICU/stroke unit utilization).\n- Case-mix adjustment for outcomes and length-of-stay analyses.\n- Benchmarking across sites.\n\n**Relationship to base Encounter**\n- This is not a location/ward tracker; for physical moves use `Encounter.location` with Location references.\n- This is a categorical “initial intensity” label used for reporting.\n\n**FHIR placement**\n- `Encounter.extension[initialCareIntensity].valueCodeableConcept` (required binding to InitialCareIntensityVS)."
       },
       {
         "id" : "Extension.extension",

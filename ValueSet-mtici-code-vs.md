@@ -54,7 +54,7 @@ This ValueSet includes the mTICI assessment concept code(s) from MTICICodeCS.
   "name" : "MTICICodeVS",
   "title" : "Modified Thrombolysis in Cerebral Infarction Assessment ValueSet",
   "status" : "active",
-  "date" : "2026-02-19T14:25:22+00:00",
+  "date" : "2026-02-19T14:52:32+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

@@ -1,8 +1,8 @@
 {
   "resourceType" : "Bundle",
-  "id" : "b5bcef50-ef2b-4a90-8633-17af8a56d428",
+  "id" : "bd1b062a-00dd-4595-9951-5f84580bd17b",
   "meta" : {
-    "lastUpdated" : "2026-02-19T14:25:22.117+00:00"
+    "lastUpdated" : "2026-02-19T14:52:32.888+00:00"
   },
   "type" : "collection",
   "entry" : [{
@@ -22,8 +22,8 @@
       "date" : "2025-03-31",
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:df996e9a-cde4-442b-b89b-3c0f993b65ef",
-        "timestamp" : "2026-02-19T14:26:39+00:00",
+        "identifier" : "urn:uuid:1726df00-e9b4-4f62-90aa-1e216ee51683",
+        "timestamp" : "2026-02-19T14:53:33+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -83,8 +83,8 @@
       "status" : "active",
       "date" : "2025-03-31",
       "expansion" : {
-        "identifier" : "urn:uuid:a5125e9a-3a6f-4acb-8329-1495b908b312",
-        "timestamp" : "2026-02-19T14:26:39+00:00",
+        "identifier" : "urn:uuid:181f3807-4e3c-47b3-bc3e-b9898a735f64",
+        "timestamp" : "2026-02-19T14:53:33+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -143,10 +143,10 @@
       "title" : "Assessment Context ValueSet",
       "status" : "active",
       "experimental" : true,
-      "date" : "2026-02-19T14:25:22+00:00",
+      "date" : "2026-02-19T14:52:32+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:ac66cf7c-44c6-4a49-8528-0a617c08f85e",
-        "timestamp" : "2026-02-19T14:26:40+00:00",
+        "identifier" : "urn:uuid:c47691a4-a3c0-400f-be97-9a0b43065fcb",
+        "timestamp" : "2026-02-19T14:53:34+00:00",
         "total" : 4,
         "offset" : 0,
         "parameter" : [{
@@ -205,10 +205,10 @@
       "name" : "BrainImagingModalityVS",
       "title" : "Brain Imaging Modality ValueSet",
       "status" : "active",
-      "date" : "2026-02-19T14:25:22+00:00",
+      "date" : "2026-02-19T14:52:32+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:909002e7-9e74-46b4-8a8d-2c813025ed02",
-        "timestamp" : "2026-02-19T14:26:40+00:00",
+        "identifier" : "urn:uuid:516d751a-877d-4252-ace6-4d9b747fcc41",
+        "timestamp" : "2026-02-19T14:53:34+00:00",
         "total" : 6,
         "offset" : 0,
         "parameter" : [{
@@ -285,10 +285,10 @@
       "name" : "CarotidImagingModalityVS",
       "title" : "Carotid Arteries Imaging Modality ValueSet",
       "status" : "active",
-      "date" : "2026-02-19T14:25:22+00:00",
+      "date" : "2026-02-19T14:52:32+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:64d88611-757f-4d2d-aec2-08cfd0b42876",
-        "timestamp" : "2026-02-19T14:26:40+00:00",
+        "identifier" : "urn:uuid:e1e89463-a5d1-48d9-998a-33e8b2072da2",
+        "timestamp" : "2026-02-19T14:53:34+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -339,17 +339,17 @@
       "resourceType" : "ValueSet",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-discharge-dept-cs.html\">codesystem Discharge Department/Service Code System v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://tecnomod-um.org/CodeSystem/discharge-dept-cs|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 4 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/discharge-dept-cs-acute\"> </a><code>http://tecnomod-um.org/CodeSystem/discharge-dept-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-discharge-dept-cs.html#discharge-dept-cs-acute\">acute</a></td><td>Acute Rehabilitation</td><td>Patient discharged to an acute rehabilitation setting.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/discharge-dept-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;acute&quot;, &quot;display&quot;: &quot;Acute Rehabilitation&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/discharge-dept-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;acute&quot;&gt;&lt;display value=&quot;Acute Rehabilitation&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/discharge-dept-cs-post-care\"> </a><code>http://tecnomod-um.org/CodeSystem/discharge-dept-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-discharge-dept-cs.html#discharge-dept-cs-post-care\">post-care</a></td><td>Post Care Bed</td><td>Patient discharged to a post care bed.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/discharge-dept-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;post-care&quot;, &quot;display&quot;: &quot;Post Care Bed&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/discharge-dept-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;post-care&quot;&gt;&lt;display value=&quot;Post Care Bed&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/discharge-dept-cs-neurology\"> </a><code>http://tecnomod-um.org/CodeSystem/discharge-dept-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-discharge-dept-cs.html#discharge-dept-cs-neurology\">neurology</a></td><td>Neurology</td><td>Patient discharged to a neurology department or service.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/discharge-dept-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;neurology&quot;, &quot;display&quot;: &quot;Neurology&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/discharge-dept-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;neurology&quot;&gt;&lt;display value=&quot;Neurology&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/discharge-dept-cs-another-department\"> </a><code>http://tecnomod-um.org/CodeSystem/discharge-dept-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-discharge-dept-cs.html#discharge-dept-cs-another-department\">another-department</a></td><td>Another Department</td><td>Patient discharged to a different department within the same hospital.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/discharge-dept-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;another-department&quot;, &quot;display&quot;: &quot;Another Department&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/discharge-dept-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;another-department&quot;&gt;&lt;display value=&quot;Another Department&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-discharge-dept-cs.html\">codesystem Discharge Department/Service CodeSystem v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://tecnomod-um.org/CodeSystem/discharge-dept-cs|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 4 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/discharge-dept-cs-acute\"> </a><code>http://tecnomod-um.org/CodeSystem/discharge-dept-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-discharge-dept-cs.html#discharge-dept-cs-acute\">acute</a></td><td>Acute Rehabilitation</td><td>Patient discharged to an acute rehabilitation setting.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/discharge-dept-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;acute&quot;, &quot;display&quot;: &quot;Acute Rehabilitation&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/discharge-dept-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;acute&quot;&gt;&lt;display value=&quot;Acute Rehabilitation&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/discharge-dept-cs-post-care\"> </a><code>http://tecnomod-um.org/CodeSystem/discharge-dept-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-discharge-dept-cs.html#discharge-dept-cs-post-care\">post-care</a></td><td>Post Care Bed</td><td>Patient discharged to a post care bed.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/discharge-dept-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;post-care&quot;, &quot;display&quot;: &quot;Post Care Bed&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/discharge-dept-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;post-care&quot;&gt;&lt;display value=&quot;Post Care Bed&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/discharge-dept-cs-neurology\"> </a><code>http://tecnomod-um.org/CodeSystem/discharge-dept-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-discharge-dept-cs.html#discharge-dept-cs-neurology\">neurology</a></td><td>Neurology</td><td>Patient discharged to a neurology department or service.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/discharge-dept-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;neurology&quot;, &quot;display&quot;: &quot;Neurology&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/discharge-dept-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;neurology&quot;&gt;&lt;display value=&quot;Neurology&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/discharge-dept-cs-another-department\"> </a><code>http://tecnomod-um.org/CodeSystem/discharge-dept-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-discharge-dept-cs.html#discharge-dept-cs-another-department\">another-department</a></td><td>Another Department</td><td>Patient discharged to a different department within the same hospital.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/discharge-dept-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;another-department&quot;, &quot;display&quot;: &quot;Another Department&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/discharge-dept-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;another-department&quot;&gt;&lt;display value=&quot;Another Department&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
       },
       "url" : "http://tecnomod-um.org/ValueSet/discharge-dept-vs",
       "version" : "0.1.0",
       "name" : "DischargeDeptVS",
       "title" : "Discharge Department/Service ValueSet",
       "status" : "active",
-      "date" : "2026-02-19T14:25:22+00:00",
+      "date" : "2026-02-19T14:52:32+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:23f86e01-00a1-4dcf-94f3-2e43241a06f2",
-        "timestamp" : "2026-02-19T14:26:40+00:00",
+        "identifier" : "urn:uuid:5e2e7682-c9a1-42a1-a26d-c3e17773d15d",
+        "timestamp" : "2026-02-19T14:53:34+00:00",
         "total" : 4,
         "offset" : 0,
         "parameter" : [{
@@ -412,8 +412,8 @@
       "date" : "2025-03-31",
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:5f32eca8-f7f1-4eb6-a746-0319788a4913",
-        "timestamp" : "2026-02-19T14:26:40+00:00",
+        "identifier" : "urn:uuid:7979a271-33d7-4c88-8a60-00835534030d",
+        "timestamp" : "2026-02-19T14:53:34+00:00",
         "total" : 5,
         "offset" : 0,
         "parameter" : [{
@@ -481,10 +481,10 @@
       "name" : "FunctionalScoreCodesVS",
       "title" : "Stroke Functional Score Codes ValueSet",
       "status" : "active",
-      "date" : "2026-02-19T14:25:22+00:00",
+      "date" : "2026-02-19T14:52:32+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:577b17ac-c03e-45e4-a36c-d7e8f490f1dc",
-        "timestamp" : "2026-02-19T14:26:33+00:00",
+        "identifier" : "urn:uuid:5265a4e8-859f-456e-8fd0-6236a978756f",
+        "timestamp" : "2026-02-19T14:53:27+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -541,8 +541,8 @@
       "date" : "2025-09-08",
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:aa49590c-1308-4b62-a4d2-fb0ae7c5cba5",
-        "timestamp" : "2026-02-19T14:26:41+00:00",
+        "identifier" : "urn:uuid:45d62321-2e85-40b5-87b4-7d843e3bd2cf",
+        "timestamp" : "2026-02-19T14:53:35+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -601,17 +601,17 @@
       "resourceType" : "ValueSet",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-initial-care-intensity-cs.html\">codesystem Initial Care Intensity Code System v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 3 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs-standard\"> </a><code>http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-initial-care-intensity-cs.html#initial-care-intensity-cs-standard\">standard</a></td><td>Standard Bed</td><td>Patient placed in a standard hospital bed without continuous monitoring.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;standard&quot;, &quot;display&quot;: &quot;Standard Bed&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;standard&quot;&gt;&lt;display value=&quot;Standard Bed&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs-monitored\"> </a><code>http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-initial-care-intensity-cs.html#initial-care-intensity-cs-monitored\">monitored</a></td><td>Monitored Bed</td><td>Patient placed in a bed with continuous telemetry or other monitoring (outside ICU).</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;monitored&quot;, &quot;display&quot;: &quot;Monitored Bed&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;monitored&quot;&gt;&lt;display value=&quot;Monitored Bed&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs-icu-stroke\"> </a><code>http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-initial-care-intensity-cs.html#initial-care-intensity-cs-icu-stroke\">icu-stroke</a></td><td>ICU / Stroke Unit</td><td>Patient placed in an Intensive Care Unit or specialized Stroke Unit.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;icu-stroke&quot;, &quot;display&quot;: &quot;ICU / Stroke Unit&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;icu-stroke&quot;&gt;&lt;display value=&quot;ICU / Stroke Unit&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-initial-care-intensity-cs.html\">codesystem Initial Care Intensity CodeSystem v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 3 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs-standard\"> </a><code>http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-initial-care-intensity-cs.html#initial-care-intensity-cs-standard\">standard</a></td><td>Standard bed</td><td>Patient placed in a standard inpatient bed without continuous telemetry/continuous physiologic monitoring.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;standard&quot;, &quot;display&quot;: &quot;Standard bed&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;standard&quot;&gt;&lt;display value=&quot;Standard bed&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs-monitored\"> </a><code>http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-initial-care-intensity-cs.html#initial-care-intensity-cs-monitored\">monitored</a></td><td>Monitored bed</td><td>Patient placed in a monitored setting (e.g., telemetry) without full ICU-level care.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;monitored&quot;, &quot;display&quot;: &quot;Monitored bed&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;monitored&quot;&gt;&lt;display value=&quot;Monitored bed&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs-icu-stroke\"> </a><code>http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-initial-care-intensity-cs.html#initial-care-intensity-cs-icu-stroke\">icu-stroke</a></td><td>ICU / Stroke Unit</td><td>Patient managed in an ICU or specialized stroke unit providing high-intensity care and monitoring.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;icu-stroke&quot;, &quot;display&quot;: &quot;ICU / Stroke Unit&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;icu-stroke&quot;&gt;&lt;display value=&quot;ICU / Stroke Unit&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
       },
       "url" : "http://tecnomod-um.org/ValueSet/initial-care-intensity-vs",
       "version" : "0.1.0",
       "name" : "InitialCareIntensityVS",
       "title" : "Initial Care Intensity ValueSet",
       "status" : "active",
-      "date" : "2026-02-19T14:25:22+00:00",
+      "date" : "2026-02-19T14:52:32+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:afa4b311-47c1-4e66-9a7a-4d3acdd8c8ab",
-        "timestamp" : "2026-02-19T14:26:41+00:00",
+        "identifier" : "urn:uuid:83733bac-cfda-48ff-98bf-1639ea5b044c",
+        "timestamp" : "2026-02-19T14:53:35+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -641,12 +641,12 @@
         "contains" : [{
           "system" : "http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs",
           "code" : "standard",
-          "display" : "Standard Bed"
+          "display" : "Standard bed"
         },
         {
           "system" : "http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs",
           "code" : "monitored",
-          "display" : "Monitored Bed"
+          "display" : "Monitored bed"
         },
         {
           "system" : "http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs",
@@ -669,10 +669,10 @@
       "name" : "MedicationVS",
       "title" : "Medications ValueSet",
       "status" : "draft",
-      "date" : "2026-02-19T14:25:22+00:00",
+      "date" : "2026-02-19T14:52:32+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:d09adeb3-a0ea-4fb8-b56d-92563389cac0",
-        "timestamp" : "2026-02-19T14:26:41+00:00",
+        "identifier" : "urn:uuid:c1a52e68-226d-4aab-a220-3ac01a543249",
+        "timestamp" : "2026-02-19T14:53:35+00:00",
         "total" : 12,
         "offset" : 0,
         "parameter" : [{
@@ -780,10 +780,10 @@
       "title" : "Modified Rankin Scale (mRS) Score ValueSet",
       "status" : "active",
       "experimental" : true,
-      "date" : "2026-02-19T14:25:22+00:00",
+      "date" : "2026-02-19T14:52:32+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:8a180795-b09a-45bd-83f0-c0cbd2d2b9bf",
-        "timestamp" : "2026-02-19T14:26:33+00:00",
+        "identifier" : "urn:uuid:e587695b-5f24-4712-a501-f7180d62c647",
+        "timestamp" : "2026-02-19T14:53:28+00:00",
         "total" : 7,
         "offset" : 0,
         "parameter" : [{
@@ -857,10 +857,10 @@
       "name" : "MTICICodeVS",
       "title" : "Modified Thrombolysis in Cerebral Infarction Assessment ValueSet",
       "status" : "active",
-      "date" : "2026-02-19T14:25:22+00:00",
+      "date" : "2026-02-19T14:52:32+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:41f546b1-b9c8-401a-89c8-0dcc6916f96e",
-        "timestamp" : "2026-02-19T14:26:41+00:00",
+        "identifier" : "urn:uuid:1987041a-ac1c-4158-8a67-b972b8afba44",
+        "timestamp" : "2026-02-19T14:53:35+00:00",
         "total" : 1,
         "offset" : 0,
         "parameter" : [{
@@ -911,8 +911,8 @@
       "experimental" : true,
       "date" : "2025-03-31",
       "expansion" : {
-        "identifier" : "urn:uuid:3a0d7ded-955c-4006-bc04-905fb0d9a0b5",
-        "timestamp" : "2026-02-19T14:26:41+00:00",
+        "identifier" : "urn:uuid:eed0b8e4-eae8-4b15-bacb-6ba6340ae00b",
+        "timestamp" : "2026-02-19T14:53:35+00:00",
         "total" : 6,
         "offset" : 0,
         "parameter" : [{
@@ -984,8 +984,8 @@
       "experimental" : true,
       "date" : "2025-03-31",
       "expansion" : {
-        "identifier" : "urn:uuid:3a084939-850f-4457-9061-afd6a3a0a66e",
-        "timestamp" : "2026-02-19T14:26:41+00:00",
+        "identifier" : "urn:uuid:4141046a-98df-4190-9818-734086e92e0e",
+        "timestamp" : "2026-02-19T14:53:35+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -1038,10 +1038,10 @@
       "name" : "ProcedureTimingContextVS",
       "title" : "Procedure Timing Context ValueSet",
       "status" : "active",
-      "date" : "2026-02-19T14:25:22+00:00",
+      "date" : "2026-02-19T14:52:32+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:40228136-3f40-49a9-b60d-c1235547a0ac",
-        "timestamp" : "2026-02-19T14:26:42+00:00",
+        "identifier" : "urn:uuid:73f830da-85ba-4308-aac5-3e9b1c862eff",
+        "timestamp" : "2026-02-19T14:53:35+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -1099,10 +1099,10 @@
       "name" : "SpecificFindingCodesVS",
       "title" : "Specific Stroke Finding Codes ValueSet",
       "status" : "active",
-      "date" : "2026-02-19T14:25:22+00:00",
+      "date" : "2026-02-19T14:52:32+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:7c39b4ec-e8f5-438a-9efc-485574548d43",
-        "timestamp" : "2026-02-19T14:26:42+00:00",
+        "identifier" : "urn:uuid:a97371d3-29a9-4185-a5a5-8d322162e7ac",
+        "timestamp" : "2026-02-19T14:53:35+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -1148,17 +1148,17 @@
       "resourceType" : "ValueSet",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-stroke-arrival-mode-cs.html\">codesystem Initial Care Intensity Code System v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 6 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs-priv-transport-home\"> </a><code>http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-stroke-arrival-mode-cs.html#stroke-arrival-mode-cs-priv-transport-home\">priv-transport-home</a></td><td>Private Transportation from Home/Scene</td><td>The patient arrived via personal or non-medical transport from their home or directly from the scene of the incident.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;priv-transport-home&quot;, &quot;display&quot;: &quot;Private Transportation from Home/Scene&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;priv-transport-home&quot;&gt;&lt;display value=&quot;Private Transportation from Home/Scene&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs-priv-transport-gp\"> </a><code>http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-stroke-arrival-mode-cs.html#stroke-arrival-mode-cs-priv-transport-gp\">priv-transport-gp</a></td><td>Private Transportation from GP</td><td>The patient was referred and transported privately from GP.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;priv-transport-gp&quot;, &quot;display&quot;: &quot;Private Transportation from GP&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;priv-transport-gp&quot;&gt;&lt;display value=&quot;Private Transportation from GP&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs-ems-gp\"> </a><code>http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-stroke-arrival-mode-cs.html#stroke-arrival-mode-cs-ems-gp\">ems-gp</a></td><td>EMS from GP</td><td>Emergency Medical Services (EMS) transported the patient from GP.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;ems-gp&quot;, &quot;display&quot;: &quot;EMS from GP&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;ems-gp&quot;&gt;&lt;display value=&quot;EMS from GP&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs-stroke-center\"> </a><code>http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-stroke-arrival-mode-cs.html#stroke-arrival-mode-cs-stroke-center\">stroke-center</a></td><td>Stroke Center</td><td>The patient was transferred from a specialized stroke center, indicating prior specialized care</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;stroke-center&quot;, &quot;display&quot;: &quot;Stroke Center&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;stroke-center&quot;&gt;&lt;display value=&quot;Stroke Center&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs-ems-home\"> </a><code>http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-stroke-arrival-mode-cs.html#stroke-arrival-mode-cs-ems-home\">ems-home</a></td><td>EMS from Home</td><td>Emergency Medical Services (EMS) transported the patient from their home or directly from the scene where the stroke symptoms began.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;ems-home&quot;, &quot;display&quot;: &quot;EMS from Home&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;ems-home&quot;&gt;&lt;display value=&quot;EMS from Home&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs-another-hosp\"> </a><code>http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-stroke-arrival-mode-cs.html#stroke-arrival-mode-cs-another-hosp\">another-hosp</a></td><td>Another Hospital</td><td>The patient was transferred from another hospital</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;another-hosp&quot;, &quot;display&quot;: &quot;Another Hospital&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;another-hosp&quot;&gt;&lt;display value=&quot;Another Hospital&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-stroke-arrival-mode-cs.html\">codesystem Stroke Arrival Mode CodeSystem v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 6 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs-priv-transport-home\"> </a><code>http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-stroke-arrival-mode-cs.html#stroke-arrival-mode-cs-priv-transport-home\">priv-transport-home</a></td><td>Private Transportation from Home/Scene</td><td>The patient arrived via personal or non-medical transport from their home or directly from the scene of the incident.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;priv-transport-home&quot;, &quot;display&quot;: &quot;Private Transportation from Home/Scene&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;priv-transport-home&quot;&gt;&lt;display value=&quot;Private Transportation from Home/Scene&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs-priv-transport-gp\"> </a><code>http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-stroke-arrival-mode-cs.html#stroke-arrival-mode-cs-priv-transport-gp\">priv-transport-gp</a></td><td>Private Transportation from GP</td><td>The patient was referred and transported privately from GP.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;priv-transport-gp&quot;, &quot;display&quot;: &quot;Private Transportation from GP&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;priv-transport-gp&quot;&gt;&lt;display value=&quot;Private Transportation from GP&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs-ems-gp\"> </a><code>http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-stroke-arrival-mode-cs.html#stroke-arrival-mode-cs-ems-gp\">ems-gp</a></td><td>EMS from GP</td><td>Emergency Medical Services (EMS) transported the patient from GP.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;ems-gp&quot;, &quot;display&quot;: &quot;EMS from GP&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;ems-gp&quot;&gt;&lt;display value=&quot;EMS from GP&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs-stroke-center\"> </a><code>http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-stroke-arrival-mode-cs.html#stroke-arrival-mode-cs-stroke-center\">stroke-center</a></td><td>Stroke Center</td><td>The patient was transferred from a specialized stroke center, indicating prior specialized care</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;stroke-center&quot;, &quot;display&quot;: &quot;Stroke Center&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;stroke-center&quot;&gt;&lt;display value=&quot;Stroke Center&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs-ems-home\"> </a><code>http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-stroke-arrival-mode-cs.html#stroke-arrival-mode-cs-ems-home\">ems-home</a></td><td>EMS from Home</td><td>Emergency Medical Services (EMS) transported the patient from their home or directly from the scene where the stroke symptoms began.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;ems-home&quot;, &quot;display&quot;: &quot;EMS from Home&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;ems-home&quot;&gt;&lt;display value=&quot;EMS from Home&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs-another-hosp\"> </a><code>http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-stroke-arrival-mode-cs.html#stroke-arrival-mode-cs-another-hosp\">another-hosp</a></td><td>Another Hospital</td><td>The patient was transferred from another hospital</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;another-hosp&quot;, &quot;display&quot;: &quot;Another Hospital&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;another-hosp&quot;&gt;&lt;display value=&quot;Another Hospital&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
       },
       "url" : "http://tecnomod-um.org/ValueSet/stroke-arrival-mode-vs",
       "version" : "0.1.0",
       "name" : "StrokeArrivalModeVS",
       "title" : "Stroke Arrival Mode ValueSet",
       "status" : "active",
-      "date" : "2026-02-19T14:25:22+00:00",
+      "date" : "2026-02-19T14:52:32+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:533cbbae-9f43-463b-8859-49953a869e93",
-        "timestamp" : "2026-02-19T14:26:42+00:00",
+        "identifier" : "urn:uuid:cff55de6-1d76-4ffa-b837-3663075cf477",
+        "timestamp" : "2026-02-19T14:53:35+00:00",
         "total" : 6,
         "offset" : 0,
         "parameter" : [{
@@ -1231,10 +1231,10 @@
       "name" : "StrokeCircumstanceCodesVS",
       "title" : "Stroke Circumstance Codes ValueSet",
       "status" : "active",
-      "date" : "2026-02-19T14:25:22+00:00",
+      "date" : "2026-02-19T14:52:32+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:0477127e-24c1-4859-8553-0330d0d8c941",
-        "timestamp" : "2026-02-19T14:26:36+00:00",
+        "identifier" : "urn:uuid:eb8a8ac6-cf05-4ea9-81e2-db8062cf465a",
+        "timestamp" : "2026-02-19T14:53:31+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -1287,8 +1287,8 @@
       "date" : "2025-10-07",
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:e3aade6a-08bc-4e90-95e7-ff8c6e0a2e1a",
-        "timestamp" : "2026-02-19T14:26:36+00:00",
+        "identifier" : "urn:uuid:6769715e-e34b-4793-9362-35f610ac0727",
+        "timestamp" : "2026-02-19T14:53:31+00:00",
         "total" : 6,
         "offset" : 0,
         "parameter" : [{
@@ -1354,17 +1354,17 @@
       "resourceType" : "ValueSet",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><div style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\"><p>Expansion from tx.fhir.org based on:</p><ul><li>SNOMED CT International edition 01-Feb 2025<span class=\"copy-text-inline\"><button data-clipboard-text=\"http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></li><li><a href=\"CodeSystem-stroke-discharge-destination-cs.html\">codesystem Stroke Discharge Destination Code System v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://tecnomod-um.org/CodeSystem/stroke-discharge-destination-cs|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></li></ul></div><p>This value set contains 5 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://snomed.info/sct-306689006\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/306689006\">306689006</a></td><td>Discharge to home (procedure)</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;306689006&quot;, &quot;display&quot;: &quot;Discharge to home (procedure)&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;306689006&quot;&gt;&lt;display value=&quot;Discharge to home (procedure)&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://snomed.info/sct-37729005\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/37729005\">37729005</a></td><td>Patient transfer, in-hospital</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;37729005&quot;, &quot;display&quot;: &quot;Patient transfer, in-hospital&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;37729005&quot;&gt;&lt;display value=&quot;Patient transfer, in-hospital&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://snomed.info/sct-19712007\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/19712007\">19712007</a></td><td>Patient transfer, to another health care facility</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;19712007&quot;, &quot;display&quot;: &quot;Patient transfer, to another health care facility&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;19712007&quot;&gt;&lt;display value=&quot;Patient transfer, to another health care facility&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://snomed.info/sct-306694006\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/306694006\">306694006</a></td><td>Discharge to nursing home</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;306694006&quot;, &quot;display&quot;: &quot;Discharge to nursing home&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;306694006&quot;&gt;&lt;display value=&quot;Discharge to nursing home&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/stroke-discharge-destination-cs-dead\"> </a><code>http://tecnomod-um.org/CodeSystem/stroke-discharge-destination-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-stroke-discharge-destination-cs.html#stroke-discharge-destination-cs-dead\">dead</a></td><td>Patient Deceased</td><td>The patient died during the hospital stay.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-discharge-destination-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;dead&quot;, &quot;display&quot;: &quot;Patient Deceased&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-discharge-destination-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;dead&quot;&gt;&lt;display value=&quot;Patient Deceased&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><div style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\"><p>Expansion from tx.fhir.org based on:</p><ul><li>SNOMED CT International edition 01-Feb 2025<span class=\"copy-text-inline\"><button data-clipboard-text=\"http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></li><li><a href=\"CodeSystem-stroke-discharge-destination-cs.html\">codesystem Stroke Discharge Destination CodeSystem v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://tecnomod-um.org/CodeSystem/stroke-discharge-destination-cs|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></li></ul></div><p>This value set contains 5 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://snomed.info/sct-306689006\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/306689006\">306689006</a></td><td>Discharge to home (procedure)</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;306689006&quot;, &quot;display&quot;: &quot;Discharge to home (procedure)&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;306689006&quot;&gt;&lt;display value=&quot;Discharge to home (procedure)&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://snomed.info/sct-37729005\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/37729005\">37729005</a></td><td>Patient transfer, in-hospital</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;37729005&quot;, &quot;display&quot;: &quot;Patient transfer, in-hospital&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;37729005&quot;&gt;&lt;display value=&quot;Patient transfer, in-hospital&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://snomed.info/sct-19712007\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/19712007\">19712007</a></td><td>Patient transfer, to another health care facility</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;19712007&quot;, &quot;display&quot;: &quot;Patient transfer, to another health care facility&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;19712007&quot;&gt;&lt;display value=&quot;Patient transfer, to another health care facility&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://snomed.info/sct-306694006\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/306694006\">306694006</a></td><td>Discharge to nursing home</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;306694006&quot;, &quot;display&quot;: &quot;Discharge to nursing home&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;306694006&quot;&gt;&lt;display value=&quot;Discharge to nursing home&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/stroke-discharge-destination-cs-dead\"> </a><code>http://tecnomod-um.org/CodeSystem/stroke-discharge-destination-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-stroke-discharge-destination-cs.html#stroke-discharge-destination-cs-dead\">dead</a></td><td>Patient Deceased</td><td>The patient died during the hospital stay.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-discharge-destination-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;dead&quot;, &quot;display&quot;: &quot;Patient Deceased&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-discharge-destination-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;dead&quot;&gt;&lt;display value=&quot;Patient Deceased&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
       },
       "url" : "http://tecnomod-um.org/ValueSet/stroke-discharge-destination-vs",
       "version" : "0.1.0",
       "name" : "StrokeDischargeDestinationVS",
       "title" : "Stroke Discharge Destination ValueSet",
       "status" : "active",
-      "date" : "2026-02-19T14:25:22+00:00",
+      "date" : "2026-02-19T14:52:32+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:60d98b34-7ce0-4aef-961a-fbeefd6e0ec2",
-        "timestamp" : "2026-02-19T14:26:42+00:00",
+        "identifier" : "urn:uuid:31e85e8f-1a65-4a19-9ae6-d658ffad9639",
+        "timestamp" : "2026-02-19T14:53:35+00:00",
         "total" : 5,
         "offset" : 0,
         "parameter" : [{
@@ -1444,8 +1444,8 @@
       "date" : "2025-03-31",
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:d61093ab-f333-45e1-9a4e-de7d99d4005c",
-        "timestamp" : "2026-02-19T14:26:42+00:00",
+        "identifier" : "urn:uuid:0e1595ab-1f2c-4195-bdaf-f1c965b03772",
+        "timestamp" : "2026-02-19T14:53:36+00:00",
         "total" : 5,
         "offset" : 0,
         "parameter" : [{
@@ -1521,10 +1521,10 @@
       "name" : "StrokeFindingCodesVS",
       "title" : "Specific Stroke Finding Codes ValueSet",
       "status" : "active",
-      "date" : "2026-02-19T14:25:22+00:00",
+      "date" : "2026-02-19T14:52:32+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:feecc863-eae8-481d-afc7-ac8f0cf05857",
-        "timestamp" : "2026-02-19T14:26:35+00:00",
+        "identifier" : "urn:uuid:6a609d70-3b89-44ac-b83a-ee98c19786ed",
+        "timestamp" : "2026-02-19T14:53:29+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -1598,10 +1598,10 @@
       "name" : "StrokeProcNotDoneReasonVS",
       "title" : "Stroke Procedure Not Done Reason ValueSet",
       "status" : "active",
-      "date" : "2026-02-19T14:25:22+00:00",
+      "date" : "2026-02-19T14:52:32+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:059352eb-db6c-4ea7-aa8d-e0c7384e8d79",
-        "timestamp" : "2026-02-19T14:26:42+00:00",
+        "identifier" : "urn:uuid:1024ac49-ac8b-417c-8268-137865fe18f3",
+        "timestamp" : "2026-02-19T14:53:36+00:00",
         "total" : 16,
         "offset" : 0,
         "parameter" : [{
@@ -1728,8 +1728,8 @@
       "date" : "2025-10-07",
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:69a2e614-d05c-49eb-9849-30ad992b9cdf",
-        "timestamp" : "2026-02-19T14:26:38+00:00",
+        "identifier" : "urn:uuid:b54891c7-6470-46f5-895b-bd36d274cb1a",
+        "timestamp" : "2026-02-19T14:53:32+00:00",
         "total" : 11,
         "offset" : 0,
         "parameter" : [{
@@ -1830,8 +1830,8 @@
       "experimental" : true,
       "date" : "2025-03-31",
       "expansion" : {
-        "identifier" : "urn:uuid:e055d573-07b3-43ca-bb73-31866b36b148",
-        "timestamp" : "2026-02-19T14:26:42+00:00",
+        "identifier" : "urn:uuid:dc7d07b6-61a9-4de1-ad01-f855cadf2dc6",
+        "timestamp" : "2026-02-19T14:53:36+00:00",
         "total" : 6,
         "offset" : 0,
         "parameter" : [{
@@ -1908,10 +1908,10 @@
       "name" : "SwallowingScreeningTimingCategoryVS",
       "title" : "Swallowing Screening Timing Category ValueSet",
       "status" : "active",
-      "date" : "2026-02-19T14:25:22+00:00",
+      "date" : "2026-02-19T14:52:32+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:022c51c4-99ea-432f-9364-67515b8dbb32",
-        "timestamp" : "2026-02-19T14:26:43+00:00",
+        "identifier" : "urn:uuid:5a0fdbe2-d6e0-45ff-b05f-0b0bdc64b4df",
+        "timestamp" : "2026-02-19T14:53:36+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -1981,10 +1981,10 @@
       "name" : "ThrombectomyComplicationVS",
       "title" : "Thrombectomy Complications ValueSet",
       "status" : "active",
-      "date" : "2026-02-19T14:25:22+00:00",
+      "date" : "2026-02-19T14:52:32+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:c349f378-dd9a-4973-8b53-ee9aa050ce69",
-        "timestamp" : "2026-02-19T14:26:43+00:00",
+        "identifier" : "urn:uuid:c830ad1c-9858-46f4-8c84-a6d3cdfb476c",
+        "timestamp" : "2026-02-19T14:53:36+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -2041,10 +2041,10 @@
       "name" : "TimingMetricCodesVS",
       "title" : "Stroke Timing Metric Codes ValueSet",
       "status" : "active",
-      "date" : "2026-02-19T14:25:22+00:00",
+      "date" : "2026-02-19T14:52:32+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:d3fb3e4d-da0d-450a-962a-e43892c2f487",
-        "timestamp" : "2026-02-19T14:26:38+00:00",
+        "identifier" : "urn:uuid:1f62567a-870a-4285-b123-848e1d8faabd",
+        "timestamp" : "2026-02-19T14:53:33+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -2094,10 +2094,10 @@
       "title" : "Stroke Vital Sign Codes ValueSet",
       "status" : "active",
       "experimental" : true,
-      "date" : "2026-02-19T14:25:22+00:00",
+      "date" : "2026-02-19T14:52:32+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:393b4a48-7025-4d95-b3cc-b9cc4d94ed34",
-        "timestamp" : "2026-02-19T14:26:44+00:00",
+        "identifier" : "urn:uuid:b932f5ee-63da-441e-99d2-4538f080876e",
+        "timestamp" : "2026-02-19T14:53:37+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -2151,10 +2151,10 @@
       "title" : "Gender (SNOMED CT)",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-02-19T14:25:22+00:00",
+      "date" : "2026-02-19T14:52:32+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:5bffe2a4-e3f8-4faf-9cbc-c40fb4067ec2",
-        "timestamp" : "2026-02-19T14:26:44+00:00",
+        "identifier" : "urn:uuid:5407f4f8-0e15-4b6b-a420-08954c70e160",
+        "timestamp" : "2026-02-19T14:53:37+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{

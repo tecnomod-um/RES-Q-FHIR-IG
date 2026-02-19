@@ -93,7 +93,7 @@
       "status" : "active",
       "name" : "DischargeDeptVS",
       "title" : "Discharge Department/Service ValueSet",
-      "description" : "ValueSet specifying the type of department or service the patient was discharged or transferred to.",
+      "description" : "ValueSet restricting the allowed department/service categories recorded at discharge.\n\n**Primary use-case**\n- Required binding for `DischargeDepartmentServiceExtension.valueCodeableConcept`.",
       "systems" : ["http://tecnomod-um.org/CodeSystem/discharge-dept-cs"],
       "uses" : {
       },
@@ -141,7 +141,7 @@
       "status" : "active",
       "name" : "InitialCareIntensityVS",
       "title" : "Initial Care Intensity ValueSet",
-      "description" : "ValueSet indicating the level of care provided initially.",
+      "description" : "ValueSet restricting allowed initial care intensity categories.\n\n**Primary use-case**\n- Required binding for `InitialCareIntensityExtension.valueCodeableConcept`.",
       "systems" : [
         "http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs"
       ],
@@ -242,7 +242,7 @@
       "status" : "active",
       "name" : "StrokeArrivalModeVS",
       "title" : "Stroke Arrival Mode ValueSet",
-      "description" : "ValueSet specifying the mode and origin of the patient's arrival.",
+      "description" : "ValueSet restricting the allowed values for documenting the patient's arrival mode/origin.\n\n**Primary use-case**\n- Required binding to `Encounter.admission.admitSource` in `StrokeEncounterProfile`.",
       "systems" : ["http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs"],
       "uses" : {
       },
@@ -280,7 +280,7 @@
       "status" : "active",
       "name" : "StrokeDischargeDestinationVS",
       "title" : "Stroke Discharge Destination ValueSet",
-      "description" : "Defines the possible destinations of the patient upon discharge from the encounter.",
+      "description" : "ValueSet defining allowable discharge dispositions for the stroke encounter.\n\n**Primary use-case**\n- Required binding to `Encounter.admission.dischargeDisposition` in `StrokeEncounterProfile`.\n\n**Composition**\n- SNOMED CT “discharge/transfer” procedure concepts for common destinations.\n- Local supplement (StrokeDischargeDestinationCS) for outcomes such as “deceased during stay”.",
       "systems" : [
         "http://tecnomod-um.org/CodeSystem/stroke-discharge-destination-cs",
         "http://snomed.info/sct"

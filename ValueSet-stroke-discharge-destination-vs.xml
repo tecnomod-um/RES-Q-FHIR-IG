@@ -10,7 +10,7 @@
   <name value="StrokeDischargeDestinationVS"/>
   <title value="Stroke Discharge Destination ValueSet"/>
   <status value="active"/>
-  <date value="2026-02-19T14:25:22+00:00"/>
+  <date value="2026-02-19T14:52:32+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>
@@ -19,7 +19,7 @@
       <value value="http://tecnomod-um.org"/>
     </telecom>
   </contact>
-  <description value="Defines the possible destinations of the patient upon discharge from the encounter."/>
+  <description value="ValueSet defining allowable discharge dispositions for the stroke encounter.&#xA;&#xA;**Primary use-case**&#xA;- Required binding to `Encounter.admission.dischargeDisposition` in `StrokeEncounterProfile`.&#xA;&#xA;**Composition**&#xA;- SNOMED CT “discharge/transfer” procedure concepts for common destinations.&#xA;- Local supplement (StrokeDischargeDestinationCS) for outcomes such as “deceased during stay”."/>
   <compose>
     <include>
       <system value="http://snomed.info/sct"/>

@@ -12,7 +12,24 @@
 | Active as of 2026-02-19 | *Computable Name*:StrokeEncounterProfile |
 
  
-Profile for an Encounter resource representing a patient's hospital admission and stay for a stroke event, including key administrative and workflow details. 
+Profile for an Encounter representing a patient's **inpatient admission and hospital stay** for an index stroke event. 
+**Primary use-case** 
+* Acts as the episode anchor that Conditions, Observations, and Procedures reference via `encounter`, enabling consistent episode-level analytics.
+ 
+**Captures** 
+* `status`: lifecycle state of the encounter (required).
+* `class`: fixed to inpatient (IMP) to represent an admission.
+* `actualPeriod`: start/end of the admission (required; end is required for completed stays).
+* `admission.admitSource`: arrival mode/origin (required binding to StrokeArrivalModeVS when present).
+* `admission.dischargeDisposition`: discharge destination (required binding to StrokeDischargeDestinationVS).
+* Episode-level extensions for operational/registry attributes: 
+* first hospital indicator,
+* initial care intensity,
+* required post-acute care flag,
+* discharge department/service.
+ 
+ 
+**Typical scenarios** 1) Direct admission via EMS from home: admitSource=EMS-from-home, isFirstHospital=true. 2) Transfer-in: admitSource=another-hospital or stroke-center, isFirstHospital=false. 3) Discharge home vs rehab vs death: dischargeDisposition captures destination/outcome; dischargeDepartmentService can capture service. 
 
 **Usages:**
 
@@ -41,7 +58,7 @@ Other representations of profile: [CSV](StructureDefinition-stroke-encounter-pro
   "name" : "StrokeEncounterProfile",
   "title" : "Stroke Encounter Profile",
   "status" : "active",
-  "date" : "2026-02-19T14:25:22+00:00",
+  "date" : "2026-02-19T14:52:32+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -54,7 +71,7 @@ Other representations of profile: [CSV](StructureDefinition-stroke-encounter-pro
       ]
     }
   ],
-  "description" : "Profile for an Encounter resource representing a patient's hospital admission and stay for a stroke event, including key administrative and workflow details.",
+  "description" : "Profile for an Encounter representing a patient's **inpatient admission and hospital stay** for an index stroke event.\n\n**Primary use-case**\n- Acts as the episode anchor that Conditions, Observations, and Procedures reference via `encounter`, enabling consistent episode-level analytics.\n\n**Captures**\n- `status`: lifecycle state of the encounter (required).\n- `class`: fixed to inpatient (IMP) to represent an admission.\n- `actualPeriod`: start/end of the admission (required; end is required for completed stays).\n- `admission.admitSource`: arrival mode/origin (required binding to StrokeArrivalModeVS when present).\n- `admission.dischargeDisposition`: discharge destination (required binding to StrokeDischargeDestinationVS).\n- Episode-level extensions for operational/registry attributes:\n  - first hospital indicator,\n  - initial care intensity,\n  - required post-acute care flag,\n  - discharge department/service.\n\n**Typical scenarios**\n1) Direct admission via EMS from home: admitSource=EMS-from-home, isFirstHospital=true.\n2) Transfer-in: admitSource=another-hospital or stroke-center, isFirstHospital=false.\n3) Discharge home vs rehab vs death: dischargeDisposition captures destination/outcome; dischargeDepartmentService can capture service.",
   "fhirVersion" : "5.0.0",
   "mapping" : [
     {

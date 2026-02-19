@@ -1,10 +1,10 @@
-# Discharge Department/Service Code System - v0.1.0
+# Discharge Department/Service CodeSystem - v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **Discharge Department/Service Code System**
+* **Discharge Department/Service CodeSystem**
 
-## CodeSystem: Discharge Department/Service Code System 
+## CodeSystem: Discharge Department/Service CodeSystem 
 
 | | |
 | :--- | :--- |
@@ -12,7 +12,17 @@
 | Active as of 2026-02-19 | *Computable Name*:DischargeDeptCS |
 
  
-Code system specifying the type of department or service the patient was discharged or transferred to. 
+Local CodeSystem representing the **clinical service/department** responsible for the patient at discharge/transfer (or the service the patient is transferred to). 
+**Primary use-case** 
+* Populate `DischargeDepartmentServiceExtension` on Encounter to support: 
+* bed management and service-level reporting,
+* pathway characterization (e.g., discharge under neurology vs rehab),
+* operational analytics and capacity planning.
+ 
+ 
+**Modeling notes** 
+* This captures **service classification**, not the physical ward/room. Physical location should be modeled using `Encounter.location` (and references to Location resources) if needed.
+ 
 
  This Code system is referenced in the content logical definition of the following value sets: 
 
@@ -29,9 +39,9 @@ Code system specifying the type of department or service the patient was dischar
   "url" : "http://tecnomod-um.org/CodeSystem/discharge-dept-cs",
   "version" : "0.1.0",
   "name" : "DischargeDeptCS",
-  "title" : "Discharge Department/Service Code System",
+  "title" : "Discharge Department/Service CodeSystem",
   "status" : "active",
-  "date" : "2026-02-19T14:25:22+00:00",
+  "date" : "2026-02-19T14:52:32+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -44,7 +54,7 @@ Code system specifying the type of department or service the patient was dischar
       ]
     }
   ],
-  "description" : "Code system specifying the type of department or service the patient was discharged or transferred to.",
+  "description" : "Local CodeSystem representing the **clinical service/department** responsible for the patient at discharge/transfer\n(or the service the patient is transferred to).\n\n**Primary use-case**\n- Populate `DischargeDepartmentServiceExtension` on Encounter to support:\n  - bed management and service-level reporting,\n  - pathway characterization (e.g., discharge under neurology vs rehab),\n  - operational analytics and capacity planning.\n\n**Modeling notes**\n- This captures *service classification*, not the physical ward/room. Physical location should be modeled using `Encounter.location`\n  (and references to Location resources) if needed.",
   "content" : "complete",
   "count" : 4,
   "concept" : [

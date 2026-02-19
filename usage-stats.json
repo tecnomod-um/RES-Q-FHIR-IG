@@ -12,7 +12,7 @@
     },
     {
       "url": "http://tecnomod-um.org/StructureDefinition/first-hospital-ext",
-      "title": "First Hospital Extension",
+      "title": "First Hospital Indicator Extension",
       "types": [
         "boolean"
       ]

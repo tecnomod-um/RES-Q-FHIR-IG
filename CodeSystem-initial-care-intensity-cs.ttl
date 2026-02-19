@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "initial-care-intensity-cs"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem initial-care-intensity-cs</b></p><a name=\"initial-care-intensity-cs\"> </a><a name=\"hcinitial-care-intensity-cs\"> </a><p>This case-insensitive code system <code>http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">standard<a name=\"initial-care-intensity-cs-standard\"> </a></td><td>Standard Bed</td><td>Patient placed in a standard hospital bed without continuous monitoring.</td></tr><tr><td style=\"white-space:nowrap\">monitored<a name=\"initial-care-intensity-cs-monitored\"> </a></td><td>Monitored Bed</td><td>Patient placed in a bed with continuous telemetry or other monitoring (outside ICU).</td></tr><tr><td style=\"white-space:nowrap\">icu-stroke<a name=\"initial-care-intensity-cs-icu-stroke\"> </a></td><td>ICU / Stroke Unit</td><td>Patient placed in an Intensive Care Unit or specialized Stroke Unit.</td></tr></table></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem initial-care-intensity-cs</b></p><a name=\"initial-care-intensity-cs\"> </a><a name=\"hcinitial-care-intensity-cs\"> </a><p>This case-insensitive code system <code>http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">standard<a name=\"initial-care-intensity-cs-standard\"> </a></td><td>Standard bed</td><td>Patient placed in a standard inpatient bed without continuous telemetry/continuous physiologic monitoring.</td></tr><tr><td style=\"white-space:nowrap\">monitored<a name=\"initial-care-intensity-cs-monitored\"> </a></td><td>Monitored bed</td><td>Patient placed in a monitored setting (e.g., telemetry) without full ICU-level care.</td></tr><tr><td style=\"white-space:nowrap\">icu-stroke<a name=\"initial-care-intensity-cs-icu-stroke\"> </a></td><td>ICU / Stroke Unit</td><td>Patient managed in an ICU or specialized stroke unit providing high-intensity care and monitoring.</td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:url [
      fhir:v "http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs"^^xsd:anyURI ;
@@ -19,10 +19,10 @@
   ] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "InitialCareIntensityCS"] ; # 
-  fhir:title [ fhir:v "Initial Care Intensity Code System"] ; # 
+  fhir:title [ fhir:v "Initial Care Intensity CodeSystem"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:experimental [ fhir:v true] ; # 
-  fhir:date [ fhir:v "2026-02-19T14:25:22+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-19T14:52:32+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;
@@ -31,22 +31,22 @@
        fhir:value [ fhir:v "http://tecnomod-um.org" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "Codes indicating the level of care provided during the patient's initial day(s) in the hospital."] ; # 
+  fhir:description [ fhir:v "Local CodeSystem representing the **initial intensity of care** during the first day(s) of the stroke encounter.\n\n**Primary use-case**\n- Populate `InitialCareIntensityExtension` on Encounter to support:\n  - case-mix characterization (ICU/stroke unit vs monitored vs standard bed),\n  - operational benchmarking and staffing analysis,\n  - research stratification where initial level-of-care is a confounder.\n\n**Interpretation guidance**\n- `standard`: no continuous monitoring beyond standard nursing observation.\n- `monitored`: telemetry or continuous monitoring outside ICU.\n- `icu-stroke`: ICU or dedicated stroke unit level care (per local definitions)."] ; # 
   fhir:caseSensitive [ fhir:v false] ; # 
   fhir:content [ fhir:v "complete"] ; # 
   fhir:count [ fhir:v "3"^^xsd:nonNegativeInteger] ; # 
   fhir:concept ( [
      fhir:code [ fhir:v "standard" ] ;
-     fhir:display [ fhir:v "Standard Bed" ] ;
-     fhir:definition [ fhir:v "Patient placed in a standard hospital bed without continuous monitoring." ]
+     fhir:display [ fhir:v "Standard bed" ] ;
+     fhir:definition [ fhir:v "Patient placed in a standard inpatient bed without continuous telemetry/continuous physiologic monitoring." ]
   ] [
      fhir:code [ fhir:v "monitored" ] ;
-     fhir:display [ fhir:v "Monitored Bed" ] ;
-     fhir:definition [ fhir:v "Patient placed in a bed with continuous telemetry or other monitoring (outside ICU)." ]
+     fhir:display [ fhir:v "Monitored bed" ] ;
+     fhir:definition [ fhir:v "Patient placed in a monitored setting (e.g., telemetry) without full ICU-level care." ]
   ] [
      fhir:code [ fhir:v "icu-stroke" ] ;
      fhir:display [ fhir:v "ICU / Stroke Unit" ] ;
-     fhir:definition [ fhir:v "Patient placed in an Intensive Care Unit or specialized Stroke Unit." ]
+     fhir:definition [ fhir:v "Patient managed in an ICU or specialized stroke unit providing high-intensity care and monitoring." ]
   ] ) . # 
 
 # -------------------------------------------------------------------------------------

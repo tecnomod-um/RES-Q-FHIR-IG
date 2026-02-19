@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Initial Care Intensity Code System -  v0.1.0</title>
+    <title>Initial Care Intensity CodeSystem -  v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -41,8 +41,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"11.68"}
-    h3,h4,h5,h6{--heading-prefix:"11.68"}</style>
+    <style type="text/css">h2{--heading-prefix:"11.67"}
+    h3,h4,h5,h6{--heading-prefix:"11.67"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -131,7 +131,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Initial Care Intensity Code System</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Initial Care Intensity CodeSystem</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -187,7 +187,7 @@
 </ul>
 
   <a name="root"> </a>
-  <h2 id="root">CodeSystem: Initial Care Intensity Code System
+  <h2 id="root">CodeSystem: Initial Care Intensity CodeSystem
 (Experimental)
   </h2>
 
@@ -229,7 +229,25 @@
   </table>
 
 <p>
-<p>Codes indicating the level of care provided during the patient's initial day(s) in the hospital.</p>
+<p>Local CodeSystem representing the <strong>initial intensity of care</strong> during the first day(s) of the stroke encounter.</p>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Populate <code class="language-plaintext highlighter-rouge">InitialCareIntensityExtension</code> on Encounter to support:
+    <ul>
+      <li>case-mix characterization (ICU/stroke unit vs monitored vs standard bed),</li>
+      <li>operational benchmarking and staffing analysis,</li>
+      <li>research stratification where initial level-of-care is a confounder.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Interpretation guidance</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">standard</code>: no continuous monitoring beyond standard nursing observation.</li>
+  <li><code class="language-plaintext highlighter-rouge">monitored</code>: telemetry or continuous monitoring outside ICU.</li>
+  <li><code class="language-plaintext highlighter-rouge">icu-stroke</code>: ICU or dedicated stroke unit level care (per local definitions).</li>
+</ul>
 
 </p>
 
@@ -251,14 +269,14 @@
   <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated"><p class="res-header-id"></p><a name="initial-care-intensity-cs"> </a><a name="hcinitial-care-intensity-cs"> </a><p>This case-insensitive code system <code>http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs</code> defines the following codes:</p>
 <table class="codes" data-fhir="generated"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr>
 <tr><td style="white-space:nowrap">standard<a name="initial-care-intensity-cs-standard"> </a></td>
-<td>Standard Bed</td>
-<td>Patient placed in a standard hospital bed without continuous monitoring.</td></tr>
+<td>Standard bed</td>
+<td>Patient placed in a standard inpatient bed without continuous telemetry/continuous physiologic monitoring.</td></tr>
 <tr><td style="white-space:nowrap">monitored<a name="initial-care-intensity-cs-monitored"> </a></td>
-<td>Monitored Bed</td>
-<td>Patient placed in a bed with continuous telemetry or other monitoring (outside ICU).</td></tr>
+<td>Monitored bed</td>
+<td>Patient placed in a monitored setting (e.g., telemetry) without full ICU-level care.</td></tr>
 <tr><td style="white-space:nowrap">icu-stroke<a name="initial-care-intensity-cs-icu-stroke"> </a></td>
 <td>ICU / Stroke Unit</td>
-<td>Patient placed in an Intensive Care Unit or specialized Stroke Unit.</td></tr></table></div>
+<td>Patient managed in an ICU or specialized stroke unit providing high-intensity care and monitoring.</td></tr></table></div>
 
   
 
@@ -285,7 +303,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 14:25+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 14:52+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

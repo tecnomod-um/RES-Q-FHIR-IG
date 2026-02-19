@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "StrokeArrivalModeVS"] ; # 
   fhir:title [ fhir:v "Stroke Arrival Mode ValueSet"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-02-19T14:25:22+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-19T14:52:32+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;
@@ -30,7 +30,7 @@
        fhir:value [ fhir:v "http://tecnomod-um.org" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "ValueSet specifying the mode and origin of the patient's arrival."] ; # 
+  fhir:description [ fhir:v "ValueSet restricting the allowed values for documenting the patient's arrival mode/origin.\n\n**Primary use-case**\n- Required binding to `Encounter.admission.admitSource` in `StrokeEncounterProfile`.\n"] ; # 
   fhir:compose [
      fhir:include ( [
        fhir:system [

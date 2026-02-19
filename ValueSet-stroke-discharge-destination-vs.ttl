@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "StrokeDischargeDestinationVS"] ; # 
   fhir:title [ fhir:v "Stroke Discharge Destination ValueSet"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-02-19T14:25:22+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-19T14:52:32+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;
@@ -30,7 +30,7 @@
        fhir:value [ fhir:v "http://tecnomod-um.org" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "Defines the possible destinations of the patient upon discharge from the encounter."] ; # 
+  fhir:description [ fhir:v "ValueSet defining allowable discharge dispositions for the stroke encounter.\n\n**Primary use-case**\n- Required binding to `Encounter.admission.dischargeDisposition` in `StrokeEncounterProfile`.\n\n**Composition**\n- SNOMED CT “discharge/transfer” procedure concepts for common destinations.\n- Local supplement (StrokeDischargeDestinationCS) for outcomes such as “deceased during stay”."] ; # 
   fhir:compose [
      fhir:include ( [
        fhir:system [

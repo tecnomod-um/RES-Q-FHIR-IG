@@ -11,7 +11,17 @@
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/discharge-department-service-ext | *Version*:0.1.0 |
 | Draft as of 2026-02-19 | *Computable Name*:DischargeDepartmentServiceExtension |
 
-Specifies the type of department or service the patient was discharged or transferred to.
+Extension capturing the **clinical department/service** responsible at discharge or the service the patient is transferred to.
+
+**Primary use-cases**
+
+* Service-level reporting and capacity planning.
+* Distinguishing discharge under neurology vs rehab vs other services.
+* Supporting downstream routing/coordination logic when a service category is required.
+
+**FHIR placement**
+
+* `Encounter.extension[dischargeDepartmentService].valueCodeableConcept` (required binding to DischargeDeptVS).
 
 **Context of Use**
 
@@ -55,7 +65,7 @@ Other representations of profile: [CSV](StructureDefinition-discharge-department
   "name" : "DischargeDepartmentServiceExtension",
   "title" : "Discharge Department/Service Extension",
   "status" : "draft",
-  "date" : "2026-02-19T14:25:22+00:00",
+  "date" : "2026-02-19T14:52:32+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -68,7 +78,7 @@ Other representations of profile: [CSV](StructureDefinition-discharge-department
       ]
     }
   ],
-  "description" : "Specifies the type of department or service the patient was discharged or transferred to.",
+  "description" : "Extension capturing the **clinical department/service** responsible at discharge or the service the patient is transferred to.\n\n**Primary use-cases**\n- Service-level reporting and capacity planning.\n- Distinguishing discharge under neurology vs rehab vs other services.\n- Supporting downstream routing/coordination logic when a service category is required.\n\n**FHIR placement**\n- `Encounter.extension[dischargeDepartmentService].valueCodeableConcept` (required binding to DischargeDeptVS).",
   "fhirVersion" : "5.0.0",
   "mapping" : [
     {
@@ -92,7 +102,9 @@ Other representations of profile: [CSV](StructureDefinition-discharge-department
     "element" : [
       {
         "id" : "Extension",
-        "path" : "Extension"
+        "path" : "Extension",
+        "short" : "Discharge Department/Service Extension",
+        "definition" : "Extension capturing the **clinical department/service** responsible at discharge or the service the patient is transferred to.\n\n**Primary use-cases**\n- Service-level reporting and capacity planning.\n- Distinguishing discharge under neurology vs rehab vs other services.\n- Supporting downstream routing/coordination logic when a service category is required.\n\n**FHIR placement**\n- `Encounter.extension[dischargeDepartmentService].valueCodeableConcept` (required binding to DischargeDeptVS)."
       },
       {
         "id" : "Extension.extension",

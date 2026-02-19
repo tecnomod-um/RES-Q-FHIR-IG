@@ -12,7 +12,14 @@
 | Active as of 2026-02-19 | *Computable Name*:StrokeDischargeDestinationVS |
 
  
-Defines the possible destinations of the patient upon discharge from the encounter. 
+ValueSet defining allowable discharge dispositions for the stroke encounter. 
+**Primary use-case** 
+* Required binding to `Encounter.admission.dischargeDisposition` in `StrokeEncounterProfile`.
+ 
+**Composition** 
+* SNOMED CT “discharge/transfer” procedure concepts for common destinations.
+* Local supplement (StrokeDischargeDestinationCS) for outcomes such as “deceased during stay”.
+ 
 
  **References** 
 
@@ -50,7 +57,7 @@ Defines the possible destinations of the patient upon discharge from the encount
   "name" : "StrokeDischargeDestinationVS",
   "title" : "Stroke Discharge Destination ValueSet",
   "status" : "active",
-  "date" : "2026-02-19T14:25:22+00:00",
+  "date" : "2026-02-19T14:52:32+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -63,7 +70,7 @@ Defines the possible destinations of the patient upon discharge from the encount
       ]
     }
   ],
-  "description" : "Defines the possible destinations of the patient upon discharge from the encounter.",
+  "description" : "ValueSet defining allowable discharge dispositions for the stroke encounter.\n\n**Primary use-case**\n- Required binding to `Encounter.admission.dischargeDisposition` in `StrokeEncounterProfile`.\n\n**Composition**\n- SNOMED CT “discharge/transfer” procedure concepts for common destinations.\n- Local supplement (StrokeDischargeDestinationCS) for outcomes such as “deceased during stay”.",
   "compose" : {
     "include" : [
       {

@@ -12,7 +12,10 @@
 | Active as of 2026-02-19 | *Computable Name*:StrokeArrivalModeVS |
 
  
-ValueSet specifying the mode and origin of the patient's arrival. 
+ValueSet restricting the allowed values for documenting the patient's arrival mode/origin. 
+**Primary use-case** 
+* Required binding to `Encounter.admission.admitSource` in `StrokeEncounterProfile`.
+ 
 
  **References** 
 
@@ -50,7 +53,7 @@ ValueSet specifying the mode and origin of the patient's arrival.
   "name" : "StrokeArrivalModeVS",
   "title" : "Stroke Arrival Mode ValueSet",
   "status" : "active",
-  "date" : "2026-02-19T14:25:22+00:00",
+  "date" : "2026-02-19T14:52:32+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -63,7 +66,7 @@ ValueSet specifying the mode and origin of the patient's arrival.
       ]
     }
   ],
-  "description" : "ValueSet specifying the mode and origin of the patient's arrival.",
+  "description" : "ValueSet restricting the allowed values for documenting the patient's arrival mode/origin.\n\n**Primary use-case**\n- Required binding to `Encounter.admission.admitSource` in `StrokeEncounterProfile`.\n",
   "compose" : {
     "include" : [
       {

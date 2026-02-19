@@ -12,7 +12,10 @@
 | Active as of 2026-02-19 | *Computable Name*:DischargeDeptVS |
 
  
-ValueSet specifying the type of department or service the patient was discharged or transferred to. 
+ValueSet restricting the allowed department/service categories recorded at discharge. 
+**Primary use-case** 
+* Required binding for `DischargeDepartmentServiceExtension.valueCodeableConcept`.
+ 
 
  **References** 
 
@@ -50,7 +53,7 @@ ValueSet specifying the type of department or service the patient was discharged
   "name" : "DischargeDeptVS",
   "title" : "Discharge Department/Service ValueSet",
   "status" : "active",
-  "date" : "2026-02-19T14:25:22+00:00",
+  "date" : "2026-02-19T14:52:32+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -63,7 +66,7 @@ ValueSet specifying the type of department or service the patient was discharged
       ]
     }
   ],
-  "description" : "ValueSet specifying the type of department or service the patient was discharged or transferred to.",
+  "description" : "ValueSet restricting the allowed department/service categories recorded at discharge.\n\n**Primary use-case**\n- Required binding for `DischargeDepartmentServiceExtension.valueCodeableConcept`.",
   "compose" : {
     "include" : [
       {

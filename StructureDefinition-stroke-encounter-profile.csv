@@ -28,16 +28,55 @@ dom-4dom-3dom-5","","N/A"
 ","",,"open","DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Encounter.extension:isFirstHospital","Encounter.extension","isFirstHospital","","",1,1,"Y","","","Extension {[CanonicalType[http://tecnomod-um.org/StructureDefinition/first-hospital-ext]]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","First Hospital Indicator Extension","Boolean extension indicating whether the reporting hospital was the **first medical facility** to admit the patient
+for this stroke episode.
+
+**Primary use-cases**
+- Registry fields distinguishing “direct to treating hospital” vs “secondary transfer”.
+- Analytics for inter-facility transfer patterns and treatment delays (door-in-door-out style analyses).
+
+**How to interpret**
+- `true`: this hospital is the first admitting facility for the episode.
+- `false`: patient was admitted/treated elsewhere first (transfer-in).
+
+**FHIR placement**
+- `Encounter.extension[isFirstHospital].valueBoolean`","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Encounter.extension:initialCareIntensity","Encounter.extension","initialCareIntensity","","",0,1,"Y","","","Extension {[CanonicalType[http://tecnomod-um.org/StructureDefinition/initial-care-intensity-ext]]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Initial Care Intensity Extension","Extension capturing the **initial level of care** provided during the first day(s) of hospitalization for the stroke encounter.
+
+**Primary use-cases**
+- Operational reporting (ICU/stroke unit utilization).
+- Case-mix adjustment for outcomes and length-of-stay analyses.
+- Benchmarking across sites.
+
+**Relationship to base Encounter**
+- This is not a location/ward tracker; for physical moves use `Encounter.location` with Location references.
+- This is a categorical “initial intensity” label used for reporting.
+
+**FHIR placement**
+- `Encounter.extension[initialCareIntensity].valueCodeableConcept` (required binding to InitialCareIntensityVS).","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Encounter.extension:requiredPostAcuteCare","Encounter.extension","requiredPostAcuteCare","","",0,1,"Y","","","Extension {[CanonicalType[http://tecnomod-um.org/StructureDefinition/required-post-acute-care-ext]]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Required Post-Acute Care Extension","Boolean extension indicating whether the patient required **ongoing inpatient care beyond the acute phase**.
+
+**Interpretation guidance**
+- `true`: patient required hospitalization beyond the acute phase (operationalized here as >24 hours after the acute phase).
+- `false`: no extended post-acute inpatient need was recorded for this encounter (per local workflow).
+
+**FHIR placement**
+- `Encounter.extension[requiredPostAcuteCare].valueBoolean`","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Encounter.extension:dischargeDepartmentService","Encounter.extension","dischargeDepartmentService","","",0,1,"Y","","","Extension {[CanonicalType[http://tecnomod-um.org/StructureDefinition/discharge-department-service-ext]]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Discharge Department/Service Extension","Extension capturing the **clinical department/service** responsible at discharge or the service the patient is transferred to.
+
+**Primary use-cases**
+- Service-level reporting and capacity planning.
+- Distinguishing discharge under neurology vs rehab vs other services.
+- Supporting downstream routing/coordination logic when a service category is required.
+
+**FHIR placement**
+- `Encounter.extension[dischargeDepartmentService].valueCodeableConcept` (required binding to DischargeDeptVS).","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Encounter.modifierExtension","Encounter.modifierExtension","","extensions
 user content","",0,*,"","Y","Y","Extension {[]} {[]}

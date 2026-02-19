@@ -1,10 +1,10 @@
-# Stroke Discharge Destination Code System - v0.1.0
+# Stroke Discharge Destination CodeSystem - v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **Stroke Discharge Destination Code System**
+* **Stroke Discharge Destination CodeSystem**
 
-## CodeSystem: Stroke Discharge Destination Code System (Experimental) 
+## CodeSystem: Stroke Discharge Destination CodeSystem (Experimental) 
 
 | | |
 | :--- | :--- |
@@ -12,7 +12,7 @@
 | Active as of 2026-02-19 | *Computable Name*:StrokeDischargeDestinationCS |
 
  
-Codes indicating the possible destinations of the patient upon discharge from the encounter. 
+Local CodeSystem for discharge disposition values that are not sufficiently covered (or not consistently available) in the chosen standard terminology set. 
 
  This Code system is referenced in the content logical definition of the following value sets: 
 
@@ -29,10 +29,10 @@ Codes indicating the possible destinations of the patient upon discharge from th
   "url" : "http://tecnomod-um.org/CodeSystem/stroke-discharge-destination-cs",
   "version" : "0.1.0",
   "name" : "StrokeDischargeDestinationCS",
-  "title" : "Stroke Discharge Destination Code System",
+  "title" : "Stroke Discharge Destination CodeSystem",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-19T14:25:22+00:00",
+  "date" : "2026-02-19T14:52:32+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -45,7 +45,7 @@ Codes indicating the possible destinations of the patient upon discharge from th
       ]
     }
   ],
-  "description" : "Codes indicating the possible destinations of the patient upon discharge from the encounter.",
+  "description" : "Local CodeSystem for discharge disposition values that are not sufficiently covered (or not consistently available)\nin the chosen standard terminology set.",
   "content" : "complete",
   "count" : 1,
   "concept" : [

@@ -9,7 +9,7 @@
   <version value="0.1.0"/>
   <name value="RESQIG"/>
   <status value="draft"/>
-  <date value="2026-02-19T14:25:22+00:00"/>
+  <date value="2026-02-19T14:52:32+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>
@@ -158,8 +158,8 @@
       <reference>
         <reference value="CodeSystem/discharge-dept-cs"/>
       </reference>
-      <name value="Discharge Department/Service Code System"/>
-      <description value="Code system specifying the type of department or service the patient was discharged or transferred to."/>
+      <name value="Discharge Department/Service CodeSystem"/>
+      <description value="Local CodeSystem representing the **clinical service/department** responsible for the patient at discharge/transfer&#xA;(or the service the patient is transferred to).&#xA;&#xA;**Primary use-case**&#xA;- Populate `DischargeDepartmentServiceExtension` on Encounter to support:&#xA;  - bed management and service-level reporting,&#xA;  - pathway characterization (e.g., discharge under neurology vs rehab),&#xA;  - operational analytics and capacity planning.&#xA;&#xA;**Modeling notes**&#xA;- This captures *service classification*, not the physical ward/room. Physical location should be modeled using `Encounter.location`&#xA;  (and references to Location resources) if needed."/>
       <isExample value="false"/>
     </resource>
     <resource>
@@ -170,7 +170,7 @@
         <reference value="StructureDefinition/discharge-department-service-ext"/>
       </reference>
       <name value="Discharge Department/Service Extension"/>
-      <description value="Specifies the type of department or service the patient was discharged or transferred to."/>
+      <description value="Extension capturing the **clinical department/service** responsible at discharge or the service the patient is transferred to.&#xA;&#xA;**Primary use-cases**&#xA;- Service-level reporting and capacity planning.&#xA;- Distinguishing discharge under neurology vs rehab vs other services.&#xA;- Supporting downstream routing/coordination logic when a service category is required.&#xA;&#xA;**FHIR placement**&#xA;- `Encounter.extension[dischargeDepartmentService].valueCodeableConcept` (required binding to DischargeDeptVS)."/>
       <isExample value="false"/>
     </resource>
     <resource>
@@ -181,7 +181,7 @@
         <reference value="ValueSet/discharge-dept-vs"/>
       </reference>
       <name value="Discharge Department/Service ValueSet"/>
-      <description value="ValueSet specifying the type of department or service the patient was discharged or transferred to."/>
+      <description value="ValueSet restricting the allowed department/service categories recorded at discharge.&#xA;&#xA;**Primary use-case**&#xA;- Required binding for `DischargeDepartmentServiceExtension.valueCodeableConcept`."/>
       <isExample value="false"/>
     </resource>
     <resource>
@@ -236,8 +236,8 @@
       <reference>
         <reference value="StructureDefinition/first-hospital-ext"/>
       </reference>
-      <name value="First Hospital Extension"/>
-      <description value="Indicates if the reporting hospital was the first medical facility to admit the patient for this stroke episode."/>
+      <name value="First Hospital Indicator Extension"/>
+      <description value="Boolean extension indicating whether the reporting hospital was the **first medical facility** to admit the patient&#xA;for this stroke episode.&#xA;&#xA;**Primary use-cases**&#xA;- Registry fields distinguishing “direct to treating hospital” vs “secondary transfer”.&#xA;- Analytics for inter-facility transfer patterns and treatment delays (door-in-door-out style analyses).&#xA;&#xA;**How to interpret**&#xA;- `true`: this hospital is the first admitting facility for the episode.&#xA;- `false`: patient was admitted/treated elsewhere first (transfer-in).&#xA;&#xA;**FHIR placement**&#xA;- `Encounter.extension[isFirstHospital].valueBoolean`"/>
       <isExample value="false"/>
     </resource>
     <resource>
@@ -311,21 +311,10 @@
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
-        <reference value="CodeSystem/stroke-arrival-mode-cs"/>
-      </reference>
-      <name value="Initial Care Intensity Code System"/>
-      <description value="Codes indicating the level of care provided during the patient's initial day(s) in the hospital."/>
-      <isExample value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
         <reference value="CodeSystem/initial-care-intensity-cs"/>
       </reference>
-      <name value="Initial Care Intensity Code System"/>
-      <description value="Codes indicating the level of care provided during the patient's initial day(s) in the hospital."/>
+      <name value="Initial Care Intensity CodeSystem"/>
+      <description value="Local CodeSystem representing the **initial intensity of care** during the first day(s) of the stroke encounter.&#xA;&#xA;**Primary use-case**&#xA;- Populate `InitialCareIntensityExtension` on Encounter to support:&#xA;  - case-mix characterization (ICU/stroke unit vs monitored vs standard bed),&#xA;  - operational benchmarking and staffing analysis,&#xA;  - research stratification where initial level-of-care is a confounder.&#xA;&#xA;**Interpretation guidance**&#xA;- `standard`: no continuous monitoring beyond standard nursing observation.&#xA;- `monitored`: telemetry or continuous monitoring outside ICU.&#xA;- `icu-stroke`: ICU or dedicated stroke unit level care (per local definitions)."/>
       <isExample value="false"/>
     </resource>
     <resource>
@@ -336,7 +325,7 @@
         <reference value="StructureDefinition/initial-care-intensity-ext"/>
       </reference>
       <name value="Initial Care Intensity Extension"/>
-      <description value="Specifies the level of care provided during the patient's initial day(s) in the hospital (e.g., standard bed, monitored, ICU/Stroke Unit)."/>
+      <description value="Extension capturing the **initial level of care** provided during the first day(s) of hospitalization for the stroke encounter.&#xA;&#xA;**Primary use-cases**&#xA;- Operational reporting (ICU/stroke unit utilization).&#xA;- Case-mix adjustment for outcomes and length-of-stay analyses.&#xA;- Benchmarking across sites.&#xA;&#xA;**Relationship to base Encounter**&#xA;- This is not a location/ward tracker; for physical moves use `Encounter.location` with Location references.&#xA;- This is a categorical “initial intensity” label used for reporting.&#xA;&#xA;**FHIR placement**&#xA;- `Encounter.extension[initialCareIntensity].valueCodeableConcept` (required binding to InitialCareIntensityVS)."/>
       <isExample value="false"/>
     </resource>
     <resource>
@@ -347,7 +336,7 @@
         <reference value="ValueSet/initial-care-intensity-vs"/>
       </reference>
       <name value="Initial Care Intensity ValueSet"/>
-      <description value="ValueSet indicating the level of care provided initially."/>
+      <description value="ValueSet restricting allowed initial care intensity categories.&#xA;&#xA;**Primary use-case**&#xA;- Required binding for `InitialCareIntensityExtension.valueCodeableConcept`."/>
       <isExample value="false"/>
     </resource>
     <resource>
@@ -577,7 +566,7 @@
         <reference value="StructureDefinition/required-post-acute-care-ext"/>
       </reference>
       <name value="Required Post-Acute Care Extension"/>
-      <description value="Indicates whether the patient required hospitalization beyond 24 hours after the designated acute phase of stroke care for this encounter."/>
+      <description value="Boolean extension indicating whether the patient required **ongoing inpatient care beyond the acute phase**.&#xA;&#xA;**Interpretation guidance**&#xA;- `true`: patient required hospitalization beyond the acute phase (operationalized here as &gt;24 hours after the acute phase).&#xA;- `false`: no extended post-acute inpatient need was recorded for this encounter (per local workflow).&#xA;&#xA;**FHIR placement**&#xA;- `Encounter.extension[requiredPostAcuteCare].valueBoolean`"/>
       <isExample value="false"/>
     </resource>
     <resource>
@@ -637,13 +626,24 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/stroke-arrival-mode-cs"/>
+      </reference>
+      <name value="Stroke Arrival Mode CodeSystem"/>
+      <description value="Local CodeSystem describing **how and from where** the patient arrived to the treating hospital for the index stroke encounter.&#xA;&#xA;**Primary use-case**&#xA;- Populate `Encounter.admission.admitSource` (via StrokeArrivalModeVS) to support:&#xA;  - workflow analysis (EMS vs private transport),&#xA;  - pathway compliance reporting (direct-to-stroke-center vs inter-facility transfer),&#xA;  - operational dashboards and registries.&#xA;&#xA;**Modeling notes**&#xA;- These codes describe *arrival origin and transport pathway*, not clinical triage severity.&#xA;- If you need transport timestamps, EMS unit identifiers, or handover details, model them separately"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ValueSet"/>
       </extension>
       <reference>
         <reference value="ValueSet/stroke-arrival-mode-vs"/>
       </reference>
       <name value="Stroke Arrival Mode ValueSet"/>
-      <description value="ValueSet specifying the mode and origin of the patient's arrival."/>
+      <description value="ValueSet restricting the allowed values for documenting the patient's arrival mode/origin.&#xA;&#xA;**Primary use-case**&#xA;- Required binding to `Encounter.admission.admitSource` in `StrokeEncounterProfile`."/>
       <isExample value="false"/>
     </resource>
     <resource>
@@ -730,8 +730,8 @@
       <reference>
         <reference value="CodeSystem/stroke-discharge-destination-cs"/>
       </reference>
-      <name value="Stroke Discharge Destination Code System"/>
-      <description value="Codes indicating the possible destinations of the patient upon discharge from the encounter."/>
+      <name value="Stroke Discharge Destination CodeSystem"/>
+      <description value="Local CodeSystem for discharge disposition values that are not sufficiently covered (or not consistently available)&#xA;in the chosen standard terminology set."/>
       <isExample value="false"/>
     </resource>
     <resource>
@@ -742,7 +742,7 @@
         <reference value="ValueSet/stroke-discharge-destination-vs"/>
       </reference>
       <name value="Stroke Discharge Destination ValueSet"/>
-      <description value="Defines the possible destinations of the patient upon discharge from the encounter."/>
+      <description value="ValueSet defining allowable discharge dispositions for the stroke encounter.&#xA;&#xA;**Primary use-case**&#xA;- Required binding to `Encounter.admission.dischargeDisposition` in `StrokeEncounterProfile`.&#xA;&#xA;**Composition**&#xA;- SNOMED CT “discharge/transfer” procedure concepts for common destinations.&#xA;- Local supplement (StrokeDischargeDestinationCS) for outcomes such as “deceased during stay”."/>
       <isExample value="false"/>
     </resource>
     <resource>
@@ -753,7 +753,7 @@
         <reference value="StructureDefinition/stroke-encounter-profile"/>
       </reference>
       <name value="Stroke Encounter Profile"/>
-      <description value="Profile for an Encounter resource representing a patient's hospital admission and stay for a stroke event, including key administrative and workflow details."/>
+      <description value="Profile for an Encounter representing a patient's **inpatient admission and hospital stay** for an index stroke event.&#xA;&#xA;**Primary use-case**&#xA;- Acts as the episode anchor that Conditions, Observations, and Procedures reference via `encounter`, enabling consistent episode-level analytics.&#xA;&#xA;**Captures**&#xA;- `status`: lifecycle state of the encounter (required).&#xA;- `class`: fixed to inpatient (IMP) to represent an admission.&#xA;- `actualPeriod`: start/end of the admission (required; end is required for completed stays).&#xA;- `admission.admitSource`: arrival mode/origin (required binding to StrokeArrivalModeVS when present).&#xA;- `admission.dischargeDisposition`: discharge destination (required binding to StrokeDischargeDestinationVS).&#xA;- Episode-level extensions for operational/registry attributes:&#xA;  - first hospital indicator,&#xA;  - initial care intensity,&#xA;  - required post-acute care flag,&#xA;  - discharge department/service.&#xA;&#xA;**Typical scenarios**&#xA;1) Direct admission via EMS from home: admitSource=EMS-from-home, isFirstHospital=true.&#xA;2) Transfer-in: admitSource=another-hospital or stroke-center, isFirstHospital=false.&#xA;3) Discharge home vs rehab vs death: dischargeDisposition captures destination/outcome; dischargeDepartmentService can capture service."/>
       <isExample value="false"/>
     </resource>
     <resource>

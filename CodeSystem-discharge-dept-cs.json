@@ -8,9 +8,9 @@
   "url" : "http://tecnomod-um.org/CodeSystem/discharge-dept-cs",
   "version" : "0.1.0",
   "name" : "DischargeDeptCS",
-  "title" : "Discharge Department/Service Code System",
+  "title" : "Discharge Department/Service CodeSystem",
   "status" : "active",
-  "date" : "2026-02-19T14:25:22+00:00",
+  "date" : "2026-02-19T14:52:32+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",
@@ -19,7 +19,7 @@
       "value" : "http://tecnomod-um.org"
     }]
   }],
-  "description" : "Code system specifying the type of department or service the patient was discharged or transferred to.",
+  "description" : "Local CodeSystem representing the **clinical service/department** responsible for the patient at discharge/transfer\n(or the service the patient is transferred to).\n\n**Primary use-case**\n- Populate `DischargeDepartmentServiceExtension` on Encounter to support:\n  - bed management and service-level reporting,\n  - pathway characterization (e.g., discharge under neurology vs rehab),\n  - operational analytics and capacity planning.\n\n**Modeling notes**\n- This captures *service classification*, not the physical ward/room. Physical location should be modeled using `Encounter.location`\n  (and references to Location resources) if needed.",
   "content" : "complete",
   "count" : 4,
   "concept" : [{

@@ -53,7 +53,7 @@ ValueSet limiting allowed values for the Procedure timing context extension (acu
   "name" : "ProcedureTimingContextVS",
   "title" : "Procedure Timing Context ValueSet",
   "status" : "active",
-  "date" : "2026-02-19T14:25:22+00:00",
+  "date" : "2026-02-19T14:52:32+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

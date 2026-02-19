@@ -22,7 +22,7 @@
   fhir:title [ fhir:v "Prior Medication Statement Profile (R5)"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:experimental [ fhir:v true] ; # 
-  fhir:date [ fhir:v "2026-02-19T14:25:22+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-19T14:52:32+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;

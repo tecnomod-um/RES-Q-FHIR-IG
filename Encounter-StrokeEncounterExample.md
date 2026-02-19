@@ -8,7 +8,7 @@
 
 Profile: [Stroke Encounter Profile](StructureDefinition-stroke-encounter-profile.md)
 
-**First Hospital Extension**: true
+**First Hospital Indicator Extension**: true
 
 **Initial Care Intensity Extension**: ICU / Stroke Unit
 

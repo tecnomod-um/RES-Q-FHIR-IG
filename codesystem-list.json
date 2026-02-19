@@ -21,8 +21,8 @@
       "version" : "0.1.0",
       "status" : "active",
       "name" : "DischargeDeptCS",
-      "title" : "Discharge Department/Service Code System",
-      "description" : "Code system specifying the type of department or service the patient was discharged or transferred to."
+      "title" : "Discharge Department/Service CodeSystem",
+      "description" : "Local CodeSystem representing the **clinical service/department** responsible for the patient at discharge/transfer\n(or the service the patient is transferred to).\n\n**Primary use-case**\n- Populate `DischargeDepartmentServiceExtension` on Encounter to support:\n  - bed management and service-level reporting,\n  - pathway characterization (e.g., discharge under neurology vs rehab),\n  - operational analytics and capacity planning.\n\n**Modeling notes**\n- This captures *service classification*, not the physical ward/room. Physical location should be modeled using `Encounter.location`\n  (and references to Location resources) if needed."
     },
     {
       "url" : "http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs",
@@ -37,8 +37,8 @@
       "version" : "0.1.0",
       "status" : "active",
       "name" : "InitialCareIntensityCS",
-      "title" : "Initial Care Intensity Code System",
-      "description" : "Codes indicating the level of care provided during the patient's initial day(s) in the hospital."
+      "title" : "Initial Care Intensity CodeSystem",
+      "description" : "Local CodeSystem representing the **initial intensity of care** during the first day(s) of the stroke encounter.\n\n**Primary use-case**\n- Populate `InitialCareIntensityExtension` on Encounter to support:\n  - case-mix characterization (ICU/stroke unit vs monitored vs standard bed),\n  - operational benchmarking and staffing analysis,\n  - research stratification where initial level-of-care is a confounder.\n\n**Interpretation guidance**\n- `standard`: no continuous monitoring beyond standard nursing observation.\n- `monitored`: telemetry or continuous monitoring outside ICU.\n- `icu-stroke`: ICU or dedicated stroke unit level care (per local definitions)."
     },
     {
       "url" : "http://tecnomod-um.org/CodeSystem/medication-cs",
@@ -85,8 +85,8 @@
       "version" : "0.1.0",
       "status" : "active",
       "name" : "StrokeArrivalModeCS",
-      "title" : "Initial Care Intensity Code System",
-      "description" : "Codes indicating the level of care provided during the patient's initial day(s) in the hospital."
+      "title" : "Stroke Arrival Mode CodeSystem",
+      "description" : "Local CodeSystem describing **how and from where** the patient arrived to the treating hospital for the index stroke encounter.\n\n**Primary use-case**\n- Populate `Encounter.admission.admitSource` (via StrokeArrivalModeVS) to support:\n  - workflow analysis (EMS vs private transport),\n  - pathway compliance reporting (direct-to-stroke-center vs inter-facility transfer),\n  - operational dashboards and registries.\n\n**Modeling notes**\n- These codes describe *arrival origin and transport pathway*, not clinical triage severity.\n- If you need transport timestamps, EMS unit identifiers, or handover details, model them separately"
     },
     {
       "url" : "http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs",
@@ -101,8 +101,8 @@
       "version" : "0.1.0",
       "status" : "active",
       "name" : "StrokeDischargeDestinationCS",
-      "title" : "Stroke Discharge Destination Code System",
-      "description" : "Codes indicating the possible destinations of the patient upon discharge from the encounter."
+      "title" : "Stroke Discharge Destination CodeSystem",
+      "description" : "Local CodeSystem for discharge disposition values that are not sufficiently covered (or not consistently available)\nin the chosen standard terminology set."
     },
     {
       "url" : "http://tecnomod-um.org/CodeSystem/stroke-etiology-cs",

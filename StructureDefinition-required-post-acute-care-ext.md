@@ -11,7 +11,16 @@
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/required-post-acute-care-ext | *Version*:0.1.0 |
 | Draft as of 2026-02-19 | *Computable Name*:RequiredPostAcuteCareExtension |
 
-Indicates whether the patient required hospitalization beyond 24 hours after the designated acute phase of stroke care for this encounter.
+Boolean extension indicating whether the patient required **ongoing inpatient care beyond the acute phase**.
+
+**Interpretation guidance**
+
+* `true`: patient required hospitalization beyond the acute phase (operationalized here as >24 hours after the acute phase).
+* `false`: no extended post-acute inpatient need was recorded for this encounter (per local workflow).
+
+**FHIR placement**
+
+* `Encounter.extension[requiredPostAcuteCare].valueBoolean`
 
 **Context of Use**
 
@@ -53,7 +62,7 @@ Other representations of profile: [CSV](StructureDefinition-required-post-acute-
   "name" : "RequiredPostAcuteCareExtension",
   "title" : "Required Post-Acute Care Extension",
   "status" : "draft",
-  "date" : "2026-02-19T14:25:22+00:00",
+  "date" : "2026-02-19T14:52:32+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -66,7 +75,7 @@ Other representations of profile: [CSV](StructureDefinition-required-post-acute-
       ]
     }
   ],
-  "description" : "Indicates whether the patient required hospitalization beyond 24 hours after the designated acute phase of stroke care for this encounter.",
+  "description" : "Boolean extension indicating whether the patient required **ongoing inpatient care beyond the acute phase**.\n\n**Interpretation guidance**\n- `true`: patient required hospitalization beyond the acute phase (operationalized here as >24 hours after the acute phase).\n- `false`: no extended post-acute inpatient need was recorded for this encounter (per local workflow).\n\n**FHIR placement**\n- `Encounter.extension[requiredPostAcuteCare].valueBoolean`",
   "fhirVersion" : "5.0.0",
   "mapping" : [
     {
@@ -90,7 +99,9 @@ Other representations of profile: [CSV](StructureDefinition-required-post-acute-
     "element" : [
       {
         "id" : "Extension",
-        "path" : "Extension"
+        "path" : "Extension",
+        "short" : "Required Post-Acute Care Extension",
+        "definition" : "Boolean extension indicating whether the patient required **ongoing inpatient care beyond the acute phase**.\n\n**Interpretation guidance**\n- `true`: patient required hospitalization beyond the acute phase (operationalized here as >24 hours after the acute phase).\n- `false`: no extended post-acute inpatient need was recorded for this encounter (per local workflow).\n\n**FHIR placement**\n- `Encounter.extension[requiredPostAcuteCare].valueBoolean`"
       },
       {
         "id" : "Extension.extension",

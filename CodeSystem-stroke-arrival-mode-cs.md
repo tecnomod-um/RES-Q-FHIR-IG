@@ -1,10 +1,10 @@
-# Initial Care Intensity Code System - v0.1.0
+# Stroke Arrival Mode CodeSystem - v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **Initial Care Intensity Code System**
+* **Stroke Arrival Mode CodeSystem**
 
-## CodeSystem: Initial Care Intensity Code System (Experimental) 
+## CodeSystem: Stroke Arrival Mode CodeSystem (Experimental) 
 
 | | |
 | :--- | :--- |
@@ -12,7 +12,18 @@
 | Active as of 2026-02-19 | *Computable Name*:StrokeArrivalModeCS |
 
  
-Codes indicating the level of care provided during the patient's initial day(s) in the hospital. 
+Local CodeSystem describing **how and from where** the patient arrived to the treating hospital for the index stroke encounter. 
+**Primary use-case** 
+* Populate `Encounter.admission.admitSource` (via StrokeArrivalModeVS) to support: 
+* workflow analysis (EMS vs private transport),
+* pathway compliance reporting (direct-to-stroke-center vs inter-facility transfer),
+* operational dashboards and registries.
+ 
+ 
+**Modeling notes** 
+* These codes describe **arrival origin and transport pathway**, not clinical triage severity.
+* If you need transport timestamps, EMS unit identifiers, or handover details, model them separately
+ 
 
  This Code system is referenced in the content logical definition of the following value sets: 
 
@@ -29,10 +40,10 @@ Codes indicating the level of care provided during the patient's initial day(s) 
   "url" : "http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs",
   "version" : "0.1.0",
   "name" : "StrokeArrivalModeCS",
-  "title" : "Initial Care Intensity Code System",
+  "title" : "Stroke Arrival Mode CodeSystem",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-19T14:25:22+00:00",
+  "date" : "2026-02-19T14:52:32+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -45,7 +56,7 @@ Codes indicating the level of care provided during the patient's initial day(s) 
       ]
     }
   ],
-  "description" : "Codes indicating the level of care provided during the patient's initial day(s) in the hospital.",
+  "description" : "Local CodeSystem describing **how and from where** the patient arrived to the treating hospital for the index stroke encounter.\n\n**Primary use-case**\n- Populate `Encounter.admission.admitSource` (via StrokeArrivalModeVS) to support:\n  - workflow analysis (EMS vs private transport),\n  - pathway compliance reporting (direct-to-stroke-center vs inter-facility transfer),\n  - operational dashboards and registries.\n\n**Modeling notes**\n- These codes describe *arrival origin and transport pathway*, not clinical triage severity.\n- If you need transport timestamps, EMS unit identifiers, or handover details, model them separately ",
   "caseSensitive" : false,
   "content" : "complete",
   "count" : 6,

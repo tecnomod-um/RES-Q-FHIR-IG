@@ -12,7 +12,10 @@
 | Active as of 2026-02-19 | *Computable Name*:InitialCareIntensityVS |
 
  
-ValueSet indicating the level of care provided initially. 
+ValueSet restricting allowed initial care intensity categories. 
+**Primary use-case** 
+* Required binding for `InitialCareIntensityExtension.valueCodeableConcept`.
+ 
 
  **References** 
 
@@ -50,7 +53,7 @@ ValueSet indicating the level of care provided initially.
   "name" : "InitialCareIntensityVS",
   "title" : "Initial Care Intensity ValueSet",
   "status" : "active",
-  "date" : "2026-02-19T14:25:22+00:00",
+  "date" : "2026-02-19T14:52:32+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -63,7 +66,7 @@ ValueSet indicating the level of care provided initially.
       ]
     }
   ],
-  "description" : "ValueSet indicating the level of care provided initially.",
+  "description" : "ValueSet restricting allowed initial care intensity categories.\n\n**Primary use-case**\n- Required binding for `InitialCareIntensityExtension.valueCodeableConcept`.",
   "compose" : {
     "include" : [
       {

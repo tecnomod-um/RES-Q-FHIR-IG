@@ -387,7 +387,34 @@ Use Condition to assert durable diagnoses and link supporting Observations via <
                   title="StructureDefinition/stroke-encounter-profile">Stroke Encounter Profile</a>
             </td>
             <td>
-<p>Profile for an Encounter resource representing a patient's hospital admission and stay for a stroke event, including key administrative and workflow details.</p>
+<p>Profile for an Encounter representing a patient's <strong>inpatient admission and hospital stay</strong> for an index stroke event.</p>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Acts as the episode anchor that Conditions, Observations, and Procedures reference via <code class="language-plaintext highlighter-rouge">encounter</code>, enabling consistent episode-level analytics.</li>
+</ul>
+
+<p><strong>Captures</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">status</code>: lifecycle state of the encounter (required).</li>
+  <li><code class="language-plaintext highlighter-rouge">class</code>: fixed to inpatient (IMP) to represent an admission.</li>
+  <li><code class="language-plaintext highlighter-rouge">actualPeriod</code>: start/end of the admission (required; end is required for completed stays).</li>
+  <li><code class="language-plaintext highlighter-rouge">admission.admitSource</code>: arrival mode/origin (required binding to StrokeArrivalModeVS when present).</li>
+  <li><code class="language-plaintext highlighter-rouge">admission.dischargeDisposition</code>: discharge destination (required binding to StrokeDischargeDestinationVS).</li>
+  <li>Episode-level extensions for operational/registry attributes:
+    <ul>
+      <li>first hospital indicator,</li>
+      <li>initial care intensity,</li>
+      <li>required post-acute care flag,</li>
+      <li>discharge department/service.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Typical scenarios</strong>
+1) Direct admission via EMS from home: admitSource=EMS-from-home, isFirstHospital=true.
+2) Transfer-in: admitSource=another-hospital or stroke-center, isFirstHospital=false.
+3) Discharge home vs rehab vs death: dischargeDisposition captures destination/outcome; dischargeDepartmentService can capture service.</p>
 </td>
          </tr>
          <tr>
@@ -560,16 +587,46 @@ The Observation is categorized as <code class="language-plaintext highlighter-ro
                   title="StructureDefinition/discharge-department-service-ext">Discharge Department/Service Extension</a>
             </td>
             <td>
-<p>Specifies the type of department or service the patient was discharged or transferred to.</p>
+<p>Extension capturing the <strong>clinical department/service</strong> responsible at discharge or the service the patient is transferred to.</p>
+
+<p><strong>Primary use-cases</strong></p>
+<ul>
+  <li>Service-level reporting and capacity planning.</li>
+  <li>Distinguishing discharge under neurology vs rehab vs other services.</li>
+  <li>Supporting downstream routing/coordination logic when a service category is required.</li>
+</ul>
+
+<p><strong>FHIR placement</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Encounter.extension[dischargeDepartmentService].valueCodeableConcept</code> (required binding to DischargeDeptVS).</li>
+</ul>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
                <a href="StructureDefinition-first-hospital-ext.html"
-                  title="StructureDefinition/first-hospital-ext">First Hospital Extension</a>
+                  title="StructureDefinition/first-hospital-ext">First Hospital Indicator Extension</a>
             </td>
             <td>
-<p>Indicates if the reporting hospital was the first medical facility to admit the patient for this stroke episode.</p>
+<p>Boolean extension indicating whether the reporting hospital was the <strong>first medical facility</strong> to admit the patient
+for this stroke episode.</p>
+
+<p><strong>Primary use-cases</strong></p>
+<ul>
+  <li>Registry fields distinguishing “direct to treating hospital” vs “secondary transfer”.</li>
+  <li>Analytics for inter-facility transfer patterns and treatment delays (door-in-door-out style analyses).</li>
+</ul>
+
+<p><strong>How to interpret</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">true</code>: this hospital is the first admitting facility for the episode.</li>
+  <li><code class="language-plaintext highlighter-rouge">false</code>: patient was admitted/treated elsewhere first (transfer-in).</li>
+</ul>
+
+<p><strong>FHIR placement</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Encounter.extension[isFirstHospital].valueBoolean</code></li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -612,7 +669,25 @@ The Observation is categorized as <code class="language-plaintext highlighter-ro
                   title="StructureDefinition/initial-care-intensity-ext">Initial Care Intensity Extension</a>
             </td>
             <td>
-<p>Specifies the level of care provided during the patient's initial day(s) in the hospital (e.g., standard bed, monitored, ICU/Stroke Unit).</p>
+<p>Extension capturing the <strong>initial level of care</strong> provided during the first day(s) of hospitalization for the stroke encounter.</p>
+
+<p><strong>Primary use-cases</strong></p>
+<ul>
+  <li>Operational reporting (ICU/stroke unit utilization).</li>
+  <li>Case-mix adjustment for outcomes and length-of-stay analyses.</li>
+  <li>Benchmarking across sites.</li>
+</ul>
+
+<p><strong>Relationship to base Encounter</strong></p>
+<ul>
+  <li>This is not a location/ward tracker; for physical moves use <code class="language-plaintext highlighter-rouge">Encounter.location</code> with Location references.</li>
+  <li>This is a categorical “initial intensity” label used for reporting.</li>
+</ul>
+
+<p><strong>FHIR placement</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Encounter.extension[initialCareIntensity].valueCodeableConcept</code> (required binding to InitialCareIntensityVS).</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -713,7 +788,18 @@ The Observation is categorized as <code class="language-plaintext highlighter-ro
                   title="StructureDefinition/required-post-acute-care-ext">Required Post-Acute Care Extension</a>
             </td>
             <td>
-<p>Indicates whether the patient required hospitalization beyond 24 hours after the designated acute phase of stroke care for this encounter.</p>
+<p>Boolean extension indicating whether the patient required <strong>ongoing inpatient care beyond the acute phase</strong>.</p>
+
+<p><strong>Interpretation guidance</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">true</code>: patient required hospitalization beyond the acute phase (operationalized here as &gt;24 hours after the acute phase).</li>
+  <li><code class="language-plaintext highlighter-rouge">false</code>: no extended post-acute inpatient need was recorded for this encounter (per local workflow).</li>
+</ul>
+
+<p><strong>FHIR placement</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Encounter.extension[requiredPostAcuteCare].valueBoolean</code></li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -875,7 +961,12 @@ The Observation is categorized as <code class="language-plaintext highlighter-ro
                   title="ValueSet/discharge-dept-vs">Discharge Department/Service ValueSet</a>
             </td>
             <td>
-<p>ValueSet specifying the type of department or service the patient was discharged or transferred to.</p>
+<p>ValueSet restricting the allowed department/service categories recorded at discharge.</p>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Required binding for <code class="language-plaintext highlighter-rouge">DischargeDepartmentServiceExtension.valueCodeableConcept</code>.</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -934,7 +1025,12 @@ if a coded placeholder is required, <code class="language-plaintext highlighter-
                   title="ValueSet/initial-care-intensity-vs">Initial Care Intensity ValueSet</a>
             </td>
             <td>
-<p>ValueSet indicating the level of care provided initially.</p>
+<p>ValueSet restricting allowed initial care intensity categories.</p>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Required binding for <code class="language-plaintext highlighter-rouge">InitialCareIntensityExtension.valueCodeableConcept</code>.</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -1071,7 +1167,12 @@ with the result/status carried in <code class="language-plaintext highlighter-ro
                   title="ValueSet/stroke-arrival-mode-vs">Stroke Arrival Mode ValueSet</a>
             </td>
             <td>
-<p>ValueSet specifying the mode and origin of the patient's arrival.</p>
+<p>ValueSet restricting the allowed values for documenting the patient's arrival mode/origin.</p>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Required binding to <code class="language-plaintext highlighter-rouge">Encounter.admission.admitSource</code> in <code class="language-plaintext highlighter-rouge">StrokeEncounterProfile</code>.</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -1125,7 +1226,18 @@ with the result/status carried in <code class="language-plaintext highlighter-ro
                   title="ValueSet/stroke-discharge-destination-vs">Stroke Discharge Destination ValueSet</a>
             </td>
             <td>
-<p>Defines the possible destinations of the patient upon discharge from the encounter.</p>
+<p>ValueSet defining allowable discharge dispositions for the stroke encounter.</p>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Required binding to <code class="language-plaintext highlighter-rouge">Encounter.admission.dischargeDisposition</code> in <code class="language-plaintext highlighter-rouge">StrokeEncounterProfile</code>.</li>
+</ul>
+
+<p><strong>Composition</strong></p>
+<ul>
+  <li>SNOMED CT “discharge/transfer” procedure concepts for common destinations.</li>
+  <li>Local supplement (StrokeDischargeDestinationCS) for outcomes such as “deceased during stay”.</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -1343,10 +1455,28 @@ It is primarily used to contextualize instruments whose interpretation depends o
          <tr>
             <td style="column-width:30%">
                <a href="CodeSystem-discharge-dept-cs.html"
-                  title="CodeSystem/discharge-dept-cs">Discharge Department/Service Code System</a>
+                  title="CodeSystem/discharge-dept-cs">Discharge Department/Service CodeSystem</a>
             </td>
             <td>
-<p>Code system specifying the type of department or service the patient was discharged or transferred to.</p>
+<p>Local CodeSystem representing the <strong>clinical service/department</strong> responsible for the patient at discharge/transfer
+(or the service the patient is transferred to).</p>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Populate <code class="language-plaintext highlighter-rouge">DischargeDepartmentServiceExtension</code> on Encounter to support:
+    <ul>
+      <li>bed management and service-level reporting,</li>
+      <li>pathway characterization (e.g., discharge under neurology vs rehab),</li>
+      <li>operational analytics and capacity planning.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Modeling notes</strong></p>
+<ul>
+  <li>This captures <em>service classification</em>, not the physical ward/room. Physical location should be modeled using <code class="language-plaintext highlighter-rouge">Encounter.location</code>
+(and references to Location resources) if needed.</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -1367,19 +1497,28 @@ on a definitive hemorrhagic stroke Condition.</li>
          <tr>
             <td style="column-width:30%">
                <a href="CodeSystem-initial-care-intensity-cs.html"
-                  title="CodeSystem/initial-care-intensity-cs">Initial Care Intensity Code System</a>
+                  title="CodeSystem/initial-care-intensity-cs">Initial Care Intensity CodeSystem</a>
             </td>
             <td>
-<p>Codes indicating the level of care provided during the patient's initial day(s) in the hospital.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="CodeSystem-stroke-arrival-mode-cs.html"
-                  title="CodeSystem/stroke-arrival-mode-cs">Initial Care Intensity Code System</a>
-            </td>
-            <td>
-<p>Codes indicating the level of care provided during the patient's initial day(s) in the hospital.</p>
+<p>Local CodeSystem representing the <strong>initial intensity of care</strong> during the first day(s) of the stroke encounter.</p>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Populate <code class="language-plaintext highlighter-rouge">InitialCareIntensityExtension</code> on Encounter to support:
+    <ul>
+      <li>case-mix characterization (ICU/stroke unit vs monitored vs standard bed),</li>
+      <li>operational benchmarking and staffing analysis,</li>
+      <li>research stratification where initial level-of-care is a confounder.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Interpretation guidance</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">standard</code>: no continuous monitoring beyond standard nursing observation.</li>
+  <li><code class="language-plaintext highlighter-rouge">monitored</code>: telemetry or continuous monitoring outside ICU.</li>
+  <li><code class="language-plaintext highlighter-rouge">icu-stroke</code>: ICU or dedicated stroke unit level care (per local definitions).</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -1466,6 +1605,32 @@ mTICI is an ordinal angiographic scale used to quantify the extent of reperfusio
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="CodeSystem-stroke-arrival-mode-cs.html"
+                  title="CodeSystem/stroke-arrival-mode-cs">Stroke Arrival Mode CodeSystem</a>
+            </td>
+            <td>
+<p>Local CodeSystem describing <strong>how and from where</strong> the patient arrived to the treating hospital for the index stroke encounter.</p>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Populate <code class="language-plaintext highlighter-rouge">Encounter.admission.admitSource</code> (via StrokeArrivalModeVS) to support:
+    <ul>
+      <li>workflow analysis (EMS vs private transport),</li>
+      <li>pathway compliance reporting (direct-to-stroke-center vs inter-facility transfer),</li>
+      <li>operational dashboards and registries.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Modeling notes</strong></p>
+<ul>
+  <li>These codes describe <em>arrival origin and transport pathway</em>, not clinical triage severity.</li>
+  <li>If you need transport timestamps, EMS unit identifiers, or handover details, model them separately</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="CodeSystem-stroke-circumstance-codes-cs.html"
                   title="CodeSystem/stroke-circumstance-codes-cs">Stroke Circumstance Codes CodeSystem</a>
             </td>
@@ -1482,10 +1647,11 @@ mTICI is an ordinal angiographic scale used to quantify the extent of reperfusio
          <tr>
             <td style="column-width:30%">
                <a href="CodeSystem-stroke-discharge-destination-cs.html"
-                  title="CodeSystem/stroke-discharge-destination-cs">Stroke Discharge Destination Code System</a>
+                  title="CodeSystem/stroke-discharge-destination-cs">Stroke Discharge Destination CodeSystem</a>
             </td>
             <td>
-<p>Codes indicating the possible destinations of the patient upon discharge from the encounter.</p>
+<p>Local CodeSystem for discharge disposition values that are not sufficiently covered (or not consistently available)
+in the chosen standard terminology set.</p>
 </td>
          </tr>
          <tr>
@@ -1820,7 +1986,7 @@ Each code represents a duration measured between two clinically meaningful event
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 14:25+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 14:52+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

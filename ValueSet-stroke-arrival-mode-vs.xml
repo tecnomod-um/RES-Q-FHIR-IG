@@ -10,7 +10,7 @@
   <name value="StrokeArrivalModeVS"/>
   <title value="Stroke Arrival Mode ValueSet"/>
   <status value="active"/>
-  <date value="2026-02-19T14:25:22+00:00"/>
+  <date value="2026-02-19T14:52:32+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>
@@ -19,7 +19,7 @@
       <value value="http://tecnomod-um.org"/>
     </telecom>
   </contact>
-  <description value="ValueSet specifying the mode and origin of the patient's arrival."/>
+  <description value="ValueSet restricting the allowed values for documenting the patient's arrival mode/origin.&#xA;&#xA;**Primary use-case**&#xA;- Required binding to `Encounter.admission.admitSource` in `StrokeEncounterProfile`.&#xA;"/>
   <compose>
     <include>
       <system value="http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs"/>

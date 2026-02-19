@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>First Hospital Extension -  v0.1.0</title>
+    <title>First Hospital Indicator Extension -  v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -131,7 +131,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>First Hospital Extension</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>First Hospital Indicator Extension</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -207,7 +207,7 @@
 </ul>
 
   <a name="root"> </a>
-  <h2 id="root">Extension: First Hospital Extension
+  <h2 id="root">Extension: First Hospital Indicator Extension
 
   </h2>
 
@@ -248,7 +248,25 @@
 
   </table>
 
-<p>Indicates if the reporting hospital was the first medical facility to admit the patient for this stroke episode.</p>
+<p>Boolean extension indicating whether the reporting hospital was the <strong>first medical facility</strong> to admit the patient
+for this stroke episode.</p>
+
+<p><strong>Primary use-cases</strong></p>
+<ul>
+  <li>Registry fields distinguishing “direct to treating hospital” vs “secondary transfer”.</li>
+  <li>Analytics for inter-facility transfer patterns and treatment delays (door-in-door-out style analyses).</li>
+</ul>
+
+<p><strong>How to interpret</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">true</code>: this hospital is the first admitting facility for the episode.</li>
+  <li><code class="language-plaintext highlighter-rouge">false</code>: patient was admitted/treated elsewhere first (transfer-in).</li>
+</ul>
+
+<p><strong>FHIR placement</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Encounter.extension[isFirstHospital].valueBoolean</code></li>
+</ul>
 
 
 
@@ -320,11 +338,23 @@ Element ID:     <code>
         </p>
         <div id="tbl-diff-inner">
           <table border="0" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;" id="first-hospital-extD" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top" data-fhir="generated-heirarchy"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="The logical name of the element" data-no-external="true">Name</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Information about the use of the element" data-no-external="true">Flags</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Minimum and Maximum # of times the element can appear in the instance" data-no-external="true">Card.</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Reference to the type of the element" data-no-external="true">Type</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Additional information about the element" data-no-external="true">Description &amp; Constraints</a>&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-weight: normal">Filter: <input size="10" name="filter" style="border: 1px #F0F0F0 solid; background-color: rgb(254, 254, 231);" onInput="filterTree(document.getElementById('first-hospital-extD'), event.target.value)" type="text"/> <img onClick="showPanel(event.target, document.getElementById('first-hospital-extD'), document.getElementById('ppfirst-hospital-extD'))" src="tree-filter.png" alt="Filters"/><div style="display: none; position: fixed; opacity : 1.0; background-color: rgb(254, 254, 231); border: 1px solid #ccc; padding: 10px; boxShadow: 0 2px 5px rgba(0,0,0,0.2); zIndex: 1000; borderRadius: 4px" id="ppfirst-hospital-extD">Bindings <input onClick="filterDesc(document.getElementById('first-hospital-extD'), 'binding',event.target.checked, document.getElementById('ppfirst-hospital-extD'))" size="1" name="binding" checked="true" id="cbfirst-hospital-extD-binding" type="checkbox"/><br/>Constraints <input onClick="filterDesc(document.getElementById('first-hospital-extD'), 'constraint',event.target.checked, document.getElementById('ppfirst-hospital-extD'))" size="1" name="constraint" checked="true" id="cbfirst-hospital-extD-constraint" type="checkbox"/><br/>Obligations <input onClick="filterDesc(document.getElementById('first-hospital-extD'), 'obligation',event.target.checked, document.getElementById('ppfirst-hospital-extD'))" size="1" name="obligation" checked="true" id="cbfirst-hospital-extD-obligation" type="checkbox"/><br/></div></span><span style="float: right"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format" data-no-external="true"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" onLoad="fhirTableInit(this)" style="background-color: inherit"/></a></span></th></tr>
-<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-first-hospital-ext-definitions.html#Extension" data-no-external="true">Extension</a><a name="Extension"> </a></td>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-first-hospital-ext-definitions.html#Extension" title="Boolean extension indicating whether the reporting hospital was the **first medical facility** to admit the patient
+for this stroke episode.
+
+**Primary use-cases**
+- Registry fields distinguishing “direct to treating hospital” vs “secondary transfer”.
+- Analytics for inter-facility transfer patterns and treatment delays (door-in-door-out style analyses).
+
+**How to interpret**
+- `true`: this hospital is the first admitting facility for the episode.
+- `false`: patient was admitted/treated elsewhere first (transfer-in).
+
+**FHIR placement**
+- `Encounter.extension[isFirstHospital].valueBoolean`" data-no-external="true">Extension</a><a name="Extension"> </a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/extensibility.html#Extension">Extension</a></td>
-<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Extension</span></td></tr>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">First Hospital Indicator Extension</td></tr>
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="aa" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_extension_simple.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Simple Extension" class="hierarchy"/> <a style="text-decoration:line-through; text-decoration:line-through" no-external="true" href="StructureDefinition-first-hospital-ext-definitions.html#Extension.extension" data-no-external="true">extension</a><a name="Extension.extension"> </a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="text-decoration:line-through"></span><span style="text-decoration:line-through">0</span><span style="text-decoration:line-through">..</span><span style="text-decoration:line-through">0</span></td>
@@ -340,7 +370,7 @@ Element ID:     <code>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/datatypes.html#boolean">boolean</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Value of extension</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 1911a55b-2852-4b27-8445-dcfeade53684
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // bf1cb564-caaa-404f-b3f5-fe30967b043a
 document.getElementById('cbfirst-hospital-extD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('first-hospital-extD'), 'binding', document.getElementById('cbfirst-hospital-extD-binding').checked, document.getElementById('ppfirst-hospital-extD'));
 document.getElementById('cbfirst-hospital-extD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -356,11 +386,23 @@ filterDesc(document.getElementById('first-hospital-extD'), 'obligation', documen
       <div id="tbl-snap">
         <div id="tbl-snap-inner">
           <table border="0" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;" id="first-hospital-extS" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top" data-fhir="generated-heirarchy"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="The logical name of the element" data-no-external="true">Name</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Information about the use of the element" data-no-external="true">Flags</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Minimum and Maximum # of times the element can appear in the instance" data-no-external="true">Card.</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Reference to the type of the element" data-no-external="true">Type</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Additional information about the element" data-no-external="true">Description &amp; Constraints</a>&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-weight: normal">Filter: <input size="10" name="filter" style="border: 1px #F0F0F0 solid; background-color: rgb(254, 254, 231);" onInput="filterTree(document.getElementById('first-hospital-extS'), event.target.value)" type="text"/> <img onClick="showPanel(event.target, document.getElementById('first-hospital-extS'), document.getElementById('ppfirst-hospital-extS'))" src="tree-filter.png" alt="Filters"/><div style="display: none; position: fixed; opacity : 1.0; background-color: rgb(254, 254, 231); border: 1px solid #ccc; padding: 10px; boxShadow: 0 2px 5px rgba(0,0,0,0.2); zIndex: 1000; borderRadius: 4px" id="ppfirst-hospital-extS">Bindings <input onClick="filterDesc(document.getElementById('first-hospital-extS'), 'binding',event.target.checked, document.getElementById('ppfirst-hospital-extS'))" size="1" name="binding" checked="true" id="cbfirst-hospital-extS-binding" type="checkbox"/><br/>Constraints <input onClick="filterDesc(document.getElementById('first-hospital-extS'), 'constraint',event.target.checked, document.getElementById('ppfirst-hospital-extS'))" size="1" name="constraint" checked="true" id="cbfirst-hospital-extS-constraint" type="checkbox"/><br/>Obligations <input onClick="filterDesc(document.getElementById('first-hospital-extS'), 'obligation',event.target.checked, document.getElementById('ppfirst-hospital-extS'))" size="1" name="obligation" checked="true" id="cbfirst-hospital-extS-obligation" type="checkbox"/><br/></div></span><span style="float: right"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format" data-no-external="true"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" onLoad="fhirTableInit(this)" style="background-color: inherit"/></a></span></th></tr>
-<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-first-hospital-ext-definitions.html#Extension" title="An Extension" data-no-external="true">Extension</a><a name="s-Extension"> </a></td>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-first-hospital-ext-definitions.html#Extension" title="Boolean extension indicating whether the reporting hospital was the **first medical facility** to admit the patient
+for this stroke episode.
+
+**Primary use-cases**
+- Registry fields distinguishing “direct to treating hospital” vs “secondary transfer”.
+- Analytics for inter-facility transfer patterns and treatment delays (door-in-door-out style analyses).
+
+**How to interpret**
+- `true`: this hospital is the first admitting facility for the episode.
+- `false`: patient was admitted/treated elsewhere first (transfer-in).
+
+**FHIR placement**
+- `Encounter.extension[isFirstHospital].valueBoolean`" data-no-external="true">Extension</a><a name="s-Extension"> </a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/extensibility.html#Extension">Extension</a></td>
-<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Extension<br/></td></tr>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">First Hospital Indicator Extension<br/></td></tr>
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="aa" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a no-external="true" href="StructureDefinition-first-hospital-ext-definitions.html#Extension.id" title="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." data-no-external="true">id</a><a name="s-Extension.id"> </a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
@@ -381,7 +423,7 @@ filterDesc(document.getElementById('first-hospital-extD'), 'obligation', documen
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/datatypes.html#boolean">boolean</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Value of extension</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 1911a55b-2852-4b27-8445-dcfeade53684
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // bf1cb564-caaa-404f-b3f5-fe30967b043a
 document.getElementById('cbfirst-hospital-extS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('first-hospital-extS'), 'binding', document.getElementById('cbfirst-hospital-extS-binding').checked, document.getElementById('ppfirst-hospital-extS'));
 document.getElementById('cbfirst-hospital-extS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -408,7 +450,7 @@ filterDesc(document.getElementById('first-hospital-extS'), 'obligation', documen
     <div id="tabs-json">
       <div id="json">
         <div id="json-inner">
-           // <span style="color: navy; opacity: 0.8">First Hospital Extension</span>
+           // <span style="color: navy; opacity: 0.8">First Hospital Indicator Extension</span>
  {
     "<a href="StructureDefinition-first-hospital-ext.html#Extension.id" title="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces" class="dict"><span style="text-decoration: underline">id</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R5/datatypes.html#id">id</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Unique id for inter-element referencing</span>
     "<a href="StructureDefinition-first-hospital-ext.html#Extension.url" title="Source of the definition for the extension code - a logical name or a URL" class="dict"><span style="text-decoration: underline">url</span></a>" : "http://tecnomod-um.org/StructureDefinition/first-hospital-ext", <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>
@@ -441,7 +483,22 @@ filterDesc(document.getElementById('first-hospital-extS'), 'obligation', documen
 <p><b>
 Summary
 </b></p>
-<p>Simple Extension with the type boolean: Indicates if the reporting hospital was the first medical facility to admit the patient for this stroke episode.</p>
+<p>Simple Extension with the type boolean: Boolean extension indicating whether the reporting hospital was the <strong>first medical facility</strong> to admit the patient
+for this stroke episode.</p>
+<p><strong>Primary use-cases</strong></p>
+<ul>
+<li>Registry fields distinguishing “direct to treating hospital” vs “secondary transfer”.</li>
+<li>Analytics for inter-facility transfer patterns and treatment delays (door-in-door-out style analyses).</li>
+</ul>
+<p><strong>How to interpret</strong></p>
+<ul>
+<li><code>true</code>: this hospital is the first admitting facility for the episode.</li>
+<li><code>false</code>: patient was admitted/treated elsewhere first (transfer-in).</li>
+</ul>
+<p><strong>FHIR placement</strong></p>
+<ul>
+<li><code>Encounter.extension[isFirstHospital].valueBoolean</code></li>
+</ul></p>
         </div>
       </div>
     </div>
@@ -455,11 +512,23 @@ Summary
         </p>
         <div id="all-tbl-diff-inner">
           <table border="0" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;" id="first-hospital-extDA" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top" data-fhir="generated-heirarchy"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="The logical name of the element" data-no-external="true">Name</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Information about the use of the element" data-no-external="true">Flags</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Minimum and Maximum # of times the element can appear in the instance" data-no-external="true">Card.</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Reference to the type of the element" data-no-external="true">Type</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Additional information about the element" data-no-external="true">Description &amp; Constraints</a>&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-weight: normal">Filter: <input size="10" name="filter" style="border: 1px #F0F0F0 solid; background-color: rgb(254, 254, 231);" onInput="filterTree(document.getElementById('first-hospital-extDA'), event.target.value)" type="text"/> <img onClick="showPanel(event.target, document.getElementById('first-hospital-extDA'), document.getElementById('ppfirst-hospital-extDA'))" src="tree-filter.png" alt="Filters"/><div style="display: none; position: fixed; opacity : 1.0; background-color: rgb(254, 254, 231); border: 1px solid #ccc; padding: 10px; boxShadow: 0 2px 5px rgba(0,0,0,0.2); zIndex: 1000; borderRadius: 4px" id="ppfirst-hospital-extDA">Bindings <input onClick="filterDesc(document.getElementById('first-hospital-extDA'), 'binding',event.target.checked, document.getElementById('ppfirst-hospital-extDA'))" size="1" name="binding" checked="true" id="cbfirst-hospital-extDA-binding" type="checkbox"/><br/>Constraints <input onClick="filterDesc(document.getElementById('first-hospital-extDA'), 'constraint',event.target.checked, document.getElementById('ppfirst-hospital-extDA'))" size="1" name="constraint" checked="true" id="cbfirst-hospital-extDA-constraint" type="checkbox"/><br/>Obligations <input onClick="filterDesc(document.getElementById('first-hospital-extDA'), 'obligation',event.target.checked, document.getElementById('ppfirst-hospital-extDA'))" size="1" name="obligation" checked="true" id="cbfirst-hospital-extDA-obligation" type="checkbox"/><br/></div></span><span style="float: right"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format" data-no-external="true"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" onLoad="fhirTableInit(this)" style="background-color: inherit"/></a></span></th></tr>
-<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-first-hospital-ext-definitions.html#Extension" data-no-external="true">Extension</a><a name="a-Extension"> </a></td>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-first-hospital-ext-definitions.html#Extension" title="Boolean extension indicating whether the reporting hospital was the **first medical facility** to admit the patient
+for this stroke episode.
+
+**Primary use-cases**
+- Registry fields distinguishing “direct to treating hospital” vs “secondary transfer”.
+- Analytics for inter-facility transfer patterns and treatment delays (door-in-door-out style analyses).
+
+**How to interpret**
+- `true`: this hospital is the first admitting facility for the episode.
+- `false`: patient was admitted/treated elsewhere first (transfer-in).
+
+**FHIR placement**
+- `Encounter.extension[isFirstHospital].valueBoolean`" data-no-external="true">Extension</a><a name="a-Extension"> </a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/extensibility.html#Extension">Extension</a></td>
-<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Extension</span></td></tr>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">First Hospital Indicator Extension</td></tr>
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="aa" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_extension_simple.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Simple Extension" class="hierarchy"/> <a style="text-decoration:line-through; text-decoration:line-through" no-external="true" href="StructureDefinition-first-hospital-ext-definitions.html#Extension.extension" data-no-external="true">extension</a><a name="a-Extension.extension"> </a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="text-decoration:line-through"></span><span style="text-decoration:line-through">0</span><span style="text-decoration:line-through">..</span><span style="text-decoration:line-through">0</span></td>
@@ -475,7 +544,7 @@ Summary
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/datatypes.html#boolean">boolean</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Value of extension</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 1911a55b-2852-4b27-8445-dcfeade53684
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // bf1cb564-caaa-404f-b3f5-fe30967b043a
 document.getElementById('cbfirst-hospital-extDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('first-hospital-extDA'), 'binding', document.getElementById('cbfirst-hospital-extDA-binding').checked, document.getElementById('ppfirst-hospital-extDA'));
 document.getElementById('cbfirst-hospital-extDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -491,11 +560,23 @@ filterDesc(document.getElementById('first-hospital-extDA'), 'obligation', docume
         </p>
         <div id="all-tbl-snap-inner">
           <table border="0" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;" id="first-hospital-extSA" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top" data-fhir="generated-heirarchy"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="The logical name of the element" data-no-external="true">Name</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Information about the use of the element" data-no-external="true">Flags</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Minimum and Maximum # of times the element can appear in the instance" data-no-external="true">Card.</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Reference to the type of the element" data-no-external="true">Type</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Additional information about the element" data-no-external="true">Description &amp; Constraints</a>&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-weight: normal">Filter: <input size="10" name="filter" style="border: 1px #F0F0F0 solid; background-color: rgb(254, 254, 231);" onInput="filterTree(document.getElementById('first-hospital-extSA'), event.target.value)" type="text"/> <img onClick="showPanel(event.target, document.getElementById('first-hospital-extSA'), document.getElementById('ppfirst-hospital-extSA'))" src="tree-filter.png" alt="Filters"/><div style="display: none; position: fixed; opacity : 1.0; background-color: rgb(254, 254, 231); border: 1px solid #ccc; padding: 10px; boxShadow: 0 2px 5px rgba(0,0,0,0.2); zIndex: 1000; borderRadius: 4px" id="ppfirst-hospital-extSA">Bindings <input onClick="filterDesc(document.getElementById('first-hospital-extSA'), 'binding',event.target.checked, document.getElementById('ppfirst-hospital-extSA'))" size="1" name="binding" checked="true" id="cbfirst-hospital-extSA-binding" type="checkbox"/><br/>Constraints <input onClick="filterDesc(document.getElementById('first-hospital-extSA'), 'constraint',event.target.checked, document.getElementById('ppfirst-hospital-extSA'))" size="1" name="constraint" checked="true" id="cbfirst-hospital-extSA-constraint" type="checkbox"/><br/>Obligations <input onClick="filterDesc(document.getElementById('first-hospital-extSA'), 'obligation',event.target.checked, document.getElementById('ppfirst-hospital-extSA'))" size="1" name="obligation" checked="true" id="cbfirst-hospital-extSA-obligation" type="checkbox"/><br/></div></span><span style="float: right"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format" data-no-external="true"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" onLoad="fhirTableInit(this)" style="background-color: inherit"/></a></span></th></tr>
-<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-first-hospital-ext-definitions.html#Extension" title="An Extension" data-no-external="true">Extension</a><a name="sa-Extension"> </a></td>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-first-hospital-ext-definitions.html#Extension" title="Boolean extension indicating whether the reporting hospital was the **first medical facility** to admit the patient
+for this stroke episode.
+
+**Primary use-cases**
+- Registry fields distinguishing “direct to treating hospital” vs “secondary transfer”.
+- Analytics for inter-facility transfer patterns and treatment delays (door-in-door-out style analyses).
+
+**How to interpret**
+- `true`: this hospital is the first admitting facility for the episode.
+- `false`: patient was admitted/treated elsewhere first (transfer-in).
+
+**FHIR placement**
+- `Encounter.extension[isFirstHospital].valueBoolean`" data-no-external="true">Extension</a><a name="sa-Extension"> </a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/extensibility.html#Extension">Extension</a></td>
-<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Extension<br/></td></tr>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">First Hospital Indicator Extension<br/></td></tr>
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="aa" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a no-external="true" href="StructureDefinition-first-hospital-ext-definitions.html#Extension.id" title="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." data-no-external="true">id</a><a name="sa-Extension.id"> </a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
@@ -516,7 +597,7 @@ filterDesc(document.getElementById('first-hospital-extDA'), 'obligation', docume
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/datatypes.html#boolean">boolean</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Value of extension</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 1911a55b-2852-4b27-8445-dcfeade53684
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // bf1cb564-caaa-404f-b3f5-fe30967b043a
 document.getElementById('cbfirst-hospital-extSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('first-hospital-extSA'), 'binding', document.getElementById('cbfirst-hospital-extSA-binding').checked, document.getElementById('ppfirst-hospital-extSA'));
 document.getElementById('cbfirst-hospital-extSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -543,7 +624,7 @@ filterDesc(document.getElementById('first-hospital-extSA'), 'obligation', docume
           <b>JSON Template</b>
         </p>
         <div id="all-json-inner">
-           // <span style="color: navy; opacity: 0.8">First Hospital Extension</span>
+           // <span style="color: navy; opacity: 0.8">First Hospital Indicator Extension</span>
  {
     "<a href="StructureDefinition-first-hospital-ext.html#Extension.id" title="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces" class="dict"><span style="text-decoration: underline">id</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R5/datatypes.html#id">id</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Unique id for inter-element referencing</span>
     "<a href="StructureDefinition-first-hospital-ext.html#Extension.url" title="Source of the definition for the extension code - a logical name or a URL" class="dict"><span style="text-decoration: underline">url</span></a>" : "http://tecnomod-um.org/StructureDefinition/first-hospital-ext", <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>
@@ -572,7 +653,22 @@ filterDesc(document.getElementById('first-hospital-extSA'), 'obligation', docume
 <p><b>
 Summary
 </b></p>
-<p>Simple Extension with the type boolean: Indicates if the reporting hospital was the first medical facility to admit the patient for this stroke episode.</p>
+<p>Simple Extension with the type boolean: Boolean extension indicating whether the reporting hospital was the <strong>first medical facility</strong> to admit the patient
+for this stroke episode.</p>
+<p><strong>Primary use-cases</strong></p>
+<ul>
+<li>Registry fields distinguishing “direct to treating hospital” vs “secondary transfer”.</li>
+<li>Analytics for inter-facility transfer patterns and treatment delays (door-in-door-out style analyses).</li>
+</ul>
+<p><strong>How to interpret</strong></p>
+<ul>
+<li><code>true</code>: this hospital is the first admitting facility for the episode.</li>
+<li><code>false</code>: patient was admitted/treated elsewhere first (transfer-in).</li>
+</ul>
+<p><strong>FHIR placement</strong></p>
+<ul>
+<li><code>Encounter.extension[isFirstHospital].valueBoolean</code></li>
+</ul></p>
         </div>
       </div>
     </div>
@@ -658,7 +754,7 @@ Summary
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 14:25+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 14:52+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

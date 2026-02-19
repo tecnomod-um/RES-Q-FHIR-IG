@@ -10,7 +10,7 @@
   <name value="DischargeDeptVS"/>
   <title value="Discharge Department/Service ValueSet"/>
   <status value="active"/>
-  <date value="2026-02-19T14:25:22+00:00"/>
+  <date value="2026-02-19T14:52:32+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>
@@ -19,7 +19,7 @@
       <value value="http://tecnomod-um.org"/>
     </telecom>
   </contact>
-  <description value="ValueSet specifying the type of department or service the patient was discharged or transferred to."/>
+  <description value="ValueSet restricting the allowed department/service categories recorded at discharge.&#xA;&#xA;**Primary use-case**&#xA;- Required binding for `DischargeDepartmentServiceExtension.valueCodeableConcept`."/>
   <compose>
     <include>
       <system value="http://tecnomod-um.org/CodeSystem/discharge-dept-cs"/>

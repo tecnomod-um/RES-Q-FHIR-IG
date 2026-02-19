@@ -8,10 +8,10 @@
   <url value="http://tecnomod-um.org/CodeSystem/stroke-discharge-destination-cs"/>
   <version value="0.1.0"/>
   <name value="StrokeDischargeDestinationCS"/>
-  <title value="Stroke Discharge Destination Code System"/>
+  <title value="Stroke Discharge Destination CodeSystem"/>
   <status value="active"/>
   <experimental value="true"/>
-  <date value="2026-02-19T14:25:22+00:00"/>
+  <date value="2026-02-19T14:52:32+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>
@@ -20,7 +20,7 @@
       <value value="http://tecnomod-um.org"/>
     </telecom>
   </contact>
-  <description value="Codes indicating the possible destinations of the patient upon discharge from the encounter."/>
+  <description value="Local CodeSystem for discharge disposition values that are not sufficiently covered (or not consistently available)&#xA;in the chosen standard terminology set."/>
   <content value="complete"/>
   <count value="1"/>
   <concept>

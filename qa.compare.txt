@@ -1,7 +1,7 @@
 RESQIG : Validation Results
 =========================================
 
-err = 4, warn = 125, info = 42
+err = 4, warn = 127, info = 42
 $--
 Generated $--. FHIR version $-- for RES-Q-FHIR-IG#$-- (canonical = http://tecnomod-um.org)
  Build Errors : 1 / 706 / 0
@@ -51,12 +51,12 @@ Generated $--. FHIR version $-- for RES-Q-FHIR-IG#$-- (canonical = http://tecnom
  /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/StructureDefinition-discharge-department-service-ext : 0 / 0 / 1
  /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/StructureDefinition-discharge-medication-request-profile : 0 / 1 / 1
  /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/StructureDefinition-first-hospital-ext : 0 / 0 / 1
- /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/StructureDefinition-functional-score-observation-profile : 0 / 3 / 1
+ /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/StructureDefinition-functional-score-observation-profile : 0 / 5 / 1
  /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/StructureDefinition-gender-snomed-ext : 0 / 0 / 1
  /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/StructureDefinition-hemorrhagic-stroke-bleeding-reason-ext : 0 / 3 / 1
  /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/StructureDefinition-initial-care-intensity-ext : 0 / 0 / 1
  /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/StructureDefinition-ischemic-stroke-etiology-ext : 0 / 3 / 1
- /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/StructureDefinition-observation-timing-context-ext : 0 / 0 / 1
+ /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/StructureDefinition-observation-timing-context-ext : 0 / 2 / 1
  /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/StructureDefinition-onset-date-ext : 0 / 1 / 1
  /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/StructureDefinition-onset-time-ext : 0 / 1 / 1
  /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/StructureDefinition-patient-age-ext : 0 / 0 / 1
@@ -79,7 +79,7 @@ Generated $--. FHIR version $-- for RES-Q-FHIR-IG#$-- (canonical = http://tecnom
  /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/StructureDefinition-vital-sign-observation-profile : 0 / 4 / 1
  /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/ValueSet-admission-source-vs : 0 / 0 / 1
  /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/ValueSet-afib-flutter-status-vs : 0 / 1 / 1
- /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/ValueSet-assessment-context-vs : 0 / 1 / 1
+ /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/ValueSet-assessment-context-vs : 0 / 0 / 1
  /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/ValueSet-brain-imaging-modality-vs : 0 / 1 / 1
  /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/ValueSet-carotid-imaging-modality-vs : 1 / 1 / 2
  /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/ValueSet-discharge-dept-vs : 0 / 1 / 1
@@ -88,7 +88,7 @@ Generated $--. FHIR version $-- for RES-Q-FHIR-IG#$-- (canonical = http://tecnom
  /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/ValueSet-hemorrhagic-stroke-bleeding-reason-vs : 0 / 0 / 1
  /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/ValueSet-initial-care-intensity-vs : 0 / 1 / 1
  /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/ValueSet-medication-vs : 0 / 1 / 1
- /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/ValueSet-mrs-score-vs : 0 / 1 / 1
+ /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/ValueSet-mrs-score-vs : 0 / 0 / 1
  /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/ValueSet-mtici-code-vs : 0 / 1 / 1
  /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/ValueSet-mtici-score-vs : 0 / 0 / 1
  /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/ValueSet-perforation-procedures-vs : 0 / 0 / 1
@@ -630,10 +630,10 @@ WARNING: ValueSet-afib-flutter-status-vs.ttl.html#/html/body/div/div/div/p/a at 
 WARNING: ValueSet-afib-flutter-status-vs.xml.html#/html/body/div/div/div/p/a at Line 290, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 WARNING: ValueSet-assessment-context-vs-testing.html#/html/body/div/div/div/p/a at Line 251, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 WARNING: ValueSet-assessment-context-vs.change.history.html#/html/body/div/div/div/p/a at Line 220, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
-WARNING: ValueSet-assessment-context-vs.html#/html/body/div/div/div/p/a at Line 322, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
-WARNING: ValueSet-assessment-context-vs.json.html#/html/body/div/div/div/p/a at Line 277, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
-WARNING: ValueSet-assessment-context-vs.ttl.html#/html/body/div/div/div/p/a at Line 285, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
-WARNING: ValueSet-assessment-context-vs.xml.html#/html/body/div/div/div/p/a at Line 275, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
+WARNING: ValueSet-assessment-context-vs.html#/html/body/div/div/div/p/a at Line 320, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
+WARNING: ValueSet-assessment-context-vs.json.html#/html/body/div/div/div/p/a at Line 278, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
+WARNING: ValueSet-assessment-context-vs.ttl.html#/html/body/div/div/div/p/a at Line 286, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
+WARNING: ValueSet-assessment-context-vs.xml.html#/html/body/div/div/div/p/a at Line 274, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 WARNING: ValueSet-brain-imaging-modality-vs-testing.html#/html/body/div/div/div/p/a at Line 251, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 WARNING: ValueSet-brain-imaging-modality-vs.change.history.html#/html/body/div/div/div/p/a at Line 220, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 WARNING: ValueSet-brain-imaging-modality-vs.html#/html/body/div/div/div/p/a at Line 321, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
@@ -685,9 +685,9 @@ WARNING: ValueSet-medication-vs.xml.html#/html/body/div/div/div/p/a at Line 307,
 WARNING: ValueSet-mrs-score-vs-testing.html#/html/body/div/div/div/p/a at Line 251, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 WARNING: ValueSet-mrs-score-vs.change.history.html#/html/body/div/div/div/p/a at Line 220, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 WARNING: ValueSet-mrs-score-vs.html#/html/body/div/div/div/p/a at Line 320, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
-WARNING: ValueSet-mrs-score-vs.json.html#/html/body/div/div/div/p/a at Line 277, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
-WARNING: ValueSet-mrs-score-vs.ttl.html#/html/body/div/div/div/p/a at Line 285, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
-WARNING: ValueSet-mrs-score-vs.xml.html#/html/body/div/div/div/p/a at Line 272, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
+WARNING: ValueSet-mrs-score-vs.json.html#/html/body/div/div/div/p/a at Line 278, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
+WARNING: ValueSet-mrs-score-vs.ttl.html#/html/body/div/div/div/p/a at Line 286, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
+WARNING: ValueSet-mrs-score-vs.xml.html#/html/body/div/div/div/p/a at Line 273, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 WARNING: ValueSet-mtici-code-vs-testing.html#/html/body/div/div/div/p/a at Line 251, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 WARNING: ValueSet-mtici-code-vs.change.history.html#/html/body/div/div/div/p/a at Line 220, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 WARNING: ValueSet-mtici-code-vs.html#/html/body/div/div/div/p/a at Line 322, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
@@ -802,7 +802,7 @@ WARNING: ValueSet-vs-gender-snomed.html#/html/body/div/div/div/p/a at Line 320, 
 WARNING: ValueSet-vs-gender-snomed.json.html#/html/body/div/div/div/p/a at Line 292, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 WARNING: ValueSet-vs-gender-snomed.ttl.html#/html/body/div/div/div/p/a at Line 293, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 WARNING: ValueSet-vs-gender-snomed.xml.html#/html/body/div/div/div/p/a at Line 285, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
-WARNING: artifacts.html#/html/body/div/div/div/p/a at Line 1270, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
+WARNING: artifacts.html#/html/body/div/div/div/p/a at Line 1268, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 WARNING: codesystems.html#/html/body/div/div/div/p/a at Line 198, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 WARNING: conformance.html#/html/body/div/div/div/p/a at Line 274, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 WARNING: downloads.html#/html/body/div/div/div/p/a at Line 217, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
@@ -945,7 +945,9 @@ WARNING: StructureDefinition.where(url = 'http://tecnomod-um.org/StructureDefini
 WARNING: StructureDefinition/discharge-medication-request-profile: StructureDefinition.snapshot.element[18].binding: The definition for the element 'MedicationRequest.priority' binds to the value set 'http://hl7.org/fhir/ValueSet/request-priority|5.0.0' which is experimental, but this structure is not labeled as experimental
 == fsh-generated/resources/StructureDefinition-first-hospital-ext.json ==
 == fsh-generated/resources/StructureDefinition-functional-score-observation-profile.json ==
+WARNING: StructureDefinition/functional-score-observation-profile: StructureDefinition.differential.element[7].binding: The definition for the element 'Observation.value[x]' binds to the value set 'http://tecnomod-um.org/ValueSet/mrs-score-vs' which is experimental, but this structure is not labeled as experimental
 WARNING: StructureDefinition/functional-score-observation-profile: StructureDefinition.snapshot.element[22].binding: The definition for the element 'Observation.category' binds to the value set 'http://hl7.org/fhir/ValueSet/observation-category|5.0.0' which is experimental, but this structure is not labeled as experimental
+WARNING: StructureDefinition/functional-score-observation-profile: StructureDefinition.snapshot.element[32].binding: The definition for the element 'Observation.value[x]' binds to the value set 'http://tecnomod-um.org/ValueSet/mrs-score-vs' which is experimental, but this structure is not labeled as experimental
 WARNING: StructureDefinition/functional-score-observation-profile: StructureDefinition.snapshot.element[49].binding: The definition for the element 'Observation.referenceRange.type' binds to the value set 'http://hl7.org/fhir/ValueSet/referencerange-meaning|5.0.0' which is experimental, but this structure is not labeled as experimental
 WARNING: StructureDefinition/functional-score-observation-profile: StructureDefinition.snapshot: The slice 'valueQuantity' on path 'Observation.value[x]' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
 == fsh-generated/resources/StructureDefinition-gender-snomed-ext.json ==
@@ -959,6 +961,8 @@ WARNING: StructureDefinition/ischemic-stroke-etiology-ext: StructureDefinition.d
 WARNING: StructureDefinition/ischemic-stroke-etiology-ext: StructureDefinition.snapshot.element[4].binding: The definition for the element 'Extension.value[x]' binds to the value set 'http://tecnomod-um.org/ValueSet/stroke-etiology-vs' which is experimental, but this structure is not labeled as experimental
 WARNING: StructureDefinition.where(url = 'http://tecnomod-um.org/StructureDefinition/ischemic-stroke-etiology-ext'): The Implementation Guide contains no examples for this extension
 == fsh-generated/resources/StructureDefinition-observation-timing-context-ext.json ==
+WARNING: StructureDefinition/observation-timing-context-ext: StructureDefinition.differential.element[2].binding: The definition for the element 'Extension.value[x]' binds to the value set 'http://tecnomod-um.org/ValueSet/assessment-context-vs' which is experimental, but this structure is not labeled as experimental
+WARNING: StructureDefinition/observation-timing-context-ext: StructureDefinition.snapshot.element[4].binding: The definition for the element 'Extension.value[x]' binds to the value set 'http://tecnomod-um.org/ValueSet/assessment-context-vs' which is experimental, but this structure is not labeled as experimental
 == fsh-generated/resources/StructureDefinition-onset-date-ext.json ==
 WARNING: StructureDefinition.where(url = 'http://tecnomod-um.org/StructureDefinition/onset-date-ext'): The Implementation Guide contains no examples for this extension
 == fsh-generated/resources/StructureDefinition-onset-time-ext.json ==
@@ -1018,12 +1022,11 @@ WARNING: StructureDefinition/vital-sign-observation-profile: StructureDefinition
 == fsh-generated/resources/ValueSet-afib-flutter-status-vs.json ==
 WARNING: ValueSet/afib-flutter-status-vs: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
 == fsh-generated/resources/ValueSet-assessment-context-vs.json ==
-WARNING: ValueSet/assessment-context-vs: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
 == fsh-generated/resources/ValueSet-brain-imaging-modality-vs.json ==
 WARNING: ValueSet/brain-imaging-modality-vs: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
 == fsh-generated/resources/ValueSet-carotid-imaging-modality-vs.json ==
 INFORMATION: ValueSet/carotid-imaging-modality-vs: ValueSet.compose.include[0].concept[1]: Wrong Display Name 'Doppler ultrasonography of carotid arteries (procedure)' for http://snomed.info/sct#9171000087102. Valid display is 'Doppler ultrasonography of bilateral carotid arteries (procedure)' (en) (for the language(s) 'en, en-US'). Note that the display in the ValueSet does not have to match; this check exists to help check that it's not accidentally the wrong code
-ERROR: ValueSet/carotid-imaging-modality-vs: ValueSet.compose.include[0].concept[3]: The code '1366357009' is not valid in the system http://snomed.info/sct (Unknown code '1366357009' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20250201' (International Edition))
+ERROR: ValueSet/carotid-imaging-modality-vs: ValueSet.compose.include[0].concept[3]: The code '1366357009' is not valid in the system http://snomed.info/sct (Unknown code '1366357009' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20240801' (International Edition))
 WARNING: ValueSet/carotid-imaging-modality-vs: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
 == fsh-generated/resources/ValueSet-discharge-dept-vs.json ==
 WARNING: ValueSet/discharge-dept-vs: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
@@ -1036,7 +1039,6 @@ WARNING: ValueSet/initial-care-intensity-vs: ValueSet: Published value sets SHOU
 == fsh-generated/resources/ValueSet-medication-vs.json ==
 WARNING: ValueSet/medication-vs: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
 == fsh-generated/resources/ValueSet-mrs-score-vs.json ==
-WARNING: ValueSet/mrs-score-vs: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
 == fsh-generated/resources/ValueSet-mtici-code-vs.json ==
 WARNING: ValueSet/mtici-code-vs: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
 == fsh-generated/resources/ValueSet-mtici-score-vs.json ==

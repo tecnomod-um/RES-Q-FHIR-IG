@@ -20,7 +20,7 @@
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "RESQIG"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-02-19T08:49:26+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-19T09:19:55+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;
@@ -171,7 +171,7 @@
          fhir:reference [ fhir:v "ValueSet/assessment-context-vs" ]
        ] ;
        fhir:name [ fhir:v "Assessment Context ValueSet" ] ;
-       fhir:description [ fhir:v "This ValueSet includes all context/timepoint codes defined in AssessmentContextCS. It is intended for required binding to elements (e.g., extensions) that must indicate the clinical phase of an assessment, enabling consistent stratification and reporting of outcomes and severity over the stroke care pathway.\n\nThe ValueSet is used to validate that only supported context categories are recorded, improving interoperability when exchanging stroke assessments between systems and across care settings." ] ;
+       fhir:description [ fhir:v "This ValueSet includes all context/timepoint codes defined in AssessmentContextCS. It is intended for required binding to elements (e.g., extensions) that must indicate the clinical phase of an assessment, enabling consistent stratification and reporting of outcomes and severity over the stroke care pathway." ] ;
        fhir:isExample [ fhir:v false ]
      ] [
        fhir:extension ( [
@@ -659,15 +659,15 @@
          ] ;
          fhir:value [
            a fhir:String ;
-           fhir:v "CodeSystem"
+           fhir:v "ValueSet"
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <http://tecnomod-um.org/CodeSystem/mrs-score-cs> ;
-         fhir:reference [ fhir:v "CodeSystem/mrs-score-cs" ]
+         fhir:l <http://tecnomod-um.org/ValueSet/mrs-score-vs> ;
+         fhir:reference [ fhir:v "ValueSet/mrs-score-vs" ]
        ] ;
-       fhir:name [ fhir:v "modified Rankin Scale (mRS) Score Code System" ] ;
-       fhir:description [ fhir:v "This CodeSystem defines codes for the modified Rankin Scale (mRS), an ordinal measure of global disability and functional outcome widely used in stroke care and research. mRS grades functional status from 0 (no symptoms) through 5 (severe disability), with 6 indicating death.\n\nWithin this implementation guide, mRS is intended to be captured as Observation.valueCodeableConcept (bound to the MRsScoreVS ValueSet), with the assessment timepoint represented explicitly (e.g., via effective[x]) and/or via an assessment context indicator (e.g., pre-stroke baseline, discharge, ~90-day follow-up). This supports standard reporting (e.g., “mRS at 90 days”), comparability across sites, and consistent downstream analytics.\n\nScope and modeling notes:\n- mRS is a coarse, global disability scale; it does not encode detailed domain-specific functional limitations (mobility, cognition, ADLs) which should be captured via additional instruments/Observations if required.\n- The CodeSystem defines only the *score*; method of ascertainment (in-person, telephone, structured interview) and assessor details should be captured separately when relevant." ] ;
+       fhir:name [ fhir:v "Modified Rankin Scale (mRS) Score ValueSet" ] ;
+       fhir:description [ fhir:v "This ValueSet includes all modified Rankin Scale (mRS) grades defined in the MRsScoreCS CodeSystem (0–6). It is intended to be bound to Observation.valueCodeableConcept when the Observation.code indicates that the observation represents an mRS score." ] ;
        fhir:isExample [ fhir:v false ]
      ] [
        fhir:extension ( [
@@ -677,15 +677,15 @@
          ] ;
          fhir:value [
            a fhir:String ;
-           fhir:v "ValueSet"
+           fhir:v "CodeSystem"
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <http://tecnomod-um.org/ValueSet/mrs-score-vs> ;
-         fhir:reference [ fhir:v "ValueSet/mrs-score-vs" ]
+         fhir:l <http://tecnomod-um.org/CodeSystem/mrs-score-cs> ;
+         fhir:reference [ fhir:v "CodeSystem/mrs-score-cs" ]
        ] ;
-       fhir:name [ fhir:v "modified Rankin Scale (mRS) Score ValueSet" ] ;
-       fhir:description [ fhir:v "This ValueSet includes all modified Rankin Scale (mRS) grades defined in the MRsScoreCS CodeSystem (0–6). It is intended to be bound to Observation.valueCodeableConcept when the Observation.code indicates that the observation represents an mRS score." ] ;
+       fhir:name [ fhir:v "Modified Rankin Scale Score Code System" ] ;
+       fhir:description [ fhir:v "This CodeSystem defines codes for the modified Rankin Scale (mRS), an ordinal measure of global disability and functional outcome widely used in stroke care and research. mRS grades functional status from 0 (no symptoms) through 5 (severe disability), with 6 indicating death.\n\nWithin this implementation guide, mRS is intended to be captured as Observation.valueCodeableConcept (bound to the MRsScoreVS ValueSet), with the assessment timepoint represented explicitly (e.g., via effective[x]) and/or via an assessment context indicator (e.g., pre-stroke baseline, discharge, ~90-day follow-up). This supports standard reporting (e.g., “mRS at 90 days”), comparability across sites, and consistent downstream analytics.\n\nScope and modeling notes:\n- mRS is a coarse, global disability scale; it does not encode detailed domain-specific functional limitations (mobility, cognition, ADLs) which should be captured via additional instruments/Observations if required.\n- The CodeSystem defines only the *score*; method of ascertainment (in-person, telephone, structured interview) and assessor details should be captured separately when relevant." ] ;
        fhir:isExample [ fhir:v false ]
      ] [
        fhir:extension ( [

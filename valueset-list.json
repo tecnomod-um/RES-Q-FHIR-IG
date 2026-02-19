@@ -24,7 +24,7 @@
       "status" : "active",
       "name" : "AssessmentContextVS",
       "title" : "Assessment Context ValueSet",
-      "description" : "This ValueSet includes all context/timepoint codes defined in AssessmentContextCS. It is intended for required binding to elements (e.g., extensions) that must indicate the clinical phase of an assessment, enabling consistent stratification and reporting of outcomes and severity over the stroke care pathway.\n\nThe ValueSet is used to validate that only supported context categories are recorded, improving interoperability when exchanging stroke assessments between systems and across care settings.",
+      "description" : "This ValueSet includes all context/timepoint codes defined in AssessmentContextCS. It is intended for required binding to elements (e.g., extensions) that must indicate the clinical phase of an assessment, enabling consistent stratification and reporting of outcomes and severity over the stroke care pathway.",
       "systems" : ["http://tecnomod-um.org/CodeSystem/assessment-context-cs"]
     },
     {
@@ -115,7 +115,7 @@
       "version" : "0.1.0",
       "status" : "active",
       "name" : "MRsScoreVS",
-      "title" : "modified Rankin Scale (mRS) Score ValueSet",
+      "title" : "Modified Rankin Scale (mRS) Score ValueSet",
       "description" : "This ValueSet includes all modified Rankin Scale (mRS) grades defined in the MRsScoreCS CodeSystem (0–6). It is intended to be bound to Observation.valueCodeableConcept when the Observation.code indicates that the observation represents an mRS score.",
       "systems" : ["http://tecnomod-um.org/CodeSystem/mrs-score-cs"]
     },

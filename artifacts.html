@@ -542,8 +542,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>This ValueSet includes all context/timepoint codes defined in AssessmentContextCS. It is intended for required binding to elements (e.g., extensions) that must indicate the clinical phase of an assessment, enabling consistent stratification and reporting of outcomes and severity over the stroke care pathway.</p>
-
-<p>The ValueSet is used to validate that only supported context categories are recorded, improving interoperability when exchanging stroke assessments between systems and across care settings.</p>
 </td>
          </tr>
          <tr>
@@ -648,6 +646,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>SNOMED CT codes for drug products or substances.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mrs-score-vs.html" title="ValueSet/mrs-score-vs">Modified Rankin Scale (mRS) Score ValueSet</a>
+            </td>
+            <td>
+<p>This ValueSet includes all modified Rankin Scale (mRS) grades defined in the MRsScoreCS CodeSystem (0–6). It is intended to be bound to Observation.valueCodeableConcept when the Observation.code indicates that the observation represents an mRS score.</p>
 </td>
          </tr>
          <tr>
@@ -833,14 +839,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>Separating the “assessment concept” ValueSet (this ValueSet) from the “assessment result” ValueSet (MticiScoreVS) enables clearer validation rules, consistent UI behavior, and safer reuse of the mTICI scoring system across profiles.</p>
 </td>
          </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="ValueSet-mrs-score-vs.html" title="ValueSet/mrs-score-vs">modified Rankin Scale (mRS) Score ValueSet</a>
-            </td>
-            <td>
-<p>This ValueSet includes all modified Rankin Scale (mRS) grades defined in the MRsScoreCS CodeSystem (0–6). It is intended to be bound to Observation.valueCodeableConcept when the Observation.code indicates that the observation represents an mRS score.</p>
-</td>
-         </tr>
       </tbody>
    </table>
    <a name="4"> </a>
@@ -930,6 +928,22 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>Codes for drug products or substances representing the Medications on the patient discharge.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-mrs-score-cs.html" title="CodeSystem/mrs-score-cs">Modified Rankin Scale Score Code System</a>
+            </td>
+            <td>
+<p>This CodeSystem defines codes for the modified Rankin Scale (mRS), an ordinal measure of global disability and functional outcome widely used in stroke care and research. mRS grades functional status from 0 (no symptoms) through 5 (severe disability), with 6 indicating death.</p>
+
+<p>Within this implementation guide, mRS is intended to be captured as Observation.valueCodeableConcept (bound to the MRsScoreVS ValueSet), with the assessment timepoint represented explicitly (e.g., via effective[x]) and/or via an assessment context indicator (e.g., pre-stroke baseline, discharge, ~90-day follow-up). This supports standard reporting (e.g., “mRS at 90 days”), comparability across sites, and consistent downstream analytics.</p>
+
+<p>Scope and modeling notes:</p>
+<ul>
+  <li>mRS is a coarse, global disability scale; it does not encode detailed domain-specific functional limitations (mobility, cognition, ADLs) which should be captured via additional instruments/Observations if required.</li>
+  <li>The CodeSystem defines only the <em>score</em>; method of ascertainment (in-person, telephone, structured interview) and assessor details should be captured separately when relevant.</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -1033,22 +1047,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 <p>This separation improves semantic clarity and supports consistent validation and analytics across systems.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="CodeSystem-mrs-score-cs.html" title="CodeSystem/mrs-score-cs">modified Rankin Scale (mRS) Score Code System</a>
-            </td>
-            <td>
-<p>This CodeSystem defines codes for the modified Rankin Scale (mRS), an ordinal measure of global disability and functional outcome widely used in stroke care and research. mRS grades functional status from 0 (no symptoms) through 5 (severe disability), with 6 indicating death.</p>
-
-<p>Within this implementation guide, mRS is intended to be captured as Observation.valueCodeableConcept (bound to the MRsScoreVS ValueSet), with the assessment timepoint represented explicitly (e.g., via effective[x]) and/or via an assessment context indicator (e.g., pre-stroke baseline, discharge, ~90-day follow-up). This supports standard reporting (e.g., “mRS at 90 days”), comparability across sites, and consistent downstream analytics.</p>
-
-<p>Scope and modeling notes:</p>
-<ul>
-  <li>mRS is a coarse, global disability scale; it does not encode detailed domain-specific functional limitations (mobility, cognition, ADLs) which should be captured via additional instruments/Observations if required.</li>
-  <li>The CodeSystem defines only the <em>score</em>; method of ascertainment (in-person, telephone, structured interview) and assessor details should be captured separately when relevant.</li>
-</ul>
 </td>
          </tr>
       </tbody>
@@ -1267,7 +1265,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 08:49+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 09:19+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

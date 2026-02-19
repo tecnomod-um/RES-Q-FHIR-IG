@@ -1,10 +1,10 @@
-# modified Rankin Scale (mRS) Score Code System - v0.1.0
+# Modified Rankin Scale Score Code System - v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **modified Rankin Scale (mRS) Score Code System**
+* **Modified Rankin Scale Score Code System**
 
-## CodeSystem: modified Rankin Scale (mRS) Score Code System (Experimental) 
+## CodeSystem: Modified Rankin Scale Score Code System (Experimental) 
 
 | | |
 | :--- | :--- |
@@ -34,10 +34,10 @@ Scope and modeling notes:
   "url" : "http://tecnomod-um.org/CodeSystem/mrs-score-cs",
   "version" : "0.1.0",
   "name" : "MRsScoreCS",
-  "title" : "modified Rankin Scale (mRS) Score Code System",
+  "title" : "Modified Rankin Scale Score Code System",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-19T08:49:26+00:00",
+  "date" : "2026-02-19T09:19:55+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

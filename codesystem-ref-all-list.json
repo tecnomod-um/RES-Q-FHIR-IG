@@ -314,11 +314,11 @@
       "version" : "0.1.0",
       "status" : "active",
       "name" : "MRsScoreCS",
-      "title" : "modified Rankin Scale (mRS) Score Code System",
+      "title" : "Modified Rankin Scale Score Code System",
       "description" : "This CodeSystem defines codes for the modified Rankin Scale (mRS), an ordinal measure of global disability and functional outcome widely used in stroke care and research. mRS grades functional status from 0 (no symptoms) through 5 (severe disability), with 6 indicating death.\n\nWithin this implementation guide, mRS is intended to be captured as Observation.valueCodeableConcept (bound to the MRsScoreVS ValueSet), with the assessment timepoint represented explicitly (e.g., via effective[x]) and/or via an assessment context indicator (e.g., pre-stroke baseline, discharge, ~90-day follow-up). This supports standard reporting (e.g., “mRS at 90 days”), comparability across sites, and consistent downstream analytics.\n\nScope and modeling notes:\n- mRS is a coarse, global disability scale; it does not encode detailed domain-specific functional limitations (mobility, cognition, ADLs) which should be captured via additional instruments/Observations if required.\n- The CodeSystem defines only the *score*; method of ascertainment (in-person, telephone, structured interview) and assessor details should be captured separately when relevant.",
       "uses" : {
       },
-      "ValueSet-mrs-score-vs.html" : "modified Rankin Scale (mRS) Score ValueSet"
+      "ValueSet-mrs-score-vs.html" : "Modified Rankin Scale (mRS) Score ValueSet"
     },
     {
       "url" : "http://tecnomod-um.org/CodeSystem/mtici-code-cs",
@@ -762,8 +762,8 @@
       "oids" : ["2.16.840.1.113883.5.1008"],
       "uses" : {
       },
-      "http://hl7.org/fhir/R5/valueset-marital-status.html" : "Marital Status Codes",
-      "http://hl7.org/fhir/R5/valueset-encounter-special-courtesy.html" : "Special Courtesy"
+      "http://hl7.org/fhir/R5/valueset-encounter-special-courtesy.html" : "Special Courtesy",
+      "http://hl7.org/fhir/R5/valueset-marital-status.html" : "Marital Status Codes"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",

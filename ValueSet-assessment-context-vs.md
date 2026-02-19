@@ -4,7 +4,7 @@
 * [**Artifacts Summary**](artifacts.md)
 * **Assessment Context ValueSet**
 
-## ValueSet: Assessment Context ValueSet 
+## ValueSet: Assessment Context ValueSet (Experimental) 
 
 | | |
 | :--- | :--- |
@@ -13,7 +13,6 @@
 
  
 This ValueSet includes all context/timepoint codes defined in AssessmentContextCS. It is intended for required binding to elements (e.g., extensions) that must indicate the clinical phase of an assessment, enabling consistent stratification and reporting of outcomes and severity over the stroke care pathway. 
-The ValueSet is used to validate that only supported context categories are recorded, improving interoperability when exchanging stroke assessments between systems and across care settings. 
 
  **References** 
 
@@ -51,7 +50,8 @@ The ValueSet is used to validate that only supported context categories are reco
   "name" : "AssessmentContextVS",
   "title" : "Assessment Context ValueSet",
   "status" : "active",
-  "date" : "2026-02-19T08:49:26+00:00",
+  "experimental" : true,
+  "date" : "2026-02-19T09:19:55+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -64,7 +64,7 @@ The ValueSet is used to validate that only supported context categories are reco
       ]
     }
   ],
-  "description" : "This ValueSet includes all context/timepoint codes defined in AssessmentContextCS. It is intended for required binding to elements (e.g., extensions) that must indicate the clinical phase of an assessment, enabling consistent stratification and reporting of outcomes and severity over the stroke care pathway.\n\nThe ValueSet is used to validate that only supported context categories are recorded, improving interoperability when exchanging stroke assessments between systems and across care settings.",
+  "description" : "This ValueSet includes all context/timepoint codes defined in AssessmentContextCS. It is intended for required binding to elements (e.g., extensions) that must indicate the clinical phase of an assessment, enabling consistent stratification and reporting of outcomes and severity over the stroke care pathway.",
   "compose" : {
     "include" : [
       {

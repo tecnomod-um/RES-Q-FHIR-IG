@@ -32,7 +32,7 @@ These codes are intended to be used as Observation.code in the StrokeCircumstanc
   "name" : "StrokeCircumstanceCodesCS",
   "title" : "Stroke Circumstance Codes CodeSystem",
   "status" : "active",
-  "date" : "2026-02-19T08:49:26+00:00",
+  "date" : "2026-02-19T09:19:55+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

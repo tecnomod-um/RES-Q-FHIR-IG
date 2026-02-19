@@ -195,8 +195,6 @@ Description : """
 This CodeSystem defines normalized codes for the clinical context / relative timepoint at which a stroke-related assessment was performed. It is primarily used to contextualize functional and severity instruments (e.g., mRS and NIHSS) where interpretation depends on whether the score reflects baseline status, acute presentation, discharge status, or follow-up.
 
 These codes represent *relative phases* (pre-stroke baseline, admission, discharge, ~3-month follow-up) rather than precise timestamps. The actual date/time of measurement should be recorded in Observation.effective[x] when known; the context code complements effective[x] by expressing the clinical phase, which is often necessary for reporting and comparability (e.g., “mRS pre-stroke” vs “mRS at discharge”).
-
-Scope note: This CodeSystem is intentionally small and focused on common stroke pathway milestones; implementers may extend it (with additional codes and governance) if other standardized follow-up timepoints are required (e.g., 6 months, 1 year).
 """
 Title: "Assessment Context CodeSystem"
 * ^url = AssessmentContextCS_URL
@@ -230,14 +228,14 @@ Title: "Assessment Context ValueSet"
 // --- ValueSets for Observation.code Groupings ---
 ValueSet: VitalSignCodesVS
 Id: vital-sign-codes-vs
-* ^url = VitalSignCodesVS_URL
-* ^version = "1.0.0"
-* ^title = "Stroke Vital Sign Codes ValueSet"
-* ^description = """
+Description : """
 This ValueSet defines SNOMED CT observable-entity codes for the blood pressure components captured as vital signs in the acute stroke setting (systolic and diastolic blood pressure). It is intended for use as Observation.component.code in a single vital-sign Observation that records both components using UCUM units (mm[Hg]).
 
 Including only the component codes (rather than full LOINC panels) keeps the representation lightweight while remaining semantically precise, and supports repeated measurements across time (e.g., triage, post-thrombolysis monitoring) by repeating the Observation with different effective[x] timestamps.
 """
+Title: "Stroke Vital Sign Codes ValueSet"
+* ^url = VitalSignCodesVS_URL
+* ^version = "1.0.0"
 * ^status = #active
 * ^experimental = true
 * include SCT#271649006 "Systolic blood pressure (observable entity)"
@@ -245,32 +243,30 @@ Including only the component codes (rather than full LOINC panels) keeps the rep
 
 ValueSet: FunctionalScoreCodesVS
 Id: functional-score-codes-vs
-* ^url = FunctionalScoreCodesVS_URL
-* ^version = "1.0.0"
-* ^title = "Stroke Functional Score Codes ValueSet"
-* ^description = """
+Description : """
 This ValueSet defines the allowable Observation.code concepts for stroke functional and severity scoring instruments represented in this guide: modified Rankin Scale (mRS) and NIH Stroke Scale (NIHSS), expressed as SNOMED CT observable entities.
 
 It is intended to be bound to Observation.code in the FunctionalScoreObservationProfile. Downstream validation/invariants then enforce the appropriate datatype of Observation.value[x]:
 - mRS is captured as a coded ordinal category (valueCodeableConcept bound to MRsScoreVS).
 - NIHSS is captured as a numeric total score (valueInteger), representing the summed NIHSS total rather than item-level subscores.
 """
+Title : "Stroke Functional Score Codes ValueSet"
+* ^url = FunctionalScoreCodesVS_URL
+* ^version = "1.0.0"
 * ^status = #active
 * include SCT#1255866005 "Modified Rankin Scale score (observable entity)"
 * include SCT#450743008 "National Institutes of Health stroke scale score (observable entity)"
 
 CodeSystem: TimingMetricCodesCS
 Id: timing-metric-codes-cs
-* ^url = TimingMetricCodesCS_URL
-* ^version = "1.0.0"
-* ^title = "Stroke Timing Metric Codes ValueSet"
-* ^description = """
+Description : """
 This CodeSystem defines codes for key time-interval process metrics in acute stroke care used for quality monitoring and pathway optimization. Each code represents a duration measured in minutes between two clinically meaningful events (e.g., hospital arrival to thrombolysis start).
 
 These metrics are commonly used in performance dashboards, registry submissions, and quality improvement programs. The intent is to store the *measured interval* (a duration) in Observation.valueQuantity (UCUM minutes), while event timestamps (arrival time, needle time, groin puncture time) may be stored separately when available.
-
-Implementation note: Exact operational definitions can vary by institution (e.g., “needle time” as alteplase bolus vs infusion start; “door time” as ED arrival vs triage time). Implementers should align local measurement definitions and document them (e.g., in metadata, profiles, or implementation guidance) to ensure comparability across sites.
 """
+Title : "Stroke Timing Metric Codes CodeSystem"
+* ^url = TimingMetricCodesCS_URL
+* ^version = "1.0.0"
 * ^status = #active
 * #D2G "Door to Groin"
     "Elapsed time (minutes) from documented hospital arrival (‘door’) to arterial groin puncture for mechanical thrombectomy (first puncture attempt)."
@@ -279,27 +275,26 @@ Implementation note: Exact operational definitions can vary by institution (e.g.
 
 ValueSet: TimingMetricCodesVS
 Id: timing-metric-codes-vs
-* ^url = TimingMetricCodesVS_URL
-* ^version = "1.0.0"
-* ^title = "Stroke Timing Metric Codes ValueSet"
-* ^description = """
+Description : """
 This ValueSet includes all timing metric codes defined in TimingMetricCodesCS for use as Observation.code when recording acute stroke process intervals (e.g., D2N, D2G). It supports required binding in the TimingMetricObservationProfile, ensuring only approved timing metrics are recorded.
 
 The ValueSet is intentionally constrained to promote consistent, comparable reporting across implementations and to reduce ambiguity in downstream analytics.
 """
+Title : "Stroke Timing Metric Codes ValueSet"
+* ^url = TimingMetricCodesVS_URL
+* ^version = "1.0.0"
 * ^status = #active
 * include codes from system TimingMetricCodesCS_URL
 
 CodeSystem: StrokeCircumstanceCodesCS
 Id: stroke-circumstance-codes-cs
-* ^url = StrokeCircumstanceCodesCS_URL
-* ^version = "1.0.0"
-* ^title = "Stroke Circumstance Codes CodeSystem"
-* ^description = """
-This CodeSystem defines coded circumstances related to stroke symptom onset that are clinically relevant for eligibility decisions, diagnostic reasoning, and reporting—particularly when the exact onset time is unknown or atypical.
+Title : "Stroke Circumstance Codes CodeSystem"
+Description: """ This CodeSystem defines coded circumstances related to stroke symptom onset that are clinically relevant for eligibility decisions, diagnostic reasoning, and reporting—particularly when the exact onset time is unknown or atypical.
 
 These codes are intended to be used as Observation.code in the StrokeCircumstanceObservationProfile to assert that a given onset circumstance applies to the index stroke event. They do not encode the precise onset timestamp, last-known-well time, or location of onset; those details should be represented separately (e.g., dedicated Observations, Encounter/Condition attributes, or extensions).
 """
+* ^url = StrokeCircumstanceCodesCS_URL
+* ^version = "1.0.0"
 * ^status = #active
 * #in-hospital "In-hospital Stroke"
     "Indicates that stroke onset occurred while the patient was already admitted to the hospital for another reason (inpatient onset)."
@@ -308,37 +303,34 @@ These codes are intended to be used as Observation.code in the StrokeCircumstanc
 
 ValueSet: StrokeCircumstanceCodesVS
 Id: stroke-circumstance-codes-vs
-* ^url = StrokeCircumstanceCodesVS_URL
-* ^version = "1.0.0"
-* ^title = "Stroke Circumstance Codes ValueSet"
-* ^description = """
+Title: "Stroke Circumstance Codes ValueSet"
+Description: """
 This ValueSet includes all onset-circumstance codes defined in StrokeCircumstanceCodesCS for use in stroke documentation and analytics. It is intended to be bound to Observation.code in the StrokeCircumstanceObservationProfile, enabling consistent classification of onset scenarios such as in-hospital stroke and wake-up stroke.
 
 Consistent coding supports cohort definition (e.g., wake-up stroke protocols), audit/quality reporting, and research where onset uncertainty is a key stratification variable.
 """
+* ^url = StrokeCircumstanceCodesVS_URL
+* ^version = "1.0.0"
 * ^status = #active
 * include codes from system StrokeCircumstanceCodesCS_URL
 
 ValueSet: SpecificFindingCodesVS
 Id: specific-finding-codes-vs
-* ^url = SpecificFindingCodesVS_URL
-* ^version = "1.0.0"
-* ^title = "Specific Stroke Finding Codes ValueSet"
-* ^description = """
+Description: """
 This ValueSet provides SNOMED CT disorder concepts for specific clinically relevant findings often referenced in the stroke workup, currently limited to atrial fibrillation and atrial flutter disorders.
 
 These codes are suitable when the intent is to reference the disorder concepts themselves (e.g., as a focus finding or a coded problem). When the intent is to capture the *status of an assessment* (present/absent/unknown) rather than assert a diagnosis, implementers should use an Observation with a dedicated assessment concept as Observation.code and bind Observation.valueCodeableConcept to an appropriate status ValueSet (e.g., AfibFlutterStatusVS).
 """
+Title: "Specific Stroke Finding Codes ValueSet"
+* ^url = SpecificFindingCodesVS_URL
+* ^version = "1.0.0"
 * ^status = #active
 * include SCT#49436004 "Atrial fibrillation (disorder)"
 * include SCT#5370000 "Atrial flutter (disorder)"
 
 CodeSystem: MTICICodeCS
 Id: mtici-code-cs
-* ^url = MticiCodeCS_URL
-* ^version = "1.0.0"
-* ^title = "mTICI Score Codes CodeSystem"
-* ^description = """
+Description: """
 This CodeSystem defines the assessment concept code(s) used to indicate that an Observation is reporting an mTICI reperfusion grade. It is intentionally separated from the MticiScoreCS CodeSystem, which contains the actual mTICI grade values (0–3 with 2a/2b/2c).
 
 In practice:
@@ -347,6 +339,9 @@ In practice:
 
 This separation improves semantic clarity and supports consistent validation and analytics across systems.
 """
+Title: "Modified Thrombolysis in Cerebral Infarction Assessment CodeSystem"
+* ^url = MticiCodeCS_URL
+* ^version = "1.0.0"
 * ^status = #active
 * ^experimental = true
 * ^caseSensitive = false
@@ -354,29 +349,29 @@ This separation improves semantic clarity and supports consistent validation and
 
 ValueSet: MTICICodeVS
 Id: mtici-code-vs
-* ^url = MticiCodeVS_URL
-* ^version = "1.0.0"
-* ^title = "mTICI Score Codes ValueSet"
-* ^description = """
+Description: """
 This ValueSet includes the mTICI assessment concept code(s) from MTICICodeCS for use as Observation.code when recording an mTICI reperfusion grade. It is intended to be paired with a binding of Observation.valueCodeableConcept to MticiScoreVS.
 
 Separating the “assessment concept” ValueSet (this ValueSet) from the “assessment result” ValueSet (MticiScoreVS) enables clearer validation rules, consistent UI behavior, and safer reuse of the mTICI scoring system across profiles.
 """
+Title: "Modified Thrombolysis in Cerebral Infarction Assessment ValueSet"
+* ^url = MticiCodeVS_URL
+* ^version = "1.0.0"
 * ^status = #active
 * include codes from system MticiCodeCS_URL
 
 ValueSet: StrokeFindingCodesVS
 Id: stroke-finding-codes-vs
-* ^url = StrokeFindingCodesVS_URL
-* ^version = "1.0.0"
-* ^title = "Specific Stroke Finding Codes ValueSet"
-* ^description = """
+Title : "Specific Stroke Finding Codes ValueSet"
+Description : """
 This ValueSet aggregates a small set of coded “finding/assessment concepts” used by the SpecificFindingObservationProfile for stroke-related documentation. It currently includes:
 - specific disorder concepts relevant to stroke workup (from SpecificFindingCodesVS), and
 - the mTICI assessment concept code (from MTICICodeVS).
 
 Implementer note: This ValueSet is used to constrain Observation.code. Where Observation.code is a disorder concept (e.g., AF disorder), the Observation instance should be interpreted as capturing an *assessment about that finding* (with the assessment result carried in Observation.valueCodeableConcept, per profile constraints). Where Observation.code is an assessment concept (e.g., mTICI), the Observation.valueCodeableConcept carries the corresponding score/result.
 """
+* ^url = StrokeFindingCodesVS_URL
+* ^version = "1.0.0"
 * ^status = #active
 * include codes from valueset SpecificFindingCodesVS_URL
 * include codes from valueset MticiCodeVS_URL
@@ -384,12 +379,10 @@ Implementer note: This ValueSet is used to constrain Observation.code. Where Obs
 
 // ------------------------- Extensions -------------------------------
 
-
 Extension: ObservationTimingContextExtension
 Id: observation-timing-context-ext
-* ^url = ObsTimingContextExt_URL
-* ^title = "Observation Timing Context Extension"
-* ^description = """
+Title : "Observation Timing Context Extension"
+Description : """
 This extension captures the clinical timing context (relative phase) in which an observation or assessment was made (e.g., pre-stroke baseline, admission, discharge, ~3-month follow-up). It is particularly important for functional outcomes and severity scores whose interpretation depends on *when* they were assessed.
 
 The extension complements Observation.effective[x]:
@@ -398,6 +391,7 @@ The extension complements Observation.effective[x]:
 
 The value is a required CodeableConcept bound to AssessmentContextVS (required), ensuring only supported timing contexts are used in this implementation guide.
 """
+* ^url = ObsTimingContextExt_URL
 * ^context[0].type = #element
 * ^context[0].expression = "Observation" // Applied to Observation resource
 * value[x] only CodeableConcept
@@ -410,6 +404,7 @@ The value is a required CodeableConcept bound to AssessmentContextVS (required),
 Profile: BaseStrokeObservation
 Id: base-stroke-observation
 Parent: FHIR_Observation 
+Title: "Base Profile for Observation"
 * ^fhirVersion = #5.0.0
 * ^url = "http://tecnomod-um.org/StructureDefinition/base-stroke-observation"
 * ^version = "1.0.0"
@@ -438,15 +433,15 @@ Key modeling intent:
 Profile: VitalSignObservationProfile
 Id: vital-sign-observation-profile
 Parent: BaseStrokeObservation
-* ^url = "http://tecnomod-um.org/StructureDefinition/vital-sign-observation-profile"
-* ^version = "1.0.0"
-* ^name = "VitalSignObservationProfile"
-* ^title = "Stroke Vital Sign Observation Profile (R5)"
-* ^description = """
+Title: "Stroke Vital Sign Observation Profile"
+Description: """
 Profile for recording key blood pressure vital signs in stroke patients using a single Observation with components. The Observation is categorized as vital-signs and uses component slices for systolic and diastolic blood pressure, each represented as a Quantity in UCUM mm[Hg].
 
 This profile supports repeated measurements over time by recording separate Observations at different effective[x] timestamps (e.g., arrival, post-thrombolysis monitoring, ICU). It intentionally does not model measurement conditions such as body position, cuff site, or device; such details may be captured via Observation.method, device references, or additional extensions if required by local workflows.
 """
+* ^url = "http://tecnomod-um.org/StructureDefinition/vital-sign-observation-profile"
+* ^version = "1.0.0"
+* ^name = "VitalSignObservationProfile"
 * category = ObsCatCS#vital-signs
 * category 1..1 MS
 * code 1..1 MS
@@ -466,12 +461,8 @@ This profile supports repeated measurements over time by recording separate Obse
 Profile: FunctionalScoreObservationProfile
 Id: functional-score-observation-profile
 Parent: BaseStrokeObservation
-* ^fhirVersion = #5.0.0
-* ^url = "http://tecnomod-um.org/StructureDefinition/functional-score-observation-profile"
-* ^version = "1.1.0" // Incremented version due to change
-* ^name = "FunctionalScoreObservationProfile"
-* ^title = "Stroke Functional Score Observation Profile (R5, Timing Ext)" // Updated title
-* ^description = """
+Title: "Stroke Functional Score Observation Profile"
+Description: """
 Profile for recording stroke functional outcome and severity scores, currently mRS and NIHSS, in a way that is both interoperable and context-aware. The profile requires a timing context extension (ObservationTimingContextExtension) to explicitly state the clinical phase (e.g., pre-stroke baseline, admission, discharge, ~3-month follow-up), enabling unambiguous interpretation and standardized reporting.
 
 Observation.code is bound to FunctionalScoreCodesVS, and invariants constrain Observation.value[x] by instrument:
@@ -480,6 +471,10 @@ Observation.code is bound to FunctionalScoreCodesVS, and invariants constrain Ob
 
 The profile does not model itemized NIHSS components, assessor training, or interview method; implementers may represent those details separately when needed (e.g., additional Observations, extensions, or provenance).
 """
+* ^fhirVersion = #5.0.0
+* ^url = "http://tecnomod-um.org/StructureDefinition/functional-score-observation-profile"
+* ^version = "1.1.0"
+* ^name = "FunctionalScoreObservationProfile"
 * extension contains ObservationTimingContextExtension named timingContext 1..1 MS 
 * category = ObsCatCS#exam
 * category 1..1 MS
@@ -496,22 +491,22 @@ The profile does not model itemized NIHSS components, assessor training, or inte
 * valueQuantity ^condition = "obs-nihss-code"
 
 
-// --- Timing Metric Observation Profile --- (No changes needed here regarding method/extension)
+
 Profile: TimingMetricObservationProfile
 Id: timing-metric-observation-profile
 Parent: BaseStrokeObservation
-* ^fhirVersion = #5.0.0
-* ^url = "http://tecnomod-um.org/StructureDefinition/timing-metric-observation-profile"
-* ^version = "1.0.0"
-* ^name = "TimingMetricObservationProfile"
-* ^title = "Stroke Timing Metric Observation Profile (R5)"
-* ^description = """
+Title : "Stroke Timing Metric Observation Profile (R5)"
+Description : """
 Profile for recording acute stroke process timing metrics as measured durations (e.g., Door-to-Needle, Door-to-Groin). Observation.code is bound to TimingMetricCodesVS, and Observation.valueQuantity represents the elapsed time as a duration in UCUM minutes.
 
 This representation is optimized for quality monitoring and analytics, where the interval value is the primary datum. The profile allows hasMember references to associate related sub-metrics or supporting Observations when a composite metric is derived from multiple recorded steps.
 
 Scope note: This profile records the interval value; it does not require recording the underlying event timestamps. If timestamp provenance is needed, implementers should capture the source event times separately (e.g., additional Observations or extensions) to support auditing and cross-site comparability.
 """
+* ^fhirVersion = #5.0.0
+* ^url = "http://tecnomod-um.org/StructureDefinition/timing-metric-observation-profile"
+* ^version = "1.0.0"
+* ^name = "TimingMetricObservationProfile"
 * category = ObsCatCS#procedure
 * category 1..1 
 * category MS
@@ -530,16 +525,17 @@ Scope note: This profile records the interval value; it does not require recordi
 Profile: StrokeCircumstanceObservationProfile
 Id: stroke-circumstance-observation-profile
 Parent: BaseStrokeObservation
-* ^fhirVersion = #5.0.0
-* ^url = "http://tecnomod-um.org/StructureDefinition/stroke-circumstance-observation-profile"
-* ^version = "1.0.0"
-* ^name = "StrokeCircumstanceObservationProfile"
-* ^title = "Stroke Circumstance Observation Profile (R5)"
-* ^description = """
+Title : "Stroke Circumstance Observation Profile (R5)"
+Description : """
 Profile for documenting clinically relevant circumstances of stroke symptom onset (e.g., wake-up stroke, in-hospital onset). The circumstance is represented by Observation.code (bound to StrokeCircumstanceCodesVS); the presence of the Observation asserts that the circumstance applies to the index event within the associated Encounter.
 
 The profile supports linking supporting evidence via hasMember (e.g., Observations capturing last-known-well time, symptom discovery time, or other onset-related details) without overloading the circumstance code itself. This profile intentionally does not encode onset timestamps in the code; temporal details should be modeled separately for precision and auditability.
 """
+* ^fhirVersion = #5.0.0
+* ^url = "http://tecnomod-um.org/StructureDefinition/stroke-circumstance-observation-profile"
+* ^version = "1.0.0"
+* ^name = "StrokeCircumstanceObservationProfile"
+
 * code 1..1 MS
 * code from StrokeCircumstanceCodesVS_URL (required)
 * hasMember 0..* MS
@@ -549,12 +545,8 @@ The profile supports linking supporting evidence via hasMember (e.g., Observatio
 Profile: SpecificFindingObservationProfile
 Id: specific-finding-observation-profile
 Parent: BaseStrokeObservation
-* ^fhirVersion = #5.0.0
-* ^url = "http://tecnomod-um.org/StructureDefinition/specific-finding-observation-profile"
-* ^version = "1.0.0"
-* ^name = "SpecificFindingObservationProfile"
-* ^title = "Specific Stroke Finding Observation Profile (R5)"
-* ^description = """
+Title : "Specific Stroke Finding Observation Profile (R5)"
+Description : """
 Profile for recording discrete, coded stroke-related findings and assessment outcomes that do not fit naturally into the vital-sign, functional-score, or timing-metric profiles. Observation.code is constrained to StrokeFindingCodesVS, and Observation.valueCodeableConcept carries the corresponding assessment result or status.
 
 Typical use cases include:
@@ -563,6 +555,11 @@ Typical use cases include:
 
 This profile deliberately encodes the result as a CodeableConcept to support categorical outcomes and interoperability. It does not replace Condition for asserting diagnoses; when a durable diagnosis is established (e.g., confirmed AF), represent it as a Condition and optionally link supporting Observations (screening results, monitoring runs) using hasMember, derivedFrom, or Provenance.
 """
+* ^fhirVersion = #5.0.0
+* ^url = "http://tecnomod-um.org/StructureDefinition/specific-finding-observation-profile"
+* ^version = "1.0.0"
+* ^name = "SpecificFindingObservationProfile"
+
 * code 1..1 MS
 * code from StrokeFindingCodesVS_URL (required)
 * value[x] 1..1 MS
@@ -573,16 +570,16 @@ This profile deliberately encodes the result as a CodeableConcept to support cat
 Profile: AgeAtOnsetObservationProfile
 Id: age-at-onset-observation-profile
 Parent: BaseStrokeObservation
-* ^fhirVersion = #5.0.0
-* ^url = "http://tecnomod-um.org/StructureDefinition/age-at-onset-observation-profile"
-* ^version = "1.0.0"
-* ^name = "AgeAtOnsetObservationProfile"
-* ^title = "Age at Stroke Onset Observation Profile (R5)"
-* ^description = """
+Title : "Age at Stroke Onset Observation Profile (R5)"
+Description : """
 Profile for recording the patient’s age at the time of stroke onset as a simple integer value in years. The Observation.code is fixed to the SNOMED CT observable entity “Age at onset of clinical finding,” ensuring a clear and interoperable semantic meaning.
 
 The age at onset may be derived from date of birth and an onset/reference timepoint (e.g., symptom onset, last known well, or discovery time depending on local policy). This profile records the resulting age value, not the derivation method; if the derivation is clinically important, implementers should capture the underlying reference timepoint(s) and provenance separately.
 """
+* ^fhirVersion = #5.0.0
+* ^url = "http://tecnomod-um.org/StructureDefinition/age-at-onset-observation-profile"
+* ^version = "1.0.0"
+* ^name = "AgeAtOnsetObservationProfile"
 * ^purpose = """
 Record age-at-onset in years as a simple, computable value used in etiologic assessment and risk stratification.
 """

@@ -150,7 +150,7 @@ This ValueSet does not convey timing, vessel location, modality, or technique; t
 
 // --- CodeSystem for modified Rankin Scale (mRS) Score ---
 CodeSystem: MRsScoreCS
-Title: "Modified Rankin Scale (mRS) Score Code System"
+Title: "Modified Rankin Scale Score Code System"
 Description: """This CodeSystem defines codes for the modified Rankin Scale (mRS), an ordinal measure of global disability and functional outcome widely used in stroke care and research. mRS grades functional status from 0 (no symptoms) through 5 (severe disability), with 6 indicating death.
 
 Within this implementation guide, mRS is intended to be captured as Observation.valueCodeableConcept (bound to the MRsScoreVS ValueSet), with the assessment timepoint represented explicitly (e.g., via effective[x]) and/or via an assessment context indicator (e.g., pre-stroke baseline, discharge, ~90-day follow-up). This supports standard reporting (e.g., “mRS at 90 days”), comparability across sites, and consistent downstream analytics.
@@ -162,16 +162,8 @@ Scope and modeling notes:
 Id: mrs-score-cs
 * ^url = MRsScoreCS_URL
 * ^version = "1.0.0"
-* ^title = "modified Rankin Scale (mRS) Score Code System"
-* ^description = """
-This CodeSystem defines codes for the modified Rankin Scale (mRS), an ordinal measure of global disability and functional outcome widely used in stroke care and research. mRS grades functional status from 0 (no symptoms) through 5 (severe disability), with 6 indicating death.
-
-Within this implementation guide, mRS is intended to be captured as Observation.valueCodeableConcept (bound to the MRsScoreVS ValueSet), with the assessment timepoint represented explicitly (e.g., via effective[x]) and/or via an assessment context indicator (e.g., pre-stroke baseline, discharge, ~90-day follow-up). This supports standard reporting (e.g., “mRS at 90 days”), comparability across sites, and consistent downstream analytics.
-
-Scope and modeling notes:
-- mRS is a coarse, global disability scale; it does not encode detailed domain-specific functional limitations (mobility, cognition, ADLs) which should be captured via additional instruments/Observations if required.
-- The CodeSystem defines only the *score*; method of ascertainment (in-person, telephone, structured interview) and assessor details should be captured separately when relevant.
-"""
+* ^title = "Modified Rankin Scale Score Code System"
+* ^content = #complete
 * ^status = #active
 * ^experimental = true 
 * ^caseSensitive = false  
@@ -186,28 +178,34 @@ Scope and modeling notes:
 // --- ValueSet for mRS Score ---
 ValueSet: MRsScoreVS
 Id: mrs-score-vs
-* ^url = MRsScoreVS_URL
-* ^version = "1.0.0"
-* ^title = "modified Rankin Scale (mRS) Score ValueSet"
-* ^description = """
+Description : """
 This ValueSet includes all modified Rankin Scale (mRS) grades defined in the MRsScoreCS CodeSystem (0–6). It is intended to be bound to Observation.valueCodeableConcept when the Observation.code indicates that the observation represents an mRS score.
 """
+Title: "Modified Rankin Scale Score Valueset"
+* ^url = MRsScoreVS_URL
+* ^version = "1.0.0"
+* ^title = "Modified Rankin Scale (mRS) Score ValueSet"
+* ^content = #complete
 * ^status = #active
+* ^experimental = true 
+* ^caseSensitive = false  
 * include codes from system MRsScoreCS_URL
 
 // --- CodeSystem for Assessment Context (for mRS/NIHSS) ---
 CodeSystem: AssessmentContextCS
 Id: assessment-context-cs
-* ^url = AssessmentContextCS_URL
-* ^version = "1.0.0"
-* ^title = "Assessment Context Code System"
-* ^description = """
+Description : """
 This CodeSystem defines normalized codes for the clinical context / relative timepoint at which a stroke-related assessment was performed. It is primarily used to contextualize functional and severity instruments (e.g., mRS and NIHSS) where interpretation depends on whether the score reflects baseline status, acute presentation, discharge status, or follow-up.
 
 These codes represent *relative phases* (pre-stroke baseline, admission, discharge, ~3-month follow-up) rather than precise timestamps. The actual date/time of measurement should be recorded in Observation.effective[x] when known; the context code complements effective[x] by expressing the clinical phase, which is often necessary for reporting and comparability (e.g., “mRS pre-stroke” vs “mRS at discharge”).
 
 Scope note: This CodeSystem is intentionally small and focused on common stroke pathway milestones; implementers may extend it (with additional codes and governance) if other standardized follow-up timepoints are required (e.g., 6 months, 1 year).
 """
+Title: "Assessment Context CodeSystem"
+* ^url = AssessmentContextCS_URL
+* ^version = "1.0.0"
+* ^title = "Assessment Context Code System"
+* ^content = #complete
 * ^status = #active
 * ^experimental = true 
 * ^caseSensitive = false    
@@ -223,15 +221,16 @@ Scope note: This CodeSystem is intentionally small and focused on common stroke 
 // --- ValueSet for Assessment Context ---
 ValueSet: AssessmentContextVS
 Id: assessment-context-vs
+Description: """
+This ValueSet includes all context/timepoint codes defined in AssessmentContextCS. It is intended for required binding to elements (e.g., extensions) that must indicate the clinical phase of an assessment, enabling consistent stratification and reporting of outcomes and severity over the stroke care pathway.
+"""
+Title: "Assessment Context ValueSet"
 * ^url = AssessmentContextVS_URL
 * ^version = "1.0.0"
-* ^title = "Assessment Context ValueSet"
-* ^description = """
-This ValueSet includes all context/timepoint codes defined in AssessmentContextCS. It is intended for required binding to elements (e.g., extensions) that must indicate the clinical phase of an assessment, enabling consistent stratification and reporting of outcomes and severity over the stroke care pathway.
-
-The ValueSet is used to validate that only supported context categories are recorded, improving interoperability when exchanging stroke assessments between systems and across care settings.
-"""
+* ^content = #complete
 * ^status = #active
+* ^experimental = true 
+* ^caseSensitive = false   
 * include codes from system AssessmentContextCS_URL
 
 // --- ValueSets for Observation.code Groupings ---

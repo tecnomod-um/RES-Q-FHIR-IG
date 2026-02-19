@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/CodeSystem/stroke-discharge-destination-cs | *Version*:0.1.0 |
-| Active as of 2026-02-18 | *Computable Name*:StrokeDischargeDestinationCS |
+| Active as of 2026-02-19 | *Computable Name*:StrokeDischargeDestinationCS |
 
  
 Codes indicating the possible destinations of the patient upon discharge from the encounter. 
@@ -32,7 +32,7 @@ Codes indicating the possible destinations of the patient upon discharge from th
   "title" : "Stroke Discharge Destination Code System",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-18T14:43:59+00:00",
+  "date" : "2026-02-19T08:12:22+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

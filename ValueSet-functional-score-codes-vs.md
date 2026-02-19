@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/functional-score-codes-vs | *Version*:0.1.0 |
-| Active as of 2026-02-18 | *Computable Name*:FunctionalScoreCodesVS |
+| Active as of 2026-02-19 | *Computable Name*:FunctionalScoreCodesVS |
 
  
 This ValueSet defines the allowable Observation.code concepts for stroke functional and severity scoring instruments represented in this guide: modified Rankin Scale (mRS) and NIH Stroke Scale (NIHSS), expressed as SNOMED CT observable entities. 
@@ -54,7 +54,7 @@ It is intended to be bound to Observation.code in the FunctionalScoreObservation
   "name" : "FunctionalScoreCodesVS",
   "title" : "Stroke Functional Score Codes ValueSet",
   "status" : "active",
-  "date" : "2026-02-18T14:43:59+00:00",
+  "date" : "2026-02-19T08:12:22+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

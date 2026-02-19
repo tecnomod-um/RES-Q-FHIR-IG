@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/timing-metric-codes-vs | *Version*:0.1.0 |
-| Active as of 2026-02-18 | *Computable Name*:TimingMetricCodesVS |
+| Active as of 2026-02-19 | *Computable Name*:TimingMetricCodesVS |
 
  
 This ValueSet includes all timing metric codes defined in TimingMetricCodesCS for use as Observation.code when recording acute stroke process intervals (e.g., D2N, D2G). It supports required binding in the TimingMetricObservationProfile, ensuring only approved timing metrics are recorded. 
@@ -51,7 +51,7 @@ The ValueSet is intentionally constrained to promote consistent, comparable repo
   "name" : "TimingMetricCodesVS",
   "title" : "Stroke Timing Metric Codes ValueSet",
   "status" : "active",
-  "date" : "2026-02-18T14:43:59+00:00",
+  "date" : "2026-02-19T08:12:22+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

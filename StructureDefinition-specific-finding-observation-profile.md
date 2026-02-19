@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/specific-finding-observation-profile | *Version*:0.1.0 |
-| Draft as of 2026-02-18 | *Computable Name*:SpecificFindingObservationProfile |
+| Draft as of 2026-02-19 | *Computable Name*:SpecificFindingObservationProfile |
 
  
 Profile for recording discrete, coded stroke-related findings and assessment outcomes that do not fit naturally into the vital-sign, functional-score, or timing-metric profiles. Observation.code is constrained to StrokeFindingCodesVS, and Observation.valueCodeableConcept carries the corresponding assessment result or status. 
@@ -46,7 +46,7 @@ Other representations of profile: [CSV](StructureDefinition-specific-finding-obs
   "name" : "SpecificFindingObservationProfile",
   "title" : "Specific Stroke Finding Observation Profile (R5)",
   "status" : "draft",
-  "date" : "2026-02-18T14:43:59+00:00",
+  "date" : "2026-02-19T08:12:22+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

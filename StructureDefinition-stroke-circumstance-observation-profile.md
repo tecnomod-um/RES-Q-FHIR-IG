@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/stroke-circumstance-observation-profile | *Version*:0.1.0 |
-| Draft as of 2026-02-18 | *Computable Name*:StrokeCircumstanceObservationProfile |
+| Draft as of 2026-02-19 | *Computable Name*:StrokeCircumstanceObservationProfile |
 
  
 Profile for documenting clinically relevant circumstances of stroke symptom onset (e.g., wake-up stroke, in-hospital onset). The circumstance is represented by Observation.code (bound to StrokeCircumstanceCodesVS); the presence of the Observation asserts that the circumstance applies to the index event within the associated Encounter. 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-stroke-circumstance-
   "name" : "StrokeCircumstanceObservationProfile",
   "title" : "Stroke Circumstance Observation Profile (R5)",
   "status" : "draft",
-  "date" : "2026-02-18T14:43:59+00:00",
+  "date" : "2026-02-19T08:12:22+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

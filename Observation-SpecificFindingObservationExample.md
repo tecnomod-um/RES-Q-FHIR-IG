@@ -10,7 +10,7 @@ Profile: [Specific Stroke Finding Observation Profile (R5)](StructureDefinition-
 
 **status**: Final
 
-**code**: Atrial fibrillation (disorder)
+**code**: Atrial fibrillation
 
 **subject**: [Anonymous Patient (no stated gender), DoB Unknown](Patient-example-patient.md)
 
@@ -39,7 +39,8 @@ Profile: [Specific Stroke Finding Observation Profile (R5)](StructureDefinition-
         "code" : "49436004",
         "display" : "Atrial fibrillation (disorder)"
       }
-    ]
+    ],
+    "text" : "Atrial fibrillation"
   },
   "subject" : {
     "reference" : "Patient/example-patient"
@@ -54,7 +55,8 @@ Profile: [Specific Stroke Finding Observation Profile (R5)](StructureDefinition-
         "code" : "detected",
         "display" : "Detected"
       }
-    ]
+    ],
+    "text" : "Detected"
   }
 }
 

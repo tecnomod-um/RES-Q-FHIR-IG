@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/stroke-discharge-destination-vs | *Version*:0.1.0 |
-| Active as of 2026-02-18 | *Computable Name*:StrokeDischargeDestinationVS |
+| Active as of 2026-02-19 | *Computable Name*:StrokeDischargeDestinationVS |
 
  
 Defines the possible destinations of the patient upon discharge from the encounter. 
@@ -50,7 +50,7 @@ Defines the possible destinations of the patient upon discharge from the encount
   "name" : "StrokeDischargeDestinationVS",
   "title" : "Stroke Discharge Destination ValueSet",
   "status" : "active",
-  "date" : "2026-02-18T14:43:59+00:00",
+  "date" : "2026-02-19T08:12:22+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

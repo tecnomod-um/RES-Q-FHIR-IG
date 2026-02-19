@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/specific-finding-codes-vs | *Version*:0.1.0 |
-| Active as of 2026-02-18 | *Computable Name*:SpecificFindingCodesVS |
+| Active as of 2026-02-19 | *Computable Name*:SpecificFindingCodesVS |
 
  
 This ValueSet provides SNOMED CT disorder concepts for specific clinically relevant findings often referenced in the stroke workup, currently limited to atrial fibrillation and atrial flutter disorders. 
@@ -51,7 +51,7 @@ These codes are suitable when the intent is to reference the disorder concepts t
   "name" : "SpecificFindingCodesVS",
   "title" : "Specific Stroke Finding Codes ValueSet",
   "status" : "active",
-  "date" : "2026-02-18T14:43:59+00:00",
+  "date" : "2026-02-19T08:12:22+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

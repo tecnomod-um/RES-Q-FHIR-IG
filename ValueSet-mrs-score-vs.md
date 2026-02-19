@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/mrs-score-vs | *Version*:0.1.0 |
-| Active as of 2026-02-18 | *Computable Name*:MRsScoreVS |
+| Active as of 2026-02-19 | *Computable Name*:MRsScoreVS |
 
  
 This ValueSet includes all modified Rankin Scale (mRS) grades defined in the MRsScoreCS CodeSystem (0–6). It is intended to be bound to Observation.valueCodeableConcept when the Observation.code indicates that the observation represents an mRS score. 
@@ -51,7 +51,7 @@ Binding mRS to a dedicated ValueSet supports strict validation (only valid mRS g
   "name" : "MRsScoreVS",
   "title" : "modified Rankin Scale (mRS) Score ValueSet",
   "status" : "active",
-  "date" : "2026-02-18T14:43:59+00:00",
+  "date" : "2026-02-19T08:12:22+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

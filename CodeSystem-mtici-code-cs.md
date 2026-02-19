@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/CodeSystem/mtici-code-cs | *Version*:0.1.0 |
-| Active as of 2026-02-18 | *Computable Name*:MTICICodeCS |
+| Active as of 2026-02-19 | *Computable Name*:MTICICodeCS |
 
  
 This CodeSystem defines the assessment concept code(s) used to indicate that an Observation is reporting an mTICI reperfusion grade. It is intentionally separated from the MticiScoreCS CodeSystem, which contains the actual mTICI grade values (0–3 with 2a/2b/2c). 
@@ -37,7 +37,7 @@ This separation improves semantic clarity and supports consistent validation and
   "title" : "mTICI Score Codes CodeSystem",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-18T14:43:59+00:00",
+  "date" : "2026-02-19T08:12:22+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

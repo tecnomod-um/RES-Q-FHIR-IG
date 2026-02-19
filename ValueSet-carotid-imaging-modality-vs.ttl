@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "CarotidImagingModalityVS"] ; # 
   fhir:title [ fhir:v "Carotid Arteries Imaging Modality ValueSet"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-02-18T14:43:59+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-19T08:12:22+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;

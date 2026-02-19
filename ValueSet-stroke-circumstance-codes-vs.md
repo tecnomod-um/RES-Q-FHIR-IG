@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/stroke-circumstance-codes-vs | *Version*:0.1.0 |
-| Active as of 2026-02-18 | *Computable Name*:StrokeCircumstanceCodesVS |
+| Active as of 2026-02-19 | *Computable Name*:StrokeCircumstanceCodesVS |
 
  
 This ValueSet includes all onset-circumstance codes defined in StrokeCircumstanceCodesCS for use in stroke documentation and analytics. It is intended to be bound to Observation.code in the StrokeCircumstanceObservationProfile, enabling consistent classification of onset scenarios such as in-hospital stroke and wake-up stroke. 
@@ -51,7 +51,7 @@ Consistent coding supports cohort definition (e.g., wake-up stroke protocols), a
   "name" : "StrokeCircumstanceCodesVS",
   "title" : "Stroke Circumstance Codes ValueSet",
   "status" : "active",
-  "date" : "2026-02-18T14:43:59+00:00",
+  "date" : "2026-02-19T08:12:22+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

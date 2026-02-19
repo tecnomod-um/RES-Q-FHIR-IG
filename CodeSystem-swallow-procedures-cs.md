@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/CodeSystem/swallow-procedures-cs | *Version*:0.1.0 |
-| Active as of 2026-02-18 | *Computable Name*:SwallowProceduresCS |
+| Active as of 2026-02-19 | *Computable Name*:SwallowProceduresCS |
 
  
 Codes representing various swallowing assessment procedures. 
@@ -31,7 +31,7 @@ Codes representing various swallowing assessment procedures.
   "name" : "SwallowProceduresCS",
   "title" : "Swallow Procedures Code System",
   "status" : "active",
-  "date" : "2026-02-18T14:43:59+00:00",
+  "date" : "2026-02-19T08:12:22+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

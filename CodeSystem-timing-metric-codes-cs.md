@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs | *Version*:0.1.0 |
-| Active as of 2026-02-18 | *Computable Name*:TimingMetricCodesCS |
+| Active as of 2026-02-19 | *Computable Name*:TimingMetricCodesCS |
 
  
 This CodeSystem defines codes for key time-interval process metrics in acute stroke care used for quality monitoring and pathway optimization. Each code represents a duration measured in minutes between two clinically meaningful events (e.g., hospital arrival to thrombolysis start). 
@@ -33,7 +33,7 @@ Implementation note: Exact operational definitions can vary by institution (e.g.
   "name" : "TimingMetricCodesCS",
   "title" : "Stroke Timing Metric Codes ValueSet",
   "status" : "active",
-  "date" : "2026-02-18T14:43:59+00:00",
+  "date" : "2026-02-19T08:12:22+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

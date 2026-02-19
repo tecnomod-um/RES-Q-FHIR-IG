@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/vital-sign-observation-profile | *Version*:0.1.0 |
-| Draft as of 2026-02-18 | *Computable Name*:VitalSignObservationProfile |
+| Draft as of 2026-02-19 | *Computable Name*:VitalSignObservationProfile |
 
  
 Profile for recording key blood pressure vital signs in stroke patients using a single Observation with components. The Observation is categorized as vital-signs and uses component slices for systolic and diastolic blood pressure, each represented as a Quantity in UCUM mm[Hg]. 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-vital-sign-observati
   "name" : "VitalSignObservationProfile",
   "title" : "Stroke Vital Sign Observation Profile (R5)",
   "status" : "draft",
-  "date" : "2026-02-18T14:43:59+00:00",
+  "date" : "2026-02-19T08:12:22+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

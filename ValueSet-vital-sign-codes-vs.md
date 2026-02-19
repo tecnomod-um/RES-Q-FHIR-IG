@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/vital-sign-codes-vs | *Version*:0.1.0 |
-| Active as of 2026-02-18 | *Computable Name*:VitalSignCodesVS |
+| Active as of 2026-02-19 | *Computable Name*:VitalSignCodesVS |
 
  
 This ValueSet defines SNOMED CT observable-entity codes for the blood pressure components captured as vital signs in the acute stroke setting (systolic and diastolic blood pressure). It is intended for use as Observation.component.code in a single vital-sign Observation that records both components using UCUM units (mm[Hg]). 
@@ -52,7 +52,7 @@ Including only the component codes (rather than full LOINC panels) keeps the rep
   "title" : "Stroke Vital Sign Codes ValueSet",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-18T14:43:59+00:00",
+  "date" : "2026-02-19T08:12:22+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/CodeSystem/assessment-context-cs | *Version*:0.1.0 |
-| Active as of 2026-02-18 | *Computable Name*:AssessmentContextCS |
+| Active as of 2026-02-19 | *Computable Name*:AssessmentContextCS |
 
  
 This CodeSystem defines normalized codes for the clinical context / relative timepoint at which a stroke-related assessment was performed. It is primarily used to contextualize functional and severity instruments (e.g., mRS and NIHSS) where interpretation depends on whether the score reflects baseline status, acute presentation, discharge status, or follow-up. 
@@ -34,7 +34,7 @@ Scope note: This CodeSystem is intentionally small and focused on common stroke 
   "title" : "Assessment Context Code System",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-18T14:43:59+00:00",
+  "date" : "2026-02-19T08:12:22+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

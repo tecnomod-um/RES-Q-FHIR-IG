@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs | *Version*:0.1.0 |
-| Active as of 2026-02-18 | *Computable Name*:StrokeCircumstanceCodesCS |
+| Active as of 2026-02-19 | *Computable Name*:StrokeCircumstanceCodesCS |
 
  
 This CodeSystem defines coded circumstances related to stroke symptom onset that are clinically relevant for eligibility decisions, diagnostic reasoning, and reporting—particularly when the exact onset time is unknown or atypical. 
@@ -32,7 +32,7 @@ These codes are intended to be used as Observation.code in the StrokeCircumstanc
   "name" : "StrokeCircumstanceCodesCS",
   "title" : "Stroke Circumstance Codes CodeSystem",
   "status" : "active",
-  "date" : "2026-02-18T14:43:59+00:00",
+  "date" : "2026-02-19T08:12:22+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

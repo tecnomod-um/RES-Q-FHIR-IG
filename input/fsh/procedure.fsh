@@ -45,15 +45,24 @@ Id: carotid-imaging-modality-vs
 * ^url = CarotidImagingModalityVS_URL
 * ^version = "1.0.0"
 * ^title = "Carotid Arteries Imaging Modality ValueSet"
-* ^description = "Defines codes for different types of carotid artery imaging."
 * ^status = #active
+* ^description = """
+This ValueSet enumerates standardized codes (primarily SNOMED CT procedures) representing **carotid imaging modalities** used in stroke workflows.
+
+**Primary use-case**
+- Bind to `Procedure.code` when recording a carotid imaging study performed during the stroke episode.
+
+**Why it matters**
+- Supports comparable reporting across facilities (e.g., Doppler vs angiography vs CTA/MRA usage).
+- Reduces variability from local naming conventions and free-text.
+
+**What it does not represent**
+- Imaging results/findings (e.g., stenosis severity). Findings should be modeled separately (Observation/DiagnosticReport/ImagingStudy, depending on your architecture).
+"""
 * include SCT#58920005 "Angiography of carotid artery (procedure)"
 * include SCT#9171000087102 "Doppler ultrasonography of carotid arteries (procedure)"
 * include SCT#396205005 "Computed tomography of brain without radiopaque contrast (procedure)"
 * include SCT#1366357009 "Magnetic resonance imaging angiography of intracranial artery (procedure)"
-
-
-
 
 CodeSystem: BrainImagingTypeCS
 Id: brain-imaging-type-cs

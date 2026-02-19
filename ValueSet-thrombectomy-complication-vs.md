@@ -1,10 +1,10 @@
-# Thrombectomy Complication ValueSet - v0.1.0
+# Thrombectomy Complications ValueSet - v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **Thrombectomy Complication ValueSet**
+* **Thrombectomy Complications ValueSet**
 
-## ValueSet: Thrombectomy Complication ValueSet 
+## ValueSet: Thrombectomy Complications ValueSet 
 
 | | |
 | :--- | :--- |
@@ -12,7 +12,10 @@
 | Active as of 2026-02-19 | *Computable Name*:ThrombectomyComplicationVS |
 
  
-Defines the specific complications of thrombectomy to record. 
+ValueSet of SNOMED CT concepts representing complications of thrombectomy as clinical conditions. 
+**Primary use-case** 
+* Bind `Procedure.complication` (or the referenced Condition.code) to a SNOMED-based set for interoperability.
+ 
 
  **References** 
 
@@ -48,9 +51,9 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "url" : "http://tecnomod-um.org/ValueSet/thrombectomy-complication-vs",
   "version" : "0.1.0",
   "name" : "ThrombectomyComplicationVS",
-  "title" : "Thrombectomy Complication ValueSet",
+  "title" : "Thrombectomy Complications ValueSet",
   "status" : "active",
-  "date" : "2026-02-19T10:15:59+00:00",
+  "date" : "2026-02-19T10:59:57+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -63,7 +66,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
       ]
     }
   ],
-  "description" : "Defines the specific complications of thrombectomy to record.",
+  "description" : " ValueSet of SNOMED CT concepts representing complications of thrombectomy as clinical conditions.\n\n**Primary use-case**\n- Bind `Procedure.complication` (or the referenced Condition.code) to a SNOMED-based set for interoperability.\n",
   "compose" : {
     "include" : [
       {

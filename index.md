@@ -43,7 +43,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
   "version" : "0.1.0",
   "name" : "RESQIG",
   "status" : "draft",
-  "date" : "2026-02-19T10:15:59+00:00",
+  "date" : "2026-02-19T10:59:57+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -702,7 +702,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "ValueSet/perforation-procedures-vs"
         },
         "name" : "Perforation Procedures ValueSet",
-        "description" : "ValueSet containing SNOMED CT codes representing a range of perforation procedures.",
+        "description" : "ValueSet restricting Procedure codes to stroke **reperfusion interventions**:\n- IV thrombolysis (IVT)\n- Mechanical thrombectomy (MT)\n\n**Primary use-case**\n- Required binding for `StrokeThrombolysisProcedureProfile.code` (which covers reperfusion procedures in this IG).",
         "isExample" : false
       },
       {
@@ -745,8 +745,8 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
         "reference" : {
           "reference" : "CodeSystem/procedure-timing-context-cs"
         },
-        "name" : "Procedure Timing Context Code System",
-        "description" : "Codes defining the timing phase of a procedure relative to the encounter start (e.g., acute vs. post-acute).",
+        "name" : "Procedure Timing Context CodeSystem",
+        "description" : "Local CodeSystem for classifying a procedure into a **timing context** relative to encounter start.\n\n**Primary use-case**\n- Normalize reporting into acute (<24h) vs post-acute (>=24h) phases for stroke process measures.\n\n**Why this is useful**\n- It supports consistent reporting even when onset time is uncertain.\n- It is designed for encounter-based operational KPIs rather than physiologic onset-based timelines.\n\n**FHIR placement**\n- Used in `ProcedureTimingContextExtension` attached to Procedure.",
         "isExample" : false
       },
       {
@@ -760,7 +760,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "StructureDefinition/procedure-timing-context-ext"
         },
         "name" : "Procedure Timing Context Extension",
-        "description" : "Specifies the timing phase (e.g., acute, post-acute) in which the procedure was performed relative to the start of the encounter.",
+        "description" : "Extension classifying the procedure into a **timing context** relative to encounter start (acute/post-acute).\n\n**Primary use-case**\n- Operational reporting where “phase of care” is needed for compliance measures.\n\n**When to use**\n- When you want a stable, comparable phase label across sites (even if absolute times differ or onset time is uncertain).\n\n**Interpretation guidance**\n- Use `acute` for procedures within 24 hours of encounter start.\n- Use `post-acute` for procedures after 24 hours.\n- Use `unknown` when encounter/timing data are insufficient.",
         "isExample" : false
       },
       {
@@ -774,7 +774,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "ValueSet/procedure-timing-context-vs"
         },
         "name" : "Procedure Timing Context ValueSet",
-        "description" : "ValueSet for codes defining the timing phase of a procedure relative to the encounter start.",
+        "description" : "ValueSet limiting allowed values for the Procedure timing context extension (acute/post-acute/unknown).\n\n**Use-case**\n- Required binding to ensure comparable phase classification across systems and sites.",
         "isExample" : false
       },
       {
@@ -889,8 +889,8 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
         "reference" : {
           "reference" : "StructureDefinition/stroke-brain-imaging-procedure-profile"
         },
-        "name" : "Stroke Brain Imaging Procedure Profile (R5)",
-        "description" : "Procedure profile to record key stroke procedures, including status, timing, complications, reasons, and context.",
+        "name" : "Stroke Brain Imaging Procedure Profile",
+        "description" : " Profile for documenting **brain imaging performed during a stroke episode** as a FHIR R5 Procedure.\n\n**Captures**\n- `code`: imaging modality/protocol (required; standardized via BrainImagingModalityVS).\n- `status`: procedure state (required).\n- `statusReason`: why it was not done (when applicable).\n- `occurrence[x]`: when imaging occurred (recommended/required by invariant when done locally).\n- `extension[timingContext]`: acute/post-acute phase classification relative to encounter start.\n\n**Typical scenarios**\n1) Imaging completed on-site: `status=completed`, `occurrence[x]` present, `timingContext` optional.\n2) Imaging not performed: `status=not-done`, `statusReason` required.\n3) Imaging performed elsewhere: if your IG uses a “performed elsewhere” indicator extension, rules may allow missing on-site timestamps.\n\n**Downstream use**\n- Door-to-imaging metrics, protocol utilization, cross-site comparability.",
         "isExample" : false
       },
       {
@@ -903,8 +903,8 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
         "reference" : {
           "reference" : "StructureDefinition/stroke-carotid-imaging-procedure-profile"
         },
-        "name" : "Stroke Carotid Imaging Procedure Profile (R5)",
-        "description" : "Procedure profile to record key stroke procedures, including status, timing, complications, reasons, and context.",
+        "name" : "Stroke Carotid Imaging Procedure Profile",
+        "description" : " Profile for documenting **carotid angiography** within a stroke episode.\n\n**Design intent**\n- This profile fixes `Procedure.code` to a specific SNOMED code (angiography of carotid artery).\n- If you want multiple carotid modalities, replace the fixed code with a required binding to CarotidImagingModalityVS.\n\n**Use-cases**\n- Determining whether carotid angiography was performed during the episode.\n- Capturing structured “not done” reasons for audit and quality improvement.",
         "isExample" : false
       },
       {
@@ -1107,20 +1107,6 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
         "extension" : [
           {
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "CodeSystem"
-          }
-        ],
-        "reference" : {
-          "reference" : "CodeSystem/stroke-proc-not-done-reason-cs"
-        },
-        "name" : "Stroke Procedure Not Done Reason Code System",
-        "description" : "Codes specifying the reason principal for not performing a key stroke procedure (Thrombolysis, Thrombectomy).",
-        "isExample" : false
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString" : "ValueSet"
           }
         ],
@@ -1128,7 +1114,21 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "ValueSet/stroke-proc-not-done-reason-vs"
         },
         "name" : "Stroke Procedure Not Done Reason ValueSet",
-        "description" : "ValueSet containing specific codes to indicate why thrombolysis or thrombectomy was not performed.",
+        "description" : "ValueSet containing the controlled vocabulary of reasons for `Procedure.statusReason` when a stroke procedure is `not-done`.",
+        "isExample" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "CodeSystem"
+          }
+        ],
+        "reference" : {
+          "reference" : "CodeSystem/stroke-proc-not-done-reason-cs"
+        },
+        "name" : "Stroke Procedure Not Done Reasons CodeSystem",
+        "description" : " Local CodeSystem enumerating standardized reasons why a key stroke procedure (e.g., IV thrombolysis or mechanical thrombectomy) was **not performed**.\n\n**Primary use-case**\n- Populate `Procedure.statusReason` when `Procedure.status = not-done`.\n\n**Why it matters**\n- Captures the difference between:\n  - clinical ineligibility (contraindication),\n  - time-based ineligibility (outside window),\n  - operational constraints (unavailable),\n  - patient choice (refusal),\n  - care pathway differences (performed elsewhere / transfer).",
         "isExample" : false
       },
       {
@@ -1183,8 +1183,8 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
         "reference" : {
           "reference" : "StructureDefinition/stroke-swallow-procedure-profile"
         },
-        "name" : "Stroke Swallow Procedure Profile (R5)",
-        "description" : "Procedure profile to record key stroke procedures, including status, timing, complications, reasons, and context.",
+        "name" : "Stroke Swallow Procedure Profile",
+        "description" : " Profile for documenting **swallow screening / dysphagia assessment** during a stroke episode.\n\n**Captures**\n- `code`: the screening/assessment procedure or tool used (SwallowProceduresVS).\n- `status`: whether completed or not done.\n- `statusReason`: controlled reason set when not done.\n- `extension[screeningTimingCategory]`: timing bucket (e.g., within 4h) for KPI reporting.\n- `extension[timingContext]`: acute/post-acute phase relative to encounter start.\n- `used.concept` (R5): explicitly documents the tool used, especially when:\n  - `code` is generic, or\n  - you want a consistent “tool used” field for analytics and comparison.\n\n**Use-cases**\n- Compliance monitoring: swallow screen performed early after stroke.\n- Tool utilization analysis (GUSS vs V-VST vs others).\n- Supporting aspiration pneumonia prevention workflows.",
         "isExample" : false
       },
       {
@@ -1197,8 +1197,8 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
         "reference" : {
           "reference" : "StructureDefinition/stroke-mechanical-procedure-profile"
         },
-        "name" : "Stroke Thrombolysis Procedure Profile (R5)",
-        "description" : "Procedure profile to record key stroke procedures, including status, timing, complications, reasons, and context.",
+        "name" : "Stroke Thrombolysis Procedure Profile",
+        "description" : "Profile for documenting **stroke reperfusion procedures** as FHIR Procedure:\n- IV thrombolysis (IVT)\n- Mechanical thrombectomy (MT)\n\n**Captures**\n- `code`: restricted to reperfusion procedures (PerforationProceduresVS).\n- `status`: completed/not-done/etc.\n- `statusReason`: controlled reason set when not done.\n- `occurrence[x]` (constrained to Period): start/end time of the intervention when available.\n- `complication`: complications (as CodeableReference to Condition) — constrained by invariants.\n- `extension[timingContext]`: acute/post-acute phase classification.\n\n**Use-cases**\n- Time-to-treatment metrics (door-to-needle, door-to-groin), service evaluation.\n- Structured documentation of “why not treated” for QI programs.\n- Safety monitoring for procedural complications.",
         "isExample" : false
       },
       {
@@ -1441,8 +1441,8 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
         "reference" : {
           "reference" : "CodeSystem/swallow-procedures-cs"
         },
-        "name" : "Swallow Procedures Code System",
-        "description" : "Codes representing various swallowing assessment procedures.",
+        "name" : "Swallow Procedures CodeSystem",
+        "description" : "Local CodeSystem representing swallowing screening/assessment tools often documented by acronym or local naming.\n\n**Primary use-case**\n- Provide stable, implementable codes when upstream systems cannot supply SNOMED CT equivalents.\n\n**FHIR placement**\n- Included in `SwallowProceduresVS` to be used in `Procedure.code` and (optionally) `Procedure.used.concept`.",
         "isExample" : false
       },
       {
@@ -1456,7 +1456,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "ValueSet/swallow-procedures-vs"
         },
         "name" : "Swallow Procedures ValueSet",
-        "description" : "ValueSet containing SNOMED CT codes representing a range of procedures used in the evaluation and management of stroke patients.",
+        "description" : "ValueSet enumerating swallowing screening/assessment procedures/tools used in stroke care.\n\n**Primary use-case**\n- Required binding for `StrokeSwallowProcedureProfile.code` to ensure the Procedure truly represents a swallow screening/assessment.\n\n**Secondary use-case**\n- Can also be used for `Procedure.used.concept` (R5) to explicitly document the tool used when:\n  - `Procedure.code` is generic, or\n  - you want a consistent field for “tool used” across multiple workflow variants.\n\n**Implementation note**\n- `SCT#261665006 'Unknown'´ is included only as a provisional development workaround; in production, prefer FHIR `dataAbsentReason` for missing data rather than “Unknown” as a procedure code.",
         "isExample" : false
       },
       {
@@ -1498,7 +1498,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
           "reference" : "ValueSet/swallowing-screening-timing-category-vs"
         },
         "name" : "Swallowing Screening Timing Category ValueSet",
-        "description" : "Temporal categories relative to stroke onset for swallowing screening.",
+        "description" : "ValueSet defining allowed categories for swallowing screening timing, combining:\n- local categories (e.g., within 4 hours), and\n- SNOMED CT qualifier concepts for post-admission timing.\n\n**Use-case**\n- Required binding for the swallowing timing extension to standardize KPI reporting across sites.",
         "isExample" : false
       },
       {
@@ -1511,8 +1511,8 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
         "reference" : {
           "reference" : "CodeSystem/thrombectomy-complication-cs"
         },
-        "name" : "Thrombectomy Complication Code System",
-        "description" : "Codes specifying the specific complications of thrombectomy to record.",
+        "name" : "Thrombectomy Complication CodeSystem",
+        "description" : "Local CodeSystem for complications occurring during mechanical thrombectomy.\n\n**When to use**\n- If you need a controlled internal vocabulary for adverse events/complications, especially when upstream systems do not provide SNOMED-coded diagnoses.\n\n**How it is used in FHIR R5**\n- Usually referenced from `Procedure.complication` which is a `CodeableReference(Condition)` in R5.\n- You may represent the complication as a `Condition` (preferred), and/or record a code directly depending on your implementation pattern.\n\n**Why it exists**\n- Supports minimum-set reporting across sites and enables consistent quality/safety analytics.",
         "isExample" : false
       },
       {
@@ -1525,8 +1525,8 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
         "reference" : {
           "reference" : "ValueSet/thrombectomy-complication-vs"
         },
-        "name" : "Thrombectomy Complication ValueSet",
-        "description" : "Defines the specific complications of thrombectomy to record.",
+        "name" : "Thrombectomy Complications ValueSet",
+        "description" : " ValueSet of SNOMED CT concepts representing complications of thrombectomy as clinical conditions.\n\n**Primary use-case**\n- Bind `Procedure.complication` (or the referenced Condition.code) to a SNOMED-based set for interoperability.",
         "isExample" : false
       },
       {

@@ -12,10 +12,10 @@
       "sources" : ["2.16.840.1.113883.4.642.3.109"],
       "uses" : {
       },
-      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile (R5)",
-      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile (R5)",
-      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile (R5)",
-      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile (R5)"
+      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
+      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
+      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
+      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/medication-statement-adherence",
@@ -76,7 +76,7 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile (R5)"
+      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile"
     },
     {
       "url" : "http://tecnomod-um.org/ValueSet/carotid-imaging-modality-vs",
@@ -204,11 +204,11 @@
       "status" : "draft",
       "name" : "PerforationProceduresValueset",
       "title" : "Perforation Procedures ValueSet",
-      "description" : "ValueSet containing SNOMED CT codes representing a range of perforation procedures.",
+      "description" : "ValueSet restricting Procedure codes to stroke **reperfusion interventions**:\n- IV thrombolysis (IVT)\n- Mechanical thrombectomy (MT)\n\n**Primary use-case**\n- Required binding for `StrokeThrombolysisProcedureProfile.code` (which covers reperfusion procedures in this IG).",
       "systems" : ["http://snomed.info/sct"],
       "uses" : {
       },
-      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile (R5)"
+      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile"
     },
     {
       "url" : "http://tecnomod-um.org/ValueSet/procedure-timing-context-vs",
@@ -216,7 +216,7 @@
       "status" : "active",
       "name" : "ProcedureTimingContextVS",
       "title" : "Procedure Timing Context ValueSet",
-      "description" : "ValueSet for codes defining the timing phase of a procedure relative to the encounter start.",
+      "description" : "ValueSet limiting allowed values for the Procedure timing context extension (acute/post-acute/unknown).\n\n**Use-case**\n- Required binding to ensure comparable phase classification across systems and sites.",
       "systems" : [
         "http://tecnomod-um.org/CodeSystem/procedure-timing-context-cs"
       ],
@@ -325,16 +325,16 @@
       "status" : "active",
       "name" : "StrokeProcNotDoneReasonVS",
       "title" : "Stroke Procedure Not Done Reason ValueSet",
-      "description" : "ValueSet containing specific codes to indicate why thrombolysis or thrombectomy was not performed.",
+      "description" : "ValueSet containing the controlled vocabulary of reasons for `Procedure.statusReason` when a stroke procedure is `not-done`.",
       "systems" : [
         "http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs"
       ],
       "uses" : {
       },
-      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile (R5)",
-      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile (R5)",
-      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile (R5)",
-      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile (R5)"
+      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
+      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
+      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
+      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
     },
     {
       "url" : "http://tecnomod-um.org/ValueSet/stroke-risk-factor-vs",
@@ -354,14 +354,14 @@
       "status" : "draft",
       "name" : "SwallowProceduresValueset",
       "title" : "Swallow Procedures ValueSet",
-      "description" : "ValueSet containing SNOMED CT codes representing a range of procedures used in the evaluation and management of stroke patients.",
+      "description" : "ValueSet enumerating swallowing screening/assessment procedures/tools used in stroke care.\n\n**Primary use-case**\n- Required binding for `StrokeSwallowProcedureProfile.code` to ensure the Procedure truly represents a swallow screening/assessment.\n\n**Secondary use-case**\n- Can also be used for `Procedure.used.concept` (R5) to explicitly document the tool used when:\n  - `Procedure.code` is generic, or\n  - you want a consistent field for “tool used” across multiple workflow variants.\n\n**Implementation note**\n- `SCT#261665006 'Unknown'´ is included only as a provisional development workaround; in production, prefer FHIR `dataAbsentReason` for missing data rather than “Unknown” as a procedure code.",
       "systems" : [
         "http://tecnomod-um.org/CodeSystem/swallow-procedures-cs",
         "http://snomed.info/sct"
       ],
       "uses" : {
       },
-      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile (R5)"
+      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
     },
     {
       "url" : "http://tecnomod-um.org/ValueSet/swallowing-screening-timing-category-vs",
@@ -369,7 +369,7 @@
       "status" : "active",
       "name" : "SwallowingScreeningTimingCategoryVS",
       "title" : "Swallowing Screening Timing Category ValueSet",
-      "description" : "Temporal categories relative to stroke onset for swallowing screening.",
+      "description" : "ValueSet defining allowed categories for swallowing screening timing, combining:\n- local categories (e.g., within 4 hours), and\n- SNOMED CT qualifier concepts for post-admission timing.\n\n**Use-case**\n- Required binding for the swallowing timing extension to standardize KPI reporting across sites.",
       "systems" : [
         "http://tecnomod-um.org/CodeSystem/swallow-screen-time-cs",
         "http://snomed.info/sct"
@@ -383,8 +383,8 @@
       "version" : "0.1.0",
       "status" : "active",
       "name" : "ThrombectomyComplicationVS",
-      "title" : "Thrombectomy Complication ValueSet",
-      "description" : "Defines the specific complications of thrombectomy to record.",
+      "title" : "Thrombectomy Complications ValueSet",
+      "description" : " ValueSet of SNOMED CT concepts representing complications of thrombectomy as clinical conditions.\n\n**Primary use-case**\n- Bind `Procedure.complication` (or the referenced Condition.code) to a SNOMED-based set for interoperability.",
       "systems" : ["http://snomed.info/sct"]
     },
     {

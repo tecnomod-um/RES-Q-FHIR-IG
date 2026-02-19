@@ -31,7 +31,7 @@
        fhir:value [ fhir:v "http://tecnomod-um.org" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "ValueSet containing SNOMED CT codes representing a range of perforation procedures."] ; # 
+  fhir:description [ fhir:v "ValueSet restricting Procedure codes to stroke **reperfusion interventions**:\n- IV thrombolysis (IVT)\n- Mechanical thrombectomy (MT)\n\n**Primary use-case**\n- Required binding for `StrokeThrombolysisProcedureProfile.code` (which covers reperfusion procedures in this IG)."] ; # 
   fhir:compose [
      fhir:include ( [
        fhir:system [

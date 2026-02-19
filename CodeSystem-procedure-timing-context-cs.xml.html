@@ -5,7 +5,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Procedure Timing Context Code System - XML Representation -  v0.1.0</title>
+    <title>Procedure Timing Context CodeSystem - XML Representation -  v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -133,7 +133,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Procedure Timing Context Code System</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Procedure Timing Context CodeSystem</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -192,7 +192,7 @@
 <a name="root"> </a>
 
 
-<h2 id="root">: Procedure Timing Context Code System - XML Representation</h2>
+<h2 id="root">: Procedure Timing Context CodeSystem - XML Representation</h2>
 
   <table class="colsi">
     <tr>
@@ -227,10 +227,10 @@
   &lt;<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.url">url</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;http://tecnomod-um.org/CodeSystem/procedure-timing-context-cs&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.version">version</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;0.1.0&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.name">name</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;ProcedureTimingContextCS&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.title">title</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Procedure Timing Context Code System&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.title">title</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Procedure Timing Context CodeSystem&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.status">status</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.experimental">experimental</a> <a href="http://hl7.org/fhir/R5/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.date">date</a> <a href="http://hl7.org/fhir/R5/datatypes.html#dateTime">value</a>=&quot;2026-02-19T10:15:59+00:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.date">date</a> <a href="http://hl7.org/fhir/R5/datatypes.html#dateTime">value</a>=&quot;2026-02-19T10:59:57+00:00&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.publisher">publisher</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;UMU&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.contact">contact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R5/metadatatypes.html#ContactDetail#XContactDetail.name">name</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;UMU&quot;/&gt;
@@ -240,7 +240,17 @@
     &lt;/<a href="http://hl7.org/fhir/R5/metadatatypes.html#ContactDetail#XContactDetail.telecom">telecom</a>&gt;
   &lt;/<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.contact">contact</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.description">description</a>
-               <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;Codes defining the timing phase of a procedure relative to the encounter start (e.g., acute vs. post-acute).&quot;/&gt;
+               <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;Local CodeSystem for classifying a procedure into a **timing context** relative to encounter start.
+
+**Primary use-case**
+- Normalize reporting into acute (&amp;lt;24h) vs post-acute (&amp;gt;=24h) phases for stroke process measures.
+
+**Why this is useful**
+- It supports consistent reporting even when onset time is uncertain.
+- It is designed for encounter-based operational KPIs rather than physiologic onset-based timelines.
+
+**FHIR placement**
+- Used in `ProcedureTimingContextExtension` attached to Procedure.&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.caseSensitive">caseSensitive</a> <a href="http://hl7.org/fhir/R5/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.content">content</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;complete&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.count">count</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;3&quot;/&gt;
@@ -286,7 +296,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 10:15+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 10:59+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

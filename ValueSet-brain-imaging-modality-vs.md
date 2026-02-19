@@ -16,7 +16,7 @@ Defines the SNOMED CT codes for individual brain imaging modalities performed as
 
  **References** 
 
-* [Stroke Brain Imaging Procedure Profile (R5)](StructureDefinition-stroke-brain-imaging-procedure-profile.md)
+* [Stroke Brain Imaging Procedure Profile](StructureDefinition-stroke-brain-imaging-procedure-profile.md)
 
 ### Logical Definition (CLD)
 
@@ -50,7 +50,7 @@ Defines the SNOMED CT codes for individual brain imaging modalities performed as
   "name" : "BrainImagingModalityVS",
   "title" : "Brain Imaging Modality ValueSet",
   "status" : "active",
-  "date" : "2026-02-19T10:15:59+00:00",
+  "date" : "2026-02-19T10:59:57+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

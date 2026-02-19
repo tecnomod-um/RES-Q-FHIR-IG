@@ -11,7 +11,21 @@
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/procedure-timing-context-ext | *Version*:0.1.0 |
 | Draft as of 2026-02-19 | *Computable Name*:ProcedureTimingContextExtension |
 
-Specifies the timing phase (e.g., acute, post-acute) in which the procedure was performed relative to the start of the encounter.
+Extension classifying the procedure into a **timing context** relative to encounter start (acute/post-acute).
+
+**Primary use-case**
+
+* Operational reporting where “phase of care” is needed for compliance measures.
+
+**When to use**
+
+* When you want a stable, comparable phase label across sites (even if absolute times differ or onset time is uncertain).
+
+**Interpretation guidance**
+
+* Use `acute` for procedures within 24 hours of encounter start.
+* Use `post-acute` for procedures after 24 hours.
+* Use `unknown` when encounter/timing data are insufficient.
 
 **Context of Use**
 
@@ -19,7 +33,7 @@ Specifies the timing phase (e.g., acute, post-acute) in which the procedure was 
 
 **Usages:**
 
-* Use this Extension: [Stroke Brain Imaging Procedure Profile (R5)](StructureDefinition-stroke-brain-imaging-procedure-profile.md), [Stroke Carotid Imaging Procedure Profile (R5)](StructureDefinition-stroke-carotid-imaging-procedure-profile.md), [Stroke Thrombolysis Procedure Profile (R5)](StructureDefinition-stroke-mechanical-procedure-profile.md) and [Stroke Swallow Procedure Profile (R5)](StructureDefinition-stroke-swallow-procedure-profile.md)
+* Use this Extension: [Stroke Brain Imaging Procedure Profile](StructureDefinition-stroke-brain-imaging-procedure-profile.md), [Stroke Carotid Imaging Procedure Profile](StructureDefinition-stroke-carotid-imaging-procedure-profile.md), [Stroke Thrombolysis Procedure Profile](StructureDefinition-stroke-mechanical-procedure-profile.md) and [Stroke Swallow Procedure Profile](StructureDefinition-stroke-swallow-procedure-profile.md)
 * Examples for this Extension: [Procedure/StrokeBrainImagingExample](Procedure-StrokeBrainImagingExample.md), [Procedure/StrokeCarotidImagingExample](Procedure-StrokeCarotidImagingExample.md), [Procedure/StrokeSwallowingExample](Procedure-StrokeSwallowingExample.md) and [Procedure/StrokeThrombolysisExample](Procedure-StrokeThrombolysisExample.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/RES-Q-FHIR-IG|current/StructureDefinition/procedure-timing-context-ext)
@@ -55,7 +69,7 @@ Other representations of profile: [CSV](StructureDefinition-procedure-timing-con
   "name" : "ProcedureTimingContextExtension",
   "title" : "Procedure Timing Context Extension",
   "status" : "draft",
-  "date" : "2026-02-19T10:15:59+00:00",
+  "date" : "2026-02-19T10:59:57+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -68,7 +82,7 @@ Other representations of profile: [CSV](StructureDefinition-procedure-timing-con
       ]
     }
   ],
-  "description" : "Specifies the timing phase (e.g., acute, post-acute) in which the procedure was performed relative to the start of the encounter.",
+  "description" : "Extension classifying the procedure into a **timing context** relative to encounter start (acute/post-acute).\n\n**Primary use-case**\n- Operational reporting where “phase of care” is needed for compliance measures.\n\n**When to use**\n- When you want a stable, comparable phase label across sites (even if absolute times differ or onset time is uncertain).\n\n**Interpretation guidance**\n- Use `acute` for procedures within 24 hours of encounter start.\n- Use `post-acute` for procedures after 24 hours.\n- Use `unknown` when encounter/timing data are insufficient.",
   "fhirVersion" : "5.0.0",
   "mapping" : [
     {
@@ -92,7 +106,9 @@ Other representations of profile: [CSV](StructureDefinition-procedure-timing-con
     "element" : [
       {
         "id" : "Extension",
-        "path" : "Extension"
+        "path" : "Extension",
+        "short" : "Procedure Timing Context Extension",
+        "definition" : "Extension classifying the procedure into a **timing context** relative to encounter start (acute/post-acute).\n\n**Primary use-case**\n- Operational reporting where “phase of care” is needed for compliance measures.\n\n**When to use**\n- When you want a stable, comparable phase label across sites (even if absolute times differ or onset time is uncertain).\n\n**Interpretation guidance**\n- Use `acute` for procedures within 24 hours of encounter start.\n- Use `post-acute` for procedures after 24 hours.\n- Use `unknown` when encounter/timing data are insufficient."
       },
       {
         "id" : "Extension.extension",

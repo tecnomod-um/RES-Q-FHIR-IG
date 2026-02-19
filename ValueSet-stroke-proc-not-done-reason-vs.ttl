@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "StrokeProcNotDoneReasonVS"] ; # 
   fhir:title [ fhir:v "Stroke Procedure Not Done Reason ValueSet"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-02-19T10:15:59+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-19T10:59:57+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;
@@ -30,7 +30,7 @@
        fhir:value [ fhir:v "http://tecnomod-um.org" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "ValueSet containing specific codes to indicate why thrombolysis or thrombectomy was not performed."] ; # 
+  fhir:description [ fhir:v "ValueSet containing the controlled vocabulary of reasons for `Procedure.statusReason` when a stroke procedure is `not-done`. "] ; # 
   fhir:compose [
      fhir:include ( [
        fhir:system [

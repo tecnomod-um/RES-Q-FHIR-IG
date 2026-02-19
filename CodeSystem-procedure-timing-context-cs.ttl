@@ -19,10 +19,10 @@
   ] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "ProcedureTimingContextCS"] ; # 
-  fhir:title [ fhir:v "Procedure Timing Context Code System"] ; # 
+  fhir:title [ fhir:v "Procedure Timing Context CodeSystem"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:experimental [ fhir:v true] ; # 
-  fhir:date [ fhir:v "2026-02-19T10:15:59+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-19T10:59:57+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;
@@ -31,7 +31,7 @@
        fhir:value [ fhir:v "http://tecnomod-um.org" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "Codes defining the timing phase of a procedure relative to the encounter start (e.g., acute vs. post-acute)."] ; # 
+  fhir:description [ fhir:v "Local CodeSystem for classifying a procedure into a **timing context** relative to encounter start.\n\n**Primary use-case**\n- Normalize reporting into acute (<24h) vs post-acute (>=24h) phases for stroke process measures.\n\n**Why this is useful**\n- It supports consistent reporting even when onset time is uncertain.\n- It is designed for encounter-based operational KPIs rather than physiologic onset-based timelines.\n\n**FHIR placement**\n- Used in `ProcedureTimingContextExtension` attached to Procedure."] ; # 
   fhir:caseSensitive [ fhir:v false] ; # 
   fhir:content [ fhir:v "complete"] ; # 
   fhir:count [ fhir:v "3"^^xsd:nonNegativeInteger] ; # 

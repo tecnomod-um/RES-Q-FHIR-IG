@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "stroke-proc-not-done-reason-cs"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem stroke-proc-not-done-reason-cs</b></p><a name=\"stroke-proc-not-done-reason-cs\"> </a><a name=\"hcstroke-proc-not-done-reason-cs\"> </a><p>This case-insensitive code system <code>http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">time-window<a name=\"stroke-proc-not-done-reason-cs-time-window\"> </a></td><td>Outside Therapeutic Window</td><td>Patient presented or evaluated outside the established time limit for the procedure.</td></tr><tr><td style=\"white-space:nowrap\">no-lvo<a name=\"stroke-proc-not-done-reason-cs-no-lvo\"> </a></td><td>No Large Vessel Occlusion (LVO)</td><td>An eligible large vessel occlusion for thrombectomy was not identified.</td></tr><tr><td style=\"white-space:nowrap\">contraindication<a name=\"stroke-proc-not-done-reason-cs-contraindication\"> </a></td><td>Contraindication Present</td><td>A medical contraindication to the procedure existed (e.g., bleeding risk).</td></tr><tr><td style=\"white-space:nowrap\">patient-refusal<a name=\"stroke-proc-not-done-reason-cs-patient-refusal\"> </a></td><td>Patient/Family Refusal</td><td>The patient or their legal representative refused the procedure.</td></tr><tr><td style=\"white-space:nowrap\">transfer<a name=\"stroke-proc-not-done-reason-cs-transfer\"> </a></td><td>Transferred to Another Facility</td><td>The patient was transferred to another hospital for the procedure.</td></tr><tr><td style=\"white-space:nowrap\">unavailable<a name=\"stroke-proc-not-done-reason-cs-unavailable\"> </a></td><td>Procedure Unavailable</td><td>The procedure was not available at the facility (e.g., lack of equipment, staff).</td></tr><tr><td style=\"white-space:nowrap\">disability<a name=\"stroke-proc-not-done-reason-cs-disability\"> </a></td><td>Severe Preexisting Disability</td><td>Patient's baseline disability made benefit from the procedure unlikely.</td></tr><tr><td style=\"white-space:nowrap\">mild-deficit<a name=\"stroke-proc-not-done-reason-cs-mild-deficit\"> </a></td><td>Mild Deficit</td><td>Patient's neurological deficit was too mild to warrant the procedure.</td></tr><tr><td style=\"white-space:nowrap\">done-elsewhere<a name=\"stroke-proc-not-done-reason-cs-done-elsewhere\"> </a></td><td>Performed Elsewhere</td><td>The procedure had already been performed at another facility prior to arrival/transfer.</td></tr><tr><td style=\"white-space:nowrap\">cost<a name=\"stroke-proc-not-done-reason-cs-cost\"> </a></td><td>Cost / No Insurance</td><td>Financial or coverage reasons prevented the procedure.</td></tr><tr><td style=\"white-space:nowrap\">unknown<a name=\"stroke-proc-not-done-reason-cs-unknown\"> </a></td><td>Reason Unknown</td><td>The reason was not documented or is unknown.</td></tr><tr><td style=\"white-space:nowrap\">consent<a name=\"stroke-proc-not-done-reason-cs-consent\"> </a></td><td>Consent Not Obtained</td><td>Informed consent for the procedure was not obtained.</td></tr><tr><td style=\"white-space:nowrap\">only-mt<a name=\"stroke-proc-not-done-reason-cs-only-mt\"> </a></td><td>Only Mechanical Thrombectomy Considered</td><td>Only mechanical thrombectomy was considered, and thrombolysis was not performed.</td></tr><tr><td style=\"white-space:nowrap\">other<a name=\"stroke-proc-not-done-reason-cs-other\"> </a></td><td>Other Reason</td><td>A reason not specifically defined.</td></tr><tr><td style=\"white-space:nowrap\">technically-not-possible<a name=\"stroke-proc-not-done-reason-cs-technically-not-possible\"> </a></td><td>Technically Not Possible</td><td>The procedure could not be performed due to technical or anatomical challenges.</td></tr><tr><td style=\"white-space:nowrap\">no-angiography<a name=\"stroke-proc-not-done-reason-cs-no-angiography\"> </a></td><td>Angiography Not Performed</td><td>Angiography to assess the situation was not performed.</td></tr></table></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem stroke-proc-not-done-reason-cs</b></p><a name=\"stroke-proc-not-done-reason-cs\"> </a><a name=\"hcstroke-proc-not-done-reason-cs\"> </a><p>This case-insensitive code system <code>http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">time-window<a name=\"stroke-proc-not-done-reason-cs-time-window\"> </a></td><td>Outside therapeutic window</td><td>The patient presented/evaluated outside the time window defined by protocol/guidelines for benefit.</td></tr><tr><td style=\"white-space:nowrap\">no-lvo<a name=\"stroke-proc-not-done-reason-cs-no-lvo\"> </a></td><td>No Large Vessel Occlusion (LVO)</td><td>No eligible large vessel occlusion for thrombectomy was identified.</td></tr><tr><td style=\"white-space:nowrap\">contraindication<a name=\"stroke-proc-not-done-reason-cs-contraindication\"> </a></td><td>Contraindication present</td><td>A medical contraindication existed (e.g., bleeding risk or other high-risk factor).</td></tr><tr><td style=\"white-space:nowrap\">patient-refusal<a name=\"stroke-proc-not-done-reason-cs-patient-refusal\"> </a></td><td>Patient/family refusal</td><td>The patient or legal representative declined the intervention after discussion.</td></tr><tr><td style=\"white-space:nowrap\">transfer<a name=\"stroke-proc-not-done-reason-cs-transfer\"> </a></td><td>Transferred to another facility</td><td>The patient was transferred to a different facility for the intervention.</td></tr><tr><td style=\"white-space:nowrap\">unavailable<a name=\"stroke-proc-not-done-reason-cs-unavailable\"> </a></td><td>Procedure unavailable</td><td>The facility could not provide the procedure (equipment, staffing, service availability).</td></tr><tr><td style=\"white-space:nowrap\">disability<a name=\"stroke-proc-not-done-reason-cs-disability\"> </a></td><td>Severe preexisting disability</td><td>Baseline disability made benefit unlikely per clinical judgement/protocol.</td></tr><tr><td style=\"white-space:nowrap\">mild-deficit<a name=\"stroke-proc-not-done-reason-cs-mild-deficit\"> </a></td><td>Mild deficit</td><td>Neurological deficit severity was judged too mild to justify risk/benefit.</td></tr><tr><td style=\"white-space:nowrap\">done-elsewhere<a name=\"stroke-proc-not-done-reason-cs-done-elsewhere\"> </a></td><td>Performed elsewhere</td><td>The procedure had already been performed at another facility prior to arrival/transfer.</td></tr><tr><td style=\"white-space:nowrap\">cost<a name=\"stroke-proc-not-done-reason-cs-cost\"> </a></td><td>Cost / no insurance</td><td>Financial or coverage constraints prevented the procedure (use only where applicable).</td></tr><tr><td style=\"white-space:nowrap\">unknown<a name=\"stroke-proc-not-done-reason-cs-unknown\"> </a></td><td>Reason unknown</td><td>Reason was not documented or is unknown.</td></tr><tr><td style=\"white-space:nowrap\">consent<a name=\"stroke-proc-not-done-reason-cs-consent\"> </a></td><td>Consent not obtained</td><td>Informed consent required for the procedure was not obtained.</td></tr><tr><td style=\"white-space:nowrap\">only-mt<a name=\"stroke-proc-not-done-reason-cs-only-mt\"> </a></td><td>Only mechanical thrombectomy considered</td><td>Only MT was considered; IV thrombolysis was not performed.</td></tr><tr><td style=\"white-space:nowrap\">technically-not-possible<a name=\"stroke-proc-not-done-reason-cs-technically-not-possible\"> </a></td><td>Technically not possible</td><td>Technical/anatomical factors prevented completion.</td></tr><tr><td style=\"white-space:nowrap\">no-angiography<a name=\"stroke-proc-not-done-reason-cs-no-angiography\"> </a></td><td>Angiography not performed</td><td>Required angiographic assessment was not performed.</td></tr><tr><td style=\"white-space:nowrap\">other<a name=\"stroke-proc-not-done-reason-cs-other\"> </a></td><td>Other reason</td><td>Other reason not listed. Prefer adding explanatory text in statusReason.text where possible.</td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:url [
      fhir:v "http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs"^^xsd:anyURI ;
@@ -19,10 +19,10 @@
   ] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "StrokeProcNotDoneReasonCS"] ; # 
-  fhir:title [ fhir:v "Stroke Procedure Not Done Reason Code System"] ; # 
+  fhir:title [ fhir:v "Stroke Procedure Not Done Reasons CodeSystem"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:experimental [ fhir:v true] ; # 
-  fhir:date [ fhir:v "2026-02-19T10:15:59+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-19T10:59:57+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;
@@ -31,74 +31,74 @@
        fhir:value [ fhir:v "http://tecnomod-um.org" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "Codes specifying the reason principal for not performing a key stroke procedure (Thrombolysis, Thrombectomy)."] ; # 
+  fhir:description [ fhir:v " Local CodeSystem enumerating standardized reasons why a key stroke procedure (e.g., IV thrombolysis or mechanical thrombectomy) was **not performed**.\n\n**Primary use-case**\n- Populate `Procedure.statusReason` when `Procedure.status = not-done`.\n\n**Why it matters**\n- Captures the difference between:\n  - clinical ineligibility (contraindication),\n  - time-based ineligibility (outside window),\n  - operational constraints (unavailable),\n  - patient choice (refusal),\n  - care pathway differences (performed elsewhere / transfer)."] ; # 
   fhir:caseSensitive [ fhir:v false] ; # 
   fhir:content [ fhir:v "complete"] ; # 
   fhir:count [ fhir:v "16"^^xsd:nonNegativeInteger] ; # 
   fhir:concept ( [
      fhir:code [ fhir:v "time-window" ] ;
-     fhir:display [ fhir:v "Outside Therapeutic Window" ] ;
-     fhir:definition [ fhir:v "Patient presented or evaluated outside the established time limit for the procedure." ]
+     fhir:display [ fhir:v "Outside therapeutic window" ] ;
+     fhir:definition [ fhir:v "The patient presented/evaluated outside the time window defined by protocol/guidelines for benefit." ]
   ] [
      fhir:code [ fhir:v "no-lvo" ] ;
      fhir:display [ fhir:v "No Large Vessel Occlusion (LVO)" ] ;
-     fhir:definition [ fhir:v "An eligible large vessel occlusion for thrombectomy was not identified." ]
+     fhir:definition [ fhir:v "No eligible large vessel occlusion for thrombectomy was identified." ]
   ] [
      fhir:code [ fhir:v "contraindication" ] ;
-     fhir:display [ fhir:v "Contraindication Present" ] ;
-     fhir:definition [ fhir:v "A medical contraindication to the procedure existed (e.g., bleeding risk)." ]
+     fhir:display [ fhir:v "Contraindication present" ] ;
+     fhir:definition [ fhir:v "A medical contraindication existed (e.g., bleeding risk or other high-risk factor)." ]
   ] [
      fhir:code [ fhir:v "patient-refusal" ] ;
-     fhir:display [ fhir:v "Patient/Family Refusal" ] ;
-     fhir:definition [ fhir:v "The patient or their legal representative refused the procedure." ]
+     fhir:display [ fhir:v "Patient/family refusal" ] ;
+     fhir:definition [ fhir:v "The patient or legal representative declined the intervention after discussion." ]
   ] [
      fhir:code [ fhir:v "transfer" ] ;
-     fhir:display [ fhir:v "Transferred to Another Facility" ] ;
-     fhir:definition [ fhir:v "The patient was transferred to another hospital for the procedure." ]
+     fhir:display [ fhir:v "Transferred to another facility" ] ;
+     fhir:definition [ fhir:v "The patient was transferred to a different facility for the intervention." ]
   ] [
      fhir:code [ fhir:v "unavailable" ] ;
-     fhir:display [ fhir:v "Procedure Unavailable" ] ;
-     fhir:definition [ fhir:v "The procedure was not available at the facility (e.g., lack of equipment, staff)." ]
+     fhir:display [ fhir:v "Procedure unavailable" ] ;
+     fhir:definition [ fhir:v "The facility could not provide the procedure (equipment, staffing, service availability)." ]
   ] [
      fhir:code [ fhir:v "disability" ] ;
-     fhir:display [ fhir:v "Severe Preexisting Disability" ] ;
-     fhir:definition [ fhir:v "Patient's baseline disability made benefit from the procedure unlikely." ]
+     fhir:display [ fhir:v "Severe preexisting disability" ] ;
+     fhir:definition [ fhir:v "Baseline disability made benefit unlikely per clinical judgement/protocol." ]
   ] [
      fhir:code [ fhir:v "mild-deficit" ] ;
-     fhir:display [ fhir:v "Mild Deficit" ] ;
-     fhir:definition [ fhir:v "Patient's neurological deficit was too mild to warrant the procedure." ]
+     fhir:display [ fhir:v "Mild deficit" ] ;
+     fhir:definition [ fhir:v "Neurological deficit severity was judged too mild to justify risk/benefit." ]
   ] [
      fhir:code [ fhir:v "done-elsewhere" ] ;
-     fhir:display [ fhir:v "Performed Elsewhere" ] ;
+     fhir:display [ fhir:v "Performed elsewhere" ] ;
      fhir:definition [ fhir:v "The procedure had already been performed at another facility prior to arrival/transfer." ]
   ] [
      fhir:code [ fhir:v "cost" ] ;
-     fhir:display [ fhir:v "Cost / No Insurance" ] ;
-     fhir:definition [ fhir:v "Financial or coverage reasons prevented the procedure." ]
+     fhir:display [ fhir:v "Cost / no insurance" ] ;
+     fhir:definition [ fhir:v "Financial or coverage constraints prevented the procedure (use only where applicable)." ]
   ] [
      fhir:code [ fhir:v "unknown" ] ;
-     fhir:display [ fhir:v "Reason Unknown" ] ;
-     fhir:definition [ fhir:v "The reason was not documented or is unknown." ]
+     fhir:display [ fhir:v "Reason unknown" ] ;
+     fhir:definition [ fhir:v "Reason was not documented or is unknown." ]
   ] [
      fhir:code [ fhir:v "consent" ] ;
-     fhir:display [ fhir:v "Consent Not Obtained" ] ;
-     fhir:definition [ fhir:v "Informed consent for the procedure was not obtained." ]
+     fhir:display [ fhir:v "Consent not obtained" ] ;
+     fhir:definition [ fhir:v "Informed consent required for the procedure was not obtained." ]
   ] [
      fhir:code [ fhir:v "only-mt" ] ;
-     fhir:display [ fhir:v "Only Mechanical Thrombectomy Considered" ] ;
-     fhir:definition [ fhir:v "Only mechanical thrombectomy was considered, and thrombolysis was not performed." ]
-  ] [
-     fhir:code [ fhir:v "other" ] ;
-     fhir:display [ fhir:v "Other Reason" ] ;
-     fhir:definition [ fhir:v "A reason not specifically defined." ]
+     fhir:display [ fhir:v "Only mechanical thrombectomy considered" ] ;
+     fhir:definition [ fhir:v "Only MT was considered; IV thrombolysis was not performed." ]
   ] [
      fhir:code [ fhir:v "technically-not-possible" ] ;
-     fhir:display [ fhir:v "Technically Not Possible" ] ;
-     fhir:definition [ fhir:v "The procedure could not be performed due to technical or anatomical challenges." ]
+     fhir:display [ fhir:v "Technically not possible" ] ;
+     fhir:definition [ fhir:v "Technical/anatomical factors prevented completion." ]
   ] [
      fhir:code [ fhir:v "no-angiography" ] ;
-     fhir:display [ fhir:v "Angiography Not Performed" ] ;
-     fhir:definition [ fhir:v "Angiography to assess the situation was not performed." ]
+     fhir:display [ fhir:v "Angiography not performed" ] ;
+     fhir:definition [ fhir:v "Required angiographic assessment was not performed." ]
+  ] [
+     fhir:code [ fhir:v "other" ] ;
+     fhir:display [ fhir:v "Other reason" ] ;
+     fhir:definition [ fhir:v "Other reason not listed. Prefer adding explanatory text in statusReason.text where possible." ]
   ] ) . # 
 
 # -------------------------------------------------------------------------------------

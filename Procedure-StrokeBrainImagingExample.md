@@ -6,7 +6,7 @@
 
 ## Example Procedure: StrokeBrainImagingExample
 
-Profile: [Stroke Brain Imaging Procedure Profile (R5)](StructureDefinition-stroke-brain-imaging-procedure-profile.md)
+Profile: [Stroke Brain Imaging Procedure Profile](StructureDefinition-stroke-brain-imaging-procedure-profile.md)
 
 **Procedure Timing Context Extension**: Acute Phase (<24h)
 

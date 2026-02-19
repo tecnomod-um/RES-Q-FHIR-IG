@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "ProcedureTimingContextVS"] ; # 
   fhir:title [ fhir:v "Procedure Timing Context ValueSet"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-02-19T10:15:59+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-19T10:59:57+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;
@@ -30,7 +30,7 @@
        fhir:value [ fhir:v "http://tecnomod-um.org" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "ValueSet for codes defining the timing phase of a procedure relative to the encounter start."] ; # 
+  fhir:description [ fhir:v "ValueSet limiting allowed values for the Procedure timing context extension (acute/post-acute/unknown).\n\n**Use-case**\n- Required binding to ensure comparable phase classification across systems and sites."] ; # 
   fhir:compose [
      fhir:include ( [
        fhir:system [

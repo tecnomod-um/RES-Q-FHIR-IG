@@ -1,10 +1,10 @@
-# Stroke Procedure Not Done Reason Code System - v0.1.0
+# Stroke Procedure Not Done Reasons CodeSystem - v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **Stroke Procedure Not Done Reason Code System**
+* **Stroke Procedure Not Done Reasons CodeSystem**
 
-## CodeSystem: Stroke Procedure Not Done Reason Code System (Experimental) 
+## CodeSystem: Stroke Procedure Not Done Reasons CodeSystem (Experimental) 
 
 | | |
 | :--- | :--- |
@@ -12,7 +12,19 @@
 | Active as of 2026-02-19 | *Computable Name*:StrokeProcNotDoneReasonCS |
 
  
-Codes specifying the reason principal for not performing a key stroke procedure (Thrombolysis, Thrombectomy). 
+Local CodeSystem enumerating standardized reasons why a key stroke procedure (e.g., IV thrombolysis or mechanical thrombectomy) was **not performed**. 
+**Primary use-case** 
+* Populate `Procedure.statusReason` when `Procedure.status = not-done`.
+ 
+**Why it matters** 
+* Captures the difference between: 
+* clinical ineligibility (contraindication),
+* time-based ineligibility (outside window),
+* operational constraints (unavailable),
+* patient choice (refusal),
+* care pathway differences (performed elsewhere / transfer).
+ 
+ 
 
  This Code system is referenced in the content logical definition of the following value sets: 
 
@@ -29,10 +41,10 @@ Codes specifying the reason principal for not performing a key stroke procedure 
   "url" : "http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs",
   "version" : "0.1.0",
   "name" : "StrokeProcNotDoneReasonCS",
-  "title" : "Stroke Procedure Not Done Reason Code System",
+  "title" : "Stroke Procedure Not Done Reasons CodeSystem",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-19T10:15:59+00:00",
+  "date" : "2026-02-19T10:59:57+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -45,90 +57,90 @@ Codes specifying the reason principal for not performing a key stroke procedure 
       ]
     }
   ],
-  "description" : "Codes specifying the reason principal for not performing a key stroke procedure (Thrombolysis, Thrombectomy).",
+  "description" : " Local CodeSystem enumerating standardized reasons why a key stroke procedure (e.g., IV thrombolysis or mechanical thrombectomy) was **not performed**.\n\n**Primary use-case**\n- Populate `Procedure.statusReason` when `Procedure.status = not-done`.\n\n**Why it matters**\n- Captures the difference between:\n  - clinical ineligibility (contraindication),\n  - time-based ineligibility (outside window),\n  - operational constraints (unavailable),\n  - patient choice (refusal),\n  - care pathway differences (performed elsewhere / transfer).",
   "caseSensitive" : false,
   "content" : "complete",
   "count" : 16,
   "concept" : [
     {
       "code" : "time-window",
-      "display" : "Outside Therapeutic Window",
-      "definition" : "Patient presented or evaluated outside the established time limit for the procedure."
+      "display" : "Outside therapeutic window",
+      "definition" : "The patient presented/evaluated outside the time window defined by protocol/guidelines for benefit."
     },
     {
       "code" : "no-lvo",
       "display" : "No Large Vessel Occlusion (LVO)",
-      "definition" : "An eligible large vessel occlusion for thrombectomy was not identified."
+      "definition" : "No eligible large vessel occlusion for thrombectomy was identified."
     },
     {
       "code" : "contraindication",
-      "display" : "Contraindication Present",
-      "definition" : "A medical contraindication to the procedure existed (e.g., bleeding risk)."
+      "display" : "Contraindication present",
+      "definition" : "A medical contraindication existed (e.g., bleeding risk or other high-risk factor)."
     },
     {
       "code" : "patient-refusal",
-      "display" : "Patient/Family Refusal",
-      "definition" : "The patient or their legal representative refused the procedure."
+      "display" : "Patient/family refusal",
+      "definition" : "The patient or legal representative declined the intervention after discussion."
     },
     {
       "code" : "transfer",
-      "display" : "Transferred to Another Facility",
-      "definition" : "The patient was transferred to another hospital for the procedure."
+      "display" : "Transferred to another facility",
+      "definition" : "The patient was transferred to a different facility for the intervention."
     },
     {
       "code" : "unavailable",
-      "display" : "Procedure Unavailable",
-      "definition" : "The procedure was not available at the facility (e.g., lack of equipment, staff)."
+      "display" : "Procedure unavailable",
+      "definition" : "The facility could not provide the procedure (equipment, staffing, service availability)."
     },
     {
       "code" : "disability",
-      "display" : "Severe Preexisting Disability",
-      "definition" : "Patient's baseline disability made benefit from the procedure unlikely."
+      "display" : "Severe preexisting disability",
+      "definition" : "Baseline disability made benefit unlikely per clinical judgement/protocol."
     },
     {
       "code" : "mild-deficit",
-      "display" : "Mild Deficit",
-      "definition" : "Patient's neurological deficit was too mild to warrant the procedure."
+      "display" : "Mild deficit",
+      "definition" : "Neurological deficit severity was judged too mild to justify risk/benefit."
     },
     {
       "code" : "done-elsewhere",
-      "display" : "Performed Elsewhere",
+      "display" : "Performed elsewhere",
       "definition" : "The procedure had already been performed at another facility prior to arrival/transfer."
     },
     {
       "code" : "cost",
-      "display" : "Cost / No Insurance",
-      "definition" : "Financial or coverage reasons prevented the procedure."
+      "display" : "Cost / no insurance",
+      "definition" : "Financial or coverage constraints prevented the procedure (use only where applicable)."
     },
     {
       "code" : "unknown",
-      "display" : "Reason Unknown",
-      "definition" : "The reason was not documented or is unknown."
+      "display" : "Reason unknown",
+      "definition" : "Reason was not documented or is unknown."
     },
     {
       "code" : "consent",
-      "display" : "Consent Not Obtained",
-      "definition" : "Informed consent for the procedure was not obtained."
+      "display" : "Consent not obtained",
+      "definition" : "Informed consent required for the procedure was not obtained."
     },
     {
       "code" : "only-mt",
-      "display" : "Only Mechanical Thrombectomy Considered",
-      "definition" : "Only mechanical thrombectomy was considered, and thrombolysis was not performed."
-    },
-    {
-      "code" : "other",
-      "display" : "Other Reason",
-      "definition" : "A reason not specifically defined."
+      "display" : "Only mechanical thrombectomy considered",
+      "definition" : "Only MT was considered; IV thrombolysis was not performed."
     },
     {
       "code" : "technically-not-possible",
-      "display" : "Technically Not Possible",
-      "definition" : "The procedure could not be performed due to technical or anatomical challenges."
+      "display" : "Technically not possible",
+      "definition" : "Technical/anatomical factors prevented completion."
     },
     {
       "code" : "no-angiography",
-      "display" : "Angiography Not Performed",
-      "definition" : "Angiography to assess the situation was not performed."
+      "display" : "Angiography not performed",
+      "definition" : "Required angiographic assessment was not performed."
+    },
+    {
+      "code" : "other",
+      "display" : "Other reason",
+      "definition" : "Other reason not listed. Prefer adding explanatory text in statusReason.text where possible."
     }
   ]
 }

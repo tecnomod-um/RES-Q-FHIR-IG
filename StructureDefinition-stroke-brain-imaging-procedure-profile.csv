@@ -27,7 +27,18 @@ dom-4dom-3dom-5","","N/A"
 ","",,"open","DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Procedure.extension:timingContext","Procedure.extension","timingContext","","",0,1,"Y","","","Extension {[CanonicalType[http://tecnomod-um.org/StructureDefinition/procedure-timing-context-ext]]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Procedure Timing Context Extension","Extension classifying the procedure into a **timing context** relative to encounter start (acute/post-acute).
+
+**Primary use-case**
+- Operational reporting where “phase of care” is needed for compliance measures.
+
+**When to use**
+- When you want a stable, comparable phase label across sites (even if absolute times differ or onset time is uncertain).
+
+**Interpretation guidance**
+- Use `acute` for procedures within 24 hours of encounter start.
+- Use `post-acute` for procedures after 24 hours.
+- Use `unknown` when encounter/timing data are insufficient.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Procedure.modifierExtension","Procedure.modifierExtension","","extensions
 user content","",0,*,"","Y","Y","Extension {[]} {[]}

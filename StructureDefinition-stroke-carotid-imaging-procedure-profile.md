@@ -1,10 +1,10 @@
-# Stroke Carotid Imaging Procedure Profile (R5) - v0.1.0
+# Stroke Carotid Imaging Procedure Profile - v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **Stroke Carotid Imaging Procedure Profile (R5)**
+* **Stroke Carotid Imaging Procedure Profile**
 
-## Resource Profile: Stroke Carotid Imaging Procedure Profile (R5) 
+## Resource Profile: Stroke Carotid Imaging Procedure Profile 
 
 | | |
 | :--- | :--- |
@@ -12,7 +12,15 @@
 | Active as of 2026-02-19 | *Computable Name*:StrokeCarotidImagingProcedureProfile |
 
  
-Procedure profile to record key stroke procedures, including status, timing, complications, reasons, and context. 
+Profile for documenting **carotid angiography** within a stroke episode. 
+**Design intent** 
+* This profile fixes `Procedure.code` to a specific SNOMED code (angiography of carotid artery).
+* If you want multiple carotid modalities, replace the fixed code with a required binding to CarotidImagingModalityVS.
+ 
+**Use-cases** 
+* Determining whether carotid angiography was performed during the episode.
+* Capturing structured “not done” reasons for audit and quality improvement.
+ 
 
 **Usages:**
 
@@ -39,9 +47,9 @@ Other representations of profile: [CSV](StructureDefinition-stroke-carotid-imagi
   "url" : "http://tecnomod-um.org/StructureDefinition/stroke-carotid-imaging-procedure-profile",
   "version" : "0.1.0",
   "name" : "StrokeCarotidImagingProcedureProfile",
-  "title" : "Stroke Carotid Imaging Procedure Profile (R5)",
+  "title" : "Stroke Carotid Imaging Procedure Profile",
   "status" : "active",
-  "date" : "2026-02-19T10:15:59+00:00",
+  "date" : "2026-02-19T10:59:57+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -54,7 +62,7 @@ Other representations of profile: [CSV](StructureDefinition-stroke-carotid-imagi
       ]
     }
   ],
-  "description" : "Procedure profile to record key stroke procedures, including status, timing, complications, reasons, and context.",
+  "description" : " Profile for documenting **carotid angiography** within a stroke episode.\n\n**Design intent**\n- This profile fixes `Procedure.code` to a specific SNOMED code (angiography of carotid artery).\n- If you want multiple carotid modalities, replace the fixed code with a required binding to CarotidImagingModalityVS.\n\n**Use-cases**\n- Determining whether carotid angiography was performed during the episode.\n- Capturing structured “not done” reasons for audit and quality improvement.",
   "fhirVersion" : "5.0.0",
   "mapping" : [
     {

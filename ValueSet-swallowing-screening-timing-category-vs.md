@@ -12,7 +12,13 @@
 | Active as of 2026-02-19 | *Computable Name*:SwallowingScreeningTimingCategoryVS |
 
  
-Temporal categories relative to stroke onset for swallowing screening. 
+ValueSet defining allowed categories for swallowing screening timing, combining: 
+* local categories (e.g., within 4 hours), and
+* SNOMED CT qualifier concepts for post-admission timing.
+ 
+**Use-case** 
+* Required binding for the swallowing timing extension to standardize KPI reporting across sites.
+ 
 
  **References** 
 
@@ -50,7 +56,7 @@ Temporal categories relative to stroke onset for swallowing screening.
   "name" : "SwallowingScreeningTimingCategoryVS",
   "title" : "Swallowing Screening Timing Category ValueSet",
   "status" : "active",
-  "date" : "2026-02-19T10:15:59+00:00",
+  "date" : "2026-02-19T10:59:57+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -63,7 +69,7 @@ Temporal categories relative to stroke onset for swallowing screening.
       ]
     }
   ],
-  "description" : "Temporal categories relative to stroke onset for swallowing screening.",
+  "description" : "ValueSet defining allowed categories for swallowing screening timing, combining:\n- local categories (e.g., within 4 hours), and\n- SNOMED CT qualifier concepts for post-admission timing.\n\n**Use-case**\n- Required binding for the swallowing timing extension to standardize KPI reporting across sites.",
   "compose" : {
     "include" : [
       {

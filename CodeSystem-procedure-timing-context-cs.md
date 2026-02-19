@@ -1,10 +1,10 @@
-# Procedure Timing Context Code System - v0.1.0
+# Procedure Timing Context CodeSystem - v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **Procedure Timing Context Code System**
+* **Procedure Timing Context CodeSystem**
 
-## CodeSystem: Procedure Timing Context Code System (Experimental) 
+## CodeSystem: Procedure Timing Context CodeSystem (Experimental) 
 
 | | |
 | :--- | :--- |
@@ -12,7 +12,17 @@
 | Active as of 2026-02-19 | *Computable Name*:ProcedureTimingContextCS |
 
  
-Codes defining the timing phase of a procedure relative to the encounter start (e.g., acute vs. post-acute). 
+Local CodeSystem for classifying a procedure into a **timing context** relative to encounter start. 
+**Primary use-case** 
+* Normalize reporting into acute (<24h) vs post-acute (>=24h) phases for stroke process measures.
+ 
+**Why this is useful** 
+* It supports consistent reporting even when onset time is uncertain.
+* It is designed for encounter-based operational KPIs rather than physiologic onset-based timelines.
+ 
+**FHIR placement** 
+* Used in `ProcedureTimingContextExtension` attached to Procedure.
+ 
 
  This Code system is referenced in the content logical definition of the following value sets: 
 
@@ -29,10 +39,10 @@ Codes defining the timing phase of a procedure relative to the encounter start (
   "url" : "http://tecnomod-um.org/CodeSystem/procedure-timing-context-cs",
   "version" : "0.1.0",
   "name" : "ProcedureTimingContextCS",
-  "title" : "Procedure Timing Context Code System",
+  "title" : "Procedure Timing Context CodeSystem",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-19T10:15:59+00:00",
+  "date" : "2026-02-19T10:59:57+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -45,7 +55,7 @@ Codes defining the timing phase of a procedure relative to the encounter start (
       ]
     }
   ],
-  "description" : "Codes defining the timing phase of a procedure relative to the encounter start (e.g., acute vs. post-acute).",
+  "description" : "Local CodeSystem for classifying a procedure into a **timing context** relative to encounter start.\n\n**Primary use-case**\n- Normalize reporting into acute (<24h) vs post-acute (>=24h) phases for stroke process measures.\n\n**Why this is useful**\n- It supports consistent reporting even when onset time is uncertain.\n- It is designed for encounter-based operational KPIs rather than physiologic onset-based timelines.\n\n**FHIR placement**\n- Used in `ProcedureTimingContextExtension` attached to Procedure.",
   "caseSensitive" : false,
   "content" : "complete",
   "count" : 3,

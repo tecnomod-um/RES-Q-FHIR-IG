@@ -1,10 +1,10 @@
-# Swallow Procedures Code System - v0.1.0
+# Swallow Procedures CodeSystem - v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **Swallow Procedures Code System**
+* **Swallow Procedures CodeSystem**
 
-## CodeSystem: Swallow Procedures Code System 
+## CodeSystem: Swallow Procedures CodeSystem 
 
 | | |
 | :--- | :--- |
@@ -12,7 +12,13 @@
 | Active as of 2026-02-19 | *Computable Name*:SwallowProceduresCS |
 
  
-Codes representing various swallowing assessment procedures. 
+Local CodeSystem representing swallowing screening/assessment tools often documented by acronym or local naming. 
+**Primary use-case** 
+* Provide stable, implementable codes when upstream systems cannot supply SNOMED CT equivalents.
+ 
+**FHIR placement** 
+* Included in `SwallowProceduresVS` to be used in `Procedure.code` and (optionally) `Procedure.used.concept`.
+ 
 
  This Code system is referenced in the content logical definition of the following value sets: 
 
@@ -29,9 +35,9 @@ Codes representing various swallowing assessment procedures.
   "url" : "http://tecnomod-um.org/CodeSystem/swallow-procedures-cs",
   "version" : "0.1.0",
   "name" : "SwallowProceduresCS",
-  "title" : "Swallow Procedures Code System",
+  "title" : "Swallow Procedures CodeSystem",
   "status" : "active",
-  "date" : "2026-02-19T10:15:59+00:00",
+  "date" : "2026-02-19T10:59:57+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -44,7 +50,7 @@ Codes representing various swallowing assessment procedures.
       ]
     }
   ],
-  "description" : "Codes representing various swallowing assessment procedures.",
+  "description" : "Local CodeSystem representing swallowing screening/assessment tools often documented by acronym or local naming.\n\n**Primary use-case**\n- Provide stable, implementable codes when upstream systems cannot supply SNOMED CT equivalents.\n\n**FHIR placement**\n- Included in `SwallowProceduresVS` to be used in `Procedure.code` and (optionally) `Procedure.used.concept`.",
   "content" : "complete",
   "count" : 3,
   "concept" : [

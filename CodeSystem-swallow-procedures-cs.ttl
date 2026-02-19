@@ -19,9 +19,9 @@
   ] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "SwallowProceduresCS"] ; # 
-  fhir:title [ fhir:v "Swallow Procedures Code System"] ; # 
+  fhir:title [ fhir:v "Swallow Procedures CodeSystem"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-02-19T10:15:59+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-19T10:59:57+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;
@@ -30,7 +30,7 @@
        fhir:value [ fhir:v "http://tecnomod-um.org" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "Codes representing various swallowing assessment procedures."] ; # 
+  fhir:description [ fhir:v "Local CodeSystem representing swallowing screening/assessment tools often documented by acronym or local naming.\n\n**Primary use-case**\n- Provide stable, implementable codes when upstream systems cannot supply SNOMED CT equivalents.\n\n**FHIR placement**\n- Included in `SwallowProceduresVS` to be used in `Procedure.code` and (optionally) `Procedure.used.concept`."] ; # 
   fhir:content [ fhir:v "complete"] ; # 
   fhir:count [ fhir:v "3"^^xsd:nonNegativeInteger] ; # 
   fhir:concept ( [

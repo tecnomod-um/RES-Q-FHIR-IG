@@ -12,11 +12,23 @@
 | Draft as of 2025-03-31 | *Computable Name*:SwallowProceduresValueset |
 
  
-ValueSet containing SNOMED CT codes representing a range of procedures used in the evaluation and management of stroke patients. 
+ValueSet enumerating swallowing screening/assessment procedures/tools used in stroke care. 
+**Primary use-case** 
+* Required binding for `StrokeSwallowProcedureProfile.code` to ensure the Procedure truly represents a swallow screening/assessment.
+ 
+**Secondary use-case** 
+* Can also be used for `Procedure.used.concept` (R5) to explicitly document the tool used when: 
+* `Procedure.code` is generic, or
+* you want a consistent field for “tool used” across multiple workflow variants.
+ 
+ 
+**Implementation note** 
+* `SCT#261665006 'Unknown'´ is included only as a provisional development workaround; in production, prefer FHIR `dataAbsentReason` for missing data rather than “Unknown” as a procedure code.
+ 
 
  **References** 
 
-* [Stroke Swallow Procedure Profile (R5)](StructureDefinition-stroke-swallow-procedure-profile.md)
+* [Stroke Swallow Procedure Profile](StructureDefinition-stroke-swallow-procedure-profile.md)
 
 ### Logical Definition (CLD)
 
@@ -64,7 +76,7 @@ ValueSet containing SNOMED CT codes representing a range of procedures used in t
       ]
     }
   ],
-  "description" : "ValueSet containing SNOMED CT codes representing a range of procedures used in the evaluation and management of stroke patients.",
+  "description" : "ValueSet enumerating swallowing screening/assessment procedures/tools used in stroke care.\n\n**Primary use-case**\n- Required binding for `StrokeSwallowProcedureProfile.code` to ensure the Procedure truly represents a swallow screening/assessment.\n\n**Secondary use-case**\n- Can also be used for `Procedure.used.concept` (R5) to explicitly document the tool used when:\n  - `Procedure.code` is generic, or\n  - you want a consistent field for “tool used” across multiple workflow variants.\n\n**Implementation note**\n- `SCT#261665006 'Unknown'´ is included only as a provisional development workaround; in production, prefer FHIR `dataAbsentReason` for missing data rather than “Unknown” as a procedure code.",
   "compose" : {
     "include" : [
       {

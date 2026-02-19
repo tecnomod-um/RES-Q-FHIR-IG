@@ -25,8 +25,18 @@ These define constraints on FHIR resources for systems conforming to this implem
 | [Specific Stroke Finding Observation Profile (R5)](StructureDefinition-specific-finding-observation-profile.md) | Profile for recording discrete, coded stroke-related findings and assessment outcomes that do not fit naturally into the vital-sign, functional-score, or timing-metric profiles. Observation.code is constrained to StrokeFindingCodesVS, and Observation.valueCodeableConcept carries the corresponding assessment result or status.Typical use cases include:* documenting AF/flutter assessment status as present/absent/unknown (valueCodeableConcept bound to an AF/flutter status ValueSet), and
 * documenting procedural outcome grades such as mTICI (valueCodeableConcept bound to MticiScoreVS).
 This profile deliberately encodes the result as a CodeableConcept to support categorical outcomes and interoperability. It does not replace Condition for asserting diagnoses; when a durable diagnosis is established (e.g., confirmed AF), represent it as a Condition and optionally link supporting Observations (screening results, monitoring runs) using hasMember, derivedFrom, or Provenance. |
-| [Stroke Brain Imaging Procedure Profile (R5)](StructureDefinition-stroke-brain-imaging-procedure-profile.md) | Procedure profile to record key stroke procedures, including status, timing, complications, reasons, and context. |
-| [Stroke Carotid Imaging Procedure Profile (R5)](StructureDefinition-stroke-carotid-imaging-procedure-profile.md) | Procedure profile to record key stroke procedures, including status, timing, complications, reasons, and context. |
+| [Stroke Brain Imaging Procedure Profile](StructureDefinition-stroke-brain-imaging-procedure-profile.md) | Profile for documenting **brain imaging performed during a stroke episode** as a FHIR R5 Procedure.**Captures*** `code`: imaging modality/protocol (required; standardized via BrainImagingModalityVS).
+* `status`: procedure state (required).
+* `statusReason`: why it was not done (when applicable).
+* `occurrence[x]`: when imaging occurred (recommended/required by invariant when done locally).
+* `extension[timingContext]`: acute/post-acute phase classification relative to encounter start.
+**Typical scenarios** 1) Imaging completed on-site: `status=completed`, `occurrence[x]` present, `timingContext` optional. 2) Imaging not performed: `status=not-done`, `statusReason` required. 3) Imaging performed elsewhere: if your IG uses a “performed elsewhere” indicator extension, rules may allow missing on-site timestamps.**Downstream use*** Door-to-imaging metrics, protocol utilization, cross-site comparability.
+ |
+| [Stroke Carotid Imaging Procedure Profile](StructureDefinition-stroke-carotid-imaging-procedure-profile.md) | Profile for documenting **carotid angiography** within a stroke episode.**Design intent*** This profile fixes `Procedure.code` to a specific SNOMED code (angiography of carotid artery).
+* If you want multiple carotid modalities, replace the fixed code with a required binding to CarotidImagingModalityVS.
+**Use-cases*** Determining whether carotid angiography was performed during the episode.
+* Capturing structured “not done” reasons for audit and quality improvement.
+ |
 | [Stroke Circumstance Observation Profile (R5)](StructureDefinition-stroke-circumstance-observation-profile.md) | Profile for documenting clinically relevant circumstances of stroke symptom onset (e.g., wake-up stroke, in-hospital onset). The circumstance is represented by Observation.code (bound to StrokeCircumstanceCodesVS); the presence of the Observation asserts that the circumstance applies to the index event within the associated Encounter.The profile supports linking supporting evidence via hasMember (e.g., Observations capturing last-known-well time, symptom discovery time, or other onset-related details) without overloading the circumstance code itself. This profile intentionally does not encode onset timestamps in the code; temporal details should be modeled separately for precision and auditability. |
 | [Stroke Diagnosis Condition Profile](StructureDefinition-stroke-diagnosis-condition-profile.md) | Defines a Condition profile constrained to represent the definitive diagnosis of the current stroke event during the indexed encounter. The profile fixes category to encounter-diagnosis, binds code (required) to StrokeDiagnosisVS, and prohibits onset[x] to avoid ambiguity with symptom-onset capture via dedicated extensions. Use this profile for final/confirmed stroke diagnoses recorded at discharge or after diagnostic workup; do not use it for history-of conditions, screening findings, or provisional ‘rule-out’ statements. Optional extensions capture hemorrhagic bleeding reason, ischemic etiology, and structured onset date/time when clinically known. |
 | [Stroke Encounter Profile](StructureDefinition-stroke-encounter-profile.md) | Profile for an Encounter resource representing a patient's hospital admission and stay for a stroke event, including key administrative and workflow details. |
@@ -35,8 +45,31 @@ This profile deliberately encodes the result as a CodeableConcept to support cat
 The profile does not model itemized NIHSS components, assessor training, or interview method; implementers may represent those details separately when needed (e.g., additional Observations, extensions, or provenance). |
 | [Stroke Registry Organization Profile](StructureDefinition-stroke-registry-organization-profile.md) | Organization profile ensuring an active organization with a registry identifier (system=https://stroke.qualityregistry.org) and a required name, aligned with the build_organization() transformation. |
 | [Stroke Risk Factor Condition Profile](StructureDefinition-stroke-risk-factor-condition-profile.md) | Defines a Condition profile for pre-existing or concurrent conditions that increase stroke risk (e.g., atrial fibrillation/flutter, diabetes, hypertension, coronary disease). The profile fixes category to problem-list-item, binds code (required) to StrokeRiskFactorVS, and supports onset[x] and recordedDate to document chronology and longitudinal tracking. Use this profile to maintain the problem list and to support risk assessment and CDS; do not use it to code the acute stroke event itself. |
-| [Stroke Swallow Procedure Profile (R5)](StructureDefinition-stroke-swallow-procedure-profile.md) | Procedure profile to record key stroke procedures, including status, timing, complications, reasons, and context. |
-| [Stroke Thrombolysis Procedure Profile (R5)](StructureDefinition-stroke-mechanical-procedure-profile.md) | Procedure profile to record key stroke procedures, including status, timing, complications, reasons, and context. |
+| [Stroke Swallow Procedure Profile](StructureDefinition-stroke-swallow-procedure-profile.md) | Profile for documenting **swallow screening / dysphagia assessment** during a stroke episode.**Captures*** `code`: the screening/assessment procedure or tool used (SwallowProceduresVS).
+* `status`: whether completed or not done.
+* `statusReason`: controlled reason set when not done.
+* `extension[screeningTimingCategory]`: timing bucket (e.g., within 4h) for KPI reporting.
+* `extension[timingContext]`: acute/post-acute phase relative to encounter start.
+* `used.concept` (R5): explicitly documents the tool used, especially when: 
+* `code` is generic, or
+* you want a consistent “tool used” field for analytics and comparison.
+ 
+**Use-cases*** Compliance monitoring: swallow screen performed early after stroke.
+* Tool utilization analysis (GUSS vs V-VST vs others).
+* Supporting aspiration pneumonia prevention workflows.
+ |
+| [Stroke Thrombolysis Procedure Profile](StructureDefinition-stroke-mechanical-procedure-profile.md) | Profile for documenting **stroke reperfusion procedures** as FHIR Procedure:* IV thrombolysis (IVT)
+* Mechanical thrombectomy (MT)
+**Captures*** `code`: restricted to reperfusion procedures (PerforationProceduresVS).
+* `status`: completed/not-done/etc.
+* `statusReason`: controlled reason set when not done.
+* `occurrence[x]` (constrained to Period): start/end time of the intervention when available.
+* `complication`: complications (as CodeableReference to Condition) — constrained by invariants.
+* `extension[timingContext]`: acute/post-acute phase classification.
+**Use-cases*** Time-to-treatment metrics (door-to-needle, door-to-groin), service evaluation.
+* Structured documentation of “why not treated” for QI programs.
+* Safety monitoring for procedural complications.
+ |
 | [Stroke Timing Metric Observation Profile (R5)](StructureDefinition-timing-metric-observation-profile.md) | Profile for recording acute stroke process timing metrics as measured durations (e.g., Door-to-Needle, Door-to-Groin). Observation.code is bound to TimingMetricCodesVS, and Observation.valueQuantity represents the elapsed time as a duration in UCUM minutes.This representation is optimized for quality monitoring and analytics, where the interval value is the primary datum. The profile allows hasMember references to associate related sub-metrics or supporting Observations when a composite metric is derived from multiple recorded steps.Scope note: This profile records the interval value; it does not require recording the underlying event timestamps. If timestamp provenance is needed, implementers should capture the source event times separately (e.g., additional Observations or extensions) to support auditing and cross-site comparability. |
 | [Stroke Vital Sign Observation Profile](StructureDefinition-vital-sign-observation-profile.md) | Profile for recording key blood pressure vital signs in stroke patients using a single Observation with components. The Observation is categorized as vital-signs and uses component slices for systolic and diastolic blood pressure, each represented as a Quantity in UCUM mm[Hg].This profile supports repeated measurements over time by recording separate Observations at different effective[x] timestamps (e.g., arrival, post-thrombolysis monitoring, ICU). It intentionally does not model measurement conditions such as body position, cuff site, or device; such details may be captured via Observation.method, device references, or additional extensions if required by local workflows. |
 
@@ -56,7 +89,12 @@ These define constraints on FHIR data types for systems conforming to this imple
 * this extension records the standardized phase label used for reporting and comparability across sites.
 The value is a required CodeableConcept bound to AssessmentContextVS (required), ensuring only supported timing contexts are used in this implementation guide. |
 | [Patient Age (integer)](StructureDefinition-patient-age-ext.md) | Patient age in years represented as an integer. |
-| [Procedure Timing Context Extension](StructureDefinition-procedure-timing-context-ext.md) | Specifies the timing phase (e.g., acute, post-acute) in which the procedure was performed relative to the start of the encounter. |
+| [Procedure Timing Context Extension](StructureDefinition-procedure-timing-context-ext.md) | Extension classifying the procedure into a **timing context** relative to encounter start (acute/post-acute).**Primary use-case*** Operational reporting where “phase of care” is needed for compliance measures.
+**When to use*** When you want a stable, comparable phase label across sites (even if absolute times differ or onset time is uncertain).
+**Interpretation guidance*** Use `acute` for procedures within 24 hours of encounter start.
+* Use `post-acute` for procedures after 24 hours.
+* Use `unknown` when encounter/timing data are insufficient.
+ |
 | [Required Post-Acute Care Extension](StructureDefinition-required-post-acute-care-ext.md) | Indicates whether the patient required hospitalization beyond 24 hours after the designated acute phase of stroke care for this encounter. |
 | [Stroke Onset Date](StructureDefinition-onset-date-ext.md) | Captures the calendar date (value[x] = date) of symptom onset for the indexed stroke event when known, enabling calculation of onset-to-door metrics and adherence to time-sensitive pathways. Use alongside OnsetTimeExt when hour/minute precision is available; omit if onset is unknown or inapplicable. |
 | [Stroke Onset Time](StructureDefinition-onset-time-ext.md) | Captures the clock time (value[x] = time) of symptom onset for the indexed stroke event when available, complementing OnsetDateExt to support precise onset-to-treatment intervals. Use local time of the clinical setting; omit if time is unknown or estimated beyond acceptable precision. |
@@ -91,8 +129,12 @@ This ValueSet does not convey timing, vessel location, modality, or technique; t
 | [Medications ValueSet](ValueSet-medication-vs.md) | SNOMED CT codes for drug products or substances. |
 | [Modified Rankin Scale (mRS) Score ValueSet](ValueSet-mrs-score-vs.md) | This ValueSet includes all modified Rankin Scale (mRS) grades defined in the MRsScoreCS CodeSystem (0–6). It is intended to be bound to Observation.valueCodeableConcept when the Observation.code indicates that the observation represents an mRS score. |
 | [Modified Thrombolysis in Cerebral Infarction Assessment ValueSet](ValueSet-mtici-code-vs.md) | This ValueSet includes the mTICI assessment concept code(s) from MTICICodeCS for use as Observation.code when recording an mTICI reperfusion grade. It is intended to be paired with a binding of Observation.valueCodeableConcept to MticiScoreVS.Separating the “assessment concept” ValueSet (this ValueSet) from the “assessment result” ValueSet (MticiScoreVS) enables clearer validation rules, consistent UI behavior, and safer reuse of the mTICI scoring system across profiles. |
-| [Perforation Procedures ValueSet](ValueSet-perforation-procedures-vs.md) | ValueSet containing SNOMED CT codes representing a range of perforation procedures. |
-| [Procedure Timing Context ValueSet](ValueSet-procedure-timing-context-vs.md) | ValueSet for codes defining the timing phase of a procedure relative to the encounter start. |
+| [Perforation Procedures ValueSet](ValueSet-perforation-procedures-vs.md) | ValueSet restricting Procedure codes to stroke **reperfusion interventions**:* IV thrombolysis (IVT)
+* Mechanical thrombectomy (MT)
+**Primary use-case*** Required binding for `StrokeThrombolysisProcedureProfile.code` (which covers reperfusion procedures in this IG).
+ |
+| [Procedure Timing Context ValueSet](ValueSet-procedure-timing-context-vs.md) | ValueSet limiting allowed values for the Procedure timing context extension (acute/post-acute/unknown).**Use-case*** Required binding to ensure comparable phase classification across systems and sites.
+ |
 | [Specific Stroke Finding Codes ValueSet](ValueSet-specific-finding-codes-vs.md) | This ValueSet provides SNOMED CT disorder concepts for specific clinically relevant findings often referenced in the stroke workup, currently limited to atrial fibrillation and atrial flutter disorders.These codes are suitable when the intent is to reference the disorder concepts themselves (e.g., as a focus finding or a coded problem). When the intent is to capture the **status of an assessment** (present/absent/unknown) rather than assert a diagnosis, implementers should use an Observation with a dedicated assessment concept as Observation.code and bind Observation.valueCodeableConcept to an appropriate status ValueSet (e.g., AfibFlutterStatusVS). |
 | [Specific Stroke Finding Codes ValueSet](ValueSet-stroke-finding-codes-vs.md) | This ValueSet aggregates a small set of coded “finding/assessment concepts” used by the SpecificFindingObservationProfile for stroke-related documentation. It currently includes:* specific disorder concepts relevant to stroke workup (from SpecificFindingCodesVS), and
 * the mTICI assessment concept code (from MTICICodeVS).
@@ -105,13 +147,23 @@ Implementer note: This ValueSet is used to constrain Observation.code. Where Obs
 | [Stroke Functional Score Codes ValueSet](ValueSet-functional-score-codes-vs.md) | This ValueSet defines the allowable Observation.code concepts for stroke functional and severity scoring instruments represented in this guide: modified Rankin Scale (mRS) and NIH Stroke Scale (NIHSS), expressed as SNOMED CT observable entities.It is intended to be bound to Observation.code in the FunctionalScoreObservationProfile. Downstream validation/invariants then enforce the appropriate datatype of Observation.value[x]:* mRS is captured as a coded ordinal category (valueCodeableConcept bound to MRsScoreVS).
 * NIHSS is captured as a numeric total score (valueInteger), representing the summed NIHSS total rather than item-level subscores.
  |
-| [Stroke Procedure Not Done Reason ValueSet](ValueSet-stroke-proc-not-done-reason-vs.md) | ValueSet containing specific codes to indicate why thrombolysis or thrombectomy was not performed. |
+| [Stroke Procedure Not Done Reason ValueSet](ValueSet-stroke-proc-not-done-reason-vs.md) | ValueSet containing the controlled vocabulary of reasons for `Procedure.statusReason` when a stroke procedure is `not-done`. |
 | [Stroke Risk Factor ValueSet](ValueSet-stroke-risk-factor-vs.md) | Defines the SNOMED CT codes for conditions or risk factors relevant to stroke, including an option for unknown status. |
 | [Stroke Timing Metric Codes ValueSet](ValueSet-timing-metric-codes-vs.md) | This ValueSet includes all timing metric codes defined in TimingMetricCodesCS for use as Observation.code when recording acute stroke process intervals (e.g., D2N, D2G). It supports required binding in the TimingMetricObservationProfile, ensuring only approved timing metrics are recorded.The ValueSet is intentionally constrained to promote consistent, comparable reporting across implementations and to reduce ambiguity in downstream analytics. |
 | [Stroke Vital Sign Codes ValueSet](ValueSet-vital-sign-codes-vs.md) | This ValueSet defines SNOMED CT observable-entity codes for the blood pressure components captured as vital signs in the acute stroke setting (systolic and diastolic blood pressure). It is intended for use as Observation.component.code in a single vital-sign Observation that records both components using UCUM units (mm[Hg]).Including only the component codes (rather than full LOINC panels) keeps the representation lightweight while remaining semantically precise, and supports repeated measurements across time (e.g., triage, post-thrombolysis monitoring) by repeating the Observation with different effective[x] timestamps. |
-| [Swallow Procedures ValueSet](ValueSet-swallow-procedures-vs.md) | ValueSet containing SNOMED CT codes representing a range of procedures used in the evaluation and management of stroke patients. |
-| [Swallowing Screening Timing Category ValueSet](ValueSet-swallowing-screening-timing-category-vs.md) | Temporal categories relative to stroke onset for swallowing screening. |
-| [Thrombectomy Complication ValueSet](ValueSet-thrombectomy-complication-vs.md) | Defines the specific complications of thrombectomy to record. |
+| [Swallow Procedures ValueSet](ValueSet-swallow-procedures-vs.md) | ValueSet enumerating swallowing screening/assessment procedures/tools used in stroke care.**Primary use-case*** Required binding for `StrokeSwallowProcedureProfile.code` to ensure the Procedure truly represents a swallow screening/assessment.
+**Secondary use-case*** Can also be used for `Procedure.used.concept` (R5) to explicitly document the tool used when: 
+* `Procedure.code` is generic, or
+* you want a consistent field for “tool used” across multiple workflow variants.
+ 
+**Implementation note*** `SCT#261665006 'Unknown'´ is included only as a provisional development workaround; in production, prefer FHIR `dataAbsentReason` for missing data rather than “Unknown” as a procedure code.
+ |
+| [Swallowing Screening Timing Category ValueSet](ValueSet-swallowing-screening-timing-category-vs.md) | ValueSet defining allowed categories for swallowing screening timing, combining:* local categories (e.g., within 4 hours), and
+* SNOMED CT qualifier concepts for post-admission timing.
+**Use-case*** Required binding for the swallowing timing extension to standardize KPI reporting across sites.
+ |
+| [Thrombectomy Complications ValueSet](ValueSet-thrombectomy-complication-vs.md) | ValueSet of SNOMED CT concepts representing complications of thrombectomy as clinical conditions.**Primary use-case*** Bind `Procedure.complication` (or the referenced Condition.code) to a SNOMED-based set for interoperability.
+ |
 
 ### Terminology: Code Systems 
 
@@ -136,15 +188,33 @@ These define new code systems used by systems conforming to this implementation 
 | [Modified Thrombolysis in Cerebral Infarction Assessment CodeSystem](CodeSystem-mtici-code-cs.md) | This CodeSystem defines the assessment concept code(s) used to indicate that an Observation is reporting an mTICI reperfusion grade. It is intentionally separated from the MticiScoreCS CodeSystem, which contains the actual mTICI grade values (0–3 with 2a/2b/2c).In practice:* Observation.code identifies the **kind of measurement/assessment** (“mTICI reperfusion grade”).
 * Observation.valueCodeableConcept carries the **result** (one of the mTICI grades from MticiScoreVS).
 This separation improves semantic clarity and supports consistent validation and analytics across systems. |
-| [Procedure Timing Context Code System](CodeSystem-procedure-timing-context-cs.md) | Codes defining the timing phase of a procedure relative to the encounter start (e.g., acute vs. post-acute). |
+| [Procedure Timing Context CodeSystem](CodeSystem-procedure-timing-context-cs.md) | Local CodeSystem for classifying a procedure into a **timing context** relative to encounter start.**Primary use-case*** Normalize reporting into acute (<24h) vs post-acute (>=24h) phases for stroke process measures.
+**Why this is useful*** It supports consistent reporting even when onset time is uncertain.
+* It is designed for encounter-based operational KPIs rather than physiologic onset-based timelines.
+**FHIR placement*** Used in `ProcedureTimingContextExtension` attached to Procedure.
+ |
 | [Stroke Circumstance Codes CodeSystem](CodeSystem-stroke-circumstance-codes-cs.md) | This CodeSystem defines coded circumstances related to stroke symptom onset that are clinically relevant for eligibility decisions, diagnostic reasoning, and reporting—particularly when the exact onset time is unknown or atypical.These codes are intended to be used as Observation.code in the StrokeCircumstanceObservationProfile to assert that a given onset circumstance applies to the index stroke event. They do not encode the precise onset timestamp, last-known-well time, or location of onset; those details should be represented separately (e.g., dedicated Observations, Encounter/Condition attributes, or extensions). |
 | [Stroke Discharge Destination Code System](CodeSystem-stroke-discharge-destination-cs.md) | Codes indicating the possible destinations of the patient upon discharge from the encounter. |
 | [Stroke Etiology Code System](CodeSystem-stroke-etiology-cs.md) | Codes indicating the etiology of strokes. |
-| [Stroke Procedure Not Done Reason Code System](CodeSystem-stroke-proc-not-done-reason-cs.md) | Codes specifying the reason principal for not performing a key stroke procedure (Thrombolysis, Thrombectomy). |
+| [Stroke Procedure Not Done Reasons CodeSystem](CodeSystem-stroke-proc-not-done-reason-cs.md) | Local CodeSystem enumerating standardized reasons why a key stroke procedure (e.g., IV thrombolysis or mechanical thrombectomy) was **not performed**.**Primary use-case*** Populate `Procedure.statusReason` when `Procedure.status = not-done`.
+**Why it matters*** Captures the difference between: 
+* clinical ineligibility (contraindication),
+* time-based ineligibility (outside window),
+* operational constraints (unavailable),
+* patient choice (refusal),
+* care pathway differences (performed elsewhere / transfer).
+ 
+ |
 | [Stroke Timing Metric Codes CodeSystem](CodeSystem-timing-metric-codes-cs.md) | This CodeSystem defines codes for key time-interval process metrics in acute stroke care used for quality monitoring and pathway optimization. Each code represents a duration measured in minutes between two clinically meaningful events (e.g., hospital arrival to thrombolysis start).These metrics are commonly used in performance dashboards, registry submissions, and quality improvement programs. The intent is to store the **measured interval** (a duration) in Observation.valueQuantity (UCUM minutes), while event timestamps (arrival time, needle time, groin puncture time) may be stored separately when available. |
-| [Swallow Procedures Code System](CodeSystem-swallow-procedures-cs.md) | Codes representing various swallowing assessment procedures. |
+| [Swallow Procedures CodeSystem](CodeSystem-swallow-procedures-cs.md) | Local CodeSystem representing swallowing screening/assessment tools often documented by acronym or local naming.**Primary use-case*** Provide stable, implementable codes when upstream systems cannot supply SNOMED CT equivalents.
+**FHIR placement*** Included in `SwallowProceduresVS` to be used in `Procedure.code` and (optionally) `Procedure.used.concept`.
+ |
 | [Swallowing Screening Timing Category Code System](CodeSystem-swallow-screen-time-cs.md) | Temporal categories relative to stroke onset for swallowing screening. |
-| [Thrombectomy Complication Code System](CodeSystem-thrombectomy-complication-cs.md) | Codes specifying the specific complications of thrombectomy to record. |
+| [Thrombectomy Complication CodeSystem](CodeSystem-thrombectomy-complication-cs.md) | Local CodeSystem for complications occurring during mechanical thrombectomy.**When to use*** If you need a controlled internal vocabulary for adverse events/complications, especially when upstream systems do not provide SNOMED-coded diagnoses.
+**How it is used in FHIR R5*** Usually referenced from `Procedure.complication` which is a `CodeableReference(Condition)` in R5.
+* You may represent the complication as a `Condition` (preferred), and/or record a code directly depending on your implementation pattern.
+**Why it exists*** Supports minimum-set reporting across sites and enables consistent quality/safety analytics.
+ |
 
 ### Example: Example Instances 
 

@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "brain-imaging-type-cs"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem brain-imaging-type-cs</b></p><a name=\"brain-imaging-type-cs\"> </a><a name=\"hcbrain-imaging-type-cs\"> </a><p>This  code system <code>http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">ct-cta<a name=\"brain-imaging-type-cs-ct-cta\"> </a></td><td>CT-CTA</td><td>Computed Tomography (CT) and CT Angiography (CTA)</td></tr><tr><td style=\"white-space:nowrap\">ct-cta-perfusion<a name=\"brain-imaging-type-cs-ct-cta-perfusion\"> </a></td><td>CT-CTA and Perfusion</td><td>Computed Tomography (CT), CT Angiography (CTA), and CT Perfusion</td></tr><tr><td style=\"white-space:nowrap\">mr-dwi-flair<a name=\"brain-imaging-type-cs-mr-dwi-flair\"> </a></td><td>MR DWI-FLAIR</td><td>Magnetic Resonance Imaging (MRI) with Diffusion-Weighted Imaging (DWI) or Fluid-Attenuated Inversion Recovery (FLAIR)</td></tr><tr><td style=\"white-space:nowrap\">mr-dwi-flair-mra<a name=\"brain-imaging-type-cs-mr-dwi-flair-mra\"> </a></td><td>MR DWI-FLAIR and MRA</td><td>Magnetic Resonance Imaging (MRI) with Diffusion-Weighted Imaging (DWI) or Fluid-Attenuated Inversion Recovery (FLAIR), and Magnetic Resonance Angiography (MRA)</td></tr><tr><td style=\"white-space:nowrap\">mr-dwi-flair-mra-perfusion<a name=\"brain-imaging-type-cs-mr-dwi-flair-mra-perfusion\"> </a></td><td>MR DWI-FLAIR, MRA, and Perfusion</td><td>Magnetic Resonance Imaging (MRI) with Diffusion-Weighted Imaging (DWI) and Fluid-Attenuated Inversion Recovery (FLAIR), Magnetic Resonance Angiography (MRA), and MR Perfusion</td></tr></table></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem brain-imaging-type-cs</b></p><a name=\"brain-imaging-type-cs\"> </a><a name=\"hcbrain-imaging-type-cs\"> </a><p>This  code system <code>http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">ct-cta<a name=\"brain-imaging-type-cs-ct-cta\"> </a></td><td>CT-CTA</td><td>CT + CT Angiography. Use when recorded as a combined protocol and not decomposed into separate procedure entries.</td></tr><tr><td style=\"white-space:nowrap\">ct-cta-perfusion<a name=\"brain-imaging-type-cs-ct-cta-perfusion\"> </a></td><td>CT-CTA and Perfusion</td><td>CT + CTA + CT Perfusion. Often used for penumbra/mismatch-based selection in acute stroke.</td></tr><tr><td style=\"white-space:nowrap\">mr-dwi-flair<a name=\"brain-imaging-type-cs-mr-dwi-flair\"> </a></td><td>MR DWI-FLAIR</td><td>MRI with DWI and/or FLAIR. Supports imaging-based estimates of lesion age and tissue characterization.</td></tr><tr><td style=\"white-space:nowrap\">mr-dwi-flair-mra<a name=\"brain-imaging-type-cs-mr-dwi-flair-mra\"> </a></td><td>MR DWI-FLAIR and MRA</td><td>MRI (DWI/FLAIR) + MRA. Represents combined parenchymal and vascular assessment.</td></tr><tr><td style=\"white-space:nowrap\">mr-dwi-flair-mra-perfusion<a name=\"brain-imaging-type-cs-mr-dwi-flair-mra-perfusion\"> </a></td><td>MR DWI-FLAIR, MRA, and Perfusion</td><td>MRI (DWI/FLAIR) + MRA + perfusion. Represents advanced tissue and vessel evaluation.</td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:url [
      fhir:v "http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs"^^xsd:anyURI ;
@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "BrainImagingTypeCS"] ; # 
   fhir:title [ fhir:v "Brain Imaging Type Code System"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-02-19T10:15:59+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-19T10:59:57+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;
@@ -36,23 +36,23 @@
   fhir:concept ( [
      fhir:code [ fhir:v "ct-cta" ] ;
      fhir:display [ fhir:v "CT-CTA" ] ;
-     fhir:definition [ fhir:v "Computed Tomography (CT) and CT Angiography (CTA)" ]
+     fhir:definition [ fhir:v "CT + CT Angiography. Use when recorded as a combined protocol and not decomposed into separate procedure entries." ]
   ] [
      fhir:code [ fhir:v "ct-cta-perfusion" ] ;
      fhir:display [ fhir:v "CT-CTA and Perfusion" ] ;
-     fhir:definition [ fhir:v "Computed Tomography (CT), CT Angiography (CTA), and CT Perfusion" ]
+     fhir:definition [ fhir:v "CT + CTA + CT Perfusion. Often used for penumbra/mismatch-based selection in acute stroke." ]
   ] [
      fhir:code [ fhir:v "mr-dwi-flair" ] ;
      fhir:display [ fhir:v "MR DWI-FLAIR" ] ;
-     fhir:definition [ fhir:v "Magnetic Resonance Imaging (MRI) with Diffusion-Weighted Imaging (DWI) or Fluid-Attenuated Inversion Recovery (FLAIR)" ]
+     fhir:definition [ fhir:v "MRI with DWI and/or FLAIR. Supports imaging-based estimates of lesion age and tissue characterization." ]
   ] [
      fhir:code [ fhir:v "mr-dwi-flair-mra" ] ;
      fhir:display [ fhir:v "MR DWI-FLAIR and MRA" ] ;
-     fhir:definition [ fhir:v "Magnetic Resonance Imaging (MRI) with Diffusion-Weighted Imaging (DWI) or Fluid-Attenuated Inversion Recovery (FLAIR), and Magnetic Resonance Angiography (MRA)" ]
+     fhir:definition [ fhir:v "MRI (DWI/FLAIR) + MRA. Represents combined parenchymal and vascular assessment." ]
   ] [
      fhir:code [ fhir:v "mr-dwi-flair-mra-perfusion" ] ;
      fhir:display [ fhir:v "MR DWI-FLAIR, MRA, and Perfusion" ] ;
-     fhir:definition [ fhir:v "Magnetic Resonance Imaging (MRI) with Diffusion-Weighted Imaging (DWI) and Fluid-Attenuated Inversion Recovery (FLAIR), Magnetic Resonance Angiography (MRA), and MR Perfusion" ]
+     fhir:definition [ fhir:v "MRI (DWI/FLAIR) + MRA + perfusion. Represents advanced tissue and vessel evaluation." ]
   ] ) . # 
 
 # -------------------------------------------------------------------------------------

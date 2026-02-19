@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Thrombectomy Complication Code System -  v0.1.0</title>
+    <title>Thrombectomy Complication CodeSystem -  v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -131,7 +131,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Thrombectomy Complication Code System</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Thrombectomy Complication CodeSystem</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -187,7 +187,7 @@
 </ul>
 
   <a name="root"> </a>
-  <h2 id="root">CodeSystem: Thrombectomy Complication Code System
+  <h2 id="root">CodeSystem: Thrombectomy Complication CodeSystem
 
   </h2>
 
@@ -229,7 +229,23 @@
   </table>
 
 <p>
-<p>Codes specifying the specific complications of thrombectomy to record.</p>
+<p>Local CodeSystem for complications occurring during mechanical thrombectomy.</p>
+
+<p><strong>When to use</strong></p>
+<ul>
+  <li>If you need a controlled internal vocabulary for adverse events/complications, especially when upstream systems do not provide SNOMED-coded diagnoses.</li>
+</ul>
+
+<p><strong>How it is used in FHIR R5</strong></p>
+<ul>
+  <li>Usually referenced from <code class="language-plaintext highlighter-rouge">Procedure.complication</code> which is a <code class="language-plaintext highlighter-rouge">CodeableReference(Condition)</code> in R5.</li>
+  <li>You may represent the complication as a <code class="language-plaintext highlighter-rouge">Condition</code> (preferred), and/or record a code directly depending on your implementation pattern.</li>
+</ul>
+
+<p><strong>Why it exists</strong></p>
+<ul>
+  <li>Supports minimum-set reporting across sites and enables consistent quality/safety analytics.</li>
+</ul>
 
 </p>
 
@@ -277,7 +293,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 10:15+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 10:59+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

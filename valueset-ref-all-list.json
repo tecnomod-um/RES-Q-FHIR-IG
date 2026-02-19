@@ -26,24 +26,24 @@
       "sources" : ["2.16.840.1.113883.4.642.3.21"],
       "uses" : {
       },
-      "StructureDefinition-prior-medication-statement-profile.html" : "Prior Medication Statement Profile (R5)",
-      "StructureDefinition-stroke-registry-organization-profile.html" : "Stroke Registry Organization Profile",
-      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
-      "StructureDefinition-discharge-medication-request-profile.html" : "Discharge Medication Request Profile",
       "StructureDefinition-patient-age-gender-snomed-profile.html" : "Patient with SNOMED Gender and Age (extensions)",
-      "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
-      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile (R5)",
-      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
-      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile (R5)",
-      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile (R5)",
-      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
-      "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
-      "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
-      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile (R5)",
+      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
+      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
+      "StructureDefinition-discharge-medication-request-profile.html" : "Discharge Medication Request Profile",
+      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile",
       "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile",
-      "StructureDefinition-stroke-diagnosis-condition-profile.html" : "Stroke Diagnosis Condition Profile",
+      "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
+      "StructureDefinition-stroke-risk-factor-condition-profile.html" : "Stroke Risk Factor Condition Profile",
+      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
       "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)",
-      "StructureDefinition-stroke-risk-factor-condition-profile.html" : "Stroke Risk Factor Condition Profile"
+      "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
+      "StructureDefinition-prior-medication-statement-profile.html" : "Prior Medication Statement Profile (R5)",
+      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
+      "StructureDefinition-stroke-diagnosis-condition-profile.html" : "Stroke Diagnosis Condition Profile",
+      "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
+      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
+      "StructureDefinition-stroke-registry-organization-profile.html" : "Stroke Registry Organization Profile",
+      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/body-site",
@@ -65,19 +65,19 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
-      "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
-      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile (R5)",
-      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
-      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile (R5)",
-      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile (R5)",
-      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
+      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
+      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
+      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile",
       "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
-      "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
-      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile (R5)",
-      "StructureDefinition-stroke-diagnosis-condition-profile.html" : "Stroke Diagnosis Condition Profile",
+      "StructureDefinition-stroke-risk-factor-condition-profile.html" : "Stroke Risk Factor Condition Profile",
+      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
       "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)",
-      "StructureDefinition-stroke-risk-factor-condition-profile.html" : "Stroke Risk Factor Condition Profile"
+      "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
+      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
+      "StructureDefinition-stroke-diagnosis-condition-profile.html" : "Stroke Diagnosis Condition Profile",
+      "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
+      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
+      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/clinical-findings",
@@ -168,13 +168,13 @@
       ],
       "uses" : {
       },
+      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
+      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
       "StructureDefinition-prior-medication-statement-profile.html" : "Prior Medication Statement Profile (R5)",
-      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile (R5)",
+      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
       "StructureDefinition-discharge-medication-request-profile.html" : "Discharge Medication Request Profile",
-      "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile",
-      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile (R5)",
-      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile (R5)",
-      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile (R5)"
+      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile",
+      "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/condition-severity",
@@ -272,13 +272,13 @@
       "sources" : ["2.16.840.1.113883.4.642.3.5"],
       "uses" : {
       },
-      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
-      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
-      "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
       "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
       "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
-      "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)",
-      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations"
+      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
+      "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
+      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
+      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
+      "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/device-action",
@@ -300,10 +300,10 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile (R5)",
-      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile (R5)",
-      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile (R5)",
-      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile (R5)"
+      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
+      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
+      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
+      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/device-type",
@@ -321,10 +321,10 @@
       "sources" : ["2.16.840.1.113883.4.642.3.1376"],
       "uses" : {
       },
-      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile (R5)",
-      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile (R5)",
-      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile (R5)",
-      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile (R5)"
+      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
+      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
+      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
+      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/encounter-diagnosis-use",
@@ -564,10 +564,10 @@
       "sources" : ["2.16.840.1.113883.4.642.3.109"],
       "uses" : {
       },
-      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile (R5)",
-      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile (R5)",
-      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile (R5)",
-      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile (R5)"
+      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
+      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
+      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
+      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/identifier-type",
@@ -615,24 +615,24 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-prior-medication-statement-profile.html" : "Prior Medication Statement Profile (R5)",
-      "StructureDefinition-stroke-registry-organization-profile.html" : "Stroke Registry Organization Profile",
-      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
-      "StructureDefinition-discharge-medication-request-profile.html" : "Discharge Medication Request Profile",
       "StructureDefinition-patient-age-gender-snomed-profile.html" : "Patient with SNOMED Gender and Age (extensions)",
-      "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
-      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile (R5)",
-      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
-      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile (R5)",
-      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile (R5)",
-      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
-      "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
-      "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
-      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile (R5)",
+      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
+      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
+      "StructureDefinition-discharge-medication-request-profile.html" : "Discharge Medication Request Profile",
+      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile",
       "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile",
-      "StructureDefinition-stroke-diagnosis-condition-profile.html" : "Stroke Diagnosis Condition Profile",
+      "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
+      "StructureDefinition-stroke-risk-factor-condition-profile.html" : "Stroke Risk Factor Condition Profile",
+      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
       "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)",
-      "StructureDefinition-stroke-risk-factor-condition-profile.html" : "Stroke Risk Factor Condition Profile"
+      "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
+      "StructureDefinition-prior-medication-statement-profile.html" : "Prior Medication Statement Profile (R5)",
+      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
+      "StructureDefinition-stroke-diagnosis-condition-profile.html" : "Stroke Diagnosis Condition Profile",
+      "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
+      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
+      "StructureDefinition-stroke-registry-organization-profile.html" : "Stroke Registry Organization Profile",
+      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/link-type",
@@ -846,13 +846,13 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
-      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
-      "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
       "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
       "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
-      "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)",
-      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations"
+      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
+      "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
+      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
+      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
+      "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/observation-codes",
@@ -874,13 +874,13 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
-      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
-      "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
       "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
       "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
-      "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)",
-      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations"
+      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
+      "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
+      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
+      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
+      "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/observation-interpretation",
@@ -904,13 +904,13 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
-      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
-      "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
       "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
       "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
-      "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)",
-      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations"
+      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
+      "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
+      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
+      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
+      "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/observation-methods",
@@ -932,13 +932,13 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
-      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
-      "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
       "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
       "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
-      "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)",
-      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations"
+      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
+      "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
+      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
+      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
+      "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/observation-referencerange-normalvalue",
@@ -952,13 +952,13 @@
       "sources" : ["2.16.840.1.113883.4.642.3.3264"],
       "uses" : {
       },
-      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
-      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
-      "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
       "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
       "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
-      "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)",
-      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations"
+      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
+      "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
+      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
+      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
+      "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/observation-status",
@@ -980,13 +980,13 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
-      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
-      "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
       "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
       "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
-      "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)",
-      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations"
+      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
+      "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
+      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
+      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
+      "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/observation-triggeredbytype",
@@ -1000,13 +1000,13 @@
       "sources" : ["2.16.840.1.113883.4.642.3.3265"],
       "uses" : {
       },
-      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
-      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
-      "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
       "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
       "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
-      "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)",
-      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations"
+      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
+      "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
+      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
+      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
+      "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/organization-type",
@@ -1083,10 +1083,10 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile (R5)",
-      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile (R5)",
-      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile (R5)",
-      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile (R5)"
+      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
+      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
+      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
+      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/procedure-category",
@@ -1108,10 +1108,10 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile (R5)",
-      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile (R5)",
-      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile (R5)",
-      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile (R5)"
+      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
+      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
+      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
+      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/procedure-code",
@@ -1133,7 +1133,7 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile (R5)"
+      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/procedure-followup",
@@ -1155,10 +1155,10 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile (R5)",
-      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile (R5)",
-      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile (R5)",
-      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile (R5)"
+      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
+      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
+      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
+      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/procedure-outcome",
@@ -1180,10 +1180,10 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile (R5)",
-      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile (R5)",
-      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile (R5)",
-      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile (R5)"
+      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
+      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
+      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
+      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/procedure-reason",
@@ -1205,10 +1205,10 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile (R5)",
-      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile (R5)",
-      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile (R5)",
-      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile (R5)"
+      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
+      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
+      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
+      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/quantity-comparator",
@@ -1222,8 +1222,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.59"],
       "uses" : {
       },
-      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
-      "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)"
+      "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
+      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/reason-medication-status-codes",
@@ -1260,13 +1260,13 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
-      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
-      "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
       "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
       "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
-      "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)",
-      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations"
+      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
+      "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
+      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
+      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
+      "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/referencerange-meaning",
@@ -1290,13 +1290,13 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
-      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
-      "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
       "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
       "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
-      "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)",
-      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations"
+      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
+      "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
+      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
+      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
+      "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/request-priority",
@@ -1375,7 +1375,7 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile (R5)"
+      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile"
     },
     {
       "url" : "http://tecnomod-um.org/ValueSet/carotid-imaging-modality-vs",
@@ -1503,11 +1503,11 @@
       "status" : "draft",
       "name" : "PerforationProceduresValueset",
       "title" : "Perforation Procedures ValueSet",
-      "description" : "ValueSet containing SNOMED CT codes representing a range of perforation procedures.",
+      "description" : "ValueSet restricting Procedure codes to stroke **reperfusion interventions**:\n- IV thrombolysis (IVT)\n- Mechanical thrombectomy (MT)\n\n**Primary use-case**\n- Required binding for `StrokeThrombolysisProcedureProfile.code` (which covers reperfusion procedures in this IG).",
       "systems" : ["http://snomed.info/sct"],
       "uses" : {
       },
-      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile (R5)"
+      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile"
     },
     {
       "url" : "http://tecnomod-um.org/ValueSet/procedure-timing-context-vs",
@@ -1515,7 +1515,7 @@
       "status" : "active",
       "name" : "ProcedureTimingContextVS",
       "title" : "Procedure Timing Context ValueSet",
-      "description" : "ValueSet for codes defining the timing phase of a procedure relative to the encounter start.",
+      "description" : "ValueSet limiting allowed values for the Procedure timing context extension (acute/post-acute/unknown).\n\n**Use-case**\n- Required binding to ensure comparable phase classification across systems and sites.",
       "systems" : [
         "http://tecnomod-um.org/CodeSystem/procedure-timing-context-cs"
       ],
@@ -1624,16 +1624,16 @@
       "status" : "active",
       "name" : "StrokeProcNotDoneReasonVS",
       "title" : "Stroke Procedure Not Done Reason ValueSet",
-      "description" : "ValueSet containing specific codes to indicate why thrombolysis or thrombectomy was not performed.",
+      "description" : "ValueSet containing the controlled vocabulary of reasons for `Procedure.statusReason` when a stroke procedure is `not-done`.",
       "systems" : [
         "http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs"
       ],
       "uses" : {
       },
-      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile (R5)",
-      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile (R5)",
-      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile (R5)",
-      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile (R5)"
+      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
+      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
+      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
+      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
     },
     {
       "url" : "http://tecnomod-um.org/ValueSet/stroke-risk-factor-vs",
@@ -1653,14 +1653,14 @@
       "status" : "draft",
       "name" : "SwallowProceduresValueset",
       "title" : "Swallow Procedures ValueSet",
-      "description" : "ValueSet containing SNOMED CT codes representing a range of procedures used in the evaluation and management of stroke patients.",
+      "description" : "ValueSet enumerating swallowing screening/assessment procedures/tools used in stroke care.\n\n**Primary use-case**\n- Required binding for `StrokeSwallowProcedureProfile.code` to ensure the Procedure truly represents a swallow screening/assessment.\n\n**Secondary use-case**\n- Can also be used for `Procedure.used.concept` (R5) to explicitly document the tool used when:\n  - `Procedure.code` is generic, or\n  - you want a consistent field for “tool used” across multiple workflow variants.\n\n**Implementation note**\n- `SCT#261665006 'Unknown'´ is included only as a provisional development workaround; in production, prefer FHIR `dataAbsentReason` for missing data rather than “Unknown” as a procedure code.",
       "systems" : [
         "http://tecnomod-um.org/CodeSystem/swallow-procedures-cs",
         "http://snomed.info/sct"
       ],
       "uses" : {
       },
-      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile (R5)"
+      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
     },
     {
       "url" : "http://tecnomod-um.org/ValueSet/swallowing-screening-timing-category-vs",
@@ -1668,7 +1668,7 @@
       "status" : "active",
       "name" : "SwallowingScreeningTimingCategoryVS",
       "title" : "Swallowing Screening Timing Category ValueSet",
-      "description" : "Temporal categories relative to stroke onset for swallowing screening.",
+      "description" : "ValueSet defining allowed categories for swallowing screening timing, combining:\n- local categories (e.g., within 4 hours), and\n- SNOMED CT qualifier concepts for post-admission timing.\n\n**Use-case**\n- Required binding for the swallowing timing extension to standardize KPI reporting across sites.",
       "systems" : [
         "http://tecnomod-um.org/CodeSystem/swallow-screen-time-cs",
         "http://snomed.info/sct"
@@ -1682,8 +1682,8 @@
       "version" : "0.1.0",
       "status" : "active",
       "name" : "ThrombectomyComplicationVS",
-      "title" : "Thrombectomy Complication ValueSet",
-      "description" : "Defines the specific complications of thrombectomy to record.",
+      "title" : "Thrombectomy Complications ValueSet",
+      "description" : " ValueSet of SNOMED CT concepts representing complications of thrombectomy as clinical conditions.\n\n**Primary use-case**\n- Bind `Procedure.complication` (or the referenced Condition.code) to a SNOMED-based set for interoperability.",
       "systems" : ["http://snomed.info/sct"]
     },
     {

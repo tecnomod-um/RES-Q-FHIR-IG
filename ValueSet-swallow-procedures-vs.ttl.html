@@ -250,7 +250,7 @@
 <a href="http://hl7.org/fhir/R5/datatypes.html#ContactPoint#XContactPoint.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;url&quot; ] ;
 <a href="http://hl7.org/fhir/R5/datatypes.html#ContactPoint#XContactPoint.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;http://tecnomod-um.org&quot; ]     ] )
   ] ) ; # 
-  <a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.description">fhir:description</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">fhir:v</a> &quot;ValueSet containing SNOMED CT codes representing a range of procedures used in the evaluation and management of stroke patients.&quot;] ; # 
+  <a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.description">fhir:description</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">fhir:v</a> &quot;ValueSet enumerating swallowing screening/assessment procedures/tools used in stroke care.\n\n**Primary use-case**\n- Required binding for `StrokeSwallowProcedureProfile.code` to ensure the Procedure truly represents a swallow screening/assessment.\n\n**Secondary use-case**\n- Can also be used for `Procedure.used.concept` (R5) to explicitly document the tool used when:\n  - `Procedure.code` is generic, or\n  - you want a consistent field for “tool used” across multiple workflow variants.\n\n**Implementation note**\n- `SCT#261665006 'Unknown'´ is included only as a provisional development workaround; in production, prefer FHIR `dataAbsentReason` for missing data rather than “Unknown” as a procedure code.&quot;] ; # 
   <a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.compose">fhir:compose</a> [
     ( <a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.compose.include">fhir:include</a> [
 <a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.compose.include.system">fhir:system</a> [
@@ -293,7 +293,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 10:15+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 10:59+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

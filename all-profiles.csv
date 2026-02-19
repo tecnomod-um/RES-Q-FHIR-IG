@@ -1453,7 +1453,18 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Details of the reason for the current use of the medication","Captures the reason for the current use or adherence of a medication.","This is generally only used for ""exception"" statuses such as ""entered-in-error"". The reason for performing the event at all is captured in reasonCode, not here.","","","","","","","","",,"example","","http://hl7.org/fhir/ValueSet/reason-medication-status-codes|5.0.0","",,,,"MedicationStatement.adherence.reason",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "procedure-timing-context-ext","Extension","Extension","","","",0,*,"","","","null {[]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Procedure Timing Context Extension","Extension classifying the procedure into a **timing context** relative to encounter start (acute/post-acute).
+
+**Primary use-case**
+- Operational reporting where “phase of care” is needed for compliance measures.
+
+**When to use**
+- When you want a stable, comparable phase label across sites (even if absolute times differ or onset time is uncertain).
+
+**Interpretation guidance**
+- Use `acute` for procedures within 24 hours of encounter start.
+- Use `post-acute` for procedures after 24 hours.
+- Use `unknown` when encounter/timing data are insufficient.","","","","","","","","","",,,,,"",,,,"Extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "procedure-timing-context-ext","Extension.id","Extension.id","","","",0,1,"","","","id {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"ele-1
@@ -1750,7 +1761,18 @@ dom-4dom-3dom-5",""
 ","",,"open","DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "stroke-brain-imaging-procedure-profile","Procedure.extension:timingContext","Procedure.extension","timingContext","","",0,1,"Y","","","Extension {[CanonicalType[http://tecnomod-um.org/StructureDefinition/procedure-timing-context-ext]]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Procedure Timing Context Extension","Extension classifying the procedure into a **timing context** relative to encounter start (acute/post-acute).
+
+**Primary use-case**
+- Operational reporting where “phase of care” is needed for compliance measures.
+
+**When to use**
+- When you want a stable, comparable phase label across sites (even if absolute times differ or onset time is uncertain).
+
+**Interpretation guidance**
+- Use `acute` for procedures within 24 hours of encounter start.
+- Use `post-acute` for procedures after 24 hours.
+- Use `unknown` when encounter/timing data are insufficient.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "stroke-brain-imaging-procedure-profile","Procedure.modifierExtension","Procedure.modifierExtension","","extensions
 user content","",0,*,"","Y","Y","Extension {[]} {[]}
@@ -1926,7 +1948,18 @@ dom-4dom-3dom-5",""
 ","",,"open","DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "stroke-carotid-imaging-procedure-profile","Procedure.extension:timingContext","Procedure.extension","timingContext","","",0,1,"Y","","","Extension {[CanonicalType[http://tecnomod-um.org/StructureDefinition/procedure-timing-context-ext]]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Procedure Timing Context Extension","Extension classifying the procedure into a **timing context** relative to encounter start (acute/post-acute).
+
+**Primary use-case**
+- Operational reporting where “phase of care” is needed for compliance measures.
+
+**When to use**
+- When you want a stable, comparable phase label across sites (even if absolute times differ or onset time is uncertain).
+
+**Interpretation guidance**
+- Use `acute` for procedures within 24 hours of encounter start.
+- Use `post-acute` for procedures after 24 hours.
+- Use `unknown` when encounter/timing data are insufficient.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "stroke-carotid-imaging-procedure-profile","Procedure.modifierExtension","Procedure.modifierExtension","","extensions
 user content","",0,*,"","Y","Y","Extension {[]} {[]}
@@ -2770,7 +2803,18 @@ dom-4dom-3dom-5",""
 ","",,"open","DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "stroke-mechanical-procedure-profile","Procedure.extension:timingContext","Procedure.extension","timingContext","","",0,1,"Y","","","Extension {[CanonicalType[http://tecnomod-um.org/StructureDefinition/procedure-timing-context-ext]]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Procedure Timing Context Extension","Extension classifying the procedure into a **timing context** relative to encounter start (acute/post-acute).
+
+**Primary use-case**
+- Operational reporting where “phase of care” is needed for compliance measures.
+
+**When to use**
+- When you want a stable, comparable phase label across sites (even if absolute times differ or onset time is uncertain).
+
+**Interpretation guidance**
+- Use `acute` for procedures within 24 hours of encounter start.
+- Use `post-acute` for procedures after 24 hours.
+- Use `unknown` when encounter/timing data are insufficient.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "stroke-mechanical-procedure-profile","Procedure.modifierExtension","Procedure.modifierExtension","","extensions
 user content","",0,*,"","Y","Y","Extension {[]} {[]}
@@ -3229,10 +3273,31 @@ dom-4dom-3dom-5",""
 ","",,"open","DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "stroke-swallow-procedure-profile","Procedure.extension:screeningTimingCategory","Procedure.extension","screeningTimingCategory","","",0,1,"Y","","","Extension {[CanonicalType[http://tecnomod-um.org/StructureDefinition/swallowing-screening-timing-category-ext]]} {[]}
-","Optional Extensions Element","Optional Extension Element - found in all resources.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Swallowing Screening Timing Category Extension"," Extension capturing the **timing category** of swallowing screening relative to stroke onset/admission.
+
+**Primary use-case**
+- KPI reporting: “swallowing screening performed within 4 hours”.
+
+**When to use**
+- When you cannot reliably store an exact timestamp (or want an additional categorical indicator even if a timestamp exists).
+
+**How it complements base elements**
+- `Procedure.occurrence[x]` stores the exact time when available.
+- This extension stores a categorical bucket to support standardized reporting.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "stroke-swallow-procedure-profile","Procedure.extension:timingContext","Procedure.extension","timingContext","","",0,1,"Y","","","Extension {[CanonicalType[http://tecnomod-um.org/StructureDefinition/procedure-timing-context-ext]]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Procedure Timing Context Extension","Extension classifying the procedure into a **timing context** relative to encounter start (acute/post-acute).
+
+**Primary use-case**
+- Operational reporting where “phase of care” is needed for compliance measures.
+
+**When to use**
+- When you want a stable, comparable phase label across sites (even if absolute times differ or onset time is uncertain).
+
+**Interpretation guidance**
+- Use `acute` for procedures within 24 hours of encounter start.
+- Use `post-acute` for procedures after 24 hours.
+- Use `unknown` when encounter/timing data are insufficient.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "stroke-swallow-procedure-profile","Procedure.modifierExtension","Procedure.modifierExtension","","extensions
 user content","",0,*,"","Y","Y","Extension {[]} {[]}
@@ -3381,7 +3446,17 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Extra information relevant to the procedure","Other resources from the patient record that may be relevant to the procedure.  The information from these resources was either used to create the instance or is provided to help with its interpretation. This extension should not be used if more specific inline elements or extensions are available.","","","","","","","","","",,,,,"",,,,"Procedure.supportingInfo",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "swallowing-screening-timing-category-ext","Extension","Extension","","","",0,*,"","","","null {[]} {[]}
-","Optional Extensions Element","Optional Extension Element - found in all resources.","","","","","","","","","",,,,,"",,,,"Extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Swallowing Screening Timing Category Extension"," Extension capturing the **timing category** of swallowing screening relative to stroke onset/admission.
+
+**Primary use-case**
+- KPI reporting: “swallowing screening performed within 4 hours”.
+
+**When to use**
+- When you cannot reliably store an exact timestamp (or want an additional categorical indicator even if a timestamp exists).
+
+**How it complements base elements**
+- `Procedure.occurrence[x]` stores the exact time when available.
+- This extension stores a categorical bucket to support standardized reporting.","","","","","","","","","",,,,,"",,,,"Extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "swallowing-screening-timing-category-ext","Extension.id","Extension.id","","","",0,1,"","","","id {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"ele-1

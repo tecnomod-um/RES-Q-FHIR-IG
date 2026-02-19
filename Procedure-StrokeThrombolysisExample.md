@@ -6,7 +6,7 @@
 
 ## Example Procedure: StrokeThrombolysisExample
 
-Profile: [Stroke Thrombolysis Procedure Profile (R5)](StructureDefinition-stroke-mechanical-procedure-profile.md)
+Profile: [Stroke Thrombolysis Procedure Profile](StructureDefinition-stroke-mechanical-procedure-profile.md)
 
 **Procedure Timing Context Extension**: Unknown/Not Applicable
 

@@ -1,10 +1,10 @@
-# Stroke Brain Imaging Procedure Profile (R5) - v0.1.0
+# Stroke Brain Imaging Procedure Profile - v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **Stroke Brain Imaging Procedure Profile (R5)**
+* **Stroke Brain Imaging Procedure Profile**
 
-## Resource Profile: Stroke Brain Imaging Procedure Profile (R5) 
+## Resource Profile: Stroke Brain Imaging Procedure Profile 
 
 | | |
 | :--- | :--- |
@@ -12,7 +12,18 @@
 | Active as of 2026-02-19 | *Computable Name*:StrokeBrainImagingProcedureProfile |
 
  
-Procedure profile to record key stroke procedures, including status, timing, complications, reasons, and context. 
+Profile for documenting **brain imaging performed during a stroke episode** as a FHIR R5 Procedure. 
+**Captures** 
+* `code`: imaging modality/protocol (required; standardized via BrainImagingModalityVS).
+* `status`: procedure state (required).
+* `statusReason`: why it was not done (when applicable).
+* `occurrence[x]`: when imaging occurred (recommended/required by invariant when done locally).
+* `extension[timingContext]`: acute/post-acute phase classification relative to encounter start.
+ 
+**Typical scenarios** 1) Imaging completed on-site: `status=completed`, `occurrence[x]` present, `timingContext` optional. 2) Imaging not performed: `status=not-done`, `statusReason` required. 3) Imaging performed elsewhere: if your IG uses a “performed elsewhere” indicator extension, rules may allow missing on-site timestamps. 
+**Downstream use** 
+* Door-to-imaging metrics, protocol utilization, cross-site comparability.
+ 
 
 **Usages:**
 
@@ -39,9 +50,9 @@ Other representations of profile: [CSV](StructureDefinition-stroke-brain-imaging
   "url" : "http://tecnomod-um.org/StructureDefinition/stroke-brain-imaging-procedure-profile",
   "version" : "0.1.0",
   "name" : "StrokeBrainImagingProcedureProfile",
-  "title" : "Stroke Brain Imaging Procedure Profile (R5)",
+  "title" : "Stroke Brain Imaging Procedure Profile",
   "status" : "active",
-  "date" : "2026-02-19T10:15:59+00:00",
+  "date" : "2026-02-19T10:59:57+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -54,7 +65,7 @@ Other representations of profile: [CSV](StructureDefinition-stroke-brain-imaging
       ]
     }
   ],
-  "description" : "Procedure profile to record key stroke procedures, including status, timing, complications, reasons, and context.",
+  "description" : " Profile for documenting **brain imaging performed during a stroke episode** as a FHIR R5 Procedure.\n\n**Captures**\n- `code`: imaging modality/protocol (required; standardized via BrainImagingModalityVS).\n- `status`: procedure state (required).\n- `statusReason`: why it was not done (when applicable).\n- `occurrence[x]`: when imaging occurred (recommended/required by invariant when done locally).\n- `extension[timingContext]`: acute/post-acute phase classification relative to encounter start.\n\n**Typical scenarios**\n1) Imaging completed on-site: `status=completed`, `occurrence[x]` present, `timingContext` optional.\n2) Imaging not performed: `status=not-done`, `statusReason` required.\n3) Imaging performed elsewhere: if your IG uses a “performed elsewhere” indicator extension, rules may allow missing on-site timestamps.\n\n**Downstream use**\n- Door-to-imaging metrics, protocol utilization, cross-site comparability.",
   "fhirVersion" : "5.0.0",
   "mapping" : [
     {

@@ -3,15 +3,15 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
   <id value="stroke-proc-not-done-reason-cs"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem stroke-proc-not-done-reason-cs</b></p><a name="stroke-proc-not-done-reason-cs"> </a><a name="hcstroke-proc-not-done-reason-cs"> </a><p>This case-insensitive code system <code>http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">time-window<a name="stroke-proc-not-done-reason-cs-time-window"> </a></td><td>Outside Therapeutic Window</td><td>Patient presented or evaluated outside the established time limit for the procedure.</td></tr><tr><td style="white-space:nowrap">no-lvo<a name="stroke-proc-not-done-reason-cs-no-lvo"> </a></td><td>No Large Vessel Occlusion (LVO)</td><td>An eligible large vessel occlusion for thrombectomy was not identified.</td></tr><tr><td style="white-space:nowrap">contraindication<a name="stroke-proc-not-done-reason-cs-contraindication"> </a></td><td>Contraindication Present</td><td>A medical contraindication to the procedure existed (e.g., bleeding risk).</td></tr><tr><td style="white-space:nowrap">patient-refusal<a name="stroke-proc-not-done-reason-cs-patient-refusal"> </a></td><td>Patient/Family Refusal</td><td>The patient or their legal representative refused the procedure.</td></tr><tr><td style="white-space:nowrap">transfer<a name="stroke-proc-not-done-reason-cs-transfer"> </a></td><td>Transferred to Another Facility</td><td>The patient was transferred to another hospital for the procedure.</td></tr><tr><td style="white-space:nowrap">unavailable<a name="stroke-proc-not-done-reason-cs-unavailable"> </a></td><td>Procedure Unavailable</td><td>The procedure was not available at the facility (e.g., lack of equipment, staff).</td></tr><tr><td style="white-space:nowrap">disability<a name="stroke-proc-not-done-reason-cs-disability"> </a></td><td>Severe Preexisting Disability</td><td>Patient's baseline disability made benefit from the procedure unlikely.</td></tr><tr><td style="white-space:nowrap">mild-deficit<a name="stroke-proc-not-done-reason-cs-mild-deficit"> </a></td><td>Mild Deficit</td><td>Patient's neurological deficit was too mild to warrant the procedure.</td></tr><tr><td style="white-space:nowrap">done-elsewhere<a name="stroke-proc-not-done-reason-cs-done-elsewhere"> </a></td><td>Performed Elsewhere</td><td>The procedure had already been performed at another facility prior to arrival/transfer.</td></tr><tr><td style="white-space:nowrap">cost<a name="stroke-proc-not-done-reason-cs-cost"> </a></td><td>Cost / No Insurance</td><td>Financial or coverage reasons prevented the procedure.</td></tr><tr><td style="white-space:nowrap">unknown<a name="stroke-proc-not-done-reason-cs-unknown"> </a></td><td>Reason Unknown</td><td>The reason was not documented or is unknown.</td></tr><tr><td style="white-space:nowrap">consent<a name="stroke-proc-not-done-reason-cs-consent"> </a></td><td>Consent Not Obtained</td><td>Informed consent for the procedure was not obtained.</td></tr><tr><td style="white-space:nowrap">only-mt<a name="stroke-proc-not-done-reason-cs-only-mt"> </a></td><td>Only Mechanical Thrombectomy Considered</td><td>Only mechanical thrombectomy was considered, and thrombolysis was not performed.</td></tr><tr><td style="white-space:nowrap">other<a name="stroke-proc-not-done-reason-cs-other"> </a></td><td>Other Reason</td><td>A reason not specifically defined.</td></tr><tr><td style="white-space:nowrap">technically-not-possible<a name="stroke-proc-not-done-reason-cs-technically-not-possible"> </a></td><td>Technically Not Possible</td><td>The procedure could not be performed due to technical or anatomical challenges.</td></tr><tr><td style="white-space:nowrap">no-angiography<a name="stroke-proc-not-done-reason-cs-no-angiography"> </a></td><td>Angiography Not Performed</td><td>Angiography to assess the situation was not performed.</td></tr></table></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem stroke-proc-not-done-reason-cs</b></p><a name="stroke-proc-not-done-reason-cs"> </a><a name="hcstroke-proc-not-done-reason-cs"> </a><p>This case-insensitive code system <code>http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">time-window<a name="stroke-proc-not-done-reason-cs-time-window"> </a></td><td>Outside therapeutic window</td><td>The patient presented/evaluated outside the time window defined by protocol/guidelines for benefit.</td></tr><tr><td style="white-space:nowrap">no-lvo<a name="stroke-proc-not-done-reason-cs-no-lvo"> </a></td><td>No Large Vessel Occlusion (LVO)</td><td>No eligible large vessel occlusion for thrombectomy was identified.</td></tr><tr><td style="white-space:nowrap">contraindication<a name="stroke-proc-not-done-reason-cs-contraindication"> </a></td><td>Contraindication present</td><td>A medical contraindication existed (e.g., bleeding risk or other high-risk factor).</td></tr><tr><td style="white-space:nowrap">patient-refusal<a name="stroke-proc-not-done-reason-cs-patient-refusal"> </a></td><td>Patient/family refusal</td><td>The patient or legal representative declined the intervention after discussion.</td></tr><tr><td style="white-space:nowrap">transfer<a name="stroke-proc-not-done-reason-cs-transfer"> </a></td><td>Transferred to another facility</td><td>The patient was transferred to a different facility for the intervention.</td></tr><tr><td style="white-space:nowrap">unavailable<a name="stroke-proc-not-done-reason-cs-unavailable"> </a></td><td>Procedure unavailable</td><td>The facility could not provide the procedure (equipment, staffing, service availability).</td></tr><tr><td style="white-space:nowrap">disability<a name="stroke-proc-not-done-reason-cs-disability"> </a></td><td>Severe preexisting disability</td><td>Baseline disability made benefit unlikely per clinical judgement/protocol.</td></tr><tr><td style="white-space:nowrap">mild-deficit<a name="stroke-proc-not-done-reason-cs-mild-deficit"> </a></td><td>Mild deficit</td><td>Neurological deficit severity was judged too mild to justify risk/benefit.</td></tr><tr><td style="white-space:nowrap">done-elsewhere<a name="stroke-proc-not-done-reason-cs-done-elsewhere"> </a></td><td>Performed elsewhere</td><td>The procedure had already been performed at another facility prior to arrival/transfer.</td></tr><tr><td style="white-space:nowrap">cost<a name="stroke-proc-not-done-reason-cs-cost"> </a></td><td>Cost / no insurance</td><td>Financial or coverage constraints prevented the procedure (use only where applicable).</td></tr><tr><td style="white-space:nowrap">unknown<a name="stroke-proc-not-done-reason-cs-unknown"> </a></td><td>Reason unknown</td><td>Reason was not documented or is unknown.</td></tr><tr><td style="white-space:nowrap">consent<a name="stroke-proc-not-done-reason-cs-consent"> </a></td><td>Consent not obtained</td><td>Informed consent required for the procedure was not obtained.</td></tr><tr><td style="white-space:nowrap">only-mt<a name="stroke-proc-not-done-reason-cs-only-mt"> </a></td><td>Only mechanical thrombectomy considered</td><td>Only MT was considered; IV thrombolysis was not performed.</td></tr><tr><td style="white-space:nowrap">technically-not-possible<a name="stroke-proc-not-done-reason-cs-technically-not-possible"> </a></td><td>Technically not possible</td><td>Technical/anatomical factors prevented completion.</td></tr><tr><td style="white-space:nowrap">no-angiography<a name="stroke-proc-not-done-reason-cs-no-angiography"> </a></td><td>Angiography not performed</td><td>Required angiographic assessment was not performed.</td></tr><tr><td style="white-space:nowrap">other<a name="stroke-proc-not-done-reason-cs-other"> </a></td><td>Other reason</td><td>Other reason not listed. Prefer adding explanatory text in statusReason.text where possible.</td></tr></table></div>
   </text>
   <url value="http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs"/>
   <version value="0.1.0"/>
   <name value="StrokeProcNotDoneReasonCS"/>
-  <title value="Stroke Procedure Not Done Reason Code System"/>
+  <title value="Stroke Procedure Not Done Reasons CodeSystem"/>
   <status value="active"/>
   <experimental value="true"/>
-  <date value="2026-02-19T10:15:59+00:00"/>
+  <date value="2026-02-19T10:59:57+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>
@@ -20,88 +20,88 @@
       <value value="http://tecnomod-um.org"/>
     </telecom>
   </contact>
-  <description value="Codes specifying the reason principal for not performing a key stroke procedure (Thrombolysis, Thrombectomy)."/>
+  <description value=" Local CodeSystem enumerating standardized reasons why a key stroke procedure (e.g., IV thrombolysis or mechanical thrombectomy) was **not performed**.&#xA;&#xA;**Primary use-case**&#xA;- Populate `Procedure.statusReason` when `Procedure.status = not-done`.&#xA;&#xA;**Why it matters**&#xA;- Captures the difference between:&#xA;  - clinical ineligibility (contraindication),&#xA;  - time-based ineligibility (outside window),&#xA;  - operational constraints (unavailable),&#xA;  - patient choice (refusal),&#xA;  - care pathway differences (performed elsewhere / transfer)."/>
   <caseSensitive value="false"/>
   <content value="complete"/>
   <count value="16"/>
   <concept>
     <code value="time-window"/>
-    <display value="Outside Therapeutic Window"/>
-    <definition value="Patient presented or evaluated outside the established time limit for the procedure."/>
+    <display value="Outside therapeutic window"/>
+    <definition value="The patient presented/evaluated outside the time window defined by protocol/guidelines for benefit."/>
   </concept>
   <concept>
     <code value="no-lvo"/>
     <display value="No Large Vessel Occlusion (LVO)"/>
-    <definition value="An eligible large vessel occlusion for thrombectomy was not identified."/>
+    <definition value="No eligible large vessel occlusion for thrombectomy was identified."/>
   </concept>
   <concept>
     <code value="contraindication"/>
-    <display value="Contraindication Present"/>
-    <definition value="A medical contraindication to the procedure existed (e.g., bleeding risk)."/>
+    <display value="Contraindication present"/>
+    <definition value="A medical contraindication existed (e.g., bleeding risk or other high-risk factor)."/>
   </concept>
   <concept>
     <code value="patient-refusal"/>
-    <display value="Patient/Family Refusal"/>
-    <definition value="The patient or their legal representative refused the procedure."/>
+    <display value="Patient/family refusal"/>
+    <definition value="The patient or legal representative declined the intervention after discussion."/>
   </concept>
   <concept>
     <code value="transfer"/>
-    <display value="Transferred to Another Facility"/>
-    <definition value="The patient was transferred to another hospital for the procedure."/>
+    <display value="Transferred to another facility"/>
+    <definition value="The patient was transferred to a different facility for the intervention."/>
   </concept>
   <concept>
     <code value="unavailable"/>
-    <display value="Procedure Unavailable"/>
-    <definition value="The procedure was not available at the facility (e.g., lack of equipment, staff)."/>
+    <display value="Procedure unavailable"/>
+    <definition value="The facility could not provide the procedure (equipment, staffing, service availability)."/>
   </concept>
   <concept>
     <code value="disability"/>
-    <display value="Severe Preexisting Disability"/>
-    <definition value="Patient's baseline disability made benefit from the procedure unlikely."/>
+    <display value="Severe preexisting disability"/>
+    <definition value="Baseline disability made benefit unlikely per clinical judgement/protocol."/>
   </concept>
   <concept>
     <code value="mild-deficit"/>
-    <display value="Mild Deficit"/>
-    <definition value="Patient's neurological deficit was too mild to warrant the procedure."/>
+    <display value="Mild deficit"/>
+    <definition value="Neurological deficit severity was judged too mild to justify risk/benefit."/>
   </concept>
   <concept>
     <code value="done-elsewhere"/>
-    <display value="Performed Elsewhere"/>
+    <display value="Performed elsewhere"/>
     <definition value="The procedure had already been performed at another facility prior to arrival/transfer."/>
   </concept>
   <concept>
     <code value="cost"/>
-    <display value="Cost / No Insurance"/>
-    <definition value="Financial or coverage reasons prevented the procedure."/>
+    <display value="Cost / no insurance"/>
+    <definition value="Financial or coverage constraints prevented the procedure (use only where applicable)."/>
   </concept>
   <concept>
     <code value="unknown"/>
-    <display value="Reason Unknown"/>
-    <definition value="The reason was not documented or is unknown."/>
+    <display value="Reason unknown"/>
+    <definition value="Reason was not documented or is unknown."/>
   </concept>
   <concept>
     <code value="consent"/>
-    <display value="Consent Not Obtained"/>
-    <definition value="Informed consent for the procedure was not obtained."/>
+    <display value="Consent not obtained"/>
+    <definition value="Informed consent required for the procedure was not obtained."/>
   </concept>
   <concept>
     <code value="only-mt"/>
-    <display value="Only Mechanical Thrombectomy Considered"/>
-    <definition value="Only mechanical thrombectomy was considered, and thrombolysis was not performed."/>
-  </concept>
-  <concept>
-    <code value="other"/>
-    <display value="Other Reason"/>
-    <definition value="A reason not specifically defined."/>
+    <display value="Only mechanical thrombectomy considered"/>
+    <definition value="Only MT was considered; IV thrombolysis was not performed."/>
   </concept>
   <concept>
     <code value="technically-not-possible"/>
-    <display value="Technically Not Possible"/>
-    <definition value="The procedure could not be performed due to technical or anatomical challenges."/>
+    <display value="Technically not possible"/>
+    <definition value="Technical/anatomical factors prevented completion."/>
   </concept>
   <concept>
     <code value="no-angiography"/>
-    <display value="Angiography Not Performed"/>
-    <definition value="Angiography to assess the situation was not performed."/>
+    <display value="Angiography not performed"/>
+    <definition value="Required angiographic assessment was not performed."/>
+  </concept>
+  <concept>
+    <code value="other"/>
+    <display value="Other reason"/>
+    <definition value="Other reason not listed. Prefer adding explanatory text in statusReason.text where possible."/>
   </concept>
 </CodeSystem>

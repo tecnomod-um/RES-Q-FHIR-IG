@@ -5,7 +5,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Thrombectomy Complication ValueSet - XML Representation -  v0.1.0</title>
+    <title>Thrombectomy Complications ValueSet - XML Representation -  v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -133,7 +133,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Thrombectomy Complication ValueSet</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Thrombectomy Complications ValueSet</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -192,7 +192,7 @@
 <a name="root"> </a>
 
 
-<h2 id="root">: Thrombectomy Complication ValueSet - XML Representation</h2>
+<h2 id="root">: Thrombectomy Complications ValueSet - XML Representation</h2>
 
   <table class="colsi">
     <tr>
@@ -227,9 +227,9 @@
   &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.url">url</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;http://tecnomod-um.org/ValueSet/thrombectomy-complication-vs&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.version">version</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;0.1.0&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.name">name</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;ThrombectomyComplicationVS&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.title">title</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Thrombectomy Complication ValueSet&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.title">title</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Thrombectomy Complications ValueSet&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.status">status</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.date">date</a> <a href="http://hl7.org/fhir/R5/datatypes.html#dateTime">value</a>=&quot;2026-02-19T10:15:59+00:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.date">date</a> <a href="http://hl7.org/fhir/R5/datatypes.html#dateTime">value</a>=&quot;2026-02-19T10:59:57+00:00&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.publisher">publisher</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;UMU&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.contact">contact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R5/metadatatypes.html#ContactDetail#XContactDetail.name">name</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;UMU&quot;/&gt;
@@ -239,7 +239,11 @@
     &lt;/<a href="http://hl7.org/fhir/R5/metadatatypes.html#ContactDetail#XContactDetail.telecom">telecom</a>&gt;
   &lt;/<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.contact">contact</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.description">description</a>
-               <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;Defines the specific complications of thrombectomy to record.&quot;/&gt;
+               <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot; ValueSet of SNOMED CT concepts representing complications of thrombectomy as clinical conditions.
+
+**Primary use-case**
+- Bind `Procedure.complication` (or the referenced Condition.code) to a SNOMED-based set for interoperability.
+&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.compose">compose</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.compose.include">include</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.compose.include.system">system</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;http://snomed.info/sct&quot;/&gt;
@@ -273,7 +277,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 10:15+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 10:59+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

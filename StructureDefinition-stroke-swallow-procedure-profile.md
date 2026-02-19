@@ -1,10 +1,10 @@
-# Stroke Swallow Procedure Profile (R5) - v0.1.0
+# Stroke Swallow Procedure Profile - v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **Stroke Swallow Procedure Profile (R5)**
+* **Stroke Swallow Procedure Profile**
 
-## Resource Profile: Stroke Swallow Procedure Profile (R5) 
+## Resource Profile: Stroke Swallow Procedure Profile 
 
 | | |
 | :--- | :--- |
@@ -12,7 +12,23 @@
 | Active as of 2026-02-19 | *Computable Name*:StrokeSwallowProcedureProfile |
 
  
-Procedure profile to record key stroke procedures, including status, timing, complications, reasons, and context. 
+Profile for documenting **swallow screening / dysphagia assessment** during a stroke episode. 
+**Captures** 
+* `code`: the screening/assessment procedure or tool used (SwallowProceduresVS).
+* `status`: whether completed or not done.
+* `statusReason`: controlled reason set when not done.
+* `extension[screeningTimingCategory]`: timing bucket (e.g., within 4h) for KPI reporting.
+* `extension[timingContext]`: acute/post-acute phase relative to encounter start.
+* `used.concept` (R5): explicitly documents the tool used, especially when: 
+* `code` is generic, or
+* you want a consistent “tool used” field for analytics and comparison.
+ 
+ 
+**Use-cases** 
+* Compliance monitoring: swallow screen performed early after stroke.
+* Tool utilization analysis (GUSS vs V-VST vs others).
+* Supporting aspiration pneumonia prevention workflows.
+ 
 
 **Usages:**
 
@@ -39,9 +55,9 @@ Other representations of profile: [CSV](StructureDefinition-stroke-swallow-proce
   "url" : "http://tecnomod-um.org/StructureDefinition/stroke-swallow-procedure-profile",
   "version" : "0.1.0",
   "name" : "StrokeSwallowProcedureProfile",
-  "title" : "Stroke Swallow Procedure Profile (R5)",
+  "title" : "Stroke Swallow Procedure Profile",
   "status" : "active",
-  "date" : "2026-02-19T10:15:59+00:00",
+  "date" : "2026-02-19T10:59:57+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -54,7 +70,7 @@ Other representations of profile: [CSV](StructureDefinition-stroke-swallow-proce
       ]
     }
   ],
-  "description" : "Procedure profile to record key stroke procedures, including status, timing, complications, reasons, and context.",
+  "description" : " Profile for documenting **swallow screening / dysphagia assessment** during a stroke episode.\n\n**Captures**\n- `code`: the screening/assessment procedure or tool used (SwallowProceduresVS).\n- `status`: whether completed or not done.\n- `statusReason`: controlled reason set when not done.\n- `extension[screeningTimingCategory]`: timing bucket (e.g., within 4h) for KPI reporting.\n- `extension[timingContext]`: acute/post-acute phase relative to encounter start.\n- `used.concept` (R5): explicitly documents the tool used, especially when:\n  - `code` is generic, or\n  - you want a consistent “tool used” field for analytics and comparison.\n\n**Use-cases**\n- Compliance monitoring: swallow screen performed early after stroke.\n- Tool utilization analysis (GUSS vs V-VST vs others).\n- Supporting aspiration pneumonia prevention workflows.",
   "fhirVersion" : "5.0.0",
   "mapping" : [
     {

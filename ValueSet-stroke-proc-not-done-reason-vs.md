@@ -12,14 +12,14 @@
 | Active as of 2026-02-19 | *Computable Name*:StrokeProcNotDoneReasonVS |
 
  
-ValueSet containing specific codes to indicate why thrombolysis or thrombectomy was not performed. 
+ValueSet containing the controlled vocabulary of reasons for `Procedure.statusReason` when a stroke procedure is `not-done`. 
 
  **References** 
 
-* [Stroke Brain Imaging Procedure Profile (R5)](StructureDefinition-stroke-brain-imaging-procedure-profile.md)
-* [Stroke Carotid Imaging Procedure Profile (R5)](StructureDefinition-stroke-carotid-imaging-procedure-profile.md)
-* [Stroke Thrombolysis Procedure Profile (R5)](StructureDefinition-stroke-mechanical-procedure-profile.md)
-* [Stroke Swallow Procedure Profile (R5)](StructureDefinition-stroke-swallow-procedure-profile.md)
+* [Stroke Brain Imaging Procedure Profile](StructureDefinition-stroke-brain-imaging-procedure-profile.md)
+* [Stroke Carotid Imaging Procedure Profile](StructureDefinition-stroke-carotid-imaging-procedure-profile.md)
+* [Stroke Thrombolysis Procedure Profile](StructureDefinition-stroke-mechanical-procedure-profile.md)
+* [Stroke Swallow Procedure Profile](StructureDefinition-stroke-swallow-procedure-profile.md)
 
 ### Logical Definition (CLD)
 
@@ -53,7 +53,7 @@ ValueSet containing specific codes to indicate why thrombolysis or thrombectomy 
   "name" : "StrokeProcNotDoneReasonVS",
   "title" : "Stroke Procedure Not Done Reason ValueSet",
   "status" : "active",
-  "date" : "2026-02-19T10:15:59+00:00",
+  "date" : "2026-02-19T10:59:57+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -66,7 +66,7 @@ ValueSet containing specific codes to indicate why thrombolysis or thrombectomy 
       ]
     }
   ],
-  "description" : "ValueSet containing specific codes to indicate why thrombolysis or thrombectomy was not performed.",
+  "description" : "ValueSet containing the controlled vocabulary of reasons for `Procedure.statusReason` when a stroke procedure is `not-done`. ",
   "compose" : {
     "include" : [
       {

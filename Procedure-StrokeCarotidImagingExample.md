@@ -6,7 +6,7 @@
 
 ## Example Procedure: StrokeCarotidImagingExample
 
-Profile: [Stroke Carotid Imaging Procedure Profile (R5)](StructureDefinition-stroke-carotid-imaging-procedure-profile.md)
+Profile: [Stroke Carotid Imaging Procedure Profile](StructureDefinition-stroke-carotid-imaging-procedure-profile.md)
 
 **Procedure Timing Context Extension**: Post-Acute Phase (>=24h)
 

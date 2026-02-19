@@ -347,8 +347,8 @@
       "version" : "0.1.0",
       "status" : "active",
       "name" : "ProcedureTimingContextCS",
-      "title" : "Procedure Timing Context Code System",
-      "description" : "Codes defining the timing phase of a procedure relative to the encounter start (e.g., acute vs. post-acute).",
+      "title" : "Procedure Timing Context CodeSystem",
+      "description" : "Local CodeSystem for classifying a procedure into a **timing context** relative to encounter start.\n\n**Primary use-case**\n- Normalize reporting into acute (<24h) vs post-acute (>=24h) phases for stroke process measures.\n\n**Why this is useful**\n- It supports consistent reporting even when onset time is uncertain.\n- It is designed for encounter-based operational KPIs rather than physiologic onset-based timelines.\n\n**FHIR placement**\n- Used in `ProcedureTimingContextExtension` attached to Procedure.",
       "uses" : {
       },
       "ValueSet-procedure-timing-context-vs.html" : "Procedure Timing Context ValueSet"
@@ -402,8 +402,8 @@
       "version" : "0.1.0",
       "status" : "active",
       "name" : "StrokeProcNotDoneReasonCS",
-      "title" : "Stroke Procedure Not Done Reason Code System",
-      "description" : "Codes specifying the reason principal for not performing a key stroke procedure (Thrombolysis, Thrombectomy).",
+      "title" : "Stroke Procedure Not Done Reasons CodeSystem",
+      "description" : " Local CodeSystem enumerating standardized reasons why a key stroke procedure (e.g., IV thrombolysis or mechanical thrombectomy) was **not performed**.\n\n**Primary use-case**\n- Populate `Procedure.statusReason` when `Procedure.status = not-done`.\n\n**Why it matters**\n- Captures the difference between:\n  - clinical ineligibility (contraindication),\n  - time-based ineligibility (outside window),\n  - operational constraints (unavailable),\n  - patient choice (refusal),\n  - care pathway differences (performed elsewhere / transfer).",
       "uses" : {
       },
       "ValueSet-stroke-proc-not-done-reason-vs.html" : "Stroke Procedure Not Done Reason ValueSet"
@@ -413,8 +413,8 @@
       "version" : "0.1.0",
       "status" : "active",
       "name" : "SwallowProceduresCS",
-      "title" : "Swallow Procedures Code System",
-      "description" : "Codes representing various swallowing assessment procedures.",
+      "title" : "Swallow Procedures CodeSystem",
+      "description" : "Local CodeSystem representing swallowing screening/assessment tools often documented by acronym or local naming.\n\n**Primary use-case**\n- Provide stable, implementable codes when upstream systems cannot supply SNOMED CT equivalents.\n\n**FHIR placement**\n- Included in `SwallowProceduresVS` to be used in `Procedure.code` and (optionally) `Procedure.used.concept`.",
       "uses" : {
       },
       "ValueSet-swallow-procedures-vs.html" : "Swallow Procedures ValueSet"

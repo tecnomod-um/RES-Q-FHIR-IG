@@ -31,7 +31,7 @@ Codes specifying the type of brain imaging performed (e.g., CT, MRI).
   "name" : "BrainImagingTypeCS",
   "title" : "Brain Imaging Type Code System",
   "status" : "active",
-  "date" : "2026-02-19T10:15:59+00:00",
+  "date" : "2026-02-19T10:59:57+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -51,27 +51,27 @@ Codes specifying the type of brain imaging performed (e.g., CT, MRI).
     {
       "code" : "ct-cta",
       "display" : "CT-CTA",
-      "definition" : "Computed Tomography (CT) and CT Angiography (CTA)"
+      "definition" : "CT + CT Angiography. Use when recorded as a combined protocol and not decomposed into separate procedure entries."
     },
     {
       "code" : "ct-cta-perfusion",
       "display" : "CT-CTA and Perfusion",
-      "definition" : "Computed Tomography (CT), CT Angiography (CTA), and CT Perfusion"
+      "definition" : "CT + CTA + CT Perfusion. Often used for penumbra/mismatch-based selection in acute stroke."
     },
     {
       "code" : "mr-dwi-flair",
       "display" : "MR DWI-FLAIR",
-      "definition" : "Magnetic Resonance Imaging (MRI) with Diffusion-Weighted Imaging (DWI) or Fluid-Attenuated Inversion Recovery (FLAIR)"
+      "definition" : "MRI with DWI and/or FLAIR. Supports imaging-based estimates of lesion age and tissue characterization."
     },
     {
       "code" : "mr-dwi-flair-mra",
       "display" : "MR DWI-FLAIR and MRA",
-      "definition" : "Magnetic Resonance Imaging (MRI) with Diffusion-Weighted Imaging (DWI) or Fluid-Attenuated Inversion Recovery (FLAIR), and Magnetic Resonance Angiography (MRA)"
+      "definition" : "MRI (DWI/FLAIR) + MRA. Represents combined parenchymal and vascular assessment."
     },
     {
       "code" : "mr-dwi-flair-mra-perfusion",
       "display" : "MR DWI-FLAIR, MRA, and Perfusion",
-      "definition" : "Magnetic Resonance Imaging (MRI) with Diffusion-Weighted Imaging (DWI) and Fluid-Attenuated Inversion Recovery (FLAIR), Magnetic Resonance Angiography (MRA), and MR Perfusion"
+      "definition" : "MRI (DWI/FLAIR) + MRA + perfusion. Represents advanced tissue and vessel evaluation."
     }
   ]
 }

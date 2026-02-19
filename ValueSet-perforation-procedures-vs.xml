@@ -20,7 +20,7 @@
       <value value="http://tecnomod-um.org"/>
     </telecom>
   </contact>
-  <description value="ValueSet containing SNOMED CT codes representing a range of perforation procedures."/>
+  <description value="ValueSet restricting Procedure codes to stroke **reperfusion interventions**:&#xA;- IV thrombolysis (IVT)&#xA;- Mechanical thrombectomy (MT)&#xA;&#xA;**Primary use-case**&#xA;- Required binding for `StrokeThrombolysisProcedureProfile.code` (which covers reperfusion procedures in this IG)."/>
   <compose>
     <include>
       <system value="http://snomed.info/sct"/>

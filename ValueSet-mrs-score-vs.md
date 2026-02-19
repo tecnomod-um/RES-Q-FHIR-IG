@@ -51,7 +51,7 @@ This ValueSet includes all modified Rankin Scale (mRS) grades defined in the MRs
   "title" : "Modified Rankin Scale (mRS) Score ValueSet",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-19T10:15:59+00:00",
+  "date" : "2026-02-19T10:59:57+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

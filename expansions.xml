@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="518b4238-ec48-49f3-a6a1-c07f9978bb76"/>
+  <id value="bb84e7d3-c258-4930-a885-4a02b2e1ee82"/>
   <meta>
-    <lastUpdated value="2026-02-19T10:15:59.840+00:00"/>
+    <lastUpdated value="2026-02-19T10:59:57.511+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -110,8 +110,8 @@
         <date value="2025-03-31"/>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:64195a93-0336-49c1-9939-fd9c8bbb4e64"/>
-          <timestamp value="2026-02-19T10:17:28+00:00"/>
+          <identifier value="urn:uuid:8bddf2d0-dc93-4440-9e3b-a736b258d934"/>
+          <timestamp value="2026-02-19T11:01:31+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -259,8 +259,8 @@
         <status value="active"/>
         <date value="2025-03-31"/>
         <expansion>
-          <identifier value="urn:uuid:314a0b0c-7146-4d6e-80d4-e2fbdee66ef8"/>
-          <timestamp value="2026-02-19T10:17:28+00:00"/>
+          <identifier value="urn:uuid:34a047ab-1da3-4770-8cce-6c0af9d5099d"/>
+          <timestamp value="2026-02-19T11:01:31+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -435,10 +435,10 @@
         <title value="Assessment Context ValueSet"/>
         <status value="active"/>
         <experimental value="true"/>
-        <date value="2026-02-19T10:15:59+00:00"/>
+        <date value="2026-02-19T10:59:57+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:04050487-6f53-480d-b620-fcbc9dc74453"/>
-          <timestamp value="2026-02-19T10:17:29+00:00"/>
+          <identifier value="urn:uuid:ebbb0a5d-f782-48c1-b889-341546f56177"/>
+          <timestamp value="2026-02-19T11:01:32+00:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>
@@ -561,7 +561,7 @@
                   <a href="CodeSystem-brain-imaging-type-cs.html#brain-imaging-type-cs-ct-cta">ct-cta</a>
                 </td>
                 <td>CT-CTA</td>
-                <td>Computed Tomography (CT) and CT Angiography (CTA)</td>
+                <td>CT + CT Angiography. Use when recorded as a combined protocol and not decomposed into separate procedure entries.</td>
                 <td>
                   <span class="copy-text-inline">
                     <button data-clipboard-text="{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;ct-cta&quot;, &quot;display&quot;: &quot;CT-CTA&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
@@ -582,7 +582,7 @@
                   <a href="CodeSystem-brain-imaging-type-cs.html#brain-imaging-type-cs-ct-cta-perfusion">ct-cta-perfusion</a>
                 </td>
                 <td>CT-CTA and Perfusion</td>
-                <td>Computed Tomography (CT), CT Angiography (CTA), and CT Perfusion</td>
+                <td>CT + CTA + CT Perfusion. Often used for penumbra/mismatch-based selection in acute stroke.</td>
                 <td>
                   <span class="copy-text-inline">
                     <button data-clipboard-text="{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;ct-cta-perfusion&quot;, &quot;display&quot;: &quot;CT-CTA and Perfusion&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
@@ -603,7 +603,7 @@
                   <a href="CodeSystem-brain-imaging-type-cs.html#brain-imaging-type-cs-mr-dwi-flair">mr-dwi-flair</a>
                 </td>
                 <td>MR DWI-FLAIR</td>
-                <td>Magnetic Resonance Imaging (MRI) with Diffusion-Weighted Imaging (DWI) or Fluid-Attenuated Inversion Recovery (FLAIR)</td>
+                <td>MRI with DWI and/or FLAIR. Supports imaging-based estimates of lesion age and tissue characterization.</td>
                 <td>
                   <span class="copy-text-inline">
                     <button data-clipboard-text="{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;mr-dwi-flair&quot;, &quot;display&quot;: &quot;MR DWI-FLAIR&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
@@ -624,7 +624,7 @@
                   <a href="CodeSystem-brain-imaging-type-cs.html#brain-imaging-type-cs-mr-dwi-flair-mra">mr-dwi-flair-mra</a>
                 </td>
                 <td>MR DWI-FLAIR and MRA</td>
-                <td>Magnetic Resonance Imaging (MRI) with Diffusion-Weighted Imaging (DWI) or Fluid-Attenuated Inversion Recovery (FLAIR), and Magnetic Resonance Angiography (MRA)</td>
+                <td>MRI (DWI/FLAIR) + MRA. Represents combined parenchymal and vascular assessment.</td>
                 <td>
                   <span class="copy-text-inline">
                     <button data-clipboard-text="{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;mr-dwi-flair-mra&quot;, &quot;display&quot;: &quot;MR DWI-FLAIR and MRA&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
@@ -645,7 +645,7 @@
                   <a href="CodeSystem-brain-imaging-type-cs.html#brain-imaging-type-cs-mr-dwi-flair-mra-perfusion">mr-dwi-flair-mra-perfusion</a>
                 </td>
                 <td>MR DWI-FLAIR, MRA, and Perfusion</td>
-                <td>Magnetic Resonance Imaging (MRI) with Diffusion-Weighted Imaging (DWI) and Fluid-Attenuated Inversion Recovery (FLAIR), Magnetic Resonance Angiography (MRA), and MR Perfusion</td>
+                <td>MRI (DWI/FLAIR) + MRA + perfusion. Represents advanced tissue and vessel evaluation.</td>
                 <td>
                   <span class="copy-text-inline">
                     <button data-clipboard-text="{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;mr-dwi-flair-mra-perfusion&quot;, &quot;display&quot;: &quot;MR DWI-FLAIR, MRA, and Perfusion&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
@@ -665,10 +665,10 @@
         <name value="BrainImagingModalityVS"/>
         <title value="Brain Imaging Modality ValueSet"/>
         <status value="active"/>
-        <date value="2026-02-19T10:15:59+00:00"/>
+        <date value="2026-02-19T10:59:57+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:77b82826-6e83-4dc3-9d94-bd9f715e2337"/>
-          <timestamp value="2026-02-19T10:17:29+00:00"/>
+          <identifier value="urn:uuid:d4046eeb-783d-4f75-a7a3-649b4981e4f5"/>
+          <timestamp value="2026-02-19T11:01:32+00:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -833,10 +833,10 @@
         <name value="CarotidImagingModalityVS"/>
         <title value="Carotid Arteries Imaging Modality ValueSet"/>
         <status value="active"/>
-        <date value="2026-02-19T10:15:59+00:00"/>
+        <date value="2026-02-19T10:59:57+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:8c1a5e94-ae89-4100-a7fd-2f7868f98369"/>
-          <timestamp value="2026-02-19T10:17:29+00:00"/>
+          <identifier value="urn:uuid:50c249ce-27a0-46bd-ad31-4e5aa4115fe0"/>
+          <timestamp value="2026-02-19T11:01:32+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -1010,10 +1010,10 @@
         <name value="DischargeDeptVS"/>
         <title value="Discharge Department/Service ValueSet"/>
         <status value="active"/>
-        <date value="2026-02-19T10:15:59+00:00"/>
+        <date value="2026-02-19T10:59:57+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:96519da8-1b55-4171-9315-aff095d171c4"/>
-          <timestamp value="2026-02-19T10:17:30+00:00"/>
+          <identifier value="urn:uuid:843114a0-c44f-4fa5-a4d9-5ddc6e1bc955"/>
+          <timestamp value="2026-02-19T11:01:33+00:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>
@@ -1204,8 +1204,8 @@
         <date value="2025-03-31"/>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:f8a7c07f-2fa7-49d8-966d-92ae422eb90e"/>
-          <timestamp value="2026-02-19T10:17:30+00:00"/>
+          <identifier value="urn:uuid:3b54d136-1251-4267-a878-8c06e6d9feb3"/>
+          <timestamp value="2026-02-19T11:01:33+00:00"/>
           <total value="5"/>
           <offset value="0"/>
           <parameter>
@@ -1341,10 +1341,10 @@
         <name value="FunctionalScoreCodesVS"/>
         <title value="Stroke Functional Score Codes ValueSet"/>
         <status value="active"/>
-        <date value="2026-02-19T10:15:59+00:00"/>
+        <date value="2026-02-19T10:59:57+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:2cd735fa-a079-4992-9584-2d1a85c55873"/>
-          <timestamp value="2026-02-19T10:17:20+00:00"/>
+          <identifier value="urn:uuid:de91962e-fbef-46ac-be29-cdc2d28c2d8c"/>
+          <timestamp value="2026-02-19T11:01:23+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -1506,8 +1506,8 @@
         <date value="2025-09-08"/>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:7d2014d1-9a6d-4237-aebd-d2ed4c21fe2d"/>
-          <timestamp value="2026-02-19T10:17:30+00:00"/>
+          <identifier value="urn:uuid:31de16d0-ecd6-43ba-a3e1-a8bb2791b635"/>
+          <timestamp value="2026-02-19T11:01:33+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -1668,10 +1668,10 @@
         <name value="InitialCareIntensityVS"/>
         <title value="Initial Care Intensity ValueSet"/>
         <status value="active"/>
-        <date value="2026-02-19T10:15:59+00:00"/>
+        <date value="2026-02-19T10:59:57+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:f51195b0-ffd8-4a70-b182-deee72bbc720"/>
-          <timestamp value="2026-02-19T10:17:31+00:00"/>
+          <identifier value="urn:uuid:4772069b-2c3d-4ff6-821d-d68abc3ffd5c"/>
+          <timestamp value="2026-02-19T11:01:34+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -2023,10 +2023,10 @@
         <name value="MedicationVS"/>
         <title value="Medications ValueSet"/>
         <status value="draft"/>
-        <date value="2026-02-19T10:15:59+00:00"/>
+        <date value="2026-02-19T10:59:57+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:efad9a46-8ee4-4f82-af3d-c54af96f3b04"/>
-          <timestamp value="2026-02-19T10:17:31+00:00"/>
+          <identifier value="urn:uuid:880e5143-c9a8-4db2-9b30-874c4236326a"/>
+          <timestamp value="2026-02-19T11:01:34+00:00"/>
           <total value="12"/>
           <offset value="0"/>
           <parameter>
@@ -2313,10 +2313,10 @@
         <title value="Modified Rankin Scale (mRS) Score ValueSet"/>
         <status value="active"/>
         <experimental value="true"/>
-        <date value="2026-02-19T10:15:59+00:00"/>
+        <date value="2026-02-19T10:59:57+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:4fd6b68e-d8fb-4957-a1fd-ab95d1e7dd0a"/>
-          <timestamp value="2026-02-19T10:17:21+00:00"/>
+          <identifier value="urn:uuid:a5587232-179c-48d6-840c-79f9e7f79e55"/>
+          <timestamp value="2026-02-19T11:01:24+00:00"/>
           <total value="7"/>
           <offset value="0"/>
           <parameter>
@@ -2443,10 +2443,10 @@
         <name value="MTICICodeVS"/>
         <title value="Modified Thrombolysis in Cerebral Infarction Assessment ValueSet"/>
         <status value="active"/>
-        <date value="2026-02-19T10:15:59+00:00"/>
+        <date value="2026-02-19T10:59:57+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:7bd697d1-a9d2-4766-a167-352a21c72e34"/>
-          <timestamp value="2026-02-19T10:17:31+00:00"/>
+          <identifier value="urn:uuid:512b6c24-8a0a-4837-a90e-8233bc5352e5"/>
+          <timestamp value="2026-02-19T11:01:34+00:00"/>
           <total value="1"/>
           <offset value="0"/>
           <parameter>
@@ -2655,8 +2655,8 @@
         <experimental value="true"/>
         <date value="2025-03-31"/>
         <expansion>
-          <identifier value="urn:uuid:6958db52-a597-47d8-b980-418b91d63f9a"/>
-          <timestamp value="2026-02-19T10:17:31+00:00"/>
+          <identifier value="urn:uuid:cf1242a3-34f7-464b-b780-7a28d2e9979c"/>
+          <timestamp value="2026-02-19T11:01:34+00:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -2796,8 +2796,8 @@
         <experimental value="true"/>
         <date value="2025-03-31"/>
         <expansion>
-          <identifier value="urn:uuid:774e70b3-ee07-4ef8-914d-06c4ef0ad441"/>
-          <timestamp value="2026-02-19T10:17:31+00:00"/>
+          <identifier value="urn:uuid:95d6e93b-2fa4-4e53-af6d-9152df68f4ce"/>
+          <timestamp value="2026-02-19T11:01:35+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -2847,7 +2847,7 @@
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
             <p class="res-header-id"/>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
-              <a href="CodeSystem-procedure-timing-context-cs.html">codesystem Procedure Timing Context Code System v0.1.0 (CodeSystem)</a>
+              <a href="CodeSystem-procedure-timing-context-cs.html">codesystem Procedure Timing Context CodeSystem v0.1.0 (CodeSystem)</a>
               <span class="copy-text-inline">
                 <button data-clipboard-text="http://tecnomod-um.org/CodeSystem/procedure-timing-context-cs|0.1.0" title="Click to Copy URL" class="btn-copy"> </button>
               </span>
@@ -2945,10 +2945,10 @@
         <name value="ProcedureTimingContextVS"/>
         <title value="Procedure Timing Context ValueSet"/>
         <status value="active"/>
-        <date value="2026-02-19T10:15:59+00:00"/>
+        <date value="2026-02-19T10:59:57+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:b96858ef-314b-4a3e-89f1-15eb6c698770"/>
-          <timestamp value="2026-02-19T10:17:32+00:00"/>
+          <identifier value="urn:uuid:21960562-abf3-49a7-8fd3-75bf6c281105"/>
+          <timestamp value="2026-02-19T11:01:35+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -3074,10 +3074,10 @@
         <name value="SpecificFindingCodesVS"/>
         <title value="Specific Stroke Finding Codes ValueSet"/>
         <status value="active"/>
-        <date value="2026-02-19T10:15:59+00:00"/>
+        <date value="2026-02-19T10:59:57+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:8f35e3c1-c74d-411a-aa66-e2931bbc8906"/>
-          <timestamp value="2026-02-19T10:17:32+00:00"/>
+          <identifier value="urn:uuid:1ed999ed-4e0a-43ea-90a9-80920afa708e"/>
+          <timestamp value="2026-02-19T11:01:35+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -3288,10 +3288,10 @@
         <name value="StrokeArrivalModeVS"/>
         <title value="Stroke Arrival Mode ValueSet"/>
         <status value="active"/>
-        <date value="2026-02-19T10:15:59+00:00"/>
+        <date value="2026-02-19T10:59:57+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:3e4f3639-8038-4505-9122-e8f22d878760"/>
-          <timestamp value="2026-02-19T10:17:32+00:00"/>
+          <identifier value="urn:uuid:7806dfff-c99c-43f7-b61b-f4dbe805b878"/>
+          <timestamp value="2026-02-19T11:01:35+00:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -3438,10 +3438,10 @@
         <name value="StrokeCircumstanceCodesVS"/>
         <title value="Stroke Circumstance Codes ValueSet"/>
         <status value="active"/>
-        <date value="2026-02-19T10:15:59+00:00"/>
+        <date value="2026-02-19T10:59:57+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:71d0e5b6-0bd0-4cfc-97d8-6c52f39e236f"/>
-          <timestamp value="2026-02-19T10:17:25+00:00"/>
+          <identifier value="urn:uuid:092c435f-5dcc-46a7-970e-9ddf79529535"/>
+          <timestamp value="2026-02-19T11:01:27+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -3642,8 +3642,8 @@
         <date value="2025-10-07"/>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:ccff0780-c595-4e0b-af44-24d17490901c"/>
-          <timestamp value="2026-02-19T10:17:25+00:00"/>
+          <identifier value="urn:uuid:04588725-a87f-44a4-9920-15e6ae417c7b"/>
+          <timestamp value="2026-02-19T11:01:28+00:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -3863,10 +3863,10 @@
         <name value="StrokeDischargeDestinationVS"/>
         <title value="Stroke Discharge Destination ValueSet"/>
         <status value="active"/>
-        <date value="2026-02-19T10:15:59+00:00"/>
+        <date value="2026-02-19T10:59:57+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:16a91f3d-ac99-42b1-ae5f-f90c5c4d01c3"/>
-          <timestamp value="2026-02-19T10:17:32+00:00"/>
+          <identifier value="urn:uuid:8fc00d24-6721-49e5-8200-df9287711c93"/>
+          <timestamp value="2026-02-19T11:01:35+00:00"/>
           <total value="5"/>
           <offset value="0"/>
           <parameter>
@@ -4093,8 +4093,8 @@
         <date value="2025-03-31"/>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:c08b7b0f-df5d-41a9-97c9-c2005b736924"/>
-          <timestamp value="2026-02-19T10:17:32+00:00"/>
+          <identifier value="urn:uuid:ca7d0624-7800-4ec6-8ab8-c24b2d21f709"/>
+          <timestamp value="2026-02-19T11:01:36+00:00"/>
           <total value="5"/>
           <offset value="0"/>
           <parameter>
@@ -4287,10 +4287,10 @@
         <name value="StrokeFindingCodesVS"/>
         <title value="Specific Stroke Finding Codes ValueSet"/>
         <status value="active"/>
-        <date value="2026-02-19T10:15:59+00:00"/>
+        <date value="2026-02-19T10:59:57+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:9dc566a3-2182-4713-8ab2-366360ed02c5"/>
-          <timestamp value="2026-02-19T10:17:23+00:00"/>
+          <identifier value="urn:uuid:8fd289aa-ba4e-468e-8e0d-1cc946b85a52"/>
+          <timestamp value="2026-02-19T11:01:26+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -4361,7 +4361,7 @@
           <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
             <p class="res-header-id"/>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
-              <a href="CodeSystem-stroke-proc-not-done-reason-cs.html">codesystem Stroke Procedure Not Done Reason Code System v0.1.0 (CodeSystem)</a>
+              <a href="CodeSystem-stroke-proc-not-done-reason-cs.html">codesystem Stroke Procedure Not Done Reasons CodeSystem v0.1.0 (CodeSystem)</a>
               <span class="copy-text-inline">
                 <button data-clipboard-text="http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs|0.1.0" title="Click to Copy URL" class="btn-copy"> </button>
               </span>
@@ -4396,16 +4396,16 @@
                 <td style="white-space:nowrap">  
                   <a href="CodeSystem-stroke-proc-not-done-reason-cs.html#stroke-proc-not-done-reason-cs-time-window">time-window</a>
                 </td>
-                <td>Outside Therapeutic Window</td>
-                <td>Patient presented or evaluated outside the established time limit for the procedure.</td>
+                <td>Outside therapeutic window</td>
+                <td>The patient presented/evaluated outside the time window defined by protocol/guidelines for benefit.</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;time-window&quot;, &quot;display&quot;: &quot;Outside Therapeutic Window&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;time-window&quot;, &quot;display&quot;: &quot;Outside therapeutic window&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;time-window&quot;&gt;&lt;display value=&quot;Outside Therapeutic Window&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;time-window&quot;&gt;&lt;display value=&quot;Outside therapeutic window&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -4418,7 +4418,7 @@
                   <a href="CodeSystem-stroke-proc-not-done-reason-cs.html#stroke-proc-not-done-reason-cs-no-lvo">no-lvo</a>
                 </td>
                 <td>No Large Vessel Occlusion (LVO)</td>
-                <td>An eligible large vessel occlusion for thrombectomy was not identified.</td>
+                <td>No eligible large vessel occlusion for thrombectomy was identified.</td>
                 <td>
                   <span class="copy-text-inline">
                     <button data-clipboard-text="{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;no-lvo&quot;, &quot;display&quot;: &quot;No Large Vessel Occlusion (LVO)&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
@@ -4438,16 +4438,16 @@
                 <td style="white-space:nowrap">  
                   <a href="CodeSystem-stroke-proc-not-done-reason-cs.html#stroke-proc-not-done-reason-cs-contraindication">contraindication</a>
                 </td>
-                <td>Contraindication Present</td>
-                <td>A medical contraindication to the procedure existed (e.g., bleeding risk).</td>
+                <td>Contraindication present</td>
+                <td>A medical contraindication existed (e.g., bleeding risk or other high-risk factor).</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;contraindication&quot;, &quot;display&quot;: &quot;Contraindication Present&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;contraindication&quot;, &quot;display&quot;: &quot;Contraindication present&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;contraindication&quot;&gt;&lt;display value=&quot;Contraindication Present&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;contraindication&quot;&gt;&lt;display value=&quot;Contraindication present&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -4459,16 +4459,16 @@
                 <td style="white-space:nowrap">  
                   <a href="CodeSystem-stroke-proc-not-done-reason-cs.html#stroke-proc-not-done-reason-cs-patient-refusal">patient-refusal</a>
                 </td>
-                <td>Patient/Family Refusal</td>
-                <td>The patient or their legal representative refused the procedure.</td>
+                <td>Patient/family refusal</td>
+                <td>The patient or legal representative declined the intervention after discussion.</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;patient-refusal&quot;, &quot;display&quot;: &quot;Patient/Family Refusal&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;patient-refusal&quot;, &quot;display&quot;: &quot;Patient/family refusal&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;patient-refusal&quot;&gt;&lt;display value=&quot;Patient/Family Refusal&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;patient-refusal&quot;&gt;&lt;display value=&quot;Patient/family refusal&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -4480,16 +4480,16 @@
                 <td style="white-space:nowrap">  
                   <a href="CodeSystem-stroke-proc-not-done-reason-cs.html#stroke-proc-not-done-reason-cs-transfer">transfer</a>
                 </td>
-                <td>Transferred to Another Facility</td>
-                <td>The patient was transferred to another hospital for the procedure.</td>
+                <td>Transferred to another facility</td>
+                <td>The patient was transferred to a different facility for the intervention.</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;transfer&quot;, &quot;display&quot;: &quot;Transferred to Another Facility&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;transfer&quot;, &quot;display&quot;: &quot;Transferred to another facility&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;transfer&quot;&gt;&lt;display value=&quot;Transferred to Another Facility&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;transfer&quot;&gt;&lt;display value=&quot;Transferred to another facility&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -4501,16 +4501,16 @@
                 <td style="white-space:nowrap">  
                   <a href="CodeSystem-stroke-proc-not-done-reason-cs.html#stroke-proc-not-done-reason-cs-unavailable">unavailable</a>
                 </td>
-                <td>Procedure Unavailable</td>
-                <td>The procedure was not available at the facility (e.g., lack of equipment, staff).</td>
+                <td>Procedure unavailable</td>
+                <td>The facility could not provide the procedure (equipment, staffing, service availability).</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;unavailable&quot;, &quot;display&quot;: &quot;Procedure Unavailable&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;unavailable&quot;, &quot;display&quot;: &quot;Procedure unavailable&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;unavailable&quot;&gt;&lt;display value=&quot;Procedure Unavailable&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;unavailable&quot;&gt;&lt;display value=&quot;Procedure unavailable&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -4522,16 +4522,16 @@
                 <td style="white-space:nowrap">  
                   <a href="CodeSystem-stroke-proc-not-done-reason-cs.html#stroke-proc-not-done-reason-cs-disability">disability</a>
                 </td>
-                <td>Severe Preexisting Disability</td>
-                <td>Patient's baseline disability made benefit from the procedure unlikely.</td>
+                <td>Severe preexisting disability</td>
+                <td>Baseline disability made benefit unlikely per clinical judgement/protocol.</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;disability&quot;, &quot;display&quot;: &quot;Severe Preexisting Disability&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;disability&quot;, &quot;display&quot;: &quot;Severe preexisting disability&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;disability&quot;&gt;&lt;display value=&quot;Severe Preexisting Disability&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;disability&quot;&gt;&lt;display value=&quot;Severe preexisting disability&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -4543,16 +4543,16 @@
                 <td style="white-space:nowrap">  
                   <a href="CodeSystem-stroke-proc-not-done-reason-cs.html#stroke-proc-not-done-reason-cs-mild-deficit">mild-deficit</a>
                 </td>
-                <td>Mild Deficit</td>
-                <td>Patient's neurological deficit was too mild to warrant the procedure.</td>
+                <td>Mild deficit</td>
+                <td>Neurological deficit severity was judged too mild to justify risk/benefit.</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;mild-deficit&quot;, &quot;display&quot;: &quot;Mild Deficit&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;mild-deficit&quot;, &quot;display&quot;: &quot;Mild deficit&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;mild-deficit&quot;&gt;&lt;display value=&quot;Mild Deficit&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;mild-deficit&quot;&gt;&lt;display value=&quot;Mild deficit&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -4564,16 +4564,16 @@
                 <td style="white-space:nowrap">  
                   <a href="CodeSystem-stroke-proc-not-done-reason-cs.html#stroke-proc-not-done-reason-cs-done-elsewhere">done-elsewhere</a>
                 </td>
-                <td>Performed Elsewhere</td>
+                <td>Performed elsewhere</td>
                 <td>The procedure had already been performed at another facility prior to arrival/transfer.</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;done-elsewhere&quot;, &quot;display&quot;: &quot;Performed Elsewhere&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;done-elsewhere&quot;, &quot;display&quot;: &quot;Performed elsewhere&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;done-elsewhere&quot;&gt;&lt;display value=&quot;Performed Elsewhere&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;done-elsewhere&quot;&gt;&lt;display value=&quot;Performed elsewhere&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -4585,16 +4585,16 @@
                 <td style="white-space:nowrap">  
                   <a href="CodeSystem-stroke-proc-not-done-reason-cs.html#stroke-proc-not-done-reason-cs-cost">cost</a>
                 </td>
-                <td>Cost / No Insurance</td>
-                <td>Financial or coverage reasons prevented the procedure.</td>
+                <td>Cost / no insurance</td>
+                <td>Financial or coverage constraints prevented the procedure (use only where applicable).</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;cost&quot;, &quot;display&quot;: &quot;Cost / No Insurance&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;cost&quot;, &quot;display&quot;: &quot;Cost / no insurance&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;cost&quot;&gt;&lt;display value=&quot;Cost / No Insurance&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;cost&quot;&gt;&lt;display value=&quot;Cost / no insurance&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -4606,16 +4606,16 @@
                 <td style="white-space:nowrap">  
                   <a href="CodeSystem-stroke-proc-not-done-reason-cs.html#stroke-proc-not-done-reason-cs-unknown">unknown</a>
                 </td>
-                <td>Reason Unknown</td>
-                <td>The reason was not documented or is unknown.</td>
+                <td>Reason unknown</td>
+                <td>Reason was not documented or is unknown.</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;unknown&quot;, &quot;display&quot;: &quot;Reason Unknown&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;unknown&quot;, &quot;display&quot;: &quot;Reason unknown&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;unknown&quot;&gt;&lt;display value=&quot;Reason Unknown&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;unknown&quot;&gt;&lt;display value=&quot;Reason unknown&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -4627,16 +4627,16 @@
                 <td style="white-space:nowrap">  
                   <a href="CodeSystem-stroke-proc-not-done-reason-cs.html#stroke-proc-not-done-reason-cs-consent">consent</a>
                 </td>
-                <td>Consent Not Obtained</td>
-                <td>Informed consent for the procedure was not obtained.</td>
+                <td>Consent not obtained</td>
+                <td>Informed consent required for the procedure was not obtained.</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;consent&quot;, &quot;display&quot;: &quot;Consent Not Obtained&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;consent&quot;, &quot;display&quot;: &quot;Consent not obtained&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;consent&quot;&gt;&lt;display value=&quot;Consent Not Obtained&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;consent&quot;&gt;&lt;display value=&quot;Consent not obtained&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -4648,37 +4648,16 @@
                 <td style="white-space:nowrap">  
                   <a href="CodeSystem-stroke-proc-not-done-reason-cs.html#stroke-proc-not-done-reason-cs-only-mt">only-mt</a>
                 </td>
-                <td>Only Mechanical Thrombectomy Considered</td>
-                <td>Only mechanical thrombectomy was considered, and thrombolysis was not performed.</td>
+                <td>Only mechanical thrombectomy considered</td>
+                <td>Only MT was considered; IV thrombolysis was not performed.</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;only-mt&quot;, &quot;display&quot;: &quot;Only Mechanical Thrombectomy Considered&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;only-mt&quot;, &quot;display&quot;: &quot;Only mechanical thrombectomy considered&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;only-mt&quot;&gt;&lt;display value=&quot;Only Mechanical Thrombectomy Considered&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <a name="x-http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs-other"> </a>
-                  <code>http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs</code>
-                </td>
-                <td style="white-space:nowrap">  
-                  <a href="CodeSystem-stroke-proc-not-done-reason-cs.html#stroke-proc-not-done-reason-cs-other">other</a>
-                </td>
-                <td>Other Reason</td>
-                <td>A reason not specifically defined.</td>
-                <td>
-                  <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;other&quot;, &quot;display&quot;: &quot;Other Reason&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
-                  </span>
-                </td>
-                <td>
-                  <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;other&quot;&gt;&lt;display value=&quot;Other Reason&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;only-mt&quot;&gt;&lt;display value=&quot;Only mechanical thrombectomy considered&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -4690,16 +4669,16 @@
                 <td style="white-space:nowrap">  
                   <a href="CodeSystem-stroke-proc-not-done-reason-cs.html#stroke-proc-not-done-reason-cs-technically-not-possible">technically-not-possible</a>
                 </td>
-                <td>Technically Not Possible</td>
-                <td>The procedure could not be performed due to technical or anatomical challenges.</td>
+                <td>Technically not possible</td>
+                <td>Technical/anatomical factors prevented completion.</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;technically-not-possible&quot;, &quot;display&quot;: &quot;Technically Not Possible&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;technically-not-possible&quot;, &quot;display&quot;: &quot;Technically not possible&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;technically-not-possible&quot;&gt;&lt;display value=&quot;Technically Not Possible&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;technically-not-possible&quot;&gt;&lt;display value=&quot;Technically not possible&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -4711,16 +4690,37 @@
                 <td style="white-space:nowrap">  
                   <a href="CodeSystem-stroke-proc-not-done-reason-cs.html#stroke-proc-not-done-reason-cs-no-angiography">no-angiography</a>
                 </td>
-                <td>Angiography Not Performed</td>
-                <td>Angiography to assess the situation was not performed.</td>
+                <td>Angiography not performed</td>
+                <td>Required angiographic assessment was not performed.</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;no-angiography&quot;, &quot;display&quot;: &quot;Angiography Not Performed&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;no-angiography&quot;, &quot;display&quot;: &quot;Angiography not performed&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;no-angiography&quot;&gt;&lt;display value=&quot;Angiography Not Performed&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;no-angiography&quot;&gt;&lt;display value=&quot;Angiography not performed&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs-other"> </a>
+                  <code>http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-stroke-proc-not-done-reason-cs.html#stroke-proc-not-done-reason-cs-other">other</a>
+                </td>
+                <td>Other reason</td>
+                <td>Other reason not listed. Prefer adding explanatory text in statusReason.text where possible.</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;other&quot;, &quot;display&quot;: &quot;Other reason&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;other&quot;&gt;&lt;display value=&quot;Other reason&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -4732,10 +4732,10 @@
         <name value="StrokeProcNotDoneReasonVS"/>
         <title value="Stroke Procedure Not Done Reason ValueSet"/>
         <status value="active"/>
-        <date value="2026-02-19T10:15:59+00:00"/>
+        <date value="2026-02-19T10:59:57+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:427be82a-d668-44e9-b378-c5025b6de0bb"/>
-          <timestamp value="2026-02-19T10:17:33+00:00"/>
+          <identifier value="urn:uuid:068972d8-3322-4154-886f-561857457225"/>
+          <timestamp value="2026-02-19T11:01:36+00:00"/>
           <total value="16"/>
           <offset value="0"/>
           <parameter>
@@ -4765,7 +4765,7 @@
           <contains>
             <system value="http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs"/>
             <code value="time-window"/>
-            <display value="Outside Therapeutic Window"/>
+            <display value="Outside therapeutic window"/>
           </contains>
           <contains>
             <system value="http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs"/>
@@ -4775,72 +4775,72 @@
           <contains>
             <system value="http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs"/>
             <code value="contraindication"/>
-            <display value="Contraindication Present"/>
+            <display value="Contraindication present"/>
           </contains>
           <contains>
             <system value="http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs"/>
             <code value="patient-refusal"/>
-            <display value="Patient/Family Refusal"/>
+            <display value="Patient/family refusal"/>
           </contains>
           <contains>
             <system value="http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs"/>
             <code value="transfer"/>
-            <display value="Transferred to Another Facility"/>
+            <display value="Transferred to another facility"/>
           </contains>
           <contains>
             <system value="http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs"/>
             <code value="unavailable"/>
-            <display value="Procedure Unavailable"/>
+            <display value="Procedure unavailable"/>
           </contains>
           <contains>
             <system value="http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs"/>
             <code value="disability"/>
-            <display value="Severe Preexisting Disability"/>
+            <display value="Severe preexisting disability"/>
           </contains>
           <contains>
             <system value="http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs"/>
             <code value="mild-deficit"/>
-            <display value="Mild Deficit"/>
+            <display value="Mild deficit"/>
           </contains>
           <contains>
             <system value="http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs"/>
             <code value="done-elsewhere"/>
-            <display value="Performed Elsewhere"/>
+            <display value="Performed elsewhere"/>
           </contains>
           <contains>
             <system value="http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs"/>
             <code value="cost"/>
-            <display value="Cost / No Insurance"/>
+            <display value="Cost / no insurance"/>
           </contains>
           <contains>
             <system value="http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs"/>
             <code value="unknown"/>
-            <display value="Reason Unknown"/>
+            <display value="Reason unknown"/>
           </contains>
           <contains>
             <system value="http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs"/>
             <code value="consent"/>
-            <display value="Consent Not Obtained"/>
+            <display value="Consent not obtained"/>
           </contains>
           <contains>
             <system value="http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs"/>
             <code value="only-mt"/>
-            <display value="Only Mechanical Thrombectomy Considered"/>
-          </contains>
-          <contains>
-            <system value="http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs"/>
-            <code value="other"/>
-            <display value="Other Reason"/>
+            <display value="Only mechanical thrombectomy considered"/>
           </contains>
           <contains>
             <system value="http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs"/>
             <code value="technically-not-possible"/>
-            <display value="Technically Not Possible"/>
+            <display value="Technically not possible"/>
           </contains>
           <contains>
             <system value="http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs"/>
             <code value="no-angiography"/>
-            <display value="Angiography Not Performed"/>
+            <display value="Angiography not performed"/>
+          </contains>
+          <contains>
+            <system value="http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs"/>
+            <code value="other"/>
+            <display value="Other reason"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -5110,8 +5110,8 @@
         <date value="2025-10-07"/>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:077c8c20-a414-4263-b62d-9b8911910532"/>
-          <timestamp value="2026-02-19T10:17:26+00:00"/>
+          <identifier value="urn:uuid:5497a80a-992e-417a-bacf-4cd53213db66"/>
+          <timestamp value="2026-02-19T11:01:29+00:00"/>
           <total value="11"/>
           <offset value="0"/>
           <parameter>
@@ -5214,7 +5214,7 @@
                   </span>
                 </li>
                 <li>
-                  <a href="CodeSystem-swallow-procedures-cs.html">codesystem Swallow Procedures Code System v0.1.0 (CodeSystem)</a>
+                  <a href="CodeSystem-swallow-procedures-cs.html">codesystem Swallow Procedures CodeSystem v0.1.0 (CodeSystem)</a>
                   <span class="copy-text-inline">
                     <button data-clipboard-text="http://tecnomod-um.org/CodeSystem/swallow-procedures-cs|0.1.0" title="Click to Copy URL" class="btn-copy"> </button>
                   </span>
@@ -5380,8 +5380,8 @@
         <experimental value="true"/>
         <date value="2025-03-31"/>
         <expansion>
-          <identifier value="urn:uuid:de4a1d22-0a0c-4672-909f-6def6ebe44d0"/>
-          <timestamp value="2026-02-19T10:17:33+00:00"/>
+          <identifier value="urn:uuid:506d69d9-c7a2-4046-a5ee-803c0dcb04e4"/>
+          <timestamp value="2026-02-19T11:01:36+00:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -5563,10 +5563,10 @@
         <name value="SwallowingScreeningTimingCategoryVS"/>
         <title value="Swallowing Screening Timing Category ValueSet"/>
         <status value="active"/>
-        <date value="2026-02-19T10:15:59+00:00"/>
+        <date value="2026-02-19T10:59:57+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:dd47c004-80e8-49e5-b9d0-380b17703fdb"/>
-          <timestamp value="2026-02-19T10:17:33+00:00"/>
+          <identifier value="urn:uuid:6cd928ef-bdf9-4ecd-8712-2122ba9a68fe"/>
+          <timestamp value="2026-02-19T11:01:37+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -5682,12 +5682,12 @@
         <url value="http://tecnomod-um.org/ValueSet/thrombectomy-complication-vs"/>
         <version value="0.1.0"/>
         <name value="ThrombectomyComplicationVS"/>
-        <title value="Thrombectomy Complication ValueSet"/>
+        <title value="Thrombectomy Complications ValueSet"/>
         <status value="active"/>
-        <date value="2026-02-19T10:15:59+00:00"/>
+        <date value="2026-02-19T10:59:57+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:752559b2-b55d-49f4-a557-74f883b66241"/>
-          <timestamp value="2026-02-19T10:17:34+00:00"/>
+          <identifier value="urn:uuid:a0e0ec9b-7760-4e10-af78-c75035c68157"/>
+          <timestamp value="2026-02-19T11:01:37+00:00"/>
           <total value="1"/>
           <offset value="0"/>
           <parameter>
@@ -5809,10 +5809,10 @@
         <name value="TimingMetricCodesVS"/>
         <title value="Stroke Timing Metric Codes ValueSet"/>
         <status value="active"/>
-        <date value="2026-02-19T10:15:59+00:00"/>
+        <date value="2026-02-19T10:59:57+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:f33f6666-2492-4d75-ba4a-fdbc7403526c"/>
-          <timestamp value="2026-02-19T10:17:27+00:00"/>
+          <identifier value="urn:uuid:3ba1d9a9-90e4-47bb-8487-b5ab21fd83bb"/>
+          <timestamp value="2026-02-19T11:01:30+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -5930,10 +5930,10 @@
         <title value="Stroke Vital Sign Codes ValueSet"/>
         <status value="active"/>
         <experimental value="true"/>
-        <date value="2026-02-19T10:15:59+00:00"/>
+        <date value="2026-02-19T10:59:57+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:1b483784-1cfe-4977-9d9f-cb1b59be1a78"/>
-          <timestamp value="2026-02-19T10:17:34+00:00"/>
+          <identifier value="urn:uuid:dc83371d-0da9-4191-8fc7-81f9c32fc383"/>
+          <timestamp value="2026-02-19T11:01:38+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -6075,10 +6075,10 @@
         <title value="Gender (SNOMED CT)"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-02-19T10:15:59+00:00"/>
+        <date value="2026-02-19T10:59:57+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:4292fa51-548d-4af7-81ce-255f6d427c36"/>
-          <timestamp value="2026-02-19T10:17:35+00:00"/>
+          <identifier value="urn:uuid:054b84b0-3ae2-450e-b9bd-f21658da32f7"/>
+          <timestamp value="2026-02-19T11:01:38+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>

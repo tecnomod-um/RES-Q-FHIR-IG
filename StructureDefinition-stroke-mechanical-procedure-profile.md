@@ -1,10 +1,10 @@
-# Stroke Thrombolysis Procedure Profile (R5) - v0.1.0
+# Stroke Thrombolysis Procedure Profile - v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **Stroke Thrombolysis Procedure Profile (R5)**
+* **Stroke Thrombolysis Procedure Profile**
 
-## Resource Profile: Stroke Thrombolysis Procedure Profile (R5) 
+## Resource Profile: Stroke Thrombolysis Procedure Profile 
 
 | | |
 | :--- | :--- |
@@ -12,7 +12,23 @@
 | Active as of 2026-02-19 | *Computable Name*:StrokeThrombolysisProcedureProfile |
 
  
-Procedure profile to record key stroke procedures, including status, timing, complications, reasons, and context. 
+Profile for documenting **stroke reperfusion procedures** as FHIR Procedure: 
+* IV thrombolysis (IVT)
+* Mechanical thrombectomy (MT)
+ 
+**Captures** 
+* `code`: restricted to reperfusion procedures (PerforationProceduresVS).
+* `status`: completed/not-done/etc.
+* `statusReason`: controlled reason set when not done.
+* `occurrence[x]` (constrained to Period): start/end time of the intervention when available.
+* `complication`: complications (as CodeableReference to Condition) — constrained by invariants.
+* `extension[timingContext]`: acute/post-acute phase classification.
+ 
+**Use-cases** 
+* Time-to-treatment metrics (door-to-needle, door-to-groin), service evaluation.
+* Structured documentation of “why not treated” for QI programs.
+* Safety monitoring for procedural complications.
+ 
 
 **Usages:**
 
@@ -39,9 +55,9 @@ Other representations of profile: [CSV](StructureDefinition-stroke-mechanical-pr
   "url" : "http://tecnomod-um.org/StructureDefinition/stroke-mechanical-procedure-profile",
   "version" : "0.1.0",
   "name" : "StrokeThrombolysisProcedureProfile",
-  "title" : "Stroke Thrombolysis Procedure Profile (R5)",
+  "title" : "Stroke Thrombolysis Procedure Profile",
   "status" : "active",
-  "date" : "2026-02-19T10:15:59+00:00",
+  "date" : "2026-02-19T10:59:57+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -54,7 +70,7 @@ Other representations of profile: [CSV](StructureDefinition-stroke-mechanical-pr
       ]
     }
   ],
-  "description" : "Procedure profile to record key stroke procedures, including status, timing, complications, reasons, and context.",
+  "description" : "Profile for documenting **stroke reperfusion procedures** as FHIR Procedure:\n- IV thrombolysis (IVT)\n- Mechanical thrombectomy (MT)\n\n**Captures**\n- `code`: restricted to reperfusion procedures (PerforationProceduresVS).\n- `status`: completed/not-done/etc.\n- `statusReason`: controlled reason set when not done.\n- `occurrence[x]` (constrained to Period): start/end time of the intervention when available.\n- `complication`: complications (as CodeableReference to Condition) — constrained by invariants.\n- `extension[timingContext]`: acute/post-acute phase classification.\n\n**Use-cases**\n- Time-to-treatment metrics (door-to-needle, door-to-groin), service evaluation.\n- Structured documentation of “why not treated” for QI programs.\n- Safety monitoring for procedural complications. ",
   "fhirVersion" : "5.0.0",
   "mapping" : [
     {

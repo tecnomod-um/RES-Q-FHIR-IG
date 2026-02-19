@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Stroke Procedure Not Done Reason Code System -  v0.1.0</title>
+    <title>Stroke Procedure Not Done Reasons CodeSystem -  v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -131,7 +131,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Stroke Procedure Not Done Reason Code System</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Stroke Procedure Not Done Reasons CodeSystem</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -187,7 +187,7 @@
 </ul>
 
   <a name="root"> </a>
-  <h2 id="root">CodeSystem: Stroke Procedure Not Done Reason Code System
+  <h2 id="root">CodeSystem: Stroke Procedure Not Done Reasons CodeSystem
 (Experimental)
   </h2>
 
@@ -229,7 +229,25 @@
   </table>
 
 <p>
-<p>Codes specifying the reason principal for not performing a key stroke procedure (Thrombolysis, Thrombectomy).</p>
+<p>Local CodeSystem enumerating standardized reasons why a key stroke procedure (e.g., IV thrombolysis or mechanical thrombectomy) was <strong>not performed</strong>.</p>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Populate <code class="language-plaintext highlighter-rouge">Procedure.statusReason</code> when <code class="language-plaintext highlighter-rouge">Procedure.status = not-done</code>.</li>
+</ul>
+
+<p><strong>Why it matters</strong></p>
+<ul>
+  <li>Captures the difference between:
+    <ul>
+      <li>clinical ineligibility (contraindication),</li>
+      <li>time-based ineligibility (outside window),</li>
+      <li>operational constraints (unavailable),</li>
+      <li>patient choice (refusal),</li>
+      <li>care pathway differences (performed elsewhere / transfer).</li>
+    </ul>
+  </li>
+</ul>
 
 </p>
 
@@ -251,53 +269,53 @@
   <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated"><p class="res-header-id"></p><a name="stroke-proc-not-done-reason-cs"> </a><a name="hcstroke-proc-not-done-reason-cs"> </a><p>This case-insensitive code system <code>http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs</code> defines the following codes:</p>
 <table class="codes" data-fhir="generated"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr>
 <tr><td style="white-space:nowrap">time-window<a name="stroke-proc-not-done-reason-cs-time-window"> </a></td>
-<td>Outside Therapeutic Window</td>
-<td>Patient presented or evaluated outside the established time limit for the procedure.</td></tr>
+<td>Outside therapeutic window</td>
+<td>The patient presented/evaluated outside the time window defined by protocol/guidelines for benefit.</td></tr>
 <tr><td style="white-space:nowrap">no-lvo<a name="stroke-proc-not-done-reason-cs-no-lvo"> </a></td>
 <td>No Large Vessel Occlusion (LVO)</td>
-<td>An eligible large vessel occlusion for thrombectomy was not identified.</td></tr>
+<td>No eligible large vessel occlusion for thrombectomy was identified.</td></tr>
 <tr><td style="white-space:nowrap">contraindication<a name="stroke-proc-not-done-reason-cs-contraindication"> </a></td>
-<td>Contraindication Present</td>
-<td>A medical contraindication to the procedure existed (e.g., bleeding risk).</td></tr>
+<td>Contraindication present</td>
+<td>A medical contraindication existed (e.g., bleeding risk or other high-risk factor).</td></tr>
 <tr><td style="white-space:nowrap">patient-refusal<a name="stroke-proc-not-done-reason-cs-patient-refusal"> </a></td>
-<td>Patient/Family Refusal</td>
-<td>The patient or their legal representative refused the procedure.</td></tr>
+<td>Patient/family refusal</td>
+<td>The patient or legal representative declined the intervention after discussion.</td></tr>
 <tr><td style="white-space:nowrap">transfer<a name="stroke-proc-not-done-reason-cs-transfer"> </a></td>
-<td>Transferred to Another Facility</td>
-<td>The patient was transferred to another hospital for the procedure.</td></tr>
+<td>Transferred to another facility</td>
+<td>The patient was transferred to a different facility for the intervention.</td></tr>
 <tr><td style="white-space:nowrap">unavailable<a name="stroke-proc-not-done-reason-cs-unavailable"> </a></td>
-<td>Procedure Unavailable</td>
-<td>The procedure was not available at the facility (e.g., lack of equipment, staff).</td></tr>
+<td>Procedure unavailable</td>
+<td>The facility could not provide the procedure (equipment, staffing, service availability).</td></tr>
 <tr><td style="white-space:nowrap">disability<a name="stroke-proc-not-done-reason-cs-disability"> </a></td>
-<td>Severe Preexisting Disability</td>
-<td>Patient's baseline disability made benefit from the procedure unlikely.</td></tr>
+<td>Severe preexisting disability</td>
+<td>Baseline disability made benefit unlikely per clinical judgement/protocol.</td></tr>
 <tr><td style="white-space:nowrap">mild-deficit<a name="stroke-proc-not-done-reason-cs-mild-deficit"> </a></td>
-<td>Mild Deficit</td>
-<td>Patient's neurological deficit was too mild to warrant the procedure.</td></tr>
+<td>Mild deficit</td>
+<td>Neurological deficit severity was judged too mild to justify risk/benefit.</td></tr>
 <tr><td style="white-space:nowrap">done-elsewhere<a name="stroke-proc-not-done-reason-cs-done-elsewhere"> </a></td>
-<td>Performed Elsewhere</td>
+<td>Performed elsewhere</td>
 <td>The procedure had already been performed at another facility prior to arrival/transfer.</td></tr>
 <tr><td style="white-space:nowrap">cost<a name="stroke-proc-not-done-reason-cs-cost"> </a></td>
-<td>Cost / No Insurance</td>
-<td>Financial or coverage reasons prevented the procedure.</td></tr>
+<td>Cost / no insurance</td>
+<td>Financial or coverage constraints prevented the procedure (use only where applicable).</td></tr>
 <tr><td style="white-space:nowrap">unknown<a name="stroke-proc-not-done-reason-cs-unknown"> </a></td>
-<td>Reason Unknown</td>
-<td>The reason was not documented or is unknown.</td></tr>
+<td>Reason unknown</td>
+<td>Reason was not documented or is unknown.</td></tr>
 <tr><td style="white-space:nowrap">consent<a name="stroke-proc-not-done-reason-cs-consent"> </a></td>
-<td>Consent Not Obtained</td>
-<td>Informed consent for the procedure was not obtained.</td></tr>
+<td>Consent not obtained</td>
+<td>Informed consent required for the procedure was not obtained.</td></tr>
 <tr><td style="white-space:nowrap">only-mt<a name="stroke-proc-not-done-reason-cs-only-mt"> </a></td>
-<td>Only Mechanical Thrombectomy Considered</td>
-<td>Only mechanical thrombectomy was considered, and thrombolysis was not performed.</td></tr>
-<tr><td style="white-space:nowrap">other<a name="stroke-proc-not-done-reason-cs-other"> </a></td>
-<td>Other Reason</td>
-<td>A reason not specifically defined.</td></tr>
+<td>Only mechanical thrombectomy considered</td>
+<td>Only MT was considered; IV thrombolysis was not performed.</td></tr>
 <tr><td style="white-space:nowrap">technically-not-possible<a name="stroke-proc-not-done-reason-cs-technically-not-possible"> </a></td>
-<td>Technically Not Possible</td>
-<td>The procedure could not be performed due to technical or anatomical challenges.</td></tr>
+<td>Technically not possible</td>
+<td>Technical/anatomical factors prevented completion.</td></tr>
 <tr><td style="white-space:nowrap">no-angiography<a name="stroke-proc-not-done-reason-cs-no-angiography"> </a></td>
-<td>Angiography Not Performed</td>
-<td>Angiography to assess the situation was not performed.</td></tr></table></div>
+<td>Angiography not performed</td>
+<td>Required angiographic assessment was not performed.</td></tr>
+<tr><td style="white-space:nowrap">other<a name="stroke-proc-not-done-reason-cs-other"> </a></td>
+<td>Other reason</td>
+<td>Other reason not listed. Prefer adding explanatory text in statusReason.text where possible.</td></tr></table></div>
 
   
 
@@ -324,7 +342,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 10:15+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 10:59+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

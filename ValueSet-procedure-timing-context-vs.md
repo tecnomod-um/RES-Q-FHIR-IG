@@ -12,7 +12,10 @@
 | Active as of 2026-02-19 | *Computable Name*:ProcedureTimingContextVS |
 
  
-ValueSet for codes defining the timing phase of a procedure relative to the encounter start. 
+ValueSet limiting allowed values for the Procedure timing context extension (acute/post-acute/unknown). 
+**Use-case** 
+* Required binding to ensure comparable phase classification across systems and sites.
+ 
 
  **References** 
 
@@ -50,7 +53,7 @@ ValueSet for codes defining the timing phase of a procedure relative to the enco
   "name" : "ProcedureTimingContextVS",
   "title" : "Procedure Timing Context ValueSet",
   "status" : "active",
-  "date" : "2026-02-19T10:15:59+00:00",
+  "date" : "2026-02-19T10:59:57+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -63,7 +66,7 @@ ValueSet for codes defining the timing phase of a procedure relative to the enco
       ]
     }
   ],
-  "description" : "ValueSet for codes defining the timing phase of a procedure relative to the encounter start.",
+  "description" : "ValueSet limiting allowed values for the Procedure timing context extension (acute/post-acute/unknown).\n\n**Use-case**\n- Required binding to ensure comparable phase classification across systems and sites.",
   "compose" : {
     "include" : [
       {

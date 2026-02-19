@@ -127,7 +127,7 @@
     "Procedure": [
       {
         "url": "http://tecnomod-um.org/StructureDefinition/stroke-swallow-procedure-profile",
-        "title": "Stroke Swallow Procedure Profile (R5)"
+        "title": "Stroke Swallow Procedure Profile"
       }
     ],
     "Condition": [

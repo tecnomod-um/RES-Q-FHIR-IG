@@ -6,7 +6,7 @@
 
 ## Example Procedure: StrokeSwallowingExample
 
-Profile: [Stroke Swallow Procedure Profile (R5)](StructureDefinition-stroke-swallow-procedure-profile.md)
+Profile: [Stroke Swallow Procedure Profile](StructureDefinition-stroke-swallow-procedure-profile.md)
 
 **Swallowing Screening Timing Category**: Within 4 hours
 

@@ -12,11 +12,17 @@
 | Draft as of 2025-03-31 | *Computable Name*:PerforationProceduresValueset |
 
  
-ValueSet containing SNOMED CT codes representing a range of perforation procedures. 
+ValueSet restricting Procedure codes to stroke **reperfusion interventions**: 
+* IV thrombolysis (IVT)
+* Mechanical thrombectomy (MT)
+ 
+**Primary use-case** 
+* Required binding for `StrokeThrombolysisProcedureProfile.code` (which covers reperfusion procedures in this IG).
+ 
 
  **References** 
 
-* [Stroke Thrombolysis Procedure Profile (R5)](StructureDefinition-stroke-mechanical-procedure-profile.md)
+* [Stroke Thrombolysis Procedure Profile](StructureDefinition-stroke-mechanical-procedure-profile.md)
 
 ### Logical Definition (CLD)
 
@@ -64,7 +70,7 @@ ValueSet containing SNOMED CT codes representing a range of perforation procedur
       ]
     }
   ],
-  "description" : "ValueSet containing SNOMED CT codes representing a range of perforation procedures.",
+  "description" : "ValueSet restricting Procedure codes to stroke **reperfusion interventions**:\n- IV thrombolysis (IVT)\n- Mechanical thrombectomy (MT)\n\n**Primary use-case**\n- Required binding for `StrokeThrombolysisProcedureProfile.code` (which covers reperfusion procedures in this IG).",
   "compose" : {
     "include" : [
       {

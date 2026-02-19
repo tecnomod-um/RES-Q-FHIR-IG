@@ -264,19 +264,50 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <tr>
             <td style="column-width:30%">
                <a href="StructureDefinition-stroke-brain-imaging-procedure-profile.html"
-                  title="StructureDefinition/stroke-brain-imaging-procedure-profile">Stroke Brain Imaging Procedure Profile (R5)</a>
+                  title="StructureDefinition/stroke-brain-imaging-procedure-profile">Stroke Brain Imaging Procedure Profile</a>
             </td>
             <td>
-<p>Procedure profile to record key stroke procedures, including status, timing, complications, reasons, and context.</p>
+<p>Profile for documenting <strong>brain imaging performed during a stroke episode</strong> as a FHIR R5 Procedure.</p>
+
+<p><strong>Captures</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">code</code>: imaging modality/protocol (required; standardized via BrainImagingModalityVS).</li>
+  <li><code class="language-plaintext highlighter-rouge">status</code>: procedure state (required).</li>
+  <li><code class="language-plaintext highlighter-rouge">statusReason</code>: why it was not done (when applicable).</li>
+  <li><code class="language-plaintext highlighter-rouge">occurrence[x]</code>: when imaging occurred (recommended/required by invariant when done locally).</li>
+  <li><code class="language-plaintext highlighter-rouge">extension[timingContext]</code>: acute/post-acute phase classification relative to encounter start.</li>
+</ul>
+
+<p><strong>Typical scenarios</strong>
+1) Imaging completed on-site: <code class="language-plaintext highlighter-rouge">status=completed</code>, <code class="language-plaintext highlighter-rouge">occurrence[x]</code> present, <code class="language-plaintext highlighter-rouge">timingContext</code> optional.
+2) Imaging not performed: <code class="language-plaintext highlighter-rouge">status=not-done</code>, <code class="language-plaintext highlighter-rouge">statusReason</code> required.
+3) Imaging performed elsewhere: if your IG uses a “performed elsewhere” indicator extension, rules may allow missing on-site timestamps.</p>
+
+<p><strong>Downstream use</strong></p>
+<ul>
+  <li>Door-to-imaging metrics, protocol utilization, cross-site comparability.</li>
+</ul>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
                <a href="StructureDefinition-stroke-carotid-imaging-procedure-profile.html"
-                  title="StructureDefinition/stroke-carotid-imaging-procedure-profile">Stroke Carotid Imaging Procedure Profile (R5)</a>
+                  title="StructureDefinition/stroke-carotid-imaging-procedure-profile">Stroke Carotid Imaging Procedure Profile</a>
             </td>
             <td>
-<p>Procedure profile to record key stroke procedures, including status, timing, complications, reasons, and context.</p>
+<p>Profile for documenting <strong>carotid angiography</strong> within a stroke episode.</p>
+
+<p><strong>Design intent</strong></p>
+<ul>
+  <li>This profile fixes <code class="language-plaintext highlighter-rouge">Procedure.code</code> to a specific SNOMED code (angiography of carotid artery).</li>
+  <li>If you want multiple carotid modalities, replace the fixed code with a required binding to CarotidImagingModalityVS.</li>
+</ul>
+
+<p><strong>Use-cases</strong></p>
+<ul>
+  <li>Determining whether carotid angiography was performed during the episode.</li>
+  <li>Capturing structured “not done” reasons for audit and quality improvement.</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -346,19 +377,62 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <tr>
             <td style="column-width:30%">
                <a href="StructureDefinition-stroke-swallow-procedure-profile.html"
-                  title="StructureDefinition/stroke-swallow-procedure-profile">Stroke Swallow Procedure Profile (R5)</a>
+                  title="StructureDefinition/stroke-swallow-procedure-profile">Stroke Swallow Procedure Profile</a>
             </td>
             <td>
-<p>Procedure profile to record key stroke procedures, including status, timing, complications, reasons, and context.</p>
+<p>Profile for documenting <strong>swallow screening / dysphagia assessment</strong> during a stroke episode.</p>
+
+<p><strong>Captures</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">code</code>: the screening/assessment procedure or tool used (SwallowProceduresVS).</li>
+  <li><code class="language-plaintext highlighter-rouge">status</code>: whether completed or not done.</li>
+  <li><code class="language-plaintext highlighter-rouge">statusReason</code>: controlled reason set when not done.</li>
+  <li><code class="language-plaintext highlighter-rouge">extension[screeningTimingCategory]</code>: timing bucket (e.g., within 4h) for KPI reporting.</li>
+  <li><code class="language-plaintext highlighter-rouge">extension[timingContext]</code>: acute/post-acute phase relative to encounter start.</li>
+  <li><code class="language-plaintext highlighter-rouge">used.concept</code> (R5): explicitly documents the tool used, especially when:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">code</code> is generic, or</li>
+      <li>you want a consistent “tool used” field for analytics and comparison.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Use-cases</strong></p>
+<ul>
+  <li>Compliance monitoring: swallow screen performed early after stroke.</li>
+  <li>Tool utilization analysis (GUSS vs V-VST vs others).</li>
+  <li>Supporting aspiration pneumonia prevention workflows.</li>
+</ul>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
                <a href="StructureDefinition-stroke-mechanical-procedure-profile.html"
-                  title="StructureDefinition/stroke-mechanical-procedure-profile">Stroke Thrombolysis Procedure Profile (R5)</a>
+                  title="StructureDefinition/stroke-mechanical-procedure-profile">Stroke Thrombolysis Procedure Profile</a>
             </td>
             <td>
-<p>Procedure profile to record key stroke procedures, including status, timing, complications, reasons, and context.</p>
+<p>Profile for documenting <strong>stroke reperfusion procedures</strong> as FHIR Procedure:</p>
+<ul>
+  <li>IV thrombolysis (IVT)</li>
+  <li>Mechanical thrombectomy (MT)</li>
+</ul>
+
+<p><strong>Captures</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">code</code>: restricted to reperfusion procedures (PerforationProceduresVS).</li>
+  <li><code class="language-plaintext highlighter-rouge">status</code>: completed/not-done/etc.</li>
+  <li><code class="language-plaintext highlighter-rouge">statusReason</code>: controlled reason set when not done.</li>
+  <li><code class="language-plaintext highlighter-rouge">occurrence[x]</code> (constrained to Period): start/end time of the intervention when available.</li>
+  <li><code class="language-plaintext highlighter-rouge">complication</code>: complications (as CodeableReference to Condition) — constrained by invariants.</li>
+  <li><code class="language-plaintext highlighter-rouge">extension[timingContext]</code>: acute/post-acute phase classification.</li>
+</ul>
+
+<p><strong>Use-cases</strong></p>
+<ul>
+  <li>Time-to-treatment metrics (door-to-needle, door-to-groin), service evaluation.</li>
+  <li>Structured documentation of “why not treated” for QI programs.</li>
+  <li>Safety monitoring for procedural complications.</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -479,7 +553,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/procedure-timing-context-ext">Procedure Timing Context Extension</a>
             </td>
             <td>
-<p>Specifies the timing phase (e.g., acute, post-acute) in which the procedure was performed relative to the start of the encounter.</p>
+<p>Extension classifying the procedure into a <strong>timing context</strong> relative to encounter start (acute/post-acute).</p>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Operational reporting where “phase of care” is needed for compliance measures.</li>
+</ul>
+
+<p><strong>When to use</strong></p>
+<ul>
+  <li>When you want a stable, comparable phase label across sites (even if absolute times differ or onset time is uncertain).</li>
+</ul>
+
+<p><strong>Interpretation guidance</strong></p>
+<ul>
+  <li>Use <code class="language-plaintext highlighter-rouge">acute</code> for procedures within 24 hours of encounter start.</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">post-acute</code> for procedures after 24 hours.</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">unknown</code> when encounter/timing data are insufficient.</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -688,7 +779,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="ValueSet/perforation-procedures-vs">Perforation Procedures ValueSet</a>
             </td>
             <td>
-<p>ValueSet containing SNOMED CT codes representing a range of perforation procedures.</p>
+<p>ValueSet restricting Procedure codes to stroke <strong>reperfusion interventions</strong>:</p>
+<ul>
+  <li>IV thrombolysis (IVT)</li>
+  <li>Mechanical thrombectomy (MT)</li>
+</ul>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Required binding for <code class="language-plaintext highlighter-rouge">StrokeThrombolysisProcedureProfile.code</code> (which covers reperfusion procedures in this IG).</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -697,7 +797,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="ValueSet/procedure-timing-context-vs">Procedure Timing Context ValueSet</a>
             </td>
             <td>
-<p>ValueSet for codes defining the timing phase of a procedure relative to the encounter start.</p>
+<p>ValueSet limiting allowed values for the Procedure timing context extension (acute/post-acute/unknown).</p>
+
+<p><strong>Use-case</strong></p>
+<ul>
+  <li>Required binding to ensure comparable phase classification across systems and sites.</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -794,7 +899,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="ValueSet/stroke-proc-not-done-reason-vs">Stroke Procedure Not Done Reason ValueSet</a>
             </td>
             <td>
-<p>ValueSet containing specific codes to indicate why thrombolysis or thrombectomy was not performed.</p>
+<p>ValueSet containing the controlled vocabulary of reasons for <code class="language-plaintext highlighter-rouge">Procedure.statusReason</code> when a stroke procedure is <code class="language-plaintext highlighter-rouge">not-done</code>.</p>
 </td>
          </tr>
          <tr>
@@ -834,7 +939,27 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="ValueSet/swallow-procedures-vs">Swallow Procedures ValueSet</a>
             </td>
             <td>
-<p>ValueSet containing SNOMED CT codes representing a range of procedures used in the evaluation and management of stroke patients.</p>
+<p>ValueSet enumerating swallowing screening/assessment procedures/tools used in stroke care.</p>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Required binding for <code class="language-plaintext highlighter-rouge">StrokeSwallowProcedureProfile.code</code> to ensure the Procedure truly represents a swallow screening/assessment.</li>
+</ul>
+
+<p><strong>Secondary use-case</strong></p>
+<ul>
+  <li>Can also be used for <code class="language-plaintext highlighter-rouge">Procedure.used.concept</code> (R5) to explicitly document the tool used when:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Procedure.code</code> is generic, or</li>
+      <li>you want a consistent field for “tool used” across multiple workflow variants.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Implementation note</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">SCT#261665006 'Unknown'´ is included only as a provisional development workaround; in production, prefer FHIR </code>dataAbsentReason` for missing data rather than “Unknown” as a procedure code.</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -843,16 +968,30 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="ValueSet/swallowing-screening-timing-category-vs">Swallowing Screening Timing Category ValueSet</a>
             </td>
             <td>
-<p>Temporal categories relative to stroke onset for swallowing screening.</p>
+<p>ValueSet defining allowed categories for swallowing screening timing, combining:</p>
+<ul>
+  <li>local categories (e.g., within 4 hours), and</li>
+  <li>SNOMED CT qualifier concepts for post-admission timing.</li>
+</ul>
+
+<p><strong>Use-case</strong></p>
+<ul>
+  <li>Required binding for the swallowing timing extension to standardize KPI reporting across sites.</li>
+</ul>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
                <a href="ValueSet-thrombectomy-complication-vs.html"
-                  title="ValueSet/thrombectomy-complication-vs">Thrombectomy Complication ValueSet</a>
+                  title="ValueSet/thrombectomy-complication-vs">Thrombectomy Complications ValueSet</a>
             </td>
             <td>
-<p>Defines the specific complications of thrombectomy to record.</p>
+<p>ValueSet of SNOMED CT concepts representing complications of thrombectomy as clinical conditions.</p>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Bind <code class="language-plaintext highlighter-rouge">Procedure.complication</code> (or the referenced Condition.code) to a SNOMED-based set for interoperability.</li>
+</ul>
 </td>
          </tr>
       </tbody>
@@ -979,10 +1118,26 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <tr>
             <td style="column-width:30%">
                <a href="CodeSystem-procedure-timing-context-cs.html"
-                  title="CodeSystem/procedure-timing-context-cs">Procedure Timing Context Code System</a>
+                  title="CodeSystem/procedure-timing-context-cs">Procedure Timing Context CodeSystem</a>
             </td>
             <td>
-<p>Codes defining the timing phase of a procedure relative to the encounter start (e.g., acute vs. post-acute).</p>
+<p>Local CodeSystem for classifying a procedure into a <strong>timing context</strong> relative to encounter start.</p>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Normalize reporting into acute (&lt;24h) vs post-acute (&gt;=24h) phases for stroke process measures.</li>
+</ul>
+
+<p><strong>Why this is useful</strong></p>
+<ul>
+  <li>It supports consistent reporting even when onset time is uncertain.</li>
+  <li>It is designed for encounter-based operational KPIs rather than physiologic onset-based timelines.</li>
+</ul>
+
+<p><strong>FHIR placement</strong></p>
+<ul>
+  <li>Used in <code class="language-plaintext highlighter-rouge">ProcedureTimingContextExtension</code> attached to Procedure.</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -1017,10 +1172,28 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <tr>
             <td style="column-width:30%">
                <a href="CodeSystem-stroke-proc-not-done-reason-cs.html"
-                  title="CodeSystem/stroke-proc-not-done-reason-cs">Stroke Procedure Not Done Reason Code System</a>
+                  title="CodeSystem/stroke-proc-not-done-reason-cs">Stroke Procedure Not Done Reasons CodeSystem</a>
             </td>
             <td>
-<p>Codes specifying the reason principal for not performing a key stroke procedure (Thrombolysis, Thrombectomy).</p>
+<p>Local CodeSystem enumerating standardized reasons why a key stroke procedure (e.g., IV thrombolysis or mechanical thrombectomy) was <strong>not performed</strong>.</p>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Populate <code class="language-plaintext highlighter-rouge">Procedure.statusReason</code> when <code class="language-plaintext highlighter-rouge">Procedure.status = not-done</code>.</li>
+</ul>
+
+<p><strong>Why it matters</strong></p>
+<ul>
+  <li>Captures the difference between:
+    <ul>
+      <li>clinical ineligibility (contraindication),</li>
+      <li>time-based ineligibility (outside window),</li>
+      <li>operational constraints (unavailable),</li>
+      <li>patient choice (refusal),</li>
+      <li>care pathway differences (performed elsewhere / transfer).</li>
+    </ul>
+  </li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -1037,10 +1210,20 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <tr>
             <td style="column-width:30%">
                <a href="CodeSystem-swallow-procedures-cs.html"
-                  title="CodeSystem/swallow-procedures-cs">Swallow Procedures Code System</a>
+                  title="CodeSystem/swallow-procedures-cs">Swallow Procedures CodeSystem</a>
             </td>
             <td>
-<p>Codes representing various swallowing assessment procedures.</p>
+<p>Local CodeSystem representing swallowing screening/assessment tools often documented by acronym or local naming.</p>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Provide stable, implementable codes when upstream systems cannot supply SNOMED CT equivalents.</li>
+</ul>
+
+<p><strong>FHIR placement</strong></p>
+<ul>
+  <li>Included in <code class="language-plaintext highlighter-rouge">SwallowProceduresVS</code> to be used in <code class="language-plaintext highlighter-rouge">Procedure.code</code> and (optionally) <code class="language-plaintext highlighter-rouge">Procedure.used.concept</code>.</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -1055,10 +1238,26 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <tr>
             <td style="column-width:30%">
                <a href="CodeSystem-thrombectomy-complication-cs.html"
-                  title="CodeSystem/thrombectomy-complication-cs">Thrombectomy Complication Code System</a>
+                  title="CodeSystem/thrombectomy-complication-cs">Thrombectomy Complication CodeSystem</a>
             </td>
             <td>
-<p>Codes specifying the specific complications of thrombectomy to record.</p>
+<p>Local CodeSystem for complications occurring during mechanical thrombectomy.</p>
+
+<p><strong>When to use</strong></p>
+<ul>
+  <li>If you need a controlled internal vocabulary for adverse events/complications, especially when upstream systems do not provide SNOMED-coded diagnoses.</li>
+</ul>
+
+<p><strong>How it is used in FHIR R5</strong></p>
+<ul>
+  <li>Usually referenced from <code class="language-plaintext highlighter-rouge">Procedure.complication</code> which is a <code class="language-plaintext highlighter-rouge">CodeableReference(Condition)</code> in R5.</li>
+  <li>You may represent the complication as a <code class="language-plaintext highlighter-rouge">Condition</code> (preferred), and/or record a code directly depending on your implementation pattern.</li>
+</ul>
+
+<p><strong>Why it exists</strong></p>
+<ul>
+  <li>Supports minimum-set reporting across sites and enables consistent quality/safety analytics.</li>
+</ul>
 </td>
          </tr>
       </tbody>
@@ -1277,7 +1476,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 10:15+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 10:59+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

@@ -150,6 +150,15 @@ This ValueSet does not convey timing, vessel location, modality, or technique; t
 
 // --- CodeSystem for modified Rankin Scale (mRS) Score ---
 CodeSystem: MRsScoreCS
+Title: "Modified Rankin Scale (mRS) Score Code System"
+Description: """This CodeSystem defines codes for the modified Rankin Scale (mRS), an ordinal measure of global disability and functional outcome widely used in stroke care and research. mRS grades functional status from 0 (no symptoms) through 5 (severe disability), with 6 indicating death.
+
+Within this implementation guide, mRS is intended to be captured as Observation.valueCodeableConcept (bound to the MRsScoreVS ValueSet), with the assessment timepoint represented explicitly (e.g., via effective[x]) and/or via an assessment context indicator (e.g., pre-stroke baseline, discharge, ~90-day follow-up). This supports standard reporting (e.g., “mRS at 90 days”), comparability across sites, and consistent downstream analytics.
+
+Scope and modeling notes:
+- mRS is a coarse, global disability scale; it does not encode detailed domain-specific functional limitations (mobility, cognition, ADLs) which should be captured via additional instruments/Observations if required.
+- The CodeSystem defines only the *score*; method of ascertainment (in-person, telephone, structured interview) and assessor details should be captured separately when relevant.
+ """
 Id: mrs-score-cs
 * ^url = MRsScoreCS_URL
 * ^version = "1.0.0"
@@ -182,8 +191,6 @@ Id: mrs-score-vs
 * ^title = "modified Rankin Scale (mRS) Score ValueSet"
 * ^description = """
 This ValueSet includes all modified Rankin Scale (mRS) grades defined in the MRsScoreCS CodeSystem (0–6). It is intended to be bound to Observation.valueCodeableConcept when the Observation.code indicates that the observation represents an mRS score.
-
-Binding mRS to a dedicated ValueSet supports strict validation (only valid mRS grades can be recorded), improves semantic consistency across implementations, and simplifies downstream cohorting and outcome reporting (e.g., dichotomized mRS 0–2 vs 3–6), without changing the meaning of individual grades.
 """
 * ^status = #active
 * include codes from system MRsScoreCS_URL

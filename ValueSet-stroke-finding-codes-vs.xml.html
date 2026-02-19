@@ -229,7 +229,7 @@
   &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.name">name</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;StrokeFindingCodesVS&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.title">title</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Specific Stroke Finding Codes ValueSet&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.status">status</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.date">date</a> <a href="http://hl7.org/fhir/R5/datatypes.html#dateTime">value</a>=&quot;2026-02-19T11:36:03+00:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.date">date</a> <a href="http://hl7.org/fhir/R5/datatypes.html#dateTime">value</a>=&quot;2026-02-19T12:37:09+00:00&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.publisher">publisher</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;UMU&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.contact">contact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R5/metadatatypes.html#ContactDetail#XContactDetail.name">name</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;UMU&quot;/&gt;
@@ -239,11 +239,16 @@
     &lt;/<a href="http://hl7.org/fhir/R5/metadatatypes.html#ContactDetail#XContactDetail.telecom">telecom</a>&gt;
   &lt;/<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.contact">contact</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.description">description</a>
-               <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;This ValueSet aggregates a small set of coded “finding/assessment concepts” used by the SpecificFindingObservationProfile for stroke-related documentation. It currently includes:
-- specific disorder concepts relevant to stroke workup (from SpecificFindingCodesVS), and
-- the mTICI assessment concept code (from MTICICodeVS).
+               <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;This ValueSet aggregates coded Observation.code concepts used by `SpecificFindingObservationProfile`.
 
-Implementer note: This ValueSet is used to constrain Observation.code. Where Observation.code is a disorder concept (e.g., AF disorder), the Observation instance should be interpreted as capturing an *assessment about that finding* (with the assessment result carried in Observation.valueCodeableConcept, per profile constraints). Where Observation.code is an assessment concept (e.g., mTICI), the Observation.valueCodeableConcept carries the corresponding score/result.&quot;/&gt;
+It currently includes:
+- Specific disorder concepts used as a finding focus (SpecificFindingCodesVS), and
+- The mTICI assessment concept (MTICICodeVS).
+
+**How to interpret usage**
+- If `Observation.code` is a disorder concept (e.g., AF), the Observation should be interpreted as an assessment about that finding,
+  with the result/status carried in `Observation.valueCodeableConcept` (e.g., AfibFlutterStatusVS).
+- If `Observation.code` is an assessment concept (e.g., mTICI), `Observation.valueCodeableConcept` carries the score (MticiScoreVS).&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.compose">compose</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.compose.include">include</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.compose.include.valueSet">valueSet</a>
@@ -277,7 +282,7 @@ Implementer note: This ValueSet is used to constrain Observation.code. Where Obs
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 11:36+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 12:37+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

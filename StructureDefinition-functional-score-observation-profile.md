@@ -12,12 +12,19 @@
 | Draft as of 2026-02-19 | *Computable Name*:FunctionalScoreObservationProfile |
 
  
-Profile for recording stroke functional outcome and severity scores, currently mRS and NIHSS, in a way that is both interoperable and context-aware. The profile requires a timing context extension (ObservationTimingContextExtension) to explicitly state the clinical phase (e.g., pre-stroke baseline, admission, discharge, ~3-month follow-up), enabling unambiguous interpretation and standardized reporting. 
-Observation.code is bound to FunctionalScoreCodesVS, and invariants constrain Observation.value[x] by instrument: 
-* For mRS (SNOMED CT observable entity), the result is represented as a CodeableConcept bound to MRsScoreVS (ordinal categories 0–6).
-* For NIHSS (SNOMED CT observable entity), the result is represented as an integer total score (valueInteger), reflecting the overall NIHSS total rather than item-level subscores.
+Profile for recording stroke functional outcome and severity scores (currently mRS and NIHSS) in an interoperable, context-aware way. 
+**Primary use-case** 
+* Capture outcomes by phase (baseline, admission, discharge, ~90-day follow-up) using a required timing context extension.
  
-The profile does not model itemized NIHSS components, assessor training, or interview method; implementers may represent those details separately when needed (e.g., additional Observations, extensions, or provenance). 
+**Key constraints** 
+* `Observation.code` is bound to FunctionalScoreCodesVS (mRS or NIHSS).
+* `extension[timingContext]` is mandatory to label the clinical phase.
+* Datatype and binding rules are enforced via invariants: 
+* mRS → `valueCodeableConcept` bound to MRsScoreVS.
+* NIHSS → `valueInteger` as total NIHSS score.
+ 
+ 
+**Typical scenarios** 1) An mRS score assessed at discharge would have `Observation.code` = mRS code, `valueCodeableConcept` = mRS grade (0–6), and the timing context extension value = discharge. 2) An NIHSS score assessed at admission would have `Observation.code` = NIHSS code, `valueInteger` = total NIHSS score, and the timing context extension value = admission. 
 
 **Usages:**
 
@@ -46,7 +53,7 @@ Other representations of profile: [CSV](StructureDefinition-functional-score-obs
   "name" : "FunctionalScoreObservationProfile",
   "title" : "Stroke Functional Score Observation Profile",
   "status" : "draft",
-  "date" : "2026-02-19T11:36:03+00:00",
+  "date" : "2026-02-19T12:37:09+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -59,7 +66,7 @@ Other representations of profile: [CSV](StructureDefinition-functional-score-obs
       ]
     }
   ],
-  "description" : "Profile for recording stroke functional outcome and severity scores, currently mRS and NIHSS, in a way that is both interoperable and context-aware. The profile requires a timing context extension (ObservationTimingContextExtension) to explicitly state the clinical phase (e.g., pre-stroke baseline, admission, discharge, ~3-month follow-up), enabling unambiguous interpretation and standardized reporting.\n\nObservation.code is bound to FunctionalScoreCodesVS, and invariants constrain Observation.value[x] by instrument:\n- For mRS (SNOMED CT observable entity), the result is represented as a CodeableConcept bound to MRsScoreVS (ordinal categories 0–6).\n- For NIHSS (SNOMED CT observable entity), the result is represented as an integer total score (valueInteger), reflecting the overall NIHSS total rather than item-level subscores.\n\nThe profile does not model itemized NIHSS components, assessor training, or interview method; implementers may represent those details separately when needed (e.g., additional Observations, extensions, or provenance).",
+  "description" : "Profile for recording stroke functional outcome and severity scores (currently mRS and NIHSS) in an interoperable, context-aware way.\n\n**Primary use-case**\n- Capture outcomes by phase (baseline, admission, discharge, ~90-day follow-up) using a required timing context extension.\n\n**Key constraints**\n- `Observation.code` is bound to FunctionalScoreCodesVS (mRS or NIHSS).\n- `extension[timingContext]` is mandatory to label the clinical phase.\n- Datatype and binding rules are enforced via invariants:\n  - mRS → `valueCodeableConcept` bound to MRsScoreVS.\n  - NIHSS → `valueInteger` as total NIHSS score.\n\n**Typical scenarios**\n1) An mRS score assessed at discharge would have `Observation.code` = mRS code, `valueCodeableConcept` = mRS grade (0–6), and the timing context extension value = discharge.\n2) An NIHSS score assessed at admission would have `Observation.code` = NIHSS code, `valueInteger` = total NIHSS score, and the timing context extension value = admission.",
   "fhirVersion" : "5.0.0",
   "mapping" : [
     {

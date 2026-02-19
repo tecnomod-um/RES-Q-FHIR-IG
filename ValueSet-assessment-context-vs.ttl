@@ -22,7 +22,7 @@
   fhir:title [ fhir:v "Assessment Context ValueSet"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:experimental [ fhir:v true] ; # 
-  fhir:date [ fhir:v "2026-02-19T11:36:03+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-19T12:37:09+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;
@@ -31,7 +31,7 @@
        fhir:value [ fhir:v "http://tecnomod-um.org" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "This ValueSet includes all context/timepoint codes defined in AssessmentContextCS. It is intended for required binding to elements (e.g., extensions) that must indicate the clinical phase of an assessment, enabling consistent stratification and reporting of outcomes and severity over the stroke care pathway."] ; # 
+  fhir:description [ fhir:v "This ValueSet includes all phase/context codes from AssessmentContextCS.\n\n**Primary use-case**\n- Required binding for elements that must indicate the clinical phase of an assessment (e.g., timing context extensions)."] ; # 
   fhir:compose [
      fhir:include ( [
        fhir:system [

@@ -14,8 +14,8 @@
       "version" : "0.1.0",
       "status" : "active",
       "name" : "AfibFlutterStatusVS",
-      "title" : "Atrial Fibrillation or Flutter Status ValueSet",
-      "description" : "This ValueSet constrains the allowed coded outcomes for documenting the status of an atrial fibrillation (AF) / atrial flutter assessment within the stroke workflow. It is intentionally limited to SNOMED CT qualifier values that express the epistemic status of the finding: (1) known present, (2) known absent, or (3) unknown.\n\nThe ValueSet is designed to support harmonized recording across systems when AF/flutter materially influences ischemic stroke etiology workup, thromboembolic risk stratification, and downstream management decisions (e.g., anticoagulation). It is appropriate for use as Observation.valueCodeableConcept to represent the result of screening, monitoring, or review of prior documentation.\n\nScope and modeling notes:\n- The qualifier values do not encode the rhythm subtype, chronicity, burden, or method of detection (e.g., ECG vs telemetry); those aspects should be represented using additional elements (e.g., Observation.method, device data) or separate Observations/Conditions as appropriate.\n- The ValueSet represents “status of assessment” rather than the disorder concept itself; if the clinical intent is to assert a diagnosis of AF/flutter, use a Condition resource with an appropriate SNOMED CT disorder code instead of (or in addition to) this status.",
+      "title" : "Atrial Fibrillation / Flutter Assessment Status ValueSet",
+      "description" : "This ValueSet constrains the allowable coded outcomes for documenting the **status of an AF/flutter assessment** within the stroke workflow.\n\n**Primary use-case**\n- Bind to `Observation.valueCodeableConcept` in the `SpecificFindingObservationProfile` when `Observation.code` refers to AF/flutter as a finding focus.\n- Enables harmonized interpretation for analytics and decision support (e.g., anticoagulation pathway triggers) without forcing a Condition assertion.\n\n**Scope and modeling notes**\n- This ValueSet expresses *assessment outcome/status* (detected/known/absent/not screened/unknown).\n- It does not replace Condition for diagnoses. When AF/flutter is confirmed as a diagnosis, represent it as a `Condition` with the appropriate SNOMED CT disorder code.",
       "systems" : ["http://snomed.info/sct"]
     },
     {
@@ -24,7 +24,7 @@
       "status" : "active",
       "name" : "AssessmentContextVS",
       "title" : "Assessment Context ValueSet",
-      "description" : "This ValueSet includes all context/timepoint codes defined in AssessmentContextCS. It is intended for required binding to elements (e.g., extensions) that must indicate the clinical phase of an assessment, enabling consistent stratification and reporting of outcomes and severity over the stroke care pathway.",
+      "description" : "This ValueSet includes all phase/context codes from AssessmentContextCS.\n\n**Primary use-case**\n- Required binding for elements that must indicate the clinical phase of an assessment (e.g., timing context extensions).",
       "systems" : ["http://tecnomod-um.org/CodeSystem/assessment-context-cs"]
     },
     {
@@ -72,7 +72,7 @@
       "status" : "active",
       "name" : "FunctionalScoreCodesVS",
       "title" : "Stroke Functional Score Codes ValueSet",
-      "description" : "This ValueSet defines the allowable Observation.code concepts for stroke functional and severity scoring instruments represented in this guide: modified Rankin Scale (mRS) and NIH Stroke Scale (NIHSS), expressed as SNOMED CT observable entities.\n\nIt is intended to be bound to Observation.code in the FunctionalScoreObservationProfile. Downstream validation/invariants then enforce the appropriate datatype of Observation.value[x]:\n- mRS is captured as a coded ordinal category (valueCodeableConcept bound to MRsScoreVS).\n- NIHSS is captured as a numeric total score (valueInteger), representing the summed NIHSS total rather than item-level subscores.",
+      "description" : "This ValueSet constrains `Observation.code` for functional outcome and severity instruments represented in this guide:\n- Modified Rankin Scale score (mRS)\n- NIH Stroke Scale total score (NIHSS)\n\n**Primary use-case**\n- Bind to `Observation.code` in `FunctionalScoreObservationProfile`.\n\n**Datatype expectations enforced via invariants**\n- mRS: `Observation.valueCodeableConcept` bound to MRsScoreVS (ordinal categories 0–6).\n- NIHSS: `Observation.valueInteger` as total NIHSS score.",
       "systems" : ["http://snomed.info/sct"]
     },
     {
@@ -116,7 +116,7 @@
       "status" : "active",
       "name" : "MRsScoreVS",
       "title" : "Modified Rankin Scale (mRS) Score ValueSet",
-      "description" : "This ValueSet includes all modified Rankin Scale (mRS) grades defined in the MRsScoreCS CodeSystem (0–6). It is intended to be bound to Observation.valueCodeableConcept when the Observation.code indicates that the observation represents an mRS score.",
+      "description" : "This ValueSet includes all mRS grades (0–6) defined in MRsScoreCS.\n\n**Primary use-case**\n- Bind to `Observation.valueCodeableConcept` when `Observation.code` indicates the Observation represents an mRS score.",
       "systems" : ["http://tecnomod-um.org/CodeSystem/mrs-score-cs"]
     },
     {
@@ -125,7 +125,7 @@
       "status" : "active",
       "name" : "MTICICodeVS",
       "title" : "Modified Thrombolysis in Cerebral Infarction Assessment ValueSet",
-      "description" : "This ValueSet includes the mTICI assessment concept code(s) from MTICICodeCS for use as Observation.code when recording an mTICI reperfusion grade. It is intended to be paired with a binding of Observation.valueCodeableConcept to MticiScoreVS.\n\nSeparating the “assessment concept” ValueSet (this ValueSet) from the “assessment result” ValueSet (MticiScoreVS) enables clearer validation rules, consistent UI behavior, and safer reuse of the mTICI scoring system across profiles.",
+      "description" : "This ValueSet includes the mTICI assessment concept code(s) from MTICICodeCS.\n\n**Primary use-case**\n- Bind to `Observation.code` when recording an mTICI reperfusion grade Observation.\n- Pair with `Observation.valueCodeableConcept` bound to MticiScoreVS.",
       "systems" : ["http://tecnomod-um.org/CodeSystem/mtici-code-cs"]
     },
     {
@@ -133,8 +133,8 @@
       "version" : "0.1.0",
       "status" : "draft",
       "name" : "MTICIScoreValueSet",
-      "title" : "MTICI Score ValueSet",
-      "description" : "This ValueSet enumerates all allowable mTICI reperfusion grades (0, 1, 2a, 2b, 2c, 3) from the MticiScoreCS CodeSystem. It is intended to be bound (typically as required) to Observation.valueCodeableConcept when recording the final angiographic reperfusion outcome after endovascular therapy for acute ischemic stroke.\n\nUsing a dedicated ValueSet ensures:\n- consistent coding across implementations and sites,\n- reliable downstream interpretation for analytics/registry submission, and\n- clear separation between the *assessment concept* (e.g., “mTICI reperfusion grade”) and the *assessment result* (the specific grade).\n\nThis ValueSet does not convey timing, vessel location, modality, or technique; those must be represented elsewhere in the clinical model.",
+      "title" : "Modified Treatment in Cerebral Infarction Grade Score ValueSet",
+      "description" : "This ValueSet enumerates all allowable Modified Treatment in Cerebral Infarction reperfusion grade values (0, 1, 2a, 2b, 2c, 3) from MticiScoreCS.\n\n**Primary use-case**\n- Required binding to `Observation.valueCodeableConcept` when an Observation represents an mTICI grade outcome.\n\n**Why a dedicated ValueSet**\n- Ensures consistent coding across implementations and sites.\n- Enables reliable registry reporting, audit/quality measurement, and research analytics.",
       "systems" : ["http://tecnomod-um.org/CodeSystem/mtici-score-cs"]
     },
     {
@@ -163,7 +163,7 @@
       "status" : "active",
       "name" : "SpecificFindingCodesVS",
       "title" : "Specific Stroke Finding Codes ValueSet",
-      "description" : "This ValueSet provides SNOMED CT disorder concepts for specific clinically relevant findings often referenced in the stroke workup, currently limited to atrial fibrillation and atrial flutter disorders.\n\nThese codes are suitable when the intent is to reference the disorder concepts themselves (e.g., as a focus finding or a coded problem). When the intent is to capture the *status of an assessment* (present/absent/unknown) rather than assert a diagnosis, implementers should use an Observation with a dedicated assessment concept as Observation.code and bind Observation.valueCodeableConcept to an appropriate status ValueSet (e.g., AfibFlutterStatusVS).",
+      "description" : "This ValueSet provides SNOMED CT disorder concepts for specific findings referenced in the stroke workup.\nCurrently includes:\n- Atrial fibrillation (disorder)\n- Atrial flutter (disorder)\n\n**Primary use-case**\n- Constrain `Observation.code` (as a *finding focus*) when using `SpecificFindingObservationProfile`.\n\n**Important modeling note**\n- Using a disorder concept in `Observation.code` here does not necessarily assert a diagnosis; the diagnosis should be modeled as a Condition.\n- The Observation can be interpreted as “assessment about this finding,” with the result in `Observation.valueCodeableConcept` (e.g., AF status).",
       "systems" : ["http://snomed.info/sct"]
     },
     {
@@ -181,7 +181,7 @@
       "status" : "active",
       "name" : "StrokeCircumstanceCodesVS",
       "title" : "Stroke Circumstance Codes ValueSet",
-      "description" : "This ValueSet includes all onset-circumstance codes defined in StrokeCircumstanceCodesCS for use in stroke documentation and analytics. It is intended to be bound to Observation.code in the StrokeCircumstanceObservationProfile, enabling consistent classification of onset scenarios such as in-hospital stroke and wake-up stroke.\n\nConsistent coding supports cohort definition (e.g., wake-up stroke protocols), audit/quality reporting, and research where onset uncertainty is a key stratification variable.",
+      "description" : "This ValueSet includes all onset-circumstance codes from StrokeCircumstanceCodesCS.\n\n**Primary use-case**\n- Required binding for `StrokeCircumstanceObservationProfile.code`.",
       "systems" : [
         "http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs"
       ]
@@ -225,7 +225,7 @@
       "status" : "active",
       "name" : "StrokeFindingCodesVS",
       "title" : "Specific Stroke Finding Codes ValueSet",
-      "description" : "This ValueSet aggregates a small set of coded “finding/assessment concepts” used by the SpecificFindingObservationProfile for stroke-related documentation. It currently includes:\n- specific disorder concepts relevant to stroke workup (from SpecificFindingCodesVS), and\n- the mTICI assessment concept code (from MTICICodeVS).\n\nImplementer note: This ValueSet is used to constrain Observation.code. Where Observation.code is a disorder concept (e.g., AF disorder), the Observation instance should be interpreted as capturing an *assessment about that finding* (with the assessment result carried in Observation.valueCodeableConcept, per profile constraints). Where Observation.code is an assessment concept (e.g., mTICI), the Observation.valueCodeableConcept carries the corresponding score/result.",
+      "description" : "This ValueSet aggregates coded Observation.code concepts used by `SpecificFindingObservationProfile`.\n\nIt currently includes:\n- Specific disorder concepts used as a finding focus (SpecificFindingCodesVS), and\n- The mTICI assessment concept (MTICICodeVS).\n\n**How to interpret usage**\n- If `Observation.code` is a disorder concept (e.g., AF), the Observation should be interpreted as an assessment about that finding,\n  with the result/status carried in `Observation.valueCodeableConcept` (e.g., AfibFlutterStatusVS).\n- If `Observation.code` is an assessment concept (e.g., mTICI), `Observation.valueCodeableConcept` carries the score (MticiScoreVS).",
       "systems" : [
         "http://snomed.info/sct",
         "http://tecnomod-um.org/CodeSystem/mtici-code-cs"
@@ -293,7 +293,7 @@
       "status" : "active",
       "name" : "TimingMetricCodesVS",
       "title" : "Stroke Timing Metric Codes ValueSet",
-      "description" : "This ValueSet includes all timing metric codes defined in TimingMetricCodesCS for use as Observation.code when recording acute stroke process intervals (e.g., D2N, D2G). It supports required binding in the TimingMetricObservationProfile, ensuring only approved timing metrics are recorded.\n\nThe ValueSet is intentionally constrained to promote consistent, comparable reporting across implementations and to reduce ambiguity in downstream analytics.",
+      "description" : "This ValueSet includes all timing metric codes from TimingMetricCodesCS.\n\n**Primary use-case**\n- Required binding for `TimingMetricObservationProfile.code` to ensure only approved metrics are captured.",
       "systems" : ["http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs"]
     },
     {
@@ -302,7 +302,7 @@
       "status" : "active",
       "name" : "VitalSignCodesVS",
       "title" : "Stroke Vital Sign Codes ValueSet",
-      "description" : "This ValueSet defines SNOMED CT observable-entity codes for the blood pressure components captured as vital signs in the acute stroke setting (systolic and diastolic blood pressure). It is intended for use as Observation.component.code in a single vital-sign Observation that records both components using UCUM units (mm[Hg]).\n\nIncluding only the component codes (rather than full LOINC panels) keeps the representation lightweight while remaining semantically precise, and supports repeated measurements across time (e.g., triage, post-thrombolysis monitoring) by repeating the Observation with different effective[x] timestamps.",
+      "description" : "This ValueSet defines SNOMED CT observable-entity codes for blood pressure components captured as vital signs:\n- Systolic blood pressure\n- Diastolic blood pressure\n\n**Primary use-case**\n- Bind to `Observation.component.code` in a single blood pressure Observation that records both components.\n\n**Implementation guidance**\n- Use `Observation.component.valueQuantity` with UCUM `mm[Hg]`.\n- Repeat the Observation across time with different `effective[x]` timestamps for monitoring.",
       "systems" : ["http://snomed.info/sct"]
     },
     {

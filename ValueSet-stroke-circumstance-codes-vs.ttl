@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "StrokeCircumstanceCodesVS"] ; # 
   fhir:title [ fhir:v "Stroke Circumstance Codes ValueSet"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-02-19T11:36:03+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-19T12:37:09+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;
@@ -30,7 +30,7 @@
        fhir:value [ fhir:v "http://tecnomod-um.org" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "This ValueSet includes all onset-circumstance codes defined in StrokeCircumstanceCodesCS for use in stroke documentation and analytics. It is intended to be bound to Observation.code in the StrokeCircumstanceObservationProfile, enabling consistent classification of onset scenarios such as in-hospital stroke and wake-up stroke.\n\nConsistent coding supports cohort definition (e.g., wake-up stroke protocols), audit/quality reporting, and research where onset uncertainty is a key stratification variable."] ; # 
+  fhir:description [ fhir:v "This ValueSet includes all onset-circumstance codes from StrokeCircumstanceCodesCS.\n\n**Primary use-case**\n- Required binding for `StrokeCircumstanceObservationProfile.code`."] ; # 
   fhir:compose [
      fhir:include ( [
        fhir:system [

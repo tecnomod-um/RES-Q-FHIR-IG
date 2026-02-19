@@ -229,15 +229,13 @@
   </table>
 
 <p>
-<p>This CodeSystem defines the assessment concept code(s) used to indicate that an Observation is reporting an mTICI reperfusion grade. It is intentionally separated from the MticiScoreCS CodeSystem, which contains the actual mTICI grade values (0–3 with 2a/2b/2c).</p>
+<p>This CodeSystem defines the <em>assessment concept code</em> used to indicate that an Observation is reporting an mTICI reperfusion grade.</p>
 
-<p>In practice:</p>
+<p><strong>Design pattern</strong></p>
 <ul>
-  <li>Observation.code identifies the <em>kind of measurement/assessment</em> (“mTICI reperfusion grade”).</li>
-  <li>Observation.valueCodeableConcept carries the <em>result</em> (one of the mTICI grades from MticiScoreVS).</li>
+  <li><code class="language-plaintext highlighter-rouge">Observation.code</code> identifies the kind of assessment (“mTICI reperfusion grade”).</li>
+  <li><code class="language-plaintext highlighter-rouge">Observation.valueCodeableConcept</code> carries the result (one of the grades in MticiScoreVS).</li>
 </ul>
-
-<p>This separation improves semantic clarity and supports consistent validation and analytics across systems.</p>
 
 </p>
 
@@ -286,7 +284,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 11:36+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 12:37+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

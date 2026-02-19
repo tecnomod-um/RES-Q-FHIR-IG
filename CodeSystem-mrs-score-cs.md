@@ -12,11 +12,13 @@
 | Active as of 2026-02-19 | *Computable Name*:MRsScoreCS |
 
  
-This CodeSystem defines codes for the modified Rankin Scale (mRS), an ordinal measure of global disability and functional outcome widely used in stroke care and research. mRS grades functional status from 0 (no symptoms) through 5 (severe disability), with 6 indicating death. 
-Within this implementation guide, mRS is intended to be captured as Observation.valueCodeableConcept (bound to the MRsScoreVS ValueSet), with the assessment timepoint represented explicitly (e.g., via effective[x]) and/or via an assessment context indicator (e.g., pre-stroke baseline, discharge, ~90-day follow-up). This supports standard reporting (e.g., “mRS at 90 days”), comparability across sites, and consistent downstream analytics. 
-Scope and modeling notes: 
-* mRS is a coarse, global disability scale; it does not encode detailed domain-specific functional limitations (mobility, cognition, ADLs) which should be captured via additional instruments/Observations if required.
-* The CodeSystem defines only the **score**; method of ascertainment (in-person, telephone, structured interview) and assessor details should be captured separately when relevant.
+This CodeSystem defines codes for the **modified Rankin Scale (mRS)**, an ordinal measure of global disability and functional outcome. Scores range from 0 (no symptoms) to 5 (severe disability), with 6 indicating death. 
+**Primary use-case** 
+* Use as the coded result in `Observation.valueCodeableConcept` (bound via MRsScoreVS) when recording an mRS outcome.
+ 
+**Modeling notes** 
+* mRS is a global disability scale and does not capture domain-specific limitations (mobility, ADLs, cognition). Capture those via additional instruments/Observations when needed.
+* Method of ascertainment and assessor details should be recorded separately (e.g., Observation.method, performer, Provenance).
  
 
  This Code system is referenced in the content logical definition of the following value sets: 
@@ -37,7 +39,7 @@ Scope and modeling notes:
   "title" : "Modified Rankin Scale Score Code System",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-19T11:36:03+00:00",
+  "date" : "2026-02-19T12:37:09+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -50,7 +52,7 @@ Scope and modeling notes:
       ]
     }
   ],
-  "description" : "This CodeSystem defines codes for the modified Rankin Scale (mRS), an ordinal measure of global disability and functional outcome widely used in stroke care and research. mRS grades functional status from 0 (no symptoms) through 5 (severe disability), with 6 indicating death.\n\nWithin this implementation guide, mRS is intended to be captured as Observation.valueCodeableConcept (bound to the MRsScoreVS ValueSet), with the assessment timepoint represented explicitly (e.g., via effective[x]) and/or via an assessment context indicator (e.g., pre-stroke baseline, discharge, ~90-day follow-up). This supports standard reporting (e.g., “mRS at 90 days”), comparability across sites, and consistent downstream analytics.\n\nScope and modeling notes:\n- mRS is a coarse, global disability scale; it does not encode detailed domain-specific functional limitations (mobility, cognition, ADLs) which should be captured via additional instruments/Observations if required.\n- The CodeSystem defines only the *score*; method of ascertainment (in-person, telephone, structured interview) and assessor details should be captured separately when relevant.",
+  "description" : "This CodeSystem defines codes for the **modified Rankin Scale (mRS)**, an ordinal measure of global disability and functional outcome.\nScores range from 0 (no symptoms) to 5 (severe disability), with 6 indicating death.\n\n**Primary use-case**\n- Use as the coded result in `Observation.valueCodeableConcept` (bound via MRsScoreVS) when recording an mRS outcome.\n\n**Modeling notes**\n- mRS is a global disability scale and does not capture domain-specific limitations (mobility, ADLs, cognition).\n  Capture those via additional instruments/Observations when needed.\n- Method of ascertainment and assessor details should be recorded separately (e.g., Observation.method, performer, Provenance).",
   "caseSensitive" : false,
   "content" : "complete",
   "count" : 7,

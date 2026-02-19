@@ -12,8 +12,15 @@
 | Draft as of 2026-02-19 | *Computable Name*:VitalSignObservationProfile |
 
  
-Profile for recording key blood pressure vital signs in stroke patients using a single Observation with components. The Observation is categorized as vital-signs and uses component slices for systolic and diastolic blood pressure, each represented as a Quantity in UCUM mm[Hg]. 
-This profile supports repeated measurements over time by recording separate Observations at different effective[x] timestamps (e.g., arrival, post-thrombolysis monitoring, ICU). It intentionally does not model measurement conditions such as body position, cuff site, or device; such details may be captured via Observation.method, device references, or additional extensions if required by local workflows. 
+Profile for recording blood pressure vital signs in stroke patients using a single Observation with components. The Observation is categorized as `vital-signs` and uses component entries for systolic and diastolic blood pressure. 
+**Primary use-case** 
+* Record repeated BP measurements across the episode (arrival, post-thrombolysis monitoring, ICU) by creating multiple Observations with different `effective[x]`.
+ 
+**Representation** 
+* `Observation.component.code` bound to VitalSignCodesVS.
+* `Observation.component.valueQuantity` in UCUM mm[Hg].
+ 
+**Typical scenarios** 1) One Observation with two components (systolic and diastolic) recorded at the same timepoint. 2) Multiple Observations over time, each with the same component structure, to track BP trends during acute management and monitoring. 
 
 **Usages:**
 
@@ -42,7 +49,7 @@ Other representations of profile: [CSV](StructureDefinition-vital-sign-observati
   "name" : "VitalSignObservationProfile",
   "title" : "Stroke Vital Sign Observation Profile",
   "status" : "draft",
-  "date" : "2026-02-19T11:36:03+00:00",
+  "date" : "2026-02-19T12:37:09+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -55,7 +62,7 @@ Other representations of profile: [CSV](StructureDefinition-vital-sign-observati
       ]
     }
   ],
-  "description" : "Profile for recording key blood pressure vital signs in stroke patients using a single Observation with components. The Observation is categorized as vital-signs and uses component slices for systolic and diastolic blood pressure, each represented as a Quantity in UCUM mm[Hg].\n\nThis profile supports repeated measurements over time by recording separate Observations at different effective[x] timestamps (e.g., arrival, post-thrombolysis monitoring, ICU). It intentionally does not model measurement conditions such as body position, cuff site, or device; such details may be captured via Observation.method, device references, or additional extensions if required by local workflows.",
+  "description" : "Profile for recording blood pressure vital signs in stroke patients using a single Observation with components.\nThe Observation is categorized as `vital-signs` and uses component entries for systolic and diastolic blood pressure.\n\n**Primary use-case**\n- Record repeated BP measurements across the episode (arrival, post-thrombolysis monitoring, ICU) by creating multiple Observations with different `effective[x]`.\n\n**Representation**\n- `Observation.component.code` bound to VitalSignCodesVS.\n- `Observation.component.valueQuantity` in UCUM mm[Hg].\n\n**Typical scenarios**\n1) One Observation with two components (systolic and diastolic) recorded at the same timepoint.\n2) Multiple Observations over time, each with the same component structure, to track BP trends during acute management and monitoring.",
   "fhirVersion" : "5.0.0",
   "mapping" : [
     {

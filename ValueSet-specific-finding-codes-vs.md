@@ -12,8 +12,17 @@
 | Active as of 2026-02-19 | *Computable Name*:SpecificFindingCodesVS |
 
  
-This ValueSet provides SNOMED CT disorder concepts for specific clinically relevant findings often referenced in the stroke workup, currently limited to atrial fibrillation and atrial flutter disorders. 
-These codes are suitable when the intent is to reference the disorder concepts themselves (e.g., as a focus finding or a coded problem). When the intent is to capture the **status of an assessment** (present/absent/unknown) rather than assert a diagnosis, implementers should use an Observation with a dedicated assessment concept as Observation.code and bind Observation.valueCodeableConcept to an appropriate status ValueSet (e.g., AfibFlutterStatusVS). 
+This ValueSet provides SNOMED CT disorder concepts for specific findings referenced in the stroke workup. Currently includes: 
+* Atrial fibrillation (disorder)
+* Atrial flutter (disorder)
+ 
+**Primary use-case** 
+* Constrain `Observation.code` (as a **finding focus**) when using `SpecificFindingObservationProfile`.
+ 
+**Important modeling note** 
+* Using a disorder concept in `Observation.code` here does not necessarily assert a diagnosis; the diagnosis should be modeled as a Condition.
+* The Observation can be interpreted as “assessment about this finding,” with the result in `Observation.valueCodeableConcept` (e.g., AF status).
+ 
 
  **References** 
 
@@ -51,7 +60,7 @@ These codes are suitable when the intent is to reference the disorder concepts t
   "name" : "SpecificFindingCodesVS",
   "title" : "Specific Stroke Finding Codes ValueSet",
   "status" : "active",
-  "date" : "2026-02-19T11:36:03+00:00",
+  "date" : "2026-02-19T12:37:09+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -64,7 +73,7 @@ These codes are suitable when the intent is to reference the disorder concepts t
       ]
     }
   ],
-  "description" : "This ValueSet provides SNOMED CT disorder concepts for specific clinically relevant findings often referenced in the stroke workup, currently limited to atrial fibrillation and atrial flutter disorders.\n\nThese codes are suitable when the intent is to reference the disorder concepts themselves (e.g., as a focus finding or a coded problem). When the intent is to capture the *status of an assessment* (present/absent/unknown) rather than assert a diagnosis, implementers should use an Observation with a dedicated assessment concept as Observation.code and bind Observation.valueCodeableConcept to an appropriate status ValueSet (e.g., AfibFlutterStatusVS).",
+  "description" : "This ValueSet provides SNOMED CT disorder concepts for specific findings referenced in the stroke workup.\nCurrently includes:\n- Atrial fibrillation (disorder)\n- Atrial flutter (disorder)\n\n**Primary use-case**\n- Constrain `Observation.code` (as a *finding focus*) when using `SpecificFindingObservationProfile`.\n\n**Important modeling note**\n- Using a disorder concept in `Observation.code` here does not necessarily assert a diagnosis; the diagnosis should be modeled as a Condition.\n- The Observation can be interpreted as “assessment about this finding,” with the result in `Observation.valueCodeableConcept` (e.g., AF status).",
   "compose" : {
     "include" : [
       {

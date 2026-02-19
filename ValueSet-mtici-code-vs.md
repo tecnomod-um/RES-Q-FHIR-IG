@@ -12,8 +12,11 @@
 | Active as of 2026-02-19 | *Computable Name*:MTICICodeVS |
 
  
-This ValueSet includes the mTICI assessment concept code(s) from MTICICodeCS for use as Observation.code when recording an mTICI reperfusion grade. It is intended to be paired with a binding of Observation.valueCodeableConcept to MticiScoreVS. 
-Separating the “assessment concept” ValueSet (this ValueSet) from the “assessment result” ValueSet (MticiScoreVS) enables clearer validation rules, consistent UI behavior, and safer reuse of the mTICI scoring system across profiles. 
+This ValueSet includes the mTICI assessment concept code(s) from MTICICodeCS. 
+**Primary use-case** 
+* Bind to `Observation.code` when recording an mTICI reperfusion grade Observation.
+* Pair with `Observation.valueCodeableConcept` bound to MticiScoreVS.
+ 
 
  **References** 
 
@@ -51,7 +54,7 @@ Separating the “assessment concept” ValueSet (this ValueSet) from the “ass
   "name" : "MTICICodeVS",
   "title" : "Modified Thrombolysis in Cerebral Infarction Assessment ValueSet",
   "status" : "active",
-  "date" : "2026-02-19T11:36:03+00:00",
+  "date" : "2026-02-19T12:37:09+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -64,7 +67,7 @@ Separating the “assessment concept” ValueSet (this ValueSet) from the “ass
       ]
     }
   ],
-  "description" : "This ValueSet includes the mTICI assessment concept code(s) from MTICICodeCS for use as Observation.code when recording an mTICI reperfusion grade. It is intended to be paired with a binding of Observation.valueCodeableConcept to MticiScoreVS.\n\nSeparating the “assessment concept” ValueSet (this ValueSet) from the “assessment result” ValueSet (MticiScoreVS) enables clearer validation rules, consistent UI behavior, and safer reuse of the mTICI scoring system across profiles.",
+  "description" : "This ValueSet includes the mTICI assessment concept code(s) from MTICICodeCS.\n\n**Primary use-case**\n- Bind to `Observation.code` when recording an mTICI reperfusion grade Observation.\n- Pair with `Observation.valueCodeableConcept` bound to MticiScoreVS.",
   "compose" : {
     "include" : [
       {

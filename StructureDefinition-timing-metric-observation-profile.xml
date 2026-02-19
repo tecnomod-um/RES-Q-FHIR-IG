@@ -21,7 +21,7 @@
   <name value="TimingMetricObservationProfile"/>
   <title value="Stroke Timing Metric Observation Profile (R5)"/>
   <status value="draft"/>
-  <date value="2026-02-19T11:36:03+00:00"/>
+  <date value="2026-02-19T12:37:09+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>
@@ -30,7 +30,7 @@
       <value value="http://tecnomod-um.org"/>
     </telecom>
   </contact>
-  <description value="Profile for recording acute stroke process timing metrics as measured durations (e.g., Door-to-Needle, Door-to-Groin). Observation.code is bound to TimingMetricCodesVS, and Observation.valueQuantity represents the elapsed time as a duration in UCUM minutes.&#xA;&#xA;This representation is optimized for quality monitoring and analytics, where the interval value is the primary datum. The profile allows hasMember references to associate related sub-metrics or supporting Observations when a composite metric is derived from multiple recorded steps.&#xA;&#xA;Scope note: This profile records the interval value; it does not require recording the underlying event timestamps. If timestamp provenance is needed, implementers should capture the source event times separately (e.g., additional Observations or extensions) to support auditing and cross-site comparability."/>
+  <description value="Profile for recording acute stroke process timing metrics as measured durations (e.g., Door-to-Needle, Door-to-Groin).&#xA;&#xA;**Primary use-case**&#xA;- Quality monitoring and pathway optimization where the interval value is the primary datum.&#xA;&#xA;**Representation**&#xA;- `Observation.code` bound to TimingMetricCodesVS.&#xA;- `Observation.valueQuantity` as UCUM minutes (`min`).&#xA;&#xA;**Typical scenarios**&#xA;1) A Door-to-Needle time of 45 minutes would be represented as an Observation with `code` = D2N code, `valueQuantity` = 45, `valueQuantity.unit` = &quot;minute&quot;, and the appropriate UCUM system/code.&#xA;2) A Door-to-Groin time of 90 minutes would be represented similarly with `code` = D2G code and `valueQuantity` = 90.&#xA;"/>
   <fhirVersion value="5.0.0"/>
   <mapping>
     <identity value="workflow"/>

@@ -228,13 +228,20 @@
   </table>
 
 <p>
-<p>This ValueSet aggregates a small set of coded “finding/assessment concepts” used by the SpecificFindingObservationProfile for stroke-related documentation. It currently includes:</p>
+<p>This ValueSet aggregates coded Observation.code concepts used by <code class="language-plaintext highlighter-rouge">SpecificFindingObservationProfile</code>.</p>
+
+<p>It currently includes:</p>
 <ul>
-  <li>specific disorder concepts relevant to stroke workup (from SpecificFindingCodesVS), and</li>
-  <li>the mTICI assessment concept code (from MTICICodeVS).</li>
+  <li>Specific disorder concepts used as a finding focus (SpecificFindingCodesVS), and</li>
+  <li>The mTICI assessment concept (MTICICodeVS).</li>
 </ul>
 
-<p>Implementer note: This ValueSet is used to constrain Observation.code. Where Observation.code is a disorder concept (e.g., AF disorder), the Observation instance should be interpreted as capturing an <em>assessment about that finding</em> (with the assessment result carried in Observation.valueCodeableConcept, per profile constraints). Where Observation.code is an assessment concept (e.g., mTICI), the Observation.valueCodeableConcept carries the corresponding score/result.</p>
+<p><strong>How to interpret usage</strong></p>
+<ul>
+  <li>If <code class="language-plaintext highlighter-rouge">Observation.code</code> is a disorder concept (e.g., AF), the Observation should be interpreted as an assessment about that finding,
+with the result/status carried in <code class="language-plaintext highlighter-rouge">Observation.valueCodeableConcept</code> (e.g., AfibFlutterStatusVS).</li>
+  <li>If <code class="language-plaintext highlighter-rouge">Observation.code</code> is an assessment concept (e.g., mTICI), <code class="language-plaintext highlighter-rouge">Observation.valueCodeableConcept</code> carries the score (MticiScoreVS).</li>
+</ul>
 
 </p>
 
@@ -324,7 +331,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 11:36+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 12:37+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

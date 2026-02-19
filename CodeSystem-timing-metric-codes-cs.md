@@ -12,8 +12,11 @@
 | Active as of 2026-02-19 | *Computable Name*:TimingMetricCodesCS |
 
  
-This CodeSystem defines codes for key time-interval process metrics in acute stroke care used for quality monitoring and pathway optimization. Each code represents a duration measured in minutes between two clinically meaningful events (e.g., hospital arrival to thrombolysis start). 
-These metrics are commonly used in performance dashboards, registry submissions, and quality improvement programs. The intent is to store the **measured interval** (a duration) in Observation.valueQuantity (UCUM minutes), while event timestamps (arrival time, needle time, groin puncture time) may be stored separately when available. 
+This CodeSystem defines codes for key **time-interval process metrics** in acute stroke care. Each code represents a duration measured between two clinically meaningful events (e.g., arrival to thrombolysis start). 
+**Primary use-case** 
+* Use as `Observation.code` in `TimingMetricObservationProfile`.
+* Store the measured interval in `Observation.valueQuantity` with UCUM minutes (`min`).
+ 
 
  This Code system is referenced in the content logical definition of the following value sets: 
 
@@ -32,7 +35,7 @@ These metrics are commonly used in performance dashboards, registry submissions,
   "name" : "TimingMetricCodesCS",
   "title" : "Stroke Timing Metric Codes CodeSystem",
   "status" : "active",
-  "date" : "2026-02-19T11:36:03+00:00",
+  "date" : "2026-02-19T12:37:09+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -45,7 +48,7 @@ These metrics are commonly used in performance dashboards, registry submissions,
       ]
     }
   ],
-  "description" : "This CodeSystem defines codes for key time-interval process metrics in acute stroke care used for quality monitoring and pathway optimization. Each code represents a duration measured in minutes between two clinically meaningful events (e.g., hospital arrival to thrombolysis start).\n\nThese metrics are commonly used in performance dashboards, registry submissions, and quality improvement programs. The intent is to store the *measured interval* (a duration) in Observation.valueQuantity (UCUM minutes), while event timestamps (arrival time, needle time, groin puncture time) may be stored separately when available.",
+  "description" : "This CodeSystem defines codes for key **time-interval process metrics** in acute stroke care.\nEach code represents a duration measured between two clinically meaningful events (e.g., arrival to thrombolysis start).\n\n**Primary use-case**\n- Use as `Observation.code` in `TimingMetricObservationProfile`.\n- Store the measured interval in `Observation.valueQuantity` with UCUM minutes (`min`).",
   "content" : "complete",
   "count" : 2,
   "concept" : [

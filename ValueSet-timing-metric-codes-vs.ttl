@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "TimingMetricCodesVS"] ; # 
   fhir:title [ fhir:v "Stroke Timing Metric Codes ValueSet"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-02-19T11:36:03+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-19T12:37:09+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;
@@ -30,7 +30,7 @@
        fhir:value [ fhir:v "http://tecnomod-um.org" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "This ValueSet includes all timing metric codes defined in TimingMetricCodesCS for use as Observation.code when recording acute stroke process intervals (e.g., D2N, D2G). It supports required binding in the TimingMetricObservationProfile, ensuring only approved timing metrics are recorded.\n\nThe ValueSet is intentionally constrained to promote consistent, comparable reporting across implementations and to reduce ambiguity in downstream analytics."] ; # 
+  fhir:description [ fhir:v "This ValueSet includes all timing metric codes from TimingMetricCodesCS.\n\n**Primary use-case**\n- Required binding for `TimingMetricObservationProfile.code` to ensure only approved metrics are captured."] ; # 
   fhir:compose [
      fhir:include ( [
        fhir:system [

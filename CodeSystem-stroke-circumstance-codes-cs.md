@@ -12,8 +12,11 @@
 | Active as of 2026-02-19 | *Computable Name*:StrokeCircumstanceCodesCS |
 
  
-This CodeSystem defines coded circumstances related to stroke symptom onset that are clinically relevant for eligibility decisions, diagnostic reasoning, and reporting—particularly when the exact onset time is unknown or atypical. 
-These codes are intended to be used as Observation.code in the StrokeCircumstanceObservationProfile to assert that a given onset circumstance applies to the index stroke event. They do not encode the precise onset timestamp, last-known-well time, or location of onset; those details should be represented separately (e.g., dedicated Observations, Encounter/Condition attributes, or extensions). 
+This CodeSystem defines coded circumstances related to stroke symptom onset that are clinically relevant when onset time is unknown or atypical. 
+**Primary use-case** 
+* Use as `Observation.code` in `StrokeCircumstanceObservationProfile`.
+* Presence of the Observation asserts that the circumstance applies to the index stroke event.
+ 
 
  This Code system is referenced in the content logical definition of the following value sets: 
 
@@ -32,7 +35,7 @@ These codes are intended to be used as Observation.code in the StrokeCircumstanc
   "name" : "StrokeCircumstanceCodesCS",
   "title" : "Stroke Circumstance Codes CodeSystem",
   "status" : "active",
-  "date" : "2026-02-19T11:36:03+00:00",
+  "date" : "2026-02-19T12:37:09+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -45,7 +48,7 @@ These codes are intended to be used as Observation.code in the StrokeCircumstanc
       ]
     }
   ],
-  "description" : " This CodeSystem defines coded circumstances related to stroke symptom onset that are clinically relevant for eligibility decisions, diagnostic reasoning, and reporting—particularly when the exact onset time is unknown or atypical.\n\nThese codes are intended to be used as Observation.code in the StrokeCircumstanceObservationProfile to assert that a given onset circumstance applies to the index stroke event. They do not encode the precise onset timestamp, last-known-well time, or location of onset; those details should be represented separately (e.g., dedicated Observations, Encounter/Condition attributes, or extensions).",
+  "description" : "This CodeSystem defines coded circumstances related to stroke symptom onset that are clinically relevant when onset time is unknown or atypical.\n\n**Primary use-case**\n- Use as `Observation.code` in `StrokeCircumstanceObservationProfile`.\n- Presence of the Observation asserts that the circumstance applies to the index stroke event.",
   "content" : "complete",
   "count" : 2,
   "concept" : [

@@ -12,11 +12,15 @@
 | Active as of 2026-02-19 | *Computable Name*:StrokeFindingCodesVS |
 
  
-This ValueSet aggregates a small set of coded “finding/assessment concepts” used by the SpecificFindingObservationProfile for stroke-related documentation. It currently includes: 
-* specific disorder concepts relevant to stroke workup (from SpecificFindingCodesVS), and
-* the mTICI assessment concept code (from MTICICodeVS).
+This ValueSet aggregates coded Observation.code concepts used by `SpecificFindingObservationProfile`. 
+It currently includes: 
+* Specific disorder concepts used as a finding focus (SpecificFindingCodesVS), and
+* The mTICI assessment concept (MTICICodeVS).
  
-Implementer note: This ValueSet is used to constrain Observation.code. Where Observation.code is a disorder concept (e.g., AF disorder), the Observation instance should be interpreted as capturing an **assessment about that finding** (with the assessment result carried in Observation.valueCodeableConcept, per profile constraints). Where Observation.code is an assessment concept (e.g., mTICI), the Observation.valueCodeableConcept carries the corresponding score/result. 
+**How to interpret usage** 
+* If `Observation.code` is a disorder concept (e.g., AF), the Observation should be interpreted as an assessment about that finding, with the result/status carried in `Observation.valueCodeableConcept` (e.g., AfibFlutterStatusVS).
+* If `Observation.code` is an assessment concept (e.g., mTICI), `Observation.valueCodeableConcept` carries the score (MticiScoreVS).
+ 
 
  **References** 
 
@@ -54,7 +58,7 @@ Implementer note: This ValueSet is used to constrain Observation.code. Where Obs
   "name" : "StrokeFindingCodesVS",
   "title" : "Specific Stroke Finding Codes ValueSet",
   "status" : "active",
-  "date" : "2026-02-19T11:36:03+00:00",
+  "date" : "2026-02-19T12:37:09+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -67,7 +71,7 @@ Implementer note: This ValueSet is used to constrain Observation.code. Where Obs
       ]
     }
   ],
-  "description" : "This ValueSet aggregates a small set of coded “finding/assessment concepts” used by the SpecificFindingObservationProfile for stroke-related documentation. It currently includes:\n- specific disorder concepts relevant to stroke workup (from SpecificFindingCodesVS), and\n- the mTICI assessment concept code (from MTICICodeVS).\n\nImplementer note: This ValueSet is used to constrain Observation.code. Where Observation.code is a disorder concept (e.g., AF disorder), the Observation instance should be interpreted as capturing an *assessment about that finding* (with the assessment result carried in Observation.valueCodeableConcept, per profile constraints). Where Observation.code is an assessment concept (e.g., mTICI), the Observation.valueCodeableConcept carries the corresponding score/result.",
+  "description" : "This ValueSet aggregates coded Observation.code concepts used by `SpecificFindingObservationProfile`.\n\nIt currently includes:\n- Specific disorder concepts used as a finding focus (SpecificFindingCodesVS), and\n- The mTICI assessment concept (MTICICodeVS).\n\n**How to interpret usage**\n- If `Observation.code` is a disorder concept (e.g., AF), the Observation should be interpreted as an assessment about that finding,\n  with the result/status carried in `Observation.valueCodeableConcept` (e.g., AfibFlutterStatusVS).\n- If `Observation.code` is an assessment concept (e.g., mTICI), `Observation.valueCodeableConcept` carries the score (MticiScoreVS).",
   "compose" : {
     "include" : [
       {

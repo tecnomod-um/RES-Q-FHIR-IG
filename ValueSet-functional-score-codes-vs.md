@@ -12,10 +12,16 @@
 | Active as of 2026-02-19 | *Computable Name*:FunctionalScoreCodesVS |
 
  
-This ValueSet defines the allowable Observation.code concepts for stroke functional and severity scoring instruments represented in this guide: modified Rankin Scale (mRS) and NIH Stroke Scale (NIHSS), expressed as SNOMED CT observable entities. 
-It is intended to be bound to Observation.code in the FunctionalScoreObservationProfile. Downstream validation/invariants then enforce the appropriate datatype of Observation.value[x]: 
-* mRS is captured as a coded ordinal category (valueCodeableConcept bound to MRsScoreVS).
-* NIHSS is captured as a numeric total score (valueInteger), representing the summed NIHSS total rather than item-level subscores.
+This ValueSet constrains `Observation.code` for functional outcome and severity instruments represented in this guide: 
+* Modified Rankin Scale score (mRS)
+* NIH Stroke Scale total score (NIHSS)
+ 
+**Primary use-case** 
+* Bind to `Observation.code` in `FunctionalScoreObservationProfile`.
+ 
+**Datatype expectations enforced via invariants** 
+* mRS: `Observation.valueCodeableConcept` bound to MRsScoreVS (ordinal categories 0–6).
+* NIHSS: `Observation.valueInteger` as total NIHSS score.
  
 
  **References** 
@@ -54,7 +60,7 @@ It is intended to be bound to Observation.code in the FunctionalScoreObservation
   "name" : "FunctionalScoreCodesVS",
   "title" : "Stroke Functional Score Codes ValueSet",
   "status" : "active",
-  "date" : "2026-02-19T11:36:03+00:00",
+  "date" : "2026-02-19T12:37:09+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -67,7 +73,7 @@ It is intended to be bound to Observation.code in the FunctionalScoreObservation
       ]
     }
   ],
-  "description" : "This ValueSet defines the allowable Observation.code concepts for stroke functional and severity scoring instruments represented in this guide: modified Rankin Scale (mRS) and NIH Stroke Scale (NIHSS), expressed as SNOMED CT observable entities.\n\nIt is intended to be bound to Observation.code in the FunctionalScoreObservationProfile. Downstream validation/invariants then enforce the appropriate datatype of Observation.value[x]:\n- mRS is captured as a coded ordinal category (valueCodeableConcept bound to MRsScoreVS).\n- NIHSS is captured as a numeric total score (valueInteger), representing the summed NIHSS total rather than item-level subscores.",
+  "description" : "This ValueSet constrains `Observation.code` for functional outcome and severity instruments represented in this guide:\n- Modified Rankin Scale score (mRS)\n- NIH Stroke Scale total score (NIHSS)\n\n**Primary use-case**\n- Bind to `Observation.code` in `FunctionalScoreObservationProfile`.\n\n**Datatype expectations enforced via invariants**\n- mRS: `Observation.valueCodeableConcept` bound to MRsScoreVS (ordinal categories 0–6).\n- NIHSS: `Observation.valueInteger` as total NIHSS score.",
   "compose" : {
     "include" : [
       {

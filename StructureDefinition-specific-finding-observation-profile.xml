@@ -13,7 +13,7 @@
   <name value="SpecificFindingObservationProfile"/>
   <title value="Specific Stroke Finding Observation Profile (R5)"/>
   <status value="draft"/>
-  <date value="2026-02-19T11:36:03+00:00"/>
+  <date value="2026-02-19T12:37:09+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>
@@ -22,7 +22,7 @@
       <value value="http://tecnomod-um.org"/>
     </telecom>
   </contact>
-  <description value="Profile for recording discrete, coded stroke-related findings and assessment outcomes that do not fit naturally into the vital-sign, functional-score, or timing-metric profiles. Observation.code is constrained to StrokeFindingCodesVS, and Observation.valueCodeableConcept carries the corresponding assessment result or status.&#xA;&#xA;Typical use cases include:&#xA;- documenting AF/flutter assessment status as present/absent/unknown (valueCodeableConcept bound to an AF/flutter status ValueSet), and&#xA;- documenting procedural outcome grades such as mTICI (valueCodeableConcept bound to MticiScoreVS).&#xA;&#xA;This profile deliberately encodes the result as a CodeableConcept to support categorical outcomes and interoperability. It does not replace Condition for asserting diagnoses; when a durable diagnosis is established (e.g., confirmed AF), represent it as a Condition and optionally link supporting Observations (screening results, monitoring runs) using hasMember, derivedFrom, or Provenance."/>
+  <description value="Profile for recording discrete, coded stroke-related findings and assessment outcomes that do not fit naturally into vital-sign,&#xA;functional-score, or timing-metric profiles.&#xA;&#xA;**Primary use-cases**&#xA;1) AF/flutter assessment status:&#xA;   - `Observation.code` uses a disorder concept as the finding focus (AF/flutter).&#xA;   - `Observation.valueCodeableConcept` carries status (AfibFlutterStatusVS).&#xA;2) Procedural outcome grade (mTICI):&#xA;   - `Observation.code` uses the mTICI assessment concept (MTICICodeVS).&#xA;   - `Observation.valueCodeableConcept` carries the score (MticiScoreVS).&#xA;&#xA;**Important modeling note**&#xA;- This profile does not replace Condition for diagnoses.&#xA;  Use Condition to assert durable diagnoses and link supporting Observations via `hasMember`, `derivedFrom`, or Provenance."/>
   <fhirVersion value="5.0.0"/>
   <mapping>
     <identity value="workflow"/>

@@ -230,7 +230,7 @@
   "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.title">title</a>" : "Modified Rankin Scale Score Code System",
   "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.status">status</a>" : "active",
   "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.experimental">experimental</a>" : true,
-  "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.date">date</a>" : "2026-02-19T11:36:03+00:00",
+  "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.date">date</a>" : "2026-02-19T12:37:09+00:00",
   "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.publisher">publisher</a>" : "UMU",
   "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.contact">contact</a>" : [
     {
@@ -243,7 +243,7 @@
       ]
     }
   ],
-  "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.description">description</a>" : "This CodeSystem defines codes for the modified Rankin Scale (mRS), an ordinal measure of global disability and functional outcome widely used in stroke care and research. mRS grades functional status from 0 (no symptoms) through 5 (severe disability), with 6 indicating death.\n\nWithin this implementation guide, mRS is intended to be captured as Observation.valueCodeableConcept (bound to the MRsScoreVS ValueSet), with the assessment timepoint represented explicitly (e.g., via effective[x]) and/or via an assessment context indicator (e.g., pre-stroke baseline, discharge, ~90-day follow-up). This supports standard reporting (e.g., “mRS at 90 days”), comparability across sites, and consistent downstream analytics.\n\nScope and modeling notes:\n- mRS is a coarse, global disability scale; it does not encode detailed domain-specific functional limitations (mobility, cognition, ADLs) which should be captured via additional instruments/Observations if required.\n- The CodeSystem defines only the *score*; method of ascertainment (in-person, telephone, structured interview) and assessor details should be captured separately when relevant.",
+  "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.description">description</a>" : "This CodeSystem defines codes for the **modified Rankin Scale (mRS)**, an ordinal measure of global disability and functional outcome.\nScores range from 0 (no symptoms) to 5 (severe disability), with 6 indicating death.\n\n**Primary use-case**\n- Use as the coded result in `Observation.valueCodeableConcept` (bound via MRsScoreVS) when recording an mRS outcome.\n\n**Modeling notes**\n- mRS is a global disability scale and does not capture domain-specific limitations (mobility, ADLs, cognition).\n  Capture those via additional instruments/Observations when needed.\n- Method of ascertainment and assessor details should be recorded separately (e.g., Observation.method, performer, Provenance).",
   "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.caseSensitive">caseSensitive</a>" : false,
   "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.content">content</a>" : "complete",
   "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.count">count</a>" : 7,
@@ -308,7 +308,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 11:36+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 12:37+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

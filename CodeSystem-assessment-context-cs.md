@@ -12,8 +12,17 @@
 | Active as of 2026-02-19 | *Computable Name*:AssessmentContextCS |
 
  
-This CodeSystem defines normalized codes for the clinical context / relative timepoint at which a stroke-related assessment was performed. It is primarily used to contextualize functional and severity instruments (e.g., mRS and NIHSS) where interpretation depends on whether the score reflects baseline status, acute presentation, discharge status, or follow-up. 
-These codes represent **relative phases** (pre-stroke baseline, admission, discharge, ~3-month follow-up) rather than precise timestamps. The actual date/time of measurement should be recorded in Observation.effective[x] when known; the context code complements effective[x] by expressing the clinical phase, which is often necessary for reporting and comparability (e.g., “mRS pre-stroke” vs “mRS at discharge”). 
+This CodeSystem defines normalized codes for the **clinical context / relative timepoint** at which a stroke-related assessment is performed. It is primarily used to contextualize instruments whose interpretation depends on phase (e.g., mRS/NIHSS at baseline vs discharge vs follow-up). 
+**Primary use-case** 
+* Use as the value in `ObservationTimingContextExtension.valueCodeableConcept` to label the phase of an assessment.
+ 
+**How it complements effective[x]** 
+* `Observation.effective[x]` records the actual date/time (when known).
+* This CodeSystem records the standardized phase label used for reporting and comparability.
+ 
+**Why this is needed** 
+* Many workflows report outcomes by phase even when the exact timestamp is unknown or operationally variable (“mRS at 90 days”).
+ 
 
  This Code system is referenced in the content logical definition of the following value sets: 
 
@@ -33,7 +42,7 @@ These codes represent **relative phases** (pre-stroke baseline, admission, disch
   "title" : "Assessment Context Code System",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-19T11:36:03+00:00",
+  "date" : "2026-02-19T12:37:09+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -46,7 +55,7 @@ These codes represent **relative phases** (pre-stroke baseline, admission, disch
       ]
     }
   ],
-  "description" : "This CodeSystem defines normalized codes for the clinical context / relative timepoint at which a stroke-related assessment was performed. It is primarily used to contextualize functional and severity instruments (e.g., mRS and NIHSS) where interpretation depends on whether the score reflects baseline status, acute presentation, discharge status, or follow-up.\n\nThese codes represent *relative phases* (pre-stroke baseline, admission, discharge, ~3-month follow-up) rather than precise timestamps. The actual date/time of measurement should be recorded in Observation.effective[x] when known; the context code complements effective[x] by expressing the clinical phase, which is often necessary for reporting and comparability (e.g., “mRS pre-stroke” vs “mRS at discharge”).",
+  "description" : "This CodeSystem defines normalized codes for the **clinical context / relative timepoint** at which a stroke-related assessment is performed.\nIt is primarily used to contextualize instruments whose interpretation depends on phase (e.g., mRS/NIHSS at baseline vs discharge vs follow-up).\n\n**Primary use-case**\n- Use as the value in `ObservationTimingContextExtension.valueCodeableConcept` to label the phase of an assessment.\n\n**How it complements effective[x]**\n- `Observation.effective[x]` records the actual date/time (when known).\n- This CodeSystem records the standardized phase label used for reporting and comparability.\n\n**Why this is needed**\n- Many workflows report outcomes by phase even when the exact timestamp is unknown or operationally variable (“mRS at 90 days”).",
   "caseSensitive" : false,
   "content" : "complete",
   "count" : 4,

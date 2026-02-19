@@ -11,7 +11,7 @@
   <title value="Assessment Context Code System"/>
   <status value="active"/>
   <experimental value="true"/>
-  <date value="2026-02-19T11:36:03+00:00"/>
+  <date value="2026-02-19T12:37:09+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>
@@ -20,7 +20,7 @@
       <value value="http://tecnomod-um.org"/>
     </telecom>
   </contact>
-  <description value="This CodeSystem defines normalized codes for the clinical context / relative timepoint at which a stroke-related assessment was performed. It is primarily used to contextualize functional and severity instruments (e.g., mRS and NIHSS) where interpretation depends on whether the score reflects baseline status, acute presentation, discharge status, or follow-up.&#xA;&#xA;These codes represent *relative phases* (pre-stroke baseline, admission, discharge, ~3-month follow-up) rather than precise timestamps. The actual date/time of measurement should be recorded in Observation.effective[x] when known; the context code complements effective[x] by expressing the clinical phase, which is often necessary for reporting and comparability (e.g., “mRS pre-stroke” vs “mRS at discharge”)."/>
+  <description value="This CodeSystem defines normalized codes for the **clinical context / relative timepoint** at which a stroke-related assessment is performed.&#xA;It is primarily used to contextualize instruments whose interpretation depends on phase (e.g., mRS/NIHSS at baseline vs discharge vs follow-up).&#xA;&#xA;**Primary use-case**&#xA;- Use as the value in `ObservationTimingContextExtension.valueCodeableConcept` to label the phase of an assessment.&#xA;&#xA;**How it complements effective[x]**&#xA;- `Observation.effective[x]` records the actual date/time (when known).&#xA;- This CodeSystem records the standardized phase label used for reporting and comparability.&#xA;&#xA;**Why this is needed**&#xA;- Many workflows report outcomes by phase even when the exact timestamp is unknown or operationally variable (“mRS at 90 days”)."/>
   <caseSensitive value="false"/>
   <content value="complete"/>
   <count value="4"/>

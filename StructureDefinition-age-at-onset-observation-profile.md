@@ -12,8 +12,13 @@
 | Draft as of 2026-02-19 | *Computable Name*:AgeAtOnsetObservationProfile |
 
  
-Profile for recording the patient’s age at the time of stroke onset as a simple integer value in years. The Observation.code is fixed to the SNOMED CT observable entity “Age at onset of clinical finding,” ensuring a clear and interoperable semantic meaning. 
-The age at onset may be derived from date of birth and an onset/reference timepoint (e.g., symptom onset, last known well, or discovery time depending on local policy). This profile records the resulting age value, not the derivation method; if the derivation is clinically important, implementers should capture the underlying reference timepoint(s) and provenance separately. 
+Profile for recording the patient’s age at the time of stroke onset as an integer value in years. 
+**Primary use-case** 
+* Provides a computable attribute commonly used in etiologic assessment, risk stratification, and registry datasets.
+ 
+**Modeling note** 
+* The age may be derived from DOB and an onset reference (symptom onset, last-known-well, discovery time). This profile records the resulting age value, not the derivation method; capture provenance separately if needed.
+ 
 
  
 Record age-at-onset in years as a simple, computable value used in etiologic assessment and risk stratification. 
@@ -45,7 +50,7 @@ Other representations of profile: [CSV](StructureDefinition-age-at-onset-observa
   "name" : "AgeAtOnsetObservationProfile",
   "title" : "Age at Stroke Onset Observation Profile (R5)",
   "status" : "draft",
-  "date" : "2026-02-19T11:36:03+00:00",
+  "date" : "2026-02-19T12:37:09+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -58,7 +63,7 @@ Other representations of profile: [CSV](StructureDefinition-age-at-onset-observa
       ]
     }
   ],
-  "description" : "Profile for recording the patient’s age at the time of stroke onset as a simple integer value in years. The Observation.code is fixed to the SNOMED CT observable entity “Age at onset of clinical finding,” ensuring a clear and interoperable semantic meaning.\n\nThe age at onset may be derived from date of birth and an onset/reference timepoint (e.g., symptom onset, last known well, or discovery time depending on local policy). This profile records the resulting age value, not the derivation method; if the derivation is clinically important, implementers should capture the underlying reference timepoint(s) and provenance separately.",
+  "description" : "Profile for recording the patient’s age at the time of stroke onset as an integer value in years.\n\n**Primary use-case**\n- Provides a computable attribute commonly used in etiologic assessment, risk stratification, and registry datasets.\n\n**Modeling note**\n- The age may be derived from DOB and an onset reference (symptom onset, last-known-well, discovery time).\n  This profile records the resulting age value, not the derivation method; capture provenance separately if needed.",
   "purpose" : "Record age-at-onset in years as a simple, computable value used in etiologic assessment and risk stratification.",
   "fhirVersion" : "5.0.0",
   "mapping" : [

@@ -1,10 +1,10 @@
-# MTICI Score Code System - v0.1.0
+# Modified Treatment in Cerebral Infarction Grade Score CodeSystem - v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **MTICI Score Code System**
+* **Modified Treatment in Cerebral Infarction Grade Score CodeSystem**
 
-## CodeSystem: MTICI Score Code System (Experimental) 
+## CodeSystem: Modified Treatment in Cerebral Infarction Grade Score CodeSystem (Experimental) 
 
 | | |
 | :--- | :--- |
@@ -12,12 +12,13 @@
 | Draft as of 2025-03-31 | *Computable Name*:MticiScoreCS |
 
  
-This CodeSystem defines codes for the modified Treatment in Cerebral Ischemia / modified Thrombolysis in Cerebral Infarction (mTICI) reperfusion grade. mTICI is an ordinal angiographic scale used to quantify the extent of antegrade reperfusion of the downstream ischemic territory after endovascular therapy for acute ischemic stroke (e.g., mechanical thrombectomy). 
-The scale ranges from 0 (no perfusion) to 3 (complete reperfusion), with 2a/2b/2c subgrades to distinguish partial, substantial, and near-complete reperfusion. These codes are intended for consistent, interoperable capture in HL7® FHIR® resources—most commonly Observation.valueCodeableConcept—supporting procedural documentation, registry submission, audit/quality improvement, and research. 
-Scope and modeling notes: 
-* This CodeSystem represents the **final** angiographic reperfusion grade for the target downstream territory, typically assigned from the final post-procedural angiographic run (commonly DSA).
-* It does not encode target vessel location, imaging modality details, timestamps, technique/device, number of passes, collateral status, or adjudication process; those elements should be recorded separately (e.g., Procedure, ImagingStudy, Observation.method, extensions).
-* Any local definition of “successful reperfusion” (often operationalized as mTICI ≥ 2b, depending on protocol) should be implemented via ValueSets, rules, or reporting logic without altering code meanings.
+This CodeSystem defines the **modified Thrombolysis in Cerebral Infarction (mTICI)** reperfusion grade values. mTICI is an ordinal angiographic scale used to quantify the extent of reperfusion after endovascular therapy for acute ischemic stroke. 
+**Primary use-case** 
+* Use as the coded result in `Observation.valueCodeableConcept` (bound via MticiScoreVS) when recording the **final angiographic reperfusion grade**.
+ 
+**Modeling notes** 
+* Represents the **final** reperfusion grade for the downstream ischemic territory (typically adjudicated from the final angiographic run).
+* Does not encode target vessel, device/technique, number of passes, timestamps, or adjudication workflow; capture those via Procedure, ImagingStudy, Observation.method, or additional Observations/Provenance.
  
 
  This Code system is referenced in the content logical definition of the following value sets: 
@@ -35,7 +36,7 @@ Scope and modeling notes:
   "url" : "http://tecnomod-um.org/CodeSystem/mtici-score-cs",
   "version" : "0.1.0",
   "name" : "MticiScoreCS",
-  "title" : "MTICI Score Code System",
+  "title" : "Modified Treatment in Cerebral Infarction Grade Score CodeSystem",
   "status" : "draft",
   "experimental" : true,
   "date" : "2025-03-31",
@@ -51,7 +52,7 @@ Scope and modeling notes:
       ]
     }
   ],
-  "description" : "This CodeSystem defines codes for the modified Treatment in Cerebral Ischemia / modified Thrombolysis in Cerebral Infarction (mTICI) reperfusion grade. mTICI is an ordinal angiographic scale used to quantify the extent of antegrade reperfusion of the downstream ischemic territory after endovascular therapy for acute ischemic stroke (e.g., mechanical thrombectomy).\n\nThe scale ranges from 0 (no perfusion) to 3 (complete reperfusion), with 2a/2b/2c subgrades to distinguish partial, substantial, and near-complete reperfusion. These codes are intended for consistent, interoperable capture in HL7® FHIR® resources—most commonly Observation.valueCodeableConcept—supporting procedural documentation, registry submission, audit/quality improvement, and research.\n\nScope and modeling notes:\n- This CodeSystem represents the *final* angiographic reperfusion grade for the target downstream territory, typically assigned from the final post-procedural angiographic run (commonly DSA).\n- It does not encode target vessel location, imaging modality details, timestamps, technique/device, number of passes, collateral status, or adjudication process; those elements should be recorded separately (e.g., Procedure, ImagingStudy, Observation.method, extensions).\n- Any local definition of “successful reperfusion” (often operationalized as mTICI ≥ 2b, depending on protocol) should be implemented via ValueSets, rules, or reporting logic without altering code meanings.",
+  "description" : "This CodeSystem defines the **modified Thrombolysis in Cerebral Infarction (mTICI)** reperfusion grade values.\nmTICI is an ordinal angiographic scale used to quantify the extent of reperfusion after endovascular therapy for acute ischemic stroke.\n\n**Primary use-case**\n- Use as the coded result in `Observation.valueCodeableConcept` (bound via MticiScoreVS) when recording the *final angiographic reperfusion grade*.\n\n**Modeling notes**\n- Represents the *final* reperfusion grade for the downstream ischemic territory (typically adjudicated from the final angiographic run).\n- Does not encode target vessel, device/technique, number of passes, timestamps, or adjudication workflow; capture those via Procedure, ImagingStudy, Observation.method, or additional Observations/Provenance.",
   "caseSensitive" : false,
   "content" : "complete",
   "count" : 6,

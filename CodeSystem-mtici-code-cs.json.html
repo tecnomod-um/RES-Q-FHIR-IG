@@ -230,7 +230,7 @@
   "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.title">title</a>" : "Modified Thrombolysis in Cerebral Infarction Assessment CodeSystem",
   "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.status">status</a>" : "active",
   "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.experimental">experimental</a>" : true,
-  "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.date">date</a>" : "2026-02-19T11:36:03+00:00",
+  "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.date">date</a>" : "2026-02-19T12:37:09+00:00",
   "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.publisher">publisher</a>" : "UMU",
   "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.contact">contact</a>" : [
     {
@@ -243,7 +243,7 @@
       ]
     }
   ],
-  "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.description">description</a>" : "This CodeSystem defines the assessment concept code(s) used to indicate that an Observation is reporting an mTICI reperfusion grade. It is intentionally separated from the MticiScoreCS CodeSystem, which contains the actual mTICI grade values (0–3 with 2a/2b/2c).\n\nIn practice:\n- Observation.code identifies the *kind of measurement/assessment* (“mTICI reperfusion grade”).\n- Observation.valueCodeableConcept carries the *result* (one of the mTICI grades from MticiScoreVS).\n\nThis separation improves semantic clarity and supports consistent validation and analytics across systems.",
+  "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.description">description</a>" : "This CodeSystem defines the *assessment concept code* used to indicate that an Observation is reporting an mTICI reperfusion grade.\n\n**Design pattern**\n- `Observation.code` identifies the kind of assessment (“mTICI reperfusion grade”).\n- `Observation.valueCodeableConcept` carries the result (one of the grades in MticiScoreVS).",
   "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.caseSensitive">caseSensitive</a>" : false,
   "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.content">content</a>" : "complete",
   "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.count">count</a>" : 1,
@@ -278,7 +278,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 11:36+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 12:37+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

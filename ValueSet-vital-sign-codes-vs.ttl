@@ -22,7 +22,7 @@
   fhir:title [ fhir:v "Stroke Vital Sign Codes ValueSet"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:experimental [ fhir:v true] ; # 
-  fhir:date [ fhir:v "2026-02-19T11:36:03+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-19T12:37:09+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;
@@ -31,7 +31,7 @@
        fhir:value [ fhir:v "http://tecnomod-um.org" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "This ValueSet defines SNOMED CT observable-entity codes for the blood pressure components captured as vital signs in the acute stroke setting (systolic and diastolic blood pressure). It is intended for use as Observation.component.code in a single vital-sign Observation that records both components using UCUM units (mm[Hg]).\n\nIncluding only the component codes (rather than full LOINC panels) keeps the representation lightweight while remaining semantically precise, and supports repeated measurements across time (e.g., triage, post-thrombolysis monitoring) by repeating the Observation with different effective[x] timestamps."] ; # 
+  fhir:description [ fhir:v "This ValueSet defines SNOMED CT observable-entity codes for blood pressure components captured as vital signs:\n- Systolic blood pressure\n- Diastolic blood pressure\n\n**Primary use-case**\n- Bind to `Observation.component.code` in a single blood pressure Observation that records both components.\n\n**Implementation guidance**\n- Use `Observation.component.valueQuantity` with UCUM `mm[Hg]`.\n- Repeat the Observation across time with different `effective[x]` timestamps for monitoring."] ; # 
   fhir:compose [
      fhir:include ( [
        fhir:system [

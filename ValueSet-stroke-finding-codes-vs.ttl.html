@@ -241,7 +241,7 @@
   <a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;StrokeFindingCodesVS&quot;] ; # 
   <a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.title">fhir:title</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;Specific Stroke Finding Codes ValueSet&quot;] ; # 
   <a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;active&quot;] ; # 
-  <a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.date">fhir:date</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#dateTime">fhir:v</a> &quot;2026-02-19T11:36:03+00:00&quot;^^xsd:dateTime] ; # 
+  <a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.date">fhir:date</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#dateTime">fhir:v</a> &quot;2026-02-19T12:37:09+00:00&quot;^^xsd:dateTime] ; # 
   <a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.publisher">fhir:publisher</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;UMU&quot;] ; # 
   <a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.contact">fhir:contact</a> ( [
 <a href="http://hl7.org/fhir/R5/metadatatypes.html#ContactDetail#XContactDetail.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;UMU&quot; ] ;
@@ -249,7 +249,7 @@
 <a href="http://hl7.org/fhir/R5/datatypes.html#ContactPoint#XContactPoint.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;url&quot; ] ;
 <a href="http://hl7.org/fhir/R5/datatypes.html#ContactPoint#XContactPoint.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;http://tecnomod-um.org&quot; ]     ] )
   ] ) ; # 
-  <a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.description">fhir:description</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">fhir:v</a> &quot;This ValueSet aggregates a small set of coded “finding/assessment concepts” used by the SpecificFindingObservationProfile for stroke-related documentation. It currently includes:\n- specific disorder concepts relevant to stroke workup (from SpecificFindingCodesVS), and\n- the mTICI assessment concept code (from MTICICodeVS).\n\nImplementer note: This ValueSet is used to constrain Observation.code. Where Observation.code is a disorder concept (e.g., AF disorder), the Observation instance should be interpreted as capturing an *assessment about that finding* (with the assessment result carried in Observation.valueCodeableConcept, per profile constraints). Where Observation.code is an assessment concept (e.g., mTICI), the Observation.valueCodeableConcept carries the corresponding score/result.&quot;] ; # 
+  <a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.description">fhir:description</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">fhir:v</a> &quot;This ValueSet aggregates coded Observation.code concepts used by `SpecificFindingObservationProfile`.\n\nIt currently includes:\n- Specific disorder concepts used as a finding focus (SpecificFindingCodesVS), and\n- The mTICI assessment concept (MTICICodeVS).\n\n**How to interpret usage**\n- If `Observation.code` is a disorder concept (e.g., AF), the Observation should be interpreted as an assessment about that finding,\n  with the result/status carried in `Observation.valueCodeableConcept` (e.g., AfibFlutterStatusVS).\n- If `Observation.code` is an assessment concept (e.g., mTICI), `Observation.valueCodeableConcept` carries the score (MticiScoreVS).&quot;] ; # 
   <a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.compose">fhir:compose</a> [
     ( <a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.compose.include">fhir:include</a> [
       ( <a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.compose.include.valueSet">fhir:valueSet</a> [
@@ -285,7 +285,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 11:36+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 12:37+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

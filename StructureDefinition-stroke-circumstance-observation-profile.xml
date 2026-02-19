@@ -13,7 +13,7 @@
   <name value="StrokeCircumstanceObservationProfile"/>
   <title value="Stroke Circumstance Observation Profile (R5)"/>
   <status value="draft"/>
-  <date value="2026-02-19T11:36:03+00:00"/>
+  <date value="2026-02-19T12:37:09+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>
@@ -22,7 +22,7 @@
       <value value="http://tecnomod-um.org"/>
     </telecom>
   </contact>
-  <description value="Profile for documenting clinically relevant circumstances of stroke symptom onset (e.g., wake-up stroke, in-hospital onset). The circumstance is represented by Observation.code (bound to StrokeCircumstanceCodesVS); the presence of the Observation asserts that the circumstance applies to the index event within the associated Encounter.&#xA;&#xA;The profile supports linking supporting evidence via hasMember (e.g., Observations capturing last-known-well time, symptom discovery time, or other onset-related details) without overloading the circumstance code itself. This profile intentionally does not encode onset timestamps in the code; temporal details should be modeled separately for precision and auditability."/>
+  <description value="Profile for documenting clinically relevant circumstances of stroke symptom onset (e.g., wake-up stroke, in-hospital onset).&#xA;&#xA;**Primary use-case**&#xA;- Capture onset circumstance classification for eligibility reasoning, protocol stratification, and reporting when onset time is uncertain.&#xA;&#xA;**Representation**&#xA;- `Observation.code` bound to StrokeCircumstanceCodesVS.&#xA;- Presence of the Observation asserts the circumstance applies to the index stroke event (within the linked Encounter).&#xA;&#xA;**Typical scenarios**&#xA;1) A patient who wakes up with stroke symptoms would have an Observation with `code` = wake-up stroke code, linked to the index stroke Encounter, indicating that the stroke onset circumstance is a wake-up stroke.&#xA;2) A patient who experiences stroke symptoms while already admitted for another reason would have an Observation with `code` = in-hospital stroke code, linked to the index stroke Encounter, indicating that the stroke onset circumstance is in-hospital onset.&#xA;"/>
   <fhirVersion value="5.0.0"/>
   <mapping>
     <identity value="workflow"/>

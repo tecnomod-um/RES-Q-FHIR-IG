@@ -12,12 +12,12 @@
 | Active as of 2026-02-19 | *Computable Name*:BaseStrokeObservation |
 
  
-Common constraints for Observations captured in the context of stroke care across acute management and follow-up. This profile establishes a consistent minimum dataset and reference structure so that downstream profiles (vital signs, functional scores, timing metrics, onset circumstances, and specific findings) behave uniformly across systems. 
-Key modeling intent: 
-* Observation.status is fixed to final to indicate recorded results suitable for clinical reporting and analytics.
-* Observation.subject (Patient) and Observation.encounter (index stroke encounter) are mandatory to ensure every observation is attributable to a specific person and care episode.
-* Observation.partOf optionally links the observation to a Procedure (e.g., mechanical thrombectomy) when the observation represents a procedural outcome (e.g., mTICI grade) or a process metric.
-* Observation.effective[x] is optional to accommodate cases where only a phase label is known; when available, effective[x] should be populated to support accurate sequencing and time-based analysis.
+Common constraints for Observations captured in the context of stroke care across acute management and follow-up. This base profile establishes a consistent minimum dataset and reference structure so specialized observation profiles behave uniformly. 
+**Key modeling intent** 
+* `Observation.status` is fixed to `final` to represent finalized results suitable for reporting and analytics.
+* `Observation.subject` (Patient) and `Observation.encounter` (index stroke encounter) are mandatory for attribution.
+* `Observation.partOf` optionally links the Observation to a Procedure (e.g., thrombectomy) when the Observation represents a procedural outcome (e.g., mTICI).
+* `Observation.effective[x]` is optional to support cases where only a phase label is known; populate when available for sequencing and analysis.
  
 
 **Usages:**
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-base-stroke-observat
   "name" : "BaseStrokeObservation",
   "title" : "Base Profile for Stroke-Related Observations",
   "status" : "active",
-  "date" : "2026-02-19T11:36:03+00:00",
+  "date" : "2026-02-19T12:37:09+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -60,7 +60,7 @@ Other representations of profile: [CSV](StructureDefinition-base-stroke-observat
       ]
     }
   ],
-  "description" : "Common constraints for Observations captured in the context of stroke care across acute management and follow-up. This profile establishes a consistent minimum dataset and reference structure so that downstream profiles (vital signs, functional scores, timing metrics, onset circumstances, and specific findings) behave uniformly across systems.\n\nKey modeling intent:\n- Observation.status is fixed to final to indicate recorded results suitable for clinical reporting and analytics.\n- Observation.subject (Patient) and Observation.encounter (index stroke encounter) are mandatory to ensure every observation is attributable to a specific person and care episode.\n- Observation.partOf optionally links the observation to a Procedure (e.g., mechanical thrombectomy) when the observation represents a procedural outcome (e.g., mTICI grade) or a process metric.\n- Observation.effective[x] is optional to accommodate cases where only a phase label is known; when available, effective[x] should be populated to support accurate sequencing and time-based analysis.",
+  "description" : "Common constraints for Observations captured in the context of stroke care across acute management and follow-up.\nThis base profile establishes a consistent minimum dataset and reference structure so specialized observation profiles behave uniformly.\n\n**Key modeling intent**\n- `Observation.status` is fixed to `final` to represent finalized results suitable for reporting and analytics.\n- `Observation.subject` (Patient) and `Observation.encounter` (index stroke encounter) are mandatory for attribution.\n- `Observation.partOf` optionally links the Observation to a Procedure (e.g., thrombectomy) when the Observation represents a procedural outcome (e.g., mTICI).\n- `Observation.effective[x]` is optional to support cases where only a phase label is known; populate when available for sequencing and analysis.\n",
   "fhirVersion" : "5.0.0",
   "mapping" : [
     {

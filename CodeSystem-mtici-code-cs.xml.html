@@ -231,7 +231,7 @@
          <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Modified Thrombolysis in Cerebral Infarction Assessment CodeSystem&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.status">status</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.experimental">experimental</a> <a href="http://hl7.org/fhir/R5/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.date">date</a> <a href="http://hl7.org/fhir/R5/datatypes.html#dateTime">value</a>=&quot;2026-02-19T11:36:03+00:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.date">date</a> <a href="http://hl7.org/fhir/R5/datatypes.html#dateTime">value</a>=&quot;2026-02-19T12:37:09+00:00&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.publisher">publisher</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;UMU&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.contact">contact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R5/metadatatypes.html#ContactDetail#XContactDetail.name">name</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;UMU&quot;/&gt;
@@ -241,13 +241,11 @@
     &lt;/<a href="http://hl7.org/fhir/R5/metadatatypes.html#ContactDetail#XContactDetail.telecom">telecom</a>&gt;
   &lt;/<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.contact">contact</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.description">description</a>
-               <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;This CodeSystem defines the assessment concept code(s) used to indicate that an Observation is reporting an mTICI reperfusion grade. It is intentionally separated from the MticiScoreCS CodeSystem, which contains the actual mTICI grade values (0–3 with 2a/2b/2c).
+               <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;This CodeSystem defines the *assessment concept code* used to indicate that an Observation is reporting an mTICI reperfusion grade.
 
-In practice:
-- Observation.code identifies the *kind of measurement/assessment* (“mTICI reperfusion grade”).
-- Observation.valueCodeableConcept carries the *result* (one of the mTICI grades from MticiScoreVS).
-
-This separation improves semantic clarity and supports consistent validation and analytics across systems.&quot;/&gt;
+**Design pattern**
+- `Observation.code` identifies the kind of assessment (“mTICI reperfusion grade”).
+- `Observation.valueCodeableConcept` carries the result (one of the grades in MticiScoreVS).&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.caseSensitive">caseSensitive</a> <a href="http://hl7.org/fhir/R5/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.content">content</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;complete&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.count">count</a> <a href="http://hl7.org/fhir/R5/datatypes.html#unsignedInt">value</a>=&quot;1&quot;/&gt;
@@ -281,7 +279,7 @@ This separation improves semantic clarity and supports consistent validation and
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 11:36+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 12:37+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

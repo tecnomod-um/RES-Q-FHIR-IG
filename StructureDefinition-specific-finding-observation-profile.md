@@ -12,12 +12,16 @@
 | Draft as of 2026-02-19 | *Computable Name*:SpecificFindingObservationProfile |
 
  
-Profile for recording discrete, coded stroke-related findings and assessment outcomes that do not fit naturally into the vital-sign, functional-score, or timing-metric profiles. Observation.code is constrained to StrokeFindingCodesVS, and Observation.valueCodeableConcept carries the corresponding assessment result or status. 
-Typical use cases include: 
-* documenting AF/flutter assessment status as present/absent/unknown (valueCodeableConcept bound to an AF/flutter status ValueSet), and
-* documenting procedural outcome grades such as mTICI (valueCodeableConcept bound to MticiScoreVS).
+Profile for recording discrete, coded stroke-related findings and assessment outcomes that do not fit naturally into vital-sign, functional-score, or timing-metric profiles. 
+**Primary use-cases** 1) AF/flutter assessment status: 
+* `Observation.code` uses a disorder concept as the finding focus (AF/flutter).
+* `Observation.valueCodeableConcept` carries status (AfibFlutterStatusVS). 2) Procedural outcome grade (mTICI):
+* `Observation.code` uses the mTICI assessment concept (MTICICodeVS).
+* `Observation.valueCodeableConcept` carries the score (MticiScoreVS).
  
-This profile deliberately encodes the result as a CodeableConcept to support categorical outcomes and interoperability. It does not replace Condition for asserting diagnoses; when a durable diagnosis is established (e.g., confirmed AF), represent it as a Condition and optionally link supporting Observations (screening results, monitoring runs) using hasMember, derivedFrom, or Provenance. 
+**Important modeling note** 
+* This profile does not replace Condition for diagnoses. Use Condition to assert durable diagnoses and link supporting Observations via `hasMember`, `derivedFrom`, or Provenance.
+ 
 
 **Usages:**
 
@@ -46,7 +50,7 @@ Other representations of profile: [CSV](StructureDefinition-specific-finding-obs
   "name" : "SpecificFindingObservationProfile",
   "title" : "Specific Stroke Finding Observation Profile (R5)",
   "status" : "draft",
-  "date" : "2026-02-19T11:36:03+00:00",
+  "date" : "2026-02-19T12:37:09+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -59,7 +63,7 @@ Other representations of profile: [CSV](StructureDefinition-specific-finding-obs
       ]
     }
   ],
-  "description" : "Profile for recording discrete, coded stroke-related findings and assessment outcomes that do not fit naturally into the vital-sign, functional-score, or timing-metric profiles. Observation.code is constrained to StrokeFindingCodesVS, and Observation.valueCodeableConcept carries the corresponding assessment result or status.\n\nTypical use cases include:\n- documenting AF/flutter assessment status as present/absent/unknown (valueCodeableConcept bound to an AF/flutter status ValueSet), and\n- documenting procedural outcome grades such as mTICI (valueCodeableConcept bound to MticiScoreVS).\n\nThis profile deliberately encodes the result as a CodeableConcept to support categorical outcomes and interoperability. It does not replace Condition for asserting diagnoses; when a durable diagnosis is established (e.g., confirmed AF), represent it as a Condition and optionally link supporting Observations (screening results, monitoring runs) using hasMember, derivedFrom, or Provenance.",
+  "description" : "Profile for recording discrete, coded stroke-related findings and assessment outcomes that do not fit naturally into vital-sign,\nfunctional-score, or timing-metric profiles.\n\n**Primary use-cases**\n1) AF/flutter assessment status:\n   - `Observation.code` uses a disorder concept as the finding focus (AF/flutter).\n   - `Observation.valueCodeableConcept` carries status (AfibFlutterStatusVS).\n2) Procedural outcome grade (mTICI):\n   - `Observation.code` uses the mTICI assessment concept (MTICICodeVS).\n   - `Observation.valueCodeableConcept` carries the score (MticiScoreVS).\n\n**Important modeling note**\n- This profile does not replace Condition for diagnoses.\n  Use Condition to assert durable diagnoses and link supporting Observations via `hasMember`, `derivedFrom`, or Provenance.",
   "fhirVersion" : "5.0.0",
   "mapping" : [
     {

@@ -228,12 +228,21 @@
   </table>
 
 <p>
-<p>This ValueSet defines the allowable Observation.code concepts for stroke functional and severity scoring instruments represented in this guide: modified Rankin Scale (mRS) and NIH Stroke Scale (NIHSS), expressed as SNOMED CT observable entities.</p>
-
-<p>It is intended to be bound to Observation.code in the FunctionalScoreObservationProfile. Downstream validation/invariants then enforce the appropriate datatype of Observation.value[x]:</p>
+<p>This ValueSet constrains <code class="language-plaintext highlighter-rouge">Observation.code</code> for functional outcome and severity instruments represented in this guide:</p>
 <ul>
-  <li>mRS is captured as a coded ordinal category (valueCodeableConcept bound to MRsScoreVS).</li>
-  <li>NIHSS is captured as a numeric total score (valueInteger), representing the summed NIHSS total rather than item-level subscores.</li>
+  <li>Modified Rankin Scale score (mRS)</li>
+  <li>NIH Stroke Scale total score (NIHSS)</li>
+</ul>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Bind to <code class="language-plaintext highlighter-rouge">Observation.code</code> in <code class="language-plaintext highlighter-rouge">FunctionalScoreObservationProfile</code>.</li>
+</ul>
+
+<p><strong>Datatype expectations enforced via invariants</strong></p>
+<ul>
+  <li>mRS: <code class="language-plaintext highlighter-rouge">Observation.valueCodeableConcept</code> bound to MRsScoreVS (ordinal categories 0–6).</li>
+  <li>NIHSS: <code class="language-plaintext highlighter-rouge">Observation.valueInteger</code> as total NIHSS score.</li>
 </ul>
 
 </p>
@@ -323,7 +332,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 11:36+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 12:37+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

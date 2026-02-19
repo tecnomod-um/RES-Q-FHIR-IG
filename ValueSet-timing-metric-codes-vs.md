@@ -12,8 +12,10 @@
 | Active as of 2026-02-19 | *Computable Name*:TimingMetricCodesVS |
 
  
-This ValueSet includes all timing metric codes defined in TimingMetricCodesCS for use as Observation.code when recording acute stroke process intervals (e.g., D2N, D2G). It supports required binding in the TimingMetricObservationProfile, ensuring only approved timing metrics are recorded. 
-The ValueSet is intentionally constrained to promote consistent, comparable reporting across implementations and to reduce ambiguity in downstream analytics. 
+This ValueSet includes all timing metric codes from TimingMetricCodesCS. 
+**Primary use-case** 
+* Required binding for `TimingMetricObservationProfile.code` to ensure only approved metrics are captured.
+ 
 
  **References** 
 
@@ -51,7 +53,7 @@ The ValueSet is intentionally constrained to promote consistent, comparable repo
   "name" : "TimingMetricCodesVS",
   "title" : "Stroke Timing Metric Codes ValueSet",
   "status" : "active",
-  "date" : "2026-02-19T11:36:03+00:00",
+  "date" : "2026-02-19T12:37:09+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -64,7 +66,7 @@ The ValueSet is intentionally constrained to promote consistent, comparable repo
       ]
     }
   ],
-  "description" : "This ValueSet includes all timing metric codes defined in TimingMetricCodesCS for use as Observation.code when recording acute stroke process intervals (e.g., D2N, D2G). It supports required binding in the TimingMetricObservationProfile, ensuring only approved timing metrics are recorded.\n\nThe ValueSet is intentionally constrained to promote consistent, comparable reporting across implementations and to reduce ambiguity in downstream analytics.",
+  "description" : "This ValueSet includes all timing metric codes from TimingMetricCodesCS.\n\n**Primary use-case**\n- Required binding for `TimingMetricObservationProfile.code` to ensure only approved metrics are captured.",
   "compose" : {
     "include" : [
       {

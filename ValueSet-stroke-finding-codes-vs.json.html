@@ -229,7 +229,7 @@
   "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.name">name</a>" : "StrokeFindingCodesVS",
   "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.title">title</a>" : "Specific Stroke Finding Codes ValueSet",
   "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.status">status</a>" : "active",
-  "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.date">date</a>" : "2026-02-19T11:36:03+00:00",
+  "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.date">date</a>" : "2026-02-19T12:37:09+00:00",
   "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.publisher">publisher</a>" : "UMU",
   "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.contact">contact</a>" : [
     {
@@ -242,7 +242,7 @@
       ]
     }
   ],
-  "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.description">description</a>" : "This ValueSet aggregates a small set of coded “finding/assessment concepts” used by the SpecificFindingObservationProfile for stroke-related documentation. It currently includes:\n- specific disorder concepts relevant to stroke workup (from SpecificFindingCodesVS), and\n- the mTICI assessment concept code (from MTICICodeVS).\n\nImplementer note: This ValueSet is used to constrain Observation.code. Where Observation.code is a disorder concept (e.g., AF disorder), the Observation instance should be interpreted as capturing an *assessment about that finding* (with the assessment result carried in Observation.valueCodeableConcept, per profile constraints). Where Observation.code is an assessment concept (e.g., mTICI), the Observation.valueCodeableConcept carries the corresponding score/result.",
+  "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.description">description</a>" : "This ValueSet aggregates coded Observation.code concepts used by `SpecificFindingObservationProfile`.\n\nIt currently includes:\n- Specific disorder concepts used as a finding focus (SpecificFindingCodesVS), and\n- The mTICI assessment concept (MTICICodeVS).\n\n**How to interpret usage**\n- If `Observation.code` is a disorder concept (e.g., AF), the Observation should be interpreted as an assessment about that finding,\n  with the result/status carried in `Observation.valueCodeableConcept` (e.g., AfibFlutterStatusVS).\n- If `Observation.code` is an assessment concept (e.g., mTICI), `Observation.valueCodeableConcept` carries the score (MticiScoreVS).",
   "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.compose">compose</a>" : {
     "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.compose.include">include</a>" : [
       {
@@ -281,7 +281,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 11:36+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 12:37+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

@@ -22,7 +22,7 @@
   fhir:title [ fhir:v "Modified Rankin Scale (mRS) Score ValueSet"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:experimental [ fhir:v true] ; # 
-  fhir:date [ fhir:v "2026-02-19T11:36:03+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-19T12:37:09+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;
@@ -31,7 +31,7 @@
        fhir:value [ fhir:v "http://tecnomod-um.org" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "This ValueSet includes all modified Rankin Scale (mRS) grades defined in the MRsScoreCS CodeSystem (0–6). It is intended to be bound to Observation.valueCodeableConcept when the Observation.code indicates that the observation represents an mRS score."] ; # 
+  fhir:description [ fhir:v "This ValueSet includes all mRS grades (0–6) defined in MRsScoreCS.\n\n**Primary use-case**\n- Bind to `Observation.valueCodeableConcept` when `Observation.code` indicates the Observation represents an mRS score."] ; # 
   fhir:compose [
      fhir:include ( [
        fhir:system [

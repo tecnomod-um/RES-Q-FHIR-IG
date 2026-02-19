@@ -229,7 +229,7 @@
   "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.name">name</a>" : "TimingMetricCodesCS",
   "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.title">title</a>" : "Stroke Timing Metric Codes CodeSystem",
   "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.status">status</a>" : "active",
-  "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.date">date</a>" : "2026-02-19T11:36:03+00:00",
+  "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.date">date</a>" : "2026-02-19T12:37:09+00:00",
   "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.publisher">publisher</a>" : "UMU",
   "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.contact">contact</a>" : [
     {
@@ -242,7 +242,7 @@
       ]
     }
   ],
-  "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.description">description</a>" : "This CodeSystem defines codes for key time-interval process metrics in acute stroke care used for quality monitoring and pathway optimization. Each code represents a duration measured in minutes between two clinically meaningful events (e.g., hospital arrival to thrombolysis start).\n\nThese metrics are commonly used in performance dashboards, registry submissions, and quality improvement programs. The intent is to store the *measured interval* (a duration) in Observation.valueQuantity (UCUM minutes), while event timestamps (arrival time, needle time, groin puncture time) may be stored separately when available.",
+  "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.description">description</a>" : "This CodeSystem defines codes for key **time-interval process metrics** in acute stroke care.\nEach code represents a duration measured between two clinically meaningful events (e.g., arrival to thrombolysis start).\n\n**Primary use-case**\n- Use as `Observation.code` in `TimingMetricObservationProfile`.\n- Store the measured interval in `Observation.valueQuantity` with UCUM minutes (`min`).",
   "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.content">content</a>" : "complete",
   "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.count">count</a>" : 2,
   "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.concept">concept</a>" : [
@@ -281,7 +281,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 11:36+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 12:37+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

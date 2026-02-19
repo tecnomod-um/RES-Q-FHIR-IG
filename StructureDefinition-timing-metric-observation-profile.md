@@ -12,9 +12,15 @@
 | Draft as of 2026-02-19 | *Computable Name*:TimingMetricObservationProfile |
 
  
-Profile for recording acute stroke process timing metrics as measured durations (e.g., Door-to-Needle, Door-to-Groin). Observation.code is bound to TimingMetricCodesVS, and Observation.valueQuantity represents the elapsed time as a duration in UCUM minutes. 
-This representation is optimized for quality monitoring and analytics, where the interval value is the primary datum. The profile allows hasMember references to associate related sub-metrics or supporting Observations when a composite metric is derived from multiple recorded steps. 
-Scope note: This profile records the interval value; it does not require recording the underlying event timestamps. If timestamp provenance is needed, implementers should capture the source event times separately (e.g., additional Observations or extensions) to support auditing and cross-site comparability. 
+Profile for recording acute stroke process timing metrics as measured durations (e.g., Door-to-Needle, Door-to-Groin). 
+**Primary use-case** 
+* Quality monitoring and pathway optimization where the interval value is the primary datum.
+ 
+**Representation** 
+* `Observation.code` bound to TimingMetricCodesVS.
+* `Observation.valueQuantity` as UCUM minutes (`min`).
+ 
+**Typical scenarios** 1) A Door-to-Needle time of 45 minutes would be represented as an Observation with `code` = D2N code, `valueQuantity` = 45, `valueQuantity.unit` = "minute", and the appropriate UCUM system/code. 2) A Door-to-Groin time of 90 minutes would be represented similarly with `code` = D2G code and `valueQuantity` = 90. 
 
 **Usages:**
 
@@ -43,7 +49,7 @@ Other representations of profile: [CSV](StructureDefinition-timing-metric-observ
   "name" : "TimingMetricObservationProfile",
   "title" : "Stroke Timing Metric Observation Profile (R5)",
   "status" : "draft",
-  "date" : "2026-02-19T11:36:03+00:00",
+  "date" : "2026-02-19T12:37:09+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -56,7 +62,7 @@ Other representations of profile: [CSV](StructureDefinition-timing-metric-observ
       ]
     }
   ],
-  "description" : "Profile for recording acute stroke process timing metrics as measured durations (e.g., Door-to-Needle, Door-to-Groin). Observation.code is bound to TimingMetricCodesVS, and Observation.valueQuantity represents the elapsed time as a duration in UCUM minutes.\n\nThis representation is optimized for quality monitoring and analytics, where the interval value is the primary datum. The profile allows hasMember references to associate related sub-metrics or supporting Observations when a composite metric is derived from multiple recorded steps.\n\nScope note: This profile records the interval value; it does not require recording the underlying event timestamps. If timestamp provenance is needed, implementers should capture the source event times separately (e.g., additional Observations or extensions) to support auditing and cross-site comparability.",
+  "description" : "Profile for recording acute stroke process timing metrics as measured durations (e.g., Door-to-Needle, Door-to-Groin).\n\n**Primary use-case**\n- Quality monitoring and pathway optimization where the interval value is the primary datum.\n\n**Representation**\n- `Observation.code` bound to TimingMetricCodesVS.\n- `Observation.valueQuantity` as UCUM minutes (`min`).\n\n**Typical scenarios**\n1) A Door-to-Needle time of 45 minutes would be represented as an Observation with `code` = D2N code, `valueQuantity` = 45, `valueQuantity.unit` = \"minute\", and the appropriate UCUM system/code.\n2) A Door-to-Groin time of 90 minutes would be represented similarly with `code` = D2G code and `valueQuantity` = 90.\n",
   "fhirVersion" : "5.0.0",
   "mapping" : [
     {

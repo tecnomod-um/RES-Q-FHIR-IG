@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "FunctionalScoreCodesVS"] ; # 
   fhir:title [ fhir:v "Stroke Functional Score Codes ValueSet"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-02-19T11:36:03+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-19T12:37:09+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;
@@ -30,7 +30,7 @@
        fhir:value [ fhir:v "http://tecnomod-um.org" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "This ValueSet defines the allowable Observation.code concepts for stroke functional and severity scoring instruments represented in this guide: modified Rankin Scale (mRS) and NIH Stroke Scale (NIHSS), expressed as SNOMED CT observable entities.\n\nIt is intended to be bound to Observation.code in the FunctionalScoreObservationProfile. Downstream validation/invariants then enforce the appropriate datatype of Observation.value[x]:\n- mRS is captured as a coded ordinal category (valueCodeableConcept bound to MRsScoreVS).\n- NIHSS is captured as a numeric total score (valueInteger), representing the summed NIHSS total rather than item-level subscores."] ; # 
+  fhir:description [ fhir:v "This ValueSet constrains `Observation.code` for functional outcome and severity instruments represented in this guide:\n- Modified Rankin Scale score (mRS)\n- NIH Stroke Scale total score (NIHSS)\n\n**Primary use-case**\n- Bind to `Observation.code` in `FunctionalScoreObservationProfile`.\n\n**Datatype expectations enforced via invariants**\n- mRS: `Observation.valueCodeableConcept` bound to MRsScoreVS (ordinal categories 0–6).\n- NIHSS: `Observation.valueInteger` as total NIHSS score."] ; # 
   fhir:compose [
      fhir:include ( [
        fhir:system [

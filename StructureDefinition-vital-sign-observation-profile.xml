@@ -26,7 +26,7 @@
   <name value="VitalSignObservationProfile"/>
   <title value="Stroke Vital Sign Observation Profile"/>
   <status value="draft"/>
-  <date value="2026-02-19T11:36:03+00:00"/>
+  <date value="2026-02-19T12:37:09+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>
@@ -35,7 +35,7 @@
       <value value="http://tecnomod-um.org"/>
     </telecom>
   </contact>
-  <description value="Profile for recording key blood pressure vital signs in stroke patients using a single Observation with components. The Observation is categorized as vital-signs and uses component slices for systolic and diastolic blood pressure, each represented as a Quantity in UCUM mm[Hg].&#xA;&#xA;This profile supports repeated measurements over time by recording separate Observations at different effective[x] timestamps (e.g., arrival, post-thrombolysis monitoring, ICU). It intentionally does not model measurement conditions such as body position, cuff site, or device; such details may be captured via Observation.method, device references, or additional extensions if required by local workflows."/>
+  <description value="Profile for recording blood pressure vital signs in stroke patients using a single Observation with components.&#xA;The Observation is categorized as `vital-signs` and uses component entries for systolic and diastolic blood pressure.&#xA;&#xA;**Primary use-case**&#xA;- Record repeated BP measurements across the episode (arrival, post-thrombolysis monitoring, ICU) by creating multiple Observations with different `effective[x]`.&#xA;&#xA;**Representation**&#xA;- `Observation.component.code` bound to VitalSignCodesVS.&#xA;- `Observation.component.valueQuantity` in UCUM mm[Hg].&#xA;&#xA;**Typical scenarios**&#xA;1) One Observation with two components (systolic and diastolic) recorded at the same timepoint.&#xA;2) Multiple Observations over time, each with the same component structure, to track BP trends during acute management and monitoring."/>
   <fhirVersion value="5.0.0"/>
   <mapping>
     <identity value="workflow"/>

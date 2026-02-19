@@ -5,7 +5,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>MTICI Score Code System - JSON Representation -  v0.1.0</title>
+    <title>Modified Treatment in Cerebral Infarction Grade Score CodeSystem - JSON Representation -  v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -133,7 +133,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>MTICI Score Code System</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Modified Treatment in Cerebral Infarction Grade Score CodeSystem</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -192,7 +192,7 @@
 <a name="root"> </a>
 
 
-<h2 id="root">: MTICI Score Code System - JSON Representation</h2>
+<h2 id="root">: Modified Treatment in Cerebral Infarction Grade Score CodeSystem - JSON Representation</h2>
 
   <table class="colsd">
     <tr>
@@ -227,7 +227,7 @@
   "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.url">url</a>" : "http://tecnomod-um.org/CodeSystem/mtici-score-cs",
   "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.version">version</a>" : "0.1.0",
   "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.name">name</a>" : "MticiScoreCS",
-  "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.title">title</a>" : "MTICI Score Code System",
+  "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.title">title</a>" : "Modified Treatment in Cerebral Infarction Grade Score CodeSystem",
   "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.status">status</a>" : "draft",
   "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.experimental">experimental</a>" : true,
   "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.date">date</a>" : "2025-03-31",
@@ -243,7 +243,7 @@
       ]
     }
   ],
-  "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.description">description</a>" : "This CodeSystem defines codes for the modified Treatment in Cerebral Ischemia / modified Thrombolysis in Cerebral Infarction (mTICI) reperfusion grade. mTICI is an ordinal angiographic scale used to quantify the extent of antegrade reperfusion of the downstream ischemic territory after endovascular therapy for acute ischemic stroke (e.g., mechanical thrombectomy).\n\nThe scale ranges from 0 (no perfusion) to 3 (complete reperfusion), with 2a/2b/2c subgrades to distinguish partial, substantial, and near-complete reperfusion. These codes are intended for consistent, interoperable capture in HL7® FHIR® resources—most commonly Observation.valueCodeableConcept—supporting procedural documentation, registry submission, audit/quality improvement, and research.\n\nScope and modeling notes:\n- This CodeSystem represents the *final* angiographic reperfusion grade for the target downstream territory, typically assigned from the final post-procedural angiographic run (commonly DSA).\n- It does not encode target vessel location, imaging modality details, timestamps, technique/device, number of passes, collateral status, or adjudication process; those elements should be recorded separately (e.g., Procedure, ImagingStudy, Observation.method, extensions).\n- Any local definition of “successful reperfusion” (often operationalized as mTICI ≥ 2b, depending on protocol) should be implemented via ValueSets, rules, or reporting logic without altering code meanings.",
+  "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.description">description</a>" : "This CodeSystem defines the **modified Thrombolysis in Cerebral Infarction (mTICI)** reperfusion grade values.\nmTICI is an ordinal angiographic scale used to quantify the extent of reperfusion after endovascular therapy for acute ischemic stroke.\n\n**Primary use-case**\n- Use as the coded result in `Observation.valueCodeableConcept` (bound via MticiScoreVS) when recording the *final angiographic reperfusion grade*.\n\n**Modeling notes**\n- Represents the *final* reperfusion grade for the downstream ischemic territory (typically adjudicated from the final angiographic run).\n- Does not encode target vessel, device/technique, number of passes, timestamps, or adjudication workflow; capture those via Procedure, ImagingStudy, Observation.method, or additional Observations/Provenance.",
   "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.caseSensitive">caseSensitive</a>" : false,
   "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.content">content</a>" : "complete",
   "<a href="http://hl7.org/fhir/R5/codesystem.html#XCodeSystem.count">count</a>" : 6,
@@ -303,7 +303,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 11:36+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 12:37+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

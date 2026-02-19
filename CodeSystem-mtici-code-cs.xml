@@ -11,7 +11,7 @@
   <title value="Modified Thrombolysis in Cerebral Infarction Assessment CodeSystem"/>
   <status value="active"/>
   <experimental value="true"/>
-  <date value="2026-02-19T11:36:03+00:00"/>
+  <date value="2026-02-19T12:37:09+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>
@@ -20,7 +20,7 @@
       <value value="http://tecnomod-um.org"/>
     </telecom>
   </contact>
-  <description value="This CodeSystem defines the assessment concept code(s) used to indicate that an Observation is reporting an mTICI reperfusion grade. It is intentionally separated from the MticiScoreCS CodeSystem, which contains the actual mTICI grade values (0–3 with 2a/2b/2c).&#xA;&#xA;In practice:&#xA;- Observation.code identifies the *kind of measurement/assessment* (“mTICI reperfusion grade”).&#xA;- Observation.valueCodeableConcept carries the *result* (one of the mTICI grades from MticiScoreVS).&#xA;&#xA;This separation improves semantic clarity and supports consistent validation and analytics across systems."/>
+  <description value="This CodeSystem defines the *assessment concept code* used to indicate that an Observation is reporting an mTICI reperfusion grade.&#xA;&#xA;**Design pattern**&#xA;- `Observation.code` identifies the kind of assessment (“mTICI reperfusion grade”).&#xA;- `Observation.valueCodeableConcept` carries the result (one of the grades in MticiScoreVS)."/>
   <caseSensitive value="false"/>
   <content value="complete"/>
   <count value="1"/>

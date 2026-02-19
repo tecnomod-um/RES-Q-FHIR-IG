@@ -12,7 +12,10 @@
 | Active as of 2026-02-19 | *Computable Name*:AssessmentContextVS |
 
  
-This ValueSet includes all context/timepoint codes defined in AssessmentContextCS. It is intended for required binding to elements (e.g., extensions) that must indicate the clinical phase of an assessment, enabling consistent stratification and reporting of outcomes and severity over the stroke care pathway. 
+This ValueSet includes all phase/context codes from AssessmentContextCS. 
+**Primary use-case** 
+* Required binding for elements that must indicate the clinical phase of an assessment (e.g., timing context extensions).
+ 
 
  **References** 
 
@@ -51,7 +54,7 @@ This ValueSet includes all context/timepoint codes defined in AssessmentContextC
   "title" : "Assessment Context ValueSet",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-19T11:36:03+00:00",
+  "date" : "2026-02-19T12:37:09+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -64,7 +67,7 @@ This ValueSet includes all context/timepoint codes defined in AssessmentContextC
       ]
     }
   ],
-  "description" : "This ValueSet includes all context/timepoint codes defined in AssessmentContextCS. It is intended for required binding to elements (e.g., extensions) that must indicate the clinical phase of an assessment, enabling consistent stratification and reporting of outcomes and severity over the stroke care pathway.",
+  "description" : "This ValueSet includes all phase/context codes from AssessmentContextCS.\n\n**Primary use-case**\n- Required binding for elements that must indicate the clinical phase of an assessment (e.g., timing context extensions).",
   "compose" : {
     "include" : [
       {

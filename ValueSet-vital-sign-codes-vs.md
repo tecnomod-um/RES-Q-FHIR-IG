@@ -12,8 +12,17 @@
 | Active as of 2026-02-19 | *Computable Name*:VitalSignCodesVS |
 
  
-This ValueSet defines SNOMED CT observable-entity codes for the blood pressure components captured as vital signs in the acute stroke setting (systolic and diastolic blood pressure). It is intended for use as Observation.component.code in a single vital-sign Observation that records both components using UCUM units (mm[Hg]). 
-Including only the component codes (rather than full LOINC panels) keeps the representation lightweight while remaining semantically precise, and supports repeated measurements across time (e.g., triage, post-thrombolysis monitoring) by repeating the Observation with different effective[x] timestamps. 
+This ValueSet defines SNOMED CT observable-entity codes for blood pressure components captured as vital signs: 
+* Systolic blood pressure
+* Diastolic blood pressure
+ 
+**Primary use-case** 
+* Bind to `Observation.component.code` in a single blood pressure Observation that records both components.
+ 
+**Implementation guidance** 
+* Use `Observation.component.valueQuantity` with UCUM `mm[Hg]`.
+* Repeat the Observation across time with different `effective[x]` timestamps for monitoring.
+ 
 
  **References** 
 
@@ -52,7 +61,7 @@ Including only the component codes (rather than full LOINC panels) keeps the rep
   "title" : "Stroke Vital Sign Codes ValueSet",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-19T11:36:03+00:00",
+  "date" : "2026-02-19T12:37:09+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -65,7 +74,7 @@ Including only the component codes (rather than full LOINC panels) keeps the rep
       ]
     }
   ],
-  "description" : "This ValueSet defines SNOMED CT observable-entity codes for the blood pressure components captured as vital signs in the acute stroke setting (systolic and diastolic blood pressure). It is intended for use as Observation.component.code in a single vital-sign Observation that records both components using UCUM units (mm[Hg]).\n\nIncluding only the component codes (rather than full LOINC panels) keeps the representation lightweight while remaining semantically precise, and supports repeated measurements across time (e.g., triage, post-thrombolysis monitoring) by repeating the Observation with different effective[x] timestamps.",
+  "description" : "This ValueSet defines SNOMED CT observable-entity codes for blood pressure components captured as vital signs:\n- Systolic blood pressure\n- Diastolic blood pressure\n\n**Primary use-case**\n- Bind to `Observation.component.code` in a single blood pressure Observation that records both components.\n\n**Implementation guidance**\n- Use `Observation.component.valueQuantity` with UCUM `mm[Hg]`.\n- Repeat the Observation across time with different `effective[x]` timestamps for monitoring.",
   "compose" : {
     "include" : [
       {

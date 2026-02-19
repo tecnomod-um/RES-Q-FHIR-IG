@@ -12,8 +12,10 @@
 | Active as of 2026-02-19 | *Computable Name*:StrokeCircumstanceCodesVS |
 
  
-This ValueSet includes all onset-circumstance codes defined in StrokeCircumstanceCodesCS for use in stroke documentation and analytics. It is intended to be bound to Observation.code in the StrokeCircumstanceObservationProfile, enabling consistent classification of onset scenarios such as in-hospital stroke and wake-up stroke. 
-Consistent coding supports cohort definition (e.g., wake-up stroke protocols), audit/quality reporting, and research where onset uncertainty is a key stratification variable. 
+This ValueSet includes all onset-circumstance codes from StrokeCircumstanceCodesCS. 
+**Primary use-case** 
+* Required binding for `StrokeCircumstanceObservationProfile.code`.
+ 
 
  **References** 
 
@@ -51,7 +53,7 @@ Consistent coding supports cohort definition (e.g., wake-up stroke protocols), a
   "name" : "StrokeCircumstanceCodesVS",
   "title" : "Stroke Circumstance Codes ValueSet",
   "status" : "active",
-  "date" : "2026-02-19T11:36:03+00:00",
+  "date" : "2026-02-19T12:37:09+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -64,7 +66,7 @@ Consistent coding supports cohort definition (e.g., wake-up stroke protocols), a
       ]
     }
   ],
-  "description" : "This ValueSet includes all onset-circumstance codes defined in StrokeCircumstanceCodesCS for use in stroke documentation and analytics. It is intended to be bound to Observation.code in the StrokeCircumstanceObservationProfile, enabling consistent classification of onset scenarios such as in-hospital stroke and wake-up stroke.\n\nConsistent coding supports cohort definition (e.g., wake-up stroke protocols), audit/quality reporting, and research where onset uncertainty is a key stratification variable.",
+  "description" : "This ValueSet includes all onset-circumstance codes from StrokeCircumstanceCodesCS.\n\n**Primary use-case**\n- Required binding for `StrokeCircumstanceObservationProfile.code`.",
   "compose" : {
     "include" : [
       {

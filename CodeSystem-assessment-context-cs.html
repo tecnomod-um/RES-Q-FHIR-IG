@@ -229,9 +229,24 @@
   </table>
 
 <p>
-<p>This CodeSystem defines normalized codes for the clinical context / relative timepoint at which a stroke-related assessment was performed. It is primarily used to contextualize functional and severity instruments (e.g., mRS and NIHSS) where interpretation depends on whether the score reflects baseline status, acute presentation, discharge status, or follow-up.</p>
+<p>This CodeSystem defines normalized codes for the <strong>clinical context / relative timepoint</strong> at which a stroke-related assessment is performed.
+It is primarily used to contextualize instruments whose interpretation depends on phase (e.g., mRS/NIHSS at baseline vs discharge vs follow-up).</p>
 
-<p>These codes represent <em>relative phases</em> (pre-stroke baseline, admission, discharge, ~3-month follow-up) rather than precise timestamps. The actual date/time of measurement should be recorded in Observation.effective[x] when known; the context code complements effective[x] by expressing the clinical phase, which is often necessary for reporting and comparability (e.g., “mRS pre-stroke” vs “mRS at discharge”).</p>
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Use as the value in <code class="language-plaintext highlighter-rouge">ObservationTimingContextExtension.valueCodeableConcept</code> to label the phase of an assessment.</li>
+</ul>
+
+<p><strong>How it complements effective[x]</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Observation.effective[x]</code> records the actual date/time (when known).</li>
+  <li>This CodeSystem records the standardized phase label used for reporting and comparability.</li>
+</ul>
+
+<p><strong>Why this is needed</strong></p>
+<ul>
+  <li>Many workflows report outcomes by phase even when the exact timestamp is unknown or operationally variable (“mRS at 90 days”).</li>
+</ul>
 
 </p>
 
@@ -290,7 +305,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 11:36+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 12:37+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

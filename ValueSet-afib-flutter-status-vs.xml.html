@@ -5,7 +5,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Atrial Fibrillation or Flutter Status ValueSet - XML Representation -  v0.1.0</title>
+    <title>Atrial Fibrillation / Flutter Assessment Status ValueSet - XML Representation -  v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -133,7 +133,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Atrial Fibrillation or Flutter Status ValueSet</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Atrial Fibrillation / Flutter Assessment Status ValueSet</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -192,7 +192,7 @@
 <a name="root"> </a>
 
 
-<h2 id="root">: Atrial Fibrillation or Flutter Status ValueSet - XML Representation</h2>
+<h2 id="root">: Atrial Fibrillation / Flutter Assessment Status ValueSet - XML Representation</h2>
 
   <table class="colsi">
     <tr>
@@ -227,7 +227,7 @@
   &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.url">url</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;http://tecnomod-um.org/ValueSet/afib-flutter-status-vs&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.version">version</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;0.1.0&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.name">name</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;AfibFlutterStatusVS&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.title">title</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Atrial Fibrillation or Flutter Status ValueSet&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.title">title</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Atrial Fibrillation / Flutter Assessment Status ValueSet&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.status">status</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.date">date</a> <a href="http://hl7.org/fhir/R5/datatypes.html#dateTime">value</a>=&quot;2025-03-31&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.publisher">publisher</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;UMU&quot;/&gt;
@@ -239,13 +239,15 @@
     &lt;/<a href="http://hl7.org/fhir/R5/metadatatypes.html#ContactDetail#XContactDetail.telecom">telecom</a>&gt;
   &lt;/<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.contact">contact</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.description">description</a>
-               <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;This ValueSet constrains the allowed coded outcomes for documenting the status of an atrial fibrillation (AF) / atrial flutter assessment within the stroke workflow. It is intentionally limited to SNOMED CT qualifier values that express the epistemic status of the finding: (1) known present, (2) known absent, or (3) unknown.
+               <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;This ValueSet constrains the allowable coded outcomes for documenting the **status of an AF/flutter assessment** within the stroke workflow.
 
-The ValueSet is designed to support harmonized recording across systems when AF/flutter materially influences ischemic stroke etiology workup, thromboembolic risk stratification, and downstream management decisions (e.g., anticoagulation). It is appropriate for use as Observation.valueCodeableConcept to represent the result of screening, monitoring, or review of prior documentation.
+**Primary use-case**
+- Bind to `Observation.valueCodeableConcept` in the `SpecificFindingObservationProfile` when `Observation.code` refers to AF/flutter as a finding focus.
+- Enables harmonized interpretation for analytics and decision support (e.g., anticoagulation pathway triggers) without forcing a Condition assertion.
 
-Scope and modeling notes:
-- The qualifier values do not encode the rhythm subtype, chronicity, burden, or method of detection (e.g., ECG vs telemetry); those aspects should be represented using additional elements (e.g., Observation.method, device data) or separate Observations/Conditions as appropriate.
-- The ValueSet represents “status of assessment” rather than the disorder concept itself; if the clinical intent is to assert a diagnosis of AF/flutter, use a Condition resource with an appropriate SNOMED CT disorder code instead of (or in addition to) this status.&quot;/&gt;
+**Scope and modeling notes**
+- This ValueSet expresses *assessment outcome/status* (detected/known/absent/not screened/unknown).
+- It does not replace Condition for diagnoses. When AF/flutter is confirmed as a diagnosis, represent it as a `Condition` with the appropriate SNOMED CT disorder code.&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.compose">compose</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.compose.include">include</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.compose.include.system">system</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;http://snomed.info/sct&quot;/&gt;
@@ -287,7 +289,7 @@ Scope and modeling notes:
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 11:36+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 12:37+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

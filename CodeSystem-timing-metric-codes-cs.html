@@ -229,9 +229,14 @@
   </table>
 
 <p>
-<p>This CodeSystem defines codes for key time-interval process metrics in acute stroke care used for quality monitoring and pathway optimization. Each code represents a duration measured in minutes between two clinically meaningful events (e.g., hospital arrival to thrombolysis start).</p>
+<p>This CodeSystem defines codes for key <strong>time-interval process metrics</strong> in acute stroke care.
+Each code represents a duration measured between two clinically meaningful events (e.g., arrival to thrombolysis start).</p>
 
-<p>These metrics are commonly used in performance dashboards, registry submissions, and quality improvement programs. The intent is to store the <em>measured interval</em> (a duration) in Observation.valueQuantity (UCUM minutes), while event timestamps (arrival time, needle time, groin puncture time) may be stored separately when available.</p>
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Use as <code class="language-plaintext highlighter-rouge">Observation.code</code> in <code class="language-plaintext highlighter-rouge">TimingMetricObservationProfile</code>.</li>
+  <li>Store the measured interval in <code class="language-plaintext highlighter-rouge">Observation.valueQuantity</code> with UCUM minutes (<code class="language-plaintext highlighter-rouge">min</code>).</li>
+</ul>
 
 </p>
 
@@ -284,7 +289,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 11:36+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 12:37+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

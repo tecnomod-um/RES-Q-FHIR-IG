@@ -11,7 +11,7 @@
   "title" : "Modified Rankin Scale (mRS) Score ValueSet",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-19T11:36:03+00:00",
+  "date" : "2026-02-19T12:37:09+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",
@@ -20,7 +20,7 @@
       "value" : "http://tecnomod-um.org"
     }]
   }],
-  "description" : "This ValueSet includes all modified Rankin Scale (mRS) grades defined in the MRsScoreCS CodeSystem (0–6). It is intended to be bound to Observation.valueCodeableConcept when the Observation.code indicates that the observation represents an mRS score.",
+  "description" : "This ValueSet includes all mRS grades (0–6) defined in MRsScoreCS.\n\n**Primary use-case**\n- Bind to `Observation.valueCodeableConcept` when `Observation.code` indicates the Observation represents an mRS score.",
   "compose" : {
     "include" : [{
       "system" : "http://tecnomod-um.org/CodeSystem/mrs-score-cs"

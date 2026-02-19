@@ -12,7 +12,10 @@
 | Active as of 2026-02-19 | *Computable Name*:MRsScoreVS |
 
  
-This ValueSet includes all modified Rankin Scale (mRS) grades defined in the MRsScoreCS CodeSystem (0–6). It is intended to be bound to Observation.valueCodeableConcept when the Observation.code indicates that the observation represents an mRS score. 
+This ValueSet includes all mRS grades (0–6) defined in MRsScoreCS. 
+**Primary use-case** 
+* Bind to `Observation.valueCodeableConcept` when `Observation.code` indicates the Observation represents an mRS score.
+ 
 
  **References** 
 
@@ -51,7 +54,7 @@ This ValueSet includes all modified Rankin Scale (mRS) grades defined in the MRs
   "title" : "Modified Rankin Scale (mRS) Score ValueSet",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-19T11:36:03+00:00",
+  "date" : "2026-02-19T12:37:09+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -64,7 +67,7 @@ This ValueSet includes all modified Rankin Scale (mRS) grades defined in the MRs
       ]
     }
   ],
-  "description" : "This ValueSet includes all modified Rankin Scale (mRS) grades defined in the MRsScoreCS CodeSystem (0–6). It is intended to be bound to Observation.valueCodeableConcept when the Observation.code indicates that the observation represents an mRS score.",
+  "description" : "This ValueSet includes all mRS grades (0–6) defined in MRsScoreCS.\n\n**Primary use-case**\n- Bind to `Observation.valueCodeableConcept` when `Observation.code` indicates the Observation represents an mRS score.",
   "compose" : {
     "include" : [
       {

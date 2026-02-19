@@ -22,7 +22,7 @@
   fhir:title [ fhir:v "Modified Thrombolysis in Cerebral Infarction Assessment CodeSystem"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:experimental [ fhir:v true] ; # 
-  fhir:date [ fhir:v "2026-02-19T11:36:03+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-19T12:37:09+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;
@@ -31,7 +31,7 @@
        fhir:value [ fhir:v "http://tecnomod-um.org" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "This CodeSystem defines the assessment concept code(s) used to indicate that an Observation is reporting an mTICI reperfusion grade. It is intentionally separated from the MticiScoreCS CodeSystem, which contains the actual mTICI grade values (0–3 with 2a/2b/2c).\n\nIn practice:\n- Observation.code identifies the *kind of measurement/assessment* (“mTICI reperfusion grade”).\n- Observation.valueCodeableConcept carries the *result* (one of the mTICI grades from MticiScoreVS).\n\nThis separation improves semantic clarity and supports consistent validation and analytics across systems."] ; # 
+  fhir:description [ fhir:v "This CodeSystem defines the *assessment concept code* used to indicate that an Observation is reporting an mTICI reperfusion grade.\n\n**Design pattern**\n- `Observation.code` identifies the kind of assessment (“mTICI reperfusion grade”).\n- `Observation.valueCodeableConcept` carries the result (one of the grades in MticiScoreVS)."] ; # 
   fhir:caseSensitive [ fhir:v false] ; # 
   fhir:content [ fhir:v "complete"] ; # 
   fhir:count [ fhir:v "1"^^xsd:nonNegativeInteger] ; # 

@@ -56,7 +56,7 @@ ValueSet defining allowed categories for swallowing screening timing, combining:
   "name" : "SwallowingScreeningTimingCategoryVS",
   "title" : "Swallowing Screening Timing Category ValueSet",
   "status" : "active",
-  "date" : "2026-02-19T11:36:03+00:00",
+  "date" : "2026-02-19T12:37:09+00:00",
   "publisher" : "UMU",
   "contact" : [
     {

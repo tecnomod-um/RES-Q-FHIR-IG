@@ -195,9 +195,18 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/age-at-onset-observation-profile">Age at Stroke Onset Observation Profile (R5)</a>
             </td>
             <td>
-<p>Profile for recording the patient’s age at the time of stroke onset as a simple integer value in years. The Observation.code is fixed to the SNOMED CT observable entity “Age at onset of clinical finding,” ensuring a clear and interoperable semantic meaning.</p>
+<p>Profile for recording the patient’s age at the time of stroke onset as an integer value in years.</p>
 
-<p>The age at onset may be derived from date of birth and an onset/reference timepoint (e.g., symptom onset, last known well, or discovery time depending on local policy). This profile records the resulting age value, not the derivation method; if the derivation is clinically important, implementers should capture the underlying reference timepoint(s) and provenance separately.</p>
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Provides a computable attribute commonly used in etiologic assessment, risk stratification, and registry datasets.</li>
+</ul>
+
+<p><strong>Modeling note</strong></p>
+<ul>
+  <li>The age may be derived from DOB and an onset reference (symptom onset, last-known-well, discovery time).
+This profile records the resulting age value, not the derivation method; capture provenance separately if needed.</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -206,14 +215,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/base-stroke-observation">Base Profile for Stroke-Related Observations</a>
             </td>
             <td>
-<p>Common constraints for Observations captured in the context of stroke care across acute management and follow-up. This profile establishes a consistent minimum dataset and reference structure so that downstream profiles (vital signs, functional scores, timing metrics, onset circumstances, and specific findings) behave uniformly across systems.</p>
+<p>Common constraints for Observations captured in the context of stroke care across acute management and follow-up.
+This base profile establishes a consistent minimum dataset and reference structure so specialized observation profiles behave uniformly.</p>
 
-<p>Key modeling intent:</p>
+<p><strong>Key modeling intent</strong></p>
 <ul>
-  <li>Observation.status is fixed to final to indicate recorded results suitable for clinical reporting and analytics.</li>
-  <li>Observation.subject (Patient) and Observation.encounter (index stroke encounter) are mandatory to ensure every observation is attributable to a specific person and care episode.</li>
-  <li>Observation.partOf optionally links the observation to a Procedure (e.g., mechanical thrombectomy) when the observation represents a procedural outcome (e.g., mTICI grade) or a process metric.</li>
-  <li>Observation.effective[x] is optional to accommodate cases where only a phase label is known; when available, effective[x] should be populated to support accurate sequencing and time-based analysis.</li>
+  <li><code class="language-plaintext highlighter-rouge">Observation.status</code> is fixed to <code class="language-plaintext highlighter-rouge">final</code> to represent finalized results suitable for reporting and analytics.</li>
+  <li><code class="language-plaintext highlighter-rouge">Observation.subject</code> (Patient) and <code class="language-plaintext highlighter-rouge">Observation.encounter</code> (index stroke encounter) are mandatory for attribution.</li>
+  <li><code class="language-plaintext highlighter-rouge">Observation.partOf</code> optionally links the Observation to a Procedure (e.g., thrombectomy) when the Observation represents a procedural outcome (e.g., mTICI).</li>
+  <li><code class="language-plaintext highlighter-rouge">Observation.effective[x]</code> is optional to support cases where only a phase label is known; populate when available for sequencing and analysis.</li>
 </ul>
 </td>
          </tr>
@@ -250,15 +260,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/specific-finding-observation-profile">Specific Stroke Finding Observation Profile (R5)</a>
             </td>
             <td>
-<p>Profile for recording discrete, coded stroke-related findings and assessment outcomes that do not fit naturally into the vital-sign, functional-score, or timing-metric profiles. Observation.code is constrained to StrokeFindingCodesVS, and Observation.valueCodeableConcept carries the corresponding assessment result or status.</p>
+<p>Profile for recording discrete, coded stroke-related findings and assessment outcomes that do not fit naturally into vital-sign,
+functional-score, or timing-metric profiles.</p>
 
-<p>Typical use cases include:</p>
+<p><strong>Primary use-cases</strong>
+1) AF/flutter assessment status:</p>
 <ul>
-  <li>documenting AF/flutter assessment status as present/absent/unknown (valueCodeableConcept bound to an AF/flutter status ValueSet), and</li>
-  <li>documenting procedural outcome grades such as mTICI (valueCodeableConcept bound to MticiScoreVS).</li>
+  <li><code class="language-plaintext highlighter-rouge">Observation.code</code> uses a disorder concept as the finding focus (AF/flutter).</li>
+  <li><code class="language-plaintext highlighter-rouge">Observation.valueCodeableConcept</code> carries status (AfibFlutterStatusVS).
+2) Procedural outcome grade (mTICI):</li>
+  <li><code class="language-plaintext highlighter-rouge">Observation.code</code> uses the mTICI assessment concept (MTICICodeVS).</li>
+  <li><code class="language-plaintext highlighter-rouge">Observation.valueCodeableConcept</code> carries the score (MticiScoreVS).</li>
 </ul>
 
-<p>This profile deliberately encodes the result as a CodeableConcept to support categorical outcomes and interoperability. It does not replace Condition for asserting diagnoses; when a durable diagnosis is established (e.g., confirmed AF), represent it as a Condition and optionally link supporting Observations (screening results, monitoring runs) using hasMember, derivedFrom, or Provenance.</p>
+<p><strong>Important modeling note</strong></p>
+<ul>
+  <li>This profile does not replace Condition for diagnoses.
+Use Condition to assert durable diagnoses and link supporting Observations via <code class="language-plaintext highlighter-rouge">hasMember</code>, <code class="language-plaintext highlighter-rouge">derivedFrom</code>, or Provenance.</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -316,9 +335,22 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/stroke-circumstance-observation-profile">Stroke Circumstance Observation Profile (R5)</a>
             </td>
             <td>
-<p>Profile for documenting clinically relevant circumstances of stroke symptom onset (e.g., wake-up stroke, in-hospital onset). The circumstance is represented by Observation.code (bound to StrokeCircumstanceCodesVS); the presence of the Observation asserts that the circumstance applies to the index event within the associated Encounter.</p>
+<p>Profile for documenting clinically relevant circumstances of stroke symptom onset (e.g., wake-up stroke, in-hospital onset).</p>
 
-<p>The profile supports linking supporting evidence via hasMember (e.g., Observations capturing last-known-well time, symptom discovery time, or other onset-related details) without overloading the circumstance code itself. This profile intentionally does not encode onset timestamps in the code; temporal details should be modeled separately for precision and auditability.</p>
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Capture onset circumstance classification for eligibility reasoning, protocol stratification, and reporting when onset time is uncertain.</li>
+</ul>
+
+<p><strong>Representation</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Observation.code</code> bound to StrokeCircumstanceCodesVS.</li>
+  <li>Presence of the Observation asserts the circumstance applies to the index stroke event (within the linked Encounter).</li>
+</ul>
+
+<p><strong>Typical scenarios</strong>
+1) A patient who wakes up with stroke symptoms would have an Observation with <code class="language-plaintext highlighter-rouge">code</code> = wake-up stroke code, linked to the index stroke Encounter, indicating that the stroke onset circumstance is a wake-up stroke.
+2) A patient who experiences stroke symptoms while already admitted for another reason would have an Observation with <code class="language-plaintext highlighter-rouge">code</code> = in-hospital stroke code, linked to the index stroke Encounter, indicating that the stroke onset circumstance is in-hospital onset.</p>
 </td>
          </tr>
          <tr>
@@ -345,15 +377,28 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/functional-score-observation-profile">Stroke Functional Score Observation Profile</a>
             </td>
             <td>
-<p>Profile for recording stroke functional outcome and severity scores, currently mRS and NIHSS, in a way that is both interoperable and context-aware. The profile requires a timing context extension (ObservationTimingContextExtension) to explicitly state the clinical phase (e.g., pre-stroke baseline, admission, discharge, ~3-month follow-up), enabling unambiguous interpretation and standardized reporting.</p>
+<p>Profile for recording stroke functional outcome and severity scores (currently mRS and NIHSS) in an interoperable, context-aware way.</p>
 
-<p>Observation.code is bound to FunctionalScoreCodesVS, and invariants constrain Observation.value[x] by instrument:</p>
+<p><strong>Primary use-case</strong></p>
 <ul>
-  <li>For mRS (SNOMED CT observable entity), the result is represented as a CodeableConcept bound to MRsScoreVS (ordinal categories 0–6).</li>
-  <li>For NIHSS (SNOMED CT observable entity), the result is represented as an integer total score (valueInteger), reflecting the overall NIHSS total rather than item-level subscores.</li>
+  <li>Capture outcomes by phase (baseline, admission, discharge, ~90-day follow-up) using a required timing context extension.</li>
 </ul>
 
-<p>The profile does not model itemized NIHSS components, assessor training, or interview method; implementers may represent those details separately when needed (e.g., additional Observations, extensions, or provenance).</p>
+<p><strong>Key constraints</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Observation.code</code> is bound to FunctionalScoreCodesVS (mRS or NIHSS).</li>
+  <li><code class="language-plaintext highlighter-rouge">extension[timingContext]</code> is mandatory to label the clinical phase.</li>
+  <li>Datatype and binding rules are enforced via invariants:
+    <ul>
+      <li>mRS → <code class="language-plaintext highlighter-rouge">valueCodeableConcept</code> bound to MRsScoreVS.</li>
+      <li>NIHSS → <code class="language-plaintext highlighter-rouge">valueInteger</code> as total NIHSS score.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Typical scenarios</strong>
+1) An mRS score assessed at discharge would have <code class="language-plaintext highlighter-rouge">Observation.code</code> = mRS code, <code class="language-plaintext highlighter-rouge">valueCodeableConcept</code> = mRS grade (0–6), and the timing context extension value = discharge.
+2) An NIHSS score assessed at admission would have <code class="language-plaintext highlighter-rouge">Observation.code</code> = NIHSS code, <code class="language-plaintext highlighter-rouge">valueInteger</code> = total NIHSS score, and the timing context extension value = admission.</p>
 </td>
          </tr>
          <tr>
@@ -432,11 +477,22 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/timing-metric-observation-profile">Stroke Timing Metric Observation Profile (R5)</a>
             </td>
             <td>
-<p>Profile for recording acute stroke process timing metrics as measured durations (e.g., Door-to-Needle, Door-to-Groin). Observation.code is bound to TimingMetricCodesVS, and Observation.valueQuantity represents the elapsed time as a duration in UCUM minutes.</p>
+<p>Profile for recording acute stroke process timing metrics as measured durations (e.g., Door-to-Needle, Door-to-Groin).</p>
 
-<p>This representation is optimized for quality monitoring and analytics, where the interval value is the primary datum. The profile allows hasMember references to associate related sub-metrics or supporting Observations when a composite metric is derived from multiple recorded steps.</p>
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Quality monitoring and pathway optimization where the interval value is the primary datum.</li>
+</ul>
 
-<p>Scope note: This profile records the interval value; it does not require recording the underlying event timestamps. If timestamp provenance is needed, implementers should capture the source event times separately (e.g., additional Observations or extensions) to support auditing and cross-site comparability.</p>
+<p><strong>Representation</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Observation.code</code> bound to TimingMetricCodesVS.</li>
+  <li><code class="language-plaintext highlighter-rouge">Observation.valueQuantity</code> as UCUM minutes (<code class="language-plaintext highlighter-rouge">min</code>).</li>
+</ul>
+
+<p><strong>Typical scenarios</strong>
+1) A Door-to-Needle time of 45 minutes would be represented as an Observation with <code class="language-plaintext highlighter-rouge">code</code> = D2N code, <code class="language-plaintext highlighter-rouge">valueQuantity</code> = 45, <code class="language-plaintext highlighter-rouge">valueQuantity.unit</code> = "minute", and the appropriate UCUM system/code.
+2) A Door-to-Groin time of 90 minutes would be represented similarly with <code class="language-plaintext highlighter-rouge">code</code> = D2G code and <code class="language-plaintext highlighter-rouge">valueQuantity</code> = 90.</p>
 </td>
          </tr>
          <tr>
@@ -445,9 +501,23 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/vital-sign-observation-profile">Stroke Vital Sign Observation Profile</a>
             </td>
             <td>
-<p>Profile for recording key blood pressure vital signs in stroke patients using a single Observation with components. The Observation is categorized as vital-signs and uses component slices for systolic and diastolic blood pressure, each represented as a Quantity in UCUM mm[Hg].</p>
+<p>Profile for recording blood pressure vital signs in stroke patients using a single Observation with components.
+The Observation is categorized as <code class="language-plaintext highlighter-rouge">vital-signs</code> and uses component entries for systolic and diastolic blood pressure.</p>
 
-<p>This profile supports repeated measurements over time by recording separate Observations at different effective[x] timestamps (e.g., arrival, post-thrombolysis monitoring, ICU). It intentionally does not model measurement conditions such as body position, cuff site, or device; such details may be captured via Observation.method, device references, or additional extensions if required by local workflows.</p>
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Record repeated BP measurements across the episode (arrival, post-thrombolysis monitoring, ICU) by creating multiple Observations with different <code class="language-plaintext highlighter-rouge">effective[x]</code>.</li>
+</ul>
+
+<p><strong>Representation</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Observation.component.code</code> bound to VitalSignCodesVS.</li>
+  <li><code class="language-plaintext highlighter-rouge">Observation.component.valueQuantity</code> in UCUM mm[Hg].</li>
+</ul>
+
+<p><strong>Typical scenarios</strong>
+1) One Observation with two components (systolic and diastolic) recorded at the same timepoint.
+2) Multiple Observations over time, each with the same component structure, to track BP trends during acute management and monitoring.</p>
 </td>
          </tr>
       </tbody>
@@ -518,15 +588,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/observation-timing-context-ext">Observation Timing Context Extension</a>
             </td>
             <td>
-<p>This extension captures the clinical timing context (relative phase) in which an observation or assessment was made (e.g., pre-stroke baseline, admission, discharge, ~3-month follow-up). It is particularly important for functional outcomes and severity scores whose interpretation depends on <em>when</em> they were assessed.</p>
+<p>This extension captures the <strong>clinical timing context (phase)</strong> in which an observation or assessment was made
+(e.g., pre-stroke baseline, admission, discharge, ~3-month follow-up).</p>
 
-<p>The extension complements Observation.effective[x]:</p>
+<p><strong>Primary use-case</strong></p>
 <ul>
-  <li>effective[x] records the actual date/time (when known),</li>
-  <li>this extension records the standardized phase label used for reporting and comparability across sites.</li>
+  <li>Required for functional outcomes and severity scores whose interpretation depends on <em>when</em> the score was assessed.</li>
 </ul>
 
-<p>The value is a required CodeableConcept bound to AssessmentContextVS (required), ensuring only supported timing contexts are used in this implementation guide.</p>
+<p><strong>How it complements Observation.effective[x]</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">effective[x]</code> records the actual measurement date/time (when known),</li>
+  <li>This extension records the standardized phase label used for reporting and cross-site comparability.</li>
+</ul>
+
+<p><strong>Binding</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">valueCodeableConcept</code> is bound (required) to AssessmentContextVS.</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -623,23 +702,32 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="ValueSet/assessment-context-vs">Assessment Context ValueSet</a>
             </td>
             <td>
-<p>This ValueSet includes all context/timepoint codes defined in AssessmentContextCS. It is intended for required binding to elements (e.g., extensions) that must indicate the clinical phase of an assessment, enabling consistent stratification and reporting of outcomes and severity over the stroke care pathway.</p>
+<p>This ValueSet includes all phase/context codes from AssessmentContextCS.</p>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Required binding for elements that must indicate the clinical phase of an assessment (e.g., timing context extensions).</li>
+</ul>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
                <a href="ValueSet-afib-flutter-status-vs.html"
-                  title="ValueSet/afib-flutter-status-vs">Atrial Fibrillation or Flutter Status ValueSet</a>
+                  title="ValueSet/afib-flutter-status-vs">Atrial Fibrillation / Flutter Assessment Status ValueSet</a>
             </td>
             <td>
-<p>This ValueSet constrains the allowed coded outcomes for documenting the status of an atrial fibrillation (AF) / atrial flutter assessment within the stroke workflow. It is intentionally limited to SNOMED CT qualifier values that express the epistemic status of the finding: (1) known present, (2) known absent, or (3) unknown.</p>
+<p>This ValueSet constrains the allowable coded outcomes for documenting the <strong>status of an AF/flutter assessment</strong> within the stroke workflow.</p>
 
-<p>The ValueSet is designed to support harmonized recording across systems when AF/flutter materially influences ischemic stroke etiology workup, thromboembolic risk stratification, and downstream management decisions (e.g., anticoagulation). It is appropriate for use as Observation.valueCodeableConcept to represent the result of screening, monitoring, or review of prior documentation.</p>
-
-<p>Scope and modeling notes:</p>
+<p><strong>Primary use-case</strong></p>
 <ul>
-  <li>The qualifier values do not encode the rhythm subtype, chronicity, burden, or method of detection (e.g., ECG vs telemetry); those aspects should be represented using additional elements (e.g., Observation.method, device data) or separate Observations/Conditions as appropriate.</li>
-  <li>The ValueSet represents “status of assessment” rather than the disorder concept itself; if the clinical intent is to assert a diagnosis of AF/flutter, use a Condition resource with an appropriate SNOMED CT disorder code instead of (or in addition to) this status.</li>
+  <li>Bind to <code class="language-plaintext highlighter-rouge">Observation.valueCodeableConcept</code> in the <code class="language-plaintext highlighter-rouge">SpecificFindingObservationProfile</code> when <code class="language-plaintext highlighter-rouge">Observation.code</code> refers to AF/flutter as a finding focus.</li>
+  <li>Enables harmonized interpretation for analytics and decision support (e.g., anticoagulation pathway triggers) without forcing a Condition assertion.</li>
+</ul>
+
+<p><strong>Scope and modeling notes</strong></p>
+<ul>
+  <li>This ValueSet expresses <em>assessment outcome/status</em> (detected/known/absent/not screened/unknown).</li>
+  <li>It does not replace Condition for diagnoses. When AF/flutter is confirmed as a diagnosis, represent it as a <code class="language-plaintext highlighter-rouge">Condition</code> with the appropriate SNOMED CT disorder code.</li>
 </ul>
 </td>
          </tr>
@@ -712,23 +800,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="ValueSet-mtici-score-vs.html" title="ValueSet/mtici-score-vs">MTICI Score ValueSet</a>
-            </td>
-            <td>
-<p>This ValueSet enumerates all allowable mTICI reperfusion grades (0, 1, 2a, 2b, 2c, 3) from the MticiScoreCS CodeSystem. It is intended to be bound (typically as required) to Observation.valueCodeableConcept when recording the final angiographic reperfusion outcome after endovascular therapy for acute ischemic stroke.</p>
-
-<p>Using a dedicated ValueSet ensures:</p>
-<ul>
-  <li>consistent coding across implementations and sites,</li>
-  <li>reliable downstream interpretation for analytics/registry submission, and</li>
-  <li>clear separation between the <em>assessment concept</em> (e.g., “mTICI reperfusion grade”) and the <em>assessment result</em> (the specific grade).</li>
-</ul>
-
-<p>This ValueSet does not convey timing, vessel location, modality, or technique; those must be represented elsewhere in the clinical model.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
                <a href="ValueSet-medication-vs.html" title="ValueSet/medication-vs">Medications ValueSet</a>
             </td>
             <td>
@@ -740,7 +811,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                <a href="ValueSet-mrs-score-vs.html" title="ValueSet/mrs-score-vs">Modified Rankin Scale (mRS) Score ValueSet</a>
             </td>
             <td>
-<p>This ValueSet includes all modified Rankin Scale (mRS) grades defined in the MRsScoreCS CodeSystem (0–6). It is intended to be bound to Observation.valueCodeableConcept when the Observation.code indicates that the observation represents an mRS score.</p>
+<p>This ValueSet includes all mRS grades (0–6) defined in MRsScoreCS.</p>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Bind to <code class="language-plaintext highlighter-rouge">Observation.valueCodeableConcept</code> when <code class="language-plaintext highlighter-rouge">Observation.code</code> indicates the Observation represents an mRS score.</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -748,9 +824,32 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                <a href="ValueSet-mtici-code-vs.html" title="ValueSet/mtici-code-vs">Modified Thrombolysis in Cerebral Infarction Assessment ValueSet</a>
             </td>
             <td>
-<p>This ValueSet includes the mTICI assessment concept code(s) from MTICICodeCS for use as Observation.code when recording an mTICI reperfusion grade. It is intended to be paired with a binding of Observation.valueCodeableConcept to MticiScoreVS.</p>
+<p>This ValueSet includes the mTICI assessment concept code(s) from MTICICodeCS.</p>
 
-<p>Separating the “assessment concept” ValueSet (this ValueSet) from the “assessment result” ValueSet (MticiScoreVS) enables clearer validation rules, consistent UI behavior, and safer reuse of the mTICI scoring system across profiles.</p>
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Bind to <code class="language-plaintext highlighter-rouge">Observation.code</code> when recording an mTICI reperfusion grade Observation.</li>
+  <li>Pair with <code class="language-plaintext highlighter-rouge">Observation.valueCodeableConcept</code> bound to MticiScoreVS.</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mtici-score-vs.html" title="ValueSet/mtici-score-vs">Modified Treatment in Cerebral Infarction Grade Score ValueSet</a>
+            </td>
+            <td>
+<p>This ValueSet enumerates all allowable Modified Treatment in Cerebral Infarction reperfusion grade values (0, 1, 2a, 2b, 2c, 3) from MticiScoreCS.</p>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Required binding to <code class="language-plaintext highlighter-rouge">Observation.valueCodeableConcept</code> when an Observation represents an mTICI grade outcome.</li>
+</ul>
+
+<p><strong>Why a dedicated ValueSet</strong></p>
+<ul>
+  <li>Ensures consistent coding across implementations and sites.</li>
+  <li>Enables reliable registry reporting, audit/quality measurement, and research analytics.</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -786,9 +885,23 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="ValueSet/specific-finding-codes-vs">Specific Stroke Finding Codes ValueSet</a>
             </td>
             <td>
-<p>This ValueSet provides SNOMED CT disorder concepts for specific clinically relevant findings often referenced in the stroke workup, currently limited to atrial fibrillation and atrial flutter disorders.</p>
+<p>This ValueSet provides SNOMED CT disorder concepts for specific findings referenced in the stroke workup.
+Currently includes:</p>
+<ul>
+  <li>Atrial fibrillation (disorder)</li>
+  <li>Atrial flutter (disorder)</li>
+</ul>
 
-<p>These codes are suitable when the intent is to reference the disorder concepts themselves (e.g., as a focus finding or a coded problem). When the intent is to capture the <em>status of an assessment</em> (present/absent/unknown) rather than assert a diagnosis, implementers should use an Observation with a dedicated assessment concept as Observation.code and bind Observation.valueCodeableConcept to an appropriate status ValueSet (e.g., AfibFlutterStatusVS).</p>
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Constrain <code class="language-plaintext highlighter-rouge">Observation.code</code> (as a <em>finding focus</em>) when using <code class="language-plaintext highlighter-rouge">SpecificFindingObservationProfile</code>.</li>
+</ul>
+
+<p><strong>Important modeling note</strong></p>
+<ul>
+  <li>Using a disorder concept in <code class="language-plaintext highlighter-rouge">Observation.code</code> here does not necessarily assert a diagnosis; the diagnosis should be modeled as a Condition.</li>
+  <li>The Observation can be interpreted as “assessment about this finding,” with the result in <code class="language-plaintext highlighter-rouge">Observation.valueCodeableConcept</code> (e.g., AF status).</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -797,13 +910,20 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="ValueSet/stroke-finding-codes-vs">Specific Stroke Finding Codes ValueSet</a>
             </td>
             <td>
-<p>This ValueSet aggregates a small set of coded “finding/assessment concepts” used by the SpecificFindingObservationProfile for stroke-related documentation. It currently includes:</p>
+<p>This ValueSet aggregates coded Observation.code concepts used by <code class="language-plaintext highlighter-rouge">SpecificFindingObservationProfile</code>.</p>
+
+<p>It currently includes:</p>
 <ul>
-  <li>specific disorder concepts relevant to stroke workup (from SpecificFindingCodesVS), and</li>
-  <li>the mTICI assessment concept code (from MTICICodeVS).</li>
+  <li>Specific disorder concepts used as a finding focus (SpecificFindingCodesVS), and</li>
+  <li>The mTICI assessment concept (MTICICodeVS).</li>
 </ul>
 
-<p>Implementer note: This ValueSet is used to constrain Observation.code. Where Observation.code is a disorder concept (e.g., AF disorder), the Observation instance should be interpreted as capturing an <em>assessment about that finding</em> (with the assessment result carried in Observation.valueCodeableConcept, per profile constraints). Where Observation.code is an assessment concept (e.g., mTICI), the Observation.valueCodeableConcept carries the corresponding score/result.</p>
+<p><strong>How to interpret usage</strong></p>
+<ul>
+  <li>If <code class="language-plaintext highlighter-rouge">Observation.code</code> is a disorder concept (e.g., AF), the Observation should be interpreted as an assessment about that finding,
+with the result/status carried in <code class="language-plaintext highlighter-rouge">Observation.valueCodeableConcept</code> (e.g., AfibFlutterStatusVS).</li>
+  <li>If <code class="language-plaintext highlighter-rouge">Observation.code</code> is an assessment concept (e.g., mTICI), <code class="language-plaintext highlighter-rouge">Observation.valueCodeableConcept</code> carries the score (MticiScoreVS).</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -821,9 +941,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="ValueSet/stroke-circumstance-codes-vs">Stroke Circumstance Codes ValueSet</a>
             </td>
             <td>
-<p>This ValueSet includes all onset-circumstance codes defined in StrokeCircumstanceCodesCS for use in stroke documentation and analytics. It is intended to be bound to Observation.code in the StrokeCircumstanceObservationProfile, enabling consistent classification of onset scenarios such as in-hospital stroke and wake-up stroke.</p>
+<p>This ValueSet includes all onset-circumstance codes from StrokeCircumstanceCodesCS.</p>
 
-<p>Consistent coding supports cohort definition (e.g., wake-up stroke protocols), audit/quality reporting, and research where onset uncertainty is a key stratification variable.</p>
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Required binding for <code class="language-plaintext highlighter-rouge">StrokeCircumstanceObservationProfile.code</code>.</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -859,12 +982,21 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="ValueSet/functional-score-codes-vs">Stroke Functional Score Codes ValueSet</a>
             </td>
             <td>
-<p>This ValueSet defines the allowable Observation.code concepts for stroke functional and severity scoring instruments represented in this guide: modified Rankin Scale (mRS) and NIH Stroke Scale (NIHSS), expressed as SNOMED CT observable entities.</p>
-
-<p>It is intended to be bound to Observation.code in the FunctionalScoreObservationProfile. Downstream validation/invariants then enforce the appropriate datatype of Observation.value[x]:</p>
+<p>This ValueSet constrains <code class="language-plaintext highlighter-rouge">Observation.code</code> for functional outcome and severity instruments represented in this guide:</p>
 <ul>
-  <li>mRS is captured as a coded ordinal category (valueCodeableConcept bound to MRsScoreVS).</li>
-  <li>NIHSS is captured as a numeric total score (valueInteger), representing the summed NIHSS total rather than item-level subscores.</li>
+  <li>Modified Rankin Scale score (mRS)</li>
+  <li>NIH Stroke Scale total score (NIHSS)</li>
+</ul>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Bind to <code class="language-plaintext highlighter-rouge">Observation.code</code> in <code class="language-plaintext highlighter-rouge">FunctionalScoreObservationProfile</code>.</li>
+</ul>
+
+<p><strong>Datatype expectations enforced via invariants</strong></p>
+<ul>
+  <li>mRS: <code class="language-plaintext highlighter-rouge">Observation.valueCodeableConcept</code> bound to MRsScoreVS (ordinal categories 0–6).</li>
+  <li>NIHSS: <code class="language-plaintext highlighter-rouge">Observation.valueInteger</code> as total NIHSS score.</li>
 </ul>
 </td>
          </tr>
@@ -892,9 +1024,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="ValueSet/timing-metric-codes-vs">Stroke Timing Metric Codes ValueSet</a>
             </td>
             <td>
-<p>This ValueSet includes all timing metric codes defined in TimingMetricCodesCS for use as Observation.code when recording acute stroke process intervals (e.g., D2N, D2G). It supports required binding in the TimingMetricObservationProfile, ensuring only approved timing metrics are recorded.</p>
+<p>This ValueSet includes all timing metric codes from TimingMetricCodesCS.</p>
 
-<p>The ValueSet is intentionally constrained to promote consistent, comparable reporting across implementations and to reduce ambiguity in downstream analytics.</p>
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Required binding for <code class="language-plaintext highlighter-rouge">TimingMetricObservationProfile.code</code> to ensure only approved metrics are captured.</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -903,9 +1038,22 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="ValueSet/vital-sign-codes-vs">Stroke Vital Sign Codes ValueSet</a>
             </td>
             <td>
-<p>This ValueSet defines SNOMED CT observable-entity codes for the blood pressure components captured as vital signs in the acute stroke setting (systolic and diastolic blood pressure). It is intended for use as Observation.component.code in a single vital-sign Observation that records both components using UCUM units (mm[Hg]).</p>
+<p>This ValueSet defines SNOMED CT observable-entity codes for blood pressure components captured as vital signs:</p>
+<ul>
+  <li>Systolic blood pressure</li>
+  <li>Diastolic blood pressure</li>
+</ul>
 
-<p>Including only the component codes (rather than full LOINC panels) keeps the representation lightweight while remaining semantically precise, and supports repeated measurements across time (e.g., triage, post-thrombolysis monitoring) by repeating the Observation with different effective[x] timestamps.</p>
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Bind to <code class="language-plaintext highlighter-rouge">Observation.component.code</code> in a single blood pressure Observation that records both components.</li>
+</ul>
+
+<p><strong>Implementation guidance</strong></p>
+<ul>
+  <li>Use <code class="language-plaintext highlighter-rouge">Observation.component.valueQuantity</code> with UCUM <code class="language-plaintext highlighter-rouge">mm[Hg]</code>.</li>
+  <li>Repeat the Observation across time with different <code class="language-plaintext highlighter-rouge">effective[x]</code> timestamps for monitoring.</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -968,9 +1116,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="CodeSystem/assessment-context-cs">Assessment Context Code System</a>
             </td>
             <td>
-<p>This CodeSystem defines normalized codes for the clinical context / relative timepoint at which a stroke-related assessment was performed. It is primarily used to contextualize functional and severity instruments (e.g., mRS and NIHSS) where interpretation depends on whether the score reflects baseline status, acute presentation, discharge status, or follow-up.</p>
+<p>This CodeSystem defines normalized codes for the <strong>clinical context / relative timepoint</strong> at which a stroke-related assessment is performed.
+It is primarily used to contextualize instruments whose interpretation depends on phase (e.g., mRS/NIHSS at baseline vs discharge vs follow-up).</p>
 
-<p>These codes represent <em>relative phases</em> (pre-stroke baseline, admission, discharge, ~3-month follow-up) rather than precise timestamps. The actual date/time of measurement should be recorded in Observation.effective[x] when known; the context code complements effective[x] by expressing the clinical phase, which is often necessary for reporting and comparability (e.g., “mRS pre-stroke” vs “mRS at discharge”).</p>
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Use as the value in <code class="language-plaintext highlighter-rouge">ObservationTimingContextExtension.valueCodeableConcept</code> to label the phase of an assessment.</li>
+</ul>
+
+<p><strong>How it complements effective[x]</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Observation.effective[x]</code> records the actual date/time (when known).</li>
+  <li>This CodeSystem records the standardized phase label used for reporting and comparability.</li>
+</ul>
+
+<p><strong>Why this is needed</strong></p>
+<ul>
+  <li>Many workflows report outcomes by phase even when the exact timestamp is unknown or operationally variable (“mRS at 90 days”).</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -1020,23 +1183,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="CodeSystem-mtici-score-cs.html" title="CodeSystem/mtici-score-cs">MTICI Score Code System</a>
-            </td>
-            <td>
-<p>This CodeSystem defines codes for the modified Treatment in Cerebral Ischemia / modified Thrombolysis in Cerebral Infarction (mTICI) reperfusion grade. mTICI is an ordinal angiographic scale used to quantify the extent of antegrade reperfusion of the downstream ischemic territory after endovascular therapy for acute ischemic stroke (e.g., mechanical thrombectomy).</p>
-
-<p>The scale ranges from 0 (no perfusion) to 3 (complete reperfusion), with 2a/2b/2c subgrades to distinguish partial, substantial, and near-complete reperfusion. These codes are intended for consistent, interoperable capture in HL7® FHIR® resources—most commonly Observation.valueCodeableConcept—supporting procedural documentation, registry submission, audit/quality improvement, and research.</p>
-
-<p>Scope and modeling notes:</p>
-<ul>
-  <li>This CodeSystem represents the <em>final</em> angiographic reperfusion grade for the target downstream territory, typically assigned from the final post-procedural angiographic run (commonly DSA).</li>
-  <li>It does not encode target vessel location, imaging modality details, timestamps, technique/device, number of passes, collateral status, or adjudication process; those elements should be recorded separately (e.g., Procedure, ImagingStudy, Observation.method, extensions).</li>
-  <li>Any local definition of “successful reperfusion” (often operationalized as mTICI ≥ 2b, depending on protocol) should be implemented via ValueSets, rules, or reporting logic without altering code meanings.</li>
-</ul>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
                <a href="CodeSystem-medication-cs.html" title="CodeSystem/medication-cs">Medications CodeSystem</a>
             </td>
             <td>
@@ -1048,14 +1194,19 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                <a href="CodeSystem-mrs-score-cs.html" title="CodeSystem/mrs-score-cs">Modified Rankin Scale Score Code System</a>
             </td>
             <td>
-<p>This CodeSystem defines codes for the modified Rankin Scale (mRS), an ordinal measure of global disability and functional outcome widely used in stroke care and research. mRS grades functional status from 0 (no symptoms) through 5 (severe disability), with 6 indicating death.</p>
+<p>This CodeSystem defines codes for the <strong>modified Rankin Scale (mRS)</strong>, an ordinal measure of global disability and functional outcome.
+Scores range from 0 (no symptoms) to 5 (severe disability), with 6 indicating death.</p>
 
-<p>Within this implementation guide, mRS is intended to be captured as Observation.valueCodeableConcept (bound to the MRsScoreVS ValueSet), with the assessment timepoint represented explicitly (e.g., via effective[x]) and/or via an assessment context indicator (e.g., pre-stroke baseline, discharge, ~90-day follow-up). This supports standard reporting (e.g., “mRS at 90 days”), comparability across sites, and consistent downstream analytics.</p>
-
-<p>Scope and modeling notes:</p>
+<p><strong>Primary use-case</strong></p>
 <ul>
-  <li>mRS is a coarse, global disability scale; it does not encode detailed domain-specific functional limitations (mobility, cognition, ADLs) which should be captured via additional instruments/Observations if required.</li>
-  <li>The CodeSystem defines only the <em>score</em>; method of ascertainment (in-person, telephone, structured interview) and assessor details should be captured separately when relevant.</li>
+  <li>Use as the coded result in <code class="language-plaintext highlighter-rouge">Observation.valueCodeableConcept</code> (bound via MRsScoreVS) when recording an mRS outcome.</li>
+</ul>
+
+<p><strong>Modeling notes</strong></p>
+<ul>
+  <li>mRS is a global disability scale and does not capture domain-specific limitations (mobility, ADLs, cognition).
+Capture those via additional instruments/Observations when needed.</li>
+  <li>Method of ascertainment and assessor details should be recorded separately (e.g., Observation.method, performer, Provenance).</li>
 </ul>
 </td>
          </tr>
@@ -1064,15 +1215,33 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                <a href="CodeSystem-mtici-code-cs.html" title="CodeSystem/mtici-code-cs">Modified Thrombolysis in Cerebral Infarction Assessment CodeSystem</a>
             </td>
             <td>
-<p>This CodeSystem defines the assessment concept code(s) used to indicate that an Observation is reporting an mTICI reperfusion grade. It is intentionally separated from the MticiScoreCS CodeSystem, which contains the actual mTICI grade values (0–3 with 2a/2b/2c).</p>
+<p>This CodeSystem defines the <em>assessment concept code</em> used to indicate that an Observation is reporting an mTICI reperfusion grade.</p>
 
-<p>In practice:</p>
+<p><strong>Design pattern</strong></p>
 <ul>
-  <li>Observation.code identifies the <em>kind of measurement/assessment</em> (“mTICI reperfusion grade”).</li>
-  <li>Observation.valueCodeableConcept carries the <em>result</em> (one of the mTICI grades from MticiScoreVS).</li>
+  <li><code class="language-plaintext highlighter-rouge">Observation.code</code> identifies the kind of assessment (“mTICI reperfusion grade”).</li>
+  <li><code class="language-plaintext highlighter-rouge">Observation.valueCodeableConcept</code> carries the result (one of the grades in MticiScoreVS).</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-mtici-score-cs.html" title="CodeSystem/mtici-score-cs">Modified Treatment in Cerebral Infarction Grade Score CodeSystem</a>
+            </td>
+            <td>
+<p>This CodeSystem defines the <strong>modified Thrombolysis in Cerebral Infarction (mTICI)</strong> reperfusion grade values.
+mTICI is an ordinal angiographic scale used to quantify the extent of reperfusion after endovascular therapy for acute ischemic stroke.</p>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Use as the coded result in <code class="language-plaintext highlighter-rouge">Observation.valueCodeableConcept</code> (bound via MticiScoreVS) when recording the <em>final angiographic reperfusion grade</em>.</li>
 </ul>
 
-<p>This separation improves semantic clarity and supports consistent validation and analytics across systems.</p>
+<p><strong>Modeling notes</strong></p>
+<ul>
+  <li>Represents the <em>final</em> reperfusion grade for the downstream ischemic territory (typically adjudicated from the final angiographic run).</li>
+  <li>Does not encode target vessel, device/technique, number of passes, timestamps, or adjudication workflow; capture those via Procedure, ImagingStudy, Observation.method, or additional Observations/Provenance.</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -1100,9 +1269,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="CodeSystem/stroke-circumstance-codes-cs">Stroke Circumstance Codes CodeSystem</a>
             </td>
             <td>
-<p>This CodeSystem defines coded circumstances related to stroke symptom onset that are clinically relevant for eligibility decisions, diagnostic reasoning, and reporting—particularly when the exact onset time is unknown or atypical.</p>
+<p>This CodeSystem defines coded circumstances related to stroke symptom onset that are clinically relevant when onset time is unknown or atypical.</p>
 
-<p>These codes are intended to be used as Observation.code in the StrokeCircumstanceObservationProfile to assert that a given onset circumstance applies to the index stroke event. They do not encode the precise onset timestamp, last-known-well time, or location of onset; those details should be represented separately (e.g., dedicated Observations, Encounter/Condition attributes, or extensions).</p>
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Use as <code class="language-plaintext highlighter-rouge">Observation.code</code> in <code class="language-plaintext highlighter-rouge">StrokeCircumstanceObservationProfile</code>.</li>
+  <li>Presence of the Observation asserts that the circumstance applies to the index stroke event.</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -1156,9 +1329,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="CodeSystem/timing-metric-codes-cs">Stroke Timing Metric Codes CodeSystem</a>
             </td>
             <td>
-<p>This CodeSystem defines codes for key time-interval process metrics in acute stroke care used for quality monitoring and pathway optimization. Each code represents a duration measured in minutes between two clinically meaningful events (e.g., hospital arrival to thrombolysis start).</p>
+<p>This CodeSystem defines codes for key <strong>time-interval process metrics</strong> in acute stroke care.
+Each code represents a duration measured between two clinically meaningful events (e.g., arrival to thrombolysis start).</p>
 
-<p>These metrics are commonly used in performance dashboards, registry submissions, and quality improvement programs. The intent is to store the <em>measured interval</em> (a duration) in Observation.valueQuantity (UCUM minutes), while event timestamps (arrival time, needle time, groin puncture time) may be stored separately when available.</p>
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Use as <code class="language-plaintext highlighter-rouge">Observation.code</code> in <code class="language-plaintext highlighter-rouge">TimingMetricObservationProfile</code>.</li>
+  <li>Store the measured interval in <code class="language-plaintext highlighter-rouge">Observation.valueQuantity</code> with UCUM minutes (<code class="language-plaintext highlighter-rouge">min</code>).</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -1425,7 +1603,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 11:36+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 12:37+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

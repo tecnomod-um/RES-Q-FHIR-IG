@@ -19,7 +19,7 @@
   ] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "MTICIScoreValueSet"] ; # 
-  fhir:title [ fhir:v "MTICI Score ValueSet"] ; # 
+  fhir:title [ fhir:v "Modified Treatment in Cerebral Infarction Grade Score ValueSet"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:experimental [ fhir:v true] ; # 
   fhir:date [ fhir:v "2025-03-31"^^xsd:date] ; # 
@@ -31,7 +31,7 @@
        fhir:value [ fhir:v "http://tecnomod-um.org" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "This ValueSet enumerates all allowable mTICI reperfusion grades (0, 1, 2a, 2b, 2c, 3) from the MticiScoreCS CodeSystem. It is intended to be bound (typically as required) to Observation.valueCodeableConcept when recording the final angiographic reperfusion outcome after endovascular therapy for acute ischemic stroke.\n\nUsing a dedicated ValueSet ensures:\n- consistent coding across implementations and sites,\n- reliable downstream interpretation for analytics/registry submission, and\n- clear separation between the *assessment concept* (e.g., “mTICI reperfusion grade”) and the *assessment result* (the specific grade).\n\nThis ValueSet does not convey timing, vessel location, modality, or technique; those must be represented elsewhere in the clinical model."] ; # 
+  fhir:description [ fhir:v "This ValueSet enumerates all allowable Modified Treatment in Cerebral Infarction reperfusion grade values (0, 1, 2a, 2b, 2c, 3) from MticiScoreCS.\n\n**Primary use-case**\n- Required binding to `Observation.valueCodeableConcept` when an Observation represents an mTICI grade outcome.\n\n**Why a dedicated ValueSet**\n- Ensures consistent coding across implementations and sites.\n- Enables reliable registry reporting, audit/quality measurement, and research analytics."] ; # 
   fhir:compose [
      fhir:include ( [
        fhir:system [

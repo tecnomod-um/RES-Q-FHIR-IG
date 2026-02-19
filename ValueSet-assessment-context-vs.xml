@@ -11,7 +11,7 @@
   <title value="Assessment Context ValueSet"/>
   <status value="active"/>
   <experimental value="true"/>
-  <date value="2026-02-19T11:36:03+00:00"/>
+  <date value="2026-02-19T12:37:09+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>
@@ -20,7 +20,7 @@
       <value value="http://tecnomod-um.org"/>
     </telecom>
   </contact>
-  <description value="This ValueSet includes all context/timepoint codes defined in AssessmentContextCS. It is intended for required binding to elements (e.g., extensions) that must indicate the clinical phase of an assessment, enabling consistent stratification and reporting of outcomes and severity over the stroke care pathway."/>
+  <description value="This ValueSet includes all phase/context codes from AssessmentContextCS.&#xA;&#xA;**Primary use-case**&#xA;- Required binding for elements that must indicate the clinical phase of an assessment (e.g., timing context extensions)."/>
   <compose>
     <include>
       <system value="http://tecnomod-um.org/CodeSystem/assessment-context-cs"/>

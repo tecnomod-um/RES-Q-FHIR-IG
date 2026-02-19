@@ -265,7 +265,7 @@
   "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.name">name</a>" : "FunctionalScoreObservationProfile",
   "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.title">title</a>" : "Stroke Functional Score Observation Profile",
   "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.status">status</a>" : "draft",
-  "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.date">date</a>" : "2026-02-19T11:36:03+00:00",
+  "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.date">date</a>" : "2026-02-19T12:37:09+00:00",
   "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.publisher">publisher</a>" : "UMU",
   "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.contact">contact</a>" : [
     {
@@ -278,7 +278,7 @@
       ]
     }
   ],
-  "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.description">description</a>" : "Profile for recording stroke functional outcome and severity scores, currently mRS and NIHSS, in a way that is both interoperable and context-aware. The profile requires a timing context extension (ObservationTimingContextExtension) to explicitly state the clinical phase (e.g., pre-stroke baseline, admission, discharge, ~3-month follow-up), enabling unambiguous interpretation and standardized reporting.\n\nObservation.code is bound to FunctionalScoreCodesVS, and invariants constrain Observation.value[x] by instrument:\n- For mRS (SNOMED CT observable entity), the result is represented as a CodeableConcept bound to MRsScoreVS (ordinal categories 0–6).\n- For NIHSS (SNOMED CT observable entity), the result is represented as an integer total score (valueInteger), reflecting the overall NIHSS total rather than item-level subscores.\n\nThe profile does not model itemized NIHSS components, assessor training, or interview method; implementers may represent those details separately when needed (e.g., additional Observations, extensions, or provenance).",
+  "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.description">description</a>" : "Profile for recording stroke functional outcome and severity scores (currently mRS and NIHSS) in an interoperable, context-aware way.\n\n**Primary use-case**\n- Capture outcomes by phase (baseline, admission, discharge, ~90-day follow-up) using a required timing context extension.\n\n**Key constraints**\n- `Observation.code` is bound to FunctionalScoreCodesVS (mRS or NIHSS).\n- `extension[timingContext]` is mandatory to label the clinical phase.\n- Datatype and binding rules are enforced via invariants:\n  - mRS → `valueCodeableConcept` bound to MRsScoreVS.\n  - NIHSS → `valueInteger` as total NIHSS score.\n\n**Typical scenarios**\n1) An mRS score assessed at discharge would have `Observation.code` = mRS code, `valueCodeableConcept` = mRS grade (0–6), and the timing context extension value = discharge.\n2) An NIHSS score assessed at admission would have `Observation.code` = NIHSS code, `valueInteger` = total NIHSS score, and the timing context extension value = admission.",
   "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.fhirVersion">fhirVersion</a>" : "5.0.0",
   "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.mapping">mapping</a>" : [
     {
@@ -713,7 +713,7 @@
         "<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.path">path</a>" : "Observation.extension",
         "<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.sliceName">sliceName</a>" : "timingContext",
         "<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.short">short</a>" : "Observation Timing Context Extension",
-        "<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.definition">definition</a>" : "This extension captures the clinical timing context (relative phase) in which an observation or assessment was made (e.g., pre-stroke baseline, admission, discharge, ~3-month follow-up). It is particularly important for functional outcomes and severity scores whose interpretation depends on *when* they were assessed.\n\nThe extension complements Observation.effective[x]:\n- effective[x] records the actual date/time (when known),\n- this extension records the standardized phase label used for reporting and comparability across sites.\n\nThe value is a required CodeableConcept bound to AssessmentContextVS (required), ensuring only supported timing contexts are used in this implementation guide.",
+        "<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.definition">definition</a>" : "This extension captures the **clinical timing context (phase)** in which an observation or assessment was made\n(e.g., pre-stroke baseline, admission, discharge, ~3-month follow-up).\n\n**Primary use-case**\n- Required for functional outcomes and severity scores whose interpretation depends on *when* the score was assessed.\n\n**How it complements Observation.effective[x]**\n- `effective[x]` records the actual measurement date/time (when known),\n- This extension records the standardized phase label used for reporting and cross-site comparability.\n\n**Binding**\n- `valueCodeableConcept` is bound (required) to AssessmentContextVS.",
         "<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.min">min</a>" : 1,
         "<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.max">max</a>" : "1",
         "<a href="http://hl7.org/fhir/R5/elementdefinition.html#ElementDefinition#XElementDefinition.base">base</a>" : {
@@ -3796,7 +3796,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 11:36+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 12:37+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

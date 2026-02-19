@@ -278,7 +278,7 @@
   <a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;AgeAtOnsetObservationProfile&quot;] ; # 
   <a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.title">fhir:title</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;Age at Stroke Onset Observation Profile (R5)&quot;] ; # 
   <a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;draft&quot;] ; # 
-  <a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.date">fhir:date</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#dateTime">fhir:v</a> &quot;2026-02-19T11:36:03+00:00&quot;^^xsd:dateTime] ; # 
+  <a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.date">fhir:date</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#dateTime">fhir:v</a> &quot;2026-02-19T12:37:09+00:00&quot;^^xsd:dateTime] ; # 
   <a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.publisher">fhir:publisher</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;UMU&quot;] ; # 
   <a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.contact">fhir:contact</a> ( [
 <a href="http://hl7.org/fhir/R5/metadatatypes.html#ContactDetail#XContactDetail.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;UMU&quot; ] ;
@@ -286,7 +286,7 @@
 <a href="http://hl7.org/fhir/R5/datatypes.html#ContactPoint#XContactPoint.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;url&quot; ] ;
 <a href="http://hl7.org/fhir/R5/datatypes.html#ContactPoint#XContactPoint.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;http://tecnomod-um.org&quot; ]     ] )
   ] ) ; # 
-  <a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.description">fhir:description</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">fhir:v</a> &quot;Profile for recording the patient’s age at the time of stroke onset as a simple integer value in years. The Observation.code is fixed to the SNOMED CT observable entity “Age at onset of clinical finding,” ensuring a clear and interoperable semantic meaning.\n\nThe age at onset may be derived from date of birth and an onset/reference timepoint (e.g., symptom onset, last known well, or discovery time depending on local policy). This profile records the resulting age value, not the derivation method; if the derivation is clinically important, implementers should capture the underlying reference timepoint(s) and provenance separately.&quot;] ; # 
+  <a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.description">fhir:description</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">fhir:v</a> &quot;Profile for recording the patient’s age at the time of stroke onset as an integer value in years.\n\n**Primary use-case**\n- Provides a computable attribute commonly used in etiologic assessment, risk stratification, and registry datasets.\n\n**Modeling note**\n- The age may be derived from DOB and an onset reference (symptom onset, last-known-well, discovery time).\n  This profile records the resulting age value, not the derivation method; capture provenance separately if needed.&quot;] ; # 
   <a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.purpose">fhir:purpose</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">fhir:v</a> &quot;Record age-at-onset in years as a simple, computable value used in etiologic assessment and risk stratification.&quot;] ; # 
   <a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.fhirVersion">fhir:fhirVersion</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;5.0.0&quot;] ; # 
   <a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.mapping">fhir:mapping</a> ( [
@@ -2815,7 +2815,7 @@ a sct:445518008 ;
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 11:36+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 12:37+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

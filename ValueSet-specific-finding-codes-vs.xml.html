@@ -229,7 +229,7 @@
   &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.name">name</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;SpecificFindingCodesVS&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.title">title</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Specific Stroke Finding Codes ValueSet&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.status">status</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.date">date</a> <a href="http://hl7.org/fhir/R5/datatypes.html#dateTime">value</a>=&quot;2026-02-19T11:36:03+00:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.date">date</a> <a href="http://hl7.org/fhir/R5/datatypes.html#dateTime">value</a>=&quot;2026-02-19T12:37:09+00:00&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.publisher">publisher</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;UMU&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.contact">contact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R5/metadatatypes.html#ContactDetail#XContactDetail.name">name</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;UMU&quot;/&gt;
@@ -239,9 +239,17 @@
     &lt;/<a href="http://hl7.org/fhir/R5/metadatatypes.html#ContactDetail#XContactDetail.telecom">telecom</a>&gt;
   &lt;/<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.contact">contact</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.description">description</a>
-               <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;This ValueSet provides SNOMED CT disorder concepts for specific clinically relevant findings often referenced in the stroke workup, currently limited to atrial fibrillation and atrial flutter disorders.
+               <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;This ValueSet provides SNOMED CT disorder concepts for specific findings referenced in the stroke workup.
+Currently includes:
+- Atrial fibrillation (disorder)
+- Atrial flutter (disorder)
 
-These codes are suitable when the intent is to reference the disorder concepts themselves (e.g., as a focus finding or a coded problem). When the intent is to capture the *status of an assessment* (present/absent/unknown) rather than assert a diagnosis, implementers should use an Observation with a dedicated assessment concept as Observation.code and bind Observation.valueCodeableConcept to an appropriate status ValueSet (e.g., AfibFlutterStatusVS).&quot;/&gt;
+**Primary use-case**
+- Constrain `Observation.code` (as a *finding focus*) when using `SpecificFindingObservationProfile`.
+
+**Important modeling note**
+- Using a disorder concept in `Observation.code` here does not necessarily assert a diagnosis; the diagnosis should be modeled as a Condition.
+- The Observation can be interpreted as “assessment about this finding,” with the result in `Observation.valueCodeableConcept` (e.g., AF status).&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.compose">compose</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.compose.include">include</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.compose.include.system">system</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;http://snomed.info/sct&quot;/&gt;
@@ -279,7 +287,7 @@ These codes are suitable when the intent is to reference the disorder concepts t
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 11:36+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 12:37+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

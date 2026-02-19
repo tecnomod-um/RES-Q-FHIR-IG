@@ -270,9 +270,22 @@
   </table>
 
 <p>
-<p>Profile for documenting clinically relevant circumstances of stroke symptom onset (e.g., wake-up stroke, in-hospital onset). The circumstance is represented by Observation.code (bound to StrokeCircumstanceCodesVS); the presence of the Observation asserts that the circumstance applies to the index event within the associated Encounter.</p>
+<p>Profile for documenting clinically relevant circumstances of stroke symptom onset (e.g., wake-up stroke, in-hospital onset).</p>
 
-<p>The profile supports linking supporting evidence via hasMember (e.g., Observations capturing last-known-well time, symptom discovery time, or other onset-related details) without overloading the circumstance code itself. This profile intentionally does not encode onset timestamps in the code; temporal details should be modeled separately for precision and auditability.</p>
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Capture onset circumstance classification for eligibility reasoning, protocol stratification, and reporting when onset time is uncertain.</li>
+</ul>
+
+<p><strong>Representation</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Observation.code</code> bound to StrokeCircumstanceCodesVS.</li>
+  <li>Presence of the Observation asserts the circumstance applies to the index stroke event (within the linked Encounter).</li>
+</ul>
+
+<p><strong>Typical scenarios</strong>
+1) A patient who wakes up with stroke symptoms would have an Observation with <code class="language-plaintext highlighter-rouge">code</code> = wake-up stroke code, linked to the index stroke Encounter, indicating that the stroke onset circumstance is a wake-up stroke.
+2) A patient who experiences stroke symptoms while already admitted for another reason would have an Observation with <code class="language-plaintext highlighter-rouge">code</code> = in-hospital stroke code, linked to the index stroke Encounter, indicating that the stroke onset circumstance is in-hospital onset.</p>
 
 </p>
 
@@ -480,7 +493,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/references.html">Reference</a>(<a href="http://hl7.org/fhir/R5/observation.html">Observation</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Related resource that belongs to the Observation group<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // cf7a5546-a036-43dd-8967-83e4b5fb62f9
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 8ca1ddc2-3cae-49fd-be6b-62c5b20d63d8
 document.getElementById('cbstroke-circumstance-observation-profileK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('stroke-circumstance-observation-profileK'), 'binding', document.getElementById('cbstroke-circumstance-observation-profileK-binding').checked, document.getElementById('ppstroke-circumstance-observation-profileK'));
 document.getElementById('cbstroke-circumstance-observation-profileK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -688,7 +701,7 @@ filterDesc(document.getElementById('stroke-circumstance-observation-profileK'), 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/references.html">Reference</a>(<a href="http://hl7.org/fhir/R5/observation.html">Observation</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Related resource that belongs to the Observation group</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // cf7a5546-a036-43dd-8967-83e4b5fb62f9
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 8ca1ddc2-3cae-49fd-be6b-62c5b20d63d8
 document.getElementById('cbstroke-circumstance-observation-profileD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('stroke-circumstance-observation-profileD'), 'binding', document.getElementById('cbstroke-circumstance-observation-profileD-binding').checked, document.getElementById('ppstroke-circumstance-observation-profileD'));
 document.getElementById('cbstroke-circumstance-observation-profileD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1209,7 +1222,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">See <a href="http://hl7.org/fhir/R5/observation.html#Observation.referenceRange" title="Observation.referenceRange">referenceRange (Observation)</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Provides guide for interpretation of component result<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // cf7a5546-a036-43dd-8967-83e4b5fb62f9
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 8ca1ddc2-3cae-49fd-be6b-62c5b20d63d8
 document.getElementById('cbstroke-circumstance-observation-profileS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('stroke-circumstance-observation-profileS'), 'binding', document.getElementById('cbstroke-circumstance-observation-profileS-binding').checked, document.getElementById('ppstroke-circumstance-observation-profileS'));
 document.getElementById('cbstroke-circumstance-observation-profileS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1906,7 +1919,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/references.html">Reference</a>(<a href="http://hl7.org/fhir/R5/observation.html">Observation</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Related resource that belongs to the Observation group<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // cf7a5546-a036-43dd-8967-83e4b5fb62f9
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 8ca1ddc2-3cae-49fd-be6b-62c5b20d63d8
 document.getElementById('cbstroke-circumstance-observation-profileKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('stroke-circumstance-observation-profileKA'), 'binding', document.getElementById('cbstroke-circumstance-observation-profileKA-binding').checked, document.getElementById('ppstroke-circumstance-observation-profileKA'));
 document.getElementById('cbstroke-circumstance-observation-profileKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2114,7 +2127,7 @@ filterDesc(document.getElementById('stroke-circumstance-observation-profileKA'),
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/references.html">Reference</a>(<a href="http://hl7.org/fhir/R5/observation.html">Observation</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Related resource that belongs to the Observation group</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // cf7a5546-a036-43dd-8967-83e4b5fb62f9
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 8ca1ddc2-3cae-49fd-be6b-62c5b20d63d8
 document.getElementById('cbstroke-circumstance-observation-profileDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('stroke-circumstance-observation-profileDA'), 'binding', document.getElementById('cbstroke-circumstance-observation-profileDA-binding').checked, document.getElementById('ppstroke-circumstance-observation-profileDA'));
 document.getElementById('cbstroke-circumstance-observation-profileDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2634,7 +2647,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">See <a href="http://hl7.org/fhir/R5/observation.html#Observation.referenceRange" title="Observation.referenceRange">referenceRange (Observation)</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Provides guide for interpretation of component result<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // cf7a5546-a036-43dd-8967-83e4b5fb62f9
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 8ca1ddc2-3cae-49fd-be6b-62c5b20d63d8
 document.getElementById('cbstroke-circumstance-observation-profileSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('stroke-circumstance-observation-profileSA'), 'binding', document.getElementById('cbstroke-circumstance-observation-profileSA-binding').checked, document.getElementById('ppstroke-circumstance-observation-profileSA'));
 document.getElementById('cbstroke-circumstance-observation-profileSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -3204,7 +3217,7 @@ Summary
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 11:36+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 12:37+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

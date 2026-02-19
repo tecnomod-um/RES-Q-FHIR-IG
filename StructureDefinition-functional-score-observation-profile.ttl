@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "FunctionalScoreObservationProfile"] ; # 
   fhir:title [ fhir:v "Stroke Functional Score Observation Profile"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-02-19T11:36:03+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-19T12:37:09+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;
@@ -30,7 +30,7 @@
        fhir:value [ fhir:v "http://tecnomod-um.org" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "Profile for recording stroke functional outcome and severity scores, currently mRS and NIHSS, in a way that is both interoperable and context-aware. The profile requires a timing context extension (ObservationTimingContextExtension) to explicitly state the clinical phase (e.g., pre-stroke baseline, admission, discharge, ~3-month follow-up), enabling unambiguous interpretation and standardized reporting.\n\nObservation.code is bound to FunctionalScoreCodesVS, and invariants constrain Observation.value[x] by instrument:\n- For mRS (SNOMED CT observable entity), the result is represented as a CodeableConcept bound to MRsScoreVS (ordinal categories 0–6).\n- For NIHSS (SNOMED CT observable entity), the result is represented as an integer total score (valueInteger), reflecting the overall NIHSS total rather than item-level subscores.\n\nThe profile does not model itemized NIHSS components, assessor training, or interview method; implementers may represent those details separately when needed (e.g., additional Observations, extensions, or provenance)."] ; # 
+  fhir:description [ fhir:v "Profile for recording stroke functional outcome and severity scores (currently mRS and NIHSS) in an interoperable, context-aware way.\n\n**Primary use-case**\n- Capture outcomes by phase (baseline, admission, discharge, ~90-day follow-up) using a required timing context extension.\n\n**Key constraints**\n- `Observation.code` is bound to FunctionalScoreCodesVS (mRS or NIHSS).\n- `extension[timingContext]` is mandatory to label the clinical phase.\n- Datatype and binding rules are enforced via invariants:\n  - mRS → `valueCodeableConcept` bound to MRsScoreVS.\n  - NIHSS → `valueInteger` as total NIHSS score.\n\n**Typical scenarios**\n1) An mRS score assessed at discharge would have `Observation.code` = mRS code, `valueCodeableConcept` = mRS grade (0–6), and the timing context extension value = discharge.\n2) An NIHSS score assessed at admission would have `Observation.code` = NIHSS code, `valueInteger` = total NIHSS score, and the timing context extension value = admission."] ; # 
   fhir:fhirVersion [ fhir:v "5.0.0"] ; # 
   fhir:mapping ( [
      fhir:identity [ fhir:v "workflow" ] ;
@@ -495,7 +495,7 @@
        fhir:path [ fhir:v "Observation.extension" ] ;
        fhir:sliceName [ fhir:v "timingContext" ] ;
        fhir:short [ fhir:v "Observation Timing Context Extension" ] ;
-       fhir:definition [ fhir:v "This extension captures the clinical timing context (relative phase) in which an observation or assessment was made (e.g., pre-stroke baseline, admission, discharge, ~3-month follow-up). It is particularly important for functional outcomes and severity scores whose interpretation depends on *when* they were assessed.\n\nThe extension complements Observation.effective[x]:\n- effective[x] records the actual date/time (when known),\n- this extension records the standardized phase label used for reporting and comparability across sites.\n\nThe value is a required CodeableConcept bound to AssessmentContextVS (required), ensuring only supported timing contexts are used in this implementation guide." ] ;
+       fhir:definition [ fhir:v "This extension captures the **clinical timing context (phase)** in which an observation or assessment was made\n(e.g., pre-stroke baseline, admission, discharge, ~3-month follow-up).\n\n**Primary use-case**\n- Required for functional outcomes and severity scores whose interpretation depends on *when* the score was assessed.\n\n**How it complements Observation.effective[x]**\n- `effective[x]` records the actual measurement date/time (when known),\n- This extension records the standardized phase label used for reporting and cross-site comparability.\n\n**Binding**\n- `valueCodeableConcept` is bound (required) to AssessmentContextVS." ] ;
        fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
        fhir:max [ fhir:v "1" ] ;
        fhir:base [

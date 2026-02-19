@@ -11,7 +11,7 @@
   <title value="Modified Rankin Scale Score Code System"/>
   <status value="active"/>
   <experimental value="true"/>
-  <date value="2026-02-19T11:36:03+00:00"/>
+  <date value="2026-02-19T12:37:09+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>
@@ -20,7 +20,7 @@
       <value value="http://tecnomod-um.org"/>
     </telecom>
   </contact>
-  <description value="This CodeSystem defines codes for the modified Rankin Scale (mRS), an ordinal measure of global disability and functional outcome widely used in stroke care and research. mRS grades functional status from 0 (no symptoms) through 5 (severe disability), with 6 indicating death.&#xA;&#xA;Within this implementation guide, mRS is intended to be captured as Observation.valueCodeableConcept (bound to the MRsScoreVS ValueSet), with the assessment timepoint represented explicitly (e.g., via effective[x]) and/or via an assessment context indicator (e.g., pre-stroke baseline, discharge, ~90-day follow-up). This supports standard reporting (e.g., “mRS at 90 days”), comparability across sites, and consistent downstream analytics.&#xA;&#xA;Scope and modeling notes:&#xA;- mRS is a coarse, global disability scale; it does not encode detailed domain-specific functional limitations (mobility, cognition, ADLs) which should be captured via additional instruments/Observations if required.&#xA;- The CodeSystem defines only the *score*; method of ascertainment (in-person, telephone, structured interview) and assessor details should be captured separately when relevant."/>
+  <description value="This CodeSystem defines codes for the **modified Rankin Scale (mRS)**, an ordinal measure of global disability and functional outcome.&#xA;Scores range from 0 (no symptoms) to 5 (severe disability), with 6 indicating death.&#xA;&#xA;**Primary use-case**&#xA;- Use as the coded result in `Observation.valueCodeableConcept` (bound via MRsScoreVS) when recording an mRS outcome.&#xA;&#xA;**Modeling notes**&#xA;- mRS is a global disability scale and does not capture domain-specific limitations (mobility, ADLs, cognition).&#xA;  Capture those via additional instruments/Observations when needed.&#xA;- Method of ascertainment and assessor details should be recorded separately (e.g., Observation.method, performer, Provenance)."/>
   <caseSensitive value="false"/>
   <content value="complete"/>
   <count value="7"/>

@@ -12,8 +12,15 @@
 | Draft as of 2026-02-19 | *Computable Name*:StrokeCircumstanceObservationProfile |
 
  
-Profile for documenting clinically relevant circumstances of stroke symptom onset (e.g., wake-up stroke, in-hospital onset). The circumstance is represented by Observation.code (bound to StrokeCircumstanceCodesVS); the presence of the Observation asserts that the circumstance applies to the index event within the associated Encounter. 
-The profile supports linking supporting evidence via hasMember (e.g., Observations capturing last-known-well time, symptom discovery time, or other onset-related details) without overloading the circumstance code itself. This profile intentionally does not encode onset timestamps in the code; temporal details should be modeled separately for precision and auditability. 
+Profile for documenting clinically relevant circumstances of stroke symptom onset (e.g., wake-up stroke, in-hospital onset). 
+**Primary use-case** 
+* Capture onset circumstance classification for eligibility reasoning, protocol stratification, and reporting when onset time is uncertain.
+ 
+**Representation** 
+* `Observation.code` bound to StrokeCircumstanceCodesVS.
+* Presence of the Observation asserts the circumstance applies to the index stroke event (within the linked Encounter).
+ 
+**Typical scenarios** 1) A patient who wakes up with stroke symptoms would have an Observation with `code` = wake-up stroke code, linked to the index stroke Encounter, indicating that the stroke onset circumstance is a wake-up stroke. 2) A patient who experiences stroke symptoms while already admitted for another reason would have an Observation with `code` = in-hospital stroke code, linked to the index stroke Encounter, indicating that the stroke onset circumstance is in-hospital onset. 
 
 **Usages:**
 
@@ -42,7 +49,7 @@ Other representations of profile: [CSV](StructureDefinition-stroke-circumstance-
   "name" : "StrokeCircumstanceObservationProfile",
   "title" : "Stroke Circumstance Observation Profile (R5)",
   "status" : "draft",
-  "date" : "2026-02-19T11:36:03+00:00",
+  "date" : "2026-02-19T12:37:09+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -55,7 +62,7 @@ Other representations of profile: [CSV](StructureDefinition-stroke-circumstance-
       ]
     }
   ],
-  "description" : "Profile for documenting clinically relevant circumstances of stroke symptom onset (e.g., wake-up stroke, in-hospital onset). The circumstance is represented by Observation.code (bound to StrokeCircumstanceCodesVS); the presence of the Observation asserts that the circumstance applies to the index event within the associated Encounter.\n\nThe profile supports linking supporting evidence via hasMember (e.g., Observations capturing last-known-well time, symptom discovery time, or other onset-related details) without overloading the circumstance code itself. This profile intentionally does not encode onset timestamps in the code; temporal details should be modeled separately for precision and auditability.",
+  "description" : "Profile for documenting clinically relevant circumstances of stroke symptom onset (e.g., wake-up stroke, in-hospital onset).\n\n**Primary use-case**\n- Capture onset circumstance classification for eligibility reasoning, protocol stratification, and reporting when onset time is uncertain.\n\n**Representation**\n- `Observation.code` bound to StrokeCircumstanceCodesVS.\n- Presence of the Observation asserts the circumstance applies to the index stroke event (within the linked Encounter).\n\n**Typical scenarios**\n1) A patient who wakes up with stroke symptoms would have an Observation with `code` = wake-up stroke code, linked to the index stroke Encounter, indicating that the stroke onset circumstance is a wake-up stroke.\n2) A patient who experiences stroke symptoms while already admitted for another reason would have an Observation with `code` = in-hospital stroke code, linked to the index stroke Encounter, indicating that the stroke onset circumstance is in-hospital onset.\n",
   "fhirVersion" : "5.0.0",
   "mapping" : [
     {

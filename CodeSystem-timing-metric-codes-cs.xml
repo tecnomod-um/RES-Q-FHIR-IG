@@ -10,7 +10,7 @@
   <name value="TimingMetricCodesCS"/>
   <title value="Stroke Timing Metric Codes CodeSystem"/>
   <status value="active"/>
-  <date value="2026-02-19T11:36:03+00:00"/>
+  <date value="2026-02-19T12:37:09+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>
@@ -19,7 +19,7 @@
       <value value="http://tecnomod-um.org"/>
     </telecom>
   </contact>
-  <description value="This CodeSystem defines codes for key time-interval process metrics in acute stroke care used for quality monitoring and pathway optimization. Each code represents a duration measured in minutes between two clinically meaningful events (e.g., hospital arrival to thrombolysis start).&#xA;&#xA;These metrics are commonly used in performance dashboards, registry submissions, and quality improvement programs. The intent is to store the *measured interval* (a duration) in Observation.valueQuantity (UCUM minutes), while event timestamps (arrival time, needle time, groin puncture time) may be stored separately when available."/>
+  <description value="This CodeSystem defines codes for key **time-interval process metrics** in acute stroke care.&#xA;Each code represents a duration measured between two clinically meaningful events (e.g., arrival to thrombolysis start).&#xA;&#xA;**Primary use-case**&#xA;- Use as `Observation.code` in `TimingMetricObservationProfile`.&#xA;- Store the measured interval in `Observation.valueQuantity` with UCUM minutes (`min`)."/>
   <content value="complete"/>
   <count value="2"/>
   <concept>

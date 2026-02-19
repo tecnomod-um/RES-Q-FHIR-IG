@@ -1,10 +1,10 @@
-# Atrial Fibrillation or Flutter Status ValueSet - v0.1.0
+# Atrial Fibrillation / Flutter Assessment Status ValueSet - v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **Atrial Fibrillation or Flutter Status ValueSet**
+* **Atrial Fibrillation / Flutter Assessment Status ValueSet**
 
-## ValueSet: Atrial Fibrillation or Flutter Status ValueSet 
+## ValueSet: Atrial Fibrillation / Flutter Assessment Status ValueSet 
 
 | | |
 | :--- | :--- |
@@ -12,11 +12,14 @@
 | Active as of 2025-03-31 | *Computable Name*:AfibFlutterStatusVS |
 
  
-This ValueSet constrains the allowed coded outcomes for documenting the status of an atrial fibrillation (AF) / atrial flutter assessment within the stroke workflow. It is intentionally limited to SNOMED CT qualifier values that express the epistemic status of the finding: (1) known present, (2) known absent, or (3) unknown. 
-The ValueSet is designed to support harmonized recording across systems when AF/flutter materially influences ischemic stroke etiology workup, thromboembolic risk stratification, and downstream management decisions (e.g., anticoagulation). It is appropriate for use as Observation.valueCodeableConcept to represent the result of screening, monitoring, or review of prior documentation. 
-Scope and modeling notes: 
-* The qualifier values do not encode the rhythm subtype, chronicity, burden, or method of detection (e.g., ECG vs telemetry); those aspects should be represented using additional elements (e.g., Observation.method, device data) or separate Observations/Conditions as appropriate.
-* The ValueSet represents “status of assessment” rather than the disorder concept itself; if the clinical intent is to assert a diagnosis of AF/flutter, use a Condition resource with an appropriate SNOMED CT disorder code instead of (or in addition to) this status.
+This ValueSet constrains the allowable coded outcomes for documenting the **status of an AF/flutter assessment** within the stroke workflow. 
+**Primary use-case** 
+* Bind to `Observation.valueCodeableConcept` in the `SpecificFindingObservationProfile` when `Observation.code` refers to AF/flutter as a finding focus.
+* Enables harmonized interpretation for analytics and decision support (e.g., anticoagulation pathway triggers) without forcing a Condition assertion.
+ 
+**Scope and modeling notes** 
+* This ValueSet expresses **assessment outcome/status** (detected/known/absent/not screened/unknown).
+* It does not replace Condition for diagnoses. When AF/flutter is confirmed as a diagnosis, represent it as a `Condition` with the appropriate SNOMED CT disorder code.
  
 
  **References** 
@@ -53,7 +56,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "url" : "http://tecnomod-um.org/ValueSet/afib-flutter-status-vs",
   "version" : "0.1.0",
   "name" : "AfibFlutterStatusVS",
-  "title" : "Atrial Fibrillation or Flutter Status ValueSet",
+  "title" : "Atrial Fibrillation / Flutter Assessment Status ValueSet",
   "status" : "active",
   "date" : "2025-03-31",
   "publisher" : "UMU",
@@ -68,7 +71,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
       ]
     }
   ],
-  "description" : "This ValueSet constrains the allowed coded outcomes for documenting the status of an atrial fibrillation (AF) / atrial flutter assessment within the stroke workflow. It is intentionally limited to SNOMED CT qualifier values that express the epistemic status of the finding: (1) known present, (2) known absent, or (3) unknown.\n\nThe ValueSet is designed to support harmonized recording across systems when AF/flutter materially influences ischemic stroke etiology workup, thromboembolic risk stratification, and downstream management decisions (e.g., anticoagulation). It is appropriate for use as Observation.valueCodeableConcept to represent the result of screening, monitoring, or review of prior documentation.\n\nScope and modeling notes:\n- The qualifier values do not encode the rhythm subtype, chronicity, burden, or method of detection (e.g., ECG vs telemetry); those aspects should be represented using additional elements (e.g., Observation.method, device data) or separate Observations/Conditions as appropriate.\n- The ValueSet represents “status of assessment” rather than the disorder concept itself; if the clinical intent is to assert a diagnosis of AF/flutter, use a Condition resource with an appropriate SNOMED CT disorder code instead of (or in addition to) this status.",
+  "description" : "This ValueSet constrains the allowable coded outcomes for documenting the **status of an AF/flutter assessment** within the stroke workflow.\n\n**Primary use-case**\n- Bind to `Observation.valueCodeableConcept` in the `SpecificFindingObservationProfile` when `Observation.code` refers to AF/flutter as a finding focus.\n- Enables harmonized interpretation for analytics and decision support (e.g., anticoagulation pathway triggers) without forcing a Condition assertion.\n\n**Scope and modeling notes**\n- This ValueSet expresses *assessment outcome/status* (detected/known/absent/not screened/unknown).\n- It does not replace Condition for diagnoses. When AF/flutter is confirmed as a diagnosis, represent it as a `Condition` with the appropriate SNOMED CT disorder code.",
   "compose" : {
     "include" : [
       {

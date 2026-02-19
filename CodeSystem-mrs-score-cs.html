@@ -229,14 +229,19 @@
   </table>
 
 <p>
-<p>This CodeSystem defines codes for the modified Rankin Scale (mRS), an ordinal measure of global disability and functional outcome widely used in stroke care and research. mRS grades functional status from 0 (no symptoms) through 5 (severe disability), with 6 indicating death.</p>
+<p>This CodeSystem defines codes for the <strong>modified Rankin Scale (mRS)</strong>, an ordinal measure of global disability and functional outcome.
+Scores range from 0 (no symptoms) to 5 (severe disability), with 6 indicating death.</p>
 
-<p>Within this implementation guide, mRS is intended to be captured as Observation.valueCodeableConcept (bound to the MRsScoreVS ValueSet), with the assessment timepoint represented explicitly (e.g., via effective[x]) and/or via an assessment context indicator (e.g., pre-stroke baseline, discharge, ~90-day follow-up). This supports standard reporting (e.g., “mRS at 90 days”), comparability across sites, and consistent downstream analytics.</p>
-
-<p>Scope and modeling notes:</p>
+<p><strong>Primary use-case</strong></p>
 <ul>
-  <li>mRS is a coarse, global disability scale; it does not encode detailed domain-specific functional limitations (mobility, cognition, ADLs) which should be captured via additional instruments/Observations if required.</li>
-  <li>The CodeSystem defines only the <em>score</em>; method of ascertainment (in-person, telephone, structured interview) and assessor details should be captured separately when relevant.</li>
+  <li>Use as the coded result in <code class="language-plaintext highlighter-rouge">Observation.valueCodeableConcept</code> (bound via MRsScoreVS) when recording an mRS outcome.</li>
+</ul>
+
+<p><strong>Modeling notes</strong></p>
+<ul>
+  <li>mRS is a global disability scale and does not capture domain-specific limitations (mobility, ADLs, cognition).
+Capture those via additional instruments/Observations when needed.</li>
+  <li>Method of ascertainment and assessor details should be recorded separately (e.g., Observation.method, performer, Provenance).</li>
 </ul>
 
 </p>
@@ -305,7 +310,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 11:36+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 12:37+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

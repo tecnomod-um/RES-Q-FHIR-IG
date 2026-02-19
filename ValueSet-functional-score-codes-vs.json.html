@@ -229,7 +229,7 @@
   "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.name">name</a>" : "FunctionalScoreCodesVS",
   "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.title">title</a>" : "Stroke Functional Score Codes ValueSet",
   "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.status">status</a>" : "active",
-  "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.date">date</a>" : "2026-02-19T11:36:03+00:00",
+  "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.date">date</a>" : "2026-02-19T12:37:09+00:00",
   "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.publisher">publisher</a>" : "UMU",
   "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.contact">contact</a>" : [
     {
@@ -242,7 +242,7 @@
       ]
     }
   ],
-  "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.description">description</a>" : "This ValueSet defines the allowable Observation.code concepts for stroke functional and severity scoring instruments represented in this guide: modified Rankin Scale (mRS) and NIH Stroke Scale (NIHSS), expressed as SNOMED CT observable entities.\n\nIt is intended to be bound to Observation.code in the FunctionalScoreObservationProfile. Downstream validation/invariants then enforce the appropriate datatype of Observation.value[x]:\n- mRS is captured as a coded ordinal category (valueCodeableConcept bound to MRsScoreVS).\n- NIHSS is captured as a numeric total score (valueInteger), representing the summed NIHSS total rather than item-level subscores.",
+  "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.description">description</a>" : "This ValueSet constrains `Observation.code` for functional outcome and severity instruments represented in this guide:\n- Modified Rankin Scale score (mRS)\n- NIH Stroke Scale total score (NIHSS)\n\n**Primary use-case**\n- Bind to `Observation.code` in `FunctionalScoreObservationProfile`.\n\n**Datatype expectations enforced via invariants**\n- mRS: `Observation.valueCodeableConcept` bound to MRsScoreVS (ordinal categories 0–6).\n- NIHSS: `Observation.valueInteger` as total NIHSS score.",
   "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.compose">compose</a>" : {
     "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.compose.include">include</a>" : [
       {
@@ -284,7 +284,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 11:36+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 12:37+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

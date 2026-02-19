@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "MTICICodeVS"] ; # 
   fhir:title [ fhir:v "Modified Thrombolysis in Cerebral Infarction Assessment ValueSet"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-02-19T11:36:03+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-19T12:37:09+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;
@@ -30,7 +30,7 @@
        fhir:value [ fhir:v "http://tecnomod-um.org" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "This ValueSet includes the mTICI assessment concept code(s) from MTICICodeCS for use as Observation.code when recording an mTICI reperfusion grade. It is intended to be paired with a binding of Observation.valueCodeableConcept to MticiScoreVS.\n\nSeparating the “assessment concept” ValueSet (this ValueSet) from the “assessment result” ValueSet (MticiScoreVS) enables clearer validation rules, consistent UI behavior, and safer reuse of the mTICI scoring system across profiles."] ; # 
+  fhir:description [ fhir:v "This ValueSet includes the mTICI assessment concept code(s) from MTICICodeCS.\n\n**Primary use-case**\n- Bind to `Observation.code` when recording an mTICI reperfusion grade Observation.\n- Pair with `Observation.valueCodeableConcept` bound to MticiScoreVS."] ; # 
   fhir:compose [
      fhir:include ( [
        fhir:system [

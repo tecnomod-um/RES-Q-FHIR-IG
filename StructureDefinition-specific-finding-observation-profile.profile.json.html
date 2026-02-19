@@ -265,7 +265,7 @@
   "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.name">name</a>" : "SpecificFindingObservationProfile",
   "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.title">title</a>" : "Specific Stroke Finding Observation Profile (R5)",
   "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.status">status</a>" : "draft",
-  "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.date">date</a>" : "2026-02-19T11:36:03+00:00",
+  "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.date">date</a>" : "2026-02-19T12:37:09+00:00",
   "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.publisher">publisher</a>" : "UMU",
   "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.contact">contact</a>" : [
     {
@@ -278,7 +278,7 @@
       ]
     }
   ],
-  "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.description">description</a>" : "Profile for recording discrete, coded stroke-related findings and assessment outcomes that do not fit naturally into the vital-sign, functional-score, or timing-metric profiles. Observation.code is constrained to StrokeFindingCodesVS, and Observation.valueCodeableConcept carries the corresponding assessment result or status.\n\nTypical use cases include:\n- documenting AF/flutter assessment status as present/absent/unknown (valueCodeableConcept bound to an AF/flutter status ValueSet), and\n- documenting procedural outcome grades such as mTICI (valueCodeableConcept bound to MticiScoreVS).\n\nThis profile deliberately encodes the result as a CodeableConcept to support categorical outcomes and interoperability. It does not replace Condition for asserting diagnoses; when a durable diagnosis is established (e.g., confirmed AF), represent it as a Condition and optionally link supporting Observations (screening results, monitoring runs) using hasMember, derivedFrom, or Provenance.",
+  "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.description">description</a>" : "Profile for recording discrete, coded stroke-related findings and assessment outcomes that do not fit naturally into vital-sign,\nfunctional-score, or timing-metric profiles.\n\n**Primary use-cases**\n1) AF/flutter assessment status:\n   - `Observation.code` uses a disorder concept as the finding focus (AF/flutter).\n   - `Observation.valueCodeableConcept` carries status (AfibFlutterStatusVS).\n2) Procedural outcome grade (mTICI):\n   - `Observation.code` uses the mTICI assessment concept (MTICICodeVS).\n   - `Observation.valueCodeableConcept` carries the score (MticiScoreVS).\n\n**Important modeling note**\n- This profile does not replace Condition for diagnoses.\n  Use Condition to assert durable diagnoses and link supporting Observations via `hasMember`, `derivedFrom`, or Provenance.",
   "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.fhirVersion">fhirVersion</a>" : "5.0.0",
   "<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.mapping">mapping</a>" : [
     {
@@ -3427,7 +3427,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 11:36+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 12:37+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

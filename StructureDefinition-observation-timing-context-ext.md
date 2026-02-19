@@ -11,14 +11,20 @@
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/observation-timing-context-ext | *Version*:0.1.0 |
 | Draft as of 2026-02-19 | *Computable Name*:ObservationTimingContextExtension |
 
-This extension captures the clinical timing context (relative phase) in which an observation or assessment was made (e.g., pre-stroke baseline, admission, discharge, ~3-month follow-up). It is particularly important for functional outcomes and severity scores whose interpretation depends on **when** they were assessed.
+This extension captures the **clinical timing context (phase)** in which an observation or assessment was made (e.g., pre-stroke baseline, admission, discharge, ~3-month follow-up).
 
-The extension complements Observation.effective[x]:
+**Primary use-case**
 
-* effective[x] records the actual date/time (when known),
-* this extension records the standardized phase label used for reporting and comparability across sites.
+* Required for functional outcomes and severity scores whose interpretation depends on **when** the score was assessed.
 
-The value is a required CodeableConcept bound to AssessmentContextVS (required), ensuring only supported timing contexts are used in this implementation guide.
+**How it complements Observation.effective[x]**
+
+* `effective[x]` records the actual measurement date/time (when known),
+* This extension records the standardized phase label used for reporting and cross-site comparability.
+
+**Binding**
+
+* `valueCodeableConcept` is bound (required) to AssessmentContextVS.
 
 **Context of Use**
 
@@ -62,7 +68,7 @@ Other representations of profile: [CSV](StructureDefinition-observation-timing-c
   "name" : "ObservationTimingContextExtension",
   "title" : "Observation Timing Context Extension",
   "status" : "draft",
-  "date" : "2026-02-19T11:36:03+00:00",
+  "date" : "2026-02-19T12:37:09+00:00",
   "publisher" : "UMU",
   "contact" : [
     {
@@ -75,7 +81,7 @@ Other representations of profile: [CSV](StructureDefinition-observation-timing-c
       ]
     }
   ],
-  "description" : "This extension captures the clinical timing context (relative phase) in which an observation or assessment was made (e.g., pre-stroke baseline, admission, discharge, ~3-month follow-up). It is particularly important for functional outcomes and severity scores whose interpretation depends on *when* they were assessed.\n\nThe extension complements Observation.effective[x]:\n- effective[x] records the actual date/time (when known),\n- this extension records the standardized phase label used for reporting and comparability across sites.\n\nThe value is a required CodeableConcept bound to AssessmentContextVS (required), ensuring only supported timing contexts are used in this implementation guide.",
+  "description" : "This extension captures the **clinical timing context (phase)** in which an observation or assessment was made\n(e.g., pre-stroke baseline, admission, discharge, ~3-month follow-up).\n\n**Primary use-case**\n- Required for functional outcomes and severity scores whose interpretation depends on *when* the score was assessed.\n\n**How it complements Observation.effective[x]**\n- `effective[x]` records the actual measurement date/time (when known),\n- This extension records the standardized phase label used for reporting and cross-site comparability.\n\n**Binding**\n- `valueCodeableConcept` is bound (required) to AssessmentContextVS.",
   "fhirVersion" : "5.0.0",
   "mapping" : [
     {
@@ -101,7 +107,7 @@ Other representations of profile: [CSV](StructureDefinition-observation-timing-c
         "id" : "Extension",
         "path" : "Extension",
         "short" : "Observation Timing Context Extension",
-        "definition" : "This extension captures the clinical timing context (relative phase) in which an observation or assessment was made (e.g., pre-stroke baseline, admission, discharge, ~3-month follow-up). It is particularly important for functional outcomes and severity scores whose interpretation depends on *when* they were assessed.\n\nThe extension complements Observation.effective[x]:\n- effective[x] records the actual date/time (when known),\n- this extension records the standardized phase label used for reporting and comparability across sites.\n\nThe value is a required CodeableConcept bound to AssessmentContextVS (required), ensuring only supported timing contexts are used in this implementation guide."
+        "definition" : "This extension captures the **clinical timing context (phase)** in which an observation or assessment was made\n(e.g., pre-stroke baseline, admission, discharge, ~3-month follow-up).\n\n**Primary use-case**\n- Required for functional outcomes and severity scores whose interpretation depends on *when* the score was assessed.\n\n**How it complements Observation.effective[x]**\n- `effective[x]` records the actual measurement date/time (when known),\n- This extension records the standardized phase label used for reporting and cross-site comparability.\n\n**Binding**\n- `valueCodeableConcept` is bound (required) to AssessmentContextVS."
       },
       {
         "id" : "Extension.extension",

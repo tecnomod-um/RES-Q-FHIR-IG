@@ -5,7 +5,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>MTICI Score ValueSet - XML Representation -  v0.1.0</title>
+    <title>Modified Treatment in Cerebral Infarction Grade Score ValueSet - XML Representation -  v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -133,7 +133,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>MTICI Score ValueSet</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Modified Treatment in Cerebral Infarction Grade Score ValueSet</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -192,7 +192,7 @@
 <a name="root"> </a>
 
 
-<h2 id="root">: MTICI Score ValueSet - XML Representation</h2>
+<h2 id="root">: Modified Treatment in Cerebral Infarction Grade Score ValueSet - XML Representation</h2>
 
   <table class="colsd">
     <tr>
@@ -227,7 +227,8 @@
   &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.url">url</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;http://tecnomod-um.org/ValueSet/mtici-score-vs&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.version">version</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;0.1.0&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.name">name</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;MTICIScoreValueSet&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.title">title</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;MTICI Score ValueSet&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.title">title</a>
+         <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Modified Treatment in Cerebral Infarction Grade Score ValueSet&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.status">status</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;draft&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.experimental">experimental</a> <a href="http://hl7.org/fhir/R5/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.date">date</a> <a href="http://hl7.org/fhir/R5/datatypes.html#dateTime">value</a>=&quot;2025-03-31&quot;/&gt;
@@ -240,14 +241,14 @@
     &lt;/<a href="http://hl7.org/fhir/R5/metadatatypes.html#ContactDetail#XContactDetail.telecom">telecom</a>&gt;
   &lt;/<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.contact">contact</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.description">description</a>
-               <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;This ValueSet enumerates all allowable mTICI reperfusion grades (0, 1, 2a, 2b, 2c, 3) from the MticiScoreCS CodeSystem. It is intended to be bound (typically as required) to Observation.valueCodeableConcept when recording the final angiographic reperfusion outcome after endovascular therapy for acute ischemic stroke.
+               <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;This ValueSet enumerates all allowable Modified Treatment in Cerebral Infarction reperfusion grade values (0, 1, 2a, 2b, 2c, 3) from MticiScoreCS.
 
-Using a dedicated ValueSet ensures:
-- consistent coding across implementations and sites,
-- reliable downstream interpretation for analytics/registry submission, and
-- clear separation between the *assessment concept* (e.g., “mTICI reperfusion grade”) and the *assessment result* (the specific grade).
+**Primary use-case**
+- Required binding to `Observation.valueCodeableConcept` when an Observation represents an mTICI grade outcome.
 
-This ValueSet does not convey timing, vessel location, modality, or technique; those must be represented elsewhere in the clinical model.&quot;/&gt;
+**Why a dedicated ValueSet**
+- Ensures consistent coding across implementations and sites.
+- Enables reliable registry reporting, audit/quality measurement, and research analytics.&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.compose">compose</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.compose.include">include</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.compose.include.system">system</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;http://tecnomod-um.org/CodeSystem/mtici-score-cs&quot;/&gt;
@@ -277,7 +278,7 @@ This ValueSet does not convey timing, vessel location, modality, or technique; t
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 11:36+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 12:37+0000">2026-02-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

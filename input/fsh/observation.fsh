@@ -621,25 +621,21 @@ Expression: "code.coding.where($this.system = 'http://snomed.info/sct' and $this
 
 Instance: AgeAtOnsetObservationExample
 InstanceOf: AgeAtOnsetObservationProfile
-* text.status = #generated
-* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>Example:</b> Age at stroke onset recorded as 65 years, linked to the stroke encounter.</p></div>"
 * valueInteger = 65
+* code = SCT#445518008 "Age at onset of clinical finding (observable entity)"
 * subject = Reference(PatientExample)
 * encounter = Reference(StrokeEncounterExample)
 
 Instance: SpecificFindingObservationExample
 InstanceOf: SpecificFindingObservationProfile
 * code = SCT#49436004 "Atrial fibrillation (disorder)"
-* code.text = "Atrial fibrillation"
 * valueCodeableConcept = AfibFlutterStatusCS_URL#detected "Detected"
-* valueCodeableConcept.text = "Detected"
 * subject = Reference(PatientExample)
 * encounter = Reference(StrokeEncounterExample)
 
 Instance: VitalSignObservationExample
 InstanceOf: VitalSignObservationProfile
 * component[+].code = SCT#271649006 "Systolic blood pressure (observable entity)"
-* component[=].code.text = "Systolic blood pressure"
 * component[=].valueQuantity.value = 120
 * component[=].valueQuantity.unit = "millimeter Mercury column"
 * component[=].valueQuantity.system = UCUM

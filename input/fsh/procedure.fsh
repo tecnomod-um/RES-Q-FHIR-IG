@@ -43,7 +43,6 @@ Alias: ProcTimingContextExt_URL = http://tecnomod-um.org/StructureDefinition/pro
 ValueSet: CarotidImagingModalityVS
 Id: carotid-imaging-modality-vs
 Title : "Carotid Arteries Imaging Modality ValueSet"
-* ^status = #active
 Description : """
 This ValueSet enumerates standardized codes (primarily SNOMED CT procedures) representing **carotid imaging modalities** used in stroke workflows.
 
@@ -58,6 +57,7 @@ This ValueSet enumerates standardized codes (primarily SNOMED CT procedures) rep
 - Imaging results/findings (e.g., stenosis severity). Findings should be modeled separately (Observation/DiagnosticReport/ImagingStudy, depending on your architecture).
 """
 * ^url = CarotidImagingModalityVS_URL
+* ^status = #active
 * ^version = "1.0.0"
 * include SCT#58920005 "Angiography of carotid artery (procedure)"
 * include SCT#9171000087102 "Doppler ultrasonography of carotid arteries (procedure)"

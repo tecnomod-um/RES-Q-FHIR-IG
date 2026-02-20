@@ -7,7 +7,7 @@ id: RES-Q-FHIR-IG
 canonical: http://tecnomod-um.org
 name: RES-Q-IG
 status: draft
-version: 0.1.0
+version: 1.0.0
 fhirVersion: 5.0.0
 copyrightYear: 2025+
 releaseLabel: "5"
@@ -35,6 +35,8 @@ publisher:
 pages:
   index.md:
     generation: markdown
+  general-principles.md:
+    generation: markdown
   conformance.md:
     generation: markdown
   guidance.md:
@@ -53,8 +55,8 @@ pages:
     generation: markdown
   examples.md:
     generation: markdown
-  extensions.md:
-    generation: markdown
+  # extensions.md:
+  #   generation: markdown
   
 
   # # --- PROFILES (plano) ---

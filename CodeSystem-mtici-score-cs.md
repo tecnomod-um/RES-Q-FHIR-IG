@@ -1,4 +1,4 @@
-# Modified Treatment in Cerebral Infarction Grade Score CodeSystem - v0.1.0
+# Modified Treatment in Cerebral Infarction Grade Score CodeSystem - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://tecnomod-um.org/CodeSystem/mtici-score-cs | *Version*:0.1.0 |
+| *Official URL*:http://tecnomod-um.org/CodeSystem/mtici-score-cs | *Version*:1.0.0 |
 | Draft as of 2025-03-31 | *Computable Name*:MticiScoreCS |
 
  
@@ -34,7 +34,7 @@ This CodeSystem defines the **modified Thrombolysis in Cerebral Infarction (mTIC
   "resourceType" : "CodeSystem",
   "id" : "mtici-score-cs",
   "url" : "http://tecnomod-um.org/CodeSystem/mtici-score-cs",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "MticiScoreCS",
   "title" : "Modified Treatment in Cerebral Infarction Grade Score CodeSystem",
   "status" : "draft",

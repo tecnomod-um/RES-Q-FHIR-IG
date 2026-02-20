@@ -10,7 +10,7 @@
     "valueCode" : "can-bind"
   }],
   "url" : "http://tecnomod-um.org/StructureDefinition/ischemic-stroke-etiology-ext",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "StrokeStrokeEtiologyExt",
   "title" : "Ischemic Stroke – Etiology",
   "status" : "active",

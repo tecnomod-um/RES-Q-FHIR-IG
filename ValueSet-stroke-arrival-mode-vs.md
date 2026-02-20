@@ -1,4 +1,4 @@
-# Stroke Arrival Mode ValueSet - v0.1.0
+# Stroke Arrival Mode ValueSet - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://tecnomod-um.org/ValueSet/stroke-arrival-mode-vs | *Version*:0.1.0 |
+| *Official URL*:http://tecnomod-um.org/ValueSet/stroke-arrival-mode-vs | *Version*:1.0.0 |
 | Active as of 2026-02-20 | *Computable Name*:StrokeArrivalModeVS |
 
  
@@ -49,11 +49,11 @@ ValueSet restricting the allowed values for documenting the patient's arrival mo
   "resourceType" : "ValueSet",
   "id" : "stroke-arrival-mode-vs",
   "url" : "http://tecnomod-um.org/ValueSet/stroke-arrival-mode-vs",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "StrokeArrivalModeVS",
   "title" : "Stroke Arrival Mode ValueSet",
   "status" : "active",
-  "date" : "2026-02-20T09:39:34+00:00",
+  "date" : "2026-02-20T09:50:49+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

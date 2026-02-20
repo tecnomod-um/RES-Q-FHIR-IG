@@ -1,4 +1,4 @@
-# Stroke Etiology ValueSet - v0.1.0
+# Stroke Etiology ValueSet - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://tecnomod-um.org/ValueSet/stroke-etiology-vs | *Version*:0.1.0 |
+| *Official URL*:http://tecnomod-um.org/ValueSet/stroke-etiology-vs | *Version*:1.0.0 |
 | Draft as of 2025-03-31 | *Computable Name*:StrokeEtiologyVS |
 | **Copyright/Legal**: This value set includes locally governed concepts and SNOMED CT® content. SNOMED CT® is distributed by SNOMED International. | |
 
@@ -60,7 +60,7 @@ To support classification of stroke etiology using a mix of local codes and sele
   "resourceType" : "ValueSet",
   "id" : "stroke-etiology-vs",
   "url" : "http://tecnomod-um.org/ValueSet/stroke-etiology-vs",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "StrokeEtiologyVS",
   "title" : "Stroke Etiology ValueSet",
   "status" : "draft",

@@ -1,4 +1,4 @@
-# Stroke Diagnosis Condition Profile - v0.1.0
+# Stroke Diagnosis Condition Profile - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://tecnomod-um.org/StructureDefinition/stroke-diagnosis-condition-profile | *Version*:0.1.0 |
+| *Official URL*:http://tecnomod-um.org/StructureDefinition/stroke-diagnosis-condition-profile | *Version*:1.0.0 |
 | Active as of 2025-10-07 | *Computable Name*:StrokeDiagnosisConditionProfile |
 | **Copyright/Legal**: © Tecnomod. This profile is provided for use within this Implementation Guide. | |
 
@@ -54,7 +54,7 @@ Other representations of profile: [CSV](StructureDefinition-stroke-diagnosis-con
   "resourceType" : "StructureDefinition",
   "id" : "stroke-diagnosis-condition-profile",
   "url" : "http://tecnomod-um.org/StructureDefinition/stroke-diagnosis-condition-profile",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "StrokeDiagnosisConditionProfile",
   "title" : "Stroke Diagnosis Condition Profile",
   "status" : "active",

@@ -6,10 +6,10 @@
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide RES-Q-FHIR-IG</b></p><a name="RES-Q-FHIR-IG"> </a><a name="hcRES-Q-FHIR-IG"> </a><h2>RESQIG</h2><p>The official URL for this implementation guide is: </p><pre>http://tecnomod-um.org/ImplementationGuide/RES-Q-FHIR-IG</pre></div>
   </text>
   <url value="http://tecnomod-um.org/ImplementationGuide/RES-Q-FHIR-IG"/>
-  <version value="0.1.0"/>
+  <version value="1.0.0"/>
   <name value="RESQIG"/>
   <status value="draft"/>
-  <date value="2026-02-20T09:39:34+00:00"/>
+  <date value="2026-02-20T09:50:49+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>
@@ -1175,6 +1175,12 @@
         <generation value="markdown"/>
       </page>
       <page>
+        <sourceUrl value="general-principles.html"/>
+        <name value="general-principles.html"/>
+        <title value="General Principles"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
         <sourceUrl value="conformance.html"/>
         <name value="conformance.html"/>
         <title value="Conformance"/>
@@ -1220,12 +1226,6 @@
         <sourceUrl value="examples.html"/>
         <name value="examples.html"/>
         <title value="Examples"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <sourceUrl value="extensions.html"/>
-        <name value="extensions.html"/>
-        <title value="Extensions"/>
         <generation value="markdown"/>
       </page>
     </page>

@@ -6,7 +6,7 @@
     "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem stroke-etiology-cs</b></p><a name=\"stroke-etiology-cs\"> </a><a name=\"hcstroke-etiology-cs\"> </a><p>This case-insensitive code system <code>http://tecnomod-um.org/CodeSystem/stroke-etiology-cs</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">atherosclerosis<a name=\"stroke-etiology-cs-atherosclerosis\"> </a></td><td>Stroke Etiology Atherosclerosis</td><td>Specifies that large artery atherosclerosis (for example, significant stenosis in the carotid or basilar arteries) was identified as the cause of the stroke.</td></tr><tr><td style=\"white-space:nowrap\">other<a name=\"stroke-etiology-cs-other\"> </a></td><td>Stroke Etiology Other</td><td>Specifies that the stroke etiology falls into a rarer category not covered by the main classifications, such as vasculitis or hypercoagulable states.</td></tr></table></div>"
   },
   "url" : "http://tecnomod-um.org/CodeSystem/stroke-etiology-cs",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "StrokeEtiologyCS",
   "title" : "Stroke Etiology CodeSystem",
   "status" : "active",

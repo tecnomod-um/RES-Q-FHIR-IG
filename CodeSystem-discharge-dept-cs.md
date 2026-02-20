@@ -1,4 +1,4 @@
-# Discharge Department/Service CodeSystem - v0.1.0
+# Discharge Department/Service CodeSystem - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://tecnomod-um.org/CodeSystem/discharge-dept-cs | *Version*:0.1.0 |
+| *Official URL*:http://tecnomod-um.org/CodeSystem/discharge-dept-cs | *Version*:1.0.0 |
 | Active as of 2026-02-20 | *Computable Name*:DischargeDeptCS |
 
  
@@ -37,11 +37,11 @@ Local CodeSystem representing the **clinical service/department** responsible fo
   "resourceType" : "CodeSystem",
   "id" : "discharge-dept-cs",
   "url" : "http://tecnomod-um.org/CodeSystem/discharge-dept-cs",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "DischargeDeptCS",
   "title" : "Discharge Department/Service CodeSystem",
   "status" : "active",
-  "date" : "2026-02-20T09:39:34+00:00",
+  "date" : "2026-02-20T09:50:49+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

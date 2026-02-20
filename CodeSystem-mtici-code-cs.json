@@ -6,12 +6,12 @@
     "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mtici-code-cs</b></p><a name=\"mtici-code-cs\"> </a><a name=\"hcmtici-code-cs\"> </a><p>This case-insensitive code system <code>http://tecnomod-um.org/CodeSystem/mtici-code-cs</code> defines the following code:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">mTICI<a name=\"mtici-code-cs-mTICI\"> </a></td><td>Assessment concept representing the modified Thrombolysis in Cerebral Infarction reperfusion grade to be reported as an Observation value.</td></tr></table></div>"
   },
   "url" : "http://tecnomod-um.org/CodeSystem/mtici-code-cs",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "MTICICodeCS",
   "title" : "Modified Thrombolysis in Cerebral Infarction Assessment CodeSystem",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-20T09:39:34+00:00",
+  "date" : "2026-02-20T09:50:49+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

@@ -1,4 +1,4 @@
-# StrokeBrainImagingExample - v0.1.0
+# StrokeBrainImagingExample - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)

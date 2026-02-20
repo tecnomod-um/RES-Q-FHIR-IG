@@ -17,7 +17,7 @@
      fhir:v "http://tecnomod-um.org/ValueSet/discharge-destination-vs"^^xsd:anyURI ;
      fhir:l <http://tecnomod-um.org/ValueSet/discharge-destination-vs>
   ] ; # 
-  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:version [ fhir:v "1.0.0"] ; # 
   fhir:name [ fhir:v "DischargeDestinationValueSet"] ; # 
   fhir:title [ fhir:v "Discharge Destination ValueSet"] ; # 
   fhir:status [ fhir:v "draft"] ; # 

@@ -1,7 +1,7 @@
 {
   "codeSystems" : [{
     "url" : "http://tecnomod-um.org/CodeSystem/assessment-context-cs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "AssessmentContextCS",
     "title" : "Assessment Context Code System",
@@ -9,7 +9,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BrainImagingTypeCS",
     "title" : "Brain Imaging Type CodeSystem",
@@ -17,7 +17,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/CodeSystem/discharge-dept-cs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "DischargeDeptCS",
     "title" : "Discharge Department/Service CodeSystem",
@@ -25,7 +25,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "HemorrhagicStrokeBleedingReasonCS",
     "title" : "Hemorrhagic Stroke Bleeding Reason CodeSystem",
@@ -33,7 +33,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "InitialCareIntensityCS",
     "title" : "Initial Care Intensity CodeSystem",
@@ -41,7 +41,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/CodeSystem/medication-cs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "draft",
     "name" : "MedicationCS",
     "title" : "Discharge Medication Category CodeSystem",
@@ -49,7 +49,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/CodeSystem/mrs-score-cs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "MRsScoreCS",
     "title" : "Modified Rankin Scale Score Code System",
@@ -57,7 +57,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/CodeSystem/mtici-code-cs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "MTICICodeCS",
     "title" : "Modified Thrombolysis in Cerebral Infarction Assessment CodeSystem",
@@ -65,7 +65,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/CodeSystem/mtici-score-cs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "draft",
     "name" : "MticiScoreCS",
     "title" : "Modified Treatment in Cerebral Infarction Grade Score CodeSystem",
@@ -73,7 +73,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/CodeSystem/procedure-timing-context-cs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "ProcedureTimingContextCS",
     "title" : "Procedure Timing Context CodeSystem",
@@ -81,7 +81,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "StrokeArrivalModeCS",
     "title" : "Stroke Arrival Mode CodeSystem",
@@ -89,7 +89,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "StrokeCircumstanceCodesCS",
     "title" : "Stroke Circumstance Codes CodeSystem",
@@ -97,7 +97,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/CodeSystem/stroke-discharge-destination-cs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "StrokeDischargeDestinationCS",
     "title" : "Stroke Discharge Destination CodeSystem",
@@ -105,7 +105,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/CodeSystem/stroke-etiology-cs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "StrokeEtiologyCS",
     "title" : "Stroke Etiology CodeSystem",
@@ -113,7 +113,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "StrokeProcNotDoneReasonCS",
     "title" : "Stroke Procedure Not Done Reasons CodeSystem",
@@ -121,7 +121,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/CodeSystem/swallow-procedures-cs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "SwallowProceduresCS",
     "title" : "Swallow Procedures CodeSystem",
@@ -129,7 +129,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/CodeSystem/swallow-screen-time-cs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "SwallowScreenTimeCS",
     "title" : "Swallowing Screening Timing Category CodeSystem",
@@ -137,7 +137,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/CodeSystem/thrombectomy-complication-cs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "ThrombectomyComplicationCS",
     "title" : "Thrombectomy Complication CodeSystem",
@@ -145,7 +145,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "TimingMetricCodesCS",
     "title" : "Stroke Timing Metric Codes CodeSystem",

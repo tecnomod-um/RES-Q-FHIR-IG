@@ -1,4 +1,4 @@
-# RES-Q-FHIR-IG#0.1.0: null
+# RES-Q-FHIR-IG#1.0.0: null
 
 ## Pages
 
@@ -6,12 +6,12 @@
 * [Guidance](guidance.md)
 * [Profiles](profiles.md)
 * [Valuesets](valuesets.md)
-* [Extensions](extensions.md)
 * [Artifacts Summary](artifacts.md)
 * [Codesystems](codesystems.md)
 * [Conformance](conformance.md)
 * [History](history.md)
 * [Examples](examples.md)
+* [General Principles](general-principles.md)
 * [Downloads](downloads.md)
 
 ## Resources

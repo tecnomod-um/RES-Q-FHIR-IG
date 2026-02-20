@@ -1,4 +1,4 @@
-# Initial Care Intensity Extension - v0.1.0
+# Initial Care Intensity Extension - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://tecnomod-um.org/StructureDefinition/initial-care-intensity-ext | *Version*:0.1.0 |
+| *Official URL*:http://tecnomod-um.org/StructureDefinition/initial-care-intensity-ext | *Version*:1.0.0 |
 | Draft as of 2026-02-20 | *Computable Name*:InitialCareIntensityExtension |
 
 Extension capturing the **initial level of care** provided during the first day(s) of hospitalization for the stroke encounter.
@@ -64,11 +64,11 @@ Other representations of profile: [CSV](StructureDefinition-initial-care-intensi
     "valueCode" : "can-bind"
   }],
   "url" : "http://tecnomod-um.org/StructureDefinition/initial-care-intensity-ext",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "InitialCareIntensityExtension",
   "title" : "Initial Care Intensity Extension",
   "status" : "draft",
-  "date" : "2026-02-20T09:39:34+00:00",
+  "date" : "2026-02-20T09:50:49+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

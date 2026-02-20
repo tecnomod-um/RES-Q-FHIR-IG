@@ -1,4 +1,4 @@
-# Stroke Symptom Onset Time Extension - v0.1.0
+# Stroke Symptom Onset Time Extension - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://tecnomod-um.org/StructureDefinition/onset-time-ext | *Version*:0.1.0 |
+| *Official URL*:http://tecnomod-um.org/StructureDefinition/onset-time-ext | *Version*:1.0.0 |
 | Active as of 2025-10-07 | *Computable Name*:OnsetTimeExt |
 
 Extension capturing the **clock time** of symptom onset for the index stroke event.
@@ -66,7 +66,7 @@ Other representations of profile: [CSV](StructureDefinition-onset-time-ext.csv),
     "valueCode" : "can-bind"
   }],
   "url" : "http://tecnomod-um.org/StructureDefinition/onset-time-ext",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "OnsetTimeExt",
   "title" : "Stroke Symptom Onset Time Extension",
   "status" : "active",

@@ -3,14 +3,14 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="stroke-proc-not-done-reason-vs"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet stroke-proc-not-done-reason-vs</b></p><a name="stroke-proc-not-done-reason-vs"> </a><a name="hcstroke-proc-not-done-reason-vs"> </a><ul><li>Include all codes defined in <a href="CodeSystem-stroke-proc-not-done-reason-cs.html"><code>http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;0.1.0</span></li></ul></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet stroke-proc-not-done-reason-vs</b></p><a name="stroke-proc-not-done-reason-vs"> </a><a name="hcstroke-proc-not-done-reason-vs"> </a><ul><li>Include all codes defined in <a href="CodeSystem-stroke-proc-not-done-reason-cs.html"><code>http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;1.0.0</span></li></ul></div>
   </text>
   <url value="http://tecnomod-um.org/ValueSet/stroke-proc-not-done-reason-vs"/>
-  <version value="0.1.0"/>
+  <version value="1.0.0"/>
   <name value="StrokeProcNotDoneReasonVS"/>
   <title value="Stroke Procedure Not Done Reason ValueSet"/>
   <status value="active"/>
-  <date value="2026-02-20T09:39:34+00:00"/>
+  <date value="2026-02-20T09:50:49+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>

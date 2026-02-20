@@ -1,4 +1,4 @@
-# Discharge Department/Service Extension - v0.1.0
+# Discharge Department/Service Extension - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://tecnomod-um.org/StructureDefinition/discharge-department-service-ext | *Version*:0.1.0 |
+| *Official URL*:http://tecnomod-um.org/StructureDefinition/discharge-department-service-ext | *Version*:1.0.0 |
 | Draft as of 2026-02-20 | *Computable Name*:DischargeDepartmentServiceExtension |
 
 Extension capturing the **clinical department/service** responsible at discharge or the service the patient is transferred to.
@@ -59,11 +59,11 @@ Other representations of profile: [CSV](StructureDefinition-discharge-department
     "valueCode" : "can-bind"
   }],
   "url" : "http://tecnomod-um.org/StructureDefinition/discharge-department-service-ext",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "DischargeDepartmentServiceExtension",
   "title" : "Discharge Department/Service Extension",
   "status" : "draft",
-  "date" : "2026-02-20T09:39:34+00:00",
+  "date" : "2026-02-20T09:50:49+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

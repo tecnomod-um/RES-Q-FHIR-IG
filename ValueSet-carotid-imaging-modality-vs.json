@@ -6,11 +6,11 @@
     "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet carotid-imaging-modality-vs</b></p><a name=\"carotid-imaging-modality-vs\"> </a><a name=\"hccarotid-imaging-modality-vs\"> </a><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/58920005\">58920005</a></td><td>Angiography of carotid artery (procedure)</td></tr><tr><td><a href=\"http://snomed.info/id/9171000087102\">9171000087102</a></td><td>Doppler ultrasonography of carotid arteries (procedure)</td></tr><tr><td><a href=\"http://snomed.info/id/396205005\">396205005</a></td><td>Computed tomography of brain without radiopaque contrast (procedure)</td></tr><tr><td><a href=\"http://snomed.info/id/1366357009\">1366357009</a></td><td>Magnetic resonance imaging angiography of intracranial artery (procedure)</td></tr></table></li></ul></div>"
   },
   "url" : "http://tecnomod-um.org/ValueSet/carotid-imaging-modality-vs",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "CarotidImagingModalityVS",
   "title" : "Carotid Arteries Imaging Modality ValueSet",
   "status" : "active",
-  "date" : "2026-02-20T09:39:34+00:00",
+  "date" : "2026-02-20T09:50:49+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

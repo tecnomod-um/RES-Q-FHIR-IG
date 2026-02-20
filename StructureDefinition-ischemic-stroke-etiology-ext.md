@@ -1,4 +1,4 @@
-# Ischemic Stroke – Etiology - v0.1.0
+# Ischemic Stroke – Etiology - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://tecnomod-um.org/StructureDefinition/ischemic-stroke-etiology-ext | *Version*:0.1.0 |
+| *Official URL*:http://tecnomod-um.org/StructureDefinition/ischemic-stroke-etiology-ext | *Version*:1.0.0 |
 | Active as of 2025-10-07 | *Computable Name*:StrokeStrokeEtiologyExt |
 
 Extension capturing the **determined ischemic stroke etiology classification**.
@@ -67,7 +67,7 @@ Other representations of profile: [CSV](StructureDefinition-ischemic-stroke-etio
     "valueCode" : "can-bind"
   }],
   "url" : "http://tecnomod-um.org/StructureDefinition/ischemic-stroke-etiology-ext",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "StrokeStrokeEtiologyExt",
   "title" : "Ischemic Stroke – Etiology",
   "status" : "active",

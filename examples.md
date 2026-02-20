@@ -1,4 +1,4 @@
-# Examples - v0.1.0
+# Examples - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * **Examples**

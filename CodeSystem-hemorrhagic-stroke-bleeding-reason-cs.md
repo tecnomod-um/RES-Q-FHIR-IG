@@ -1,4 +1,4 @@
-# Hemorrhagic Stroke Bleeding Reason CodeSystem - v0.1.0
+# Hemorrhagic Stroke Bleeding Reason CodeSystem - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs | *Version*:0.1.0 |
+| *Official URL*:http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs | *Version*:1.0.0 |
 | Active as of 2025-10-07 | *Computable Name*:HemorrhagicStrokeBleedingReasonCS |
 | **Copyright/Legal**: © Tecnomod. This CodeSystem is provided for use within this Implementation Guide. | |
 
@@ -34,7 +34,7 @@ To provide locally governed codes for the identified cause of bleeding in hemorr
   "resourceType" : "CodeSystem",
   "id" : "hemorrhagic-stroke-bleeding-reason-cs",
   "url" : "http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "HemorrhagicStrokeBleedingReasonCS",
   "title" : "Hemorrhagic Stroke Bleeding Reason CodeSystem",
   "status" : "active",

@@ -27,11 +27,11 @@
      fhir:v "http://tecnomod-um.org/StructureDefinition/swallowing-screening-timing-category-ext"^^xsd:anyURI ;
      fhir:l <http://tecnomod-um.org/StructureDefinition/swallowing-screening-timing-category-ext>
   ] ; # 
-  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:version [ fhir:v "1.0.0"] ; # 
   fhir:name [ fhir:v "SwallowingScreeningTimingCategoryExt"] ; # 
   fhir:title [ fhir:v "Swallowing Screening Timing Category Extension"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-02-20T09:39:34+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-20T09:50:49+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;

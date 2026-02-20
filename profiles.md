@@ -1,4 +1,4 @@
-# Profiles - v0.1.0
+# Profiles - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * **Profiles**

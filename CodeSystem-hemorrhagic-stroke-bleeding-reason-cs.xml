@@ -6,7 +6,7 @@
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem hemorrhagic-stroke-bleeding-reason-cs</b></p><a name="hemorrhagic-stroke-bleeding-reason-cs"> </a><a name="hchemorrhagic-stroke-bleeding-reason-cs"> </a><p>This case-insensitive code system <code>http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs</code> defines the following code:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">other<a name="hemorrhagic-stroke-bleeding-reason-cs-other"> </a></td><td>Bleeding Reason Other</td><td>Another, less common or unspecified cause of intracranial hemorrhage was identified</td></tr></table></div>
   </text>
   <url value="http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs"/>
-  <version value="0.1.0"/>
+  <version value="1.0.0"/>
   <name value="HemorrhagicStrokeBleedingReasonCS"/>
   <title value="Hemorrhagic Stroke Bleeding Reason CodeSystem"/>
   <status value="active"/>

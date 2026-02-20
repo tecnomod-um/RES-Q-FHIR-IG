@@ -10,7 +10,7 @@
     "valueCode" : "can-bind"
   }],
   "url" : "http://tecnomod-um.org/StructureDefinition/onset-date-ext",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "OnsetDateExt",
   "title" : "Stroke Symptom Onset Date Extension",
   "status" : "active",

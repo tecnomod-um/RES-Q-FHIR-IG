@@ -6,11 +6,11 @@
     "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem stroke-circumstance-codes-cs</b></p><a name=\"stroke-circumstance-codes-cs\"> </a><a name=\"hcstroke-circumstance-codes-cs\"> </a><p>This  code system <code>http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">in-hospital<a name=\"stroke-circumstance-codes-cs-in-hospital\"> </a></td><td>In-hospital Stroke</td><td>Indicates that stroke onset occurred while the patient was already admitted to the hospital for another reason (inpatient onset).</td></tr><tr><td style=\"white-space:nowrap\">wake-up<a name=\"stroke-circumstance-codes-cs-wake-up\"> </a></td><td>Wake-up Stroke</td><td>Indicates that stroke symptoms were first recognized on awakening from sleep, implying an unknown onset time within the sleep interval (time last known well precedes symptom recognition).</td></tr></table></div>"
   },
   "url" : "http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "StrokeCircumstanceCodesCS",
   "title" : "Stroke Circumstance Codes CodeSystem",
   "status" : "active",
-  "date" : "2026-02-20T09:39:34+00:00",
+  "date" : "2026-02-20T09:50:49+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

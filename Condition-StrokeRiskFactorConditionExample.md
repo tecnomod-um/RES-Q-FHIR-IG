@@ -1,4 +1,4 @@
-# StrokeRiskFactorConditionExample - v0.1.0
+# StrokeRiskFactorConditionExample - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)

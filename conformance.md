@@ -1,4 +1,4 @@
-# Conformance - v0.1.0
+# Conformance - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * **Conformance**
@@ -11,9 +11,9 @@ This section explains how implementers can claim conformance to the **RES-Q Stro
 
 The RES-Q interoperability pattern is **submission-oriented** (registry ingestion), not a generic “query-first” FHIR ecosystem. Conformance is therefore framed around the ability to **produce, transform, validate, and ingest** FHIR R5 resources that comply with this IG.
 
-## Exchange Pattern and Roles
+### Exchange Pattern and Roles
 
-### High-level data flow
+#### High-level data flow
 
 1. **Source Data Provider (Hospital / EHR / Stroke Unit System)**exports raw stroke-related data (often form-derived or extracted from clinical systems).
 1. **Data Transformer (Mapping / ETL / Integration Layer)**converts the raw data into an HL7 FHIR R5**Bundle**conformant to this IG (profiles, terminology, invariants).
@@ -21,7 +21,7 @@ The RES-Q interoperability pattern is **submission-oriented** (registry ingestio
 
 FHIR is used here as a **standardized communication model** to reduce ambiguity, improve semantic clarity, and support predictable downstream transformation into the registry database.
 
-### Conformance roles
+#### Conformance roles
 
 This IG distinguishes conformance expectations by role:
 
@@ -31,7 +31,7 @@ This IG distinguishes conformance expectations by role:
 
 In most deployments, the **Data Transformer** is the conformance-critical component on the producer side, because it is responsible for generating resources that validate against this IG.
 
-## What This IG Defines (Scope of Conformance)
+### What This IG Defines (Scope of Conformance)
 
 This IG defines:
 
@@ -43,11 +43,11 @@ This IG defines:
 
 This IG does not require implementers to expose a complete FHIR server API unless explicitly stated for a given deployment.
 
-## Claiming Conformance
+### Claiming Conformance
 
 An implementation **conforms** to this IG if it satisfies all applicable requirements below for its conformance role (Producer and/or Receiver).
 
-### Producer conformance (Bundle creation)
+#### Producer conformance (Bundle creation)
 
 A Producer conforms if it:
 
@@ -58,7 +58,7 @@ A Producer conforms if it:
 1. Uses the correct**terminology bindings**(Required/Extensible/Preferred/Example) and appropriate CodeSystems.
 1. Produces a Bundle with references that are internally consistent and resolvable (see Bundle Requirements).
 
-### Receiver conformance (registry ingestion)
+#### Receiver conformance (registry ingestion)
 
 A Receiver conforms if it:
 
@@ -68,9 +68,9 @@ A Receiver conforms if it:
 1. Processes required terminology bindings and correctly interprets local CodeSystems defined by this IG.
 1. Provides actionable validation feedback (at minimum: which resource failed, which profile/rule failed, and why).
 
-## Bundle Requirements
+### Bundle Requirements
 
-### Bundle type (transaction only)
+#### Bundle type (transaction only)
 
 All submissions to the registry **SHALL** use:
 
@@ -98,7 +98,7 @@ This IG assumes a **transaction-only** submission pattern. Other Bundle types (e
 * References between resources (e.g., `Observation.subject`, `Observation.encounter`, `Procedure.subject`, `Condition.encounter`) must resolve to entries included in the same transaction Bundle, unless the integration contract explicitly allows external references.
  
 
-### Minimal reference integrity
+#### Minimal reference integrity
 
 A submitted transaction Bundle SHOULD include and maintain reference integrity for:
 
@@ -108,7 +108,7 @@ A submitted transaction Bundle SHOULD include and maintain reference integrity f
 
 References SHOULD be resolvable within the Bundle (contained or full resources in the same Bundle) unless an implementation contract explicitly allows external references.
 
-### Episode anchoring expectation
+#### Episode anchoring expectation
 
 Resources representing data for the index stroke episode SHOULD reference the index stroke encounter using:
 
@@ -117,9 +117,9 @@ Resources representing data for the index stroke episode SHOULD reference the in
 
 This supports registry ingestion logic and episode-level analytics.
 
-## Must Support
+### Must Support
 
-### Definition (pragmatic registry interpretation)
+#### Definition (pragmatic registry interpretation)
 
 If an element is marked **Must Support (MS)** in this IG:
 
@@ -127,11 +127,11 @@ If an element is marked **Must Support (MS)** in this IG:
 * **Receiver** SHALL be able to **receive, process, and preserve** the element when it is present.
 * If the element is not available from the source data, the Producer SHALL follow the “Data Absent / Unknown” guidance below rather than inventing values.
 
-### Choice types
+#### Choice types
 
 Where profiles allow multiple data types (e.g., `effective[x]`, `occurrence[x]`, `value[x]`), Producers SHALL support at least one of the allowed types as constrained by the profile and examples. Receivers SHALL accept all types allowed by the profile (or clearly document any imposed limitation in the integration contract).
 
-## Cardinality and Invariants
+### Cardinality and Invariants
 
 * **Cardinality** is authoritative: resources SHALL satisfy minimum and maximum occurrences for each element.
 * **Invariants** (FHIRPath) are required constraints: 
@@ -145,7 +145,7 @@ Examples of typical constraints in this IG include:
 * If a procedure outcome field is present, the corresponding procedure context must match (e.g., complications only for completed thrombectomy).
 * Timing or context extensions must be present for specific completed assessments.
 
-## Terminology Binding Strength
+### Terminology Binding Strength
 
 This IG uses FHIR binding strengths to ensure consistent coding:
 
@@ -153,14 +153,14 @@ This IG uses FHIR binding strengths to ensure consistent coding:
 * **Extensible:** Use concepts from the ValueSet when possible; other concepts are allowed only if no suitable match exists.
 * **Preferred / Example:** Recommended for interoperability but not enforced.
 
-### SNOMED CT first, local codes when necessary
+#### SNOMED CT first, local codes when necessary
 
 * **SNOMED CT** is the primary terminology for clinical meaning (diagnoses, procedures, observable entities, qualifiers).
 * Where SNOMED CT does not provide a suitable concept (or where the registry needs a stable categorical answer set), this IG defines **local CodeSystems** and includes them in bound ValueSets.
 
 Receivers SHALL recognize and correctly interpret local CodeSystems defined by this IG.
 
-## Data Absent / Unknown
+### Data Absent / Unknown
 
 Stroke registry data often contains missing, unknown, or not-applicable fields. Implementations SHALL represent missingness explicitly and consistently:
 
@@ -168,26 +168,26 @@ Stroke registry data often contains missing, unknown, or not-applicable fields. 
 
 This avoids conflating “unknown” with “negative” and improves analytic validity.
 
-## Producer Guidance (Mapping and Transformation)
+### Producer Guidance (Mapping and Transformation)
 
-### Raw data to FHIR transformation
+#### Raw data to FHIR transformation
 
 The Data Transformer SHOULD:
 
 * Map each source field to: 1) a FHIR resource type (Encounter, Condition, Procedure, Observation, MedicationRequest, MedicationStatement), 2) the profile defined by this IG, 3) the specific constrained element and binding, 4) an appropriate timing strategy (timestamp vs timing-context extension).
 * Preserve semantic intent (e.g., “procedure not performed due to time window” must map to `status=not-done` + `statusReason` with the controlled code).
 
-### Timing data strategy
+#### Timing data strategy
 
 * Use precise timestamps (`effective[x]`, `occurrence[x]`) where available.
 * Use timing-context extensions when only a phase/category is known or when the registry requires standard reporting categories (e.g., acute/post-acute, within 4 hours, baseline/discharge/90-day).
 
-### Medication modeling
+#### Medication modeling
 
 * Use `MedicationRequest` for discharge prescriptions/orders.
 * Use `MedicationStatement` for prior/home medication exposure and adherence status before the index encounter.
 
-## Receiver Guidance (Ingestion and Transformation)
+### Receiver Guidance (Ingestion and Transformation)
 
 The Registry Receiver SHOULD:
 
@@ -200,7 +200,7 @@ The Registry Receiver SHOULD:
 * and conformance-critical fields (Must Support, required bindings).
  
 
-## Security and Privacy (Informative)
+### Security and Privacy (Informative)
 
 Implementations SHALL:
 

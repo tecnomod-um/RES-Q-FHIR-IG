@@ -1,4 +1,4 @@
-# Atrial Fibrillation / Flutter Assessment Status ValueSet - v0.1.0
+# Atrial Fibrillation / Flutter Assessment Status ValueSet - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://tecnomod-um.org/ValueSet/afib-flutter-status-vs | *Version*:0.1.0 |
+| *Official URL*:http://tecnomod-um.org/ValueSet/afib-flutter-status-vs | *Version*:1.0.0 |
 | Active as of 2025-03-31 | *Computable Name*:AfibFlutterStatusVS |
 
  
@@ -54,7 +54,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "resourceType" : "ValueSet",
   "id" : "afib-flutter-status-vs",
   "url" : "http://tecnomod-um.org/ValueSet/afib-flutter-status-vs",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "AfibFlutterStatusVS",
   "title" : "Atrial Fibrillation / Flutter Assessment Status ValueSet",
   "status" : "active",

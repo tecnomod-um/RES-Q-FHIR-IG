@@ -1,4 +1,4 @@
-# Stroke Arrival Mode CodeSystem - v0.1.0
+# Stroke Arrival Mode CodeSystem - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs | *Version*:0.1.0 |
+| *Official URL*:http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs | *Version*:1.0.0 |
 | Active as of 2026-02-20 | *Computable Name*:StrokeArrivalModeCS |
 
  
@@ -38,12 +38,12 @@ Local CodeSystem describing **how and from where** the patient arrived to the tr
   "resourceType" : "CodeSystem",
   "id" : "stroke-arrival-mode-cs",
   "url" : "http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "StrokeArrivalModeCS",
   "title" : "Stroke Arrival Mode CodeSystem",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-20T09:39:34+00:00",
+  "date" : "2026-02-20T09:50:49+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

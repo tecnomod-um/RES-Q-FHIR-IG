@@ -1,4 +1,4 @@
-# Brain Imaging Modality ValueSet - v0.1.0
+# Brain Imaging Modality ValueSet - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://tecnomod-um.org/ValueSet/brain-imaging-modality-vs | *Version*:0.1.0 |
+| *Official URL*:http://tecnomod-um.org/ValueSet/brain-imaging-modality-vs | *Version*:1.0.0 |
 | Active as of 2026-02-20 | *Computable Name*:BrainImagingModalityVS |
 
  
@@ -50,11 +50,11 @@ It intentionally supports two levels of coding: 1) **Granular SNOMED CT procedur
   "resourceType" : "ValueSet",
   "id" : "brain-imaging-modality-vs",
   "url" : "http://tecnomod-um.org/ValueSet/brain-imaging-modality-vs",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "BrainImagingModalityVS",
   "title" : "Brain Imaging Modality ValueSet",
   "status" : "active",
-  "date" : "2026-02-20T09:39:34+00:00",
+  "date" : "2026-02-20T09:50:49+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

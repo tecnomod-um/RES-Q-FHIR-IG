@@ -1,4 +1,4 @@
-# Stroke Functional Score Observation Profile - v0.1.0
+# Stroke Functional Score Observation Profile - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://tecnomod-um.org/StructureDefinition/functional-score-observation-profile | *Version*:0.1.0 |
+| *Official URL*:http://tecnomod-um.org/StructureDefinition/functional-score-observation-profile | *Version*:1.0.0 |
 | Draft as of 2026-02-20 | *Computable Name*:FunctionalScoreObservationProfile |
 
  
@@ -49,11 +49,11 @@ Other representations of profile: [CSV](StructureDefinition-functional-score-obs
   "resourceType" : "StructureDefinition",
   "id" : "functional-score-observation-profile",
   "url" : "http://tecnomod-um.org/StructureDefinition/functional-score-observation-profile",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "FunctionalScoreObservationProfile",
   "title" : "Stroke Functional Score Observation Profile",
   "status" : "draft",
-  "date" : "2026-02-20T09:39:34+00:00",
+  "date" : "2026-02-20T09:50:49+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

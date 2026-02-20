@@ -1,4 +1,4 @@
-# Patient Age (integer) - v0.1.0
+# Patient Age (integer) - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://tecnomod-um.org/StructureDefinition/patient-age-ext | *Version*:0.1.0 |
+| *Official URL*:http://tecnomod-um.org/StructureDefinition/patient-age-ext | *Version*:1.0.0 |
 | Draft as of 2026-02-20 | *Computable Name*:PatientAge |
 
 Patient age in years represented as an integer.
@@ -47,11 +47,11 @@ Other representations of profile: [CSV](StructureDefinition-patient-age-ext.csv)
     "valueCode" : "can-bind"
   }],
   "url" : "http://tecnomod-um.org/StructureDefinition/patient-age-ext",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "PatientAge",
   "title" : "Patient Age (integer)",
   "status" : "draft",
-  "date" : "2026-02-20T09:39:34+00:00",
+  "date" : "2026-02-20T09:50:49+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

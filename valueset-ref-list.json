@@ -32,7 +32,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/ValueSet/admission-source-vs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "draft",
     "name" : "AdmissionSourceValueSet",
     "title" : "Admission Sources ValueSet",
@@ -41,7 +41,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/ValueSet/afib-flutter-status-vs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "AfibFlutterStatusVS",
     "title" : "Atrial Fibrillation / Flutter Assessment Status ValueSet",
@@ -50,7 +50,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/ValueSet/assessment-context-vs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "AssessmentContextVS",
     "title" : "Assessment Context ValueSet",
@@ -62,7 +62,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/ValueSet/brain-imaging-modality-vs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "BrainImagingModalityVS",
     "title" : "Brain Imaging Modality ValueSet",
@@ -75,7 +75,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/ValueSet/carotid-imaging-modality-vs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "CarotidImagingModalityVS",
     "title" : "Carotid Arteries Imaging Modality ValueSet",
@@ -84,7 +84,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/ValueSet/discharge-dept-vs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "DischargeDeptVS",
     "title" : "Discharge Department/Service ValueSet",
@@ -96,7 +96,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/ValueSet/discharge-destination-vs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "draft",
     "name" : "DischargeDestinationValueSet",
     "title" : "Discharge Destination ValueSet",
@@ -105,7 +105,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/ValueSet/functional-score-codes-vs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "FunctionalScoreCodesVS",
     "title" : "Stroke Functional Score Codes ValueSet",
@@ -117,7 +117,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/ValueSet/hemorrhagic-stroke-bleeding-reason-vs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "draft",
     "name" : "HemorrhagicStrokeBleedingReasonVS",
     "title" : "Hemorrhagic Stroke Bleeding Reason ValueSet",
@@ -130,7 +130,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/ValueSet/initial-care-intensity-vs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "InitialCareIntensityVS",
     "title" : "Initial Care Intensity ValueSet",
@@ -142,7 +142,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/ValueSet/medication-vs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "draft",
     "name" : "MedicationVS",
     "title" : "Discharge Medications ValueSet",
@@ -156,7 +156,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/ValueSet/mrs-score-vs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "MRsScoreVS",
     "title" : "Modified Rankin Scale (mRS) Score ValueSet",
@@ -168,7 +168,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/ValueSet/mtici-code-vs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "MTICICodeVS",
     "title" : "Modified Thrombolysis in Cerebral Infarction Assessment ValueSet",
@@ -180,7 +180,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/ValueSet/mtici-score-vs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "draft",
     "name" : "MTICIScoreValueSet",
     "title" : "Modified Treatment in Cerebral Infarction Grade Score ValueSet",
@@ -189,7 +189,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/ValueSet/perforation-procedures-vs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "draft",
     "name" : "PerforationProceduresValueset",
     "title" : "Perforation Procedures ValueSet",
@@ -201,7 +201,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/ValueSet/procedure-timing-context-vs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "ProcedureTimingContextVS",
     "title" : "Procedure Timing Context ValueSet",
@@ -213,7 +213,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/ValueSet/specific-finding-codes-vs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "SpecificFindingCodesVS",
     "title" : "Specific Stroke Finding Codes ValueSet",
@@ -225,7 +225,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/ValueSet/stroke-arrival-mode-vs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "StrokeArrivalModeVS",
     "title" : "Stroke Arrival Mode ValueSet",
@@ -237,7 +237,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/ValueSet/stroke-circumstance-codes-vs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "StrokeCircumstanceCodesVS",
     "title" : "Stroke Circumstance Codes ValueSet",
@@ -249,7 +249,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/ValueSet/stroke-diagnosis-vs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "StrokeDiagnosisVS",
     "title" : "Stroke Diagnosis ValueSet",
@@ -261,7 +261,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/ValueSet/stroke-discharge-destination-vs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "StrokeDischargeDestinationVS",
     "title" : "Stroke Discharge Destination ValueSet",
@@ -274,7 +274,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/ValueSet/stroke-etiology-vs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "draft",
     "name" : "StrokeEtiologyVS",
     "title" : "Stroke Etiology ValueSet",
@@ -287,7 +287,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/ValueSet/stroke-finding-codes-vs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "StrokeFindingCodesVS",
     "title" : "Specific Stroke Finding Codes ValueSet",
@@ -300,7 +300,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/ValueSet/stroke-proc-not-done-reason-vs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "StrokeProcNotDoneReasonVS",
     "title" : "Stroke Procedure Not Done Reason ValueSet",
@@ -315,7 +315,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/ValueSet/stroke-risk-factor-vs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "StrokeRiskFactorValueSet",
     "title" : "Stroke Risk Factor ValueSet",
@@ -327,7 +327,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/ValueSet/swallow-procedures-vs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "draft",
     "name" : "SwallowProceduresValueset",
     "title" : "Swallow Procedures ValueSet",
@@ -340,7 +340,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/ValueSet/swallowing-screening-timing-category-vs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "SwallowingScreeningTimingCategoryVS",
     "title" : "Swallowing Screening Timing Category ValueSet",
@@ -353,7 +353,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/ValueSet/thrombectomy-complication-vs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "ThrombectomyComplicationVS",
     "title" : "Thrombectomy Complications ValueSet",
@@ -363,7 +363,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/ValueSet/timing-metric-codes-vs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "TimingMetricCodesVS",
     "title" : "Stroke Timing Metric Codes ValueSet",
@@ -375,7 +375,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/ValueSet/vital-sign-codes-vs",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "VitalSignCodesVS",
     "title" : "Stroke Vital Sign Codes ValueSet",
@@ -387,7 +387,7 @@
   },
   {
     "url" : "http://tecnomod-um.org/ValueSet/vs-gender-snomed",
-    "version" : "0.1.0",
+    "version" : "1.0.0",
     "status" : "active",
     "name" : "GenderSNOMEDVS",
     "title" : "Gender (SNOMED CT)",

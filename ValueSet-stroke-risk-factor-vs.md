@@ -1,4 +1,4 @@
-# Stroke Risk Factor ValueSet - v0.1.0
+# Stroke Risk Factor ValueSet - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://tecnomod-um.org/ValueSet/stroke-risk-factor-vs | *Version*:0.1.0 |
+| *Official URL*:http://tecnomod-um.org/ValueSet/stroke-risk-factor-vs | *Version*:1.0.0 |
 | Active as of 2025-10-07 | *Computable Name*:StrokeRiskFactorValueSet |
 | **Copyright/Legal**: This value set includes SNOMED CT® content. SNOMED CT® is distributed by SNOMED International. | |
 
@@ -61,7 +61,7 @@ To provide a standardized set of SNOMED CT concepts representing stroke-related 
   "resourceType" : "ValueSet",
   "id" : "stroke-risk-factor-vs",
   "url" : "http://tecnomod-um.org/ValueSet/stroke-risk-factor-vs",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "StrokeRiskFactorValueSet",
   "title" : "Stroke Risk Factor ValueSet",
   "status" : "active",

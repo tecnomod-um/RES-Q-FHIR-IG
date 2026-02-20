@@ -1,4 +1,4 @@
-# Modified Rankin Scale (mRS) Score ValueSet - v0.1.0
+# Modified Rankin Scale (mRS) Score ValueSet - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://tecnomod-um.org/ValueSet/mrs-score-vs | *Version*:0.1.0 |
+| *Official URL*:http://tecnomod-um.org/ValueSet/mrs-score-vs | *Version*:1.0.0 |
 | Active as of 2026-02-20 | *Computable Name*:MRsScoreVS |
 
  
@@ -49,12 +49,12 @@ This ValueSet includes all mRS grades (0–6) defined in MRsScoreCS.
   "resourceType" : "ValueSet",
   "id" : "mrs-score-vs",
   "url" : "http://tecnomod-um.org/ValueSet/mrs-score-vs",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "MRsScoreVS",
   "title" : "Modified Rankin Scale (mRS) Score ValueSet",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-20T09:39:34+00:00",
+  "date" : "2026-02-20T09:50:49+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

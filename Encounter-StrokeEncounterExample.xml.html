@@ -1,86 +1,84 @@
-
-
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML>
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>StrokeEncounterExample - XML Representation -  v0.1.0</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>StrokeEncounterExample - XML Representation -  v1.0.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
 
-    <link href="fhir.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="fhir.css"/>
 
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
 
-    <!-- Project extras -->
-    <link href="assets/css/project.css" rel="stylesheet"/>
-    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
-    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
-  	<link href="assets/css/prism.css" rel="stylesheet" />
-  	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- Placeholder for child template CSS declarations -->
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+  	<link rel="stylesheet" href="assets/css/cqf.css"/>
+      <!-- Placeholder for child template CSS declarations -->
 
-    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
     <script src="assets/js/html5shiv.js"></script>
     <script src="assets/js/respond.min.js"></script>
-    <![endif]-->
+    <![endif] -->
 
-    <!-- Favicons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+      <!-- Favicons -->
+    <link sizes="144x144" rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-72.png"/>
     <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-    <script type="text/javascript" src="assets/js/mermaid.js"></script>
-    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <script src="assets/js/mermaid.js" type="text/javascript"></script>
+    <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
     <style type="text/css">h2{--heading-prefix:"11.97"}
     h3,h4,h5,h6{--heading-prefix:"11.97"}</style>
-    <div id="segment-header" class="segment">  <!-- segment-header -->
-      <div class="container">  <!-- container -->
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
 
-        <!-- Placeholder for child template header declarations -->
+          <!-- Placeholder for child template header declarations -->
 
 
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold"></span>
             <br/>
-            <span style="display:inline-block;">0.1.0 - 5
+            <span style="display:inline-block;">1.0.0 - 5
 
 
             </span>
           </p>
         </div>
-      </div> <!-- /container -->
-    </div>  <!-- /segment-header -->
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
 
-    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
       <div id="stripe"> </div>
-      <div class="container">  <!-- container -->
-        <!-- HEADER CONTENT -->
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
 
         <nav class="navbar navbar-inverse">
-          <!--status-bar-->
+            <!-- status-bar -->
           <div class="container">
-            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
               <span class="icon-bar"> </span>
               <span class="icon-bar"> </span>
               <span class="icon-bar"> </span>
             </button>
-            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R5/index.html">FHIR</a>
+            <a href="http://hl7.org/fhir/R5/index.html" class="navbar-brand hidden">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <!-- menu.xml  -->
+                <!-- menu.xml -->
 
-<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+<ul class="nav navbar-nav">
   <li>
     <a href="index.html">Home</a>
   </li>
@@ -98,7 +96,7 @@
       <li>
         <a href="profiles.html">Profiles</a>
       </li>
-      <li>
+      <li><a name="l169">​</a>
         <a href="extensions.html">Extensions</a>
       </li>
       <li>
@@ -122,31 +120,31 @@
     <a href="history.html">Change Log</a>
   </li>
 </ul>
-            </div>  <!-- /.nav-collapse -->
-          </div>  <!-- /.container -->
-        </nav>  <!-- /.navbar -->
-      <!-- /HEADER CONTENT -->
-      </div>  <!-- /container -->
-    </div>  <!-- /segment-navbar -->
-    <!--status-bar-->
+            </div>    <!-- /.nav-collapse -->
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
 
-    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
-      <div class="container">  <!-- container -->
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>StrokeEncounterExample</b></li>
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><a href="artifacts.html"><b>Artifacts Summary</b></a></li><li><b>StrokeEncounterExample</b></li>
 
         </ul>
-      </div>  <!-- /container -->
-    </div>  <!-- /segment-breadcrumb -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
 
     <a name="top"> </a>
-    <div id="segment-content" class="segment">  <!-- segment-content -->
-      <div class="container">  <!-- container -->
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
         <div class="row">
           <div class="inner-wrapper">
 
 <div style="counter-reset: section 7" class="col-12">
-<!--ReleaseHeader--><p id="publish-box">RESQIG - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://tecnomod-um.org/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!-- ReleaseHeader --><p id="publish-box">RESQIG - Local Development build (v1.0.0) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="http://tecnomod-um.org/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
 
 
 
@@ -195,109 +193,109 @@
 <h2 id="root">: StrokeEncounterExample - XML Representation</h2>
 
 
-<p><a href="Encounter-StrokeEncounterExample.xml" no-download="true">Raw xml</a> | <a href="Encounter-StrokeEncounterExample.xml" download>Download</a></p>
+<p><a href="Encounter-StrokeEncounterExample.xml" no-download="true">Raw xml</a> | <a download="null" href="Encounter-StrokeEncounterExample.xml">Download</a></p>
 
-  <!-- insert intro if present -->
+    <!-- insert intro if present -->
   
 
 
 
-  <pre class="xml" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-xml" style="white-space: pre; text-wrap: nowrap;">
-&lt;<a href="http://hl7.org/fhir/R5/encounter.html#XEncounter">Encounter</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
-  &lt;<a href="http://hl7.org/fhir/R5/resource.html#XEncounter.id">id</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">value</a>=&quot;StrokeEncounterExample&quot;/&gt;
+  <pre style="white-space: pre; text-wrap: nowrap; width: auto;" class="xml" data-fhir="generated"><code style="white-space: pre; text-wrap: nowrap;" class="language-xml">
+&lt;<a href="http://hl7.org/fhir/R5/encounter.html#XEncounter">Encounter</a> xmlns="http://hl7.org/fhir"&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/resource.html#XEncounter.id">id</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">value</a>="StrokeEncounterExample"/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/resource.html#XEncounter.meta">meta</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R5/resource.html#Meta#XMeta.profile">profile</a>
-             <a href="http://hl7.org/fhir/R5/datatypes.html#canonical">value</a>=&quot;http://tecnomod-um.org/StructureDefinition/stroke-encounter-profile&quot;/&gt;
+             <a href="http://hl7.org/fhir/R5/datatypes.html#canonical">value</a>="http://tecnomod-um.org/StructureDefinition/stroke-encounter-profile"/&gt;
   &lt;/<a href="http://hl7.org/fhir/R5/resource.html#XEncounter.meta">meta</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R5/domainresource.html#XEncounter.text">text</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/R5/narrative.html#Narrative#XNarrative.status">status</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;extensions&quot;/&gt;
-    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: Encounter StrokeEncounterExample&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;StrokeEncounterExample&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcStrokeEncounterExample&quot;&gt; &lt;/a&gt;&lt;div style=&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%&quot;&gt;&lt;p style=&quot;margin-bottom: 0px&quot;/&gt;&lt;p style=&quot;margin-bottom: 0px&quot;&gt;Profile: &lt;a href=&quot;StructureDefinition-stroke-encounter-profile.html&quot;&gt;Stroke Encounter Profile&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;First Hospital Indicator Extension&lt;/b&gt;: true&lt;/p&gt;&lt;p&gt;&lt;b&gt;Initial Care Intensity Extension&lt;/b&gt;: &lt;span title=&quot;Codes:{http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs icu-stroke}&quot;&gt;ICU / Stroke Unit&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Required Post-Acute Care Extension&lt;/b&gt;: false&lt;/p&gt;&lt;p&gt;&lt;b&gt;Discharge Department/Service Extension&lt;/b&gt;: &lt;span title=&quot;Codes:{http://tecnomod-um.org/CodeSystem/discharge-dept-cs neurology}&quot;&gt;Neurology&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Completed&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=&quot;Codes:&quot;&gt;Inpatient Encounter&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=&quot;Patient-example-patient.html&quot;&gt;Anonymous Patient (no stated gender), DoB Unknown&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;actualPeriod&lt;/b&gt;: 2025-03-01 08:00:00+0000 --&amp;gt; 2025-03-10 12:00:00+0000&lt;/p&gt;&lt;h3&gt;Admissions&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;AdmitSource&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;DischargeDisposition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;*&lt;/td&gt;&lt;td&gt;&lt;span title=&quot;Codes:{http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs ems-home}&quot;&gt;EMS from Home&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span title=&quot;Codes:{http://snomed.info/sct 306689006}&quot;&gt;Discharge to home (procedure)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+    &lt;<a href="http://hl7.org/fhir/R5/narrative.html#Narrative#XNarrative.status">status</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>="extensions"/&gt;
+    &lt;div xmlns="http://www.w3.org/1999/xhtml"&gt;&lt;p class="res-header-id"&gt;&lt;b&gt;Generated Narrative: Encounter StrokeEncounterExample&lt;/b&gt;&lt;/p&gt;&lt;a name="StrokeEncounterExample"&gt; &lt;/a&gt;&lt;a name="hcStrokeEncounterExample"&gt; &lt;/a&gt;&lt;div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"&gt;&lt;p style="margin-bottom: 0px"/&gt;&lt;p style="margin-bottom: 0px"&gt;Profile: &lt;a href="StructureDefinition-stroke-encounter-profile.html"&gt;Stroke Encounter Profile&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;First Hospital Indicator Extension&lt;/b&gt;: true&lt;/p&gt;&lt;p&gt;&lt;b&gt;Initial Care Intensity Extension&lt;/b&gt;: &lt;span title="Codes:{http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs icu-stroke}"&gt;ICU / Stroke Unit&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Required Post-Acute Care Extension&lt;/b&gt;: false&lt;/p&gt;&lt;p&gt;&lt;b&gt;Discharge Department/Service Extension&lt;/b&gt;: &lt;span title="Codes:{http://tecnomod-um.org/CodeSystem/discharge-dept-cs neurology}"&gt;Neurology&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Completed&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title="Codes:"&gt;Inpatient Encounter&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href="Patient-example-patient.html"&gt;Anonymous Patient (no stated gender), DoB Unknown&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;actualPeriod&lt;/b&gt;: 2025-03-01 08:00:00+0000 --&amp;gt; 2025-03-10 12:00:00+0000&lt;/p&gt;&lt;h3&gt;Admissions&lt;/h3&gt;&lt;table class="grid"&gt;&lt;tr&gt;&lt;td style="display: none"&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;AdmitSource&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;DischargeDisposition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="display: none"&gt;*&lt;/td&gt;&lt;td&gt;&lt;span title="Codes:{http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs ems-home}"&gt;EMS from Home&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span title="Codes:{http://snomed.info/sct 306689006}"&gt;Discharge to home (procedure)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;<a name="end-xhtml"></a>
   &lt;/<a href="http://hl7.org/fhir/R5/domainresource.html#XEncounter.text">text</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R5/domainresource.html#XEncounter.extension">extension</a>
-             <a href="http://hl7.org/fhir/R5/datatypes.html#uri">url</a>=&quot;http://tecnomod-um.org/StructureDefinition/first-hospital-ext&quot;&gt;
-    &lt;<a href="http://hl7.org/fhir/R5/extensibility.html#Extension#XExtension.value_x_">valueBoolean</a> <a href="http://hl7.org/fhir/R5/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+             <a href="http://hl7.org/fhir/R5/datatypes.html#uri">url</a>="http://tecnomod-um.org/StructureDefinition/first-hospital-ext"&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/extensibility.html#Extension#XExtension.value_x_">valueBoolean</a> <a href="http://hl7.org/fhir/R5/datatypes.html#boolean">value</a>="true"/&gt;
   &lt;/<a href="http://hl7.org/fhir/R5/domainresource.html#XEncounter.extension">extension</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R5/domainresource.html#XEncounter.extension">extension</a>
-             <a href="http://hl7.org/fhir/R5/datatypes.html#uri">url</a>=&quot;http://tecnomod-um.org/StructureDefinition/initial-care-intensity-ext&quot;&gt;
+             <a href="http://hl7.org/fhir/R5/datatypes.html#uri">url</a>="http://tecnomod-um.org/StructureDefinition/initial-care-intensity-ext"&gt;
     &lt;<a href="http://hl7.org/fhir/R5/extensibility.html#Extension#XExtension.value_x_">valueCodeableConcept</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#XCodeableConcept.coding">coding</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#XCoding.system">system</a>
-                <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#XCoding.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;icu-stroke&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#XCoding.display">display</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;ICU / Stroke Unit&quot;/&gt;
+                <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>="http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs"/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#XCoding.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>="icu-stroke"/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#XCoding.display">display</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>="ICU / Stroke Unit"/&gt;
       &lt;/<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#XCodeableConcept.coding">coding</a>&gt;
     &lt;/<a href="http://hl7.org/fhir/R5/extensibility.html#Extension#XExtension.value_x_">valueCodeableConcept</a>&gt;
   &lt;/<a href="http://hl7.org/fhir/R5/domainresource.html#XEncounter.extension">extension</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R5/domainresource.html#XEncounter.extension">extension</a>
-             <a href="http://hl7.org/fhir/R5/datatypes.html#uri">url</a>=&quot;http://tecnomod-um.org/StructureDefinition/required-post-acute-care-ext&quot;&gt;
-    &lt;<a href="http://hl7.org/fhir/R5/extensibility.html#Extension#XExtension.value_x_">valueBoolean</a> <a href="http://hl7.org/fhir/R5/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+             <a href="http://hl7.org/fhir/R5/datatypes.html#uri">url</a>="http://tecnomod-um.org/StructureDefinition/required-post-acute-care-ext"&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/extensibility.html#Extension#XExtension.value_x_">valueBoolean</a> <a href="http://hl7.org/fhir/R5/datatypes.html#boolean">value</a>="false"/&gt;
   &lt;/<a href="http://hl7.org/fhir/R5/domainresource.html#XEncounter.extension">extension</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R5/domainresource.html#XEncounter.extension">extension</a>
-             <a href="http://hl7.org/fhir/R5/datatypes.html#uri">url</a>=&quot;http://tecnomod-um.org/StructureDefinition/discharge-department-service-ext&quot;&gt;
+             <a href="http://hl7.org/fhir/R5/datatypes.html#uri">url</a>="http://tecnomod-um.org/StructureDefinition/discharge-department-service-ext"&gt;
     &lt;<a href="http://hl7.org/fhir/R5/extensibility.html#Extension#XExtension.value_x_">valueCodeableConcept</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#XCodeableConcept.coding">coding</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#XCoding.system">system</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;http://tecnomod-um.org/CodeSystem/discharge-dept-cs&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#XCoding.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;neurology&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#XCoding.display">display</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Neurology&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#XCoding.system">system</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>="http://tecnomod-um.org/CodeSystem/discharge-dept-cs"/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#XCoding.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>="neurology"/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#XCoding.display">display</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>="Neurology"/&gt;
       &lt;/<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#XCodeableConcept.coding">coding</a>&gt;
     &lt;/<a href="http://hl7.org/fhir/R5/extensibility.html#Extension#XExtension.value_x_">valueCodeableConcept</a>&gt;
   &lt;/<a href="http://hl7.org/fhir/R5/domainresource.html#XEncounter.extension">extension</a>&gt;
-  &lt;<a href="http://hl7.org/fhir/R5/encounter.html#XEncounter.status">status</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;completed&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/encounter.html#XEncounter.status">status</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>="completed"/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/encounter.html#XEncounter.type">type</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#XCodeableConcept.coding">coding</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#XCoding.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;inpatient&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#XCoding.display">display</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Inpatient Encounter&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#XCoding.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>="inpatient"/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#XCoding.display">display</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>="Inpatient Encounter"/&gt;
     &lt;/<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#XCodeableConcept.coding">coding</a>&gt;
   &lt;/<a href="http://hl7.org/fhir/R5/encounter.html#XEncounter.type">type</a>&gt;
-  &lt;<a href="http://hl7.org/fhir/R5/encounter.html#XEncounter.subject">subject</a>&gt;<a href="Patient-example-patient.html" style="color: Maroon">&#x1F517;</a> 
-    &lt;<a href="http://hl7.org/fhir/R5/references.html#Reference#XReference.reference">reference</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Patient/example-patient&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/encounter.html#XEncounter.subject">subject</a>&gt;<a style="color: Maroon" href="Patient-example-patient.html">&#x1F517;</a> 
+    &lt;<a href="http://hl7.org/fhir/R5/references.html#Reference#XReference.reference">reference</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>="Patient/example-patient"/&gt;
   &lt;/<a href="http://hl7.org/fhir/R5/encounter.html#XEncounter.subject">subject</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R5/encounter.html#XEncounter.actualPeriod">actualPeriod</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Period#XPeriod.start">start</a> <a href="http://hl7.org/fhir/R5/datatypes.html#dateTime">value</a>=&quot;2025-03-01T08:00:00Z&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Period#XPeriod.end">end</a> <a href="http://hl7.org/fhir/R5/datatypes.html#dateTime">value</a>=&quot;2025-03-10T12:00:00Z&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Period#XPeriod.start">start</a> <a href="http://hl7.org/fhir/R5/datatypes.html#dateTime">value</a>="2025-03-01T08:00:00Z"/&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Period#XPeriod.end">end</a> <a href="http://hl7.org/fhir/R5/datatypes.html#dateTime">value</a>="2025-03-10T12:00:00Z"/&gt;
   &lt;/<a href="http://hl7.org/fhir/R5/encounter.html#XEncounter.actualPeriod">actualPeriod</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R5/encounter.html#XEncounter.admission">admission</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R5/encounter.html#XEncounter.admission.admitSource">admitSource</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#XCodeableConcept.coding">coding</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#XCoding.system">system</a>
-                <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#XCoding.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;ems-home&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#XCoding.display">display</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;EMS from Home&quot;/&gt;
+                <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>="http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs"/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#XCoding.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>="ems-home"/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#XCoding.display">display</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>="EMS from Home"/&gt;
       &lt;/<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#XCodeableConcept.coding">coding</a>&gt;
     &lt;/<a href="http://hl7.org/fhir/R5/encounter.html#XEncounter.admission.admitSource">admitSource</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R5/encounter.html#XEncounter.admission.dischargeDisposition">dischargeDisposition</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#XCodeableConcept.coding">coding</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#XCoding.system">system</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;http://snomed.info/sct&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#XCoding.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;306689006&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#XCoding.display">display</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Discharge to home (procedure)&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#XCoding.system">system</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>="http://snomed.info/sct"/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#XCoding.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>="306689006"/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#XCoding.display">display</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>="Discharge to home (procedure)"/&gt;
       &lt;/<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#XCodeableConcept.coding">coding</a>&gt;
     &lt;/<a href="http://hl7.org/fhir/R5/encounter.html#XEncounter.admission.dischargeDisposition">dischargeDisposition</a>&gt;
   &lt;/<a href="http://hl7.org/fhir/R5/encounter.html#XEncounter.admission">admission</a>&gt;
 &lt;/<a href="http://hl7.org/fhir/R5/encounter.html#XEncounter">Encounter</a>&gt;</code></pre>
 
 
-  <!-- insert notes if present -->
+    <!-- insert notes if present -->
   
 
 
 
 </div>
-        </div>  <!-- /inner-wrapper -->
-      </div>  <!-- /row -->
-    </div>  <!-- /container -->
-  </div>  <!-- /segment-content -->
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
 
-  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
-  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
 
-  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script src="assets/js/window-hash.js" type="text/javascript"> </script>
   <a name="bottom"> </a>
-  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
-    <div class="container">  <!-- container -->
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container">    <!-- container -->
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Fri, Feb 20, 2026 09:39+0000">2026-02-20</span>
+          IG &copy; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Fri, Feb 20, 2026 09:50+0000">2026-02-20</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -306,27 +304,26 @@
                 
           </span>
         </p>
-      </div>  <!-- /inner-wrapper -->
-    </div>  <!-- /container -->
-  </div>  <!-- /segment-footer -->
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
   
-  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
-    <div class="container">  <!-- container -->
-    </div>  <!-- /container -->
-  </div>  <!-- /segment-post-footer -->
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
 
-  <!-- JS and analytics only. -->
-  <!-- Bootstrap core JavaScript
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
   ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
-  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
-  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
-  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
-  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
-  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
-  <!-- Analytics Below
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+    <!-- Analytics Below
   ================================================== -->
   </body>
 </html>
-

@@ -6,11 +6,11 @@
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem brain-imaging-type-cs</b></p><a name="brain-imaging-type-cs"> </a><a name="hcbrain-imaging-type-cs"> </a><p>This  code system <code>http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">ct-cta<a name="brain-imaging-type-cs-ct-cta"> </a></td><td>CT-CTA</td><td>CT + CT Angiography. Use when recorded as a combined protocol and not decomposed into separate procedure entries.</td></tr><tr><td style="white-space:nowrap">ct-cta-perfusion<a name="brain-imaging-type-cs-ct-cta-perfusion"> </a></td><td>CT-CTA and Perfusion</td><td>CT + CTA + CT Perfusion. Often used for penumbra/mismatch-based selection in acute stroke.</td></tr><tr><td style="white-space:nowrap">mr-dwi-flair<a name="brain-imaging-type-cs-mr-dwi-flair"> </a></td><td>MR DWI-FLAIR</td><td>MRI with DWI and/or FLAIR. Supports imaging-based estimates of lesion age and tissue characterization.</td></tr><tr><td style="white-space:nowrap">mr-dwi-flair-mra<a name="brain-imaging-type-cs-mr-dwi-flair-mra"> </a></td><td>MR DWI-FLAIR and MRA</td><td>MRI (DWI/FLAIR) + MRA. Represents combined parenchymal and vascular assessment.</td></tr><tr><td style="white-space:nowrap">mr-dwi-flair-mra-perfusion<a name="brain-imaging-type-cs-mr-dwi-flair-mra-perfusion"> </a></td><td>MR DWI-FLAIR, MRA, and Perfusion</td><td>MRI (DWI/FLAIR) + MRA + perfusion. Represents advanced tissue and vessel evaluation.</td></tr></table></div>
   </text>
   <url value="http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs"/>
-  <version value="0.1.0"/>
+  <version value="1.0.0"/>
   <name value="BrainImagingTypeCS"/>
   <title value="Brain Imaging Type CodeSystem"/>
   <status value="active"/>
-  <date value="2026-02-20T09:39:34+00:00"/>
+  <date value="2026-02-20T09:50:49+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>

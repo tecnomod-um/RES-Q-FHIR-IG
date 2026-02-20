@@ -1,4 +1,4 @@
-# Swallow Procedures ValueSet - v0.1.0
+# Swallow Procedures ValueSet - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://tecnomod-um.org/ValueSet/swallow-procedures-vs | *Version*:0.1.0 |
+| *Official URL*:http://tecnomod-um.org/ValueSet/swallow-procedures-vs | *Version*:1.0.0 |
 | Draft as of 2025-03-31 | *Computable Name*:SwallowProceduresValueset |
 
  
@@ -49,7 +49,7 @@ ValueSet enumerating swallowing screening/assessment procedures/tools used in st
   "resourceType" : "ValueSet",
   "id" : "swallow-procedures-vs",
   "url" : "http://tecnomod-um.org/ValueSet/swallow-procedures-vs",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "SwallowProceduresValueset",
   "title" : "Swallow Procedures ValueSet",
   "status" : "draft",

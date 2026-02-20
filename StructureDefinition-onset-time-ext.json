@@ -10,7 +10,7 @@
     "valueCode" : "can-bind"
   }],
   "url" : "http://tecnomod-um.org/StructureDefinition/onset-time-ext",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "OnsetTimeExt",
   "title" : "Stroke Symptom Onset Time Extension",
   "status" : "active",

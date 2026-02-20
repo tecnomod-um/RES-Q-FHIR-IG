@@ -1,4 +1,4 @@
-# Stroke Timing Metric Codes ValueSet - v0.1.0
+# Stroke Timing Metric Codes ValueSet - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://tecnomod-um.org/ValueSet/timing-metric-codes-vs | *Version*:0.1.0 |
+| *Official URL*:http://tecnomod-um.org/ValueSet/timing-metric-codes-vs | *Version*:1.0.0 |
 | Active as of 2026-02-20 | *Computable Name*:TimingMetricCodesVS |
 
  
@@ -49,11 +49,11 @@ This ValueSet includes all timing metric codes from TimingMetricCodesCS.
   "resourceType" : "ValueSet",
   "id" : "timing-metric-codes-vs",
   "url" : "http://tecnomod-um.org/ValueSet/timing-metric-codes-vs",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "TimingMetricCodesVS",
   "title" : "Stroke Timing Metric Codes ValueSet",
   "status" : "active",
-  "date" : "2026-02-20T09:39:34+00:00",
+  "date" : "2026-02-20T09:50:49+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

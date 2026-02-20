@@ -1,4 +1,4 @@
-# Stroke Risk Factor Condition Profile - v0.1.0
+# Stroke Risk Factor Condition Profile - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://tecnomod-um.org/StructureDefinition/stroke-risk-factor-condition-profile | *Version*:0.1.0 |
+| *Official URL*:http://tecnomod-um.org/StructureDefinition/stroke-risk-factor-condition-profile | *Version*:1.0.0 |
 | Active as of 2025-10-07 | *Computable Name*:StrokeRiskFactorConditionProfile |
 | **Copyright/Legal**: © Tecnomod. This profile is provided for use within this Implementation Guide. | |
 
@@ -46,7 +46,7 @@ Other representations of profile: [CSV](StructureDefinition-stroke-risk-factor-c
   "resourceType" : "StructureDefinition",
   "id" : "stroke-risk-factor-condition-profile",
   "url" : "http://tecnomod-um.org/StructureDefinition/stroke-risk-factor-condition-profile",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "StrokeRiskFactorConditionProfile",
   "title" : "Stroke Risk Factor Condition Profile",
   "status" : "active",

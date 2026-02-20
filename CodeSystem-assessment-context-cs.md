@@ -1,4 +1,4 @@
-# Assessment Context Code System - v0.1.0
+# Assessment Context Code System - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://tecnomod-um.org/CodeSystem/assessment-context-cs | *Version*:0.1.0 |
+| *Official URL*:http://tecnomod-um.org/CodeSystem/assessment-context-cs | *Version*:1.0.0 |
 | Active as of 2026-02-20 | *Computable Name*:AssessmentContextCS |
 
  
@@ -37,12 +37,12 @@ This CodeSystem defines normalized codes for the **clinical context / relative t
   "resourceType" : "CodeSystem",
   "id" : "assessment-context-cs",
   "url" : "http://tecnomod-um.org/CodeSystem/assessment-context-cs",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "AssessmentContextCS",
   "title" : "Assessment Context Code System",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-20T09:39:34+00:00",
+  "date" : "2026-02-20T09:50:49+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

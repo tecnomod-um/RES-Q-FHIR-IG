@@ -1,4 +1,4 @@
-# Stroke Thrombolysis Procedure Profile - v0.1.0
+# Stroke Thrombolysis Procedure Profile - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://tecnomod-um.org/StructureDefinition/stroke-mechanical-procedure-profile | *Version*:0.1.0 |
+| *Official URL*:http://tecnomod-um.org/StructureDefinition/stroke-mechanical-procedure-profile | *Version*:1.0.0 |
 | Active as of 2026-02-20 | *Computable Name*:StrokeThrombolysisProcedureProfile |
 
  
@@ -49,11 +49,11 @@ Other representations of profile: [CSV](StructureDefinition-stroke-mechanical-pr
   "resourceType" : "StructureDefinition",
   "id" : "stroke-mechanical-procedure-profile",
   "url" : "http://tecnomod-um.org/StructureDefinition/stroke-mechanical-procedure-profile",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "StrokeThrombolysisProcedureProfile",
   "title" : "Stroke Thrombolysis Procedure Profile",
   "status" : "active",
-  "date" : "2026-02-20T09:39:34+00:00",
+  "date" : "2026-02-20T09:50:49+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

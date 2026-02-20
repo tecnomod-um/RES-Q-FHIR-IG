@@ -6,12 +6,12 @@
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem stroke-arrival-mode-cs</b></p><a name="stroke-arrival-mode-cs"> </a><a name="hcstroke-arrival-mode-cs"> </a><p>This case-insensitive code system <code>http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">priv-transport-home<a name="stroke-arrival-mode-cs-priv-transport-home"> </a></td><td>Private Transportation from Home/Scene</td><td>The patient arrived via personal or non-medical transport from their home or directly from the scene of the incident.</td></tr><tr><td style="white-space:nowrap">priv-transport-gp<a name="stroke-arrival-mode-cs-priv-transport-gp"> </a></td><td>Private Transportation from GP</td><td>The patient was referred and transported privately from GP.</td></tr><tr><td style="white-space:nowrap">ems-gp<a name="stroke-arrival-mode-cs-ems-gp"> </a></td><td>EMS from GP</td><td>Emergency Medical Services (EMS) transported the patient from GP.</td></tr><tr><td style="white-space:nowrap">stroke-center<a name="stroke-arrival-mode-cs-stroke-center"> </a></td><td>Stroke Center</td><td>The patient was transferred from a specialized stroke center, indicating prior specialized care</td></tr><tr><td style="white-space:nowrap">ems-home<a name="stroke-arrival-mode-cs-ems-home"> </a></td><td>EMS from Home</td><td>Emergency Medical Services (EMS) transported the patient from their home or directly from the scene where the stroke symptoms began.</td></tr><tr><td style="white-space:nowrap">another-hosp<a name="stroke-arrival-mode-cs-another-hosp"> </a></td><td>Another Hospital</td><td>The patient was transferred from another hospital</td></tr></table></div>
   </text>
   <url value="http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs"/>
-  <version value="0.1.0"/>
+  <version value="1.0.0"/>
   <name value="StrokeArrivalModeCS"/>
   <title value="Stroke Arrival Mode CodeSystem"/>
   <status value="active"/>
   <experimental value="true"/>
-  <date value="2026-02-20T09:39:34+00:00"/>
+  <date value="2026-02-20T09:50:49+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>

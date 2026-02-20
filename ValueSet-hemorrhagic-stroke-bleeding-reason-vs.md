@@ -1,4 +1,4 @@
-# Hemorrhagic Stroke Bleeding Reason ValueSet - v0.1.0
+# Hemorrhagic Stroke Bleeding Reason ValueSet - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://tecnomod-um.org/ValueSet/hemorrhagic-stroke-bleeding-reason-vs | *Version*:0.1.0 |
+| *Official URL*:http://tecnomod-um.org/ValueSet/hemorrhagic-stroke-bleeding-reason-vs | *Version*:1.0.0 |
 | Draft as of 2025-09-08 | *Computable Name*:HemorrhagicStrokeBleedingReasonVS |
 | **Copyright/Legal**: © Tecnomod. This value set includes locally defined codes. | |
 
@@ -57,7 +57,7 @@ To enable consistent capture of the underlying cause of bleeding in hemorrhagic 
   "resourceType" : "ValueSet",
   "id" : "hemorrhagic-stroke-bleeding-reason-vs",
   "url" : "http://tecnomod-um.org/ValueSet/hemorrhagic-stroke-bleeding-reason-vs",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "HemorrhagicStrokeBleedingReasonVS",
   "title" : "Hemorrhagic Stroke Bleeding Reason ValueSet",
   "status" : "draft",

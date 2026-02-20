@@ -1,4 +1,4 @@
-# Stroke Registry Organization Profile - v0.1.0
+# Stroke Registry Organization Profile - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://tecnomod-um.org/StructureDefinition/stroke-registry-organization-profile | *Version*:0.1.0 |
+| *Official URL*:http://tecnomod-um.org/StructureDefinition/stroke-registry-organization-profile | *Version*:1.0.0 |
 | Active as of 2025-10-09 | *Computable Name*:StrokeRegistryOrganizationProfile |
 
  
@@ -40,7 +40,7 @@ Other representations of profile: [CSV](StructureDefinition-stroke-registry-orga
   "resourceType" : "StructureDefinition",
   "id" : "stroke-registry-organization-profile",
   "url" : "http://tecnomod-um.org/StructureDefinition/stroke-registry-organization-profile",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "StrokeRegistryOrganizationProfile",
   "title" : "Stroke Registry Organization Profile",
   "status" : "active",

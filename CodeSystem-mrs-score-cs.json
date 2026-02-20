@@ -6,12 +6,12 @@
     "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mrs-score-cs</b></p><a name=\"mrs-score-cs\"> </a><a name=\"hcmrs-score-cs\"> </a><p>This case-insensitive code system <code>http://tecnomod-um.org/CodeSystem/mrs-score-cs</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">0<a name=\"mrs-score-cs-0\"> </a></td><td>No symptoms</td><td>No symptoms at all.</td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"mrs-score-cs-1\"> </a></td><td>No significant disability</td><td>Despite symptoms; able to carry out all usual duties and activities.</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"mrs-score-cs-2\"> </a></td><td>Slight disability</td><td>Unable to carry out all previous activities, but able to look after own affairs without assistance.</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"mrs-score-cs-3\"> </a></td><td>Moderate disability</td><td>Requiring some help, but able to walk without assistance.</td></tr><tr><td style=\"white-space:nowrap\">4<a name=\"mrs-score-cs-4\"> </a></td><td>Moderately severe disability</td><td>Unable to walk without assistance and unable to attend to own bodily needs without assistance.</td></tr><tr><td style=\"white-space:nowrap\">5<a name=\"mrs-score-cs-5\"> </a></td><td>Severe disability</td><td>Bedridden, incontinent and requiring constant nursing care and attention.</td></tr><tr><td style=\"white-space:nowrap\">6<a name=\"mrs-score-cs-6\"> </a></td><td>Dead</td><td>Patient deceased.</td></tr></table></div>"
   },
   "url" : "http://tecnomod-um.org/CodeSystem/mrs-score-cs",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "MRsScoreCS",
   "title" : "Modified Rankin Scale Score Code System",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-20T09:39:34+00:00",
+  "date" : "2026-02-20T09:50:49+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

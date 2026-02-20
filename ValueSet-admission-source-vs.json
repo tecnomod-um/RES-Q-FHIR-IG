@@ -6,7 +6,7 @@
     "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet admission-source-vs</b></p><a name=\"admission-source-vs\"> </a><a name=\"hcadmission-source-vs\"> </a><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/715537001\">715537001</a></td><td>Transportation by ambulance (procedure)</td></tr><tr><td><a href=\"http://snomed.info/id/715957006\">715957006</a></td><td>Transportation by own transport (procedure)</td></tr><tr><td><a href=\"http://snomed.info/id/384762007\">384762007</a></td><td>Transportation procedure (procedure)</td></tr></table></li></ul></div>"
   },
   "url" : "http://tecnomod-um.org/ValueSet/admission-source-vs",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "AdmissionSourceValueSet",
   "title" : "Admission Sources ValueSet",
   "status" : "draft",

@@ -11,13 +11,13 @@
   fhir:id [ fhir:v "mtici-score-vs"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mtici-score-vs</b></p><a name=\"mtici-score-vs\"> </a><a name=\"hcmtici-score-vs\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-mtici-score-cs.html\"><code>http://tecnomod-um.org/CodeSystem/mtici-score-cs</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?0.1.0</span></li></ul></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mtici-score-vs</b></p><a name=\"mtici-score-vs\"> </a><a name=\"hcmtici-score-vs\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-mtici-score-cs.html\"><code>http://tecnomod-um.org/CodeSystem/mtici-score-cs</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?1.0.0</span></li></ul></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:url [
      fhir:v "http://tecnomod-um.org/ValueSet/mtici-score-vs"^^xsd:anyURI ;
      fhir:l <http://tecnomod-um.org/ValueSet/mtici-score-vs>
   ] ; # 
-  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:version [ fhir:v "1.0.0"] ; # 
   fhir:name [ fhir:v "MTICIScoreValueSet"] ; # 
   fhir:title [ fhir:v "Modified Treatment in Cerebral Infarction Grade Score ValueSet"] ; # 
   fhir:status [ fhir:v "draft"] ; # 

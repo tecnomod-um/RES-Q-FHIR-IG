@@ -1,4 +1,4 @@
-# Hemorrhagic Stroke – Bleeding Reason - v0.1.0
+# Hemorrhagic Stroke – Bleeding Reason - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://tecnomod-um.org/StructureDefinition/hemorrhagic-stroke-bleeding-reason-ext | *Version*:0.1.0 |
+| *Official URL*:http://tecnomod-um.org/StructureDefinition/hemorrhagic-stroke-bleeding-reason-ext | *Version*:1.0.0 |
 | Active as of 2025-10-07 | *Computable Name*:HemorrhagicStrokeBleedingReasonExt |
 
 Extension capturing the **identified cause of intracranial bleeding** in a hemorrhagic stroke.
@@ -62,7 +62,7 @@ Other representations of profile: [CSV](StructureDefinition-hemorrhagic-stroke-b
     "valueCode" : "can-bind"
   }],
   "url" : "http://tecnomod-um.org/StructureDefinition/hemorrhagic-stroke-bleeding-reason-ext",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "HemorrhagicStrokeBleedingReasonExt",
   "title" : "Hemorrhagic Stroke – Bleeding Reason",
   "status" : "active",

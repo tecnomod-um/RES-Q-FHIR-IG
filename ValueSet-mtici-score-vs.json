@@ -3,10 +3,10 @@
   "id" : "mtici-score-vs",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mtici-score-vs</b></p><a name=\"mtici-score-vs\"> </a><a name=\"hcmtici-score-vs\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-mtici-score-cs.html\"><code>http://tecnomod-um.org/CodeSystem/mtici-score-cs</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;0.1.0</span></li></ul></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mtici-score-vs</b></p><a name=\"mtici-score-vs\"> </a><a name=\"hcmtici-score-vs\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-mtici-score-cs.html\"><code>http://tecnomod-um.org/CodeSystem/mtici-score-cs</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;1.0.0</span></li></ul></div>"
   },
   "url" : "http://tecnomod-um.org/ValueSet/mtici-score-vs",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "MTICIScoreValueSet",
   "title" : "Modified Treatment in Cerebral Infarction Grade Score ValueSet",
   "status" : "draft",

@@ -25,7 +25,7 @@
     <valueCode value="can-bind"/>
   </extension>
   <url value="http://tecnomod-um.org/StructureDefinition/onset-date-ext"/>
-  <version value="0.1.0"/>
+  <version value="1.0.0"/>
   <name value="OnsetDateExt"/>
   <title value="Stroke Symptom Onset Date Extension"/>
   <status value="active"/>

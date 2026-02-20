@@ -1,4 +1,4 @@
-# SpecificFindingObservationExampleMTICI - v0.1.0
+# SpecificFindingObservationExampleMTICI - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)

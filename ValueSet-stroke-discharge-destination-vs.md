@@ -1,4 +1,4 @@
-# Stroke Discharge Destination ValueSet - v0.1.0
+# Stroke Discharge Destination ValueSet - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://tecnomod-um.org/ValueSet/stroke-discharge-destination-vs | *Version*:0.1.0 |
+| *Official URL*:http://tecnomod-um.org/ValueSet/stroke-discharge-destination-vs | *Version*:1.0.0 |
 | Active as of 2026-02-20 | *Computable Name*:StrokeDischargeDestinationVS |
 
  
@@ -53,11 +53,11 @@ ValueSet defining allowable discharge dispositions for the stroke encounter.
   "resourceType" : "ValueSet",
   "id" : "stroke-discharge-destination-vs",
   "url" : "http://tecnomod-um.org/ValueSet/stroke-discharge-destination-vs",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "StrokeDischargeDestinationVS",
   "title" : "Stroke Discharge Destination ValueSet",
   "status" : "active",
-  "date" : "2026-02-20T09:39:34+00:00",
+  "date" : "2026-02-20T09:50:49+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

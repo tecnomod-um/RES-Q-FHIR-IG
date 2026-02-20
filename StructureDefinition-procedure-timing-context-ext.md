@@ -1,4 +1,4 @@
-# Procedure Timing Context Extension - v0.1.0
+# Procedure Timing Context Extension - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://tecnomod-um.org/StructureDefinition/procedure-timing-context-ext | *Version*:0.1.0 |
+| *Official URL*:http://tecnomod-um.org/StructureDefinition/procedure-timing-context-ext | *Version*:1.0.0 |
 | Draft as of 2026-02-20 | *Computable Name*:ProcedureTimingContextExtension |
 
 Extension classifying the procedure into a **timing context** relative to encounter start (acute/post-acute).
@@ -63,11 +63,11 @@ Other representations of profile: [CSV](StructureDefinition-procedure-timing-con
     "valueCode" : "can-bind"
   }],
   "url" : "http://tecnomod-um.org/StructureDefinition/procedure-timing-context-ext",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "ProcedureTimingContextExtension",
   "title" : "Procedure Timing Context Extension",
   "status" : "draft",
-  "date" : "2026-02-20T09:39:34+00:00",
+  "date" : "2026-02-20T09:50:49+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

@@ -1,4 +1,4 @@
-# Age at Stroke Onset Observation Profile (R5) - v0.1.0
+# Age at Stroke Onset Observation Profile (R5) - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://tecnomod-um.org/StructureDefinition/age-at-onset-observation-profile | *Version*:0.1.0 |
+| *Official URL*:http://tecnomod-um.org/StructureDefinition/age-at-onset-observation-profile | *Version*:1.0.0 |
 | Draft as of 2026-02-20 | *Computable Name*:AgeAtOnsetObservationProfile |
 
  
@@ -46,11 +46,11 @@ Other representations of profile: [CSV](StructureDefinition-age-at-onset-observa
   "resourceType" : "StructureDefinition",
   "id" : "age-at-onset-observation-profile",
   "url" : "http://tecnomod-um.org/StructureDefinition/age-at-onset-observation-profile",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "AgeAtOnsetObservationProfile",
   "title" : "Age at Stroke Onset Observation Profile (R5)",
   "status" : "draft",
-  "date" : "2026-02-20T09:39:34+00:00",
+  "date" : "2026-02-20T09:50:49+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

@@ -1,4 +1,4 @@
-# Specific Stroke Finding Codes ValueSet - v0.1.0
+# Specific Stroke Finding Codes ValueSet - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://tecnomod-um.org/ValueSet/specific-finding-codes-vs | *Version*:0.1.0 |
+| *Official URL*:http://tecnomod-um.org/ValueSet/specific-finding-codes-vs | *Version*:1.0.0 |
 | Active as of 2026-02-20 | *Computable Name*:SpecificFindingCodesVS |
 
  
@@ -56,11 +56,11 @@ This ValueSet provides SNOMED CT disorder concepts for specific findings referen
   "resourceType" : "ValueSet",
   "id" : "specific-finding-codes-vs",
   "url" : "http://tecnomod-um.org/ValueSet/specific-finding-codes-vs",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "SpecificFindingCodesVS",
   "title" : "Specific Stroke Finding Codes ValueSet",
   "status" : "active",
-  "date" : "2026-02-20T09:39:34+00:00",
+  "date" : "2026-02-20T09:50:49+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

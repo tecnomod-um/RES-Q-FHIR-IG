@@ -1,4 +1,4 @@
-# Discharge Medications ValueSet - v0.1.0
+# Discharge Medications ValueSet - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://tecnomod-um.org/ValueSet/medication-vs | *Version*:0.1.0 |
+| *Official URL*:http://tecnomod-um.org/ValueSet/medication-vs | *Version*:1.0.0 |
 | Draft as of 2026-02-20 | *Computable Name*:MedicationVS |
 
  
@@ -54,11 +54,11 @@ ValueSet defining allowable coded medications (or medication categories) for dis
   "resourceType" : "ValueSet",
   "id" : "medication-vs",
   "url" : "http://tecnomod-um.org/ValueSet/medication-vs",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "MedicationVS",
   "title" : "Discharge Medications ValueSet",
   "status" : "draft",
-  "date" : "2026-02-20T09:39:34+00:00",
+  "date" : "2026-02-20T09:50:49+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

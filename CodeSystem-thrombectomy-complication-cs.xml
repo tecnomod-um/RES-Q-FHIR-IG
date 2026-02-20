@@ -6,11 +6,11 @@
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem thrombectomy-complication-cs</b></p><a name="thrombectomy-complication-cs"> </a><a name="hcthrombectomy-complication-cs"> </a><p>This  code system <code>http://tecnomod-um.org/CodeSystem/thrombectomy-complication-cs</code> defines the following code:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">perforation<a name="thrombectomy-complication-cs-perforation"> </a></td><td>Vessel Perforation</td><td>Vessel perforation occurred during the mechanical thrombectomy</td></tr></table></div>
   </text>
   <url value="http://tecnomod-um.org/CodeSystem/thrombectomy-complication-cs"/>
-  <version value="0.1.0"/>
+  <version value="1.0.0"/>
   <name value="ThrombectomyComplicationCS"/>
   <title value="Thrombectomy Complication CodeSystem"/>
   <status value="active"/>
-  <date value="2026-02-20T09:39:34+00:00"/>
+  <date value="2026-02-20T09:50:49+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>

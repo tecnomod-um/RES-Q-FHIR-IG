@@ -1,4 +1,4 @@
-# Discharge MedicationRequest Profile - v0.1.0
+# Discharge MedicationRequest Profile - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://tecnomod-um.org/StructureDefinition/discharge-medication-request-profile | *Version*:0.1.0 |
+| *Official URL*:http://tecnomod-um.org/StructureDefinition/discharge-medication-request-profile | *Version*:1.0.0 |
 | Active as of 2026-02-20 | *Computable Name*:DischargeMedicationRequestProfile |
 
  
@@ -60,11 +60,11 @@ Other representations of profile: [CSV](StructureDefinition-discharge-medication
   "resourceType" : "StructureDefinition",
   "id" : "discharge-medication-request-profile",
   "url" : "http://tecnomod-um.org/StructureDefinition/discharge-medication-request-profile",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "DischargeMedicationRequestProfile",
   "title" : "Discharge MedicationRequest Profile",
   "status" : "active",
-  "date" : "2026-02-20T09:39:34+00:00",
+  "date" : "2026-02-20T09:50:49+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

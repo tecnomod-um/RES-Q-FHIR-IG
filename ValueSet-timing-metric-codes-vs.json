@@ -3,14 +3,14 @@
   "id" : "timing-metric-codes-vs",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet timing-metric-codes-vs</b></p><a name=\"timing-metric-codes-vs\"> </a><a name=\"hctiming-metric-codes-vs\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-timing-metric-codes-cs.html\"><code>http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;0.1.0</span></li></ul></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet timing-metric-codes-vs</b></p><a name=\"timing-metric-codes-vs\"> </a><a name=\"hctiming-metric-codes-vs\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-timing-metric-codes-cs.html\"><code>http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;1.0.0</span></li></ul></div>"
   },
   "url" : "http://tecnomod-um.org/ValueSet/timing-metric-codes-vs",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "TimingMetricCodesVS",
   "title" : "Stroke Timing Metric Codes ValueSet",
   "status" : "active",
-  "date" : "2026-02-20T09:39:34+00:00",
+  "date" : "2026-02-20T09:50:49+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

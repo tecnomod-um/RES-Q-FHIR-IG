@@ -1,4 +1,4 @@
-# Admission Sources ValueSet - v0.1.0
+# Admission Sources ValueSet - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://tecnomod-um.org/ValueSet/admission-source-vs | *Version*:0.1.0 |
+| *Official URL*:http://tecnomod-um.org/ValueSet/admission-source-vs | *Version*:1.0.0 |
 | Draft as of 2025-03-31 | *Computable Name*:AdmissionSourceValueSet |
 | **Copyright/Legal**: This value set includes SNOMED CT® content. SNOMED CT® is distributed by SNOMED International. | |
 
@@ -57,7 +57,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "resourceType" : "ValueSet",
   "id" : "admission-source-vs",
   "url" : "http://tecnomod-um.org/ValueSet/admission-source-vs",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "AdmissionSourceValueSet",
   "title" : "Admission Sources ValueSet",
   "status" : "draft",

@@ -6,12 +6,12 @@
     "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem assessment-context-cs</b></p><a name=\"assessment-context-cs\"> </a><a name=\"hcassessment-context-cs\"> </a><p>This case-insensitive code system <code>http://tecnomod-um.org/CodeSystem/assessment-context-cs</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">pre-stroke<a name=\"assessment-context-cs-pre-stroke\"> </a></td><td>Pre-stroke</td><td>Assessment reflects the patient’s baseline state prior to the index stroke event (pre-morbid status), typically derived from history or collateral information.</td></tr><tr><td style=\"white-space:nowrap\">admission<a name=\"assessment-context-cs-admission\"> </a></td><td>Admission</td><td>Assessment performed at, or shortly after, presentation/admission for the index stroke event (acute phase baseline for in-hospital care).</td></tr><tr><td style=\"white-space:nowrap\">discharge<a name=\"assessment-context-cs-discharge\"> </a></td><td>Discharge</td><td>Assessment performed at the time of discharge from the acute admission (or the end of the index hospitalization episode).</td></tr><tr><td style=\"white-space:nowrap\">3-month<a name=\"assessment-context-cs-3-month\"> </a></td><td>3-Month Follow-up</td><td>Assessment performed at approximately 3 months (≈90 days) after discharge/index event, acknowledging operational windows used in routine follow-up and research.</td></tr></table></div>"
   },
   "url" : "http://tecnomod-um.org/CodeSystem/assessment-context-cs",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "AssessmentContextCS",
   "title" : "Assessment Context Code System",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-20T09:39:34+00:00",
+  "date" : "2026-02-20T09:50:49+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

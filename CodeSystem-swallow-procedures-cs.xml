@@ -6,11 +6,11 @@
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem swallow-procedures-cs</b></p><a name="swallow-procedures-cs"> </a><a name="hcswallow-procedures-cs"> </a><p>This  code system <code>http://tecnomod-um.org/CodeSystem/swallow-procedures-cs</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">assist<a name="swallow-procedures-cs-assist"> </a></td><td>ASSIST</td><td>Assisted Swallowing Test (ASSIST)</td></tr><tr><td style="white-space:nowrap">other<a name="swallow-procedures-cs-other"> </a></td><td>Other Swallow Procedure</td><td>Other specified swallowing assessment procedure</td></tr><tr><td style="white-space:nowrap">v-vst<a name="swallow-procedures-cs-v-vst"> </a></td><td>V-VST</td><td>Volume-Viscosity Swallow Test (V-VST)</td></tr></table></div>
   </text>
   <url value="http://tecnomod-um.org/CodeSystem/swallow-procedures-cs"/>
-  <version value="0.1.0"/>
+  <version value="1.0.0"/>
   <name value="SwallowProceduresCS"/>
   <title value="Swallow Procedures CodeSystem"/>
   <status value="active"/>
-  <date value="2026-02-20T09:39:34+00:00"/>
+  <date value="2026-02-20T09:50:49+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>

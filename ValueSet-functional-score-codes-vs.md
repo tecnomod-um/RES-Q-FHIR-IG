@@ -1,4 +1,4 @@
-# Stroke Functional Score Codes ValueSet - v0.1.0
+# Stroke Functional Score Codes ValueSet - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://tecnomod-um.org/ValueSet/functional-score-codes-vs | *Version*:0.1.0 |
+| *Official URL*:http://tecnomod-um.org/ValueSet/functional-score-codes-vs | *Version*:1.0.0 |
 | Active as of 2026-02-20 | *Computable Name*:FunctionalScoreCodesVS |
 
  
@@ -56,11 +56,11 @@ This ValueSet constrains `Observation.code` for functional outcome and severity 
   "resourceType" : "ValueSet",
   "id" : "functional-score-codes-vs",
   "url" : "http://tecnomod-um.org/ValueSet/functional-score-codes-vs",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "FunctionalScoreCodesVS",
   "title" : "Stroke Functional Score Codes ValueSet",
   "status" : "active",
-  "date" : "2026-02-20T09:39:34+00:00",
+  "date" : "2026-02-20T09:50:49+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

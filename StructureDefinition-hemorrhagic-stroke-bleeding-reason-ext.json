@@ -10,7 +10,7 @@
     "valueCode" : "can-bind"
   }],
   "url" : "http://tecnomod-um.org/StructureDefinition/hemorrhagic-stroke-bleeding-reason-ext",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "HemorrhagicStrokeBleedingReasonExt",
   "title" : "Hemorrhagic Stroke – Bleeding Reason",
   "status" : "active",

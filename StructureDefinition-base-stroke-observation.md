@@ -1,4 +1,4 @@
-# Base Profile for Stroke-Related Observations - v0.1.0
+# Base Profile for Stroke-Related Observations - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://tecnomod-um.org/StructureDefinition/base-stroke-observation | *Version*:0.1.0 |
+| *Official URL*:http://tecnomod-um.org/StructureDefinition/base-stroke-observation | *Version*:1.0.0 |
 | Active as of 2026-02-20 | *Computable Name*:BaseStrokeObservation |
 
  
@@ -43,11 +43,11 @@ Other representations of profile: [CSV](StructureDefinition-base-stroke-observat
   "resourceType" : "StructureDefinition",
   "id" : "base-stroke-observation",
   "url" : "http://tecnomod-um.org/StructureDefinition/base-stroke-observation",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "BaseStrokeObservation",
   "title" : "Base Profile for Stroke-Related Observations",
   "status" : "active",
-  "date" : "2026-02-20T09:39:34+00:00",
+  "date" : "2026-02-20T09:50:49+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

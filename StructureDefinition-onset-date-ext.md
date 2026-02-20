@@ -1,4 +1,4 @@
-# Stroke Symptom Onset Date Extension - v0.1.0
+# Stroke Symptom Onset Date Extension - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://tecnomod-um.org/StructureDefinition/onset-date-ext | *Version*:0.1.0 |
+| *Official URL*:http://tecnomod-um.org/StructureDefinition/onset-date-ext | *Version*:1.0.0 |
 | Active as of 2025-10-07 | *Computable Name*:OnsetDateExt |
 
 Extension capturing the **calendar date** of symptom onset for the index stroke event.
@@ -63,7 +63,7 @@ Other representations of profile: [CSV](StructureDefinition-onset-date-ext.csv),
     "valueCode" : "can-bind"
   }],
   "url" : "http://tecnomod-um.org/StructureDefinition/onset-date-ext",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "OnsetDateExt",
   "title" : "Stroke Symptom Onset Date Extension",
   "status" : "active",

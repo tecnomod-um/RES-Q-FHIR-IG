@@ -1,88 +1,84 @@
-<!-- get modelType -->
-
-
-
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<!-- get modelType --><?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML>
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Stroke Vital Sign Observation Profile -  v0.1.0</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Stroke Vital Sign Observation Profile -  v1.0.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
 
-    <link href="fhir.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="fhir.css"/>
 
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
 
-    <!-- Project extras -->
-    <link href="assets/css/project.css" rel="stylesheet"/>
-    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
-    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
-  	<link href="assets/css/prism.css" rel="stylesheet" />
-  	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- Placeholder for child template CSS declarations -->
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+  	<link rel="stylesheet" href="assets/css/cqf.css"/>
+      <!-- Placeholder for child template CSS declarations -->
 
-    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
     <script src="assets/js/html5shiv.js"></script>
     <script src="assets/js/respond.min.js"></script>
-    <![endif]-->
+    <![endif] -->
 
-    <!-- Favicons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+      <!-- Favicons -->
+    <link sizes="144x144" rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-72.png"/>
     <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-    <script type="text/javascript" src="assets/js/mermaid.js"></script>
-    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <script src="assets/js/mermaid.js" type="text/javascript"></script>
+    <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
     <style type="text/css">h2{--heading-prefix:"11.18"}
     h3,h4,h5,h6{--heading-prefix:"11.18"}</style>
-    <div id="segment-header" class="segment">  <!-- segment-header -->
-      <div class="container">  <!-- container -->
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
 
-        <!-- Placeholder for child template header declarations -->
+          <!-- Placeholder for child template header declarations -->
 
 
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold"></span>
             <br/>
-            <span style="display:inline-block;">0.1.0 - 5
+            <span style="display:inline-block;">1.0.0 - 5
 
 
             </span>
           </p>
         </div>
-      </div> <!-- /container -->
-    </div>  <!-- /segment-header -->
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
 
-    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
       <div id="stripe"> </div>
-      <div class="container">  <!-- container -->
-        <!-- HEADER CONTENT -->
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
 
         <nav class="navbar navbar-inverse">
-          <!--status-bar-->
+            <!-- status-bar -->
           <div class="container">
-            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
               <span class="icon-bar"> </span>
               <span class="icon-bar"> </span>
               <span class="icon-bar"> </span>
             </button>
-            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R5/index.html">FHIR</a>
+            <a href="http://hl7.org/fhir/R5/index.html" class="navbar-brand hidden">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <!-- menu.xml  -->
+                <!-- menu.xml -->
 
-<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+<ul class="nav navbar-nav">
   <li>
     <a href="index.html">Home</a>
   </li>
@@ -100,7 +96,7 @@
       <li>
         <a href="profiles.html">Profiles</a>
       </li>
-      <li>
+      <li><a name="l170">​</a>
         <a href="extensions.html">Extensions</a>
       </li>
       <li>
@@ -124,31 +120,31 @@
     <a href="history.html">Change Log</a>
   </li>
 </ul>
-            </div>  <!-- /.nav-collapse -->
-          </div>  <!-- /.container -->
-        </nav>  <!-- /.navbar -->
-      <!-- /HEADER CONTENT -->
-      </div>  <!-- /container -->
-    </div>  <!-- /segment-navbar -->
-    <!--status-bar-->
+            </div>    <!-- /.nav-collapse -->
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
 
-    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
-      <div class="container">  <!-- container -->
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Stroke Vital Sign Observation Profile</b></li>
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><a href="artifacts.html"><b>Artifacts Summary</b></a></li><li><b>Stroke Vital Sign Observation Profile</b></li>
 
         </ul>
-      </div>  <!-- /container -->
-    </div>  <!-- /segment-breadcrumb -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
 
     <a name="top"> </a>
-    <div id="segment-content" class="segment">  <!-- segment-content -->
-      <div class="container">  <!-- container -->
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
         <div class="row">
           <div class="inner-wrapper">
 
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">RESQIG - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://tecnomod-um.org/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+    <!-- ReleaseHeader --><p id="publish-box">RESQIG - Local Development build (v1.0.0) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="http://tecnomod-um.org/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
   
 
 
@@ -235,10 +231,10 @@
   <table class="colsd">
 
     <tr>
-      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://tecnomod-um.org/StructureDefinition/vital-sign-observation-profile<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://tecnomod-um.org/StructureDefinition/vital-sign-observation-profile"/></span>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://tecnomod-um.org/StructureDefinition/vital-sign-observation-profile<button data-clipboard-text="http://tecnomod-um.org/StructureDefinition/vital-sign-observation-profile" title="Click to copy URL" class="btn-copy"></button></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">0.1.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://tecnomod-um.org/StructureDefinition/vital-sign-observation-profile|0.1.0"/></span>
+      <span class="copy-text">1.0.0<button data-clipboard-text="http://tecnomod-um.org/StructureDefinition/vital-sign-observation-profile|1.0.0" title="Click to copy versioned URL" class="btn-copy"></button></span>
       </td>
     </tr>
 
@@ -292,7 +288,7 @@ The Observation is categorized as <code class="language-plaintext highlighter-ro
 
 
 
-<!-- insert intro if present -->
+  <!-- insert intro if present -->
 
 
 
@@ -303,7 +299,7 @@ The Observation is categorized as <code class="language-plaintext highlighter-ro
 </ul>
 <p>You can also check for <a href="https://packages2.fhir.org/xig/RES-Q-FHIR-IG|current/StructureDefinition/vital-sign-observation-profile">usages in the FHIR IG Statistics</a></p>
 
-  <!-- no uri -->
+    <!-- no uri -->
   <a name="profile"> </a>
   <h3 id="profile">Formal Views of Profile Content</h3>
   <p>
@@ -321,19 +317,19 @@ The Observation is categorized as <code class="language-plaintext highlighter-ro
         <a href="#tabs-snap">Snapshot Table</a>
       </li>
 
-<!--      <li>
+  <!-- <li>
         <a href="#tabs-xml">Pseudo-XML</a>
-      </li>-->
+      </li> -->
 
 
-<!--      <li>
+  <!-- <li>
         <a href="#tabs-json">Pseudo-JSON</a>
-      </li>-->
+      </li> -->
 
 
-      <!--<li>
+        <!-- <li>
         <a href="#tabs-ttl">Pseudo-TTL</a>
-      </li>-->
+      </li> -->
 
       <li>
         <a href="#tabs-summ">Statistics/References</a>
@@ -646,7 +642,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Coded form of the unit<br/><span style="font-weight:bold">Required Pattern: </span><span style="color: darkgreen">mm[Hg]</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b2a8abec-0666-4ed1-bf24-cd186a563529
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // eeb94547-3a1f-4164-b41f-e8ce790d4297
 document.getElementById('cbvital-sign-observation-profileK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('vital-sign-observation-profileK'), 'binding', document.getElementById('cbvital-sign-observation-profileK-binding').checked, document.getElementById('ppvital-sign-observation-profileK'));
 document.getElementById('cbvital-sign-observation-profileK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -654,7 +650,7 @@ filterDesc(document.getElementById('vital-sign-observation-profileK'), 'constrai
 document.getElementById('cbvital-sign-observation-profileK-obligation').checked = 'false' != localStorage.getItem('ht-table-states-obligation');
 filterDesc(document.getElementById('vital-sign-observation-profileK'), 'obligation', document.getElementById('cbvital-sign-observation-profileK-obligation').checked, document.getElementById('ppvital-sign-observation-profileK'));
 </script></table>
-          <!--Terminology Bindings heading in the fragment -->
+            <!-- Terminology Bindings heading in the fragment -->
           <h4>Terminology Bindings</h4>
 <table class="list" data-fhir="generated-heirarchy">
   <tr>
@@ -732,7 +728,7 @@ filterDesc(document.getElementById('vital-sign-observation-profileK'), 'obligati
       <a style="opacity: 1.0" href="ValueSet-vital-sign-codes-vs.html">Stroke Vital Sign Codes ValueSet</a>
       <button data-clipboard-text="http://tecnomod-um.org/ValueSet/vital-sign-codes-vs" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;0.1.0</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.0</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -754,10 +750,10 @@ filterDesc(document.getElementById('vital-sign-observation-profileK'), 'obligati
 
         
           
-          <!-- 218 is size of empty table -->
+            <!-- 218 is size of empty table -->
           
             <a name="inv-key"> </a>
-            <!--Constraints  heading in the fragment -->
+              <!-- Constraints  heading in the fragment -->
             <h4>Constraints</h4>
 <table class="list presentation" data-fhir="generated-heirarchy">
   <tr>
@@ -964,7 +960,7 @@ filterDesc(document.getElementById('vital-sign-observation-profileK'), 'obligati
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R5/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Coded form of the unit</span><br/><span style="font-weight:bold">Required Pattern: </span><span style="color: darkgreen">mm[Hg]</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b2a8abec-0666-4ed1-bf24-cd186a563529
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // eeb94547-3a1f-4164-b41f-e8ce790d4297
 document.getElementById('cbvital-sign-observation-profileD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('vital-sign-observation-profileD'), 'binding', document.getElementById('cbvital-sign-observation-profileD-binding').checked, document.getElementById('ppvital-sign-observation-profileD'));
 document.getElementById('cbvital-sign-observation-profileD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -973,7 +969,7 @@ document.getElementById('cbvital-sign-observation-profileD-obligation').checked 
 filterDesc(document.getElementById('vital-sign-observation-profileD'), 'obligation', document.getElementById('cbvital-sign-observation-profileD-obligation').checked, document.getElementById('ppvital-sign-observation-profileD'));
 </script></table>
           <a name="tx"> </a>
-          <!--Terminology Bindings heading in the fragment -->
+            <!-- Terminology Bindings heading in the fragment -->
           <h4>Terminology Bindings (Differential)</h4>
 <table class="list" data-fhir="generated-heirarchy">
   <tr>
@@ -1006,14 +1002,14 @@ filterDesc(document.getElementById('vital-sign-observation-profileD'), 'obligati
       <a style="opacity: 0.5" href="ValueSet-vital-sign-codes-vs.html">Stroke Vital Sign Codes ValueSet</a>
       <button data-clipboard-text="http://tecnomod-um.org/ValueSet/vital-sign-codes-vs" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;0.1.0</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.0</td>
     <td>This IG</td>
   </tr>
 </table>
 
         
           
-          <!-- 218 is size of empty table -->
+            <!-- 218 is size of empty table -->
           
         </div>
       </div>
@@ -1565,7 +1561,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">See <a href="http://hl7.org/fhir/R5/observation.html#Observation.referenceRange" title="Observation.referenceRange">referenceRange (Observation)</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Provides guide for interpretation of component result<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b2a8abec-0666-4ed1-bf24-cd186a563529
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // eeb94547-3a1f-4164-b41f-e8ce790d4297
 document.getElementById('cbvital-sign-observation-profileS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('vital-sign-observation-profileS'), 'binding', document.getElementById('cbvital-sign-observation-profileS-binding').checked, document.getElementById('ppvital-sign-observation-profileS'));
 document.getElementById('cbvital-sign-observation-profileS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1573,7 +1569,7 @@ filterDesc(document.getElementById('vital-sign-observation-profileS'), 'constrai
 document.getElementById('cbvital-sign-observation-profileS-obligation').checked = 'false' != localStorage.getItem('ht-table-states-obligation');
 filterDesc(document.getElementById('vital-sign-observation-profileS'), 'obligation', document.getElementById('cbvital-sign-observation-profileS-obligation').checked, document.getElementById('ppvital-sign-observation-profileS'));
 </script></table>
-          <!--Terminology Bindings heading in the fragment -->
+            <!-- Terminology Bindings heading in the fragment -->
           <h4>Terminology Bindings</h4>
 <table class="list" data-fhir="generated-heirarchy">
   <tr>
@@ -1786,7 +1782,7 @@ filterDesc(document.getElementById('vital-sign-observation-profileS'), 'obligati
       <a style="opacity: 1.0" href="ValueSet-vital-sign-codes-vs.html">Stroke Vital Sign Codes ValueSet</a>
       <button data-clipboard-text="http://tecnomod-um.org/ValueSet/vital-sign-codes-vs" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;0.1.0</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.0</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -1838,10 +1834,10 @@ filterDesc(document.getElementById('vital-sign-observation-profileS'), 'obligati
 
         
           
-          <!-- 218 is size of empty table -->
+            <!-- 218 is size of empty table -->
           
             <a name="inv-snap"> </a>
-            <!--Constraints  heading in the fragment -->
+              <!-- Constraints  heading in the fragment -->
             <h4>Constraints</h4>
 <table class="list presentation" data-fhir="generated-heirarchy">
   <tr>
@@ -1980,7 +1976,7 @@ filterDesc(document.getElementById('vital-sign-observation-profileS'), 'obligati
       </div>
     </div>
 
-<!--    <a name="tabs-xml"> </a>
+  <!-- <a name="tabs-xml"> </a>
     <div id="tabs-xml">
       <div id="xml">
         <div id="xml-inner">
@@ -1988,10 +1984,10 @@ filterDesc(document.getElementById('vital-sign-observation-profileS'), 'obligati
 
         </div>
       </div>
-    </div>-->
+    </div> -->
 
 
-<!--    <a name="tabs-json"> </a>
+  <!-- <a name="tabs-json"> </a>
     <div id="tabs-json">
       <div id="json">
         <div id="json-inner">
@@ -2089,10 +2085,10 @@ Reflex | Repeat | Re-run" class="dict"><span style="text-decoration: underline">
 
         </div>
       </div>
-    </div>-->
+    </div> -->
 
 
-    <!--<a name="tabs-ttl"> </a>
+      <!-- <a name="tabs-ttl"> </a>
     <div id="tabs-ttl">
       <div id="ttl">
         <div id="ttl-inner">
@@ -2100,7 +2096,7 @@ Reflex | Repeat | Re-run" class="dict"><span style="text-decoration: underline">
 
         </div>
       </div>
-    </div>-->
+    </div> -->
 
     <a name="tabs-summ"> </a>
     <div id="tabs-summ">
@@ -2424,7 +2420,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Coded form of the unit<br/><span style="font-weight:bold">Required Pattern: </span><span style="color: darkgreen">mm[Hg]</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b2a8abec-0666-4ed1-bf24-cd186a563529
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // eeb94547-3a1f-4164-b41f-e8ce790d4297
 document.getElementById('cbvital-sign-observation-profileKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('vital-sign-observation-profileKA'), 'binding', document.getElementById('cbvital-sign-observation-profileKA-binding').checked, document.getElementById('ppvital-sign-observation-profileKA'));
 document.getElementById('cbvital-sign-observation-profileKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2432,7 +2428,7 @@ filterDesc(document.getElementById('vital-sign-observation-profileKA'), 'constra
 document.getElementById('cbvital-sign-observation-profileKA-obligation').checked = 'false' != localStorage.getItem('ht-table-states-obligation');
 filterDesc(document.getElementById('vital-sign-observation-profileKA'), 'obligation', document.getElementById('cbvital-sign-observation-profileKA-obligation').checked, document.getElementById('ppvital-sign-observation-profileKA'));
 </script></table>
-          <!--Terminology Bindings heading in the fragment -->
+            <!-- Terminology Bindings heading in the fragment -->
           <h4>Terminology Bindings</h4>
 <table class="list" data-fhir="generated-heirarchy">
   <tr>
@@ -2510,7 +2506,7 @@ filterDesc(document.getElementById('vital-sign-observation-profileKA'), 'obligat
       <a style="opacity: 1.0" href="ValueSet-vital-sign-codes-vs.html">Stroke Vital Sign Codes ValueSet</a>
       <button data-clipboard-text="http://tecnomod-um.org/ValueSet/vital-sign-codes-vs" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;0.1.0</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.0</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -2532,10 +2528,10 @@ filterDesc(document.getElementById('vital-sign-observation-profileKA'), 'obligat
 
         
           
-          <!-- 218 is size of empty table -->
+            <!-- 218 is size of empty table -->
           
             <a name="inv-all-key"> </a>
-            <!--Constraints  heading in the fragment -->
+              <!-- Constraints  heading in the fragment -->
             <h4>Constraints</h4>
 <table class="list presentation" data-fhir="generated-heirarchy">
   <tr>
@@ -2742,7 +2738,7 @@ filterDesc(document.getElementById('vital-sign-observation-profileKA'), 'obligat
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R5/datatypes.html#code">code</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Coded form of the unit</span><br/><span style="font-weight:bold">Required Pattern: </span><span style="color: darkgreen">mm[Hg]</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b2a8abec-0666-4ed1-bf24-cd186a563529
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // eeb94547-3a1f-4164-b41f-e8ce790d4297
 document.getElementById('cbvital-sign-observation-profileDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('vital-sign-observation-profileDA'), 'binding', document.getElementById('cbvital-sign-observation-profileDA-binding').checked, document.getElementById('ppvital-sign-observation-profileDA'));
 document.getElementById('cbvital-sign-observation-profileDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2750,7 +2746,7 @@ filterDesc(document.getElementById('vital-sign-observation-profileDA'), 'constra
 document.getElementById('cbvital-sign-observation-profileDA-obligation').checked = 'false' != localStorage.getItem('ht-table-states-obligation');
 filterDesc(document.getElementById('vital-sign-observation-profileDA'), 'obligation', document.getElementById('cbvital-sign-observation-profileDA-obligation').checked, document.getElementById('ppvital-sign-observation-profileDA'));
 </script></table>
-          <!--Terminology Bindings heading in the fragment -->
+            <!-- Terminology Bindings heading in the fragment -->
           <h4>Terminology Bindings (Differential)</h4>
 <table class="list" data-fhir="generated-heirarchy">
   <tr>
@@ -2783,14 +2779,14 @@ filterDesc(document.getElementById('vital-sign-observation-profileDA'), 'obligat
       <a style="opacity: 0.5" href="ValueSet-vital-sign-codes-vs.html">Stroke Vital Sign Codes ValueSet</a>
       <button data-clipboard-text="http://tecnomod-um.org/ValueSet/vital-sign-codes-vs" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;0.1.0</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.0</td>
     <td>This IG</td>
   </tr>
 </table>
 
         
           
-          <!-- 218 is size of empty table -->
+            <!-- 218 is size of empty table -->
           
         </div>
       </div>
@@ -3342,7 +3338,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">See <a href="http://hl7.org/fhir/R5/observation.html#Observation.referenceRange" title="Observation.referenceRange">referenceRange (Observation)</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Provides guide for interpretation of component result<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b2a8abec-0666-4ed1-bf24-cd186a563529
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // eeb94547-3a1f-4164-b41f-e8ce790d4297
 document.getElementById('cbvital-sign-observation-profileSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('vital-sign-observation-profileSA'), 'binding', document.getElementById('cbvital-sign-observation-profileSA-binding').checked, document.getElementById('ppvital-sign-observation-profileSA'));
 document.getElementById('cbvital-sign-observation-profileSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -3350,7 +3346,7 @@ filterDesc(document.getElementById('vital-sign-observation-profileSA'), 'constra
 document.getElementById('cbvital-sign-observation-profileSA-obligation').checked = 'false' != localStorage.getItem('ht-table-states-obligation');
 filterDesc(document.getElementById('vital-sign-observation-profileSA'), 'obligation', document.getElementById('cbvital-sign-observation-profileSA-obligation').checked, document.getElementById('ppvital-sign-observation-profileSA'));
 </script></table>
-          <!--Terminology Bindings heading in the fragment -->
+            <!-- Terminology Bindings heading in the fragment -->
           <h4>Terminology Bindings</h4>
 <table class="list" data-fhir="generated-heirarchy">
   <tr>
@@ -3563,7 +3559,7 @@ filterDesc(document.getElementById('vital-sign-observation-profileSA'), 'obligat
       <a style="opacity: 1.0" href="ValueSet-vital-sign-codes-vs.html">Stroke Vital Sign Codes ValueSet</a>
       <button data-clipboard-text="http://tecnomod-um.org/ValueSet/vital-sign-codes-vs" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;0.1.0</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.0</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -3615,10 +3611,10 @@ filterDesc(document.getElementById('vital-sign-observation-profileSA'), 'obligat
 
         
           
-          <!-- 218 is size of empty table -->
+            <!-- 218 is size of empty table -->
           
             <a name="inv-all-snap"> </a>
-            <!--Constraints  heading in the fragment -->
+              <!-- Constraints  heading in the fragment -->
             <h4>Constraints</h4>
 <table class="list presentation" data-fhir="generated-heirarchy">
   <tr>
@@ -3756,7 +3752,7 @@ filterDesc(document.getElementById('vital-sign-observation-profileSA'), 'obligat
         </div>
       </div>
 
-      <!--<div id="all-xml">
+        <!-- <div id="all-xml">
         <p>
           <b>XML Template</b>
         </p>
@@ -3764,10 +3760,10 @@ filterDesc(document.getElementById('vital-sign-observation-profileSA'), 'obligat
           <p><span style="color: maroon; font-weight: bold">yet to be done: Xml template</span></p>
 
         </div>
-      </div>-->
+      </div> -->
 
 
-      <!--<div id="all-json">
+        <!-- <div id="all-json">
         <p>
           <b>JSON Template</b>
         </p>
@@ -3865,10 +3861,10 @@ Reflex | Repeat | Re-run" class="dict"><span style="text-decoration: underline">
   }
 
         </div>
-      </div>-->
+      </div> -->
 
 
-      <!--<div id="all-ttl">
+        <!-- <div id="all-ttl">
         <p>
           <b>TTL Template</b>
         </p>
@@ -3876,7 +3872,7 @@ Reflex | Repeat | Re-run" class="dict"><span style="text-decoration: underline">
           <p><span style="color: maroon; font-weight: bold">yet to be done: Turtle template</span></p>
 
         </div>
-      </div>-->
+      </div> -->
 
       <div id="all-summ">
         <p>This structure is derived from <a href="StructureDefinition-base-stroke-observation.html">BaseStrokeObservation</a>
@@ -3891,38 +3887,38 @@ Summary
       </div>
     </div>
   </div>
-  <p>&#160;</p>
+  <p>&nbsp;</p>
   <p>Other representations of profile: <a href="StructureDefinition-vital-sign-observation-profile.csv">CSV</a>, <a href="StructureDefinition-vital-sign-observation-profile.xlsx">Excel</a>, <a href="StructureDefinition-vital-sign-observation-profile.sch">Schematron</a>
  
   </p>
 
   
 
-<!-- insert notes if present -->
+  <!-- insert notes if present -->
 
 
 
 
 </div>
 
-        </div>  <!-- /inner-wrapper -->
-      </div>  <!-- /row -->
-    </div>  <!-- /container -->
-  </div>  <!-- /segment-content -->
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
 
-  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
-  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
 
-  <script type="text/javascript" src="assets/js/tabs.js"> </script>
+  <script src="assets/js/tabs.js" type="text/javascript"> </script>
 
-  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script src="assets/js/window-hash.js" type="text/javascript"> </script>
   <a name="bottom"> </a>
-  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
-    <div class="container">  <!-- container -->
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container">    <!-- container -->
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Fri, Feb 20, 2026 09:39+0000">2026-02-20</span>
+          IG &copy; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Fri, Feb 20, 2026 09:50+0000">2026-02-20</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -3931,27 +3927,26 @@ Summary
                 
           </span>
         </p>
-      </div>  <!-- /inner-wrapper -->
-    </div>  <!-- /container -->
-  </div>  <!-- /segment-footer -->
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
   
-  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
-    <div class="container">  <!-- container -->
-    </div>  <!-- /container -->
-  </div>  <!-- /segment-post-footer -->
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
 
-  <!-- JS and analytics only. -->
-  <!-- Bootstrap core JavaScript
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
   ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
-  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
-  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
-  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
-  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
-  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
-  <!-- Analytics Below
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+    <!-- Analytics Below
   ================================================== -->
   </body>
 </html>
-

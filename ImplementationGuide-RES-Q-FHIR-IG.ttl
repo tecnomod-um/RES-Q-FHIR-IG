@@ -17,10 +17,10 @@
      fhir:v "http://tecnomod-um.org/ImplementationGuide/RES-Q-FHIR-IG"^^xsd:anyURI ;
      fhir:l <http://tecnomod-um.org/ImplementationGuide/RES-Q-FHIR-IG>
   ] ; # 
-  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:version [ fhir:v "1.0.0"] ; # 
   fhir:name [ fhir:v "RESQIG"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-02-20T09:39:34+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-20T09:50:49+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;
@@ -2004,6 +2004,18 @@
        ] [
          fhir:source [
            a fhir:Url ;
+           fhir:v "general-principles.html"^^xsd:anyURI ;
+           fhir:l fhir:general-principles.html
+         ] ;
+         fhir:name [
+           fhir:v "general-principles.html"^^xsd:anyURI ;
+           fhir:l fhir:general-principles.html
+         ] ;
+         fhir:title [ fhir:v "General Principles" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:source [
+           a fhir:Url ;
            fhir:v "conformance.html"^^xsd:anyURI ;
            fhir:l fhir:conformance.html
          ] ;
@@ -2096,18 +2108,6 @@
            fhir:l fhir:examples.html
          ] ;
          fhir:title [ fhir:v "Examples" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:source [
-           a fhir:Url ;
-           fhir:v "extensions.html"^^xsd:anyURI ;
-           fhir:l fhir:extensions.html
-         ] ;
-         fhir:name [
-           fhir:v "extensions.html"^^xsd:anyURI ;
-           fhir:l fhir:extensions.html
-         ] ;
-         fhir:title [ fhir:v "Extensions" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] )
      ] ;

@@ -22,7 +22,7 @@
     <valueCode value="can-bind"/>
   </extension>
   <url value="http://tecnomod-um.org/StructureDefinition/hemorrhagic-stroke-bleeding-reason-ext"/>
-  <version value="0.1.0"/>
+  <version value="1.0.0"/>
   <name value="HemorrhagicStrokeBleedingReasonExt"/>
   <title value="Hemorrhagic Stroke – Bleeding Reason"/>
   <status value="active"/>

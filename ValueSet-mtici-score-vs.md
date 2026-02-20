@@ -1,4 +1,4 @@
-# Modified Treatment in Cerebral Infarction Grade Score ValueSet - v0.1.0
+# Modified Treatment in Cerebral Infarction Grade Score ValueSet - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://tecnomod-um.org/ValueSet/mtici-score-vs | *Version*:0.1.0 |
+| *Official URL*:http://tecnomod-um.org/ValueSet/mtici-score-vs | *Version*:1.0.0 |
 | Draft as of 2025-03-31 | *Computable Name*:MTICIScoreValueSet |
 
  
@@ -53,7 +53,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "resourceType" : "ValueSet",
   "id" : "mtici-score-vs",
   "url" : "http://tecnomod-um.org/ValueSet/mtici-score-vs",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "MTICIScoreValueSet",
   "title" : "Modified Treatment in Cerebral Infarction Grade Score ValueSet",
   "status" : "draft",

@@ -1,4 +1,4 @@
-# Initial Care Intensity CodeSystem - v0.1.0
+# Initial Care Intensity CodeSystem - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs | *Version*:0.1.0 |
+| *Official URL*:http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs | *Version*:1.0.0 |
 | Active as of 2026-02-20 | *Computable Name*:InitialCareIntensityCS |
 
  
@@ -39,12 +39,12 @@ Local CodeSystem representing the **initial intensity of care** during the first
   "resourceType" : "CodeSystem",
   "id" : "initial-care-intensity-cs",
   "url" : "http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "InitialCareIntensityCS",
   "title" : "Initial Care Intensity CodeSystem",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-20T09:39:34+00:00",
+  "date" : "2026-02-20T09:50:49+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

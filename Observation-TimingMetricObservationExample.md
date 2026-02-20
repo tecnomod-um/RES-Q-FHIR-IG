@@ -1,4 +1,4 @@
-# TimingMetricObservationExample - v0.1.0
+# TimingMetricObservationExample - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)

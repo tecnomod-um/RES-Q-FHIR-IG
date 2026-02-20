@@ -17,7 +17,7 @@
      fhir:v "http://tecnomod-um.org/ValueSet/admission-source-vs"^^xsd:anyURI ;
      fhir:l <http://tecnomod-um.org/ValueSet/admission-source-vs>
   ] ; # 
-  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:version [ fhir:v "1.0.0"] ; # 
   fhir:name [ fhir:v "AdmissionSourceValueSet"] ; # 
   fhir:title [ fhir:v "Admission Sources ValueSet"] ; # 
   fhir:status [ fhir:v "draft"] ; # 

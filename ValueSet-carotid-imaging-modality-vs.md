@@ -1,4 +1,4 @@
-# Carotid Arteries Imaging Modality ValueSet - v0.1.0
+# Carotid Arteries Imaging Modality ValueSet - v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://tecnomod-um.org/ValueSet/carotid-imaging-modality-vs | *Version*:0.1.0 |
+| *Official URL*:http://tecnomod-um.org/ValueSet/carotid-imaging-modality-vs | *Version*:1.0.0 |
 | Active as of 2026-02-20 | *Computable Name*:CarotidImagingModalityVS |
 
  
@@ -49,11 +49,11 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "resourceType" : "ValueSet",
   "id" : "carotid-imaging-modality-vs",
   "url" : "http://tecnomod-um.org/ValueSet/carotid-imaging-modality-vs",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "CarotidImagingModalityVS",
   "title" : "Carotid Arteries Imaging Modality ValueSet",
   "status" : "active",
-  "date" : "2026-02-20T09:39:34+00:00",
+  "date" : "2026-02-20T09:50:49+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

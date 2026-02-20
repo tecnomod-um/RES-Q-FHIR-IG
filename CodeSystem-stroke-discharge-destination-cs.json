@@ -6,12 +6,12 @@
     "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem stroke-discharge-destination-cs</b></p><a name=\"stroke-discharge-destination-cs\"> </a><a name=\"hcstroke-discharge-destination-cs\"> </a><p>This  code system <code>http://tecnomod-um.org/CodeSystem/stroke-discharge-destination-cs</code> defines the following code:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">dead<a name=\"stroke-discharge-destination-cs-dead\"> </a></td><td>Patient Deceased</td><td>The patient died during the hospital stay.</td></tr></table></div>"
   },
   "url" : "http://tecnomod-um.org/CodeSystem/stroke-discharge-destination-cs",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "StrokeDischargeDestinationCS",
   "title" : "Stroke Discharge Destination CodeSystem",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-20T09:39:34+00:00",
+  "date" : "2026-02-20T09:50:49+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

@@ -6,7 +6,7 @@
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet discharge-destination-vs</b></p><a name="discharge-destination-vs"> </a><a name="hcdischarge-destination-vs"> </a><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/306689006">306689006</a></td><td>Discharge to home (procedure)</td></tr><tr><td><a href="http://snomed.info/id/306706006">306706006</a></td><td>Discharge to ward (procedure)</td></tr><tr><td><a href="http://snomed.info/id/19712007">19712007</a></td><td>Patient transfer, to another health care facility (procedure)</td></tr><tr><td><a href="http://snomed.info/id/306691003">306691003</a></td><td>Discharge to residential home (procedure)</td></tr><tr><td><a href="http://snomed.info/id/305398007">305398007</a></td><td>Admission to the mortuary (procedure)</td></tr></table></li></ul></div>
   </text>
   <url value="http://tecnomod-um.org/ValueSet/discharge-destination-vs"/>
-  <version value="0.1.0"/>
+  <version value="1.0.0"/>
   <name value="DischargeDestinationValueSet"/>
   <title value="Discharge Destination ValueSet"/>
   <status value="draft"/>

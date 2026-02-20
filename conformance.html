@@ -169,89 +169,288 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#scope" id="markdown-toc-scope">Scope</a></li>
-  <li><a href="#claiming-conformance" id="markdown-toc-claiming-conformance">Claiming Conformance</a></li>
-  <li><a href="#must-support" id="markdown-toc-must-support">Must Support</a></li>
-  <li><a href="#cardinality--invariants" id="markdown-toc-cardinality--invariants">Cardinality &amp; Invariants</a></li>
-  <li><a href="#terminology-binding-strength" id="markdown-toc-terminology-binding-strength">Terminology Binding Strength</a></li>
-  <li><a href="#server-requirements" id="markdown-toc-server-requirements">Server Requirements</a></li>
-  <li><a href="#client-requirements" id="markdown-toc-client-requirements">Client Requirements</a></li>
-  <li><a href="#security-and-privacy-informative" id="markdown-toc-security-and-privacy-informative">Security and Privacy (Informative)</a></li>
+  <li><a href="#conformance" id="markdown-toc-conformance">Conformance</a>    <ul>
+      <li><a href="#exchange-pattern-and-roles" id="markdown-toc-exchange-pattern-and-roles">Exchange Pattern and Roles</a>        <ul>
+          <li><a href="#high-level-data-flow" id="markdown-toc-high-level-data-flow">High-level data flow</a></li>
+          <li><a href="#conformance-roles" id="markdown-toc-conformance-roles">Conformance roles</a></li>
+        </ul>
+      </li>
+      <li><a href="#what-this-ig-defines-scope-of-conformance" id="markdown-toc-what-this-ig-defines-scope-of-conformance">What This IG Defines (Scope of Conformance)</a></li>
+      <li><a href="#claiming-conformance" id="markdown-toc-claiming-conformance">Claiming Conformance</a>        <ul>
+          <li><a href="#producer-conformance-bundle-creation" id="markdown-toc-producer-conformance-bundle-creation">Producer conformance (Bundle creation)</a></li>
+          <li><a href="#receiver-conformance-registry-ingestion" id="markdown-toc-receiver-conformance-registry-ingestion">Receiver conformance (registry ingestion)</a></li>
+        </ul>
+      </li>
+      <li><a href="#bundle-requirements" id="markdown-toc-bundle-requirements">Bundle Requirements</a>        <ul>
+          <li><a href="#bundle-type-transaction-only" id="markdown-toc-bundle-type-transaction-only">Bundle type (transaction only)</a></li>
+          <li><a href="#minimal-reference-integrity" id="markdown-toc-minimal-reference-integrity">Minimal reference integrity</a></li>
+          <li><a href="#episode-anchoring-expectation" id="markdown-toc-episode-anchoring-expectation">Episode anchoring expectation</a></li>
+        </ul>
+      </li>
+      <li><a href="#must-support" id="markdown-toc-must-support">Must Support</a>        <ul>
+          <li><a href="#definition-pragmatic-registry-interpretation" id="markdown-toc-definition-pragmatic-registry-interpretation">Definition (pragmatic registry interpretation)</a></li>
+          <li><a href="#choice-types" id="markdown-toc-choice-types">Choice types</a></li>
+        </ul>
+      </li>
+      <li><a href="#cardinality-and-invariants" id="markdown-toc-cardinality-and-invariants">Cardinality and Invariants</a></li>
+      <li><a href="#terminology-binding-strength" id="markdown-toc-terminology-binding-strength">Terminology Binding Strength</a>        <ul>
+          <li><a href="#snomed-ct-first-local-codes-when-necessary" id="markdown-toc-snomed-ct-first-local-codes-when-necessary">SNOMED CT first, local codes when necessary</a></li>
+        </ul>
+      </li>
+      <li><a href="#data-absent--unknown" id="markdown-toc-data-absent--unknown">Data Absent / Unknown</a></li>
+      <li><a href="#producer-guidance-mapping-and-transformation" id="markdown-toc-producer-guidance-mapping-and-transformation">Producer Guidance (Mapping and Transformation)</a>        <ul>
+          <li><a href="#raw-data-to-fhir-transformation" id="markdown-toc-raw-data-to-fhir-transformation">Raw data to FHIR transformation</a></li>
+          <li><a href="#timing-data-strategy" id="markdown-toc-timing-data-strategy">Timing data strategy</a></li>
+          <li><a href="#medication-modeling" id="markdown-toc-medication-modeling">Medication modeling</a></li>
+        </ul>
+      </li>
+      <li><a href="#receiver-guidance-ingestion-and-transformation" id="markdown-toc-receiver-guidance-ingestion-and-transformation">Receiver Guidance (Ingestion and Transformation)</a></li>
+      <li><a href="#security-and-privacy-informative" id="markdown-toc-security-and-privacy-informative">Security and Privacy (Informative)</a></li>
+    </ul>
+  </li>
 </ul>
 
 </div>
 
-<p>This section describes how implementers can claim conformance to the <strong>RES-Q Stroke Registry Implementation Guide (IG)</strong> and what requirements apply to servers and clients.</p>
+<h1 id="conformance">Conformance</h1>
 
-<h3 id="scope">Scope</h3>
+<p>This section explains how implementers can claim conformance to the <strong>RES-Q Stroke Registry Implementation Guide (IG)</strong> and what requirements apply to each actor in the exchange workflow.</p>
+
+<p>The RES-Q interoperability pattern is <strong>submission-oriented</strong> (registry ingestion), not a generic “query-first” FHIR ecosystem. Conformance is therefore framed around the ability to <strong>produce, transform, validate, and ingest</strong> FHIR R5 resources that comply with this IG.</p>
+
+<h2 id="exchange-pattern-and-roles">Exchange Pattern and Roles</h2>
+
+<h3 id="high-level-data-flow">High-level data flow</h3>
+<ol>
+  <li><strong>Source Data Provider (Hospital / EHR / Stroke Unit System)</strong> exports raw stroke-related data (often form-derived or extracted from clinical systems).</li>
+  <li><strong>Data Transformer (Mapping / ETL / Integration Layer)</strong> converts the raw data into an HL7 FHIR R5 <strong>Bundle</strong> conformant to this IG (profiles, terminology, invariants).</li>
+  <li><strong>Registry Receiver (RES-Q Registry Ingestion Service)</strong> receives the Bundle and transforms the FHIR content into the registry’s internal data architecture.</li>
+</ol>
+
+<p>FHIR is used here as a <strong>standardized communication model</strong> to reduce ambiguity, improve semantic clarity, and support predictable downstream transformation into the registry database.</p>
+
+<h3 id="conformance-roles">Conformance roles</h3>
+<p>This IG distinguishes conformance expectations by role:</p>
+
+<ul>
+  <li><strong>Producer</strong>: the system that generates a FHIR R5 Bundle (often the Data Transformer).</li>
+  <li><strong>Receiver</strong>: the registry ingestion service that accepts and processes the Bundle.</li>
+  <li><strong>Source</strong>: the upstream hospital systems providing the raw data (not necessarily FHIR-native).</li>
+</ul>
+
+<p>In most deployments, the <strong>Data Transformer</strong> is the conformance-critical component on the producer side, because it is responsible for generating resources that validate against this IG.</p>
+
+<h2 id="what-this-ig-defines-scope-of-conformance">What This IG Defines (Scope of Conformance)</h2>
 
 <p>This IG defines:</p>
 <ul>
-  <li><strong>Profiles</strong> on core FHIR R5 resources (e.g., Encounter, Observation, Procedure, Condition, MedicationRequest, MedicationStatement).</li>
-  <li><strong>Terminology artifacts</strong> (ValueSets and CodeSystems) that bind to profile elements.</li>
-  <li><strong>Extensions</strong> to capture stroke-specific data not covered by the base resources.</li>
-  <li><strong>Examples</strong> illustrating compliant data instances.</li>
+  <li><strong>Profiles</strong> on core HL7 FHIR R5 resources (e.g., Encounter, Observation, Procedure, Condition, MedicationRequest, MedicationStatement).</li>
+  <li><strong>Terminology artifacts</strong> (ValueSets and CodeSystems) used in required or extensible bindings.</li>
+  <li><strong>Extensions</strong> to capture stroke-specific concepts not fully represented by base resources.</li>
+  <li><strong>FHIRPath invariants</strong> for cross-field consistency and data quality enforcement.</li>
+  <li><strong>Examples</strong> illustrating compliant instances and typical registry scenarios.</li>
 </ul>
 
-<h3 id="claiming-conformance">Claiming Conformance</h3>
+<p>This IG does not require implementers to expose a complete FHIR server API unless explicitly stated for a given deployment.</p>
 
-<p>An implementation <strong>conforms</strong> to this IG if it:</p>
+<h2 id="claiming-conformance">Claiming Conformance</h2>
+
+<p>An implementation <strong>conforms</strong> to this IG if it satisfies all applicable requirements below for its conformance role (Producer and/or Receiver).</p>
+
+<h3 id="producer-conformance-bundle-creation">Producer conformance (Bundle creation)</h3>
+<p>A Producer conforms if it:</p>
 <ol>
-  <li>Supports the <strong>Must Support</strong> data elements on each relevant profile.</li>
-  <li>Uses the <strong>required</strong>/appropriate <strong>terminology bindings</strong> (e.g., Required, Extensible).</li>
-  <li>Satisfies <strong>cardinality</strong> and <strong>invariants</strong> defined in the profiles.</li>
-  <li>Implements applicable <strong>search parameters</strong> and <strong>operations</strong> (if defined for your use case).</li>
-  <li>Satisfies any defined <strong>CapabilityStatement</strong> requirements (server/client).</li>
+  <li>Produces a FHIR R5 <strong>Bundle</strong> whose resources validate against the relevant <strong>profiles</strong> in this IG.</li>
+  <li>Populates all <strong>cardinality constraints</strong> (min/max) required by those profiles.</li>
+  <li>Implements all applicable <strong>FHIRPath invariants</strong> (validation MUST fail if an error-severity invariant is violated).</li>
+  <li>Supports and correctly uses <strong>Must Support</strong> elements (see Must Support section).</li>
+  <li>Uses the correct <strong>terminology bindings</strong> (Required/Extensible/Preferred/Example) and appropriate CodeSystems.</li>
+  <li>Produces a Bundle with references that are internally consistent and resolvable (see Bundle Requirements).</li>
 </ol>
 
-<h3 id="must-support">Must Support</h3>
+<h3 id="receiver-conformance-registry-ingestion">Receiver conformance (registry ingestion)</h3>
+<p>A Receiver conforms if it:</p>
+<ol>
+  <li>Accepts Bundles and can parse FHIR R5 resources that conform to this IG.</li>
+  <li>Validates incoming resources against this IG profiles and enforces <strong>error-severity invariants</strong>.</li>
+  <li>Processes <strong>Must Support</strong> elements when present and preserves their meaning during transformation.</li>
+  <li>Processes required terminology bindings and correctly interprets local CodeSystems defined by this IG.</li>
+  <li>Provides actionable validation feedback (at minimum: which resource failed, which profile/rule failed, and why).</li>
+</ol>
+
+<h2 id="bundle-requirements">Bundle Requirements</h2>
+
+<h3 id="bundle-type-transaction-only">Bundle type (transaction only)</h3>
+
+<p>All submissions to the registry <strong>SHALL</strong> use:</p>
 
 <ul>
-  <li><strong>Definition:</strong> If an element is marked <strong>Must Support</strong>, systems <strong>SHALL</strong> be able to <em>send, receive, and persist</em> the element when it is relevant and present in the source data.</li>
-  <li><strong>Empty Data:</strong> If a Must Support element is unknown or not present, systems SHALL follow the guidance in <strong>Data Absent/Unknown</strong> (see <em>Guidance</em> page).</li>
-  <li><strong>Choice Types:</strong> When multiple data types are allowed, at least one SHALL be supported as documented in the profile narrative.</li>
+  <li><code class="language-plaintext highlighter-rouge">Bundle.type = transaction</code></li>
 </ul>
 
-<h3 id="cardinality--invariants">Cardinality &amp; Invariants</h3>
+<p>This IG assumes a <strong>transaction-only</strong> submission pattern. Other Bundle types (e.g., <code class="language-plaintext highlighter-rouge">collection</code>, <code class="language-plaintext highlighter-rouge">batch</code>) are <strong>not</strong> considered conformant for RES-Q submissions.</p>
+
+<p><strong>Rationale</strong></p>
+<ul>
+  <li>Ensures atomic submission semantics (all-or-nothing) for a patient episode package.</li>
+  <li>Enables predictable ingestion behavior and consistent handling of inter-resource references.</li>
+</ul>
+
+<p><strong>Transactional entry requirements</strong>
+For a conformant transaction Bundle:</p>
 
 <ul>
-  <li><strong>Cardinality</strong> is authoritative; elements SHALL satisfy the minimum/maximum occurrences.</li>
-  <li><strong>Invariants</strong> (FHIRPath) are <strong>required</strong> constraints; validation SHALL fail if violated (e.g., “if status = <code class="language-plaintext highlighter-rouge">not-done</code> then <code class="language-plaintext highlighter-rouge">statusReason</code> must exist”).</li>
+  <li>Each <code class="language-plaintext highlighter-rouge">Bundle.entry</code> <strong>SHALL</strong> include:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">fullUrl</code> (a stable identifier used to resolve references within the Bundle), and</li>
+      <li><code class="language-plaintext highlighter-rouge">request.method</code> and <code class="language-plaintext highlighter-rouge">request.url</code> defining the RESTful transaction action.</li>
+    </ul>
+  </li>
+  <li>Implementers SHOULD follow these conventions:
+    <ul>
+      <li>Use <code class="language-plaintext highlighter-rouge">POST</code> for create operations when the target server assigns ids.</li>
+      <li>Use <code class="language-plaintext highlighter-rouge">PUT</code> when the client controls ids (or when the integration contract requires deterministic ids).</li>
+      <li>Ensure all internal references resolve using <code class="language-plaintext highlighter-rouge">Reference.reference</code> pointing to the corresponding <code class="language-plaintext highlighter-rouge">fullUrl</code> (e.g., <code class="language-plaintext highlighter-rouge">urn:uuid:...</code>) or to the same logical id used in <code class="language-plaintext highlighter-rouge">request.url</code>.</li>
+    </ul>
+  </li>
+  <li>The transaction Bundle <strong>SHALL</strong> be internally consistent:
+    <ul>
+      <li>References between resources (e.g., <code class="language-plaintext highlighter-rouge">Observation.subject</code>, <code class="language-plaintext highlighter-rouge">Observation.encounter</code>, <code class="language-plaintext highlighter-rouge">Procedure.subject</code>, <code class="language-plaintext highlighter-rouge">Condition.encounter</code>) must resolve to entries included in the same transaction Bundle, unless the integration contract explicitly allows external references.</li>
+    </ul>
+  </li>
 </ul>
 
-<h3 id="terminology-binding-strength">Terminology Binding Strength</h3>
+<h3 id="minimal-reference-integrity">Minimal reference integrity</h3>
+
+<p>A submitted transaction Bundle SHOULD include and maintain reference integrity for:</p>
+<ul>
+  <li>The <strong>index stroke Encounter</strong> (episode anchor).</li>
+  <li>The <strong>Patient</strong> referenced by all resources.</li>
+  <li>Any referenced <code class="language-plaintext highlighter-rouge">Condition</code> / <code class="language-plaintext highlighter-rouge">Procedure</code> / <code class="language-plaintext highlighter-rouge">Observation</code> included as <code class="language-plaintext highlighter-rouge">reason</code>, <code class="language-plaintext highlighter-rouge">partOf</code>, or <code class="language-plaintext highlighter-rouge">hasMember</code> targets.</li>
+</ul>
+
+<p>References SHOULD be resolvable within the Bundle (contained or full resources in the same Bundle) unless an implementation contract explicitly allows external references.</p>
+
+<h3 id="episode-anchoring-expectation">Episode anchoring expectation</h3>
+<p>Resources representing data for the index stroke episode SHOULD reference the index stroke encounter using:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">encounter</code> (for Observation, Condition, MedicationRequest, MedicationStatement) when applicable, and/or</li>
+  <li>episode-scoped linkages like <code class="language-plaintext highlighter-rouge">partOf</code>, <code class="language-plaintext highlighter-rouge">hasMember</code>, or <code class="language-plaintext highlighter-rouge">reason</code> when defined by the profile.</li>
+</ul>
+
+<p>This supports registry ingestion logic and episode-level analytics.</p>
+
+<h2 id="must-support">Must Support</h2>
+
+<h3 id="definition-pragmatic-registry-interpretation">Definition (pragmatic registry interpretation)</h3>
+<p>If an element is marked <strong>Must Support (MS)</strong> in this IG:</p>
 
 <ul>
-  <li><strong>Required:</strong> Only concepts from the bound value set are allowed.</li>
-  <li><strong>Extensible:</strong> Prefer concepts from the value set; other concepts are allowed <strong>only</strong> if a suitable match is not available.</li>
-  <li><strong>Preferred / Example:</strong> Use is recommended, but not enforced.</li>
+  <li><strong>Producer</strong> SHALL be able to <strong>populate and send</strong> the element when the source data contains a value for it.</li>
+  <li><strong>Receiver</strong> SHALL be able to <strong>receive, process, and preserve</strong> the element when it is present.</li>
+  <li>If the element is not available from the source data, the Producer SHALL follow the “Data Absent / Unknown” guidance below rather than inventing values.</li>
 </ul>
 
-<h3 id="server-requirements">Server Requirements</h3>
+<h3 id="choice-types">Choice types</h3>
+<p>Where profiles allow multiple data types (e.g., <code class="language-plaintext highlighter-rouge">effective[x]</code>, <code class="language-plaintext highlighter-rouge">occurrence[x]</code>, <code class="language-plaintext highlighter-rouge">value[x]</code>), Producers SHALL support at least one of the allowed types as constrained by the profile and examples. Receivers SHALL accept all types allowed by the profile (or clearly document any imposed limitation in the integration contract).</p>
 
-<p>If a <strong>server</strong> claims conformance:</p>
-<ul>
-  <li>It SHALL publish a <strong>CapabilityStatement</strong> (or declare conformance via the one provided by this IG, if defined).</li>
-  <li>It SHALL advertise supported <strong>profiles</strong> (<code class="language-plaintext highlighter-rouge">StructureDefinition.url</code>) for each resource type it exposes.</li>
-  <li>It SHOULD support <strong>_include</strong>, <strong>_revinclude</strong>, and common search params for clinical exchange (e.g., <code class="language-plaintext highlighter-rouge">subject</code>, <code class="language-plaintext highlighter-rouge">encounter</code>, <code class="language-plaintext highlighter-rouge">date</code>, <code class="language-plaintext highlighter-rouge">code</code>), when relevant to the profile.</li>
-</ul>
-
-<h3 id="client-requirements">Client Requirements</h3>
-
-<p>If a <strong>client</strong> claims conformance:</p>
-<ul>
-  <li>It SHALL be capable of producing/consuming resources that <strong>validate</strong> against the profiles it claims to support.</li>
-  <li>It SHALL be able to process <strong>Must Support</strong> elements and required <strong>terminology bindings</strong>.</li>
-</ul>
-
-<h3 id="security-and-privacy-informative">Security and Privacy (Informative)</h3>
+<h2 id="cardinality-and-invariants">Cardinality and Invariants</h2>
 
 <ul>
-  <li>Follow local privacy law and institutional policy for PHI/PII.</li>
-  <li>Use TLS for transport (HTTPS).</li>
-  <li>Consider OAuth2/SMART-on-FHIR (or equivalent) for authorization in interactive workflows.</li>
+  <li><strong>Cardinality</strong> is authoritative: resources SHALL satisfy minimum and maximum occurrences for each element.</li>
+  <li><strong>Invariants</strong> (FHIRPath) are required constraints:
+    <ul>
+      <li>Validation SHALL fail if an <strong>error</strong>-severity invariant is violated.</li>
+      <li><strong>Warning</strong>-severity invariants SHOULD be surfaced to implementers as quality feedback but MAY not block ingestion depending on registry policy.</li>
+    </ul>
+  </li>
 </ul>
 
+<p>Examples of typical constraints in this IG include:</p>
+<ul>
+  <li>If <code class="language-plaintext highlighter-rouge">Procedure.status = not-done</code> then <code class="language-plaintext highlighter-rouge">Procedure.statusReason</code> must exist.</li>
+  <li>If a procedure outcome field is present, the corresponding procedure context must match (e.g., complications only for completed thrombectomy).</li>
+  <li>Timing or context extensions must be present for specific completed assessments.</li>
+</ul>
+
+<h2 id="terminology-binding-strength">Terminology Binding Strength</h2>
+
+<p>This IG uses FHIR binding strengths to ensure consistent coding:</p>
+
+<ul>
+  <li><strong>Required:</strong> Only concepts from the bound ValueSet are allowed.</li>
+  <li><strong>Extensible:</strong> Use concepts from the ValueSet when possible; other concepts are allowed only if no suitable match exists.</li>
+  <li><strong>Preferred / Example:</strong> Recommended for interoperability but not enforced.</li>
+</ul>
+
+<h3 id="snomed-ct-first-local-codes-when-necessary">SNOMED CT first, local codes when necessary</h3>
+<ul>
+  <li><strong>SNOMED CT</strong> is the primary terminology for clinical meaning (diagnoses, procedures, observable entities, qualifiers).</li>
+  <li>Where SNOMED CT does not provide a suitable concept (or where the registry needs a stable categorical answer set), this IG defines <strong>local CodeSystems</strong> and includes them in bound ValueSets.</li>
+</ul>
+
+<p>Receivers SHALL recognize and correctly interpret local CodeSystems defined by this IG.</p>
+
+<h2 id="data-absent--unknown">Data Absent / Unknown</h2>
+
+<p>Stroke registry data often contains missing, unknown, or not-applicable fields. Implementations SHALL represent missingness explicitly and consistently:</p>
+
+<ul>
+  <li>Use “unknown” coded values only when “unknown” is itself a meaningful categorical result in the data model (and is defined in the relevant ValueSet/CodeSystem).</li>
+</ul>
+
+<p>This avoids conflating “unknown” with “negative” and improves analytic validity.</p>
+
+<h2 id="producer-guidance-mapping-and-transformation">Producer Guidance (Mapping and Transformation)</h2>
+
+<h3 id="raw-data-to-fhir-transformation">Raw data to FHIR transformation</h3>
+<p>The Data Transformer SHOULD:</p>
+<ul>
+  <li>Map each source field to:
+1) a FHIR resource type (Encounter, Condition, Procedure, Observation, MedicationRequest, MedicationStatement),
+2) the profile defined by this IG,
+3) the specific constrained element and binding,
+4) an appropriate timing strategy (timestamp vs timing-context extension).</li>
+  <li>Preserve semantic intent (e.g., “procedure not performed due to time window” must map to <code class="language-plaintext highlighter-rouge">status=not-done</code> + <code class="language-plaintext highlighter-rouge">statusReason</code> with the controlled code).</li>
+</ul>
+
+<h3 id="timing-data-strategy">Timing data strategy</h3>
+<ul>
+  <li>Use precise timestamps (<code class="language-plaintext highlighter-rouge">effective[x]</code>, <code class="language-plaintext highlighter-rouge">occurrence[x]</code>) where available.</li>
+  <li>Use timing-context extensions when only a phase/category is known or when the registry requires standard reporting categories (e.g., acute/post-acute, within 4 hours, baseline/discharge/90-day).</li>
+</ul>
+
+<h3 id="medication-modeling">Medication modeling</h3>
+<ul>
+  <li>Use <code class="language-plaintext highlighter-rouge">MedicationRequest</code> for discharge prescriptions/orders.</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">MedicationStatement</code> for prior/home medication exposure and adherence status before the index encounter.</li>
+</ul>
+
+<h2 id="receiver-guidance-ingestion-and-transformation">Receiver Guidance (Ingestion and Transformation)</h2>
+
+<p>The Registry Receiver SHOULD:</p>
+<ul>
+  <li>Validate incoming Bundles against this IG.</li>
+  <li>Provide clear validation outcomes and error reporting (resource id, profile url, failing rule).</li>
+  <li>Transform validated FHIR into internal registry storage while preserving:
+    <ul>
+      <li>coded meanings (SNOMED/local),</li>
+      <li>timing semantics (exact vs contextual),</li>
+      <li>episode linkage (encounter anchoring),</li>
+      <li>and conformance-critical fields (Must Support, required bindings).</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="security-and-privacy-informative">Security and Privacy (Informative)</h2>
+
+<p>Implementations SHALL:</p>
+<ul>
+  <li>comply with local privacy law and institutional policy for PHI/PII,</li>
+  <li>use TLS for transport (HTTPS),</li>
+  <li>apply appropriate authentication/authorization controls (e.g., OAuth2/SMART-on-FHIR or equivalent),</li>
+  <li>ensure auditability of submissions and transformations where required by governance.</li>
+</ul>
 
 
 
@@ -271,7 +470,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Fri, Feb 20, 2026 08:47+0000">2026-02-20</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Fri, Feb 20, 2026 09:39+0000">2026-02-20</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

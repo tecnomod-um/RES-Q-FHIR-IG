@@ -3,7 +3,7 @@ RESQIG : Validation Results
 
 err = 4, warn = 127, info = 42
 IG Publisher Version: 2.1.1
-Generated Fri Feb 20 08:48:40 UTC 2026. FHIR version 5.0.0 for RES-Q-FHIR-IG#0.1.0 (canonical = http://tecnomod-um.org)
+Generated Fri Feb 20 09:41:16 UTC 2026. FHIR version 5.0.0 for RES-Q-FHIR-IG#0.1.0 (canonical = http://tecnomod-um.org)
  Build Errors : 1 / 706 / 0
  /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/CodeSystem-assessment-context-cs : 0 / 0 / 1
  /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/CodeSystem-brain-imaging-type-cs : 0 / 2 / 2
@@ -804,9 +804,9 @@ WARNING: ValueSet-vs-gender-snomed.ttl.html#/html/body/div/div/div/p/a at Line 2
 WARNING: ValueSet-vs-gender-snomed.xml.html#/html/body/div/div/div/p/a at Line 285, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 WARNING: artifacts.html#/html/body/div/div/div/p/a at Line 2124, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 WARNING: codesystems.html#/html/body/div/div/div/p/a at Line 198, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
-WARNING: conformance.html#/html/body/div/div/div/p/a at Line 274, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
+WARNING: conformance.html#/html/body/div/div/div/p/a at Line 473, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 WARNING: downloads.html#/html/body/div/div/div/p/a at Line 217, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
-WARNING: examples.html#/html/body/div/div/div/p/a at Line 224, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
+WARNING: examples.html#/html/body/div/div/div/p/a at Line 233, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 WARNING: extensions.html#/html/body/div/div/div/p/a at Line 213, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 WARNING: guidance.html#/html/body/div/div/div/p/a at Line 271, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 WARNING: history.html#/html/body/div/div/div/p/a at Line 204, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions

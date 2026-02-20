@@ -50,3 +50,15 @@ Below you’ll find practical examples that illustrate how the IG profiles are u
 * [Patient-PatientAgeGenderSnomedExample.html](Patient-PatientAgeGenderSnomedExample.md)
 * [Patient-example-patient.html](Patient-example-patient.md)
 
+## MedicationRequest
+
+* [MedicationRequest-discharge-medication-request-001.html](MedicationRequest-discharge-medication-request-001.md)
+
+## MedicationStatement
+
+* [MedicationStatement-PriorMedicationStatementExample.html](MedicationStatement-PriorMedicationStatementExample.md)
+
+## Organization
+
+* [Organization-ExampleStrokeOrganization.html](Organization-ExampleStrokeOrganization.md)
+

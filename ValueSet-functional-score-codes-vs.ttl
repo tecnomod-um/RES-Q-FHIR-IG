@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "FunctionalScoreCodesVS"] ; # 
   fhir:title [ fhir:v "Stroke Functional Score Codes ValueSet"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-02-20T08:47:00+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-20T09:39:34+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;

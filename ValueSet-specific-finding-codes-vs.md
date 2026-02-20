@@ -60,7 +60,7 @@ This ValueSet provides SNOMED CT disorder concepts for specific findings referen
   "name" : "SpecificFindingCodesVS",
   "title" : "Specific Stroke Finding Codes ValueSet",
   "status" : "active",
-  "date" : "2026-02-20T08:47:00+00:00",
+  "date" : "2026-02-20T09:39:34+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

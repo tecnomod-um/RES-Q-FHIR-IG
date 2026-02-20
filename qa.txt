@@ -3,7 +3,7 @@ RESQIG : Validation Results
 
 err = 4, warn = 127, info = 42
 IG Publisher Version: 2.1.1
-Generated Fri Feb 20 10:19:05 UTC 2026. FHIR version 5.0.0 for RES-Q-FHIR-IG#1.0.0 (canonical = http://tecnomod-um.org)
+Generated Fri Feb 20 10:33:08 UTC 2026. FHIR version 5.0.0 for RES-Q-FHIR-IG#1.0.0 (canonical = http://tecnomod-um.org)
  Build Errors : 684 / 706 / 0
  /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/CodeSystem-assessment-context-cs : 0 / 0 / 1
  /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/CodeSystem-brain-imaging-type-cs : 0 / 2 / 2
@@ -1484,7 +1484,7 @@ WARNING: downloads.html#/html/body/div/div/div/p/a at Line 220, column 28: The l
 ERROR: examples.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 103, column 10: The link 'extensions.html' for "Extensions" cannot be resolved
 WARNING: examples.html#/html/body/div/div/div/p/a at Line 236, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 ERROR: general-principles.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 103, column 10: The link 'extensions.html' for "Extensions" cannot be resolved
-WARNING: general-principles.html#/html/body/div/div/div/p/a at Line 371, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
+WARNING: general-principles.html#/html/body/div/div/div/p/a at Line 356, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 ERROR: guidance.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 103, column 10: The link 'extensions.html' for "Extensions" cannot be resolved
 WARNING: guidance.html#/html/body/div/div/div/p/a at Line 274, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 ERROR: history.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 103, column 10: The link 'extensions.html' for "Extensions" cannot be resolved

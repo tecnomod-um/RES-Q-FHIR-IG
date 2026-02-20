@@ -50,7 +50,7 @@ Other representations of profile: [CSV](StructureDefinition-stroke-carotid-imagi
   "name" : "StrokeCarotidImagingProcedureProfile",
   "title" : "Stroke Carotid Imaging Procedure Profile",
   "status" : "active",
-  "date" : "2026-02-20T10:17:22+00:00",
+  "date" : "2026-02-20T10:31:35+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

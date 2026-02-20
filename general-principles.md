@@ -5,8 +5,6 @@
 
 ## General Principles
 
-# General Principles
-
 ### Purpose of this Implementation Guide
 
 This Implementation Guide (IG) provides a HL7® FHIR® R5 interoperability specification to support the exchange of stroke-related data captured through the [RES-Q Stroke Registry](https://stroke.qualityregistry.org/) form workflow. The main objective is to represent the RES-Q Stroke Registry dataset as a consistent, computable, and reusable set of FHIR artifacts (profiles, extensions, CodeSystems, ValueSets, invariants, and examples) so that participating hospitals and systems can submit, validate, and analyze stroke registry data in a harmonized way.
@@ -39,9 +37,9 @@ This IG covers the data elements needed to represent common RES-Q Stroke Registr
 * National drug dictionaries or product-level medication normalization policies (e.g., RxNorm or country-specific medicinal products), unless adopted by an implementation.
 * Item-level NIHSS subscores (this IG captures the NIHSS **total** score only).
 
-## General Modeling Principles
+### General Modeling Principles
 
-### Implementation-centered design
+#### Implementation-centered design
 
 * **Minimal but sufficient** profiles to cover key clinical indicators, registry fields, and reporting needs.
 * **Compatibility** with HL7® FHIR® **R5** base resources and established modeling patterns.
@@ -54,7 +52,7 @@ This IG covers the data elements needed to represent common RES-Q Stroke Registr
 * `MedicationStatement` captures prior medication use (home meds) and adherence.
  
 
-### Episode anchoring and linkage
+#### Episode anchoring and linkage
 
 * Most clinical resources in this IG are expected to reference the **index stroke encounter** (`Encounter`) to support: 
 * episode-level analytics,
@@ -62,7 +60,7 @@ This IG covers the data elements needed to represent common RES-Q Stroke Registr
 * simplified integration and validation logic.
  
 
-### Terminology reuse
+#### Terminology reuse
 
 * **SNOMED CT** is the default terminology for clinical concepts including diagnoses, procedures, observable entities, disorders, and qualifiers.
 * **UCUM** is used for all quantitative units (e.g., minutes, mm[Hg]) to ensure computability.
@@ -77,7 +75,7 @@ This IG covers the data elements needed to represent common RES-Q Stroke Registr
 * and they are documented with use-case and interpretation guidance to preserve semantic consistency across sites.
  
 
-### Critical stroke timings
+#### Critical stroke timings
 
 * Time-sensitive performance indicators (e.g., door-to-needle, door-to-groin) are represented as `Observation` resources using timing-focused profiles.
 * Metrics are modeled as **durations** (typically in UCUM minutes) to optimize registry reporting: 
@@ -90,7 +88,7 @@ This IG covers the data elements needed to represent common RES-Q Stroke Registr
  
 * Where exact timestamps are not available or are operationally unreliable, the IG uses **contextual timing extensions** to preserve interpretability and comparability (e.g., “acute vs post-acute”, “within 4 hours”, “baseline vs discharge vs 90-day follow-up”).
 
-### Explicit timing and assessment context
+#### Explicit timing and assessment context
 
 * Several stroke measures are meaningful only when their **clinical phase/timepoint** is known (e.g., mRS at baseline vs at 90 days).
 * This IG therefore supports two complementary approaches: 1) **Exact timing**: use `effective[x]` / `occurrence[x]` when known. 2) **Phase classification**: use timing context extensions when a standardized label is required for reporting.
@@ -100,7 +98,7 @@ This IG covers the data elements needed to represent common RES-Q Stroke Registr
 * Swallow screening timing category for categorical KPI reporting (e.g., within 4 hours).
  
 
-### Data quality and validation
+#### Data quality and validation
 
 * Cardinalities and `mustSupport` are aligned with registry completeness expectations and core quality indicators.
 * Required `ValueSet` bindings constrain key coded fields to prevent ambiguity and improve comparability.
@@ -111,7 +109,7 @@ This IG covers the data elements needed to represent common RES-Q Stroke Registr
 * For swallow screening, the timing category may be required.
  
 
-### Interoperability and downstream reuse
+#### Interoperability and downstream reuse
 
 * Prefer standard concepts and standard FHIR elements whenever possible.
 * Avoid local concepts when standard equivalents exist; when local codes are necessary: 
@@ -123,7 +121,7 @@ This IG covers the data elements needed to represent common RES-Q Stroke Registr
 * secondary use (registries, dashboards, quality improvement, research) without re-interpretation.
  
 
-### Versioning and evolution
+#### Versioning and evolution
 
 * Profiles, extensions, CodeSystems, and ValueSets are versioned to support controlled evolution as the registry dataset changes.
 * Local terminology is governance-controlled within the IG to preserve stability across implementations and across time.

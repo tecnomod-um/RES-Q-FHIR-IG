@@ -65,7 +65,7 @@ Other representations of profile: [CSV](StructureDefinition-first-hospital-ext.c
   "name" : "FirstHospitalExtension",
   "title" : "First Hospital Indicator Extension",
   "status" : "draft",
-  "date" : "2026-02-20T10:17:22+00:00",
+  "date" : "2026-02-20T10:31:35+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

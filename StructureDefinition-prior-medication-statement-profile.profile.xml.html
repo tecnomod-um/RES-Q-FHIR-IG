@@ -11,7 +11,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Prior Medication Statement Profile (R5) - XML Representation -  v0.1.0</title>
+    <title>Prior MedicationStatement Profile - XML Representation -  v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -139,7 +139,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Prior Medication Statement Profile (R5)</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Prior MedicationStatement Profile</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -272,10 +272,10 @@
        <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;http://tecnomod-um.org/StructureDefinition/prior-medication-statement-profile&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.version">version</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;0.1.0&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.name">name</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;PriorMedicationStatementProfile&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.title">title</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Prior Medication Statement Profile (R5)&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.title">title</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Prior MedicationStatement Profile&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.status">status</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.experimental">experimental</a> <a href="http://hl7.org/fhir/R5/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.date">date</a> <a href="http://hl7.org/fhir/R5/datatypes.html#dateTime">value</a>=&quot;2026-02-20T08:36:31+00:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.date">date</a> <a href="http://hl7.org/fhir/R5/datatypes.html#dateTime">value</a>=&quot;2026-02-20T08:43:58+00:00&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.publisher">publisher</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;UMU&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.contact">contact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R5/metadatatypes.html#ContactDetail#XContactDetail.name">name</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;UMU&quot;/&gt;
@@ -285,7 +285,29 @@
     &lt;/<a href="http://hl7.org/fhir/R5/metadatatypes.html#ContactDetail#XContactDetail.telecom">telecom</a>&gt;
   &lt;/<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.contact">contact</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.description">description</a>
-               <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;Represents a statement about the patient's medication use *before* the index event.&quot;/&gt;
+               <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">value</a>=&quot;Profile for documenting a statement about the patient’s medication use **before** the index stroke encounter.
+
+**Primary use-cases**
+- Medication reconciliation on admission (home medications).
+- Capturing pre-event antithrombotic/anticoagulant exposure (key for hemorrhage risk, eligibility decisions, and etiology workup).
+- Registry variables and analytics (e.g., “on anticoagulation at presentation”, “adherent vs non-adherent”).
+- Clinical decision support and discharge planning (continuation, switching, contraindication checks).
+
+**How to interpret MedicationStatement here**
+- This resource asserts *medication usage status/history*, not a prescription/order.
+  - Use MedicationRequest for discharge prescriptions or new orders.
+  - Use MedicationStatement for what the patient was taking (or was supposed to be taking) prior to admission.
+
+**Key elements and how to use them**
+- `medication` (required; bound to MedicationVS or an IG-specific meds ValueSet): identifies the agent/class.
+  - Prefer specific coded substances/products when available.
+- `subject` (required): patient who used the medication.
+- `encounter` (required): anchors the statement to the index stroke encounter where it was collected/recorded.
+- `status` (required): the lifecycle status of the statement record (e.g., recorded/entered-in-error).
+- `adherence` (optional): captures whether the patient is/was taking the medication as intended.
+  - If present, `adherence.code` is required and bound to the R5 adherence ValueSet.
+- `reason` (optional, repeating): why the medication was taken (indication), represented as CodeableReference targets.
+&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.fhirVersion">fhirVersion</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;5.0.0&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.mapping">mapping</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R5/structuredefinition.html#XStructureDefinition.mapping.identity">identity</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">value</a>=&quot;workflow&quot;/&gt;
@@ -1678,7 +1700,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Fri, Feb 20, 2026 08:36+0000">2026-02-20</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Fri, Feb 20, 2026 08:43+0000">2026-02-20</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

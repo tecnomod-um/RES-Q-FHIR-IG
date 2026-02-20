@@ -50,7 +50,7 @@ Other representations of profile: [CSV](StructureDefinition-specific-finding-obs
   "name" : "SpecificFindingObservationProfile",
   "title" : "Specific Stroke Finding Observation Profile (R5)",
   "status" : "draft",
-  "date" : "2026-02-20T08:36:31+00:00",
+  "date" : "2026-02-20T08:43:58+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

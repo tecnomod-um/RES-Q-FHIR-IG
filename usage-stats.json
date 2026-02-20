@@ -121,7 +121,7 @@
     "MedicationStatement": [
       {
         "url": "http://tecnomod-um.org/StructureDefinition/prior-medication-statement-profile",
-        "title": "Prior Medication Statement Profile (R5)"
+        "title": "Prior MedicationStatement Profile"
       }
     ],
     "Procedure": [

@@ -284,10 +284,46 @@ enabling:
          <tr>
             <td style="column-width:30%">
                <a href="StructureDefinition-prior-medication-statement-profile.html"
-                  title="StructureDefinition/prior-medication-statement-profile">Prior Medication Statement Profile (R5)</a>
+                  title="StructureDefinition/prior-medication-statement-profile">Prior MedicationStatement Profile</a>
             </td>
             <td>
-<p>Represents a statement about the patient's medication use <em>before</em> the index event.</p>
+<p>Profile for documenting a statement about the patient’s medication use <strong>before</strong> the index stroke encounter.</p>
+
+<p><strong>Primary use-cases</strong></p>
+<ul>
+  <li>Medication reconciliation on admission (home medications).</li>
+  <li>Capturing pre-event antithrombotic/anticoagulant exposure (key for hemorrhage risk, eligibility decisions, and etiology workup).</li>
+  <li>Registry variables and analytics (e.g., “on anticoagulation at presentation”, “adherent vs non-adherent”).</li>
+  <li>Clinical decision support and discharge planning (continuation, switching, contraindication checks).</li>
+</ul>
+
+<p><strong>How to interpret MedicationStatement here</strong></p>
+<ul>
+  <li>This resource asserts <em>medication usage status/history</em>, not a prescription/order.
+    <ul>
+      <li>Use MedicationRequest for discharge prescriptions or new orders.</li>
+      <li>Use MedicationStatement for what the patient was taking (or was supposed to be taking) prior to admission.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Key elements and how to use them</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">medication</code> (required; bound to MedicationVS or an IG-specific meds ValueSet): identifies the agent/class.
+    <ul>
+      <li>Prefer specific coded substances/products when available.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">subject</code> (required): patient who used the medication.</li>
+  <li><code class="language-plaintext highlighter-rouge">encounter</code> (required): anchors the statement to the index stroke encounter where it was collected/recorded.</li>
+  <li><code class="language-plaintext highlighter-rouge">status</code> (required): the lifecycle status of the statement record (e.g., recorded/entered-in-error).</li>
+  <li><code class="language-plaintext highlighter-rouge">adherence</code> (optional): captures whether the patient is/was taking the medication as intended.
+    <ul>
+      <li>If present, <code class="language-plaintext highlighter-rouge">adherence.code</code> is required and bound to the R5 adherence ValueSet.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">reason</code> (optional, repeating): why the medication was taken (indication), represented as CodeableReference targets.</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -2049,7 +2085,7 @@ Each code represents a duration measured between two clinically meaningful event
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Fri, Feb 20, 2026 08:36+0000">2026-02-20</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Fri, Feb 20, 2026 08:43+0000">2026-02-20</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

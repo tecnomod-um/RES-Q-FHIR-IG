@@ -24,7 +24,7 @@ ValueSet defining allowable coded medications (or medication categories) for dis
  **References** 
 
 * [Discharge MedicationRequest Profile](StructureDefinition-discharge-medication-request-profile.md)
-* [Prior Medication Statement Profile (R5)](StructureDefinition-prior-medication-statement-profile.md)
+* [Prior MedicationStatement Profile](StructureDefinition-prior-medication-statement-profile.md)
 
 ### Logical Definition (CLD)
 
@@ -58,7 +58,7 @@ ValueSet defining allowable coded medications (or medication categories) for dis
   "name" : "MedicationVS",
   "title" : "Discharge Medications ValueSet",
   "status" : "draft",
-  "date" : "2026-02-20T08:36:31+00:00",
+  "date" : "2026-02-20T08:43:58+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

@@ -20,7 +20,7 @@
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "RESQIG"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-02-20T08:36:31+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-20T08:43:58+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;
@@ -866,8 +866,8 @@
          fhir:l <http://tecnomod-um.org/StructureDefinition/prior-medication-statement-profile> ;
          fhir:reference [ fhir:v "StructureDefinition/prior-medication-statement-profile" ]
        ] ;
-       fhir:name [ fhir:v "Prior Medication Statement Profile (R5)" ] ;
-       fhir:description [ fhir:v "Represents a statement about the patient's medication use *before* the index event." ] ;
+       fhir:name [ fhir:v "Prior MedicationStatement Profile" ] ;
+       fhir:description [ fhir:v "Profile for documenting a statement about the patient’s medication use **before** the index stroke encounter.\n\n**Primary use-cases**\n- Medication reconciliation on admission (home medications).\n- Capturing pre-event antithrombotic/anticoagulant exposure (key for hemorrhage risk, eligibility decisions, and etiology workup).\n- Registry variables and analytics (e.g., “on anticoagulation at presentation”, “adherent vs non-adherent”).\n- Clinical decision support and discharge planning (continuation, switching, contraindication checks).\n\n**How to interpret MedicationStatement here**\n- This resource asserts *medication usage status/history*, not a prescription/order.\n  - Use MedicationRequest for discharge prescriptions or new orders.\n  - Use MedicationStatement for what the patient was taking (or was supposed to be taking) prior to admission.\n\n**Key elements and how to use them**\n- `medication` (required; bound to MedicationVS or an IG-specific meds ValueSet): identifies the agent/class.\n  - Prefer specific coded substances/products when available.\n- `subject` (required): patient who used the medication.\n- `encounter` (required): anchors the statement to the index stroke encounter where it was collected/recorded.\n- `status` (required): the lifecycle status of the statement record (e.g., recorded/entered-in-error).\n- `adherence` (optional): captures whether the patient is/was taking the medication as intended.\n  - If present, `adherence.code` is required and bound to the R5 adherence ValueSet.\n- `reason` (optional, repeating): why the medication was taken (indication), represented as CodeableReference targets." ] ;
        fhir:isExample [ fhir:v false ]
      ] [
        fhir:extension ( [

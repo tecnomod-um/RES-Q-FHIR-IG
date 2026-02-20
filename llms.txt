@@ -79,7 +79,7 @@
 * [Discharge MedicationRequest Profile](StructureDefinition-discharge-medication-request-profile.md)
 * [Stroke Functional Score Observation Profile](StructureDefinition-functional-score-observation-profile.md)
 * [Patient with SNOMED Gender and Age (extensions)](StructureDefinition-patient-age-gender-snomed-profile.md)
-* [Prior Medication Statement Profile (R5)](StructureDefinition-prior-medication-statement-profile.md)
+* [Prior MedicationStatement Profile](StructureDefinition-prior-medication-statement-profile.md)
 * [Specific Stroke Finding Observation Profile (R5)](StructureDefinition-specific-finding-observation-profile.md)
 * [Stroke Brain Imaging Procedure Profile](StructureDefinition-stroke-brain-imaging-procedure-profile.md)
 * [Stroke Carotid Imaging Procedure Profile](StructureDefinition-stroke-carotid-imaging-procedure-profile.md)

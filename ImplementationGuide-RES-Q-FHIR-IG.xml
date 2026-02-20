@@ -9,7 +9,7 @@
   <version value="0.1.0"/>
   <name value="RESQIG"/>
   <status value="draft"/>
-  <date value="2026-02-20T08:36:31+00:00"/>
+  <date value="2026-02-20T08:43:58+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>
@@ -510,8 +510,8 @@
       <reference>
         <reference value="StructureDefinition/prior-medication-statement-profile"/>
       </reference>
-      <name value="Prior Medication Statement Profile (R5)"/>
-      <description value="Represents a statement about the patient's medication use *before* the index event."/>
+      <name value="Prior MedicationStatement Profile"/>
+      <description value="Profile for documenting a statement about the patient’s medication use **before** the index stroke encounter.&#xA;&#xA;**Primary use-cases**&#xA;- Medication reconciliation on admission (home medications).&#xA;- Capturing pre-event antithrombotic/anticoagulant exposure (key for hemorrhage risk, eligibility decisions, and etiology workup).&#xA;- Registry variables and analytics (e.g., “on anticoagulation at presentation”, “adherent vs non-adherent”).&#xA;- Clinical decision support and discharge planning (continuation, switching, contraindication checks).&#xA;&#xA;**How to interpret MedicationStatement here**&#xA;- This resource asserts *medication usage status/history*, not a prescription/order.&#xA;  - Use MedicationRequest for discharge prescriptions or new orders.&#xA;  - Use MedicationStatement for what the patient was taking (or was supposed to be taking) prior to admission.&#xA;&#xA;**Key elements and how to use them**&#xA;- `medication` (required; bound to MedicationVS or an IG-specific meds ValueSet): identifies the agent/class.&#xA;  - Prefer specific coded substances/products when available.&#xA;- `subject` (required): patient who used the medication.&#xA;- `encounter` (required): anchors the statement to the index stroke encounter where it was collected/recorded.&#xA;- `status` (required): the lifecycle status of the statement record (e.g., recorded/entered-in-error).&#xA;- `adherence` (optional): captures whether the patient is/was taking the medication as intended.&#xA;  - If present, `adherence.code` is required and bound to the R5 adherence ValueSet.&#xA;- `reason` (optional, repeating): why the medication was taken (indication), represented as CodeableReference targets."/>
       <isExample value="false"/>
     </resource>
     <resource>

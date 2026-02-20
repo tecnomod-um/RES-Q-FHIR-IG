@@ -1,10 +1,10 @@
-# Prior Medication Statement Profile (R5) - v0.1.0
+# Prior MedicationStatement Profile - v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **Prior Medication Statement Profile (R5)**
+* **Prior MedicationStatement Profile**
 
-## Resource Profile: Prior Medication Statement Profile (R5) ( Experimental ) 
+## Resource Profile: Prior MedicationStatement Profile ( Experimental ) 
 
 | | |
 | :--- | :--- |
@@ -12,7 +12,31 @@
 | Active as of 2026-02-20 | *Computable Name*:PriorMedicationStatementProfile |
 
  
-Represents a statement about the patient's medication use **before** the index event. 
+Profile for documenting a statement about the patient’s medication use **before** the index stroke encounter. 
+**Primary use-cases** 
+* Medication reconciliation on admission (home medications).
+* Capturing pre-event antithrombotic/anticoagulant exposure (key for hemorrhage risk, eligibility decisions, and etiology workup).
+* Registry variables and analytics (e.g., “on anticoagulation at presentation”, “adherent vs non-adherent”).
+* Clinical decision support and discharge planning (continuation, switching, contraindication checks).
+ 
+**How to interpret MedicationStatement here** 
+* This resource asserts **medication usage status/history**, not a prescription/order. 
+* Use MedicationRequest for discharge prescriptions or new orders.
+* Use MedicationStatement for what the patient was taking (or was supposed to be taking) prior to admission.
+ 
+ 
+**Key elements and how to use them** 
+* `medication` (required; bound to MedicationVS or an IG-specific meds ValueSet): identifies the agent/class. 
+* Prefer specific coded substances/products when available.
+ 
+* `subject` (required): patient who used the medication.
+* `encounter` (required): anchors the statement to the index stroke encounter where it was collected/recorded.
+* `status` (required): the lifecycle status of the statement record (e.g., recorded/entered-in-error).
+* `adherence` (optional): captures whether the patient is/was taking the medication as intended. 
+* If present, `adherence.code` is required and bound to the R5 adherence ValueSet.
+ 
+* `reason` (optional, repeating): why the medication was taken (indication), represented as CodeableReference targets.
+ 
 
 **Usages:**
 
@@ -39,10 +63,10 @@ Other representations of profile: [CSV](StructureDefinition-prior-medication-sta
   "url" : "http://tecnomod-um.org/StructureDefinition/prior-medication-statement-profile",
   "version" : "0.1.0",
   "name" : "PriorMedicationStatementProfile",
-  "title" : "Prior Medication Statement Profile (R5)",
+  "title" : "Prior MedicationStatement Profile",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-20T08:36:31+00:00",
+  "date" : "2026-02-20T08:43:58+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",
@@ -51,7 +75,7 @@ Other representations of profile: [CSV](StructureDefinition-prior-medication-sta
       "value" : "http://tecnomod-um.org"
     }]
   }],
-  "description" : "Represents a statement about the patient's medication use *before* the index event.",
+  "description" : "Profile for documenting a statement about the patient’s medication use **before** the index stroke encounter.\n\n**Primary use-cases**\n- Medication reconciliation on admission (home medications).\n- Capturing pre-event antithrombotic/anticoagulant exposure (key for hemorrhage risk, eligibility decisions, and etiology workup).\n- Registry variables and analytics (e.g., “on anticoagulation at presentation”, “adherent vs non-adherent”).\n- Clinical decision support and discharge planning (continuation, switching, contraindication checks).\n\n**How to interpret MedicationStatement here**\n- This resource asserts *medication usage status/history*, not a prescription/order.\n  - Use MedicationRequest for discharge prescriptions or new orders.\n  - Use MedicationStatement for what the patient was taking (or was supposed to be taking) prior to admission.\n\n**Key elements and how to use them**\n- `medication` (required; bound to MedicationVS or an IG-specific meds ValueSet): identifies the agent/class.\n  - Prefer specific coded substances/products when available.\n- `subject` (required): patient who used the medication.\n- `encounter` (required): anchors the statement to the index stroke encounter where it was collected/recorded.\n- `status` (required): the lifecycle status of the statement record (e.g., recorded/entered-in-error).\n- `adherence` (optional): captures whether the patient is/was taking the medication as intended.\n  - If present, `adherence.code` is required and bound to the R5 adherence ValueSet.\n- `reason` (optional, repeating): why the medication was taken (indication), represented as CodeableReference targets.\n",
   "fhirVersion" : "5.0.0",
   "mapping" : [{
     "identity" : "workflow",

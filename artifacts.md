@@ -42,7 +42,25 @@ These define constraints on FHIR resources for systems conforming to this implem
 * `authoredOn` (optional but recommended): the date/time the discharge prescription was authored.
  |
 | [Patient with SNOMED Gender and Age (extensions)](StructureDefinition-patient-age-gender-snomed-profile.md) | Profile that adds an integer age extension and a SNOMED-based gender extension. |
-| [Prior Medication Statement Profile (R5)](StructureDefinition-prior-medication-statement-profile.md) | Represents a statement about the patient's medication use **before** the index event. |
+| [Prior MedicationStatement Profile](StructureDefinition-prior-medication-statement-profile.md) | Profile for documenting a statement about the patient’s medication use **before** the index stroke encounter.**Primary use-cases*** Medication reconciliation on admission (home medications).
+* Capturing pre-event antithrombotic/anticoagulant exposure (key for hemorrhage risk, eligibility decisions, and etiology workup).
+* Registry variables and analytics (e.g., “on anticoagulation at presentation”, “adherent vs non-adherent”).
+* Clinical decision support and discharge planning (continuation, switching, contraindication checks).
+**How to interpret MedicationStatement here*** This resource asserts **medication usage status/history**, not a prescription/order. 
+* Use MedicationRequest for discharge prescriptions or new orders.
+* Use MedicationStatement for what the patient was taking (or was supposed to be taking) prior to admission.
+ 
+**Key elements and how to use them*** `medication` (required; bound to MedicationVS or an IG-specific meds ValueSet): identifies the agent/class. 
+* Prefer specific coded substances/products when available.
+ 
+* `subject` (required): patient who used the medication.
+* `encounter` (required): anchors the statement to the index stroke encounter where it was collected/recorded.
+* `status` (required): the lifecycle status of the statement record (e.g., recorded/entered-in-error).
+* `adherence` (optional): captures whether the patient is/was taking the medication as intended. 
+* If present, `adherence.code` is required and bound to the R5 adherence ValueSet.
+ 
+* `reason` (optional, repeating): why the medication was taken (indication), represented as CodeableReference targets.
+ |
 | [Specific Stroke Finding Observation Profile (R5)](StructureDefinition-specific-finding-observation-profile.md) | Profile for recording discrete, coded stroke-related findings and assessment outcomes that do not fit naturally into vital-sign, functional-score, or timing-metric profiles.**Primary use-cases** 1) AF/flutter assessment status:* `Observation.code` uses a disorder concept as the finding focus (AF/flutter).
 * `Observation.valueCodeableConcept` carries status (AfibFlutterStatusVS). 2) Procedural outcome grade (mTICI):
 * `Observation.code` uses the mTICI assessment concept (MTICICodeVS).

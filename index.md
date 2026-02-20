@@ -43,7 +43,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
   "version" : "0.1.0",
   "name" : "RESQIG",
   "status" : "draft",
-  "date" : "2026-02-20T08:36:31+00:00",
+  "date" : "2026-02-20T08:43:58+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",
@@ -592,8 +592,8 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
       "reference" : {
         "reference" : "StructureDefinition/prior-medication-statement-profile"
       },
-      "name" : "Prior Medication Statement Profile (R5)",
-      "description" : "Represents a statement about the patient's medication use *before* the index event.",
+      "name" : "Prior MedicationStatement Profile",
+      "description" : "Profile for documenting a statement about the patient’s medication use **before** the index stroke encounter.\n\n**Primary use-cases**\n- Medication reconciliation on admission (home medications).\n- Capturing pre-event antithrombotic/anticoagulant exposure (key for hemorrhage risk, eligibility decisions, and etiology workup).\n- Registry variables and analytics (e.g., “on anticoagulation at presentation”, “adherent vs non-adherent”).\n- Clinical decision support and discharge planning (continuation, switching, contraindication checks).\n\n**How to interpret MedicationStatement here**\n- This resource asserts *medication usage status/history*, not a prescription/order.\n  - Use MedicationRequest for discharge prescriptions or new orders.\n  - Use MedicationStatement for what the patient was taking (or was supposed to be taking) prior to admission.\n\n**Key elements and how to use them**\n- `medication` (required; bound to MedicationVS or an IG-specific meds ValueSet): identifies the agent/class.\n  - Prefer specific coded substances/products when available.\n- `subject` (required): patient who used the medication.\n- `encounter` (required): anchors the statement to the index stroke encounter where it was collected/recorded.\n- `status` (required): the lifecycle status of the statement record (e.g., recorded/entered-in-error).\n- `adherence` (optional): captures whether the patient is/was taking the medication as intended.\n  - If present, `adherence.code` is required and bound to the R5 adherence ValueSet.\n- `reason` (optional, repeating): why the medication was taken (indication), represented as CodeableReference targets.",
       "isExample" : false
     },
     {

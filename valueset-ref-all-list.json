@@ -35,7 +35,7 @@
     "StructureDefinition-discharge-medication-request-profile.html" : "Discharge MedicationRequest Profile",
     "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
     "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)",
-    "StructureDefinition-prior-medication-statement-profile.html" : "Prior Medication Statement Profile (R5)",
+    "StructureDefinition-prior-medication-statement-profile.html" : "Prior MedicationStatement Profile",
     "StructureDefinition-stroke-registry-organization-profile.html" : "Stroke Registry Organization Profile",
     "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile",
     "StructureDefinition-stroke-diagnosis-condition-profile.html" : "Stroke Diagnosis Condition Profile",
@@ -150,7 +150,7 @@
     "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
     "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
     "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
-    "StructureDefinition-prior-medication-statement-profile.html" : "Prior Medication Statement Profile (R5)",
+    "StructureDefinition-prior-medication-statement-profile.html" : "Prior MedicationStatement Profile",
     "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile",
     "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile",
     "StructureDefinition-discharge-medication-request-profile.html" : "Discharge MedicationRequest Profile"
@@ -542,7 +542,7 @@
     "StructureDefinition-discharge-medication-request-profile.html" : "Discharge MedicationRequest Profile",
     "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
     "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)",
-    "StructureDefinition-prior-medication-statement-profile.html" : "Prior Medication Statement Profile (R5)",
+    "StructureDefinition-prior-medication-statement-profile.html" : "Prior MedicationStatement Profile",
     "StructureDefinition-stroke-registry-organization-profile.html" : "Stroke Registry Organization Profile",
     "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile",
     "StructureDefinition-stroke-diagnosis-condition-profile.html" : "Stroke Diagnosis Condition Profile",
@@ -638,7 +638,7 @@
     "sources" : ["2.16.840.1.113883.4.642.3.3090"],
     "uses" : {
     },
-    "StructureDefinition-prior-medication-statement-profile.html" : "Prior Medication Statement Profile (R5)"
+    "StructureDefinition-prior-medication-statement-profile.html" : "Prior MedicationStatement Profile"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/medication-statement-status",
@@ -652,7 +652,7 @@
     "sources" : ["2.16.840.1.113883.4.642.3.3088"],
     "uses" : {
     },
-    "StructureDefinition-prior-medication-statement-profile.html" : "Prior Medication Statement Profile (R5)"
+    "StructureDefinition-prior-medication-statement-profile.html" : "Prior MedicationStatement Profile"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/medicationrequest-admin-location",
@@ -666,7 +666,7 @@
     "sources" : ["2.16.840.1.113883.4.642.3.3242"],
     "uses" : {
     },
-    "StructureDefinition-prior-medication-statement-profile.html" : "Prior Medication Statement Profile (R5)",
+    "StructureDefinition-prior-medication-statement-profile.html" : "Prior MedicationStatement Profile",
     "StructureDefinition-discharge-medication-request-profile.html" : "Discharge MedicationRequest Profile"
   },
   {
@@ -1084,7 +1084,7 @@
     "sources" : ["2.16.840.1.113883.4.642.3.369"],
     "uses" : {
     },
-    "StructureDefinition-prior-medication-statement-profile.html" : "Prior Medication Statement Profile (R5)"
+    "StructureDefinition-prior-medication-statement-profile.html" : "Prior MedicationStatement Profile"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/referencerange-appliesto",
@@ -1284,7 +1284,7 @@
     "http://snomed.info/sct"],
     "uses" : {
     },
-    "StructureDefinition-prior-medication-statement-profile.html" : "Prior Medication Statement Profile (R5)",
+    "StructureDefinition-prior-medication-statement-profile.html" : "Prior MedicationStatement Profile",
     "StructureDefinition-discharge-medication-request-profile.html" : "Discharge MedicationRequest Profile"
   },
   {

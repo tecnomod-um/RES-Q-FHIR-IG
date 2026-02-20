@@ -6,7 +6,7 @@
 
 ## Example MedicationStatement: PriorMedicationStatementExample
 
-Profile: [Prior Medication Statement Profile (R5)](StructureDefinition-prior-medication-statement-profile.md)
+Profile: [Prior MedicationStatement Profile](StructureDefinition-prior-medication-statement-profile.md)
 
 **status**: Recorded
 

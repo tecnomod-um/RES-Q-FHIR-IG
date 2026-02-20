@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/mrs-score-vs | *Version*:0.1.0 |
-| Active as of 2026-02-19 | *Computable Name*:MRsScoreVS |
+| Active as of 2026-02-20 | *Computable Name*:MRsScoreVS |
 
  
 This ValueSet includes all mRS grades (0–6) defined in MRsScoreCS. 
@@ -54,26 +54,20 @@ This ValueSet includes all mRS grades (0–6) defined in MRsScoreCS.
   "title" : "Modified Rankin Scale (mRS) Score ValueSet",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-19T14:52:32+00:00",
+  "date" : "2026-02-20T08:36:31+00:00",
   "publisher" : "UMU",
-  "contact" : [
-    {
-      "name" : "UMU",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://tecnomod-um.org"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "UMU",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://tecnomod-um.org"
+    }]
+  }],
   "description" : "This ValueSet includes all mRS grades (0–6) defined in MRsScoreCS.\n\n**Primary use-case**\n- Bind to `Observation.valueCodeableConcept` when `Observation.code` indicates the Observation represents an mRS score.",
   "compose" : {
-    "include" : [
-      {
-        "system" : "http://tecnomod-um.org/CodeSystem/mrs-score-cs"
-      }
-    ]
+    "include" : [{
+      "system" : "http://tecnomod-um.org/CodeSystem/mrs-score-cs"
+    }]
   }
 }
 

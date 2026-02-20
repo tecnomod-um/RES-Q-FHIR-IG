@@ -31,37 +31,27 @@ Profile: [Stroke Risk Factor Condition Profile](StructureDefinition-stroke-risk-
   "resourceType" : "Condition",
   "id" : "StrokeRiskFactorConditionExample",
   "meta" : {
-    "profile" : [
-      "http://tecnomod-um.org/StructureDefinition/stroke-risk-factor-condition-profile"
-    ]
+    "profile" : ["http://tecnomod-um.org/StructureDefinition/stroke-risk-factor-condition-profile"]
   },
   "clinicalStatus" : {
-    "coding" : [
-      {
-        "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
-        "code" : "remission"
-      }
-    ]
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+      "code" : "remission"
+    }]
   },
-  "category" : [
-    {
-      "coding" : [
-        {
-          "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
-          "code" : "problem-list-item",
-          "display" : "Problem List Item"
-        }
-      ]
-    }
-  ],
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
+      "code" : "problem-list-item",
+      "display" : "Problem List Item"
+    }]
+  }],
   "code" : {
-    "coding" : [
-      {
-        "system" : "http://snomed.info/sct",
-        "code" : "422504002",
-        "display" : "Ischemic stroke (disorder)"
-      }
-    ]
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "422504002",
+      "display" : "Ischemic stroke (disorder)"
+    }]
   },
   "subject" : {
     "reference" : "Patient/example-patient"

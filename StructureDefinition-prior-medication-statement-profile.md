@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/prior-medication-statement-profile | *Version*:0.1.0 |
-| Active as of 2026-02-19 | *Computable Name*:PriorMedicationStatementProfile |
+| Active as of 2026-02-20 | *Computable Name*:PriorMedicationStatementProfile |
 
  
 Represents a statement about the patient's medication use **before** the index event. 
@@ -42,105 +42,95 @@ Other representations of profile: [CSV](StructureDefinition-prior-medication-sta
   "title" : "Prior Medication Statement Profile (R5)",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-19T14:52:32+00:00",
+  "date" : "2026-02-20T08:36:31+00:00",
   "publisher" : "UMU",
-  "contact" : [
-    {
-      "name" : "UMU",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://tecnomod-um.org"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "UMU",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://tecnomod-um.org"
+    }]
+  }],
   "description" : "Represents a statement about the patient's medication use *before* the index event.",
   "fhirVersion" : "5.0.0",
-  "mapping" : [
-    {
-      "identity" : "workflow",
-      "uri" : "http://hl7.org/fhir/workflow",
-      "name" : "Workflow Pattern"
-    },
-    {
-      "identity" : "w5",
-      "uri" : "http://hl7.org/fhir/fivews",
-      "name" : "FiveWs Pattern Mapping"
-    },
-    {
-      "identity" : "rim",
-      "uri" : "http://hl7.org/v3",
-      "name" : "RIM Mapping"
-    },
-    {
-      "identity" : "v2",
-      "uri" : "http://hl7.org/v2",
-      "name" : "HL7 V2 Mapping"
-    }
-  ],
+  "mapping" : [{
+    "identity" : "workflow",
+    "uri" : "http://hl7.org/fhir/workflow",
+    "name" : "Workflow Pattern"
+  },
+  {
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  },
+  {
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  },
+  {
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 V2 Mapping"
+  }],
   "kind" : "resource",
   "abstract" : false,
   "type" : "MedicationStatement",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/MedicationStatement",
   "derivation" : "constraint",
   "differential" : {
-    "element" : [
-      {
-        "id" : "MedicationStatement",
-        "path" : "MedicationStatement"
-      },
-      {
-        "id" : "MedicationStatement.status",
-        "path" : "MedicationStatement.status",
-        "mustSupport" : true
-      },
-      {
-        "id" : "MedicationStatement.medication",
-        "path" : "MedicationStatement.medication",
-        "mustSupport" : true,
-        "binding" : {
-          "strength" : "required",
-          "valueSet" : "http://tecnomod-um.org/ValueSet/medication-vs"
-        }
-      },
-      {
-        "id" : "MedicationStatement.subject",
-        "path" : "MedicationStatement.subject",
-        "type" : [
-          {
-            "code" : "Reference",
-            "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Patient"]
-          }
-        ],
-        "mustSupport" : true
-      },
-      {
-        "id" : "MedicationStatement.encounter",
-        "path" : "MedicationStatement.encounter",
-        "min" : 1,
-        "mustSupport" : true
-      },
-      {
-        "id" : "MedicationStatement.reason",
-        "path" : "MedicationStatement.reason",
-        "mustSupport" : true
-      },
-      {
-        "id" : "MedicationStatement.adherence",
-        "path" : "MedicationStatement.adherence",
-        "mustSupport" : true
-      },
-      {
-        "id" : "MedicationStatement.adherence.code",
-        "path" : "MedicationStatement.adherence.code",
-        "mustSupport" : true,
-        "binding" : {
-          "strength" : "required",
-          "valueSet" : "http://hl7.org/fhir/ValueSet/medication-statement-adherence"
-        }
+    "element" : [{
+      "id" : "MedicationStatement",
+      "path" : "MedicationStatement"
+    },
+    {
+      "id" : "MedicationStatement.status",
+      "path" : "MedicationStatement.status",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationStatement.medication",
+      "path" : "MedicationStatement.medication",
+      "mustSupport" : true,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "http://tecnomod-um.org/ValueSet/medication-vs"
       }
-    ]
+    },
+    {
+      "id" : "MedicationStatement.subject",
+      "path" : "MedicationStatement.subject",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Patient"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationStatement.encounter",
+      "path" : "MedicationStatement.encounter",
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationStatement.reason",
+      "path" : "MedicationStatement.reason",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationStatement.adherence",
+      "path" : "MedicationStatement.adherence",
+      "mustSupport" : true
+    },
+    {
+      "id" : "MedicationStatement.adherence.code",
+      "path" : "MedicationStatement.adherence.code",
+      "mustSupport" : true,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "http://hl7.org/fhir/ValueSet/medication-statement-adherence"
+      }
+    }]
   }
 }
 

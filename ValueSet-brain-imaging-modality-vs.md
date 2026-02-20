@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/brain-imaging-modality-vs | *Version*:0.1.0 |
-| Active as of 2026-02-19 | *Computable Name*:BrainImagingModalityVS |
+| Active as of 2026-02-20 | *Computable Name*:BrainImagingModalityVS |
 
  
 Defines the SNOMED CT codes for individual brain imaging modalities performed as procedures. 
@@ -50,35 +50,27 @@ Defines the SNOMED CT codes for individual brain imaging modalities performed as
   "name" : "BrainImagingModalityVS",
   "title" : "Brain Imaging Modality ValueSet",
   "status" : "active",
-  "date" : "2026-02-19T14:52:32+00:00",
+  "date" : "2026-02-20T08:36:31+00:00",
   "publisher" : "UMU",
-  "contact" : [
-    {
-      "name" : "UMU",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://tecnomod-um.org"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "UMU",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://tecnomod-um.org"
+    }]
+  }],
   "description" : "Defines the SNOMED CT codes for individual brain imaging modalities performed as procedures.",
   "compose" : {
-    "include" : [
-      {
-        "system" : "http://snomed.info/sct",
-        "concept" : [
-          {
-            "code" : "419949007",
-            "display" : "Computed tomography angiography of intracranial artery with contrast (procedure)"
-          }
-        ]
-      },
-      {
-        "system" : "http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs"
-      }
-    ]
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "419949007",
+        "display" : "Computed tomography angiography of intracranial artery with contrast (procedure)"
+      }]
+    },
+    {
+      "system" : "http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs"
+    }]
   }
 }
 

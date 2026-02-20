@@ -67,44 +67,36 @@ To support classification of stroke etiology using a mix of local codes and sele
   "experimental" : true,
   "date" : "2025-03-31",
   "publisher" : "UMU",
-  "contact" : [
-    {
-      "name" : "UMU",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://tecnomod-um.org"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "UMU",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://tecnomod-um.org"
+    }]
+  }],
   "description" : "This ValueSet defines allowable values for recording the **determined ischemic stroke etiology**.\n\n**Primary use-case**\n- Required binding for `StrokeStrokeEtiologyExt.valueCodeableConcept` on definitive ischemic stroke Conditions.\n\n**Composition**\n- Local etiology categories (StrokeEtiologyCS), plus selected SNOMED CT disorder concepts for commonly used etiology groupings.\n\n**Implementation guidance**\n- Use after etiologic workup when a classification is assigned.\n- If etiology remains unknown/undetermined, use the included `Undetermined (qualifier value)`",
   "immutable" : false,
   "purpose" : "To support classification of stroke etiology using a mix of local codes and selected SNOMED CT concepts.",
   "copyright" : "This value set includes locally governed concepts and SNOMED CT® content. SNOMED CT® is distributed by SNOMED International.",
   "compose" : {
-    "include" : [
-      {
-        "system" : "http://tecnomod-um.org/CodeSystem/stroke-etiology-cs"
+    "include" : [{
+      "system" : "http://tecnomod-um.org/CodeSystem/stroke-etiology-cs"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "16891111000119104",
+        "display" : "Cryptogenic stroke (disorder)"
       },
       {
-        "system" : "http://snomed.info/sct",
-        "concept" : [
-          {
-            "code" : "16891111000119104",
-            "display" : "Cryptogenic stroke (disorder)"
-          },
-          {
-            "code" : "413758000",
-            "display" : "Cardioembolic stroke (disorder)"
-          },
-          {
-            "code" : "230698000",
-            "display" : "Lacunar infarction (disorder)"
-          }
-        ]
-      }
-    ]
+        "code" : "413758000",
+        "display" : "Cardioembolic stroke (disorder)"
+      },
+      {
+        "code" : "230698000",
+        "display" : "Lacunar infarction (disorder)"
+      }]
+    }]
   }
 }
 

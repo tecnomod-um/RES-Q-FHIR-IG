@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/timing-metric-codes-vs | *Version*:0.1.0 |
-| Active as of 2026-02-19 | *Computable Name*:TimingMetricCodesVS |
+| Active as of 2026-02-20 | *Computable Name*:TimingMetricCodesVS |
 
  
 This ValueSet includes all timing metric codes from TimingMetricCodesCS. 
@@ -53,26 +53,20 @@ This ValueSet includes all timing metric codes from TimingMetricCodesCS.
   "name" : "TimingMetricCodesVS",
   "title" : "Stroke Timing Metric Codes ValueSet",
   "status" : "active",
-  "date" : "2026-02-19T14:52:32+00:00",
+  "date" : "2026-02-20T08:36:31+00:00",
   "publisher" : "UMU",
-  "contact" : [
-    {
-      "name" : "UMU",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://tecnomod-um.org"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "UMU",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://tecnomod-um.org"
+    }]
+  }],
   "description" : "This ValueSet includes all timing metric codes from TimingMetricCodesCS.\n\n**Primary use-case**\n- Required binding for `TimingMetricObservationProfile.code` to ensure only approved metrics are captured.",
   "compose" : {
-    "include" : [
-      {
-        "system" : "http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs"
-      }
-    ]
+    "include" : [{
+      "system" : "http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs"
+    }]
   }
 }
 

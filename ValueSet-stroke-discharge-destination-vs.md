@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/stroke-discharge-destination-vs | *Version*:0.1.0 |
-| Active as of 2026-02-19 | *Computable Name*:StrokeDischargeDestinationVS |
+| Active as of 2026-02-20 | *Computable Name*:StrokeDischargeDestinationVS |
 
  
 ValueSet defining allowable discharge dispositions for the stroke encounter. 
@@ -57,47 +57,39 @@ ValueSet defining allowable discharge dispositions for the stroke encounter.
   "name" : "StrokeDischargeDestinationVS",
   "title" : "Stroke Discharge Destination ValueSet",
   "status" : "active",
-  "date" : "2026-02-19T14:52:32+00:00",
+  "date" : "2026-02-20T08:36:31+00:00",
   "publisher" : "UMU",
-  "contact" : [
-    {
-      "name" : "UMU",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://tecnomod-um.org"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "UMU",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://tecnomod-um.org"
+    }]
+  }],
   "description" : "ValueSet defining allowable discharge dispositions for the stroke encounter.\n\n**Primary use-case**\n- Required binding to `Encounter.admission.dischargeDisposition` in `StrokeEncounterProfile`.\n\n**Composition**\n- SNOMED CT “discharge/transfer” procedure concepts for common destinations.\n- Local supplement (StrokeDischargeDestinationCS) for outcomes such as “deceased during stay”.",
   "compose" : {
-    "include" : [
-      {
-        "system" : "http://snomed.info/sct",
-        "concept" : [
-          {
-            "code" : "306689006",
-            "display" : "Discharge to home (procedure)"
-          },
-          {
-            "code" : "37729005",
-            "display" : "Patient transfer, in-hospital (procedure)"
-          },
-          {
-            "code" : "19712007",
-            "display" : "Patient transfer, to another health care facility (procedure)"
-          },
-          {
-            "code" : "306694006",
-            "display" : "Discharge to nursing home (procedure)"
-          }
-        ]
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "306689006",
+        "display" : "Discharge to home (procedure)"
       },
       {
-        "system" : "http://tecnomod-um.org/CodeSystem/stroke-discharge-destination-cs"
-      }
-    ]
+        "code" : "37729005",
+        "display" : "Patient transfer, in-hospital (procedure)"
+      },
+      {
+        "code" : "19712007",
+        "display" : "Patient transfer, to another health care facility (procedure)"
+      },
+      {
+        "code" : "306694006",
+        "display" : "Discharge to nursing home (procedure)"
+      }]
+    },
+    {
+      "system" : "http://tecnomod-um.org/CodeSystem/stroke-discharge-destination-cs"
+    }]
   }
 }
 

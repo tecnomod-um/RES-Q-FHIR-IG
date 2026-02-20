@@ -23,16 +23,12 @@ Profile: [Stroke Registry Organization Profile](StructureDefinition-stroke-regis
   "resourceType" : "Organization",
   "id" : "ExampleStrokeOrganization",
   "meta" : {
-    "profile" : [
-      "http://tecnomod-um.org/StructureDefinition/stroke-registry-organization-profile"
-    ]
+    "profile" : ["http://tecnomod-um.org/StructureDefinition/stroke-registry-organization-profile"]
   },
-  "identifier" : [
-    {
-      "system" : "https://stroke.qualityregistry.org",
-      "value" : "987654"
-    }
-  ],
+  "identifier" : [{
+    "system" : "https://stroke.qualityregistry.org",
+    "value" : "987654"
+  }],
   "active" : true,
   "name" : "University Hospital of Boston"
 }

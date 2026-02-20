@@ -20,7 +20,7 @@
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "RESQIG"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-02-19T14:52:32+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-20T08:36:31+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;
@@ -343,6 +343,24 @@
          ] ;
          fhir:value [
            a fhir:String ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://tecnomod-um.org/CodeSystem/medication-cs> ;
+         fhir:reference [ fhir:v "CodeSystem/medication-cs" ]
+       ] ;
+       fhir:name [ fhir:v "Discharge Medication Category CodeSystem" ] ;
+       fhir:description [ fhir:v "Local CodeSystem providing **coarse medication categories** used in discharge prescribing when the source system cannot\n(or does not) provide a specific coded drug product/substance.\n\n**Primary use-cases**\n- Minimum-data capture for discharge medication classes relevant to stroke secondary prevention (e.g., anticoagulant vs antiplatelet).\n- Registry reporting where only “medication class prescribed at discharge” is available.\n- Analytics and quality indicators (e.g., “antithrombotic at discharge”) when specific agent is unknown.\n\n**How it is used in FHIR**\n- Included in `MedicationVS` so it can be used in `MedicationRequest.medication` (CodeableConcept)." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
            fhir:v "StructureDefinition:resource"
          ]
        ] ) ;
@@ -350,8 +368,26 @@
          fhir:l <http://tecnomod-um.org/StructureDefinition/discharge-medication-request-profile> ;
          fhir:reference [ fhir:v "StructureDefinition/discharge-medication-request-profile" ]
        ] ;
-       fhir:name [ fhir:v "Discharge Medication Request Profile" ] ;
-       fhir:description [ fhir:v "Represents a medication prescription made as part of the patient's discharge plan, categorized as community administration." ] ;
+       fhir:name [ fhir:v "Discharge MedicationRequest Profile" ] ;
+       fhir:description [ fhir:v "Profile for representing a medication prescription issued as part of the patient’s **discharge plan** following a stroke encounter.\n\n**Primary use-case**\n- Capture secondary prevention and chronic therapy prescriptions intended to be taken **after discharge** (community setting),\n  enabling:\n  - discharge medication reconciliation,\n  - continuity of care between hospital and primary care,\n  - registry submission and quality improvement (e.g., antithrombotic/statin at discharge),\n  - episode-linked analytics (tie to the index stroke Encounter).\n\n**Key elements and how to use them**\n- `status` (fixed to active): indicates the prescription is currently intended/valid at the time of discharge documentation.\n  - Use `stopped` or `cancelled` in your broader implementation if a discharge prescription is later withdrawn (not constrained here).\n- `category` (fixed to community): indicates the medication is intended for administration in the community/outpatient context.\n  - This helps distinguish discharge prescriptions from inpatient medication orders.\n- `medication` (required; bound to MedicationVS): identifies the prescribed agent or, if unavailable, a coarse category.\n  - Prefer specific SNOMED CT substance concepts (e.g., aspirin) when available.\n  - Use `MedicationCS` category codes only when the specific agent cannot be coded.\n- `subject` (required): the patient who will take the medication.\n- `encounter` (required): links the prescription to the index stroke admission encounter.\n- `authoredOn` (optional but recommended): the date/time the discharge prescription was authored." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://tecnomod-um.org/ValueSet/medication-vs> ;
+         fhir:reference [ fhir:v "ValueSet/medication-vs" ]
+       ] ;
+       fhir:name [ fhir:v "Discharge Medications ValueSet" ] ;
+       fhir:description [ fhir:v "ValueSet defining allowable coded medications (or medication categories) for discharge MedicationRequests.\n\n**Primary use-case**\n- Required binding to `MedicationRequest.medication` in `DischargeMedicationRequestProfile`.\n\n**What this ValueSet supports**\n1) **Specific SNOMED CT substance concepts** (e.g., aspirin, clopidogrel, warfarin) for agent-level capture.\n2) **Local category codes** (from `MedicationCS`) for minimum-data capture when only the class is known.\n\n**Scope and modeling notes**\n- This ValueSet does not encode dose, route, frequency, or duration; those are expressed in MedicationRequest elements." ] ;
        fhir:isExample [ fhir:v false ]
      ] [
        fhir:extension ( [
@@ -596,42 +632,6 @@
        ] ;
        fhir:name [ fhir:v "Ischemic Stroke – Etiology" ] ;
        fhir:description [ fhir:v "Extension capturing the **determined ischemic stroke etiology classification**.\n\n**Primary use-case**\n- Attach to a definitive ischemic stroke Condition (`StrokeDiagnosisConditionProfile`) to support:\n  - etiologic subgroup analytics (cardioembolic vs lacunar vs cryptogenic, etc.),\n  - pathway decision support (e.g., prolonged rhythm monitoring for cryptogenic stroke),\n\n**When to use**\n- Use after etiologic workup when a classification is assigned.\n- Do not use for hemorrhagic stroke diagnoses.\n- If the etiology remains unknown/undetermined, either omit the extension or use the “Undetermined” code included in StrokeEtiologyVS.\n\n**FHIR placement**\n- `Condition.extension[ischemicEtiology].valueCodeableConcept` (required binding to StrokeEtiologyVS)." ] ;
-       fhir:isExample [ fhir:v false ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
-           fhir:v "CodeSystem"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <http://tecnomod-um.org/CodeSystem/medication-cs> ;
-         fhir:reference [ fhir:v "CodeSystem/medication-cs" ]
-       ] ;
-       fhir:name [ fhir:v "Medications CodeSystem" ] ;
-       fhir:description [ fhir:v "Codes for drug products or substances representing the Medications on the patient discharge." ] ;
-       fhir:isExample [ fhir:v false ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
-           fhir:v "ValueSet"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <http://tecnomod-um.org/ValueSet/medication-vs> ;
-         fhir:reference [ fhir:v "ValueSet/medication-vs" ]
-       ] ;
-       fhir:name [ fhir:v "Medications ValueSet" ] ;
-       fhir:description [ fhir:v "SNOMED CT codes for drug products or substances." ] ;
        fhir:isExample [ fhir:v false ]
      ] [
        fhir:extension ( [

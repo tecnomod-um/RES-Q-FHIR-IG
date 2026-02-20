@@ -41,30 +41,24 @@ To provide locally governed codes for the identified cause of bleeding in hemorr
   "experimental" : false,
   "date" : "2025-10-07",
   "publisher" : "UMU",
-  "contact" : [
-    {
-      "name" : "UMU",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://tecnomod-um.org"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "UMU",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://tecnomod-um.org"
+    }]
+  }],
   "description" : "Local CodeSystem representing **locally governed reasons/causes** for intracranial bleeding in hemorrhagic stroke.\n\n**Primary use-case**\n- Used via `HemorrhagicStrokeBleedingReasonVS` as the allowed vocabulary for `HemorrhagicStrokeBleedingReasonExt.valueCodeableConcept`\n  on a definitive hemorrhagic stroke Condition.",
   "purpose" : "To provide locally governed codes for the identified cause of bleeding in hemorrhagic stroke.",
   "copyright" : "© Tecnomod. This CodeSystem is provided for use within this Implementation Guide.",
   "caseSensitive" : false,
   "content" : "complete",
   "count" : 1,
-  "concept" : [
-    {
-      "code" : "other",
-      "display" : "Bleeding Reason Other",
-      "definition" : "Another, less common or unspecified cause of intracranial hemorrhage was identified"
-    }
-  ]
+  "concept" : [{
+    "code" : "other",
+    "display" : "Bleeding Reason Other",
+    "definition" : "Another, less common or unspecified cause of intracranial hemorrhage was identified"
+  }]
 }
 
 ```

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/vital-sign-codes-vs | *Version*:0.1.0 |
-| Active as of 2026-02-19 | *Computable Name*:VitalSignCodesVS |
+| Active as of 2026-02-20 | *Computable Name*:VitalSignCodesVS |
 
  
 This ValueSet defines SNOMED CT observable-entity codes for blood pressure components captured as vital signs: 
@@ -61,36 +61,28 @@ This ValueSet defines SNOMED CT observable-entity codes for blood pressure compo
   "title" : "Stroke Vital Sign Codes ValueSet",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-19T14:52:32+00:00",
+  "date" : "2026-02-20T08:36:31+00:00",
   "publisher" : "UMU",
-  "contact" : [
-    {
-      "name" : "UMU",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://tecnomod-um.org"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "UMU",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://tecnomod-um.org"
+    }]
+  }],
   "description" : "This ValueSet defines SNOMED CT observable-entity codes for blood pressure components captured as vital signs:\n- Systolic blood pressure\n- Diastolic blood pressure\n\n**Primary use-case**\n- Bind to `Observation.component.code` in a single blood pressure Observation that records both components.\n\n**Implementation guidance**\n- Use `Observation.component.valueQuantity` with UCUM `mm[Hg]`.\n- Repeat the Observation across time with different `effective[x]` timestamps for monitoring.",
   "compose" : {
-    "include" : [
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "271649006",
+        "display" : "Systolic blood pressure (observable entity)"
+      },
       {
-        "system" : "http://snomed.info/sct",
-        "concept" : [
-          {
-            "code" : "271649006",
-            "display" : "Systolic blood pressure (observable entity)"
-          },
-          {
-            "code" : "271650006",
-            "display" : "Diastolic blood pressure (observable entity)"
-          }
-        ]
-      }
-    ]
+        "code" : "271650006",
+        "display" : "Diastolic blood pressure (observable entity)"
+      }]
+    }]
   }
 }
 

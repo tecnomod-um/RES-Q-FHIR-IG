@@ -47,35 +47,29 @@ To provide locally governed codes for classifying ischemic stroke etiology.
   "experimental" : false,
   "date" : "2025-10-07",
   "publisher" : "UMU",
-  "contact" : [
-    {
-      "name" : "UMU",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://tecnomod-um.org"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "UMU",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://tecnomod-um.org"
+    }]
+  }],
   "description" : "Local CodeSystem defining categories for **ischemic stroke etiology** classification.\n\n**Primary use-case**\n- Used via `StrokeEtiologyVS` as the required vocabulary for `StrokeStrokeEtiologyExt.valueCodeableConcept`\n  on a definitive ischemic stroke Condition.\n\n**Why it exists**\n- Stroke etiology classification often mixes internationally standard categories (cardioembolic, lacunar, cryptogenic) with local operational buckets.\n\n**Modeling notes**\n- This CodeSystem is intended for “final etiology classification” after diagnostic workup, not for provisional hypotheses.",
   "purpose" : "To provide locally governed codes for classifying ischemic stroke etiology.",
   "copyright" : "© Tecnomod. This CodeSystem is provided for use within this Implementation Guide.",
   "caseSensitive" : false,
   "content" : "complete",
   "count" : 2,
-  "concept" : [
-    {
-      "code" : "atherosclerosis",
-      "display" : "Stroke Etiology Atherosclerosis",
-      "definition" : "Specifies that large artery atherosclerosis (for example, significant stenosis in the carotid or basilar arteries) was identified as the cause of the stroke."
-    },
-    {
-      "code" : "other",
-      "display" : "Stroke Etiology Other",
-      "definition" : "Specifies that the stroke etiology falls into a rarer category not covered by the main classifications, such as vasculitis or hypercoagulable states."
-    }
-  ]
+  "concept" : [{
+    "code" : "atherosclerosis",
+    "display" : "Stroke Etiology Atherosclerosis",
+    "definition" : "Specifies that large artery atherosclerosis (for example, significant stenosis in the carotid or basilar arteries) was identified as the cause of the stroke."
+  },
+  {
+    "code" : "other",
+    "display" : "Stroke Etiology Other",
+    "definition" : "Specifies that the stroke etiology falls into a rarer category not covered by the main classifications, such as vasculitis or hypercoagulable states."
+  }]
 }
 
 ```

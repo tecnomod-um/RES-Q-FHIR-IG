@@ -21,7 +21,26 @@ These define constraints on FHIR resources for systems conforming to this implem
 * `Observation.partOf` optionally links the Observation to a Procedure (e.g., thrombectomy) when the Observation represents a procedural outcome (e.g., mTICI).
 * `Observation.effective[x]` is optional to support cases where only a phase label is known; populate when available for sequencing and analysis.
  |
-| [Discharge Medication Request Profile](StructureDefinition-discharge-medication-request-profile.md) | Represents a medication prescription made as part of the patient's discharge plan, categorized as community administration. |
+| [Discharge MedicationRequest Profile](StructureDefinition-discharge-medication-request-profile.md) | Profile for representing a medication prescription issued as part of the patient’s **discharge plan** following a stroke encounter.**Primary use-case*** Capture secondary prevention and chronic therapy prescriptions intended to be taken **after discharge** (community setting), enabling: 
+* discharge medication reconciliation,
+* continuity of care between hospital and primary care,
+* registry submission and quality improvement (e.g., antithrombotic/statin at discharge),
+* episode-linked analytics (tie to the index stroke Encounter).
+ 
+**Key elements and how to use them*** `status` (fixed to active): indicates the prescription is currently intended/valid at the time of discharge documentation. 
+* Use `stopped` or `cancelled` in your broader implementation if a discharge prescription is later withdrawn (not constrained here).
+ 
+* `category` (fixed to community): indicates the medication is intended for administration in the community/outpatient context. 
+* This helps distinguish discharge prescriptions from inpatient medication orders.
+ 
+* `medication` (required; bound to MedicationVS): identifies the prescribed agent or, if unavailable, a coarse category. 
+* Prefer specific SNOMED CT substance concepts (e.g., aspirin) when available.
+* Use `MedicationCS` category codes only when the specific agent cannot be coded.
+ 
+* `subject` (required): the patient who will take the medication.
+* `encounter` (required): links the prescription to the index stroke admission encounter.
+* `authoredOn` (optional but recommended): the date/time the discharge prescription was authored.
+ |
 | [Patient with SNOMED Gender and Age (extensions)](StructureDefinition-patient-age-gender-snomed-profile.md) | Profile that adds an integer age extension and a SNOMED-based gender extension. |
 | [Prior Medication Statement Profile (R5)](StructureDefinition-prior-medication-statement-profile.md) | Represents a statement about the patient's medication use **before** the index event. |
 | [Specific Stroke Finding Observation Profile (R5)](StructureDefinition-specific-finding-observation-profile.md) | Profile for recording discrete, coded stroke-related findings and assessment outcomes that do not fit naturally into vital-sign, functional-score, or timing-metric profiles.**Primary use-cases** 1) AF/flutter assessment status:* `Observation.code` uses a disorder concept as the finding focus (AF/flutter).
@@ -206,6 +225,9 @@ These define sets of codes used by systems conforming to this implementation gui
 * downstream coordination workflows.
  
  |
+| [Discharge Medications ValueSet](ValueSet-medication-vs.md) | ValueSet defining allowable coded medications (or medication categories) for discharge MedicationRequests.**Primary use-case*** Required binding to `MedicationRequest.medication` in `DischargeMedicationRequestProfile`.
+**What this ValueSet supports** 1) **Specific SNOMED CT substance concepts** (e.g., aspirin, clopidogrel, warfarin) for agent-level capture. 2) **Local category codes** (from `MedicationCS`) for minimum-data capture when only the class is known.**Scope and modeling notes*** This ValueSet does not encode dose, route, frequency, or duration; those are expressed in MedicationRequest elements.
+ |
 | [Gender (SNOMED CT)](ValueSet-vs-gender-snomed.md) | Value set to represent patient gender using SNOMED CT codes, analogous to AdministrativeGender. |
 | [Hemorrhagic Stroke Bleeding Reason ValueSet](ValueSet-hemorrhagic-stroke-bleeding-reason-vs.md) | This ValueSet defines allowable causes of bleeding for hemorrhagic stroke documentation.**Primary use-case*** Required binding for `HemorrhagicStrokeBleedingReasonExt.valueCodeableConcept` on a definitive hemorrhagic stroke Condition.
 **Implementation guidance*** Use when the cause is **identified** (e.g., aneurysm, vascular malformation).
@@ -213,7 +235,6 @@ These define sets of codes used by systems conforming to this implementation gui
  |
 | [Initial Care Intensity ValueSet](ValueSet-initial-care-intensity-vs.md) | ValueSet restricting allowed initial care intensity categories.**Primary use-case*** Required binding for `InitialCareIntensityExtension.valueCodeableConcept`.
  |
-| [Medications ValueSet](ValueSet-medication-vs.md) | SNOMED CT codes for drug products or substances. |
 | [Modified Rankin Scale (mRS) Score ValueSet](ValueSet-mrs-score-vs.md) | This ValueSet includes all mRS grades (0–6) defined in MRsScoreCS.**Primary use-case*** Bind to `Observation.valueCodeableConcept` when `Observation.code` indicates the Observation represents an mRS score.
  |
 | [Modified Thrombolysis in Cerebral Infarction Assessment ValueSet](ValueSet-mtici-code-vs.md) | This ValueSet includes the mTICI assessment concept code(s) from MTICICodeCS.**Primary use-case*** Bind to `Observation.code` when recording an mTICI reperfusion grade Observation.
@@ -314,6 +335,11 @@ These define new code systems used by systems conforming to this implementation 
  
 **Modeling notes*** This captures **service classification**, not the physical ward/room. Physical location should be modeled using `Encounter.location` (and references to Location resources) if needed.
  |
+| [Discharge Medication Category CodeSystem](CodeSystem-medication-cs.md) | Local CodeSystem providing **coarse medication categories** used in discharge prescribing when the source system cannot (or does not) provide a specific coded drug product/substance.**Primary use-cases*** Minimum-data capture for discharge medication classes relevant to stroke secondary prevention (e.g., anticoagulant vs antiplatelet).
+* Registry reporting where only “medication class prescribed at discharge” is available.
+* Analytics and quality indicators (e.g., “antithrombotic at discharge”) when specific agent is unknown.
+**How it is used in FHIR*** Included in `MedicationVS` so it can be used in `MedicationRequest.medication` (CodeableConcept).
+ |
 | [Hemorrhagic Stroke Bleeding Reason CodeSystem](CodeSystem-hemorrhagic-stroke-bleeding-reason-cs.md) | Local CodeSystem representing **locally governed reasons/causes** for intracranial bleeding in hemorrhagic stroke.**Primary use-case*** Used via `HemorrhagicStrokeBleedingReasonVS` as the allowed vocabulary for `HemorrhagicStrokeBleedingReasonExt.valueCodeableConcept` on a definitive hemorrhagic stroke Condition.
  |
 | [Initial Care Intensity CodeSystem](CodeSystem-initial-care-intensity-cs.md) | Local CodeSystem representing the **initial intensity of care** during the first day(s) of the stroke encounter.**Primary use-case*** Populate `InitialCareIntensityExtension` on Encounter to support: 
@@ -325,7 +351,6 @@ These define new code systems used by systems conforming to this implementation 
 * `monitored`: telemetry or continuous monitoring outside ICU.
 * `icu-stroke`: ICU or dedicated stroke unit level care (per local definitions).
  |
-| [Medications CodeSystem](CodeSystem-medication-cs.md) | Codes for drug products or substances representing the Medications on the patient discharge. |
 | [Modified Rankin Scale Score Code System](CodeSystem-mrs-score-cs.md) | This CodeSystem defines codes for the **modified Rankin Scale (mRS)**, an ordinal measure of global disability and functional outcome. Scores range from 0 (no symptoms) to 5 (severe disability), with 6 indicating death.**Primary use-case*** Use as the coded result in `Observation.valueCodeableConcept` (bound via MRsScoreVS) when recording an mRS outcome.
 **Modeling notes*** mRS is a global disability scale and does not capture domain-specific limitations (mobility, ADLs, cognition). Capture those via additional instruments/Observations when needed.
 * Method of ascertainment and assessor details should be recorded separately (e.g., Observation.method, performer, Provenance).

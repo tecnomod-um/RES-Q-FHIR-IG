@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/swallowing-screening-timing-category-vs | *Version*:0.1.0 |
-| Active as of 2026-02-19 | *Computable Name*:SwallowingScreeningTimingCategoryVS |
+| Active as of 2026-02-20 | *Computable Name*:SwallowingScreeningTimingCategoryVS |
 
  
 ValueSet defining allowed categories for swallowing screening timing, combining: 
@@ -56,39 +56,31 @@ ValueSet defining allowed categories for swallowing screening timing, combining:
   "name" : "SwallowingScreeningTimingCategoryVS",
   "title" : "Swallowing Screening Timing Category ValueSet",
   "status" : "active",
-  "date" : "2026-02-19T14:52:32+00:00",
+  "date" : "2026-02-20T08:36:31+00:00",
   "publisher" : "UMU",
-  "contact" : [
-    {
-      "name" : "UMU",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://tecnomod-um.org"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "UMU",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://tecnomod-um.org"
+    }]
+  }],
   "description" : "ValueSet defining allowed categories for swallowing screening timing, combining:\n- local categories (e.g., within 4 hours), and\n- SNOMED CT qualifier concepts for post-admission timing.\n\n**Use-case**\n- Required binding for the swallowing timing extension.",
   "compose" : {
-    "include" : [
-      {
-        "system" : "http://tecnomod-um.org/CodeSystem/swallow-screen-time-cs"
+    "include" : [{
+      "system" : "http://tecnomod-um.org/CodeSystem/swallow-screen-time-cs"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "281380002",
+        "display" : "24 hours post admission (qualifier value)"
       },
       {
-        "system" : "http://snomed.info/sct",
-        "concept" : [
-          {
-            "code" : "281380002",
-            "display" : "24 hours post admission (qualifier value)"
-          },
-          {
-            "code" : "281381003",
-            "display" : "More than 24 hours after admission (qualifier value)"
-          }
-        ]
-      }
-    ]
+        "code" : "281381003",
+        "display" : "More than 24 hours after admission (qualifier value)"
+      }]
+    }]
   }
 }
 

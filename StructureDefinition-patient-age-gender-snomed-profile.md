@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/patient-age-gender-snomed-profile | *Version*:0.1.0 |
-| Draft as of 2026-02-19 | *Computable Name*:PatientAgeGenderSNOMEDProfile |
+| Draft as of 2026-02-20 | *Computable Name*:PatientAgeGenderSNOMEDProfile |
 
  
 Profile that adds an integer age extension and a SNOMED-based gender extension. 
@@ -41,115 +41,99 @@ Other representations of profile: [CSV](StructureDefinition-patient-age-gender-s
   "name" : "PatientAgeGenderSNOMEDProfile",
   "title" : "Patient with SNOMED Gender and Age (extensions)",
   "status" : "draft",
-  "date" : "2026-02-19T14:52:32+00:00",
+  "date" : "2026-02-20T08:36:31+00:00",
   "publisher" : "UMU",
-  "contact" : [
-    {
-      "name" : "UMU",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://tecnomod-um.org"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "UMU",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://tecnomod-um.org"
+    }]
+  }],
   "description" : "Profile that adds an integer age extension and a SNOMED-based gender extension.",
   "fhirVersion" : "5.0.0",
-  "mapping" : [
-    {
-      "identity" : "w5",
-      "uri" : "http://hl7.org/fhir/fivews",
-      "name" : "FiveWs Pattern Mapping"
-    },
-    {
-      "identity" : "rim",
-      "uri" : "http://hl7.org/v3",
-      "name" : "RIM Mapping"
-    },
-    {
-      "identity" : "interface",
-      "uri" : "http://hl7.org/fhir/interface",
-      "name" : "Interface Pattern"
-    },
-    {
-      "identity" : "cda",
-      "uri" : "http://hl7.org/v3/cda",
-      "name" : "CDA (R2)"
-    },
-    {
-      "identity" : "v2",
-      "uri" : "http://hl7.org/v2",
-      "name" : "HL7 V2 Mapping"
-    },
-    {
-      "identity" : "loinc",
-      "uri" : "http://loinc.org",
-      "name" : "LOINC code for the element"
-    }
-  ],
+  "mapping" : [{
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  },
+  {
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  },
+  {
+    "identity" : "interface",
+    "uri" : "http://hl7.org/fhir/interface",
+    "name" : "Interface Pattern"
+  },
+  {
+    "identity" : "cda",
+    "uri" : "http://hl7.org/v3/cda",
+    "name" : "CDA (R2)"
+  },
+  {
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 V2 Mapping"
+  },
+  {
+    "identity" : "loinc",
+    "uri" : "http://loinc.org",
+    "name" : "LOINC code for the element"
+  }],
   "kind" : "resource",
   "abstract" : false,
   "type" : "Patient",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Patient",
   "derivation" : "constraint",
   "differential" : {
-    "element" : [
-      {
-        "id" : "Patient",
-        "path" : "Patient"
+    "element" : [{
+      "id" : "Patient",
+      "path" : "Patient"
+    },
+    {
+      "id" : "Patient.extension",
+      "path" : "Patient.extension",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "url"
+        }],
+        "ordered" : false,
+        "rules" : "open"
       },
-      {
-        "id" : "Patient.extension",
-        "path" : "Patient.extension",
-        "slicing" : {
-          "discriminator" : [
-            {
-              "type" : "value",
-              "path" : "url"
-            }
-          ],
-          "ordered" : false,
-          "rules" : "open"
-        },
-        "min" : 1
-      },
-      {
-        "id" : "Patient.extension:age",
-        "path" : "Patient.extension",
-        "sliceName" : "age",
-        "min" : 1,
-        "max" : "1",
-        "type" : [
-          {
-            "code" : "Extension",
-            "profile" : ["http://tecnomod-um.org/StructureDefinition/patient-age-ext"]
-          }
-        ],
-        "mustSupport" : true
-      },
-      {
-        "id" : "Patient.extension:gender-sct",
-        "path" : "Patient.extension",
-        "sliceName" : "gender-sct",
-        "min" : 0,
-        "max" : "1",
-        "type" : [
-          {
-            "code" : "Extension",
-            "profile" : [
-              "http://tecnomod-um.org/StructureDefinition/gender-snomed-ext"
-            ]
-          }
-        ],
-        "mustSupport" : true
-      },
-      {
-        "id" : "Patient.gender",
-        "path" : "Patient.gender",
-        "max" : "0"
-      }
-    ]
+      "min" : 1
+    },
+    {
+      "id" : "Patient.extension:age",
+      "path" : "Patient.extension",
+      "sliceName" : "age",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["http://tecnomod-um.org/StructureDefinition/patient-age-ext"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Patient.extension:gender-sct",
+      "path" : "Patient.extension",
+      "sliceName" : "gender-sct",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["http://tecnomod-um.org/StructureDefinition/gender-snomed-ext"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Patient.gender",
+      "path" : "Patient.gender",
+      "max" : "0"
+    }]
   }
 }
 

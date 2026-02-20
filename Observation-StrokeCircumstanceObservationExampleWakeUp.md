@@ -27,28 +27,22 @@ Profile: [Stroke Circumstance Observation Profile (R5)](StructureDefinition-stro
   "resourceType" : "Observation",
   "id" : "StrokeCircumstanceObservationExampleWakeUp",
   "meta" : {
-    "profile" : [
-      "http://tecnomod-um.org/StructureDefinition/stroke-circumstance-observation-profile"
-    ]
+    "profile" : ["http://tecnomod-um.org/StructureDefinition/stroke-circumstance-observation-profile"]
   },
   "status" : "final",
   "code" : {
-    "coding" : [
-      {
-        "system" : "http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs",
-        "code" : "wake-up",
-        "display" : "Wake-up Stroke"
-      }
-    ]
+    "coding" : [{
+      "system" : "http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs",
+      "code" : "wake-up",
+      "display" : "Wake-up Stroke"
+    }]
   },
   "subject" : {
     "reference" : "Patient/example-patient"
   },
-  "focus" : [
-    {
-      "reference" : "ConditionExample"
-    }
-  ],
+  "focus" : [{
+    "reference" : "ConditionExample"
+  }],
   "encounter" : {
     "reference" : "Encounter/StrokeEncounterExample"
   }

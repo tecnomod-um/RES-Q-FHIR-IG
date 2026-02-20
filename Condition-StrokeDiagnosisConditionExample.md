@@ -27,37 +27,27 @@ Profile: [Stroke Diagnosis Condition Profile](StructureDefinition-stroke-diagnos
   "resourceType" : "Condition",
   "id" : "StrokeDiagnosisConditionExample",
   "meta" : {
-    "profile" : [
-      "http://tecnomod-um.org/StructureDefinition/stroke-diagnosis-condition-profile"
-    ]
+    "profile" : ["http://tecnomod-um.org/StructureDefinition/stroke-diagnosis-condition-profile"]
   },
   "clinicalStatus" : {
-    "coding" : [
-      {
-        "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
-        "code" : "active"
-      }
-    ]
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+      "code" : "active"
+    }]
   },
-  "category" : [
-    {
-      "coding" : [
-        {
-          "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
-          "code" : "encounter-diagnosis",
-          "display" : "Encounter Diagnosis"
-        }
-      ]
-    }
-  ],
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
+      "code" : "encounter-diagnosis",
+      "display" : "Encounter Diagnosis"
+    }]
+  }],
   "code" : {
-    "coding" : [
-      {
-        "system" : "http://snomed.info/sct",
-        "code" : "266257000",
-        "display" : "Transient ischemic attack (disorder)"
-      }
-    ]
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "266257000",
+      "display" : "Transient ischemic attack (disorder)"
+    }]
   },
   "subject" : {
     "reference" : "Patient/example-patient"

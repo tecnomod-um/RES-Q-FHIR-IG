@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/specific-finding-codes-vs | *Version*:0.1.0 |
-| Active as of 2026-02-19 | *Computable Name*:SpecificFindingCodesVS |
+| Active as of 2026-02-20 | *Computable Name*:SpecificFindingCodesVS |
 
  
 This ValueSet provides SNOMED CT disorder concepts for specific findings referenced in the stroke workup. Currently includes: 
@@ -60,36 +60,28 @@ This ValueSet provides SNOMED CT disorder concepts for specific findings referen
   "name" : "SpecificFindingCodesVS",
   "title" : "Specific Stroke Finding Codes ValueSet",
   "status" : "active",
-  "date" : "2026-02-19T14:52:32+00:00",
+  "date" : "2026-02-20T08:36:31+00:00",
   "publisher" : "UMU",
-  "contact" : [
-    {
-      "name" : "UMU",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://tecnomod-um.org"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "UMU",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://tecnomod-um.org"
+    }]
+  }],
   "description" : "This ValueSet provides SNOMED CT disorder concepts for specific findings referenced in the stroke workup.\nCurrently includes:\n- Atrial fibrillation (disorder)\n- Atrial flutter (disorder)\n\n**Primary use-case**\n- Constrain `Observation.code` (as a *finding focus*) when using `SpecificFindingObservationProfile`.\n\n**Important modeling note**\n- Using a disorder concept in `Observation.code` here does not necessarily assert a diagnosis; the diagnosis should be modeled as a Condition.\n- The Observation can be interpreted as “assessment about this finding,” with the result in `Observation.valueCodeableConcept` (e.g., AF status).",
   "compose" : {
-    "include" : [
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "49436004",
+        "display" : "Atrial fibrillation (disorder)"
+      },
       {
-        "system" : "http://snomed.info/sct",
-        "concept" : [
-          {
-            "code" : "49436004",
-            "display" : "Atrial fibrillation (disorder)"
-          },
-          {
-            "code" : "5370000",
-            "display" : "Atrial flutter (disorder)"
-          }
-        ]
-      }
-    ]
+        "code" : "5370000",
+        "display" : "Atrial flutter (disorder)"
+      }]
+    }]
   }
 }
 

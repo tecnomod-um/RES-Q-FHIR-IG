@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/assessment-context-vs | *Version*:0.1.0 |
-| Active as of 2026-02-19 | *Computable Name*:AssessmentContextVS |
+| Active as of 2026-02-20 | *Computable Name*:AssessmentContextVS |
 
  
 This ValueSet includes all phase/context codes from AssessmentContextCS. 
@@ -54,26 +54,20 @@ This ValueSet includes all phase/context codes from AssessmentContextCS.
   "title" : "Assessment Context ValueSet",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-19T14:52:32+00:00",
+  "date" : "2026-02-20T08:36:31+00:00",
   "publisher" : "UMU",
-  "contact" : [
-    {
-      "name" : "UMU",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://tecnomod-um.org"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "UMU",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://tecnomod-um.org"
+    }]
+  }],
   "description" : "This ValueSet includes all phase/context codes from AssessmentContextCS.\n\n**Primary use-case**\n- Required binding for elements that must indicate the clinical phase of an assessment (e.g., timing context extensions).",
   "compose" : {
-    "include" : [
-      {
-        "system" : "http://tecnomod-um.org/CodeSystem/assessment-context-cs"
-      }
-    ]
+    "include" : [{
+      "system" : "http://tecnomod-um.org/CodeSystem/assessment-context-cs"
+    }]
   }
 }
 

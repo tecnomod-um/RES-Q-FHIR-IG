@@ -64,40 +64,32 @@ To enable consistent capture of the underlying cause of bleeding in hemorrhagic 
   "experimental" : true,
   "date" : "2025-09-08",
   "publisher" : "UMU",
-  "contact" : [
-    {
-      "name" : "UMU",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://tecnomod-um.org"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "UMU",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://tecnomod-um.org"
+    }]
+  }],
   "description" : "This ValueSet defines allowable causes of bleeding for hemorrhagic stroke documentation.\n\n**Primary use-case**\n- Required binding for `HemorrhagicStrokeBleedingReasonExt.valueCodeableConcept` on a definitive hemorrhagic stroke Condition.\n\n**Implementation guidance**\n- Use when the cause is *identified* (e.g., aneurysm, vascular malformation).\n- If the cause is unknown/undetermined, prefer documenting that explicitly using narrative (`Condition.note`) and/or a dedicated assessment Observation;\n  if a coded placeholder is required, `Undetermined (qualifier value)` is included as an option.",
   "immutable" : false,
   "purpose" : "To enable consistent capture of the underlying cause of bleeding in hemorrhagic stroke.",
   "copyright" : "© Tecnomod. This value set includes locally defined codes.",
   "compose" : {
-    "include" : [
-      {
-        "system" : "http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs"
+    "include" : [{
+      "system" : "http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "128609009",
+        "display" : "Intracranial aneurysm (disorder)"
       },
       {
-        "system" : "http://snomed.info/sct",
-        "concept" : [
-          {
-            "code" : "128609009",
-            "display" : "Intracranial aneurysm (disorder)"
-          },
-          {
-            "code" : "703221003",
-            "display" : "Congenital intracranial vascular malformation (disorder)"
-          }
-        ]
-      }
-    ]
+        "code" : "703221003",
+        "display" : "Congenital intracranial vascular malformation (disorder)"
+      }]
+    }]
   }
 }
 

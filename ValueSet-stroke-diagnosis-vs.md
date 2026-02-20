@@ -73,53 +73,45 @@ To provide a consistent set of SNOMED CT concepts for coding definitive stroke-r
   "experimental" : false,
   "date" : "2025-10-07",
   "publisher" : "UMU",
-  "contact" : [
-    {
-      "name" : "UMU",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://tecnomod-um.org"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "UMU",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://tecnomod-um.org"
+    }]
+  }],
   "description" : "This ValueSet enumerates SNOMED CT concepts representing **final stroke-related diagnoses** for use in `Condition.code` within this Implementation Guide (IG).\n\n**Primary use-case**\n- Required binding to `Condition.code` in `StrokeDiagnosisConditionProfile`, representing the *definitive diagnosis* of the index stroke event for the linked encounter.\n\n**Scope**\n- Ischemic stroke\n- Intracerebral/cerebral hemorrhage\n- Subarachnoid hemorrhage\n- Cerebral venous thrombosis\n- Transient ischemic attack (TIA)\n- “Undetermined” qualifier (use cautiously; see notes)\n\n**Modeling notes**\n- This ValueSet is intended for definitive diagnoses (e.g., at discharge or after diagnostic workup), not “rule-out”, screening, history-of, or procedural concepts.\n- Terminology expansion should be performed against the appropriate SNOMED CT edition/version and preferred language(s). Localizations MAY add designations without changing meaning.\n- If “undetermined” is used, consider adding supporting narrative in `Condition.note` and/or linking evidence in Observations/DiagnosticReports to preserve interpretability.",
   "immutable" : false,
   "purpose" : "To provide a consistent set of SNOMED CT concepts for coding definitive stroke-related diagnoses in this IG.",
   "copyright" : "This value set includes SNOMED CT® content. SNOMED CT® is distributed by SNOMED International.",
   "compose" : {
-    "include" : [
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "422504002",
+        "display" : "Ischemic stroke (disorder)"
+      },
       {
-        "system" : "http://snomed.info/sct",
-        "concept" : [
-          {
-            "code" : "422504002",
-            "display" : "Ischemic stroke (disorder)"
-          },
-          {
-            "code" : "274100004",
-            "display" : "Cerebral hemorrhage (disorder)"
-          },
-          {
-            "code" : "266257000",
-            "display" : "Transient ischemic attack (disorder)"
-          },
-          {
-            "code" : "21454007",
-            "display" : "Subarachnoid intracranial hemorrhage (disorder)"
-          },
-          {
-            "code" : "95455008",
-            "display" : "Thrombosis of cerebral veins (disorder)"
-          },
-          {
-            "code" : "373068000",
-            "display" : "Undetermined (qualifier value)"
-          }
-        ]
-      }
-    ]
+        "code" : "274100004",
+        "display" : "Cerebral hemorrhage (disorder)"
+      },
+      {
+        "code" : "266257000",
+        "display" : "Transient ischemic attack (disorder)"
+      },
+      {
+        "code" : "21454007",
+        "display" : "Subarachnoid intracranial hemorrhage (disorder)"
+      },
+      {
+        "code" : "95455008",
+        "display" : "Thrombosis of cerebral veins (disorder)"
+      },
+      {
+        "code" : "373068000",
+        "display" : "Undetermined (qualifier value)"
+      }]
+    }]
   }
 }
 

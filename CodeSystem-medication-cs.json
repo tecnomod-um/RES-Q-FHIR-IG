@@ -8,9 +8,9 @@
   "url" : "http://tecnomod-um.org/CodeSystem/medication-cs",
   "version" : "0.1.0",
   "name" : "MedicationCS",
-  "title" : "Medications CodeSystem",
+  "title" : "Discharge Medication Category CodeSystem",
   "status" : "draft",
-  "date" : "2026-02-19T14:52:32+00:00",
+  "date" : "2026-02-20T08:36:31+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",
@@ -19,7 +19,7 @@
       "value" : "http://tecnomod-um.org"
     }]
   }],
-  "description" : "Codes for drug products or substances representing the Medications on the patient discharge.",
+  "description" : "Local CodeSystem providing **coarse medication categories** used in discharge prescribing when the source system cannot\n(or does not) provide a specific coded drug product/substance.\n\n**Primary use-cases**\n- Minimum-data capture for discharge medication classes relevant to stroke secondary prevention (e.g., anticoagulant vs antiplatelet).\n- Registry reporting where only “medication class prescribed at discharge” is available.\n- Analytics and quality indicators (e.g., “antithrombotic at discharge”) when specific agent is unknown.\n\n**How it is used in FHIR**\n- Included in `MedicationVS` so it can be used in `MedicationRequest.medication` (CodeableConcept).\n",
   "content" : "complete",
   "count" : 4,
   "concept" : [{

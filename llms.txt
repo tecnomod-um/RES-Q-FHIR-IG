@@ -3,16 +3,16 @@
 ## Pages
 
 * [Index](index.md)
-* [Examples](examples.md)
-* [Valuesets](valuesets.md)
-* [Codesystems](codesystems.md)
 * [Guidance](guidance.md)
-* [Artifacts Summary](artifacts.md)
-* [Extensions](extensions.md)
-* [Downloads](downloads.md)
 * [Profiles](profiles.md)
-* [History](history.md)
+* [Valuesets](valuesets.md)
+* [Extensions](extensions.md)
+* [Artifacts Summary](artifacts.md)
+* [Codesystems](codesystems.md)
 * [Conformance](conformance.md)
+* [History](history.md)
+* [Examples](examples.md)
+* [Downloads](downloads.md)
 
 ## Resources
 
@@ -23,7 +23,7 @@
 * [Discharge Department/Service CodeSystem](CodeSystem-discharge-dept-cs.md)
 * [Hemorrhagic Stroke Bleeding Reason CodeSystem](CodeSystem-hemorrhagic-stroke-bleeding-reason-cs.md)
 * [Initial Care Intensity CodeSystem](CodeSystem-initial-care-intensity-cs.md)
-* [Medications CodeSystem](CodeSystem-medication-cs.md)
+* [Discharge Medication Category CodeSystem](CodeSystem-medication-cs.md)
 * [Modified Rankin Scale Score Code System](CodeSystem-mrs-score-cs.md)
 * [Modified Thrombolysis in Cerebral Infarction Assessment CodeSystem](CodeSystem-mtici-code-cs.md)
 * [Modified Treatment in Cerebral Infarction Grade Score CodeSystem](CodeSystem-mtici-score-cs.md)
@@ -50,7 +50,7 @@
 * [Stroke Functional Score Codes ValueSet](ValueSet-functional-score-codes-vs.md)
 * [Hemorrhagic Stroke Bleeding Reason ValueSet](ValueSet-hemorrhagic-stroke-bleeding-reason-vs.md)
 * [Initial Care Intensity ValueSet](ValueSet-initial-care-intensity-vs.md)
-* [Medications ValueSet](ValueSet-medication-vs.md)
+* [Discharge Medications ValueSet](ValueSet-medication-vs.md)
 * [Modified Rankin Scale (mRS) Score ValueSet](ValueSet-mrs-score-vs.md)
 * [Modified Thrombolysis in Cerebral Infarction Assessment ValueSet](ValueSet-mtici-code-vs.md)
 * [Modified Treatment in Cerebral Infarction Grade Score ValueSet](ValueSet-mtici-score-vs.md)
@@ -76,7 +76,7 @@
 
 * [Age at Stroke Onset Observation Profile (R5)](StructureDefinition-age-at-onset-observation-profile.md)
 * [Base Profile for Stroke-Related Observations](StructureDefinition-base-stroke-observation.md)
-* [Discharge Medication Request Profile](StructureDefinition-discharge-medication-request-profile.md)
+* [Discharge MedicationRequest Profile](StructureDefinition-discharge-medication-request-profile.md)
 * [Stroke Functional Score Observation Profile](StructureDefinition-functional-score-observation-profile.md)
 * [Patient with SNOMED Gender and Age (extensions)](StructureDefinition-patient-age-gender-snomed-profile.md)
 * [Prior Medication Statement Profile (R5)](StructureDefinition-prior-medication-statement-profile.md)

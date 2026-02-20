@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="bd1b062a-00dd-4595-9951-5f84580bd17b"/>
+  <id value="b999d82d-c8c4-43a6-8946-0c8c929aea13"/>
   <meta>
-    <lastUpdated value="2026-02-19T14:52:32.888+00:00"/>
+    <lastUpdated value="2026-02-20T08:36:31.598+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -46,15 +46,15 @@
                 <td style="white-space:nowrap">  
                   <a href="http://snomed.info/id/715537001">715537001</a>
                 </td>
-                <td>Transportation by ambulance (procedure)</td>
+                <td>Transportation by ambulance</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;715537001&quot;, &quot;display&quot;: &quot;Transportation by ambulance (procedure)&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;715537001&quot;, &quot;display&quot;: &quot;Transportation by ambulance&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;715537001&quot;&gt;&lt;display value=&quot;Transportation by ambulance (procedure)&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;715537001&quot;&gt;&lt;display value=&quot;Transportation by ambulance&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -66,15 +66,15 @@
                 <td style="white-space:nowrap">  
                   <a href="http://snomed.info/id/715957006">715957006</a>
                 </td>
-                <td>Transportation by own transport (procedure)</td>
+                <td>Transportation by own transport</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;715957006&quot;, &quot;display&quot;: &quot;Transportation by own transport (procedure)&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;715957006&quot;, &quot;display&quot;: &quot;Transportation by own transport&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;715957006&quot;&gt;&lt;display value=&quot;Transportation by own transport (procedure)&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;715957006&quot;&gt;&lt;display value=&quot;Transportation by own transport&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -86,15 +86,15 @@
                 <td style="white-space:nowrap">  
                   <a href="http://snomed.info/id/384762007">384762007</a>
                 </td>
-                <td>Transportation procedure (procedure)</td>
+                <td>Transportation procedure</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;384762007&quot;, &quot;display&quot;: &quot;Transportation procedure (procedure)&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;384762007&quot;, &quot;display&quot;: &quot;Transportation procedure&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;384762007&quot;&gt;&lt;display value=&quot;Transportation procedure (procedure)&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;384762007&quot;&gt;&lt;display value=&quot;Transportation procedure&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -110,8 +110,8 @@
         <date value="2025-03-31"/>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:1726df00-e9b4-4f62-90aa-1e216ee51683"/>
-          <timestamp value="2026-02-19T14:53:33+00:00"/>
+          <identifier value="urn:uuid:12502e1e-e61c-42a3-8513-94bc2cfa19ca"/>
+          <timestamp value="2026-02-20T08:37:27+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -135,23 +135,27 @@
             <valueUri value="null"/>
           </parameter>
           <parameter>
+            <name value="includeDefinition"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
             <name value="used-codesystem"/>
             <valueUri value="http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"/>
           </parameter>
           <contains>
             <system value="http://snomed.info/sct"/>
             <code value="715537001"/>
-            <display value="Transportation by ambulance (procedure)"/>
+            <display value="Transportation by ambulance"/>
           </contains>
           <contains>
             <system value="http://snomed.info/sct"/>
             <code value="715957006"/>
-            <display value="Transportation by own transport (procedure)"/>
+            <display value="Transportation by own transport"/>
           </contains>
           <contains>
             <system value="http://snomed.info/sct"/>
             <code value="384762007"/>
-            <display value="Transportation procedure (procedure)"/>
+            <display value="Transportation procedure"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -197,15 +201,15 @@
                 <td style="white-space:nowrap">  
                   <a href="http://snomed.info/id/410515003">410515003</a>
                 </td>
-                <td>Known present (qualifier value)</td>
+                <td>Known present</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;410515003&quot;, &quot;display&quot;: &quot;Known present (qualifier value)&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;410515003&quot;, &quot;display&quot;: &quot;Known present&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;410515003&quot;&gt;&lt;display value=&quot;Known present (qualifier value)&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;410515003&quot;&gt;&lt;display value=&quot;Known present&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -217,15 +221,15 @@
                 <td style="white-space:nowrap">  
                   <a href="http://snomed.info/id/410516002">410516002</a>
                 </td>
-                <td>Known absent (qualifier value)</td>
+                <td>Known absent</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;410516002&quot;, &quot;display&quot;: &quot;Known absent (qualifier value)&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;410516002&quot;, &quot;display&quot;: &quot;Known absent&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;410516002&quot;&gt;&lt;display value=&quot;Known absent (qualifier value)&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;410516002&quot;&gt;&lt;display value=&quot;Known absent&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -259,8 +263,8 @@
         <status value="active"/>
         <date value="2025-03-31"/>
         <expansion>
-          <identifier value="urn:uuid:181f3807-4e3c-47b3-bc3e-b9898a735f64"/>
-          <timestamp value="2026-02-19T14:53:33+00:00"/>
+          <identifier value="urn:uuid:1c8fb134-1cef-4143-991e-2e94facc1308"/>
+          <timestamp value="2026-02-20T08:37:28+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -284,18 +288,22 @@
             <valueUri value="null"/>
           </parameter>
           <parameter>
+            <name value="includeDefinition"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
             <name value="used-codesystem"/>
             <valueUri value="http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"/>
           </parameter>
           <contains>
             <system value="http://snomed.info/sct"/>
             <code value="410515003"/>
-            <display value="Known present (qualifier value)"/>
+            <display value="Known present"/>
           </contains>
           <contains>
             <system value="http://snomed.info/sct"/>
             <code value="410516002"/>
-            <display value="Known absent (qualifier value)"/>
+            <display value="Known absent"/>
           </contains>
           <contains>
             <system value="http://snomed.info/sct"/>
@@ -435,10 +443,10 @@
         <title value="Assessment Context ValueSet"/>
         <status value="active"/>
         <experimental value="true"/>
-        <date value="2026-02-19T14:52:32+00:00"/>
+        <date value="2026-02-20T08:36:31+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:c47691a4-a3c0-400f-be97-9a0b43065fcb"/>
-          <timestamp value="2026-02-19T14:53:34+00:00"/>
+          <identifier value="urn:uuid:bfb21328-46b4-421f-9399-acf6f7fae528"/>
+          <timestamp value="2026-02-20T08:37:28+00:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>
@@ -539,16 +547,16 @@
                 <td style="white-space:nowrap">  
                   <a href="http://snomed.info/id/419949007">419949007</a>
                 </td>
-                <td>Computed tomography angiography of intracranial artery with contrast (procedure)</td>
+                <td>Computed tomography angiography of intracranial artery with contrast</td>
                 <td/>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;419949007&quot;, &quot;display&quot;: &quot;Computed tomography angiography of intracranial artery with contrast (procedure)&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;419949007&quot;, &quot;display&quot;: &quot;Computed tomography angiography of intracranial artery with contrast&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;419949007&quot;&gt;&lt;display value=&quot;Computed tomography angiography of intracranial artery with contrast (procedure)&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;419949007&quot;&gt;&lt;display value=&quot;Computed tomography angiography of intracranial artery with contrast&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -665,10 +673,10 @@
         <name value="BrainImagingModalityVS"/>
         <title value="Brain Imaging Modality ValueSet"/>
         <status value="active"/>
-        <date value="2026-02-19T14:52:32+00:00"/>
+        <date value="2026-02-20T08:36:31+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:516d751a-877d-4252-ace6-4d9b747fcc41"/>
-          <timestamp value="2026-02-19T14:53:34+00:00"/>
+          <identifier value="urn:uuid:834f815b-8764-4a06-8cb3-ddc90b2832c7"/>
+          <timestamp value="2026-02-20T08:37:28+00:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -692,6 +700,10 @@
             <valueUri value="null"/>
           </parameter>
           <parameter>
+            <name value="includeDefinition"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
             <name value="used-codesystem"/>
             <valueUri value="http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"/>
           </parameter>
@@ -702,7 +714,7 @@
           <contains>
             <system value="http://snomed.info/sct"/>
             <code value="419949007"/>
-            <display value="Computed tomography angiography of intracranial artery with contrast (procedure)"/>
+            <display value="Computed tomography angiography of intracranial artery with contrast"/>
           </contains>
           <contains>
             <system value="http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs"/>
@@ -793,15 +805,15 @@
                 <td style="white-space:nowrap">  
                   <a href="http://snomed.info/id/9171000087102">9171000087102</a>
                 </td>
-                <td>Doppler ultrasonography of bilateral carotid arteries (procedure)</td>
+                <td>Doppler ultrasonography of bilateral carotid arteries</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;9171000087102&quot;, &quot;display&quot;: &quot;Doppler ultrasonography of bilateral carotid arteries (procedure)&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;9171000087102&quot;, &quot;display&quot;: &quot;Doppler ultrasonography of bilateral carotid arteries&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;9171000087102&quot;&gt;&lt;display value=&quot;Doppler ultrasonography of bilateral carotid arteries (procedure)&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;9171000087102&quot;&gt;&lt;display value=&quot;Doppler ultrasonography of bilateral carotid arteries&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -833,10 +845,10 @@
         <name value="CarotidImagingModalityVS"/>
         <title value="Carotid Arteries Imaging Modality ValueSet"/>
         <status value="active"/>
-        <date value="2026-02-19T14:52:32+00:00"/>
+        <date value="2026-02-20T08:36:31+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:e1e89463-a5d1-48d9-998a-33e8b2072da2"/>
-          <timestamp value="2026-02-19T14:53:34+00:00"/>
+          <identifier value="urn:uuid:e907b691-79e7-4953-99e2-12c3ad169dc0"/>
+          <timestamp value="2026-02-20T08:37:28+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -860,6 +872,10 @@
             <valueUri value="null"/>
           </parameter>
           <parameter>
+            <name value="includeDefinition"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
             <name value="used-codesystem"/>
             <valueUri value="http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"/>
           </parameter>
@@ -871,7 +887,7 @@
           <contains>
             <system value="http://snomed.info/sct"/>
             <code value="9171000087102"/>
-            <display value="Doppler ultrasonography of bilateral carotid arteries (procedure)"/>
+            <display value="Doppler ultrasonography of bilateral carotid arteries"/>
           </contains>
           <contains>
             <system value="http://snomed.info/sct"/>
@@ -1010,10 +1026,10 @@
         <name value="DischargeDeptVS"/>
         <title value="Discharge Department/Service ValueSet"/>
         <status value="active"/>
-        <date value="2026-02-19T14:52:32+00:00"/>
+        <date value="2026-02-20T08:36:31+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:5e2e7682-c9a1-42a1-a26d-c3e17773d15d"/>
-          <timestamp value="2026-02-19T14:53:34+00:00"/>
+          <identifier value="urn:uuid:a06945a8-6eb9-4f12-b81f-d1c78e67ee35"/>
+          <timestamp value="2026-02-20T08:37:28+00:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>
@@ -1100,15 +1116,15 @@
                 <td style="white-space:nowrap">  
                   <a href="http://snomed.info/id/306689006">306689006</a>
                 </td>
-                <td>Discharge to home (procedure)</td>
+                <td>Discharge to home</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;306689006&quot;, &quot;display&quot;: &quot;Discharge to home (procedure)&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;306689006&quot;, &quot;display&quot;: &quot;Discharge to home&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;306689006&quot;&gt;&lt;display value=&quot;Discharge to home (procedure)&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;306689006&quot;&gt;&lt;display value=&quot;Discharge to home&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -1204,8 +1220,8 @@
         <date value="2025-03-31"/>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:7979a271-33d7-4c88-8a60-00835534030d"/>
-          <timestamp value="2026-02-19T14:53:34+00:00"/>
+          <identifier value="urn:uuid:702dbb6d-b96d-457f-9fbd-30cfae79cd84"/>
+          <timestamp value="2026-02-20T08:37:28+00:00"/>
           <total value="5"/>
           <offset value="0"/>
           <parameter>
@@ -1229,13 +1245,17 @@
             <valueUri value="null"/>
           </parameter>
           <parameter>
+            <name value="includeDefinition"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
             <name value="used-codesystem"/>
             <valueUri value="http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"/>
           </parameter>
           <contains>
             <system value="http://snomed.info/sct"/>
             <code value="306689006"/>
-            <display value="Discharge to home (procedure)"/>
+            <display value="Discharge to home"/>
           </contains>
           <contains>
             <system value="http://snomed.info/sct"/>
@@ -1341,10 +1361,10 @@
         <name value="FunctionalScoreCodesVS"/>
         <title value="Stroke Functional Score Codes ValueSet"/>
         <status value="active"/>
-        <date value="2026-02-19T14:52:32+00:00"/>
+        <date value="2026-02-20T08:36:31+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:5265a4e8-859f-456e-8fd0-6236a978756f"/>
-          <timestamp value="2026-02-19T14:53:27+00:00"/>
+          <identifier value="urn:uuid:ea9c459f-092e-4390-a865-fcf8fee98764"/>
+          <timestamp value="2026-02-20T08:37:21+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -1366,6 +1386,10 @@
           <parameter>
             <name value="used-valueset"/>
             <valueUri value="null"/>
+          </parameter>
+          <parameter>
+            <name value="includeDefinition"/>
+            <valueBoolean value="false"/>
           </parameter>
           <parameter>
             <name value="used-codesystem"/>
@@ -1506,8 +1530,8 @@
         <date value="2025-09-08"/>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:45d62321-2e85-40b5-87b4-7d843e3bd2cf"/>
-          <timestamp value="2026-02-19T14:53:35+00:00"/>
+          <identifier value="urn:uuid:75c3cbc0-553d-4509-9424-15cb9e7aa73b"/>
+          <timestamp value="2026-02-20T08:37:29+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -1537,6 +1561,10 @@
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="true"/>
+          </parameter>
+          <parameter>
+            <name value="includeDefinition"/>
+            <valueBoolean value="false"/>
           </parameter>
           <parameter>
             <name value="used-codesystem"/>
@@ -1668,10 +1696,10 @@
         <name value="InitialCareIntensityVS"/>
         <title value="Initial Care Intensity ValueSet"/>
         <status value="active"/>
-        <date value="2026-02-19T14:52:32+00:00"/>
+        <date value="2026-02-20T08:36:31+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:83733bac-cfda-48ff-98bf-1639ea5b044c"/>
-          <timestamp value="2026-02-19T14:53:35+00:00"/>
+          <identifier value="urn:uuid:b79d49ce-8496-4419-a7d4-c907bb68756a"/>
+          <timestamp value="2026-02-20T08:37:29+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -1734,7 +1762,7 @@
                   </span>
                 </li>
                 <li>
-                  <a href="CodeSystem-medication-cs.html">codesystem Medications CodeSystem v0.1.0 (CodeSystem)</a>
+                  <a href="CodeSystem-medication-cs.html">codesystem Discharge Medication Category CodeSystem v0.1.0 (CodeSystem)</a>
                   <span class="copy-text-inline">
                     <button data-clipboard-text="http://tecnomod-um.org/CodeSystem/medication-cs|0.1.0" title="Click to Copy URL" class="btn-copy"> </button>
                   </span>
@@ -1771,16 +1799,16 @@
                 <td style="white-space:nowrap">  
                   <a href="http://snomed.info/id/372756006">372756006</a>
                 </td>
-                <td>Warfarin (substance)</td>
+                <td>Warfarin</td>
                 <td/>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;372756006&quot;, &quot;display&quot;: &quot;Warfarin (substance)&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;372756006&quot;, &quot;display&quot;: &quot;Warfarin&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;372756006&quot;&gt;&lt;display value=&quot;Warfarin (substance)&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;372756006&quot;&gt;&lt;display value=&quot;Warfarin&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -1792,16 +1820,16 @@
                 <td style="white-space:nowrap">  
                   <a href="http://snomed.info/id/372586001">372586001</a>
                 </td>
-                <td>Hypotensive agent (substance)</td>
+                <td>Hypotensive agent</td>
                 <td/>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;372586001&quot;, &quot;display&quot;: &quot;Hypotensive agent (substance)&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;372586001&quot;, &quot;display&quot;: &quot;Hypotensive agent&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;372586001&quot;&gt;&lt;display value=&quot;Hypotensive agent (substance)&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;372586001&quot;&gt;&lt;display value=&quot;Hypotensive agent&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -1813,16 +1841,16 @@
                 <td style="white-space:nowrap">  
                   <a href="http://snomed.info/id/372862008">372862008</a>
                 </td>
-                <td>Anticoagulant (substance)</td>
+                <td>Anticoagulant</td>
                 <td/>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;372862008&quot;, &quot;display&quot;: &quot;Anticoagulant (substance)&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;372862008&quot;, &quot;display&quot;: &quot;Anticoagulant&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;372862008&quot;&gt;&lt;display value=&quot;Anticoagulant (substance)&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;372862008&quot;&gt;&lt;display value=&quot;Anticoagulant&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -1834,16 +1862,16 @@
                 <td style="white-space:nowrap">  
                   <a href="http://snomed.info/id/312263009">312263009</a>
                 </td>
-                <td>Sex hormone (substance)</td>
+                <td>Sex hormone</td>
                 <td/>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;312263009&quot;, &quot;display&quot;: &quot;Sex hormone (substance)&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;312263009&quot;, &quot;display&quot;: &quot;Sex hormone&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;312263009&quot;&gt;&lt;display value=&quot;Sex hormone (substance)&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;312263009&quot;&gt;&lt;display value=&quot;Sex hormone&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -1876,16 +1904,16 @@
                 <td style="white-space:nowrap">  
                   <a href="http://snomed.info/id/387458008">387458008</a>
                 </td>
-                <td>Aspirin (substance)</td>
+                <td>Aspirin</td>
                 <td/>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;387458008&quot;, &quot;display&quot;: &quot;Aspirin (substance)&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;387458008&quot;, &quot;display&quot;: &quot;Aspirin&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;387458008&quot;&gt;&lt;display value=&quot;Aspirin (substance)&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;387458008&quot;&gt;&lt;display value=&quot;Aspirin&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -1897,16 +1925,16 @@
                 <td style="white-space:nowrap">  
                   <a href="http://snomed.info/id/386952008">386952008</a>
                 </td>
-                <td>Clopidogrel (substance)</td>
+                <td>Clopidogrel</td>
                 <td/>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;386952008&quot;, &quot;display&quot;: &quot;Clopidogrel (substance)&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;386952008&quot;, &quot;display&quot;: &quot;Clopidogrel&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;386952008&quot;&gt;&lt;display value=&quot;Clopidogrel (substance)&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;386952008&quot;&gt;&lt;display value=&quot;Clopidogrel&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -1918,16 +1946,16 @@
                 <td style="white-space:nowrap">  
                   <a href="http://snomed.info/id/372877000">372877000</a>
                 </td>
-                <td>Heparin (substance)</td>
+                <td>Heparin</td>
                 <td/>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;372877000&quot;, &quot;display&quot;: &quot;Heparin (substance)&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;372877000&quot;, &quot;display&quot;: &quot;Heparin&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;372877000&quot;&gt;&lt;display value=&quot;Heparin (substance)&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;372877000&quot;&gt;&lt;display value=&quot;Heparin&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -2021,12 +2049,12 @@
         <url value="http://tecnomod-um.org/ValueSet/medication-vs"/>
         <version value="0.1.0"/>
         <name value="MedicationVS"/>
-        <title value="Medications ValueSet"/>
+        <title value="Discharge Medications ValueSet"/>
         <status value="draft"/>
-        <date value="2026-02-19T14:52:32+00:00"/>
+        <date value="2026-02-20T08:36:31+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:c1a52e68-226d-4aab-a220-3ac01a543249"/>
-          <timestamp value="2026-02-19T14:53:35+00:00"/>
+          <identifier value="urn:uuid:0b1b0768-7c32-42a5-a234-39e1ac70122b"/>
+          <timestamp value="2026-02-20T08:37:29+00:00"/>
           <total value="12"/>
           <offset value="0"/>
           <parameter>
@@ -2050,6 +2078,10 @@
             <valueUri value="null"/>
           </parameter>
           <parameter>
+            <name value="includeDefinition"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
             <name value="used-codesystem"/>
             <valueUri value="http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"/>
           </parameter>
@@ -2060,22 +2092,22 @@
           <contains>
             <system value="http://snomed.info/sct"/>
             <code value="372756006"/>
-            <display value="Warfarin (substance)"/>
+            <display value="Warfarin"/>
           </contains>
           <contains>
             <system value="http://snomed.info/sct"/>
             <code value="372586001"/>
-            <display value="Hypotensive agent (substance)"/>
+            <display value="Hypotensive agent"/>
           </contains>
           <contains>
             <system value="http://snomed.info/sct"/>
             <code value="372862008"/>
-            <display value="Anticoagulant (substance)"/>
+            <display value="Anticoagulant"/>
           </contains>
           <contains>
             <system value="http://snomed.info/sct"/>
             <code value="312263009"/>
-            <display value="Sex hormone (substance)"/>
+            <display value="Sex hormone"/>
           </contains>
           <contains>
             <system value="http://snomed.info/sct"/>
@@ -2085,17 +2117,17 @@
           <contains>
             <system value="http://snomed.info/sct"/>
             <code value="387458008"/>
-            <display value="Aspirin (substance)"/>
+            <display value="Aspirin"/>
           </contains>
           <contains>
             <system value="http://snomed.info/sct"/>
             <code value="386952008"/>
-            <display value="Clopidogrel (substance)"/>
+            <display value="Clopidogrel"/>
           </contains>
           <contains>
             <system value="http://snomed.info/sct"/>
             <code value="372877000"/>
-            <display value="Heparin (substance)"/>
+            <display value="Heparin"/>
           </contains>
           <contains>
             <system value="http://tecnomod-um.org/CodeSystem/medication-cs"/>
@@ -2313,10 +2345,10 @@
         <title value="Modified Rankin Scale (mRS) Score ValueSet"/>
         <status value="active"/>
         <experimental value="true"/>
-        <date value="2026-02-19T14:52:32+00:00"/>
+        <date value="2026-02-20T08:36:31+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:e587695b-5f24-4712-a501-f7180d62c647"/>
-          <timestamp value="2026-02-19T14:53:28+00:00"/>
+          <identifier value="urn:uuid:af7206dc-8bc4-4b95-b79c-e6f587f5dd59"/>
+          <timestamp value="2026-02-20T08:37:21+00:00"/>
           <total value="7"/>
           <offset value="0"/>
           <parameter>
@@ -2443,10 +2475,10 @@
         <name value="MTICICodeVS"/>
         <title value="Modified Thrombolysis in Cerebral Infarction Assessment ValueSet"/>
         <status value="active"/>
-        <date value="2026-02-19T14:52:32+00:00"/>
+        <date value="2026-02-20T08:36:31+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:1987041a-ac1c-4158-8a67-b972b8afba44"/>
-          <timestamp value="2026-02-19T14:53:35+00:00"/>
+          <identifier value="urn:uuid:3c93921c-a8d4-4a26-aa9c-3dff20befe80"/>
+          <timestamp value="2026-02-20T08:37:29+00:00"/>
           <total value="1"/>
           <offset value="0"/>
           <parameter>
@@ -2655,8 +2687,8 @@
         <experimental value="true"/>
         <date value="2025-03-31"/>
         <expansion>
-          <identifier value="urn:uuid:eed0b8e4-eae8-4b15-bacb-6ba6340ae00b"/>
-          <timestamp value="2026-02-19T14:53:35+00:00"/>
+          <identifier value="urn:uuid:4e198457-e564-43e3-b65d-48badb7494a8"/>
+          <timestamp value="2026-02-20T08:37:29+00:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -2773,15 +2805,15 @@
                 <td style="white-space:nowrap">  
                   <a href="http://snomed.info/id/397046001">397046001</a>
                 </td>
-                <td>Thrombectomy of artery (procedure)</td>
+                <td>Thrombectomy of artery</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;397046001&quot;, &quot;display&quot;: &quot;Thrombectomy of artery (procedure)&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;397046001&quot;, &quot;display&quot;: &quot;Thrombectomy of artery&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;397046001&quot;&gt;&lt;display value=&quot;Thrombectomy of artery (procedure)&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;397046001&quot;&gt;&lt;display value=&quot;Thrombectomy of artery&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -2796,8 +2828,8 @@
         <experimental value="true"/>
         <date value="2025-03-31"/>
         <expansion>
-          <identifier value="urn:uuid:4141046a-98df-4190-9818-734086e92e0e"/>
-          <timestamp value="2026-02-19T14:53:35+00:00"/>
+          <identifier value="urn:uuid:d43adffa-9ca7-49ae-89fc-6d41fa1f0bf9"/>
+          <timestamp value="2026-02-20T08:37:29+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -2821,6 +2853,10 @@
             <valueUri value="null"/>
           </parameter>
           <parameter>
+            <name value="includeDefinition"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
             <name value="used-codesystem"/>
             <valueUri value="http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"/>
           </parameter>
@@ -2832,7 +2868,7 @@
           <contains>
             <system value="http://snomed.info/sct"/>
             <code value="397046001"/>
-            <display value="Thrombectomy of artery (procedure)"/>
+            <display value="Thrombectomy of artery"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -2945,10 +2981,10 @@
         <name value="ProcedureTimingContextVS"/>
         <title value="Procedure Timing Context ValueSet"/>
         <status value="active"/>
-        <date value="2026-02-19T14:52:32+00:00"/>
+        <date value="2026-02-20T08:36:31+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:73f830da-85ba-4308-aac5-3e9b1c862eff"/>
-          <timestamp value="2026-02-19T14:53:35+00:00"/>
+          <identifier value="urn:uuid:9737e1a5-8afc-4092-a1bd-ab9c4b7b9bb9"/>
+          <timestamp value="2026-02-20T08:37:29+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -3074,10 +3110,10 @@
         <name value="SpecificFindingCodesVS"/>
         <title value="Specific Stroke Finding Codes ValueSet"/>
         <status value="active"/>
-        <date value="2026-02-19T14:52:32+00:00"/>
+        <date value="2026-02-20T08:36:31+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:a97371d3-29a9-4185-a5a5-8d322162e7ac"/>
-          <timestamp value="2026-02-19T14:53:35+00:00"/>
+          <identifier value="urn:uuid:8d749f12-6f96-467d-9df2-e638d2346ef2"/>
+          <timestamp value="2026-02-20T08:37:29+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -3099,6 +3135,10 @@
           <parameter>
             <name value="used-valueset"/>
             <valueUri value="null"/>
+          </parameter>
+          <parameter>
+            <name value="includeDefinition"/>
+            <valueBoolean value="false"/>
           </parameter>
           <parameter>
             <name value="used-codesystem"/>
@@ -3288,10 +3328,10 @@
         <name value="StrokeArrivalModeVS"/>
         <title value="Stroke Arrival Mode ValueSet"/>
         <status value="active"/>
-        <date value="2026-02-19T14:52:32+00:00"/>
+        <date value="2026-02-20T08:36:31+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:cff55de6-1d76-4ffa-b837-3663075cf477"/>
-          <timestamp value="2026-02-19T14:53:35+00:00"/>
+          <identifier value="urn:uuid:fd1d01f3-a067-42bf-b403-abce7000bffc"/>
+          <timestamp value="2026-02-20T08:37:30+00:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -3438,10 +3478,10 @@
         <name value="StrokeCircumstanceCodesVS"/>
         <title value="Stroke Circumstance Codes ValueSet"/>
         <status value="active"/>
-        <date value="2026-02-19T14:52:32+00:00"/>
+        <date value="2026-02-20T08:36:31+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:eb8a8ac6-cf05-4ea9-81e2-db8062cf465a"/>
-          <timestamp value="2026-02-19T14:53:31+00:00"/>
+          <identifier value="urn:uuid:2883de2c-8342-4bbd-8a1c-29ca1f2fe1ff"/>
+          <timestamp value="2026-02-20T08:37:24+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -3518,15 +3558,15 @@
                 <td style="white-space:nowrap">  
                   <a href="http://snomed.info/id/422504002">422504002</a>
                 </td>
-                <td>Ischemic stroke (disorder)</td>
+                <td>Ischemic stroke</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;422504002&quot;, &quot;display&quot;: &quot;Ischemic stroke (disorder)&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;422504002&quot;, &quot;display&quot;: &quot;Ischemic stroke&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;422504002&quot;&gt;&lt;display value=&quot;Ischemic stroke (disorder)&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;422504002&quot;&gt;&lt;display value=&quot;Ischemic stroke&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -3618,15 +3658,15 @@
                 <td style="white-space:nowrap">  
                   <a href="http://snomed.info/id/373068000">373068000</a>
                 </td>
-                <td>Undetermined (qualifier value)</td>
+                <td>Undetermined</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;373068000&quot;, &quot;display&quot;: &quot;Undetermined (qualifier value)&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;373068000&quot;, &quot;display&quot;: &quot;Undetermined&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;373068000&quot;&gt;&lt;display value=&quot;Undetermined (qualifier value)&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;373068000&quot;&gt;&lt;display value=&quot;Undetermined&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -3642,8 +3682,8 @@
         <date value="2025-10-07"/>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:6769715e-e34b-4793-9362-35f610ac0727"/>
-          <timestamp value="2026-02-19T14:53:31+00:00"/>
+          <identifier value="urn:uuid:83a4667b-5ff1-4daa-8798-511e283a3f7c"/>
+          <timestamp value="2026-02-20T08:37:25+00:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -3667,13 +3707,17 @@
             <valueUri value="null"/>
           </parameter>
           <parameter>
+            <name value="includeDefinition"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
             <name value="used-codesystem"/>
             <valueUri value="http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"/>
           </parameter>
           <contains>
             <system value="http://snomed.info/sct"/>
             <code value="422504002"/>
-            <display value="Ischemic stroke (disorder)"/>
+            <display value="Ischemic stroke"/>
           </contains>
           <contains>
             <system value="http://snomed.info/sct"/>
@@ -3698,7 +3742,7 @@
           <contains>
             <system value="http://snomed.info/sct"/>
             <code value="373068000"/>
-            <display value="Undetermined (qualifier value)"/>
+            <display value="Undetermined"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -3758,16 +3802,16 @@
                 <td style="white-space:nowrap">  
                   <a href="http://snomed.info/id/306689006">306689006</a>
                 </td>
-                <td>Discharge to home (procedure)</td>
+                <td>Discharge to home</td>
                 <td/>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;306689006&quot;, &quot;display&quot;: &quot;Discharge to home (procedure)&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;306689006&quot;, &quot;display&quot;: &quot;Discharge to home&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;306689006&quot;&gt;&lt;display value=&quot;Discharge to home (procedure)&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;306689006&quot;&gt;&lt;display value=&quot;Discharge to home&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -3863,10 +3907,10 @@
         <name value="StrokeDischargeDestinationVS"/>
         <title value="Stroke Discharge Destination ValueSet"/>
         <status value="active"/>
-        <date value="2026-02-19T14:52:32+00:00"/>
+        <date value="2026-02-20T08:36:31+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:31e85e8f-1a65-4a19-9ae6-d658ffad9639"/>
-          <timestamp value="2026-02-19T14:53:35+00:00"/>
+          <identifier value="urn:uuid:4d778c52-4067-4826-bcdf-edcbe551e269"/>
+          <timestamp value="2026-02-20T08:37:30+00:00"/>
           <total value="5"/>
           <offset value="0"/>
           <parameter>
@@ -3890,6 +3934,10 @@
             <valueUri value="null"/>
           </parameter>
           <parameter>
+            <name value="includeDefinition"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
             <name value="used-codesystem"/>
             <valueUri value="http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"/>
           </parameter>
@@ -3904,7 +3952,7 @@
           <contains>
             <system value="http://snomed.info/sct"/>
             <code value="306689006"/>
-            <display value="Discharge to home (procedure)"/>
+            <display value="Discharge to home"/>
           </contains>
           <contains>
             <system value="http://snomed.info/sct"/>
@@ -4026,16 +4074,16 @@
                 <td style="white-space:nowrap">  
                   <a href="http://snomed.info/id/16891111000119104">16891111000119104</a>
                 </td>
-                <td>Cryptogenic stroke (disorder)</td>
+                <td>Cryptogenic stroke</td>
                 <td/>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;16891111000119104&quot;, &quot;display&quot;: &quot;Cryptogenic stroke (disorder)&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;16891111000119104&quot;, &quot;display&quot;: &quot;Cryptogenic stroke&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;16891111000119104&quot;&gt;&lt;display value=&quot;Cryptogenic stroke (disorder)&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;16891111000119104&quot;&gt;&lt;display value=&quot;Cryptogenic stroke&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -4047,16 +4095,16 @@
                 <td style="white-space:nowrap">  
                   <a href="http://snomed.info/id/413758000">413758000</a>
                 </td>
-                <td>Cardioembolic stroke (disorder)</td>
+                <td>Cardioembolic stroke</td>
                 <td/>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;413758000&quot;, &quot;display&quot;: &quot;Cardioembolic stroke (disorder)&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;413758000&quot;, &quot;display&quot;: &quot;Cardioembolic stroke&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;413758000&quot;&gt;&lt;display value=&quot;Cardioembolic stroke (disorder)&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;413758000&quot;&gt;&lt;display value=&quot;Cardioembolic stroke&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -4093,8 +4141,8 @@
         <date value="2025-03-31"/>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:0e1595ab-1f2c-4195-bdaf-f1c965b03772"/>
-          <timestamp value="2026-02-19T14:53:36+00:00"/>
+          <identifier value="urn:uuid:62369248-b894-47c1-a87d-e9b431156158"/>
+          <timestamp value="2026-02-20T08:37:30+00:00"/>
           <total value="5"/>
           <offset value="0"/>
           <parameter>
@@ -4126,6 +4174,10 @@
             <valueBoolean value="true"/>
           </parameter>
           <parameter>
+            <name value="includeDefinition"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
             <name value="used-codesystem"/>
             <valueUri value="http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"/>
           </parameter>
@@ -4142,12 +4194,12 @@
           <contains>
             <system value="http://snomed.info/sct"/>
             <code value="16891111000119104"/>
-            <display value="Cryptogenic stroke (disorder)"/>
+            <display value="Cryptogenic stroke"/>
           </contains>
           <contains>
             <system value="http://snomed.info/sct"/>
             <code value="413758000"/>
-            <display value="Cardioembolic stroke (disorder)"/>
+            <display value="Cardioembolic stroke"/>
           </contains>
           <contains>
             <system value="http://snomed.info/sct"/>
@@ -4287,10 +4339,10 @@
         <name value="StrokeFindingCodesVS"/>
         <title value="Specific Stroke Finding Codes ValueSet"/>
         <status value="active"/>
-        <date value="2026-02-19T14:52:32+00:00"/>
+        <date value="2026-02-20T08:36:31+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:6a609d70-3b89-44ac-b83a-ee98c19786ed"/>
-          <timestamp value="2026-02-19T14:53:29+00:00"/>
+          <identifier value="urn:uuid:da4ee5fb-b47f-486a-bba2-9e10850e426a"/>
+          <timestamp value="2026-02-20T08:37:23+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -4316,6 +4368,10 @@
           <parameter>
             <name value="used-valueset"/>
             <valueUri value="null"/>
+          </parameter>
+          <parameter>
+            <name value="includeDefinition"/>
+            <valueBoolean value="false"/>
           </parameter>
           <parameter>
             <name value="used-codesystem"/>
@@ -4732,10 +4788,10 @@
         <name value="StrokeProcNotDoneReasonVS"/>
         <title value="Stroke Procedure Not Done Reason ValueSet"/>
         <status value="active"/>
-        <date value="2026-02-19T14:52:32+00:00"/>
+        <date value="2026-02-20T08:36:31+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:1024ac49-ac8b-417c-8268-137865fe18f3"/>
-          <timestamp value="2026-02-19T14:53:36+00:00"/>
+          <identifier value="urn:uuid:a169e5bc-9bab-459f-8185-df7fc922ed7f"/>
+          <timestamp value="2026-02-20T08:37:30+00:00"/>
           <total value="16"/>
           <offset value="0"/>
           <parameter>
@@ -5066,15 +5122,15 @@
                 <td style="white-space:nowrap">  
                   <a href="http://snomed.info/id/422504002">422504002</a>
                 </td>
-                <td>Ischemic stroke (disorder)</td>
+                <td>Ischemic stroke</td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;422504002&quot;, &quot;display&quot;: &quot;Ischemic stroke (disorder)&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;422504002&quot;, &quot;display&quot;: &quot;Ischemic stroke&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
                 <td>
                   <span class="copy-text-inline">
-                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;422504002&quot;&gt;&lt;display value=&quot;Ischemic stroke (disorder)&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;422504002&quot;&gt;&lt;display value=&quot;Ischemic stroke&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
                   </span>
                 </td>
               </tr>
@@ -5110,8 +5166,8 @@
         <date value="2025-10-07"/>
         <immutable value="false"/>
         <expansion>
-          <identifier value="urn:uuid:b54891c7-6470-46f5-895b-bd36d274cb1a"/>
-          <timestamp value="2026-02-19T14:53:32+00:00"/>
+          <identifier value="urn:uuid:ec9bf09b-d2da-4bf6-b917-e3268e3b6bec"/>
+          <timestamp value="2026-02-20T08:37:26+00:00"/>
           <total value="11"/>
           <offset value="0"/>
           <parameter>
@@ -5133,6 +5189,10 @@
           <parameter>
             <name value="used-valueset"/>
             <valueUri value="null"/>
+          </parameter>
+          <parameter>
+            <name value="includeDefinition"/>
+            <valueBoolean value="false"/>
           </parameter>
           <parameter>
             <name value="used-codesystem"/>
@@ -5186,7 +5246,7 @@
           <contains>
             <system value="http://snomed.info/sct"/>
             <code value="422504002"/>
-            <display value="Ischemic stroke (disorder)"/>
+            <display value="Ischemic stroke"/>
           </contains>
           <contains>
             <system value="http://snomed.info/sct"/>
@@ -5380,8 +5440,8 @@
         <experimental value="true"/>
         <date value="2025-03-31"/>
         <expansion>
-          <identifier value="urn:uuid:dc7d07b6-61a9-4de1-ad01-f855cadf2dc6"/>
-          <timestamp value="2026-02-19T14:53:36+00:00"/>
+          <identifier value="urn:uuid:8b8977d4-8e19-4441-9791-3eb6789d8f89"/>
+          <timestamp value="2026-02-20T08:37:30+00:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -5403,6 +5463,10 @@
           <parameter>
             <name value="used-valueset"/>
             <valueUri value="null"/>
+          </parameter>
+          <parameter>
+            <name value="includeDefinition"/>
+            <valueBoolean value="false"/>
           </parameter>
           <parameter>
             <name value="used-codesystem"/>
@@ -5563,10 +5627,10 @@
         <name value="SwallowingScreeningTimingCategoryVS"/>
         <title value="Swallowing Screening Timing Category ValueSet"/>
         <status value="active"/>
-        <date value="2026-02-19T14:52:32+00:00"/>
+        <date value="2026-02-20T08:36:31+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:5a0fdbe2-d6e0-45ff-b05f-0b0bdc64b4df"/>
-          <timestamp value="2026-02-19T14:53:36+00:00"/>
+          <identifier value="urn:uuid:274de20a-db50-47cb-8a6c-7c8d9db82ad9"/>
+          <timestamp value="2026-02-20T08:37:30+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -5600,6 +5664,10 @@
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="true"/>
+          </parameter>
+          <parameter>
+            <name value="includeDefinition"/>
+            <valueBoolean value="false"/>
           </parameter>
           <parameter>
             <name value="used-codesystem"/>
@@ -5720,10 +5788,10 @@
         <name value="ThrombectomyComplicationVS"/>
         <title value="Thrombectomy Complications ValueSet"/>
         <status value="active"/>
-        <date value="2026-02-19T14:52:32+00:00"/>
+        <date value="2026-02-20T08:36:31+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:c830ad1c-9858-46f4-8c84-a6d3cdfb476c"/>
-          <timestamp value="2026-02-19T14:53:36+00:00"/>
+          <identifier value="urn:uuid:6f846ca4-b511-4250-a865-0cd2b26b9054"/>
+          <timestamp value="2026-02-20T08:37:31+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -5745,6 +5813,10 @@
           <parameter>
             <name value="used-valueset"/>
             <valueUri value="null"/>
+          </parameter>
+          <parameter>
+            <name value="includeDefinition"/>
+            <valueBoolean value="false"/>
           </parameter>
           <parameter>
             <name value="used-codesystem"/>
@@ -5854,10 +5926,10 @@
         <name value="TimingMetricCodesVS"/>
         <title value="Stroke Timing Metric Codes ValueSet"/>
         <status value="active"/>
-        <date value="2026-02-19T14:52:32+00:00"/>
+        <date value="2026-02-20T08:36:31+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:1f62567a-870a-4285-b123-848e1d8faabd"/>
-          <timestamp value="2026-02-19T14:53:33+00:00"/>
+          <identifier value="urn:uuid:2373dc42-5b51-4514-9834-45179fc40933"/>
+          <timestamp value="2026-02-20T08:37:27+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -5975,10 +6047,10 @@
         <title value="Stroke Vital Sign Codes ValueSet"/>
         <status value="active"/>
         <experimental value="true"/>
-        <date value="2026-02-19T14:52:32+00:00"/>
+        <date value="2026-02-20T08:36:31+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:b932f5ee-63da-441e-99d2-4538f080876e"/>
-          <timestamp value="2026-02-19T14:53:37+00:00"/>
+          <identifier value="urn:uuid:715ca3ee-6059-48ab-99f3-371e976f0f20"/>
+          <timestamp value="2026-02-20T08:37:31+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -6000,6 +6072,10 @@
           <parameter>
             <name value="used-valueset"/>
             <valueUri value="null"/>
+          </parameter>
+          <parameter>
+            <name value="includeDefinition"/>
+            <valueBoolean value="false"/>
           </parameter>
           <parameter>
             <name value="used-codesystem"/>
@@ -6120,10 +6196,10 @@
         <title value="Gender (SNOMED CT)"/>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-02-19T14:52:32+00:00"/>
+        <date value="2026-02-20T08:36:31+00:00"/>
         <expansion>
-          <identifier value="urn:uuid:5407f4f8-0e15-4b6b-a420-08954c70e160"/>
-          <timestamp value="2026-02-19T14:53:37+00:00"/>
+          <identifier value="urn:uuid:fb52780f-a933-40bd-9c6f-aedd0d2dc3e9"/>
+          <timestamp value="2026-02-20T08:37:31+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -6145,6 +6221,10 @@
           <parameter>
             <name value="used-valueset"/>
             <valueUri value="null"/>
+          </parameter>
+          <parameter>
+            <name value="includeDefinition"/>
+            <valueBoolean value="false"/>
           </parameter>
           <parameter>
             <name value="used-codesystem"/>

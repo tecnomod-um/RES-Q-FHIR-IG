@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs | *Version*:0.1.0 |
-| Active as of 2026-02-19 | *Computable Name*:InitialCareIntensityCS |
+| Active as of 2026-02-20 | *Computable Name*:InitialCareIntensityCS |
 
  
 Local CodeSystem representing the **initial intensity of care** during the first day(s) of the stroke encounter. 
@@ -44,40 +44,34 @@ Local CodeSystem representing the **initial intensity of care** during the first
   "title" : "Initial Care Intensity CodeSystem",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-19T14:52:32+00:00",
+  "date" : "2026-02-20T08:36:31+00:00",
   "publisher" : "UMU",
-  "contact" : [
-    {
-      "name" : "UMU",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://tecnomod-um.org"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "UMU",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://tecnomod-um.org"
+    }]
+  }],
   "description" : "Local CodeSystem representing the **initial intensity of care** during the first day(s) of the stroke encounter.\n\n**Primary use-case**\n- Populate `InitialCareIntensityExtension` on Encounter to support:\n  - case-mix characterization (ICU/stroke unit vs monitored vs standard bed),\n  - operational benchmarking and staffing analysis,\n  - research stratification where initial level-of-care is a confounder.\n\n**Interpretation guidance**\n- `standard`: no continuous monitoring beyond standard nursing observation.\n- `monitored`: telemetry or continuous monitoring outside ICU.\n- `icu-stroke`: ICU or dedicated stroke unit level care (per local definitions).",
   "caseSensitive" : false,
   "content" : "complete",
   "count" : 3,
-  "concept" : [
-    {
-      "code" : "standard",
-      "display" : "Standard bed",
-      "definition" : "Patient placed in a standard inpatient bed without continuous telemetry/continuous physiologic monitoring."
-    },
-    {
-      "code" : "monitored",
-      "display" : "Monitored bed",
-      "definition" : "Patient placed in a monitored setting (e.g., telemetry) without full ICU-level care."
-    },
-    {
-      "code" : "icu-stroke",
-      "display" : "ICU / Stroke Unit",
-      "definition" : "Patient managed in an ICU or specialized stroke unit providing high-intensity care and monitoring."
-    }
-  ]
+  "concept" : [{
+    "code" : "standard",
+    "display" : "Standard bed",
+    "definition" : "Patient placed in a standard inpatient bed without continuous telemetry/continuous physiologic monitoring."
+  },
+  {
+    "code" : "monitored",
+    "display" : "Monitored bed",
+    "definition" : "Patient placed in a monitored setting (e.g., telemetry) without full ICU-level care."
+  },
+  {
+    "code" : "icu-stroke",
+    "display" : "ICU / Stroke Unit",
+    "definition" : "Patient managed in an ICU or specialized stroke unit providing high-intensity care and monitoring."
+  }]
 }
 
 ```

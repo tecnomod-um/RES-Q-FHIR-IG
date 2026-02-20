@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/initial-care-intensity-vs | *Version*:0.1.0 |
-| Active as of 2026-02-19 | *Computable Name*:InitialCareIntensityVS |
+| Active as of 2026-02-20 | *Computable Name*:InitialCareIntensityVS |
 
  
 ValueSet restricting allowed initial care intensity categories. 
@@ -53,26 +53,20 @@ ValueSet restricting allowed initial care intensity categories.
   "name" : "InitialCareIntensityVS",
   "title" : "Initial Care Intensity ValueSet",
   "status" : "active",
-  "date" : "2026-02-19T14:52:32+00:00",
+  "date" : "2026-02-20T08:36:31+00:00",
   "publisher" : "UMU",
-  "contact" : [
-    {
-      "name" : "UMU",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://tecnomod-um.org"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "UMU",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://tecnomod-um.org"
+    }]
+  }],
   "description" : "ValueSet restricting allowed initial care intensity categories.\n\n**Primary use-case**\n- Required binding for `InitialCareIntensityExtension.valueCodeableConcept`.",
   "compose" : {
-    "include" : [
-      {
-        "system" : "http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs"
-      }
-    ]
+    "include" : [{
+      "system" : "http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs"
+    }]
   }
 }
 

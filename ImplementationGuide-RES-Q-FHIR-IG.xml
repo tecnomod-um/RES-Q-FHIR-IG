@@ -9,7 +9,7 @@
   <version value="0.1.0"/>
   <name value="RESQIG"/>
   <status value="draft"/>
-  <date value="2026-02-19T14:52:32+00:00"/>
+  <date value="2026-02-20T08:36:31+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>
@@ -197,13 +197,35 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/medication-cs"/>
+      </reference>
+      <name value="Discharge Medication Category CodeSystem"/>
+      <description value="Local CodeSystem providing **coarse medication categories** used in discharge prescribing when the source system cannot&#xA;(or does not) provide a specific coded drug product/substance.&#xA;&#xA;**Primary use-cases**&#xA;- Minimum-data capture for discharge medication classes relevant to stroke secondary prevention (e.g., anticoagulant vs antiplatelet).&#xA;- Registry reporting where only “medication class prescribed at discharge” is available.&#xA;- Analytics and quality indicators (e.g., “antithrombotic at discharge”) when specific agent is unknown.&#xA;&#xA;**How it is used in FHIR**&#xA;- Included in `MedicationVS` so it can be used in `MedicationRequest.medication` (CodeableConcept)."/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
         <reference value="StructureDefinition/discharge-medication-request-profile"/>
       </reference>
-      <name value="Discharge Medication Request Profile"/>
-      <description value="Represents a medication prescription made as part of the patient's discharge plan, categorized as community administration."/>
+      <name value="Discharge MedicationRequest Profile"/>
+      <description value="Profile for representing a medication prescription issued as part of the patient’s **discharge plan** following a stroke encounter.&#xA;&#xA;**Primary use-case**&#xA;- Capture secondary prevention and chronic therapy prescriptions intended to be taken **after discharge** (community setting),&#xA;  enabling:&#xA;  - discharge medication reconciliation,&#xA;  - continuity of care between hospital and primary care,&#xA;  - registry submission and quality improvement (e.g., antithrombotic/statin at discharge),&#xA;  - episode-linked analytics (tie to the index stroke Encounter).&#xA;&#xA;**Key elements and how to use them**&#xA;- `status` (fixed to active): indicates the prescription is currently intended/valid at the time of discharge documentation.&#xA;  - Use `stopped` or `cancelled` in your broader implementation if a discharge prescription is later withdrawn (not constrained here).&#xA;- `category` (fixed to community): indicates the medication is intended for administration in the community/outpatient context.&#xA;  - This helps distinguish discharge prescriptions from inpatient medication orders.&#xA;- `medication` (required; bound to MedicationVS): identifies the prescribed agent or, if unavailable, a coarse category.&#xA;  - Prefer specific SNOMED CT substance concepts (e.g., aspirin) when available.&#xA;  - Use `MedicationCS` category codes only when the specific agent cannot be coded.&#xA;- `subject` (required): the patient who will take the medication.&#xA;- `encounter` (required): links the prescription to the index stroke admission encounter.&#xA;- `authoredOn` (optional but recommended): the date/time the discharge prescription was authored."/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/medication-vs"/>
+      </reference>
+      <name value="Discharge Medications ValueSet"/>
+      <description value="ValueSet defining allowable coded medications (or medication categories) for discharge MedicationRequests.&#xA;&#xA;**Primary use-case**&#xA;- Required binding to `MedicationRequest.medication` in `DischargeMedicationRequestProfile`.&#xA;&#xA;**What this ValueSet supports**&#xA;1) **Specific SNOMED CT substance concepts** (e.g., aspirin, clopidogrel, warfarin) for agent-level capture.&#xA;2) **Local category codes** (from `MedicationCS`) for minimum-data capture when only the class is known.&#xA;&#xA;**Scope and modeling notes**&#xA;- This ValueSet does not encode dose, route, frequency, or duration; those are expressed in MedicationRequest elements."/>
       <isExample value="false"/>
     </resource>
     <resource>
@@ -348,28 +370,6 @@
       </reference>
       <name value="Ischemic Stroke – Etiology"/>
       <description value="Extension capturing the **determined ischemic stroke etiology classification**.&#xA;&#xA;**Primary use-case**&#xA;- Attach to a definitive ischemic stroke Condition (`StrokeDiagnosisConditionProfile`) to support:&#xA;  - etiologic subgroup analytics (cardioembolic vs lacunar vs cryptogenic, etc.),&#xA;  - pathway decision support (e.g., prolonged rhythm monitoring for cryptogenic stroke),&#xA;&#xA;**When to use**&#xA;- Use after etiologic workup when a classification is assigned.&#xA;- Do not use for hemorrhagic stroke diagnoses.&#xA;- If the etiology remains unknown/undetermined, either omit the extension or use the “Undetermined” code included in StrokeEtiologyVS.&#xA;&#xA;**FHIR placement**&#xA;- `Condition.extension[ischemicEtiology].valueCodeableConcept` (required binding to StrokeEtiologyVS)."/>
-      <isExample value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/medication-cs"/>
-      </reference>
-      <name value="Medications CodeSystem"/>
-      <description value="Codes for drug products or substances representing the Medications on the patient discharge."/>
-      <isExample value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/medication-vs"/>
-      </reference>
-      <name value="Medications ValueSet"/>
-      <description value="SNOMED CT codes for drug products or substances."/>
       <isExample value="false"/>
     </resource>
     <resource>

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/CodeSystem/discharge-dept-cs | *Version*:0.1.0 |
-| Active as of 2026-02-19 | *Computable Name*:DischargeDeptCS |
+| Active as of 2026-02-20 | *Computable Name*:DischargeDeptCS |
 
  
 Local CodeSystem representing the **clinical service/department** responsible for the patient at discharge/transfer (or the service the patient is transferred to). 
@@ -41,44 +41,38 @@ Local CodeSystem representing the **clinical service/department** responsible fo
   "name" : "DischargeDeptCS",
   "title" : "Discharge Department/Service CodeSystem",
   "status" : "active",
-  "date" : "2026-02-19T14:52:32+00:00",
+  "date" : "2026-02-20T08:36:31+00:00",
   "publisher" : "UMU",
-  "contact" : [
-    {
-      "name" : "UMU",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://tecnomod-um.org"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "UMU",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://tecnomod-um.org"
+    }]
+  }],
   "description" : "Local CodeSystem representing the **clinical service/department** responsible for the patient at discharge/transfer\n(or the service the patient is transferred to).\n\n**Primary use-case**\n- Populate `DischargeDepartmentServiceExtension` on Encounter to support:\n  - bed management and service-level reporting,\n  - pathway characterization (e.g., discharge under neurology vs rehab),\n  - operational analytics and capacity planning.\n\n**Modeling notes**\n- This captures *service classification*, not the physical ward/room. Physical location should be modeled using `Encounter.location`\n  (and references to Location resources) if needed.",
   "content" : "complete",
   "count" : 4,
-  "concept" : [
-    {
-      "code" : "acute",
-      "display" : "Acute Rehabilitation",
-      "definition" : "Patient discharged to an acute rehabilitation setting."
-    },
-    {
-      "code" : "post-care",
-      "display" : "Post Care Bed",
-      "definition" : "Patient discharged to a post care bed."
-    },
-    {
-      "code" : "neurology",
-      "display" : "Neurology",
-      "definition" : "Patient discharged to a neurology department or service."
-    },
-    {
-      "code" : "another-department",
-      "display" : "Another Department",
-      "definition" : "Patient discharged to a different department within the same hospital."
-    }
-  ]
+  "concept" : [{
+    "code" : "acute",
+    "display" : "Acute Rehabilitation",
+    "definition" : "Patient discharged to an acute rehabilitation setting."
+  },
+  {
+    "code" : "post-care",
+    "display" : "Post Care Bed",
+    "definition" : "Patient discharged to a post care bed."
+  },
+  {
+    "code" : "neurology",
+    "display" : "Neurology",
+    "definition" : "Patient discharged to a neurology department or service."
+  },
+  {
+    "code" : "another-department",
+    "display" : "Another Department",
+    "definition" : "Patient discharged to a different department within the same hospital."
+  }]
 }
 
 ```

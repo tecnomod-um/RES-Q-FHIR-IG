@@ -56,41 +56,33 @@ ValueSet enumerating swallowing screening/assessment procedures/tools used in st
   "experimental" : true,
   "date" : "2025-03-31",
   "publisher" : "UMU",
-  "contact" : [
-    {
-      "name" : "UMU",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://tecnomod-um.org"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "UMU",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://tecnomod-um.org"
+    }]
+  }],
   "description" : "ValueSet enumerating swallowing screening/assessment procedures/tools used in stroke care.\n\n**Implementation note**\n- `SCT#261665006 'Unknown'´ is included only as a provisional development workaround; in production, prefer FHIR `dataAbsentReason` for missing data rather than “Unknown” as a procedure code.",
   "compose" : {
-    "include" : [
-      {
-        "system" : "http://snomed.info/sct",
-        "concept" : [
-          {
-            "code" : "1290000005",
-            "display" : "Assessment using Gugging Swallowing Screen (procedure)"
-          },
-          {
-            "code" : "63913004",
-            "display" : "Tonography with water provocation (procedure)"
-          },
-          {
-            "code" : "261665006",
-            "display" : "Unknown (qualifier value)"
-          }
-        ]
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "1290000005",
+        "display" : "Assessment using Gugging Swallowing Screen (procedure)"
       },
       {
-        "system" : "http://tecnomod-um.org/CodeSystem/swallow-procedures-cs"
-      }
-    ]
+        "code" : "63913004",
+        "display" : "Tonography with water provocation (procedure)"
+      },
+      {
+        "code" : "261665006",
+        "display" : "Unknown (qualifier value)"
+      }]
+    },
+    {
+      "system" : "http://tecnomod-um.org/CodeSystem/swallow-procedures-cs"
+    }]
   }
 }
 

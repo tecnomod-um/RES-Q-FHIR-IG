@@ -44,20 +44,16 @@ Profile: [Prior Medication Statement Profile (R5)](StructureDefinition-prior-med
   "resourceType" : "MedicationStatement",
   "id" : "PriorMedicationStatementExample",
   "meta" : {
-    "profile" : [
-      "http://tecnomod-um.org/StructureDefinition/prior-medication-statement-profile"
-    ]
+    "profile" : ["http://tecnomod-um.org/StructureDefinition/prior-medication-statement-profile"]
   },
   "status" : "recorded",
   "medication" : {
     "concept" : {
-      "coding" : [
-        {
-          "system" : "http://snomed.info/sct",
-          "code" : "372756006",
-          "display" : "Warfarin (substance)"
-        }
-      ]
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "372756006",
+        "display" : "Warfarin (substance)"
+      }]
     }
   },
   "subject" : {
@@ -66,21 +62,17 @@ Profile: [Prior Medication Statement Profile (R5)](StructureDefinition-prior-med
   "encounter" : {
     "reference" : "EncounterExample"
   },
-  "reason" : [
-    {
-      "reference" : {
-        "reference" : "Condition/StrokeDiagnosisConditionExample"
-      }
+  "reason" : [{
+    "reference" : {
+      "reference" : "Condition/StrokeDiagnosisConditionExample"
     }
-  ],
+  }],
   "adherence" : {
     "code" : {
-      "coding" : [
-        {
-          "system" : "http://hl7.org/fhir/CodeSystem/medication-statement-adherence",
-          "code" : "taking"
-        }
-      ]
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/CodeSystem/medication-statement-adherence",
+        "code" : "taking"
+      }]
     }
   }
 }

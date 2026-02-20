@@ -60,38 +60,30 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "status" : "active",
   "date" : "2025-03-31",
   "publisher" : "UMU",
-  "contact" : [
-    {
-      "name" : "UMU",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://tecnomod-um.org"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "UMU",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://tecnomod-um.org"
+    }]
+  }],
   "description" : "This ValueSet constrains the allowable coded outcomes for documenting the **status of an AF/flutter assessment** within the stroke workflow.\n\n**Primary use-case**\n- Bind to `Observation.valueCodeableConcept` in the `SpecificFindingObservationProfile` when `Observation.code` refers to AF/flutter as a finding focus.\n- Enables harmonized interpretation for analytics and decision support (e.g., anticoagulation pathway triggers) without forcing a Condition assertion.\n\n**Scope and modeling notes**\n- This ValueSet expresses *assessment outcome/status* (detected/known/absent/not screened/unknown).\n- It does not replace Condition for diagnoses. When AF/flutter is confirmed as a diagnosis, represent it as a `Condition` with the appropriate SNOMED CT disorder code.",
   "compose" : {
-    "include" : [
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "410515003",
+        "display" : "Known present (qualifier value)"
+      },
       {
-        "system" : "http://snomed.info/sct",
-        "concept" : [
-          {
-            "code" : "410515003",
-            "display" : "Known present (qualifier value)"
-          },
-          {
-            "code" : "410516002",
-            "display" : "Known absent (qualifier value)"
-          },
-          {
-            "code" : "261665006",
-            "display" : "Unknown (qualifier value)"
-          }
-        ]
-      }
-    ]
+        "code" : "410516002",
+        "display" : "Known absent (qualifier value)"
+      },
+      {
+        "code" : "261665006",
+        "display" : "Unknown (qualifier value)"
+      }]
+    }]
   }
 }
 

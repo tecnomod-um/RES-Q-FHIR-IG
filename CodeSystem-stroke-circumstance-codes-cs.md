@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs | *Version*:0.1.0 |
-| Active as of 2026-02-19 | *Computable Name*:StrokeCircumstanceCodesCS |
+| Active as of 2026-02-20 | *Computable Name*:StrokeCircumstanceCodesCS |
 
  
 This CodeSystem defines coded circumstances related to stroke symptom onset that are clinically relevant when onset time is unknown or atypical. 
@@ -35,34 +35,28 @@ This CodeSystem defines coded circumstances related to stroke symptom onset that
   "name" : "StrokeCircumstanceCodesCS",
   "title" : "Stroke Circumstance Codes CodeSystem",
   "status" : "active",
-  "date" : "2026-02-19T14:52:32+00:00",
+  "date" : "2026-02-20T08:36:31+00:00",
   "publisher" : "UMU",
-  "contact" : [
-    {
-      "name" : "UMU",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://tecnomod-um.org"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "UMU",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://tecnomod-um.org"
+    }]
+  }],
   "description" : "This CodeSystem defines coded circumstances related to stroke symptom onset that are clinically relevant when onset time is unknown or atypical.\n\n**Primary use-case**\n- Use as `Observation.code` in `StrokeCircumstanceObservationProfile`.\n- Presence of the Observation asserts that the circumstance applies to the index stroke event.",
   "content" : "complete",
   "count" : 2,
-  "concept" : [
-    {
-      "code" : "in-hospital",
-      "display" : "In-hospital Stroke",
-      "definition" : "Indicates that stroke onset occurred while the patient was already admitted to the hospital for another reason (inpatient onset)."
-    },
-    {
-      "code" : "wake-up",
-      "display" : "Wake-up Stroke",
-      "definition" : "Indicates that stroke symptoms were first recognized on awakening from sleep, implying an unknown onset time within the sleep interval (time last known well precedes symptom recognition)."
-    }
-  ]
+  "concept" : [{
+    "code" : "in-hospital",
+    "display" : "In-hospital Stroke",
+    "definition" : "Indicates that stroke onset occurred while the patient was already admitted to the hospital for another reason (inpatient onset)."
+  },
+  {
+    "code" : "wake-up",
+    "display" : "Wake-up Stroke",
+    "definition" : "Indicates that stroke symptoms were first recognized on awakening from sleep, implying an unknown onset time within the sleep interval (time last known well precedes symptom recognition)."
+  }]
 }
 
 ```

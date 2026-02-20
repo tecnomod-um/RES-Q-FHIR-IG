@@ -64,49 +64,41 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "experimental" : true,
   "date" : "2025-03-31",
   "publisher" : "UMU",
-  "contact" : [
-    {
-      "name" : "UMU",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://tecnomod-um.org"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "UMU",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://tecnomod-um.org"
+    }]
+  }],
   "description" : "This ValueSet enumerates discharge destination concepts (primarily SNOMED CT procedure-like “discharge to …” concepts).\n\n**Primary use-cases**\n- Bind to discharge disposition elements in encounter/hospitalization modeling.\n  enabling consistent:\n  - care transition analytics,\n  - pathway reporting (home vs ward vs facility vs mortuary),\n  - downstream coordination workflows.",
   "immutable" : false,
   "purpose" : "To support consistent recording of discharge destinations for analytics, reporting, and care coordination.",
   "copyright" : "This value set includes SNOMED CT® content. SNOMED CT® is distributed by SNOMED International.",
   "compose" : {
-    "include" : [
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "306689006",
+        "display" : "Discharge to home (procedure)"
+      },
       {
-        "system" : "http://snomed.info/sct",
-        "concept" : [
-          {
-            "code" : "306689006",
-            "display" : "Discharge to home (procedure)"
-          },
-          {
-            "code" : "306706006",
-            "display" : "Discharge to ward (procedure)"
-          },
-          {
-            "code" : "19712007",
-            "display" : "Patient transfer, to another health care facility (procedure)"
-          },
-          {
-            "code" : "306691003",
-            "display" : "Discharge to residential home (procedure)"
-          },
-          {
-            "code" : "305398007",
-            "display" : "Admission to the mortuary (procedure)"
-          }
-        ]
-      }
-    ]
+        "code" : "306706006",
+        "display" : "Discharge to ward (procedure)"
+      },
+      {
+        "code" : "19712007",
+        "display" : "Patient transfer, to another health care facility (procedure)"
+      },
+      {
+        "code" : "306691003",
+        "display" : "Discharge to residential home (procedure)"
+      },
+      {
+        "code" : "305398007",
+        "display" : "Admission to the mortuary (procedure)"
+      }]
+    }]
   }
 }
 

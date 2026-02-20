@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/CodeSystem/mtici-code-cs | *Version*:0.1.0 |
-| Active as of 2026-02-19 | *Computable Name*:MTICICodeCS |
+| Active as of 2026-02-20 | *Computable Name*:MTICICodeCS |
 
  
 This CodeSystem defines the **assessment concept code** used to indicate that an Observation is reporting an mTICI reperfusion grade. 
@@ -36,30 +36,24 @@ This CodeSystem defines the **assessment concept code** used to indicate that an
   "title" : "Modified Thrombolysis in Cerebral Infarction Assessment CodeSystem",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-19T14:52:32+00:00",
+  "date" : "2026-02-20T08:36:31+00:00",
   "publisher" : "UMU",
-  "contact" : [
-    {
-      "name" : "UMU",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://tecnomod-um.org"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "UMU",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://tecnomod-um.org"
+    }]
+  }],
   "description" : "This CodeSystem defines the *assessment concept code* used to indicate that an Observation is reporting an mTICI reperfusion grade.\n\n**Design pattern**\n- `Observation.code` identifies the kind of assessment (“mTICI reperfusion grade”).\n- `Observation.valueCodeableConcept` carries the result (one of the grades in MticiScoreVS).",
   "caseSensitive" : false,
   "content" : "complete",
   "count" : 1,
-  "concept" : [
-    {
-      "code" : "mTICI",
-      "display" : "mTICI",
-      "definition" : "Assessment concept representing the modified Thrombolysis in Cerebral Infarction reperfusion grade to be reported as an Observation value."
-    }
-  ]
+  "concept" : [{
+    "code" : "mTICI",
+    "display" : "mTICI",
+    "definition" : "Assessment concept representing the modified Thrombolysis in Cerebral Infarction reperfusion grade to be reported as an Observation value."
+  }]
 }
 
 ```

@@ -57,12 +57,10 @@ Other representations of profile: [CSV](StructureDefinition-hemorrhagic-stroke-b
 {
   "resourceType" : "StructureDefinition",
   "id" : "hemorrhagic-stroke-bleeding-reason-ext",
-  "extension" : [
-    {
-      "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics",
-      "valueCode" : "can-bind"
-    }
-  ],
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics",
+    "valueCode" : "can-bind"
+  }],
   "url" : "http://tecnomod-um.org/StructureDefinition/hemorrhagic-stroke-bleeding-reason-ext",
   "version" : "0.1.0",
   "name" : "HemorrhagicStrokeBleedingReasonExt",
@@ -71,70 +69,58 @@ Other representations of profile: [CSV](StructureDefinition-hemorrhagic-stroke-b
   "experimental" : false,
   "date" : "2025-10-07",
   "publisher" : "UMU",
-  "contact" : [
-    {
-      "name" : "UMU",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://tecnomod-um.org"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "UMU",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://tecnomod-um.org"
+    }]
+  }],
   "description" : "Extension capturing the **identified cause of intracranial bleeding** in a hemorrhagic stroke.\n\n**Primary use-case**\n- Attach to a definitive hemorrhagic stroke Condition (`StrokeDiagnosisConditionProfile`) to support:\n  - etiologic stratification (aneurysm vs vascular malformation vs other),\n  - analytics and registry reporting,\n  - targeted clinical decision support pathways.\n\n**FHIR placement**\n- `Condition.extension[bleedingReason].valueCodeableConcept` (required binding to HemorrhagicStrokeBleedingReasonVS).",
   "purpose" : "To standardize capture of the bleeding cause in hemorrhagic stroke conditions for decision support and analytics.",
   "fhirVersion" : "5.0.0",
-  "mapping" : [
-    {
-      "identity" : "rim",
-      "uri" : "http://hl7.org/v3",
-      "name" : "RIM Mapping"
-    }
-  ],
+  "mapping" : [{
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  }],
   "kind" : "complex-type",
   "abstract" : false,
-  "context" : [
-    {
-      "type" : "element",
-      "expression" : "Condition"
-    }
-  ],
+  "context" : [{
+    "type" : "element",
+    "expression" : "Condition"
+  }],
   "type" : "Extension",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Extension",
   "derivation" : "constraint",
   "differential" : {
-    "element" : [
-      {
-        "id" : "Extension",
-        "path" : "Extension",
-        "short" : "Hemorrhagic Stroke – Bleeding Reason",
-        "definition" : "Extension capturing the **identified cause of intracranial bleeding** in a hemorrhagic stroke.\n\n**Primary use-case**\n- Attach to a definitive hemorrhagic stroke Condition (`StrokeDiagnosisConditionProfile`) to support:\n  - etiologic stratification (aneurysm vs vascular malformation vs other),\n  - analytics and registry reporting,\n  - targeted clinical decision support pathways.\n\n**FHIR placement**\n- `Condition.extension[bleedingReason].valueCodeableConcept` (required binding to HemorrhagicStrokeBleedingReasonVS)."
-      },
-      {
-        "id" : "Extension.extension",
-        "path" : "Extension.extension",
-        "max" : "0"
-      },
-      {
-        "id" : "Extension.url",
-        "path" : "Extension.url",
-        "fixedUri" : "http://tecnomod-um.org/StructureDefinition/hemorrhagic-stroke-bleeding-reason-ext"
-      },
-      {
-        "id" : "Extension.value[x]",
-        "path" : "Extension.value[x]",
-        "type" : [
-          {
-            "code" : "CodeableConcept"
-          }
-        ],
-        "binding" : {
-          "strength" : "required",
-          "valueSet" : "http://tecnomod-um.org/ValueSet/hemorrhagic-stroke-bleeding-reason-vs"
-        }
+    "element" : [{
+      "id" : "Extension",
+      "path" : "Extension",
+      "short" : "Hemorrhagic Stroke – Bleeding Reason",
+      "definition" : "Extension capturing the **identified cause of intracranial bleeding** in a hemorrhagic stroke.\n\n**Primary use-case**\n- Attach to a definitive hemorrhagic stroke Condition (`StrokeDiagnosisConditionProfile`) to support:\n  - etiologic stratification (aneurysm vs vascular malformation vs other),\n  - analytics and registry reporting,\n  - targeted clinical decision support pathways.\n\n**FHIR placement**\n- `Condition.extension[bleedingReason].valueCodeableConcept` (required binding to HemorrhagicStrokeBleedingReasonVS)."
+    },
+    {
+      "id" : "Extension.extension",
+      "path" : "Extension.extension",
+      "max" : "0"
+    },
+    {
+      "id" : "Extension.url",
+      "path" : "Extension.url",
+      "fixedUri" : "http://tecnomod-um.org/StructureDefinition/hemorrhagic-stroke-bleeding-reason-ext"
+    },
+    {
+      "id" : "Extension.value[x]",
+      "path" : "Extension.value[x]",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "http://tecnomod-um.org/ValueSet/hemorrhagic-stroke-bleeding-reason-vs"
       }
-    ]
+    }]
   }
 }
 

@@ -1,816 +1,806 @@
 {
-  "codeSystems" : [
-    {
-      "url" : "http://hl7.org/fhir/CodeSystem/medication-dose-aid",
-      "version" : "5.0.0",
-      "status" : "active",
-      "name" : "MedicationDoseAid",
-      "title" : "Medication dose aid",
-      "description" : "Medication dose aid",
-      "oids" : ["2.16.840.1.113883.4.642.4.2075"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-medication-dose-aid.html" : "Medication Dose Aids"
-    },
-    {
-      "url" : "http://hl7.org/fhir/CodeSystem/medication-intended-performer-role",
-      "version" : "5.0.0",
-      "status" : "active",
-      "name" : "MedicationIntendedPerformerRole",
-      "title" : "Medication Intended Performer Role",
-      "description" : "Medication Intended Performer Role",
-      "oids" : ["2.16.840.1.113883.4.642.4.2074"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-medication-intended-performer-role.html" : "Medication Intended Performer Role"
-    },
-    {
-      "url" : "http://hl7.org/fhir/CodeSystem/medication-statement-adherence",
-      "version" : "5.0.0",
-      "status" : "active",
-      "name" : "MedicationStatementAdherenceCodes",
-      "title" : "MedicationStatement Adherence Codes",
-      "description" : "MedicationStatement Adherence Codes",
-      "oids" : ["2.16.840.1.113883.4.642.4.1981"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-medication-statement-adherence.html" : "MedicationStatement Adherence Codes"
-    },
-    {
-      "url" : "http://hl7.org/fhir/CodeSystem/medication-statement-status",
-      "version" : "5.0.0",
-      "status" : "active",
-      "name" : "MedicationStatementStatusCodes",
-      "title" : "MedicationStatement Status Codes",
-      "description" : "MedicationStatement Status Codes",
-      "oids" : ["2.16.840.1.113883.4.642.4.1980"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-medication-statement-status.html" : "MedicationStatement Status Codes"
-    },
-    {
-      "url" : "http://hl7.org/fhir/CodeSystem/medicationrequest-intent",
-      "version" : "5.0.0",
-      "status" : "active",
-      "name" : "MedicationRequestIntentCodes",
-      "title" : "MedicationRequest Intent Codes",
-      "description" : "MedicationRequest Intent Codes",
-      "oids" : ["2.16.840.1.113883.4.642.4.1378"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-medicationrequest-intent.html" : "medicationRequest Intent"
-    },
-    {
-      "url" : "http://hl7.org/fhir/CodeSystem/medicationrequest-status",
-      "version" : "5.0.0",
-      "status" : "active",
-      "name" : "MedicationRequestStatusCodes",
-      "title" : "MedicationRequest Status Codes",
-      "description" : "MedicationRequest Status Codes",
-      "oids" : ["2.16.840.1.113883.4.642.4.1377"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-medicationrequest-status.html" : "medicationrequest Status"
-    },
-    {
-      "url" : "http://hl7.org/fhir/administrative-gender",
-      "version" : "5.0.0",
-      "status" : "active",
-      "name" : "AdministrativeGender",
-      "title" : "AdministrativeGender",
-      "description" : "The gender of a person used for administrative purposes.",
-      "oids" : ["2.16.840.1.113883.4.642.4.2"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-administrative-gender.html" : "AdministrativeGender"
-    },
-    {
-      "url" : "http://hl7.org/fhir/encounter-diagnosis-use",
-      "version" : "5.0.0",
-      "status" : "active",
-      "name" : "EncounterDiagnosisUse",
-      "title" : "Encounter Diagnosis Use",
-      "description" : "Encounter Condition Use",
-      "oids" : ["2.16.840.1.113883.4.642.4.2115"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-encounter-diagnosis-use.html" : "Encounter Diagnosis Use"
-    },
-    {
-      "url" : "http://hl7.org/fhir/encounter-location-status",
-      "version" : "5.0.0",
-      "status" : "active",
-      "name" : "EncounterLocationStatus",
-      "title" : "Encounter Location Status",
-      "description" : "The status of the location.",
-      "oids" : [
-        "2.16.840.1.113883.4.642.1.258",
-        "2.16.840.1.113883.4.642.2.147",
-        "2.16.840.1.113883.4.642.4.263"
-      ],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-encounter-location-status.html" : "Encounter Location Status"
-    },
-    {
-      "url" : "http://hl7.org/fhir/encounter-reason-use",
-      "version" : "5.0.0",
-      "status" : "active",
-      "name" : "EncounterReasonUse",
-      "title" : "Encounter Reason Use",
-      "description" : "Encounter Reason Use",
-      "oids" : ["2.16.840.1.113883.4.642.4.2114"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-encounter-reason-use.html" : "Encounter Reason Use"
-    },
-    {
-      "url" : "http://hl7.org/fhir/encounter-status",
-      "version" : "5.0.0",
-      "status" : "active",
-      "name" : "EncounterStatus",
-      "title" : "Encounter Status",
-      "description" : "Current state of the encounter.",
-      "oids" : [
-        "2.16.840.1.113883.4.642.4.247",
-        "2.16.840.1.113883.4.642.1.242"
-      ],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-encounter-status.html" : "Encounter Status"
-    },
-    {
-      "url" : "http://hl7.org/fhir/event-status",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "EventStatus",
-      "title" : "EventStatus",
-      "description" : "Codes identifying the lifecycle stage of an event.",
-      "oids" : ["2.16.840.1.113883.4.642.4.110"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-event-status.html" : "EventStatus"
-    },
-    {
-      "url" : "http://hl7.org/fhir/identifier-use",
-      "version" : "5.0.0",
-      "status" : "active",
-      "name" : "IdentifierUse",
-      "title" : "IdentifierUse",
-      "description" : "Identifies the purpose for this identifier, if known .",
-      "oids" : ["2.16.840.1.113883.4.642.1.58"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-identifier-use.html" : "IdentifierUse"
-    },
-    {
-      "url" : "http://hl7.org/fhir/link-type",
-      "version" : "5.0.0",
-      "status" : "active",
-      "name" : "LinkType",
-      "title" : "Link Type",
-      "description" : "The type of link between this Patient resource and other Patient/RelatedPerson resource(s).",
-      "oids" : [
-        "2.16.840.1.113883.4.642.1.413",
-        "2.16.840.1.113883.4.642.2.234",
-        "2.16.840.1.113883.4.642.4.424"
-      ],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-link-type.html" : "Link Type"
-    },
-    {
-      "url" : "http://hl7.org/fhir/observation-referencerange-normalvalue",
-      "version" : "5.0.0",
-      "status" : "active",
-      "name" : "ObservationReferenceRangeNormalValue",
-      "title" : "ObservationreferenceRangeNormalValue",
-      "description" : "Codes that describe the normal value in the reference range.",
-      "oids" : ["2.16.840.1.113883.4.642.4.2099"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-observation-referencerange-normalvalue.html" : "Observation Reference Range Normal Value Codes"
-    },
-    {
-      "url" : "http://hl7.org/fhir/observation-status",
-      "version" : "5.0.0",
-      "status" : "active",
-      "name" : "ObservationStatus",
-      "title" : "Observation Status",
-      "description" : "Codes providing the status of an observation.",
-      "oids" : [
-        "2.16.840.1.113883.4.642.4.401",
-        "2.16.840.1.113883.4.642.1.388",
-        "2.16.840.1.113883.4.642.2.219"
-      ],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-observation-status.html" : "Observation Status"
-    },
-    {
-      "url" : "http://hl7.org/fhir/observation-triggeredbytype",
-      "version" : "5.0.0",
-      "status" : "active",
-      "name" : "TriggeredBytype",
-      "title" : "triggered Bytype",
-      "description" : "Codes providing the triggeredBy type of observation.",
-      "oids" : ["2.16.840.1.113883.4.642.4.2098"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-observation-triggeredbytype.html" : "triggered Bytype"
-    },
-    {
-      "url" : "http://hl7.org/fhir/quantity-comparator",
-      "version" : "5.0.0",
-      "status" : "active",
-      "name" : "QuantityComparator",
-      "title" : "QuantityComparator",
-      "description" : "How the Quantity should be understood and represented.",
-      "oids" : ["2.16.840.1.113883.4.642.4.60"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-quantity-comparator.html" : "QuantityComparator"
-    },
-    {
-      "url" : "http://hl7.org/fhir/request-priority",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "RequestPriority",
-      "title" : "RequestPriority",
-      "description" : "Identifies the level of importance to be assigned to actioning the request.",
-      "oids" : ["2.16.840.1.113883.4.642.4.116"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-request-priority.html" : "RequestPriority"
-    },
-    {
-      "url" : "http://tecnomod-um.org/CodeSystem/assessment-context-cs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "AssessmentContextCS",
-      "title" : "Assessment Context Code System",
-      "description" : "This CodeSystem defines normalized codes for the **clinical context / relative timepoint** at which a stroke-related assessment is performed.\nIt is primarily used to contextualize instruments whose interpretation depends on phase (e.g., mRS/NIHSS at baseline vs discharge vs follow-up).\n\n**Primary use-case**\n- Use as the value in `ObservationTimingContextExtension.valueCodeableConcept` to label the phase of an assessment.\n\n**How it complements effective[x]**\n- `Observation.effective[x]` records the actual date/time (when known).\n- This CodeSystem records the standardized phase label used for reporting and comparability.\n\n**Why this is needed**\n- Many workflows report outcomes by phase even when the exact timestamp is unknown or operationally variable (“mRS at 90 days”).",
-      "uses" : {
-      },
-      "ValueSet-assessment-context-vs.html" : "Assessment Context ValueSet"
-    },
-    {
-      "url" : "http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "BrainImagingTypeCS",
-      "title" : "Brain Imaging Type Code System",
-      "description" : "Codes specifying the type of brain imaging performed (e.g., CT, MRI).",
-      "uses" : {
-      },
-      "ValueSet-brain-imaging-modality-vs.html" : "Brain Imaging Modality ValueSet"
-    },
-    {
-      "url" : "http://tecnomod-um.org/CodeSystem/discharge-dept-cs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "DischargeDeptCS",
-      "title" : "Discharge Department/Service CodeSystem",
-      "description" : "Local CodeSystem representing the **clinical service/department** responsible for the patient at discharge/transfer\n(or the service the patient is transferred to).\n\n**Primary use-case**\n- Populate `DischargeDepartmentServiceExtension` on Encounter to support:\n  - bed management and service-level reporting,\n  - pathway characterization (e.g., discharge under neurology vs rehab),\n  - operational analytics and capacity planning.\n\n**Modeling notes**\n- This captures *service classification*, not the physical ward/room. Physical location should be modeled using `Encounter.location`\n  (and references to Location resources) if needed.",
-      "uses" : {
-      },
-      "ValueSet-discharge-dept-vs.html" : "Discharge Department/Service ValueSet"
-    },
-    {
-      "url" : "http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "HemorrhagicStrokeBleedingReasonCS",
-      "title" : "Hemorrhagic Stroke Bleeding Reason CodeSystem",
-      "description" : "Local CodeSystem representing **locally governed reasons/causes** for intracranial bleeding in hemorrhagic stroke.\n\n**Primary use-case**\n- Used via `HemorrhagicStrokeBleedingReasonVS` as the allowed vocabulary for `HemorrhagicStrokeBleedingReasonExt.valueCodeableConcept`\n  on a definitive hemorrhagic stroke Condition.",
-      "uses" : {
-      },
-      "ValueSet-hemorrhagic-stroke-bleeding-reason-vs.html" : "Hemorrhagic Stroke Bleeding Reason ValueSet"
-    },
-    {
-      "url" : "http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "InitialCareIntensityCS",
-      "title" : "Initial Care Intensity CodeSystem",
-      "description" : "Local CodeSystem representing the **initial intensity of care** during the first day(s) of the stroke encounter.\n\n**Primary use-case**\n- Populate `InitialCareIntensityExtension` on Encounter to support:\n  - case-mix characterization (ICU/stroke unit vs monitored vs standard bed),\n  - operational benchmarking and staffing analysis,\n  - research stratification where initial level-of-care is a confounder.\n\n**Interpretation guidance**\n- `standard`: no continuous monitoring beyond standard nursing observation.\n- `monitored`: telemetry or continuous monitoring outside ICU.\n- `icu-stroke`: ICU or dedicated stroke unit level care (per local definitions).",
-      "uses" : {
-      },
-      "ValueSet-initial-care-intensity-vs.html" : "Initial Care Intensity ValueSet"
-    },
-    {
-      "url" : "http://tecnomod-um.org/CodeSystem/medication-cs",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "MedicationCS",
-      "title" : "Medications CodeSystem",
-      "description" : "Codes for drug products or substances representing the Medications on the patient discharge.",
-      "uses" : {
-      },
-      "ValueSet-medication-vs.html" : "Medications ValueSet"
-    },
-    {
-      "url" : "http://tecnomod-um.org/CodeSystem/mrs-score-cs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "MRsScoreCS",
-      "title" : "Modified Rankin Scale Score Code System",
-      "description" : "This CodeSystem defines codes for the **modified Rankin Scale (mRS)**, an ordinal measure of global disability and functional outcome.\nScores range from 0 (no symptoms) to 5 (severe disability), with 6 indicating death.\n\n**Primary use-case**\n- Use as the coded result in `Observation.valueCodeableConcept` (bound via MRsScoreVS) when recording an mRS outcome.\n\n**Modeling notes**\n- mRS is a global disability scale and does not capture domain-specific limitations (mobility, ADLs, cognition).\n  Capture those via additional instruments/Observations when needed.\n- Method of ascertainment and assessor details should be recorded separately (e.g., Observation.method, performer, Provenance).",
-      "uses" : {
-      },
-      "ValueSet-mrs-score-vs.html" : "Modified Rankin Scale (mRS) Score ValueSet"
-    },
-    {
-      "url" : "http://tecnomod-um.org/CodeSystem/mtici-code-cs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "MTICICodeCS",
-      "title" : "Modified Thrombolysis in Cerebral Infarction Assessment CodeSystem",
-      "description" : "This CodeSystem defines the *assessment concept code* used to indicate that an Observation is reporting an mTICI reperfusion grade.\n\n**Design pattern**\n- `Observation.code` identifies the kind of assessment (“mTICI reperfusion grade”).\n- `Observation.valueCodeableConcept` carries the result (one of the grades in MticiScoreVS).",
-      "uses" : {
-      },
-      "ValueSet-mtici-code-vs.html" : "Modified Thrombolysis in Cerebral Infarction Assessment ValueSet"
-    },
-    {
-      "url" : "http://tecnomod-um.org/CodeSystem/mtici-score-cs",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "MticiScoreCS",
-      "title" : "Modified Treatment in Cerebral Infarction Grade Score CodeSystem",
-      "description" : "This CodeSystem defines the **modified Thrombolysis in Cerebral Infarction (mTICI)** reperfusion grade values.\nmTICI is an ordinal angiographic scale used to quantify the extent of reperfusion after endovascular therapy for acute ischemic stroke.\n\n**Primary use-case**\n- Use as the coded result in `Observation.valueCodeableConcept` (bound via MticiScoreVS) when recording the *final angiographic reperfusion grade*.\n\n**Modeling notes**\n- Represents the *final* reperfusion grade for the downstream ischemic territory (typically adjudicated from the final angiographic run).\n- Does not encode target vessel, device/technique, number of passes, timestamps, or adjudication workflow; capture those via Procedure, ImagingStudy, Observation.method, or additional Observations/Provenance.",
-      "uses" : {
-      },
-      "ValueSet-mtici-score-vs.html" : "Modified Treatment in Cerebral Infarction Grade Score ValueSet"
-    },
-    {
-      "url" : "http://tecnomod-um.org/CodeSystem/procedure-timing-context-cs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "ProcedureTimingContextCS",
-      "title" : "Procedure Timing Context CodeSystem",
-      "description" : "Local CodeSystem for classifying a procedure into a **timing context** relative to encounter start.\n\n**Primary use-case**\n- Normalize reporting into acute (<24h) vs post-acute (>=24h) phases for stroke process measures.\n\n\n**FHIR placement**\n- Used in `ProcedureTimingContextExtension` attached to Procedure.",
-      "uses" : {
-      },
-      "ValueSet-procedure-timing-context-vs.html" : "Procedure Timing Context ValueSet"
-    },
-    {
-      "url" : "http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "StrokeArrivalModeCS",
-      "title" : "Stroke Arrival Mode CodeSystem",
-      "description" : "Local CodeSystem describing **how and from where** the patient arrived to the treating hospital for the index stroke encounter.\n\n**Primary use-case**\n- Populate `Encounter.admission.admitSource` (via StrokeArrivalModeVS) to support:\n  - workflow analysis (EMS vs private transport),\n  - pathway compliance reporting (direct-to-stroke-center vs inter-facility transfer),\n  - operational dashboards and registries.\n\n**Modeling notes**\n- These codes describe *arrival origin and transport pathway*, not clinical triage severity.\n- If you need transport timestamps, EMS unit identifiers, or handover details, model them separately",
-      "uses" : {
-      },
-      "ValueSet-stroke-arrival-mode-vs.html" : "Stroke Arrival Mode ValueSet"
-    },
-    {
-      "url" : "http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "StrokeCircumstanceCodesCS",
-      "title" : "Stroke Circumstance Codes CodeSystem",
-      "description" : "This CodeSystem defines coded circumstances related to stroke symptom onset that are clinically relevant when onset time is unknown or atypical.\n\n**Primary use-case**\n- Use as `Observation.code` in `StrokeCircumstanceObservationProfile`.\n- Presence of the Observation asserts that the circumstance applies to the index stroke event.",
-      "uses" : {
-      },
-      "ValueSet-stroke-circumstance-codes-vs.html" : "Stroke Circumstance Codes ValueSet"
-    },
-    {
-      "url" : "http://tecnomod-um.org/CodeSystem/stroke-discharge-destination-cs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "StrokeDischargeDestinationCS",
-      "title" : "Stroke Discharge Destination CodeSystem",
-      "description" : "Local CodeSystem for discharge disposition values that are not sufficiently covered (or not consistently available)\nin the chosen standard terminology set.",
-      "uses" : {
-      },
-      "ValueSet-stroke-discharge-destination-vs.html" : "Stroke Discharge Destination ValueSet"
-    },
-    {
-      "url" : "http://tecnomod-um.org/CodeSystem/stroke-etiology-cs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "StrokeEtiologyCS",
-      "title" : "Stroke Etiology CodeSystem",
-      "description" : "Local CodeSystem defining categories for **ischemic stroke etiology** classification.\n\n**Primary use-case**\n- Used via `StrokeEtiologyVS` as the required vocabulary for `StrokeStrokeEtiologyExt.valueCodeableConcept`\n  on a definitive ischemic stroke Condition.\n\n**Why it exists**\n- Stroke etiology classification often mixes internationally standard categories (cardioembolic, lacunar, cryptogenic) with local operational buckets.\n\n**Modeling notes**\n- This CodeSystem is intended for “final etiology classification” after diagnostic workup, not for provisional hypotheses.",
-      "uses" : {
-      },
-      "ValueSet-stroke-etiology-vs.html" : "Stroke Etiology ValueSet"
-    },
-    {
-      "url" : "http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "StrokeProcNotDoneReasonCS",
-      "title" : "Stroke Procedure Not Done Reasons CodeSystem",
-      "description" : " Local CodeSystem enumerating standardized reasons why a key stroke procedure (e.g., IV thrombolysis or mechanical thrombectomy) was **not performed**.\n\n**Primary use-case**\n- Populate `Procedure.statusReason` when `Procedure.status = not-done`.\n\n**Why it matters**\n- Captures the difference between:\n  - clinical ineligibility (contraindication),\n  - time-based ineligibility (outside window),\n  - operational constraints (unavailable),\n  - patient choice (refusal),\n  - care pathway differences (performed elsewhere / transfer).",
-      "uses" : {
-      },
-      "ValueSet-stroke-proc-not-done-reason-vs.html" : "Stroke Procedure Not Done Reason ValueSet"
-    },
-    {
-      "url" : "http://tecnomod-um.org/CodeSystem/swallow-procedures-cs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "SwallowProceduresCS",
-      "title" : "Swallow Procedures CodeSystem",
-      "description" : "Local CodeSystem representing swallowing screening/assessment tools often documented by acronym or local naming.\n\n**FHIR placement**\n- Included in `SwallowProceduresVS` to be used in `Procedure.code`",
-      "uses" : {
-      },
-      "ValueSet-swallow-procedures-vs.html" : "Swallow Procedures ValueSet"
-    },
-    {
-      "url" : "http://tecnomod-um.org/CodeSystem/swallow-screen-time-cs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "SwallowScreenTimeCS",
-      "title" : "Swallowing Screening Timing Category Code System",
-      "description" : "Temporal categories relative to stroke onset for swallowing screening.",
-      "uses" : {
-      },
-      "ValueSet-swallowing-screening-timing-category-vs.html" : "Swallowing Screening Timing Category ValueSet"
-    },
-    {
-      "url" : "http://tecnomod-um.org/CodeSystem/thrombectomy-complication-cs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "ThrombectomyComplicationCS",
-      "title" : "Thrombectomy Complication CodeSystem",
-      "description" : "Local CodeSystem for complications occurring during mechanical thrombectomy.\n\n**When to use**\n- If you need a controlled internal vocabulary for adverse events/complications, especially when upstream systems do not provide SNOMED-coded diagnoses.\n\n**How it is used in FHIR R5**\n- Usually referenced from `Procedure.complication` which is a `CodeableReference(Condition)` in R5.\n- You may represent the complication as a `Condition` (preferred), and/or record a code directly depending on your implementation pattern.\n\n**Why it exists**\n- Supports minimum-set reporting across sites and enables consistent quality/safety analytics.",
-      "uses" : {
-      },
-      "ValueSet-thrombectomy-complication-vs.html" : "Thrombectomy Complications ValueSet"
-    },
-    {
-      "url" : "http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "TimingMetricCodesCS",
-      "title" : "Stroke Timing Metric Codes CodeSystem",
-      "description" : "This CodeSystem defines codes for key **time-interval process metrics** in acute stroke care.\nEach code represents a duration measured between two clinically meaningful events (e.g., arrival to thrombolysis start).\n\n**Primary use-case**\n- Use as `Observation.code` in `TimingMetricObservationProfile`.\n- Store the measured interval in `Observation.valueQuantity` with UCUM minutes (`min`).",
-      "uses" : {
-      },
-      "ValueSet-timing-metric-codes-vs.html" : "Stroke Timing Metric Codes ValueSet"
-    },
-    {
-      "url" : "http://terminology.hl7.org/CodeSystem/condition-category",
-      "version" : "2.0.0",
-      "status" : "active",
-      "name" : "ConditionCategoryCodes",
-      "title" : "Condition Category Codes",
-      "description" : "Preferred value set for Condition Categories.",
-      "oids" : ["2.16.840.1.113883.4.642.1.1073"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-condition-category.html" : "Condition Category Codes"
-    },
-    {
-      "url" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
-      "version" : "3.0.0",
-      "status" : "active",
-      "name" : "ConditionClinicalStatusCodes",
-      "title" : "Condition Clinical Status Codes",
-      "description" : "Preferred value set for Condition Clinical Status.",
-      "oids" : ["2.16.840.1.113883.4.642.1.1074"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-condition-clinical.html" : "Condition Clinical Status Codes"
-    },
-    {
-      "url" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
-      "version" : "2.0.1",
-      "status" : "active",
-      "name" : "ConditionVerificationStatus",
-      "title" : "ConditionVerificationStatus",
-      "description" : "The verification status to support or decline the clinical status of the condition or diagnosis.",
-      "oids" : ["2.16.840.1.113883.4.642.1.1075"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-condition-ver-status.html" : "Condition Verification Status"
-    },
-    {
-      "url" : "http://terminology.hl7.org/CodeSystem/data-absent-reason",
-      "version" : "1.0.0",
-      "status" : "active",
-      "name" : "DataAbsentReason",
-      "title" : "DataAbsentReason",
-      "description" : "Used to specify why the normally expected content of the data element is missing.",
-      "oids" : ["2.16.840.1.113883.4.642.4.1048"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-data-absent-reason.html" : "Data Absent Reason"
-    },
-    {
-      "url" : "http://terminology.hl7.org/CodeSystem/diet",
-      "version" : "1.0.1",
-      "status" : "active",
-      "name" : "Diet",
-      "title" : "Diet",
-      "description" : "This value set defines a set of codes that can be used to indicate dietary preferences or restrictions a patient may have.",
-      "oids" : ["2.16.840.1.113883.4.642.1.1091"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-encounter-diet.html" : "Diet"
-    },
-    {
-      "url" : "http://terminology.hl7.org/CodeSystem/encounter-special-arrangements",
-      "version" : "1.0.1",
-      "status" : "active",
-      "name" : "SpecialArrangements",
-      "title" : "Special arrangements",
-      "description" : "This value set defines a set of codes that can be used to indicate the kinds of special arrangements in place for a patients visit.",
-      "oids" : ["2.16.840.1.113883.4.642.1.1090"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-encounter-special-arrangements.html" : "Special Arrangements"
-    },
-    {
-      "url" : "http://terminology.hl7.org/CodeSystem/encounter-subject-status",
-      "version" : "2.0.1",
-      "status" : "active",
-      "name" : "EncounterSubjectStatus",
-      "title" : "Encounter subject status",
-      "description" : "This example value set defines a set of codes that can be used to indicate the status of the subject within the encounter",
-      "oids" : ["2.16.840.1.113883.4.642.1.1420"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-encounter-subject-status.html" : "Encounter Subject Status"
-    },
-    {
-      "url" : "http://terminology.hl7.org/CodeSystem/encounter-type",
-      "version" : "1.0.1",
-      "status" : "active",
-      "name" : "EncounterType",
-      "title" : "Encounter type",
-      "description" : "This example value set defines a set of codes that can be used to indicate the type of encounter: a specific code indicating type of service provided.",
-      "oids" : ["2.16.840.1.113883.4.642.1.1088"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-encounter-type.html" : "Encounter Type"
-    },
-    {
-      "url" : "http://terminology.hl7.org/CodeSystem/extra-security-role-type",
-      "version" : "1.0.1",
-      "status" : "active",
-      "name" : "SecurityRoleType",
-      "title" : "Security Role Type",
-      "description" : "This CodeSystem contains Additional FHIR-defined Security Role types not defined elsewhere",
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-participation-role-type.html" : "Participation Role Type"
-    },
-    {
-      "url" : "http://terminology.hl7.org/CodeSystem/location-physical-type",
-      "version" : "2.0.1",
-      "status" : "active",
-      "name" : "LocationType",
-      "title" : "Location type",
-      "description" : "This example value set defines a set of codes that can be used to indicate the physical form of the Location.\r\rThis includes several 'non physical' codes which are still considered a location.",
-      "oids" : ["2.16.840.1.113883.4.642.1.1108"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-location-form.html" : "Location Form"
-    },
-    {
-      "url" : "http://terminology.hl7.org/CodeSystem/medicationrequest-admin-location",
-      "version" : "1.0.1",
-      "status" : "active",
-      "name" : "MedicationRequest_Administration_Location_Codes",
-      "title" : "Medication request  administration  location  codes",
-      "description" : "MedicationRequest Administration Location Codes",
-      "oids" : ["2.16.840.1.113883.4.642.1.0"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-medicationrequest-admin-location.html" : "medicationRequest Administration Location Codes"
-    },
-    {
-      "url" : "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
-      "version" : "1.0.1",
-      "status" : "active",
-      "name" : "MedicationRequestCourseOfTherapyCodes",
-      "title" : "MedicationRequest Course of Therapy Codes",
-      "description" : "MedicationRequest Course of Therapy Codes",
-      "oids" : ["2.16.840.1.113883.4.642.1.1327"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-medicationrequest-course-of-therapy.html" : "medicationRequest Course of Therapy Codes"
-    },
-    {
-      "url" : "http://terminology.hl7.org/CodeSystem/medicationrequest-status-reason",
-      "version" : "1.0.1",
-      "status" : "active",
-      "name" : "MedicationRequestStatusReasonCodes",
-      "title" : "MedicationRequest Status Reason Codes",
-      "description" : "MedicationRequest Status Reason Codes",
-      "oids" : ["2.16.840.1.113883.4.642.1.1325"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-medicationrequest-status-reason.html" : "medicationRequest Status Reason Codes"
-    },
-    {
-      "url" : "http://terminology.hl7.org/CodeSystem/observation-category",
-      "version" : "2.0.0",
-      "status" : "active",
-      "name" : "ObservationCategoryCodes",
-      "title" : "Observation Category Codes",
-      "description" : "Observation Category codes.",
-      "oids" : ["2.16.840.1.113883.4.642.1.1125"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-observation-category.html" : "Observation Category Codes"
-    },
-    {
-      "url" : "http://terminology.hl7.org/CodeSystem/organization-type",
-      "version" : "2.0.1",
-      "status" : "active",
-      "name" : "OrganizationType",
-      "title" : "Organization type",
-      "description" : "This example value set defines a set of codes that can be used to indicate a type of organization.",
-      "oids" : ["2.16.840.1.113883.4.642.1.1128"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-organization-type.html" : "Organization Type"
-    },
-    {
-      "url" : "http://terminology.hl7.org/CodeSystem/participant-type",
-      "version" : "1.0.1",
-      "status" : "active",
-      "name" : "ParticipantType",
-      "title" : "Participant type",
-      "description" : "This value set defines a set of codes that can be used to indicate how an individual participates in an encounter.",
-      "oids" : ["2.16.840.1.113883.4.642.1.1089"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-encounter-participant-type.html" : "Participant Type"
-    },
-    {
-      "url" : "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
-      "version" : "1.0.1",
-      "status" : "active",
-      "name" : "ObservationReferenceRangeMeaningCodes",
-      "title" : "Observation Reference Range Meaning Codes",
-      "description" : "This value set defines a set of codes that can be used to indicate the meaning/use of a reference range for a particular target population.",
-      "oids" : ["2.16.840.1.113883.4.642.1.1124"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-referencerange-meaning.html" : "Observation Reference Range Meaning Codes"
-    },
-    {
-      "url" : "http://terminology.hl7.org/CodeSystem/service-type",
-      "version" : "1.1.1",
-      "status" : "active",
-      "name" : "ServiceType",
-      "title" : "Service type",
-      "description" : "This value set defines an example set of codes of service-types.",
-      "oids" : ["2.16.840.1.113883.4.642.1.1145"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-service-type.html" : "Service Type"
-    },
-    {
-      "url" : "http://terminology.hl7.org/CodeSystem/v2-0092",
-      "version" : "3.0.0",
-      "status" : "active",
-      "name" : "ReAdmissionIndicator",
-      "title" : "re-admissionIndicator",
-      "description" : "Code system of concepts which are used to specify that a patient is being re admitted to a healthcare facilityin from which they were discharged, and indicates the circumstances around such re-admission.  Used in HL7 Version 2.x messagine in the PV1 segment.",
-      "oids" : ["2.16.840.1.113883.18.36"],
-      "uses" : {
-      },
-      "http://terminology.hl7.org/7.0.1/ValueSet-v2-0092.html" : "hl7VS-re-admissionIndicator"
-    },
-    {
-      "url" : "http://terminology.hl7.org/CodeSystem/v2-0131",
-      "version" : "3.0.0",
-      "status" : "active",
-      "name" : "ContactRole2",
-      "title" : "contactRole2",
-      "description" : "Code system of concepts which specify a relationship role that the next of kin/associated parties plays with regard to the patient. Also used in referrals, for example, it may be necessary to identify the contact representative at the clinic that sent a referral. Used in HL7 Version 2 messaging in the NK1 and CTD segments after 2.5, when it replace 2.16.840.1.113883.18.57.",
-      "oids" : ["2.16.840.1.113883.18.58"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-patient-contactrelationship.html" : "Patient Contact Relationship "
-    },
-    {
-      "url" : "http://terminology.hl7.org/CodeSystem/v2-0203",
-      "version" : "5.0.0",
-      "status" : "active",
-      "name" : "IdentifierType",
-      "title" : "identifierType",
-      "description" : "HL7-defined code system of concepts specifying type of identifier. Used in HL7 Version 2.x messaging data types CX, PLN, PPN, XCN and XON.",
-      "oids" : ["2.16.840.1.113883.18.108"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-identifier-type.html" : "Identifier Type Codes"
-    },
-    {
-      "url" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-      "version" : "9.0.0",
-      "status" : "active",
-      "name" : "ActCode",
-      "title" : "ActCode",
-      "description" : "A code specifying the particular kind of Act that the Act-instance represents within its class.\r\n\r\n*Constraints:* The kind of Act (e.g. physical examination, serum potassium, inpatient encounter, charge financial transaction, etc.) is specified with a code from one of several, typically external, coding systems. The coding system will depend on the class of Act, such as LOINC for observations, etc.\r\n\r\nConceptually, the Act.code must be a specialization of the Act.classCode. This is why the structure of ActClass domain should be reflected in the superstructure of the ActCode domain and then individual codes or externally referenced vocabularies subordinated under these domains that reflect the ActClass structure.\r\n\r\nAct.classCode and Act.code are not modifiers of each other but the Act.code concept should really imply the Act.classCode concept. For a negative example, it is not appropriate to use an Act.code \"potassium\" together with and Act.classCode for \"laboratory observation\" to somehow mean \"potassium laboratory observation\" and then use the same Act.code for \"potassium\" together with Act.classCode for \"medication\" to mean \"substitution of potassium\". This mutually modifying use of Act.code and Act.classCode is not permitted.",
-      "oids" : ["2.16.840.1.113883.5.4"],
-      "uses" : {
-      },
-      "http://terminology.hl7.org/7.0.1/ValueSet-encounter-class.html" : "Encounter class"
-    },
-    {
-      "url" : "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
-      "version" : "3.0.0",
-      "status" : "active",
-      "name" : "ActPriority",
-      "title" : "ActPriority",
-      "description" : "A set of codes (e.g., for routine, emergency), specifying the urgency under which the Act happened, can happen, is happening, is intended to happen, or is requested/demanded to happen.",
-      "oids" : ["2.16.840.1.113883.5.7"],
-      "uses" : {
-      },
-      "http://terminology.hl7.org/7.0.1/ValueSet-v3-ActPriority.html" : "ActPriority"
-    },
-    {
-      "url" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-      "version" : "3.1.0",
-      "status" : "active",
-      "name" : "ActReason",
-      "title" : "ActReason",
-      "description" : "A set of codes specifying the motivation, cause, or rationale of an Act, when such rationale is not reasonably represented as an ActRelationship of type \"has reason\" linking to another Act.\r\n\r\n*Examples:* Example reasons that might qualify for being coded in this field might be: \"routine requirement\", \"infectious disease reporting requirement\", \"on patient request\", \"required by law\".",
-      "oids" : ["2.16.840.1.113883.5.8"],
-      "uses" : {
-      },
-      "http://terminology.hl7.org/7.0.1/ValueSet-v3-SubstanceAdminSubstitutionReason.html" : "SubstanceAdminSubstitutionReason"
-    },
-    {
-      "url" : "http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy",
-      "version" : "3.0.0",
-      "status" : "active",
-      "name" : "EncounterSpecialCourtesy",
-      "title" : "EncounterSpecialCourtesy",
-      "description" : "**** MISSING DESCRIPTION ****",
-      "oids" : ["2.16.840.1.113883.5.40"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-encounter-special-courtesy.html" : "Special Courtesy"
-    },
-    {
-      "url" : "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
-      "version" : "3.0.0",
-      "status" : "active",
-      "name" : "MaritalStatus",
-      "title" : "MaritalStatus",
-      "description" : "\\* \\* \\* No description supplied \\* \\* \\*\r\n\r\n*Open Issue:* The specific meanings of these codes can vary somewhat by jurisdiction and implementation so caution should be used when determining equivalency.\r\n\r\n*Open Issue:* fixing and completion of the hierarchy and proper good definitions of all the concepts is badly needed.",
-      "oids" : ["2.16.840.1.113883.5.2"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-marital-status.html" : "Marital Status Codes"
-    },
-    {
-      "url" : "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
-      "version" : "3.0.0",
-      "status" : "active",
-      "name" : "NullFlavor",
-      "title" : "NullFlavor",
-      "description" : "A collection of codes specifying why a valid value is not present.",
-      "oids" : ["2.16.840.1.113883.5.1008"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-marital-status.html" : "Marital Status Codes",
-      "http://hl7.org/fhir/R5/valueset-encounter-special-courtesy.html" : "Special Courtesy"
-    },
-    {
-      "url" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
-      "version" : "3.0.0",
-      "status" : "active",
-      "name" : "ObservationInterpretation",
-      "title" : "ObservationInterpretation",
-      "description" : "One or more codes providing a rough qualitative interpretation of the observation, such as \"normal\" / \"abnormal\", \"low\" / \"high\", \"better\" / \"worse\", \"resistant\" / \"susceptible\", \"expected\" / \"not expected\". The value set is intended to be for ANY use where coded representation of an interpretation is needed.",
-      "oids" : ["2.16.840.1.113883.5.83"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-observation-interpretation.html" : "Observation Interpretation Codes"
-    },
-    {
-      "url" : "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
-      "version" : "5.0.0",
-      "status" : "active",
-      "name" : "ParticipationType",
-      "title" : "ParticipationType",
-      "description" : "A code specifying the meaning and purpose of every Participation instance. Each of its values implies specific constraints on the Roles undertaking the participation.",
-      "oids" : ["2.16.840.1.113883.5.90"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R5/valueset-encounter-participant-type.html" : "Participant Type"
-    },
-    {
-      "url" : "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution",
-      "version" : "3.0.0",
-      "status" : "active",
-      "name" : "SubstanceAdminSubstitution",
-      "title" : "Substance Admin Substitution",
-      "description" : "Identifies what sort of change is permitted or has occurred between the therapy that was ordered and the therapy that was/will be provided.",
-      "oids" : ["2.16.840.1.113883.5.1070"],
-      "uses" : {
-      },
-      "http://terminology.hl7.org/7.0.1/ValueSet-v3-ActSubstanceAdminSubstitutionCode.html" : "ActSubstanceAdminSubstitutionCode"
-    }
-  ]
+  "codeSystems" : [{
+    "url" : "http://hl7.org/fhir/CodeSystem/medication-dose-aid",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "MedicationDoseAid",
+    "title" : "Medication dose aid",
+    "description" : "Medication dose aid",
+    "oids" : ["2.16.840.1.113883.4.642.4.2075"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-medication-dose-aid.html" : "Medication Dose Aids"
+  },
+  {
+    "url" : "http://hl7.org/fhir/CodeSystem/medication-intended-performer-role",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "MedicationIntendedPerformerRole",
+    "title" : "Medication Intended Performer Role",
+    "description" : "Medication Intended Performer Role",
+    "oids" : ["2.16.840.1.113883.4.642.4.2074"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-medication-intended-performer-role.html" : "Medication Intended Performer Role"
+  },
+  {
+    "url" : "http://hl7.org/fhir/CodeSystem/medication-statement-adherence",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "MedicationStatementAdherenceCodes",
+    "title" : "MedicationStatement Adherence Codes",
+    "description" : "MedicationStatement Adherence Codes",
+    "oids" : ["2.16.840.1.113883.4.642.4.1981"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-medication-statement-adherence.html" : "MedicationStatement Adherence Codes"
+  },
+  {
+    "url" : "http://hl7.org/fhir/CodeSystem/medication-statement-status",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "MedicationStatementStatusCodes",
+    "title" : "MedicationStatement Status Codes",
+    "description" : "MedicationStatement Status Codes",
+    "oids" : ["2.16.840.1.113883.4.642.4.1980"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-medication-statement-status.html" : "MedicationStatement Status Codes"
+  },
+  {
+    "url" : "http://hl7.org/fhir/CodeSystem/medicationrequest-intent",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "MedicationRequestIntentCodes",
+    "title" : "MedicationRequest Intent Codes",
+    "description" : "MedicationRequest Intent Codes",
+    "oids" : ["2.16.840.1.113883.4.642.4.1378"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-medicationrequest-intent.html" : "medicationRequest Intent"
+  },
+  {
+    "url" : "http://hl7.org/fhir/CodeSystem/medicationrequest-status",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "MedicationRequestStatusCodes",
+    "title" : "MedicationRequest Status Codes",
+    "description" : "MedicationRequest Status Codes",
+    "oids" : ["2.16.840.1.113883.4.642.4.1377"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-medicationrequest-status.html" : "medicationrequest Status"
+  },
+  {
+    "url" : "http://hl7.org/fhir/administrative-gender",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "AdministrativeGender",
+    "title" : "AdministrativeGender",
+    "description" : "The gender of a person used for administrative purposes.",
+    "oids" : ["2.16.840.1.113883.4.642.4.2"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-administrative-gender.html" : "AdministrativeGender"
+  },
+  {
+    "url" : "http://hl7.org/fhir/encounter-diagnosis-use",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "EncounterDiagnosisUse",
+    "title" : "Encounter Diagnosis Use",
+    "description" : "Encounter Condition Use",
+    "oids" : ["2.16.840.1.113883.4.642.4.2115"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-encounter-diagnosis-use.html" : "Encounter Diagnosis Use"
+  },
+  {
+    "url" : "http://hl7.org/fhir/encounter-location-status",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "EncounterLocationStatus",
+    "title" : "Encounter Location Status",
+    "description" : "The status of the location.",
+    "oids" : ["2.16.840.1.113883.4.642.1.258",
+    "2.16.840.1.113883.4.642.2.147",
+    "2.16.840.1.113883.4.642.4.263"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-encounter-location-status.html" : "Encounter Location Status"
+  },
+  {
+    "url" : "http://hl7.org/fhir/encounter-reason-use",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "EncounterReasonUse",
+    "title" : "Encounter Reason Use",
+    "description" : "Encounter Reason Use",
+    "oids" : ["2.16.840.1.113883.4.642.4.2114"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-encounter-reason-use.html" : "Encounter Reason Use"
+  },
+  {
+    "url" : "http://hl7.org/fhir/encounter-status",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "EncounterStatus",
+    "title" : "Encounter Status",
+    "description" : "Current state of the encounter.",
+    "oids" : ["2.16.840.1.113883.4.642.4.247",
+    "2.16.840.1.113883.4.642.1.242"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-encounter-status.html" : "Encounter Status"
+  },
+  {
+    "url" : "http://hl7.org/fhir/event-status",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "EventStatus",
+    "title" : "EventStatus",
+    "description" : "Codes identifying the lifecycle stage of an event.",
+    "oids" : ["2.16.840.1.113883.4.642.4.110"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-event-status.html" : "EventStatus"
+  },
+  {
+    "url" : "http://hl7.org/fhir/identifier-use",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "IdentifierUse",
+    "title" : "IdentifierUse",
+    "description" : "Identifies the purpose for this identifier, if known .",
+    "oids" : ["2.16.840.1.113883.4.642.1.58"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-identifier-use.html" : "IdentifierUse"
+  },
+  {
+    "url" : "http://hl7.org/fhir/link-type",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "LinkType",
+    "title" : "Link Type",
+    "description" : "The type of link between this Patient resource and other Patient/RelatedPerson resource(s).",
+    "oids" : ["2.16.840.1.113883.4.642.1.413",
+    "2.16.840.1.113883.4.642.2.234",
+    "2.16.840.1.113883.4.642.4.424"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-link-type.html" : "Link Type"
+  },
+  {
+    "url" : "http://hl7.org/fhir/observation-referencerange-normalvalue",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "ObservationReferenceRangeNormalValue",
+    "title" : "ObservationreferenceRangeNormalValue",
+    "description" : "Codes that describe the normal value in the reference range.",
+    "oids" : ["2.16.840.1.113883.4.642.4.2099"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-observation-referencerange-normalvalue.html" : "Observation Reference Range Normal Value Codes"
+  },
+  {
+    "url" : "http://hl7.org/fhir/observation-status",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "ObservationStatus",
+    "title" : "Observation Status",
+    "description" : "Codes providing the status of an observation.",
+    "oids" : ["2.16.840.1.113883.4.642.4.401",
+    "2.16.840.1.113883.4.642.1.388",
+    "2.16.840.1.113883.4.642.2.219"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-observation-status.html" : "Observation Status"
+  },
+  {
+    "url" : "http://hl7.org/fhir/observation-triggeredbytype",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "TriggeredBytype",
+    "title" : "triggered Bytype",
+    "description" : "Codes providing the triggeredBy type of observation.",
+    "oids" : ["2.16.840.1.113883.4.642.4.2098"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-observation-triggeredbytype.html" : "triggered Bytype"
+  },
+  {
+    "url" : "http://hl7.org/fhir/quantity-comparator",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "QuantityComparator",
+    "title" : "QuantityComparator",
+    "description" : "How the Quantity should be understood and represented.",
+    "oids" : ["2.16.840.1.113883.4.642.4.60"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-quantity-comparator.html" : "QuantityComparator"
+  },
+  {
+    "url" : "http://hl7.org/fhir/request-priority",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "RequestPriority",
+    "title" : "RequestPriority",
+    "description" : "Identifies the level of importance to be assigned to actioning the request.",
+    "oids" : ["2.16.840.1.113883.4.642.4.116"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-request-priority.html" : "RequestPriority"
+  },
+  {
+    "url" : "http://tecnomod-um.org/CodeSystem/assessment-context-cs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "AssessmentContextCS",
+    "title" : "Assessment Context Code System",
+    "description" : "This CodeSystem defines normalized codes for the **clinical context / relative timepoint** at which a stroke-related assessment is performed.\nIt is primarily used to contextualize instruments whose interpretation depends on phase (e.g., mRS/NIHSS at baseline vs discharge vs follow-up).\n\n**Primary use-case**\n- Use as the value in `ObservationTimingContextExtension.valueCodeableConcept` to label the phase of an assessment.\n\n**How it complements effective[x]**\n- `Observation.effective[x]` records the actual date/time (when known).\n- This CodeSystem records the standardized phase label used for reporting and comparability.\n\n**Why this is needed**\n- Many workflows report outcomes by phase even when the exact timestamp is unknown or operationally variable (“mRS at 90 days”).",
+    "uses" : {
+    },
+    "ValueSet-assessment-context-vs.html" : "Assessment Context ValueSet"
+  },
+  {
+    "url" : "http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "BrainImagingTypeCS",
+    "title" : "Brain Imaging Type Code System",
+    "description" : "Codes specifying the type of brain imaging performed (e.g., CT, MRI).",
+    "uses" : {
+    },
+    "ValueSet-brain-imaging-modality-vs.html" : "Brain Imaging Modality ValueSet"
+  },
+  {
+    "url" : "http://tecnomod-um.org/CodeSystem/discharge-dept-cs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "DischargeDeptCS",
+    "title" : "Discharge Department/Service CodeSystem",
+    "description" : "Local CodeSystem representing the **clinical service/department** responsible for the patient at discharge/transfer\n(or the service the patient is transferred to).\n\n**Primary use-case**\n- Populate `DischargeDepartmentServiceExtension` on Encounter to support:\n  - bed management and service-level reporting,\n  - pathway characterization (e.g., discharge under neurology vs rehab),\n  - operational analytics and capacity planning.\n\n**Modeling notes**\n- This captures *service classification*, not the physical ward/room. Physical location should be modeled using `Encounter.location`\n  (and references to Location resources) if needed.",
+    "uses" : {
+    },
+    "ValueSet-discharge-dept-vs.html" : "Discharge Department/Service ValueSet"
+  },
+  {
+    "url" : "http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "HemorrhagicStrokeBleedingReasonCS",
+    "title" : "Hemorrhagic Stroke Bleeding Reason CodeSystem",
+    "description" : "Local CodeSystem representing **locally governed reasons/causes** for intracranial bleeding in hemorrhagic stroke.\n\n**Primary use-case**\n- Used via `HemorrhagicStrokeBleedingReasonVS` as the allowed vocabulary for `HemorrhagicStrokeBleedingReasonExt.valueCodeableConcept`\n  on a definitive hemorrhagic stroke Condition.",
+    "uses" : {
+    },
+    "ValueSet-hemorrhagic-stroke-bleeding-reason-vs.html" : "Hemorrhagic Stroke Bleeding Reason ValueSet"
+  },
+  {
+    "url" : "http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "InitialCareIntensityCS",
+    "title" : "Initial Care Intensity CodeSystem",
+    "description" : "Local CodeSystem representing the **initial intensity of care** during the first day(s) of the stroke encounter.\n\n**Primary use-case**\n- Populate `InitialCareIntensityExtension` on Encounter to support:\n  - case-mix characterization (ICU/stroke unit vs monitored vs standard bed),\n  - operational benchmarking and staffing analysis,\n  - research stratification where initial level-of-care is a confounder.\n\n**Interpretation guidance**\n- `standard`: no continuous monitoring beyond standard nursing observation.\n- `monitored`: telemetry or continuous monitoring outside ICU.\n- `icu-stroke`: ICU or dedicated stroke unit level care (per local definitions).",
+    "uses" : {
+    },
+    "ValueSet-initial-care-intensity-vs.html" : "Initial Care Intensity ValueSet"
+  },
+  {
+    "url" : "http://tecnomod-um.org/CodeSystem/medication-cs",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "MedicationCS",
+    "title" : "Discharge Medication Category CodeSystem",
+    "description" : "Local CodeSystem providing **coarse medication categories** used in discharge prescribing when the source system cannot\n(or does not) provide a specific coded drug product/substance.\n\n**Primary use-cases**\n- Minimum-data capture for discharge medication classes relevant to stroke secondary prevention (e.g., anticoagulant vs antiplatelet).\n- Registry reporting where only “medication class prescribed at discharge” is available.\n- Analytics and quality indicators (e.g., “antithrombotic at discharge”) when specific agent is unknown.\n\n**How it is used in FHIR**\n- Included in `MedicationVS` so it can be used in `MedicationRequest.medication` (CodeableConcept).",
+    "uses" : {
+    },
+    "ValueSet-medication-vs.html" : "Discharge Medications ValueSet"
+  },
+  {
+    "url" : "http://tecnomod-um.org/CodeSystem/mrs-score-cs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "MRsScoreCS",
+    "title" : "Modified Rankin Scale Score Code System",
+    "description" : "This CodeSystem defines codes for the **modified Rankin Scale (mRS)**, an ordinal measure of global disability and functional outcome.\nScores range from 0 (no symptoms) to 5 (severe disability), with 6 indicating death.\n\n**Primary use-case**\n- Use as the coded result in `Observation.valueCodeableConcept` (bound via MRsScoreVS) when recording an mRS outcome.\n\n**Modeling notes**\n- mRS is a global disability scale and does not capture domain-specific limitations (mobility, ADLs, cognition).\n  Capture those via additional instruments/Observations when needed.\n- Method of ascertainment and assessor details should be recorded separately (e.g., Observation.method, performer, Provenance).",
+    "uses" : {
+    },
+    "ValueSet-mrs-score-vs.html" : "Modified Rankin Scale (mRS) Score ValueSet"
+  },
+  {
+    "url" : "http://tecnomod-um.org/CodeSystem/mtici-code-cs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "MTICICodeCS",
+    "title" : "Modified Thrombolysis in Cerebral Infarction Assessment CodeSystem",
+    "description" : "This CodeSystem defines the *assessment concept code* used to indicate that an Observation is reporting an mTICI reperfusion grade.\n\n**Design pattern**\n- `Observation.code` identifies the kind of assessment (“mTICI reperfusion grade”).\n- `Observation.valueCodeableConcept` carries the result (one of the grades in MticiScoreVS).",
+    "uses" : {
+    },
+    "ValueSet-mtici-code-vs.html" : "Modified Thrombolysis in Cerebral Infarction Assessment ValueSet"
+  },
+  {
+    "url" : "http://tecnomod-um.org/CodeSystem/mtici-score-cs",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "MticiScoreCS",
+    "title" : "Modified Treatment in Cerebral Infarction Grade Score CodeSystem",
+    "description" : "This CodeSystem defines the **modified Thrombolysis in Cerebral Infarction (mTICI)** reperfusion grade values.\nmTICI is an ordinal angiographic scale used to quantify the extent of reperfusion after endovascular therapy for acute ischemic stroke.\n\n**Primary use-case**\n- Use as the coded result in `Observation.valueCodeableConcept` (bound via MticiScoreVS) when recording the *final angiographic reperfusion grade*.\n\n**Modeling notes**\n- Represents the *final* reperfusion grade for the downstream ischemic territory (typically adjudicated from the final angiographic run).\n- Does not encode target vessel, device/technique, number of passes, timestamps, or adjudication workflow; capture those via Procedure, ImagingStudy, Observation.method, or additional Observations/Provenance.",
+    "uses" : {
+    },
+    "ValueSet-mtici-score-vs.html" : "Modified Treatment in Cerebral Infarction Grade Score ValueSet"
+  },
+  {
+    "url" : "http://tecnomod-um.org/CodeSystem/procedure-timing-context-cs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "ProcedureTimingContextCS",
+    "title" : "Procedure Timing Context CodeSystem",
+    "description" : "Local CodeSystem for classifying a procedure into a **timing context** relative to encounter start.\n\n**Primary use-case**\n- Normalize reporting into acute (<24h) vs post-acute (>=24h) phases for stroke process measures.\n\n\n**FHIR placement**\n- Used in `ProcedureTimingContextExtension` attached to Procedure.",
+    "uses" : {
+    },
+    "ValueSet-procedure-timing-context-vs.html" : "Procedure Timing Context ValueSet"
+  },
+  {
+    "url" : "http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "StrokeArrivalModeCS",
+    "title" : "Stroke Arrival Mode CodeSystem",
+    "description" : "Local CodeSystem describing **how and from where** the patient arrived to the treating hospital for the index stroke encounter.\n\n**Primary use-case**\n- Populate `Encounter.admission.admitSource` (via StrokeArrivalModeVS) to support:\n  - workflow analysis (EMS vs private transport),\n  - pathway compliance reporting (direct-to-stroke-center vs inter-facility transfer),\n  - operational dashboards and registries.\n\n**Modeling notes**\n- These codes describe *arrival origin and transport pathway*, not clinical triage severity.\n- If you need transport timestamps, EMS unit identifiers, or handover details, model them separately",
+    "uses" : {
+    },
+    "ValueSet-stroke-arrival-mode-vs.html" : "Stroke Arrival Mode ValueSet"
+  },
+  {
+    "url" : "http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "StrokeCircumstanceCodesCS",
+    "title" : "Stroke Circumstance Codes CodeSystem",
+    "description" : "This CodeSystem defines coded circumstances related to stroke symptom onset that are clinically relevant when onset time is unknown or atypical.\n\n**Primary use-case**\n- Use as `Observation.code` in `StrokeCircumstanceObservationProfile`.\n- Presence of the Observation asserts that the circumstance applies to the index stroke event.",
+    "uses" : {
+    },
+    "ValueSet-stroke-circumstance-codes-vs.html" : "Stroke Circumstance Codes ValueSet"
+  },
+  {
+    "url" : "http://tecnomod-um.org/CodeSystem/stroke-discharge-destination-cs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "StrokeDischargeDestinationCS",
+    "title" : "Stroke Discharge Destination CodeSystem",
+    "description" : "Local CodeSystem for discharge disposition values that are not sufficiently covered (or not consistently available)\nin the chosen standard terminology set.",
+    "uses" : {
+    },
+    "ValueSet-stroke-discharge-destination-vs.html" : "Stroke Discharge Destination ValueSet"
+  },
+  {
+    "url" : "http://tecnomod-um.org/CodeSystem/stroke-etiology-cs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "StrokeEtiologyCS",
+    "title" : "Stroke Etiology CodeSystem",
+    "description" : "Local CodeSystem defining categories for **ischemic stroke etiology** classification.\n\n**Primary use-case**\n- Used via `StrokeEtiologyVS` as the required vocabulary for `StrokeStrokeEtiologyExt.valueCodeableConcept`\n  on a definitive ischemic stroke Condition.\n\n**Why it exists**\n- Stroke etiology classification often mixes internationally standard categories (cardioembolic, lacunar, cryptogenic) with local operational buckets.\n\n**Modeling notes**\n- This CodeSystem is intended for “final etiology classification” after diagnostic workup, not for provisional hypotheses.",
+    "uses" : {
+    },
+    "ValueSet-stroke-etiology-vs.html" : "Stroke Etiology ValueSet"
+  },
+  {
+    "url" : "http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "StrokeProcNotDoneReasonCS",
+    "title" : "Stroke Procedure Not Done Reasons CodeSystem",
+    "description" : " Local CodeSystem enumerating standardized reasons why a key stroke procedure (e.g., IV thrombolysis or mechanical thrombectomy) was **not performed**.\n\n**Primary use-case**\n- Populate `Procedure.statusReason` when `Procedure.status = not-done`.\n\n**Why it matters**\n- Captures the difference between:\n  - clinical ineligibility (contraindication),\n  - time-based ineligibility (outside window),\n  - operational constraints (unavailable),\n  - patient choice (refusal),\n  - care pathway differences (performed elsewhere / transfer).",
+    "uses" : {
+    },
+    "ValueSet-stroke-proc-not-done-reason-vs.html" : "Stroke Procedure Not Done Reason ValueSet"
+  },
+  {
+    "url" : "http://tecnomod-um.org/CodeSystem/swallow-procedures-cs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "SwallowProceduresCS",
+    "title" : "Swallow Procedures CodeSystem",
+    "description" : "Local CodeSystem representing swallowing screening/assessment tools often documented by acronym or local naming.\n\n**FHIR placement**\n- Included in `SwallowProceduresVS` to be used in `Procedure.code`",
+    "uses" : {
+    },
+    "ValueSet-swallow-procedures-vs.html" : "Swallow Procedures ValueSet"
+  },
+  {
+    "url" : "http://tecnomod-um.org/CodeSystem/swallow-screen-time-cs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "SwallowScreenTimeCS",
+    "title" : "Swallowing Screening Timing Category Code System",
+    "description" : "Temporal categories relative to stroke onset for swallowing screening.",
+    "uses" : {
+    },
+    "ValueSet-swallowing-screening-timing-category-vs.html" : "Swallowing Screening Timing Category ValueSet"
+  },
+  {
+    "url" : "http://tecnomod-um.org/CodeSystem/thrombectomy-complication-cs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "ThrombectomyComplicationCS",
+    "title" : "Thrombectomy Complication CodeSystem",
+    "description" : "Local CodeSystem for complications occurring during mechanical thrombectomy.\n\n**When to use**\n- If you need a controlled internal vocabulary for adverse events/complications, especially when upstream systems do not provide SNOMED-coded diagnoses.\n\n**How it is used in FHIR R5**\n- Usually referenced from `Procedure.complication` which is a `CodeableReference(Condition)` in R5.\n- You may represent the complication as a `Condition` (preferred), and/or record a code directly depending on your implementation pattern.\n\n**Why it exists**\n- Supports minimum-set reporting across sites and enables consistent quality/safety analytics.",
+    "uses" : {
+    },
+    "ValueSet-thrombectomy-complication-vs.html" : "Thrombectomy Complications ValueSet"
+  },
+  {
+    "url" : "http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "TimingMetricCodesCS",
+    "title" : "Stroke Timing Metric Codes CodeSystem",
+    "description" : "This CodeSystem defines codes for key **time-interval process metrics** in acute stroke care.\nEach code represents a duration measured between two clinically meaningful events (e.g., arrival to thrombolysis start).\n\n**Primary use-case**\n- Use as `Observation.code` in `TimingMetricObservationProfile`.\n- Store the measured interval in `Observation.valueQuantity` with UCUM minutes (`min`).",
+    "uses" : {
+    },
+    "ValueSet-timing-metric-codes-vs.html" : "Stroke Timing Metric Codes ValueSet"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/condition-category",
+    "version" : "2.0.0",
+    "status" : "active",
+    "name" : "ConditionCategoryCodes",
+    "title" : "Condition Category Codes",
+    "description" : "Preferred value set for Condition Categories.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1073"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-condition-category.html" : "Condition Category Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "ConditionClinicalStatusCodes",
+    "title" : "Condition Clinical Status Codes",
+    "description" : "Preferred value set for Condition Clinical Status.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1074"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-condition-clinical.html" : "Condition Clinical Status Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+    "version" : "2.0.1",
+    "status" : "active",
+    "name" : "ConditionVerificationStatus",
+    "title" : "ConditionVerificationStatus",
+    "description" : "The verification status to support or decline the clinical status of the condition or diagnosis.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1075"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-condition-ver-status.html" : "Condition Verification Status"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/data-absent-reason",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "DataAbsentReason",
+    "title" : "DataAbsentReason",
+    "description" : "Used to specify why the normally expected content of the data element is missing.",
+    "oids" : ["2.16.840.1.113883.4.642.4.1048"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-data-absent-reason.html" : "Data Absent Reason"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/diet",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "Diet",
+    "title" : "Diet",
+    "description" : "This value set defines a set of codes that can be used to indicate dietary preferences or restrictions a patient may have.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1091"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-encounter-diet.html" : "Diet"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/encounter-special-arrangements",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "SpecialArrangements",
+    "title" : "Special arrangements",
+    "description" : "This value set defines a set of codes that can be used to indicate the kinds of special arrangements in place for a patients visit.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1090"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-encounter-special-arrangements.html" : "Special Arrangements"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/encounter-subject-status",
+    "version" : "2.0.1",
+    "status" : "active",
+    "name" : "EncounterSubjectStatus",
+    "title" : "Encounter subject status",
+    "description" : "This example value set defines a set of codes that can be used to indicate the status of the subject within the encounter",
+    "oids" : ["2.16.840.1.113883.4.642.1.1420"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-encounter-subject-status.html" : "Encounter Subject Status"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/encounter-type",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "EncounterType",
+    "title" : "Encounter type",
+    "description" : "This example value set defines a set of codes that can be used to indicate the type of encounter: a specific code indicating type of service provided.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1088"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-encounter-type.html" : "Encounter Type"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/extra-security-role-type",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "SecurityRoleType",
+    "title" : "Security Role Type",
+    "description" : "This CodeSystem contains Additional FHIR-defined Security Role types not defined elsewhere",
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-participation-role-type.html" : "Participation Role Type"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/location-physical-type",
+    "version" : "2.0.1",
+    "status" : "active",
+    "name" : "LocationType",
+    "title" : "Location type",
+    "description" : "This example value set defines a set of codes that can be used to indicate the physical form of the Location.\r\rThis includes several 'non physical' codes which are still considered a location.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1108"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-location-form.html" : "Location Form"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/medicationrequest-admin-location",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "MedicationRequest_Administration_Location_Codes",
+    "title" : "Medication request  administration  location  codes",
+    "description" : "MedicationRequest Administration Location Codes",
+    "oids" : ["2.16.840.1.113883.4.642.1.0"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-medicationrequest-admin-location.html" : "medicationRequest Administration Location Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "MedicationRequestCourseOfTherapyCodes",
+    "title" : "MedicationRequest Course of Therapy Codes",
+    "description" : "MedicationRequest Course of Therapy Codes",
+    "oids" : ["2.16.840.1.113883.4.642.1.1327"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-medicationrequest-course-of-therapy.html" : "medicationRequest Course of Therapy Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/medicationrequest-status-reason",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "MedicationRequestStatusReasonCodes",
+    "title" : "MedicationRequest Status Reason Codes",
+    "description" : "MedicationRequest Status Reason Codes",
+    "oids" : ["2.16.840.1.113883.4.642.1.1325"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-medicationrequest-status-reason.html" : "medicationRequest Status Reason Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/observation-category",
+    "version" : "2.0.0",
+    "status" : "active",
+    "name" : "ObservationCategoryCodes",
+    "title" : "Observation Category Codes",
+    "description" : "Observation Category codes.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1125"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-observation-category.html" : "Observation Category Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/organization-type",
+    "version" : "2.0.1",
+    "status" : "active",
+    "name" : "OrganizationType",
+    "title" : "Organization type",
+    "description" : "This example value set defines a set of codes that can be used to indicate a type of organization.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1128"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-organization-type.html" : "Organization Type"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/participant-type",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "ParticipantType",
+    "title" : "Participant type",
+    "description" : "This value set defines a set of codes that can be used to indicate how an individual participates in an encounter.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1089"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-encounter-participant-type.html" : "Participant Type"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "ObservationReferenceRangeMeaningCodes",
+    "title" : "Observation Reference Range Meaning Codes",
+    "description" : "This value set defines a set of codes that can be used to indicate the meaning/use of a reference range for a particular target population.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1124"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-referencerange-meaning.html" : "Observation Reference Range Meaning Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/service-type",
+    "version" : "1.1.1",
+    "status" : "active",
+    "name" : "ServiceType",
+    "title" : "Service type",
+    "description" : "This value set defines an example set of codes of service-types.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1145"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-service-type.html" : "Service Type"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v2-0092",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "ReAdmissionIndicator",
+    "title" : "re-admissionIndicator",
+    "description" : "Code system of concepts which are used to specify that a patient is being re admitted to a healthcare facilityin from which they were discharged, and indicates the circumstances around such re-admission.  Used in HL7 Version 2.x messagine in the PV1 segment.",
+    "oids" : ["2.16.840.1.113883.18.36"],
+    "uses" : {
+    },
+    "http://terminology.hl7.org/7.0.1/ValueSet-v2-0092.html" : "hl7VS-re-admissionIndicator"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v2-0131",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "ContactRole2",
+    "title" : "contactRole2",
+    "description" : "Code system of concepts which specify a relationship role that the next of kin/associated parties plays with regard to the patient. Also used in referrals, for example, it may be necessary to identify the contact representative at the clinic that sent a referral. Used in HL7 Version 2 messaging in the NK1 and CTD segments after 2.5, when it replace 2.16.840.1.113883.18.57.",
+    "oids" : ["2.16.840.1.113883.18.58"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-patient-contactrelationship.html" : "Patient Contact Relationship "
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "IdentifierType",
+    "title" : "identifierType",
+    "description" : "HL7-defined code system of concepts specifying type of identifier. Used in HL7 Version 2.x messaging data types CX, PLN, PPN, XCN and XON.",
+    "oids" : ["2.16.840.1.113883.18.108"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-identifier-type.html" : "Identifier Type Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "version" : "9.0.0",
+    "status" : "active",
+    "name" : "ActCode",
+    "title" : "ActCode",
+    "description" : "A code specifying the particular kind of Act that the Act-instance represents within its class.\r\n\r\n*Constraints:* The kind of Act (e.g. physical examination, serum potassium, inpatient encounter, charge financial transaction, etc.) is specified with a code from one of several, typically external, coding systems. The coding system will depend on the class of Act, such as LOINC for observations, etc.\r\n\r\nConceptually, the Act.code must be a specialization of the Act.classCode. This is why the structure of ActClass domain should be reflected in the superstructure of the ActCode domain and then individual codes or externally referenced vocabularies subordinated under these domains that reflect the ActClass structure.\r\n\r\nAct.classCode and Act.code are not modifiers of each other but the Act.code concept should really imply the Act.classCode concept. For a negative example, it is not appropriate to use an Act.code \"potassium\" together with and Act.classCode for \"laboratory observation\" to somehow mean \"potassium laboratory observation\" and then use the same Act.code for \"potassium\" together with Act.classCode for \"medication\" to mean \"substitution of potassium\". This mutually modifying use of Act.code and Act.classCode is not permitted.",
+    "oids" : ["2.16.840.1.113883.5.4"],
+    "uses" : {
+    },
+    "http://terminology.hl7.org/7.0.1/ValueSet-encounter-class.html" : "Encounter class"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "ActPriority",
+    "title" : "ActPriority",
+    "description" : "A set of codes (e.g., for routine, emergency), specifying the urgency under which the Act happened, can happen, is happening, is intended to happen, or is requested/demanded to happen.",
+    "oids" : ["2.16.840.1.113883.5.7"],
+    "uses" : {
+    },
+    "http://terminology.hl7.org/7.0.1/ValueSet-v3-ActPriority.html" : "ActPriority"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+    "version" : "3.1.0",
+    "status" : "active",
+    "name" : "ActReason",
+    "title" : "ActReason",
+    "description" : "A set of codes specifying the motivation, cause, or rationale of an Act, when such rationale is not reasonably represented as an ActRelationship of type \"has reason\" linking to another Act.\r\n\r\n*Examples:* Example reasons that might qualify for being coded in this field might be: \"routine requirement\", \"infectious disease reporting requirement\", \"on patient request\", \"required by law\".",
+    "oids" : ["2.16.840.1.113883.5.8"],
+    "uses" : {
+    },
+    "http://terminology.hl7.org/7.0.1/ValueSet-v3-SubstanceAdminSubstitutionReason.html" : "SubstanceAdminSubstitutionReason"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "EncounterSpecialCourtesy",
+    "title" : "EncounterSpecialCourtesy",
+    "description" : "**** MISSING DESCRIPTION ****",
+    "oids" : ["2.16.840.1.113883.5.40"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-encounter-special-courtesy.html" : "Special Courtesy"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "MaritalStatus",
+    "title" : "MaritalStatus",
+    "description" : "\\* \\* \\* No description supplied \\* \\* \\*\r\n\r\n*Open Issue:* The specific meanings of these codes can vary somewhat by jurisdiction and implementation so caution should be used when determining equivalency.\r\n\r\n*Open Issue:* fixing and completion of the hierarchy and proper good definitions of all the concepts is badly needed.",
+    "oids" : ["2.16.840.1.113883.5.2"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-marital-status.html" : "Marital Status Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "NullFlavor",
+    "title" : "NullFlavor",
+    "description" : "A collection of codes specifying why a valid value is not present.",
+    "oids" : ["2.16.840.1.113883.5.1008"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-marital-status.html" : "Marital Status Codes",
+    "http://hl7.org/fhir/R5/valueset-encounter-special-courtesy.html" : "Special Courtesy"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "ObservationInterpretation",
+    "title" : "ObservationInterpretation",
+    "description" : "One or more codes providing a rough qualitative interpretation of the observation, such as \"normal\" / \"abnormal\", \"low\" / \"high\", \"better\" / \"worse\", \"resistant\" / \"susceptible\", \"expected\" / \"not expected\". The value set is intended to be for ANY use where coded representation of an interpretation is needed.",
+    "oids" : ["2.16.840.1.113883.5.83"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-observation-interpretation.html" : "Observation Interpretation Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "ParticipationType",
+    "title" : "ParticipationType",
+    "description" : "A code specifying the meaning and purpose of every Participation instance. Each of its values implies specific constraints on the Roles undertaking the participation.",
+    "oids" : ["2.16.840.1.113883.5.90"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R5/valueset-encounter-participant-type.html" : "Participant Type"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "SubstanceAdminSubstitution",
+    "title" : "Substance Admin Substitution",
+    "description" : "Identifies what sort of change is permitted or has occurred between the therapy that was ordered and the therapy that was/will be provided.",
+    "oids" : ["2.16.840.1.113883.5.1070"],
+    "uses" : {
+    },
+    "http://terminology.hl7.org/7.0.1/ValueSet-v3-ActSubstanceAdminSubstitutionCode.html" : "ActSubstanceAdminSubstitutionCode"
+  }]
 }

@@ -7,7 +7,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Discharge Medication Request Profile -  v0.1.0</title>
+    <title>Discharge MedicationRequest Profile -  v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -135,7 +135,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Discharge Medication Request Profile</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Discharge MedicationRequest Profile</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -224,7 +224,7 @@
   <a name="root"> </a>
   <h2 id="root">Resource Profile:
 
-    Discharge Medication Request Profile
+    Discharge MedicationRequest Profile
 
 
 
@@ -254,7 +254,7 @@
         
           Active
           
-            as of 2026-02-19
+            as of 2026-02-20
           
         
       </td>
@@ -270,7 +270,43 @@
   </table>
 
 <p>
-<p>Represents a medication prescription made as part of the patient's discharge plan, categorized as community administration.</p>
+<p>Profile for representing a medication prescription issued as part of the patient’s <strong>discharge plan</strong> following a stroke encounter.</p>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Capture secondary prevention and chronic therapy prescriptions intended to be taken <strong>after discharge</strong> (community setting),
+enabling:
+    <ul>
+      <li>discharge medication reconciliation,</li>
+      <li>continuity of care between hospital and primary care,</li>
+      <li>registry submission and quality improvement (e.g., antithrombotic/statin at discharge),</li>
+      <li>episode-linked analytics (tie to the index stroke Encounter).</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Key elements and how to use them</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">status</code> (fixed to active): indicates the prescription is currently intended/valid at the time of discharge documentation.
+    <ul>
+      <li>Use <code class="language-plaintext highlighter-rouge">stopped</code> or <code class="language-plaintext highlighter-rouge">cancelled</code> in your broader implementation if a discharge prescription is later withdrawn (not constrained here).</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">category</code> (fixed to community): indicates the medication is intended for administration in the community/outpatient context.
+    <ul>
+      <li>This helps distinguish discharge prescriptions from inpatient medication orders.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">medication</code> (required; bound to MedicationVS): identifies the prescribed agent or, if unavailable, a coarse category.
+    <ul>
+      <li>Prefer specific SNOMED CT substance concepts (e.g., aspirin) when available.</li>
+      <li>Use <code class="language-plaintext highlighter-rouge">MedicationCS</code> category codes only when the specific agent cannot be coded.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">subject</code> (required): the patient who will take the medication.</li>
+  <li><code class="language-plaintext highlighter-rouge">encounter</code> (required): links the prescription to the index stroke admission encounter.</li>
+  <li><code class="language-plaintext highlighter-rouge">authoredOn</code> (optional but recommended): the date/time the discharge prescription was authored.</li>
+</ul>
 
 </p>
 
@@ -432,7 +468,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span><span style="padding-left: 3px; padding-right: 3px; color: black; null" title="This element is included in summaries">Σ</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/references.html">CodeableReference</a>(<a href="http://hl7.org/fhir/R5/medication.html">Medication</a>)</td>
-<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Medication to be taken<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-medication-vs.html" title="http://tecnomod-um.org/ValueSet/medication-vs" class="binding">Medications ValueSet</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R5/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Medication to be taken<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-medication-vs.html" title="http://tecnomod-um.org/ValueSet/medication-vs" class="binding">Discharge Medications ValueSet</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R5/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="ai" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a no-external="true" href="StructureDefinition-discharge-medication-request-profile-definitions.html#MedicationRequest.subject" title="The individual or group for whom the medication has been requested." data-no-external="true">subject</a><a name="k-MedicationRequest.subject"> </a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span><span style="padding-left: 3px; padding-right: 3px; color: black; null" title="This element is included in summaries">Σ</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
@@ -448,7 +484,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/datatypes.html#dateTime">dateTime</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">When request was initially authored</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // bf1cb564-caaa-404f-b3f5-fe30967b043a
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // da970a6d-bf2a-4d8f-9533-9f18e3df9309
 document.getElementById('cbdischarge-medication-request-profileK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('discharge-medication-request-profileK'), 'binding', document.getElementById('cbdischarge-medication-request-profileK-binding').checked, document.getElementById('ppdischarge-medication-request-profileK'));
 document.getElementById('cbdischarge-medication-request-profileK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -531,7 +567,7 @@ filterDesc(document.getElementById('discharge-medication-request-profileK'), 'ob
       <a style="opacity: 1.0" href="http://hl7.org/fhir/R5/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td>
-      <a style="opacity: 1.0" href="ValueSet-medication-vs.html">Medications ValueSet</a>
+      <a style="opacity: 1.0" href="ValueSet-medication-vs.html">Discharge Medications ValueSet</a>
       <button data-clipboard-text="http://tecnomod-um.org/ValueSet/medication-vs" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;0.1.0</td>
@@ -678,7 +714,7 @@ filterDesc(document.getElementById('discharge-medication-request-profileK'), 'ob
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">1</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/references.html">CodeableReference</a>(<a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R5/medication.html">Medication</a>)</td>
-<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Medication to be taken</span><br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-medication-vs.html" title="http://tecnomod-um.org/ValueSet/medication-vs" class="binding">Medications ValueSet</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R5/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Medication to be taken</span><br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-medication-vs.html" title="http://tecnomod-um.org/ValueSet/medication-vs" class="binding">Discharge Medications ValueSet</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R5/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="ad" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a no-external="true" href="StructureDefinition-discharge-medication-request-profile-definitions.html#MedicationRequest.subject" data-no-external="true">subject</a><a name="MedicationRequest.subject"> </a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">1</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
@@ -694,7 +730,7 @@ filterDesc(document.getElementById('discharge-medication-request-profileK'), 'ob
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R5/datatypes.html#dateTime">dateTime</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">When request was initially authored</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // bf1cb564-caaa-404f-b3f5-fe30967b043a
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // da970a6d-bf2a-4d8f-9533-9f18e3df9309
 document.getElementById('cbdischarge-medication-request-profileD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('discharge-medication-request-profileD'), 'binding', document.getElementById('cbdischarge-medication-request-profileD-binding').checked, document.getElementById('ppdischarge-medication-request-profileD'));
 document.getElementById('cbdischarge-medication-request-profileD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -733,7 +769,7 @@ filterDesc(document.getElementById('discharge-medication-request-profileD'), 'ob
       <a style="opacity: 1.0" href="http://hl7.org/fhir/R5/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td>
-      <a style="opacity: 0.5" href="ValueSet-medication-vs.html">Medications ValueSet</a>
+      <a style="opacity: 0.5" href="ValueSet-medication-vs.html">Discharge Medications ValueSet</a>
       <button data-clipboard-text="http://tecnomod-um.org/ValueSet/medication-vs" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;0.1.0</td>
@@ -917,7 +953,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span><span style="padding-left: 3px; padding-right: 3px; color: black; null" title="This element is included in summaries">Σ</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/references.html">CodeableReference</a>(<a href="http://hl7.org/fhir/R5/medication.html">Medication</a>)</td>
-<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Medication to be taken<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-medication-vs.html" title="http://tecnomod-um.org/ValueSet/medication-vs" class="binding">Medications ValueSet</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R5/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Medication to be taken<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-medication-vs.html" title="http://tecnomod-um.org/ValueSet/medication-vs" class="binding">Discharge Medications ValueSet</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R5/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a20." data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a no-external="true" href="StructureDefinition-discharge-medication-request-profile-definitions.html#MedicationRequest.subject" title="The individual or group for whom the medication has been requested." data-no-external="true">subject</a><a name="s-MedicationRequest.subject"> </a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span><span style="padding-left: 3px; padding-right: 3px; color: black; null" title="This element is included in summaries">Σ</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
@@ -1149,7 +1185,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/references.html">Reference</a>(<a href="http://hl7.org/fhir/R5/provenance.html">Provenance</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A list of events of interest in the lifecycle<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // bf1cb564-caaa-404f-b3f5-fe30967b043a
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // da970a6d-bf2a-4d8f-9533-9f18e3df9309
 document.getElementById('cbdischarge-medication-request-profileS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('discharge-medication-request-profileS'), 'binding', document.getElementById('cbdischarge-medication-request-profileS-binding').checked, document.getElementById('ppdischarge-medication-request-profileS'));
 document.getElementById('cbdischarge-medication-request-profileS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1277,7 +1313,7 @@ filterDesc(document.getElementById('discharge-medication-request-profileS'), 'ob
       <a style="opacity: 1.0" href="http://hl7.org/fhir/R5/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td>
-      <a style="opacity: 1.0" href="ValueSet-medication-vs.html">Medications ValueSet</a>
+      <a style="opacity: 1.0" href="ValueSet-medication-vs.html">Discharge Medications ValueSet</a>
       <button data-clipboard-text="http://tecnomod-um.org/ValueSet/medication-vs" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;0.1.0</td>
@@ -1489,7 +1525,7 @@ filterDesc(document.getElementById('discharge-medication-request-profileS'), 'ob
     <div id="tabs-json">
       <div id="json">
         <div id="json-inner">
-           // <span style="color: navy; opacity: 0.8">Discharge Medication Request Profile</span>
+           // <span style="color: navy; opacity: 0.8">Discharge MedicationRequest Profile</span>
  {
    "resourceType" : "MedicationRequest",
     "<a href="StructureDefinition-discharge-medication-request-profile.html#MedicationRequest.id" title="The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes" class="dict"><span style="text-decoration: underline">id</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R5/datatypes.html#id">id</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Logical id of this artifact</span>
@@ -1698,7 +1734,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span><span style="padding-left: 3px; padding-right: 3px; color: black; null" title="This element is included in summaries">Σ</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/references.html">CodeableReference</a>(<a href="http://hl7.org/fhir/R5/medication.html">Medication</a>)</td>
-<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Medication to be taken<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-medication-vs.html" title="http://tecnomod-um.org/ValueSet/medication-vs" class="binding">Medications ValueSet</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R5/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Medication to be taken<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-medication-vs.html" title="http://tecnomod-um.org/ValueSet/medication-vs" class="binding">Discharge Medications ValueSet</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R5/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="ai" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a no-external="true" href="StructureDefinition-discharge-medication-request-profile-definitions.html#MedicationRequest.subject" title="The individual or group for whom the medication has been requested." data-no-external="true">subject</a><a name="ka-MedicationRequest.subject"> </a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span><span style="padding-left: 3px; padding-right: 3px; color: black; null" title="This element is included in summaries">Σ</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
@@ -1714,7 +1750,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/datatypes.html#dateTime">dateTime</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">When request was initially authored</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // bf1cb564-caaa-404f-b3f5-fe30967b043a
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // da970a6d-bf2a-4d8f-9533-9f18e3df9309
 document.getElementById('cbdischarge-medication-request-profileKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('discharge-medication-request-profileKA'), 'binding', document.getElementById('cbdischarge-medication-request-profileKA-binding').checked, document.getElementById('ppdischarge-medication-request-profileKA'));
 document.getElementById('cbdischarge-medication-request-profileKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1797,7 +1833,7 @@ filterDesc(document.getElementById('discharge-medication-request-profileKA'), 'o
       <a style="opacity: 1.0" href="http://hl7.org/fhir/R5/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td>
-      <a style="opacity: 1.0" href="ValueSet-medication-vs.html">Medications ValueSet</a>
+      <a style="opacity: 1.0" href="ValueSet-medication-vs.html">Discharge Medications ValueSet</a>
       <button data-clipboard-text="http://tecnomod-um.org/ValueSet/medication-vs" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;0.1.0</td>
@@ -1944,7 +1980,7 @@ filterDesc(document.getElementById('discharge-medication-request-profileKA'), 'o
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">1</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/references.html">CodeableReference</a>(<a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R5/medication.html">Medication</a>)</td>
-<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Medication to be taken</span><br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-medication-vs.html" title="http://tecnomod-um.org/ValueSet/medication-vs" class="binding">Medications ValueSet</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R5/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Medication to be taken</span><br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-medication-vs.html" title="http://tecnomod-um.org/ValueSet/medication-vs" class="binding">Discharge Medications ValueSet</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R5/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="ad" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a no-external="true" href="StructureDefinition-discharge-medication-request-profile-definitions.html#MedicationRequest.subject" data-no-external="true">subject</a><a name="a-MedicationRequest.subject"> </a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">1</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
@@ -1960,7 +1996,7 @@ filterDesc(document.getElementById('discharge-medication-request-profileKA'), 'o
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R5/datatypes.html#dateTime">dateTime</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">When request was initially authored</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // bf1cb564-caaa-404f-b3f5-fe30967b043a
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // da970a6d-bf2a-4d8f-9533-9f18e3df9309
 document.getElementById('cbdischarge-medication-request-profileDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('discharge-medication-request-profileDA'), 'binding', document.getElementById('cbdischarge-medication-request-profileDA-binding').checked, document.getElementById('ppdischarge-medication-request-profileDA'));
 document.getElementById('cbdischarge-medication-request-profileDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1998,7 +2034,7 @@ filterDesc(document.getElementById('discharge-medication-request-profileDA'), 'o
       <a style="opacity: 1.0" href="http://hl7.org/fhir/R5/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td>
-      <a style="opacity: 0.5" href="ValueSet-medication-vs.html">Medications ValueSet</a>
+      <a style="opacity: 0.5" href="ValueSet-medication-vs.html">Discharge Medications ValueSet</a>
       <button data-clipboard-text="http://tecnomod-um.org/ValueSet/medication-vs" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;0.1.0</td>
@@ -2182,7 +2218,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span><span style="padding-left: 3px; padding-right: 3px; color: black; null" title="This element is included in summaries">Σ</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/references.html">CodeableReference</a>(<a href="http://hl7.org/fhir/R5/medication.html">Medication</a>)</td>
-<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Medication to be taken<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-medication-vs.html" title="http://tecnomod-um.org/ValueSet/medication-vs" class="binding">Medications ValueSet</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R5/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Medication to be taken<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-medication-vs.html" title="http://tecnomod-um.org/ValueSet/medication-vs" class="binding">Discharge Medications ValueSet</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R5/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a20." data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy"/> <a no-external="true" href="StructureDefinition-discharge-medication-request-profile-definitions.html#MedicationRequest.subject" title="The individual or group for whom the medication has been requested." data-no-external="true">subject</a><a name="sa-MedicationRequest.subject"> </a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span><span style="padding-left: 3px; padding-right: 3px; color: black; null" title="This element is included in summaries">Σ</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
@@ -2414,7 +2450,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/references.html">Reference</a>(<a href="http://hl7.org/fhir/R5/provenance.html">Provenance</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A list of events of interest in the lifecycle<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // bf1cb564-caaa-404f-b3f5-fe30967b043a
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // da970a6d-bf2a-4d8f-9533-9f18e3df9309
 document.getElementById('cbdischarge-medication-request-profileSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('discharge-medication-request-profileSA'), 'binding', document.getElementById('cbdischarge-medication-request-profileSA-binding').checked, document.getElementById('ppdischarge-medication-request-profileSA'));
 document.getElementById('cbdischarge-medication-request-profileSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2542,7 +2578,7 @@ filterDesc(document.getElementById('discharge-medication-request-profileSA'), 'o
       <a style="opacity: 1.0" href="http://hl7.org/fhir/R5/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td>
-      <a style="opacity: 1.0" href="ValueSet-medication-vs.html">Medications ValueSet</a>
+      <a style="opacity: 1.0" href="ValueSet-medication-vs.html">Discharge Medications ValueSet</a>
       <button data-clipboard-text="http://tecnomod-um.org/ValueSet/medication-vs" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;0.1.0</td>
@@ -2754,7 +2790,7 @@ filterDesc(document.getElementById('discharge-medication-request-profileSA'), 'o
           <b>JSON Template</b>
         </p>
         <div id="all-json-inner">
-           // <span style="color: navy; opacity: 0.8">Discharge Medication Request Profile</span>
+           // <span style="color: navy; opacity: 0.8">Discharge MedicationRequest Profile</span>
  {
    "resourceType" : "MedicationRequest",
     "<a href="StructureDefinition-discharge-medication-request-profile.html#MedicationRequest.id" title="The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes" class="dict"><span style="text-decoration: underline">id</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R5/datatypes.html#id">id</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Logical id of this artifact</span>
@@ -2882,7 +2918,7 @@ Summary
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 14:52+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Fri, Feb 20, 2026 08:36+0000">2026-02-20</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

@@ -27,19 +27,15 @@ Profile: [Age at Stroke Onset Observation Profile (R5)](StructureDefinition-age-
   "resourceType" : "Observation",
   "id" : "AgeAtOnsetObservationExample",
   "meta" : {
-    "profile" : [
-      "http://tecnomod-um.org/StructureDefinition/age-at-onset-observation-profile"
-    ]
+    "profile" : ["http://tecnomod-um.org/StructureDefinition/age-at-onset-observation-profile"]
   },
   "status" : "final",
   "code" : {
-    "coding" : [
-      {
-        "system" : "http://snomed.info/sct",
-        "code" : "445518008",
-        "display" : "Age at onset of clinical finding (observable entity)"
-      }
-    ]
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "445518008",
+      "display" : "Age at onset of clinical finding (observable entity)"
+    }]
   },
   "subject" : {
     "reference" : "Patient/example-patient"

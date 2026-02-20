@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs | *Version*:0.1.0 |
-| Active as of 2026-02-19 | *Computable Name*:TimingMetricCodesCS |
+| Active as of 2026-02-20 | *Computable Name*:TimingMetricCodesCS |
 
  
 This CodeSystem defines codes for key **time-interval process metrics** in acute stroke care. Each code represents a duration measured between two clinically meaningful events (e.g., arrival to thrombolysis start). 
@@ -35,34 +35,28 @@ This CodeSystem defines codes for key **time-interval process metrics** in acute
   "name" : "TimingMetricCodesCS",
   "title" : "Stroke Timing Metric Codes CodeSystem",
   "status" : "active",
-  "date" : "2026-02-19T14:52:32+00:00",
+  "date" : "2026-02-20T08:36:31+00:00",
   "publisher" : "UMU",
-  "contact" : [
-    {
-      "name" : "UMU",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://tecnomod-um.org"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "UMU",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://tecnomod-um.org"
+    }]
+  }],
   "description" : "This CodeSystem defines codes for key **time-interval process metrics** in acute stroke care.\nEach code represents a duration measured between two clinically meaningful events (e.g., arrival to thrombolysis start).\n\n**Primary use-case**\n- Use as `Observation.code` in `TimingMetricObservationProfile`.\n- Store the measured interval in `Observation.valueQuantity` with UCUM minutes (`min`).",
   "content" : "complete",
   "count" : 2,
-  "concept" : [
-    {
-      "code" : "D2G",
-      "display" : "Door to Groin",
-      "definition" : "Elapsed time (minutes) from documented hospital arrival (‘door’) to arterial groin puncture for mechanical thrombectomy (first puncture attempt)."
-    },
-    {
-      "code" : "D2N",
-      "display" : "Door to Needle",
-      "definition" : "Elapsed time (minutes) from documented hospital arrival (‘door’) to initiation of intravenous thrombolysis (commonly alteplase/tenecteplase administration start, per local definition)."
-    }
-  ]
+  "concept" : [{
+    "code" : "D2G",
+    "display" : "Door to Groin",
+    "definition" : "Elapsed time (minutes) from documented hospital arrival (‘door’) to arterial groin puncture for mechanical thrombectomy (first puncture attempt)."
+  },
+  {
+    "code" : "D2N",
+    "display" : "Door to Needle",
+    "definition" : "Elapsed time (minutes) from documented hospital arrival (‘door’) to initiation of intravenous thrombolysis (commonly alteplase/tenecteplase administration start, per local definition)."
+  }]
 }
 
 ```

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/procedure-timing-context-ext | *Version*:0.1.0 |
-| Draft as of 2026-02-19 | *Computable Name*:ProcedureTimingContextExtension |
+| Draft as of 2026-02-20 | *Computable Name*:ProcedureTimingContextExtension |
 
 Extension classifying the procedure into a **timing context** relative to encounter start (acute/post-acute).
 
@@ -58,83 +58,69 @@ Other representations of profile: [CSV](StructureDefinition-procedure-timing-con
 {
   "resourceType" : "StructureDefinition",
   "id" : "procedure-timing-context-ext",
-  "extension" : [
-    {
-      "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics",
-      "valueCode" : "can-bind"
-    }
-  ],
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics",
+    "valueCode" : "can-bind"
+  }],
   "url" : "http://tecnomod-um.org/StructureDefinition/procedure-timing-context-ext",
   "version" : "0.1.0",
   "name" : "ProcedureTimingContextExtension",
   "title" : "Procedure Timing Context Extension",
   "status" : "draft",
-  "date" : "2026-02-19T14:52:32+00:00",
+  "date" : "2026-02-20T08:36:31+00:00",
   "publisher" : "UMU",
-  "contact" : [
-    {
-      "name" : "UMU",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://tecnomod-um.org"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "UMU",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://tecnomod-um.org"
+    }]
+  }],
   "description" : "Extension classifying the procedure into a **timing context** relative to encounter start (acute/post-acute).\n\n**Primary use-case**\n- Operational reporting where “phase of care” is needed for compliance measures.\n\n**When to use**\n- When you want a stable, comparable phase label across sites (even if absolute times differ or onset time is uncertain).\n\n**Interpretation guidance**\n- Use `acute` for procedures within 24 hours of encounter start.\n- Use `post-acute` for procedures after 24 hours.\n- Use `unknown` when encounter/timing data are insufficient.",
   "fhirVersion" : "5.0.0",
-  "mapping" : [
-    {
-      "identity" : "rim",
-      "uri" : "http://hl7.org/v3",
-      "name" : "RIM Mapping"
-    }
-  ],
+  "mapping" : [{
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  }],
   "kind" : "complex-type",
   "abstract" : false,
-  "context" : [
-    {
-      "type" : "element",
-      "expression" : "Procedure"
-    }
-  ],
+  "context" : [{
+    "type" : "element",
+    "expression" : "Procedure"
+  }],
   "type" : "Extension",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Extension",
   "derivation" : "constraint",
   "differential" : {
-    "element" : [
-      {
-        "id" : "Extension",
-        "path" : "Extension",
-        "short" : "Procedure Timing Context Extension",
-        "definition" : "Extension classifying the procedure into a **timing context** relative to encounter start (acute/post-acute).\n\n**Primary use-case**\n- Operational reporting where “phase of care” is needed for compliance measures.\n\n**When to use**\n- When you want a stable, comparable phase label across sites (even if absolute times differ or onset time is uncertain).\n\n**Interpretation guidance**\n- Use `acute` for procedures within 24 hours of encounter start.\n- Use `post-acute` for procedures after 24 hours.\n- Use `unknown` when encounter/timing data are insufficient."
-      },
-      {
-        "id" : "Extension.extension",
-        "path" : "Extension.extension",
-        "max" : "0"
-      },
-      {
-        "id" : "Extension.url",
-        "path" : "Extension.url",
-        "fixedUri" : "http://tecnomod-um.org/StructureDefinition/procedure-timing-context-ext"
-      },
-      {
-        "id" : "Extension.value[x]",
-        "path" : "Extension.value[x]",
-        "min" : 1,
-        "type" : [
-          {
-            "code" : "CodeableConcept"
-          }
-        ],
-        "binding" : {
-          "strength" : "required",
-          "valueSet" : "http://tecnomod-um.org/ValueSet/procedure-timing-context-vs"
-        }
+    "element" : [{
+      "id" : "Extension",
+      "path" : "Extension",
+      "short" : "Procedure Timing Context Extension",
+      "definition" : "Extension classifying the procedure into a **timing context** relative to encounter start (acute/post-acute).\n\n**Primary use-case**\n- Operational reporting where “phase of care” is needed for compliance measures.\n\n**When to use**\n- When you want a stable, comparable phase label across sites (even if absolute times differ or onset time is uncertain).\n\n**Interpretation guidance**\n- Use `acute` for procedures within 24 hours of encounter start.\n- Use `post-acute` for procedures after 24 hours.\n- Use `unknown` when encounter/timing data are insufficient."
+    },
+    {
+      "id" : "Extension.extension",
+      "path" : "Extension.extension",
+      "max" : "0"
+    },
+    {
+      "id" : "Extension.url",
+      "path" : "Extension.url",
+      "fixedUri" : "http://tecnomod-um.org/StructureDefinition/procedure-timing-context-ext"
+    },
+    {
+      "id" : "Extension.value[x]",
+      "path" : "Extension.value[x]",
+      "min" : 1,
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "http://tecnomod-um.org/ValueSet/procedure-timing-context-vs"
       }
-    ]
+    }]
   }
 }
 

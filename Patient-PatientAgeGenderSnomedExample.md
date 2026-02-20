@@ -26,27 +26,21 @@ Anonymous Patient (no stated gender), DoB Unknown
   "resourceType" : "Patient",
   "id" : "PatientAgeGenderSnomedExample",
   "meta" : {
-    "profile" : [
-      "http://tecnomod-um.org/StructureDefinition/patient-age-gender-snomed-profile"
-    ]
+    "profile" : ["http://tecnomod-um.org/StructureDefinition/patient-age-gender-snomed-profile"]
   },
-  "extension" : [
-    {
-      "url" : "http://tecnomod-um.org/StructureDefinition/patient-age-ext",
-      "valueInteger" : 45
-    },
-    {
-      "url" : "http://tecnomod-um.org/StructureDefinition/gender-snomed-ext",
-      "valueCodeableConcept" : {
-        "coding" : [
-          {
-            "system" : "http://snomed.info/sct",
-            "code" : "248153007"
-          }
-        ]
-      }
+  "extension" : [{
+    "url" : "http://tecnomod-um.org/StructureDefinition/patient-age-ext",
+    "valueInteger" : 45
+  },
+  {
+    "url" : "http://tecnomod-um.org/StructureDefinition/gender-snomed-ext",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "248153007"
+      }]
     }
-  ]
+  }]
 }
 
 ```

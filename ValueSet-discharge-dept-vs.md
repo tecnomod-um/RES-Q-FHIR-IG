@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/discharge-dept-vs | *Version*:0.1.0 |
-| Active as of 2026-02-19 | *Computable Name*:DischargeDeptVS |
+| Active as of 2026-02-20 | *Computable Name*:DischargeDeptVS |
 
  
 ValueSet restricting the allowed department/service categories recorded at discharge. 
@@ -53,26 +53,20 @@ ValueSet restricting the allowed department/service categories recorded at disch
   "name" : "DischargeDeptVS",
   "title" : "Discharge Department/Service ValueSet",
   "status" : "active",
-  "date" : "2026-02-19T14:52:32+00:00",
+  "date" : "2026-02-20T08:36:31+00:00",
   "publisher" : "UMU",
-  "contact" : [
-    {
-      "name" : "UMU",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://tecnomod-um.org"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "UMU",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://tecnomod-um.org"
+    }]
+  }],
   "description" : "ValueSet restricting the allowed department/service categories recorded at discharge.\n\n**Primary use-case**\n- Required binding for `DischargeDepartmentServiceExtension.valueCodeableConcept`.",
   "compose" : {
-    "include" : [
-      {
-        "system" : "http://tecnomod-um.org/CodeSystem/discharge-dept-cs"
-      }
-    ]
+    "include" : [{
+      "system" : "http://tecnomod-um.org/CodeSystem/discharge-dept-cs"
+    }]
   }
 }
 

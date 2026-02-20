@@ -230,10 +230,46 @@ This base profile establishes a consistent minimum dataset and reference structu
          <tr>
             <td style="column-width:30%">
                <a href="StructureDefinition-discharge-medication-request-profile.html"
-                  title="StructureDefinition/discharge-medication-request-profile">Discharge Medication Request Profile</a>
+                  title="StructureDefinition/discharge-medication-request-profile">Discharge MedicationRequest Profile</a>
             </td>
             <td>
-<p>Represents a medication prescription made as part of the patient's discharge plan, categorized as community administration.</p>
+<p>Profile for representing a medication prescription issued as part of the patient’s <strong>discharge plan</strong> following a stroke encounter.</p>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Capture secondary prevention and chronic therapy prescriptions intended to be taken <strong>after discharge</strong> (community setting),
+enabling:
+    <ul>
+      <li>discharge medication reconciliation,</li>
+      <li>continuity of care between hospital and primary care,</li>
+      <li>registry submission and quality improvement (e.g., antithrombotic/statin at discharge),</li>
+      <li>episode-linked analytics (tie to the index stroke Encounter).</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Key elements and how to use them</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">status</code> (fixed to active): indicates the prescription is currently intended/valid at the time of discharge documentation.
+    <ul>
+      <li>Use <code class="language-plaintext highlighter-rouge">stopped</code> or <code class="language-plaintext highlighter-rouge">cancelled</code> in your broader implementation if a discharge prescription is later withdrawn (not constrained here).</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">category</code> (fixed to community): indicates the medication is intended for administration in the community/outpatient context.
+    <ul>
+      <li>This helps distinguish discharge prescriptions from inpatient medication orders.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">medication</code> (required; bound to MedicationVS): identifies the prescribed agent or, if unavailable, a coarse category.
+    <ul>
+      <li>Prefer specific SNOMED CT substance concepts (e.g., aspirin) when available.</li>
+      <li>Use <code class="language-plaintext highlighter-rouge">MedicationCS</code> category codes only when the specific agent cannot be coded.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">subject</code> (required): the patient who will take the medication.</li>
+  <li><code class="language-plaintext highlighter-rouge">encounter</code> (required): links the prescription to the index stroke admission encounter.</li>
+  <li><code class="language-plaintext highlighter-rouge">authoredOn</code> (optional but recommended): the date/time the discharge prescription was authored.</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -992,6 +1028,28 @@ enabling consistent:
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="ValueSet-medication-vs.html" title="ValueSet/medication-vs">Discharge Medications ValueSet</a>
+            </td>
+            <td>
+<p>ValueSet defining allowable coded medications (or medication categories) for discharge MedicationRequests.</p>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Required binding to <code class="language-plaintext highlighter-rouge">MedicationRequest.medication</code> in <code class="language-plaintext highlighter-rouge">DischargeMedicationRequestProfile</code>.</li>
+</ul>
+
+<p><strong>What this ValueSet supports</strong>
+1) <strong>Specific SNOMED CT substance concepts</strong> (e.g., aspirin, clopidogrel, warfarin) for agent-level capture.
+2) <strong>Local category codes</strong> (from <code class="language-plaintext highlighter-rouge">MedicationCS</code>) for minimum-data capture when only the class is known.</p>
+
+<p><strong>Scope and modeling notes</strong></p>
+<ul>
+  <li>This ValueSet does not encode dose, route, frequency, or duration; those are expressed in MedicationRequest elements.</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="ValueSet-vs-gender-snomed.html" title="ValueSet/vs-gender-snomed">Gender (SNOMED CT)</a>
             </td>
             <td>
@@ -1031,14 +1089,6 @@ if a coded placeholder is required, <code class="language-plaintext highlighter-
 <ul>
   <li>Required binding for <code class="language-plaintext highlighter-rouge">InitialCareIntensityExtension.valueCodeableConcept</code>.</li>
 </ul>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="ValueSet-medication-vs.html" title="ValueSet/medication-vs">Medications ValueSet</a>
-            </td>
-            <td>
-<p>SNOMED CT codes for drug products or substances.</p>
 </td>
          </tr>
          <tr>
@@ -1481,6 +1531,27 @@ It is primarily used to contextualize instruments whose interpretation depends o
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="CodeSystem-medication-cs.html" title="CodeSystem/medication-cs">Discharge Medication Category CodeSystem</a>
+            </td>
+            <td>
+<p>Local CodeSystem providing <strong>coarse medication categories</strong> used in discharge prescribing when the source system cannot
+(or does not) provide a specific coded drug product/substance.</p>
+
+<p><strong>Primary use-cases</strong></p>
+<ul>
+  <li>Minimum-data capture for discharge medication classes relevant to stroke secondary prevention (e.g., anticoagulant vs antiplatelet).</li>
+  <li>Registry reporting where only “medication class prescribed at discharge” is available.</li>
+  <li>Analytics and quality indicators (e.g., “antithrombotic at discharge”) when specific agent is unknown.</li>
+</ul>
+
+<p><strong>How it is used in FHIR</strong></p>
+<ul>
+  <li>Included in <code class="language-plaintext highlighter-rouge">MedicationVS</code> so it can be used in <code class="language-plaintext highlighter-rouge">MedicationRequest.medication</code> (CodeableConcept).</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="CodeSystem-hemorrhagic-stroke-bleeding-reason-cs.html"
                   title="CodeSystem/hemorrhagic-stroke-bleeding-reason-cs">Hemorrhagic Stroke Bleeding Reason CodeSystem</a>
             </td>
@@ -1519,14 +1590,6 @@ on a definitive hemorrhagic stroke Condition.</li>
   <li><code class="language-plaintext highlighter-rouge">monitored</code>: telemetry or continuous monitoring outside ICU.</li>
   <li><code class="language-plaintext highlighter-rouge">icu-stroke</code>: ICU or dedicated stroke unit level care (per local definitions).</li>
 </ul>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="CodeSystem-medication-cs.html" title="CodeSystem/medication-cs">Medications CodeSystem</a>
-            </td>
-            <td>
-<p>Codes for drug products or substances representing the Medications on the patient discharge.</p>
 </td>
          </tr>
          <tr>
@@ -1986,7 +2049,7 @@ Each code represents a duration measured between two clinically meaningful event
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 14:52+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Fri, Feb 20, 2026 08:36+0000">2026-02-20</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/age-at-onset-observation-profile | *Version*:0.1.0 |
-| Draft as of 2026-02-19 | *Computable Name*:AgeAtOnsetObservationProfile |
+| Draft as of 2026-02-20 | *Computable Name*:AgeAtOnsetObservationProfile |
 
  
 Profile for recording the patient’s age at the time of stroke onset as an integer value in years. 
@@ -50,95 +50,83 @@ Other representations of profile: [CSV](StructureDefinition-age-at-onset-observa
   "name" : "AgeAtOnsetObservationProfile",
   "title" : "Age at Stroke Onset Observation Profile (R5)",
   "status" : "draft",
-  "date" : "2026-02-19T14:52:32+00:00",
+  "date" : "2026-02-20T08:36:31+00:00",
   "publisher" : "UMU",
-  "contact" : [
-    {
-      "name" : "UMU",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://tecnomod-um.org"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "UMU",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://tecnomod-um.org"
+    }]
+  }],
   "description" : "Profile for recording the patient’s age at the time of stroke onset as an integer value in years.\n\n**Primary use-case**\n- Provides a computable attribute commonly used in etiologic assessment, risk stratification, and registry datasets.\n\n**Modeling note**\n- The age may be derived from DOB and an onset reference (symptom onset, last-known-well, discovery time).\n  This profile records the resulting age value, not the derivation method; capture provenance separately if needed.",
   "purpose" : "Record age-at-onset in years as a simple, computable value used in etiologic assessment and risk stratification.",
   "fhirVersion" : "5.0.0",
-  "mapping" : [
-    {
-      "identity" : "workflow",
-      "uri" : "http://hl7.org/fhir/workflow",
-      "name" : "Workflow Pattern"
-    },
-    {
-      "identity" : "w5",
-      "uri" : "http://hl7.org/fhir/fivews",
-      "name" : "FiveWs Pattern Mapping"
-    },
-    {
-      "identity" : "sct-concept",
-      "uri" : "http://snomed.info/conceptdomain",
-      "name" : "SNOMED CT Concept Domain Binding"
-    },
-    {
-      "identity" : "v2",
-      "uri" : "http://hl7.org/v2",
-      "name" : "HL7 V2 Mapping"
-    },
-    {
-      "identity" : "rim",
-      "uri" : "http://hl7.org/v3",
-      "name" : "RIM Mapping"
-    },
-    {
-      "identity" : "sct-attr",
-      "uri" : "http://snomed.org/attributebinding",
-      "name" : "SNOMED CT Attribute Binding"
-    }
-  ],
+  "mapping" : [{
+    "identity" : "workflow",
+    "uri" : "http://hl7.org/fhir/workflow",
+    "name" : "Workflow Pattern"
+  },
+  {
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  },
+  {
+    "identity" : "sct-concept",
+    "uri" : "http://snomed.info/conceptdomain",
+    "name" : "SNOMED CT Concept Domain Binding"
+  },
+  {
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 V2 Mapping"
+  },
+  {
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  },
+  {
+    "identity" : "sct-attr",
+    "uri" : "http://snomed.org/attributebinding",
+    "name" : "SNOMED CT Attribute Binding"
+  }],
   "kind" : "resource",
   "abstract" : false,
   "type" : "Observation",
   "baseDefinition" : "http://tecnomod-um.org/StructureDefinition/base-stroke-observation",
   "derivation" : "constraint",
   "differential" : {
-    "element" : [
-      {
-        "id" : "Observation",
-        "path" : "Observation"
+    "element" : [{
+      "id" : "Observation",
+      "path" : "Observation"
+    },
+    {
+      "id" : "Observation.code",
+      "path" : "Observation.code",
+      "short" : "Age-at-onset concept.",
+      "definition" : "Fixed to the SNOMED CT observable entity indicating the observation represents age at onset.",
+      "patternCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "445518008",
+          "display" : "Age at onset of clinical finding (observable entity)"
+        }]
       },
-      {
-        "id" : "Observation.code",
-        "path" : "Observation.code",
-        "short" : "Age-at-onset concept.",
-        "definition" : "Fixed to the SNOMED CT observable entity indicating the observation represents age at onset.",
-        "patternCodeableConcept" : {
-          "coding" : [
-            {
-              "system" : "http://snomed.info/sct",
-              "code" : "445518008",
-              "display" : "Age at onset of clinical finding (observable entity)"
-            }
-          ]
-        },
-        "mustSupport" : true
-      },
-      {
-        "id" : "Observation.value[x]",
-        "path" : "Observation.value[x]",
-        "short" : "Age in completed years.",
-        "definition" : "Integer age in years at the chosen onset reference point (per local operational definition).",
-        "min" : 1,
-        "type" : [
-          {
-            "code" : "integer"
-          }
-        ],
-        "mustSupport" : true
-      }
-    ]
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.value[x]",
+      "path" : "Observation.value[x]",
+      "short" : "Age in completed years.",
+      "definition" : "Integer age in years at the chosen onset reference point (per local operational definition).",
+      "min" : 1,
+      "type" : [{
+        "code" : "integer"
+      }],
+      "mustSupport" : true
+    }]
   }
 }
 

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/stroke-swallow-procedure-profile | *Version*:0.1.0 |
-| Active as of 2026-02-19 | *Computable Name*:StrokeSwallowProcedureProfile |
+| Active as of 2026-02-20 | *Computable Name*:StrokeSwallowProcedureProfile |
 
  
 Profile for documenting **swallow screening / dysphagia assessment** during a stroke episode. 
@@ -49,127 +49,109 @@ Other representations of profile: [CSV](StructureDefinition-stroke-swallow-proce
   "name" : "StrokeSwallowProcedureProfile",
   "title" : "Stroke Swallow Procedure Profile",
   "status" : "active",
-  "date" : "2026-02-19T14:52:32+00:00",
+  "date" : "2026-02-20T08:36:31+00:00",
   "publisher" : "UMU",
-  "contact" : [
-    {
-      "name" : "UMU",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://tecnomod-um.org"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "UMU",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://tecnomod-um.org"
+    }]
+  }],
   "description" : " Profile for documenting **swallow screening / dysphagia assessment** during a stroke episode.\n\n**Captures**\n- `code`: the screening/assessment procedure or tool used (SwallowProceduresVS).\n- `status`: whether completed or not done.\n- `statusReason`: controlled reason set when not done.\n- `extension[screeningTimingCategory]`: timing bucket (e.g., within 4h).\n- `extension[timingContext]`: acute/post-acute phase relative to encounter start.\n\n\n** Typical scenarios**\n1) Screening completed on-site: `status=completed`, `extension[screeningTimingCategory]` optional, `extension[timingContext]` optional.\n2) Screening not performed: `status=not-done`, `statusReason` required.\n3) Screening performed elsewhere: `status=not-done`, `statusReason` = performedElsewhere, `extension[screeningTimingCategory]` optional.\n",
   "fhirVersion" : "5.0.0",
-  "mapping" : [
-    {
-      "identity" : "workflow",
-      "uri" : "http://hl7.org/fhir/workflow",
-      "name" : "Workflow Pattern"
-    },
-    {
-      "identity" : "w5",
-      "uri" : "http://hl7.org/fhir/fivews",
-      "name" : "FiveWs Pattern Mapping"
-    },
-    {
-      "identity" : "rim",
-      "uri" : "http://hl7.org/v3",
-      "name" : "RIM Mapping"
-    },
-    {
-      "identity" : "v2",
-      "uri" : "http://hl7.org/v2",
-      "name" : "HL7 V2 Mapping"
-    }
-  ],
+  "mapping" : [{
+    "identity" : "workflow",
+    "uri" : "http://hl7.org/fhir/workflow",
+    "name" : "Workflow Pattern"
+  },
+  {
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  },
+  {
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  },
+  {
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 V2 Mapping"
+  }],
   "kind" : "resource",
   "abstract" : false,
   "type" : "Procedure",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Procedure",
   "derivation" : "constraint",
   "differential" : {
-    "element" : [
-      {
-        "id" : "Procedure",
-        "path" : "Procedure"
-      },
-      {
-        "id" : "Procedure.extension",
-        "path" : "Procedure.extension",
-        "slicing" : {
-          "discriminator" : [
-            {
-              "type" : "value",
-              "path" : "url"
-            }
-          ],
-          "ordered" : false,
-          "rules" : "open"
-        }
-      },
-      {
-        "id" : "Procedure.extension:screeningTimingCategory",
-        "path" : "Procedure.extension",
-        "sliceName" : "screeningTimingCategory",
-        "min" : 0,
-        "max" : "1",
-        "type" : [
-          {
-            "code" : "Extension",
-            "profile" : [
-              "http://tecnomod-um.org/StructureDefinition/swallowing-screening-timing-category-ext"
-            ]
-          }
-        ],
-        "mustSupport" : true
-      },
-      {
-        "id" : "Procedure.extension:timingContext",
-        "path" : "Procedure.extension",
-        "sliceName" : "timingContext",
-        "min" : 0,
-        "max" : "1",
-        "type" : [
-          {
-            "code" : "Extension",
-            "profile" : [
-              "http://tecnomod-um.org/StructureDefinition/procedure-timing-context-ext"
-            ]
-          }
-        ],
-        "mustSupport" : true
-      },
-      {
-        "id" : "Procedure.status",
-        "path" : "Procedure.status",
-        "mustSupport" : true,
-        "binding" : {
-          "strength" : "required",
-          "valueSet" : "http://hl7.org/fhir/ValueSet/event-status"
-        }
-      },
-      {
-        "id" : "Procedure.statusReason",
-        "path" : "Procedure.statusReason",
-        "mustSupport" : true,
-        "binding" : {
-          "strength" : "required",
-          "valueSet" : "http://tecnomod-um.org/ValueSet/stroke-proc-not-done-reason-vs"
-        }
-      },
-      {
-        "id" : "Procedure.code",
-        "path" : "Procedure.code",
-        "binding" : {
-          "strength" : "required",
-          "valueSet" : "http://tecnomod-um.org/ValueSet/swallow-procedures-vs"
-        }
+    "element" : [{
+      "id" : "Procedure",
+      "path" : "Procedure"
+    },
+    {
+      "id" : "Procedure.extension",
+      "path" : "Procedure.extension",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "url"
+        }],
+        "ordered" : false,
+        "rules" : "open"
       }
-    ]
+    },
+    {
+      "id" : "Procedure.extension:screeningTimingCategory",
+      "path" : "Procedure.extension",
+      "sliceName" : "screeningTimingCategory",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["http://tecnomod-um.org/StructureDefinition/swallowing-screening-timing-category-ext"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Procedure.extension:timingContext",
+      "path" : "Procedure.extension",
+      "sliceName" : "timingContext",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["http://tecnomod-um.org/StructureDefinition/procedure-timing-context-ext"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Procedure.status",
+      "path" : "Procedure.status",
+      "mustSupport" : true,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "http://hl7.org/fhir/ValueSet/event-status"
+      }
+    },
+    {
+      "id" : "Procedure.statusReason",
+      "path" : "Procedure.statusReason",
+      "mustSupport" : true,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "http://tecnomod-um.org/ValueSet/stroke-proc-not-done-reason-vs"
+      }
+    },
+    {
+      "id" : "Procedure.code",
+      "path" : "Procedure.code",
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "http://tecnomod-um.org/ValueSet/swallow-procedures-vs"
+      }
+    }]
   }
 }
 

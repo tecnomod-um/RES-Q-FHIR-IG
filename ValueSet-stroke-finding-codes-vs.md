@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/stroke-finding-codes-vs | *Version*:0.1.0 |
-| Active as of 2026-02-19 | *Computable Name*:StrokeFindingCodesVS |
+| Active as of 2026-02-20 | *Computable Name*:StrokeFindingCodesVS |
 
  
 This ValueSet aggregates coded Observation.code concepts used by `SpecificFindingObservationProfile`. 
@@ -58,29 +58,23 @@ It currently includes:
   "name" : "StrokeFindingCodesVS",
   "title" : "Specific Stroke Finding Codes ValueSet",
   "status" : "active",
-  "date" : "2026-02-19T14:52:32+00:00",
+  "date" : "2026-02-20T08:36:31+00:00",
   "publisher" : "UMU",
-  "contact" : [
-    {
-      "name" : "UMU",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://tecnomod-um.org"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "UMU",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://tecnomod-um.org"
+    }]
+  }],
   "description" : "This ValueSet aggregates coded Observation.code concepts used by `SpecificFindingObservationProfile`.\n\nIt currently includes:\n- Specific disorder concepts used as a finding focus (SpecificFindingCodesVS), and\n- The mTICI assessment concept (MTICICodeVS).\n\n**How to interpret usage**\n- If `Observation.code` is a disorder concept (e.g., AF), the Observation should be interpreted as an assessment about that finding,\n  with the result/status carried in `Observation.valueCodeableConcept` (e.g., AfibFlutterStatusVS).\n- If `Observation.code` is an assessment concept (e.g., mTICI), `Observation.valueCodeableConcept` carries the score (MticiScoreVS).",
   "compose" : {
-    "include" : [
-      {
-        "valueSet" : ["http://tecnomod-um.org/ValueSet/specific-finding-codes-vs"]
-      },
-      {
-        "valueSet" : ["http://tecnomod-um.org/ValueSet/mtici-code-vs"]
-      }
-    ]
+    "include" : [{
+      "valueSet" : ["http://tecnomod-um.org/ValueSet/specific-finding-codes-vs"]
+    },
+    {
+      "valueSet" : ["http://tecnomod-um.org/ValueSet/mtici-code-vs"]
+    }]
   }
 }
 

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/stroke-circumstance-codes-vs | *Version*:0.1.0 |
-| Active as of 2026-02-19 | *Computable Name*:StrokeCircumstanceCodesVS |
+| Active as of 2026-02-20 | *Computable Name*:StrokeCircumstanceCodesVS |
 
  
 This ValueSet includes all onset-circumstance codes from StrokeCircumstanceCodesCS. 
@@ -53,26 +53,20 @@ This ValueSet includes all onset-circumstance codes from StrokeCircumstanceCodes
   "name" : "StrokeCircumstanceCodesVS",
   "title" : "Stroke Circumstance Codes ValueSet",
   "status" : "active",
-  "date" : "2026-02-19T14:52:32+00:00",
+  "date" : "2026-02-20T08:36:31+00:00",
   "publisher" : "UMU",
-  "contact" : [
-    {
-      "name" : "UMU",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://tecnomod-um.org"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "UMU",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://tecnomod-um.org"
+    }]
+  }],
   "description" : "This ValueSet includes all onset-circumstance codes from StrokeCircumstanceCodesCS.\n\n**Primary use-case**\n- Required binding for `StrokeCircumstanceObservationProfile.code`.",
   "compose" : {
-    "include" : [
-      {
-        "system" : "http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs"
-      }
-    ]
+    "include" : [{
+      "system" : "http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs"
+    }]
   }
 }
 

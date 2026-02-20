@@ -1,430 +1,400 @@
 {
-  "codeSystems" : [
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/event-status",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "EventStatus",
-      "title" : "EventStatus",
-      "description" : "Codes identifying the lifecycle stage of an event.",
-      "systems" : ["http://hl7.org/fhir/event-status"],
-      "oids" : ["2.16.840.1.113883.4.642.3.109"],
-      "sources" : ["2.16.840.1.113883.4.642.3.109"],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
-      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
-      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
-      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
+  "codeSystems" : [{
+    "url" : "http://hl7.org/fhir/ValueSet/event-status",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "EventStatus",
+    "title" : "EventStatus",
+    "description" : "Codes identifying the lifecycle stage of an event.",
+    "systems" : ["http://hl7.org/fhir/event-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.109"],
+    "sources" : ["2.16.840.1.113883.4.642.3.109"],
+    "uses" : {
     },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/medication-statement-adherence",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "MedicationStatementAdherenceCodes",
-      "title" : "MedicationStatement Adherence Codes",
-      "description" : "MedicationStatement Adherence Codes",
-      "systems" : [
-        "http://hl7.org/fhir/CodeSystem/medication-statement-adherence"
-      ],
-      "oids" : ["2.16.840.1.113883.4.642.3.3090"],
-      "sources" : ["2.16.840.1.113883.4.642.3.3090"],
-      "uses" : {
-      },
-      "StructureDefinition-prior-medication-statement-profile.html" : "Prior Medication Statement Profile (R5)"
+    "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
+    "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
+    "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
+    "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/medication-statement-adherence",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "MedicationStatementAdherenceCodes",
+    "title" : "MedicationStatement Adherence Codes",
+    "description" : "MedicationStatement Adherence Codes",
+    "systems" : ["http://hl7.org/fhir/CodeSystem/medication-statement-adherence"],
+    "oids" : ["2.16.840.1.113883.4.642.3.3090"],
+    "sources" : ["2.16.840.1.113883.4.642.3.3090"],
+    "uses" : {
     },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/admission-source-vs",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "AdmissionSourceValueSet",
-      "title" : "Admission Sources ValueSet",
-      "description" : "This ValueSet enumerates modes of transport or pathways by which a patient arrived for the index stroke encounter.\n\n**Primary use-cases**\n- Bind to admission source elements (commonly `Encounter.hospitalization.admitSource` or local equivalents) to support:\n  - operational reporting (ambulance vs own transport),\n  - pathway compliance (e.g., EMS prenotification pathways),\n  - inter-facility transfer analytics.",
-      "systems" : ["http://snomed.info/sct"]
+    "StructureDefinition-prior-medication-statement-profile.html" : "Prior Medication Statement Profile (R5)"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/admission-source-vs",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "AdmissionSourceValueSet",
+    "title" : "Admission Sources ValueSet",
+    "description" : "This ValueSet enumerates modes of transport or pathways by which a patient arrived for the index stroke encounter.\n\n**Primary use-cases**\n- Bind to admission source elements (commonly `Encounter.hospitalization.admitSource` or local equivalents) to support:\n  - operational reporting (ambulance vs own transport),\n  - pathway compliance (e.g., EMS prenotification pathways),\n  - inter-facility transfer analytics.",
+    "systems" : ["http://snomed.info/sct"]
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/afib-flutter-status-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "AfibFlutterStatusVS",
+    "title" : "Atrial Fibrillation / Flutter Assessment Status ValueSet",
+    "description" : "This ValueSet constrains the allowable coded outcomes for documenting the **status of an AF/flutter assessment** within the stroke workflow.\n\n**Primary use-case**\n- Bind to `Observation.valueCodeableConcept` in the `SpecificFindingObservationProfile` when `Observation.code` refers to AF/flutter as a finding focus.\n- Enables harmonized interpretation for analytics and decision support (e.g., anticoagulation pathway triggers) without forcing a Condition assertion.\n\n**Scope and modeling notes**\n- This ValueSet expresses *assessment outcome/status* (detected/known/absent/not screened/unknown).\n- It does not replace Condition for diagnoses. When AF/flutter is confirmed as a diagnosis, represent it as a `Condition` with the appropriate SNOMED CT disorder code.",
+    "systems" : ["http://snomed.info/sct"]
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/assessment-context-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "AssessmentContextVS",
+    "title" : "Assessment Context ValueSet",
+    "description" : "This ValueSet includes all phase/context codes from AssessmentContextCS.\n\n**Primary use-case**\n- Required binding for elements that must indicate the clinical phase of an assessment (e.g., timing context extensions).",
+    "systems" : ["http://tecnomod-um.org/CodeSystem/assessment-context-cs"],
+    "uses" : {
     },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/afib-flutter-status-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "AfibFlutterStatusVS",
-      "title" : "Atrial Fibrillation / Flutter Assessment Status ValueSet",
-      "description" : "This ValueSet constrains the allowable coded outcomes for documenting the **status of an AF/flutter assessment** within the stroke workflow.\n\n**Primary use-case**\n- Bind to `Observation.valueCodeableConcept` in the `SpecificFindingObservationProfile` when `Observation.code` refers to AF/flutter as a finding focus.\n- Enables harmonized interpretation for analytics and decision support (e.g., anticoagulation pathway triggers) without forcing a Condition assertion.\n\n**Scope and modeling notes**\n- This ValueSet expresses *assessment outcome/status* (detected/known/absent/not screened/unknown).\n- It does not replace Condition for diagnoses. When AF/flutter is confirmed as a diagnosis, represent it as a `Condition` with the appropriate SNOMED CT disorder code.",
-      "systems" : ["http://snomed.info/sct"]
+    "StructureDefinition-observation-timing-context-ext.html" : "Observation Timing Context Extension"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/brain-imaging-modality-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "BrainImagingModalityVS",
+    "title" : "Brain Imaging Modality ValueSet",
+    "description" : "Defines the SNOMED CT codes for individual brain imaging modalities performed as procedures.",
+    "systems" : ["http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs",
+    "http://snomed.info/sct"],
+    "uses" : {
     },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/assessment-context-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "AssessmentContextVS",
-      "title" : "Assessment Context ValueSet",
-      "description" : "This ValueSet includes all phase/context codes from AssessmentContextCS.\n\n**Primary use-case**\n- Required binding for elements that must indicate the clinical phase of an assessment (e.g., timing context extensions).",
-      "systems" : ["http://tecnomod-um.org/CodeSystem/assessment-context-cs"],
-      "uses" : {
-      },
-      "StructureDefinition-observation-timing-context-ext.html" : "Observation Timing Context Extension"
+    "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/carotid-imaging-modality-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "CarotidImagingModalityVS",
+    "title" : "Carotid Arteries Imaging Modality ValueSet",
+    "description" : "This ValueSet enumerates standardized codes (primarily SNOMED CT procedures) representing **carotid imaging modalities** used in stroke workflows.\n\n**Primary use-case**\n- Bind to `Procedure.code` when recording a carotid imaging study performed during the stroke episode.",
+    "systems" : ["http://snomed.info/sct"]
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/discharge-dept-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "DischargeDeptVS",
+    "title" : "Discharge Department/Service ValueSet",
+    "description" : "ValueSet restricting the allowed department/service categories recorded at discharge.\n\n**Primary use-case**\n- Required binding for `DischargeDepartmentServiceExtension.valueCodeableConcept`.",
+    "systems" : ["http://tecnomod-um.org/CodeSystem/discharge-dept-cs"],
+    "uses" : {
     },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/brain-imaging-modality-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "BrainImagingModalityVS",
-      "title" : "Brain Imaging Modality ValueSet",
-      "description" : "Defines the SNOMED CT codes for individual brain imaging modalities performed as procedures.",
-      "systems" : [
-        "http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs",
-        "http://snomed.info/sct"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile"
+    "StructureDefinition-discharge-department-service-ext.html" : "Discharge Department/Service Extension"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/discharge-destination-vs",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "DischargeDestinationValueSet",
+    "title" : "Discharge Destination ValueSet",
+    "description" : "This ValueSet enumerates discharge destination concepts (primarily SNOMED CT procedure-like “discharge to …” concepts).\n\n**Primary use-cases**\n- Bind to discharge disposition elements in encounter/hospitalization modeling.\n  enabling consistent:\n  - care transition analytics,\n  - pathway reporting (home vs ward vs facility vs mortuary),\n  - downstream coordination workflows.",
+    "systems" : ["http://snomed.info/sct"]
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/functional-score-codes-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "FunctionalScoreCodesVS",
+    "title" : "Stroke Functional Score Codes ValueSet",
+    "description" : "This ValueSet constrains `Observation.code` for functional outcome and severity instruments represented in this guide:\n- Modified Rankin Scale score (mRS)\n- NIH Stroke Scale total score (NIHSS)\n\n**Primary use-case**\n- Bind to `Observation.code` in `FunctionalScoreObservationProfile`.\n\n**Datatype expectations enforced via invariants**\n- mRS: `Observation.valueCodeableConcept` bound to MRsScoreVS (ordinal categories 0–6).\n- NIHSS: `Observation.valueInteger` as total NIHSS score.",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
     },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/carotid-imaging-modality-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "CarotidImagingModalityVS",
-      "title" : "Carotid Arteries Imaging Modality ValueSet",
-      "description" : "This ValueSet enumerates standardized codes (primarily SNOMED CT procedures) representing **carotid imaging modalities** used in stroke workflows.\n\n**Primary use-case**\n- Bind to `Procedure.code` when recording a carotid imaging study performed during the stroke episode.",
-      "systems" : ["http://snomed.info/sct"]
+    "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/hemorrhagic-stroke-bleeding-reason-vs",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "HemorrhagicStrokeBleedingReasonVS",
+    "title" : "Hemorrhagic Stroke Bleeding Reason ValueSet",
+    "description" : "This ValueSet defines allowable causes of bleeding for hemorrhagic stroke documentation.\n\n**Primary use-case**\n- Required binding for `HemorrhagicStrokeBleedingReasonExt.valueCodeableConcept` on a definitive hemorrhagic stroke Condition.\n\n**Implementation guidance**\n- Use when the cause is *identified* (e.g., aneurysm, vascular malformation).\n- If the cause is unknown/undetermined, prefer documenting that explicitly using narrative (`Condition.note`) and/or a dedicated assessment Observation;\n  if a coded placeholder is required, `Undetermined (qualifier value)` is included as an option.",
+    "systems" : ["http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs",
+    "http://snomed.info/sct"],
+    "uses" : {
     },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/discharge-dept-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "DischargeDeptVS",
-      "title" : "Discharge Department/Service ValueSet",
-      "description" : "ValueSet restricting the allowed department/service categories recorded at discharge.\n\n**Primary use-case**\n- Required binding for `DischargeDepartmentServiceExtension.valueCodeableConcept`.",
-      "systems" : ["http://tecnomod-um.org/CodeSystem/discharge-dept-cs"],
-      "uses" : {
-      },
-      "StructureDefinition-discharge-department-service-ext.html" : "Discharge Department/Service Extension"
+    "StructureDefinition-hemorrhagic-stroke-bleeding-reason-ext.html" : "Hemorrhagic Stroke – Bleeding Reason"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/initial-care-intensity-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "InitialCareIntensityVS",
+    "title" : "Initial Care Intensity ValueSet",
+    "description" : "ValueSet restricting allowed initial care intensity categories.\n\n**Primary use-case**\n- Required binding for `InitialCareIntensityExtension.valueCodeableConcept`.",
+    "systems" : ["http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs"],
+    "uses" : {
     },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/discharge-destination-vs",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "DischargeDestinationValueSet",
-      "title" : "Discharge Destination ValueSet",
-      "description" : "This ValueSet enumerates discharge destination concepts (primarily SNOMED CT procedure-like “discharge to …” concepts).\n\n**Primary use-cases**\n- Bind to discharge disposition elements in encounter/hospitalization modeling.\n  enabling consistent:\n  - care transition analytics,\n  - pathway reporting (home vs ward vs facility vs mortuary),\n  - downstream coordination workflows.",
-      "systems" : ["http://snomed.info/sct"]
+    "StructureDefinition-initial-care-intensity-ext.html" : "Initial Care Intensity Extension"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/medication-vs",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "MedicationVS",
+    "title" : "Discharge Medications ValueSet",
+    "description" : "ValueSet defining allowable coded medications (or medication categories) for discharge MedicationRequests.\n\n**Primary use-case**\n- Required binding to `MedicationRequest.medication` in `DischargeMedicationRequestProfile`.\n\n**What this ValueSet supports**\n1) **Specific SNOMED CT substance concepts** (e.g., aspirin, clopidogrel, warfarin) for agent-level capture.\n2) **Local category codes** (from `MedicationCS`) for minimum-data capture when only the class is known.\n\n**Scope and modeling notes**\n- This ValueSet does not encode dose, route, frequency, or duration; those are expressed in MedicationRequest elements.",
+    "systems" : ["http://tecnomod-um.org/CodeSystem/medication-cs",
+    "http://snomed.info/sct"],
+    "uses" : {
     },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/functional-score-codes-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "FunctionalScoreCodesVS",
-      "title" : "Stroke Functional Score Codes ValueSet",
-      "description" : "This ValueSet constrains `Observation.code` for functional outcome and severity instruments represented in this guide:\n- Modified Rankin Scale score (mRS)\n- NIH Stroke Scale total score (NIHSS)\n\n**Primary use-case**\n- Bind to `Observation.code` in `FunctionalScoreObservationProfile`.\n\n**Datatype expectations enforced via invariants**\n- mRS: `Observation.valueCodeableConcept` bound to MRsScoreVS (ordinal categories 0–6).\n- NIHSS: `Observation.valueInteger` as total NIHSS score.",
-      "systems" : ["http://snomed.info/sct"],
-      "uses" : {
-      },
-      "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile"
+    "StructureDefinition-prior-medication-statement-profile.html" : "Prior Medication Statement Profile (R5)",
+    "StructureDefinition-discharge-medication-request-profile.html" : "Discharge MedicationRequest Profile"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/mrs-score-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "MRsScoreVS",
+    "title" : "Modified Rankin Scale (mRS) Score ValueSet",
+    "description" : "This ValueSet includes all mRS grades (0–6) defined in MRsScoreCS.\n\n**Primary use-case**\n- Bind to `Observation.valueCodeableConcept` when `Observation.code` indicates the Observation represents an mRS score.",
+    "systems" : ["http://tecnomod-um.org/CodeSystem/mrs-score-cs"],
+    "uses" : {
     },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/hemorrhagic-stroke-bleeding-reason-vs",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "HemorrhagicStrokeBleedingReasonVS",
-      "title" : "Hemorrhagic Stroke Bleeding Reason ValueSet",
-      "description" : "This ValueSet defines allowable causes of bleeding for hemorrhagic stroke documentation.\n\n**Primary use-case**\n- Required binding for `HemorrhagicStrokeBleedingReasonExt.valueCodeableConcept` on a definitive hemorrhagic stroke Condition.\n\n**Implementation guidance**\n- Use when the cause is *identified* (e.g., aneurysm, vascular malformation).\n- If the cause is unknown/undetermined, prefer documenting that explicitly using narrative (`Condition.note`) and/or a dedicated assessment Observation;\n  if a coded placeholder is required, `Undetermined (qualifier value)` is included as an option.",
-      "systems" : [
-        "http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs",
-        "http://snomed.info/sct"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-hemorrhagic-stroke-bleeding-reason-ext.html" : "Hemorrhagic Stroke – Bleeding Reason"
+    "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/mtici-code-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "MTICICodeVS",
+    "title" : "Modified Thrombolysis in Cerebral Infarction Assessment ValueSet",
+    "description" : "This ValueSet includes the mTICI assessment concept code(s) from MTICICodeCS.\n\n**Primary use-case**\n- Bind to `Observation.code` when recording an mTICI reperfusion grade Observation.\n- Pair with `Observation.valueCodeableConcept` bound to MticiScoreVS.",
+    "systems" : ["http://tecnomod-um.org/CodeSystem/mtici-code-cs"],
+    "uses" : {
     },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/initial-care-intensity-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "InitialCareIntensityVS",
-      "title" : "Initial Care Intensity ValueSet",
-      "description" : "ValueSet restricting allowed initial care intensity categories.\n\n**Primary use-case**\n- Required binding for `InitialCareIntensityExtension.valueCodeableConcept`.",
-      "systems" : [
-        "http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-initial-care-intensity-ext.html" : "Initial Care Intensity Extension"
+    "ValueSet-stroke-finding-codes-vs.html" : "Specific Stroke Finding Codes ValueSet"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/mtici-score-vs",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "MTICIScoreValueSet",
+    "title" : "Modified Treatment in Cerebral Infarction Grade Score ValueSet",
+    "description" : "This ValueSet enumerates all allowable Modified Treatment in Cerebral Infarction reperfusion grade values (0, 1, 2a, 2b, 2c, 3) from MticiScoreCS.\n\n**Primary use-case**\n- Required binding to `Observation.valueCodeableConcept` when an Observation represents an mTICI grade outcome.\n\n**Why a dedicated ValueSet**\n- Ensures consistent coding across implementations and sites.\n- Enables reliable registry reporting, audit/quality measurement, and research analytics.",
+    "systems" : ["http://tecnomod-um.org/CodeSystem/mtici-score-cs"]
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/perforation-procedures-vs",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "PerforationProceduresValueset",
+    "title" : "Perforation Procedures ValueSet",
+    "description" : "ValueSet restricting Procedure codes to stroke **reperfusion interventions**:\n- IV thrombolysis (IVT)\n- Mechanical thrombectomy (MT)",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
     },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/medication-vs",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "MedicationVS",
-      "title" : "Medications ValueSet",
-      "description" : "SNOMED CT codes for drug products or substances.",
-      "systems" : [
-        "http://tecnomod-um.org/CodeSystem/medication-cs",
-        "http://snomed.info/sct"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-prior-medication-statement-profile.html" : "Prior Medication Statement Profile (R5)",
-      "StructureDefinition-discharge-medication-request-profile.html" : "Discharge Medication Request Profile"
+    "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/procedure-timing-context-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "ProcedureTimingContextVS",
+    "title" : "Procedure Timing Context ValueSet",
+    "description" : "ValueSet limiting allowed values for the Procedure timing context extension (acute/post-acute/unknown).\n\n**Use-case**\n- Required binding to ensure comparable phase classification across systems and sites.",
+    "systems" : ["http://tecnomod-um.org/CodeSystem/procedure-timing-context-cs"],
+    "uses" : {
     },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/mrs-score-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "MRsScoreVS",
-      "title" : "Modified Rankin Scale (mRS) Score ValueSet",
-      "description" : "This ValueSet includes all mRS grades (0–6) defined in MRsScoreCS.\n\n**Primary use-case**\n- Bind to `Observation.valueCodeableConcept` when `Observation.code` indicates the Observation represents an mRS score.",
-      "systems" : ["http://tecnomod-um.org/CodeSystem/mrs-score-cs"],
-      "uses" : {
-      },
-      "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile"
+    "StructureDefinition-procedure-timing-context-ext.html" : "Procedure Timing Context Extension"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/specific-finding-codes-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "SpecificFindingCodesVS",
+    "title" : "Specific Stroke Finding Codes ValueSet",
+    "description" : "This ValueSet provides SNOMED CT disorder concepts for specific findings referenced in the stroke workup.\nCurrently includes:\n- Atrial fibrillation (disorder)\n- Atrial flutter (disorder)\n\n**Primary use-case**\n- Constrain `Observation.code` (as a *finding focus*) when using `SpecificFindingObservationProfile`.\n\n**Important modeling note**\n- Using a disorder concept in `Observation.code` here does not necessarily assert a diagnosis; the diagnosis should be modeled as a Condition.\n- The Observation can be interpreted as “assessment about this finding,” with the result in `Observation.valueCodeableConcept` (e.g., AF status).",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
     },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/mtici-code-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "MTICICodeVS",
-      "title" : "Modified Thrombolysis in Cerebral Infarction Assessment ValueSet",
-      "description" : "This ValueSet includes the mTICI assessment concept code(s) from MTICICodeCS.\n\n**Primary use-case**\n- Bind to `Observation.code` when recording an mTICI reperfusion grade Observation.\n- Pair with `Observation.valueCodeableConcept` bound to MticiScoreVS.",
-      "systems" : ["http://tecnomod-um.org/CodeSystem/mtici-code-cs"],
-      "uses" : {
-      },
-      "ValueSet-stroke-finding-codes-vs.html" : "Specific Stroke Finding Codes ValueSet"
+    "ValueSet-stroke-finding-codes-vs.html" : "Specific Stroke Finding Codes ValueSet"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/stroke-arrival-mode-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "StrokeArrivalModeVS",
+    "title" : "Stroke Arrival Mode ValueSet",
+    "description" : "ValueSet restricting the allowed values for documenting the patient's arrival mode/origin.\n\n**Primary use-case**\n- Required binding to `Encounter.admission.admitSource` in `StrokeEncounterProfile`.",
+    "systems" : ["http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs"],
+    "uses" : {
     },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/mtici-score-vs",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "MTICIScoreValueSet",
-      "title" : "Modified Treatment in Cerebral Infarction Grade Score ValueSet",
-      "description" : "This ValueSet enumerates all allowable Modified Treatment in Cerebral Infarction reperfusion grade values (0, 1, 2a, 2b, 2c, 3) from MticiScoreCS.\n\n**Primary use-case**\n- Required binding to `Observation.valueCodeableConcept` when an Observation represents an mTICI grade outcome.\n\n**Why a dedicated ValueSet**\n- Ensures consistent coding across implementations and sites.\n- Enables reliable registry reporting, audit/quality measurement, and research analytics.",
-      "systems" : ["http://tecnomod-um.org/CodeSystem/mtici-score-cs"]
+    "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/stroke-circumstance-codes-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "StrokeCircumstanceCodesVS",
+    "title" : "Stroke Circumstance Codes ValueSet",
+    "description" : "This ValueSet includes all onset-circumstance codes from StrokeCircumstanceCodesCS.\n\n**Primary use-case**\n- Required binding for `StrokeCircumstanceObservationProfile.code`.",
+    "systems" : ["http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs"],
+    "uses" : {
     },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/perforation-procedures-vs",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "PerforationProceduresValueset",
-      "title" : "Perforation Procedures ValueSet",
-      "description" : "ValueSet restricting Procedure codes to stroke **reperfusion interventions**:\n- IV thrombolysis (IVT)\n- Mechanical thrombectomy (MT)",
-      "systems" : ["http://snomed.info/sct"],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile"
+    "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/stroke-diagnosis-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "StrokeDiagnosisVS",
+    "title" : "Stroke Diagnosis ValueSet",
+    "description" : "This ValueSet enumerates SNOMED CT concepts representing **final stroke-related diagnoses** for use in `Condition.code` within this Implementation Guide (IG).\n\n**Primary use-case**\n- Required binding to `Condition.code` in `StrokeDiagnosisConditionProfile`, representing the *definitive diagnosis* of the index stroke event for the linked encounter.\n\n**Scope**\n- Ischemic stroke\n- Intracerebral/cerebral hemorrhage\n- Subarachnoid hemorrhage\n- Cerebral venous thrombosis\n- Transient ischemic attack (TIA)\n- “Undetermined” qualifier (use cautiously; see notes)\n\n**Modeling notes**\n- This ValueSet is intended for definitive diagnoses (e.g., at discharge or after diagnostic workup), not “rule-out”, screening, history-of, or procedural concepts.\n- Terminology expansion should be performed against the appropriate SNOMED CT edition/version and preferred language(s). Localizations MAY add designations without changing meaning.\n- If “undetermined” is used, consider adding supporting narrative in `Condition.note` and/or linking evidence in Observations/DiagnosticReports to preserve interpretability.",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
     },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/procedure-timing-context-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "ProcedureTimingContextVS",
-      "title" : "Procedure Timing Context ValueSet",
-      "description" : "ValueSet limiting allowed values for the Procedure timing context extension (acute/post-acute/unknown).\n\n**Use-case**\n- Required binding to ensure comparable phase classification across systems and sites.",
-      "systems" : [
-        "http://tecnomod-um.org/CodeSystem/procedure-timing-context-cs"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-procedure-timing-context-ext.html" : "Procedure Timing Context Extension"
+    "StructureDefinition-stroke-diagnosis-condition-profile.html" : "Stroke Diagnosis Condition Profile"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/stroke-discharge-destination-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "StrokeDischargeDestinationVS",
+    "title" : "Stroke Discharge Destination ValueSet",
+    "description" : "ValueSet defining allowable discharge dispositions for the stroke encounter.\n\n**Primary use-case**\n- Required binding to `Encounter.admission.dischargeDisposition` in `StrokeEncounterProfile`.\n\n**Composition**\n- SNOMED CT “discharge/transfer” procedure concepts for common destinations.\n- Local supplement (StrokeDischargeDestinationCS) for outcomes such as “deceased during stay”.",
+    "systems" : ["http://tecnomod-um.org/CodeSystem/stroke-discharge-destination-cs",
+    "http://snomed.info/sct"],
+    "uses" : {
     },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/specific-finding-codes-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "SpecificFindingCodesVS",
-      "title" : "Specific Stroke Finding Codes ValueSet",
-      "description" : "This ValueSet provides SNOMED CT disorder concepts for specific findings referenced in the stroke workup.\nCurrently includes:\n- Atrial fibrillation (disorder)\n- Atrial flutter (disorder)\n\n**Primary use-case**\n- Constrain `Observation.code` (as a *finding focus*) when using `SpecificFindingObservationProfile`.\n\n**Important modeling note**\n- Using a disorder concept in `Observation.code` here does not necessarily assert a diagnosis; the diagnosis should be modeled as a Condition.\n- The Observation can be interpreted as “assessment about this finding,” with the result in `Observation.valueCodeableConcept` (e.g., AF status).",
-      "systems" : ["http://snomed.info/sct"],
-      "uses" : {
-      },
-      "ValueSet-stroke-finding-codes-vs.html" : "Specific Stroke Finding Codes ValueSet"
+    "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/stroke-etiology-vs",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "StrokeEtiologyVS",
+    "title" : "Stroke Etiology ValueSet",
+    "description" : "This ValueSet defines allowable values for recording the **determined ischemic stroke etiology**.\n\n**Primary use-case**\n- Required binding for `StrokeStrokeEtiologyExt.valueCodeableConcept` on definitive ischemic stroke Conditions.\n\n**Composition**\n- Local etiology categories (StrokeEtiologyCS), plus selected SNOMED CT disorder concepts for commonly used etiology groupings.\n\n**Implementation guidance**\n- Use after etiologic workup when a classification is assigned.\n- If etiology remains unknown/undetermined, use the included `Undetermined (qualifier value)`",
+    "systems" : ["http://snomed.info/sct",
+    "http://tecnomod-um.org/CodeSystem/stroke-etiology-cs"],
+    "uses" : {
     },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/stroke-arrival-mode-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "StrokeArrivalModeVS",
-      "title" : "Stroke Arrival Mode ValueSet",
-      "description" : "ValueSet restricting the allowed values for documenting the patient's arrival mode/origin.\n\n**Primary use-case**\n- Required binding to `Encounter.admission.admitSource` in `StrokeEncounterProfile`.",
-      "systems" : ["http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs"],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
+    "StructureDefinition-ischemic-stroke-etiology-ext.html" : "Ischemic Stroke – Etiology"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/stroke-finding-codes-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "StrokeFindingCodesVS",
+    "title" : "Specific Stroke Finding Codes ValueSet",
+    "description" : "This ValueSet aggregates coded Observation.code concepts used by `SpecificFindingObservationProfile`.\n\nIt currently includes:\n- Specific disorder concepts used as a finding focus (SpecificFindingCodesVS), and\n- The mTICI assessment concept (MTICICodeVS).\n\n**How to interpret usage**\n- If `Observation.code` is a disorder concept (e.g., AF), the Observation should be interpreted as an assessment about that finding,\n  with the result/status carried in `Observation.valueCodeableConcept` (e.g., AfibFlutterStatusVS).\n- If `Observation.code` is an assessment concept (e.g., mTICI), `Observation.valueCodeableConcept` carries the score (MticiScoreVS).",
+    "systems" : ["http://snomed.info/sct",
+    "http://tecnomod-um.org/CodeSystem/mtici-code-cs"],
+    "uses" : {
     },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/stroke-circumstance-codes-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "StrokeCircumstanceCodesVS",
-      "title" : "Stroke Circumstance Codes ValueSet",
-      "description" : "This ValueSet includes all onset-circumstance codes from StrokeCircumstanceCodesCS.\n\n**Primary use-case**\n- Required binding for `StrokeCircumstanceObservationProfile.code`.",
-      "systems" : [
-        "http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)"
+    "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/stroke-proc-not-done-reason-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "StrokeProcNotDoneReasonVS",
+    "title" : "Stroke Procedure Not Done Reason ValueSet",
+    "description" : "ValueSet containing the controlled vocabulary of reasons for `Procedure.statusReason` when a stroke procedure is `not-done`.",
+    "systems" : ["http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs"],
+    "uses" : {
     },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/stroke-diagnosis-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "StrokeDiagnosisVS",
-      "title" : "Stroke Diagnosis ValueSet",
-      "description" : "This ValueSet enumerates SNOMED CT concepts representing **final stroke-related diagnoses** for use in `Condition.code` within this Implementation Guide (IG).\n\n**Primary use-case**\n- Required binding to `Condition.code` in `StrokeDiagnosisConditionProfile`, representing the *definitive diagnosis* of the index stroke event for the linked encounter.\n\n**Scope**\n- Ischemic stroke\n- Intracerebral/cerebral hemorrhage\n- Subarachnoid hemorrhage\n- Cerebral venous thrombosis\n- Transient ischemic attack (TIA)\n- “Undetermined” qualifier (use cautiously; see notes)\n\n**Modeling notes**\n- This ValueSet is intended for definitive diagnoses (e.g., at discharge or after diagnostic workup), not “rule-out”, screening, history-of, or procedural concepts.\n- Terminology expansion should be performed against the appropriate SNOMED CT edition/version and preferred language(s). Localizations MAY add designations without changing meaning.\n- If “undetermined” is used, consider adding supporting narrative in `Condition.note` and/or linking evidence in Observations/DiagnosticReports to preserve interpretability.",
-      "systems" : ["http://snomed.info/sct"],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-diagnosis-condition-profile.html" : "Stroke Diagnosis Condition Profile"
+    "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
+    "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
+    "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
+    "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/stroke-risk-factor-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "StrokeRiskFactorValueSet",
+    "title" : "Stroke Risk Factor ValueSet",
+    "description" : "This ValueSet enumerates SNOMED CT disorder concepts representing **pre-existing or concurrent conditions** that increase stroke risk.\n\n**Primary use-case**\n- Required binding to `Condition.code` in `StrokeRiskFactorConditionProfile`, used to maintain a structured problem list supporting:\n  - etiologic reasoning (e.g., cardioembolic risk),\n  - clinical decision support (e.g., anticoagulation considerations),\n  - quality reporting and research cohort definition.\n\n**Modeling notes**\n- This ValueSet is for *previously documented conditions* (problems), not for “risk factor unknown”.\n  If a risk factor assessment is unknown/not assessed, represent that as an Observation (status/result) or use `dataAbsentReason` patterns rather than a Condition with an “Unknown” code.\n- The acute stroke event itself should be represented by `StrokeDiagnosisConditionProfile`, not by this risk factor profile.",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
     },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/stroke-discharge-destination-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "StrokeDischargeDestinationVS",
-      "title" : "Stroke Discharge Destination ValueSet",
-      "description" : "ValueSet defining allowable discharge dispositions for the stroke encounter.\n\n**Primary use-case**\n- Required binding to `Encounter.admission.dischargeDisposition` in `StrokeEncounterProfile`.\n\n**Composition**\n- SNOMED CT “discharge/transfer” procedure concepts for common destinations.\n- Local supplement (StrokeDischargeDestinationCS) for outcomes such as “deceased during stay”.",
-      "systems" : [
-        "http://tecnomod-um.org/CodeSystem/stroke-discharge-destination-cs",
-        "http://snomed.info/sct"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
+    "StructureDefinition-stroke-risk-factor-condition-profile.html" : "Stroke Risk Factor Condition Profile"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/swallow-procedures-vs",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "SwallowProceduresValueset",
+    "title" : "Swallow Procedures ValueSet",
+    "description" : "ValueSet enumerating swallowing screening/assessment procedures/tools used in stroke care.\n\n**Implementation note**\n- `SCT#261665006 'Unknown'´ is included only as a provisional development workaround; in production, prefer FHIR `dataAbsentReason` for missing data rather than “Unknown” as a procedure code.",
+    "systems" : ["http://tecnomod-um.org/CodeSystem/swallow-procedures-cs",
+    "http://snomed.info/sct"],
+    "uses" : {
     },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/stroke-etiology-vs",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "StrokeEtiologyVS",
-      "title" : "Stroke Etiology ValueSet",
-      "description" : "This ValueSet defines allowable values for recording the **determined ischemic stroke etiology**.\n\n**Primary use-case**\n- Required binding for `StrokeStrokeEtiologyExt.valueCodeableConcept` on definitive ischemic stroke Conditions.\n\n**Composition**\n- Local etiology categories (StrokeEtiologyCS), plus selected SNOMED CT disorder concepts for commonly used etiology groupings.\n\n**Implementation guidance**\n- Use after etiologic workup when a classification is assigned.\n- If etiology remains unknown/undetermined, use the included `Undetermined (qualifier value)`",
-      "systems" : [
-        "http://snomed.info/sct",
-        "http://tecnomod-um.org/CodeSystem/stroke-etiology-cs"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-ischemic-stroke-etiology-ext.html" : "Ischemic Stroke – Etiology"
+    "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/swallowing-screening-timing-category-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "SwallowingScreeningTimingCategoryVS",
+    "title" : "Swallowing Screening Timing Category ValueSet",
+    "description" : "ValueSet defining allowed categories for swallowing screening timing, combining:\n- local categories (e.g., within 4 hours), and\n- SNOMED CT qualifier concepts for post-admission timing.\n\n**Use-case**\n- Required binding for the swallowing timing extension.",
+    "systems" : ["http://tecnomod-um.org/CodeSystem/swallow-screen-time-cs",
+    "http://snomed.info/sct"],
+    "uses" : {
     },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/stroke-finding-codes-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "StrokeFindingCodesVS",
-      "title" : "Specific Stroke Finding Codes ValueSet",
-      "description" : "This ValueSet aggregates coded Observation.code concepts used by `SpecificFindingObservationProfile`.\n\nIt currently includes:\n- Specific disorder concepts used as a finding focus (SpecificFindingCodesVS), and\n- The mTICI assessment concept (MTICICodeVS).\n\n**How to interpret usage**\n- If `Observation.code` is a disorder concept (e.g., AF), the Observation should be interpreted as an assessment about that finding,\n  with the result/status carried in `Observation.valueCodeableConcept` (e.g., AfibFlutterStatusVS).\n- If `Observation.code` is an assessment concept (e.g., mTICI), `Observation.valueCodeableConcept` carries the score (MticiScoreVS).",
-      "systems" : [
-        "http://snomed.info/sct",
-        "http://tecnomod-um.org/CodeSystem/mtici-code-cs"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)"
+    "StructureDefinition-swallowing-screening-timing-category-ext.html" : "Swallowing Screening Timing Category"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/thrombectomy-complication-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "ThrombectomyComplicationVS",
+    "title" : "Thrombectomy Complications ValueSet",
+    "description" : " ValueSet of SNOMED CT concepts representing complications of thrombectomy as clinical conditions.\n\n**Primary use-case**\n- Bind `Procedure.complication` (or the referenced Condition.code) to a SNOMED-based set for interoperability.",
+    "systems" : ["http://tecnomod-um.org/CodeSystem/thrombectomy-complication-cs",
+    "http://snomed.info/sct"]
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/timing-metric-codes-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "TimingMetricCodesVS",
+    "title" : "Stroke Timing Metric Codes ValueSet",
+    "description" : "This ValueSet includes all timing metric codes from TimingMetricCodesCS.\n\n**Primary use-case**\n- Required binding for `TimingMetricObservationProfile.code` to ensure only approved metrics are captured.",
+    "systems" : ["http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs"],
+    "uses" : {
     },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/stroke-proc-not-done-reason-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "StrokeProcNotDoneReasonVS",
-      "title" : "Stroke Procedure Not Done Reason ValueSet",
-      "description" : "ValueSet containing the controlled vocabulary of reasons for `Procedure.statusReason` when a stroke procedure is `not-done`.",
-      "systems" : [
-        "http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
-      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
-      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
-      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
+    "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/vital-sign-codes-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "VitalSignCodesVS",
+    "title" : "Stroke Vital Sign Codes ValueSet",
+    "description" : "This ValueSet defines SNOMED CT observable-entity codes for blood pressure components captured as vital signs:\n- Systolic blood pressure\n- Diastolic blood pressure\n\n**Primary use-case**\n- Bind to `Observation.component.code` in a single blood pressure Observation that records both components.\n\n**Implementation guidance**\n- Use `Observation.component.valueQuantity` with UCUM `mm[Hg]`.\n- Repeat the Observation across time with different `effective[x]` timestamps for monitoring.",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
     },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/stroke-risk-factor-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "StrokeRiskFactorValueSet",
-      "title" : "Stroke Risk Factor ValueSet",
-      "description" : "This ValueSet enumerates SNOMED CT disorder concepts representing **pre-existing or concurrent conditions** that increase stroke risk.\n\n**Primary use-case**\n- Required binding to `Condition.code` in `StrokeRiskFactorConditionProfile`, used to maintain a structured problem list supporting:\n  - etiologic reasoning (e.g., cardioembolic risk),\n  - clinical decision support (e.g., anticoagulation considerations),\n  - quality reporting and research cohort definition.\n\n**Modeling notes**\n- This ValueSet is for *previously documented conditions* (problems), not for “risk factor unknown”.\n  If a risk factor assessment is unknown/not assessed, represent that as an Observation (status/result) or use `dataAbsentReason` patterns rather than a Condition with an “Unknown” code.\n- The acute stroke event itself should be represented by `StrokeDiagnosisConditionProfile`, not by this risk factor profile.",
-      "systems" : ["http://snomed.info/sct"],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-risk-factor-condition-profile.html" : "Stroke Risk Factor Condition Profile"
+    "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/vs-gender-snomed",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "GenderSNOMEDVS",
+    "title" : "Gender (SNOMED CT)",
+    "description" : "Value set to represent patient gender using SNOMED CT codes, analogous to AdministrativeGender.",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
     },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/swallow-procedures-vs",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "SwallowProceduresValueset",
-      "title" : "Swallow Procedures ValueSet",
-      "description" : "ValueSet enumerating swallowing screening/assessment procedures/tools used in stroke care.\n\n**Implementation note**\n- `SCT#261665006 'Unknown'´ is included only as a provisional development workaround; in production, prefer FHIR `dataAbsentReason` for missing data rather than “Unknown” as a procedure code.",
-      "systems" : [
-        "http://tecnomod-um.org/CodeSystem/swallow-procedures-cs",
-        "http://snomed.info/sct"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
-    },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/swallowing-screening-timing-category-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "SwallowingScreeningTimingCategoryVS",
-      "title" : "Swallowing Screening Timing Category ValueSet",
-      "description" : "ValueSet defining allowed categories for swallowing screening timing, combining:\n- local categories (e.g., within 4 hours), and\n- SNOMED CT qualifier concepts for post-admission timing.\n\n**Use-case**\n- Required binding for the swallowing timing extension.",
-      "systems" : [
-        "http://tecnomod-um.org/CodeSystem/swallow-screen-time-cs",
-        "http://snomed.info/sct"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-swallowing-screening-timing-category-ext.html" : "Swallowing Screening Timing Category"
-    },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/thrombectomy-complication-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "ThrombectomyComplicationVS",
-      "title" : "Thrombectomy Complications ValueSet",
-      "description" : " ValueSet of SNOMED CT concepts representing complications of thrombectomy as clinical conditions.\n\n**Primary use-case**\n- Bind `Procedure.complication` (or the referenced Condition.code) to a SNOMED-based set for interoperability.",
-      "systems" : [
-        "http://tecnomod-um.org/CodeSystem/thrombectomy-complication-cs",
-        "http://snomed.info/sct"
-      ]
-    },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/timing-metric-codes-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "TimingMetricCodesVS",
-      "title" : "Stroke Timing Metric Codes ValueSet",
-      "description" : "This ValueSet includes all timing metric codes from TimingMetricCodesCS.\n\n**Primary use-case**\n- Required binding for `TimingMetricObservationProfile.code` to ensure only approved metrics are captured.",
-      "systems" : ["http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs"],
-      "uses" : {
-      },
-      "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)"
-    },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/vital-sign-codes-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "VitalSignCodesVS",
-      "title" : "Stroke Vital Sign Codes ValueSet",
-      "description" : "This ValueSet defines SNOMED CT observable-entity codes for blood pressure components captured as vital signs:\n- Systolic blood pressure\n- Diastolic blood pressure\n\n**Primary use-case**\n- Bind to `Observation.component.code` in a single blood pressure Observation that records both components.\n\n**Implementation guidance**\n- Use `Observation.component.valueQuantity` with UCUM `mm[Hg]`.\n- Repeat the Observation across time with different `effective[x]` timestamps for monitoring.",
-      "systems" : ["http://snomed.info/sct"],
-      "uses" : {
-      },
-      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile"
-    },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/vs-gender-snomed",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "GenderSNOMEDVS",
-      "title" : "Gender (SNOMED CT)",
-      "description" : "Value set to represent patient gender using SNOMED CT codes, analogous to AdministrativeGender.",
-      "systems" : ["http://snomed.info/sct"],
-      "uses" : {
-      },
-      "StructureDefinition-gender-snomed-ext.html" : "Gender (SNOMED CT)"
-    }
-  ]
+    "StructureDefinition-gender-snomed-ext.html" : "Gender (SNOMED CT)"
+  }]
 }

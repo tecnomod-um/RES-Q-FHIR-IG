@@ -19,9 +19,9 @@
   ] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "MedicationVS"] ; # 
-  fhir:title [ fhir:v "Medications ValueSet"] ; # 
+  fhir:title [ fhir:v "Discharge Medications ValueSet"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-02-19T14:52:32+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-20T08:36:31+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;
@@ -30,7 +30,7 @@
        fhir:value [ fhir:v "http://tecnomod-um.org" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "SNOMED CT codes for drug products or substances."] ; # 
+  fhir:description [ fhir:v "ValueSet defining allowable coded medications (or medication categories) for discharge MedicationRequests.\n\n**Primary use-case**\n- Required binding to `MedicationRequest.medication` in `DischargeMedicationRequestProfile`.\n\n**What this ValueSet supports**\n1) **Specific SNOMED CT substance concepts** (e.g., aspirin, clopidogrel, warfarin) for agent-level capture.\n2) **Local category codes** (from `MedicationCS`) for minimum-data capture when only the class is known.\n\n**Scope and modeling notes**\n- This ValueSet does not encode dose, route, frequency, or duration; those are expressed in MedicationRequest elements."] ; # 
   fhir:compose [
      fhir:include ( [
        fhir:system [

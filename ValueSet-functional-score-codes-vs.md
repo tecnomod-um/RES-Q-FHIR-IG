@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/functional-score-codes-vs | *Version*:0.1.0 |
-| Active as of 2026-02-19 | *Computable Name*:FunctionalScoreCodesVS |
+| Active as of 2026-02-20 | *Computable Name*:FunctionalScoreCodesVS |
 
  
 This ValueSet constrains `Observation.code` for functional outcome and severity instruments represented in this guide: 
@@ -60,36 +60,28 @@ This ValueSet constrains `Observation.code` for functional outcome and severity 
   "name" : "FunctionalScoreCodesVS",
   "title" : "Stroke Functional Score Codes ValueSet",
   "status" : "active",
-  "date" : "2026-02-19T14:52:32+00:00",
+  "date" : "2026-02-20T08:36:31+00:00",
   "publisher" : "UMU",
-  "contact" : [
-    {
-      "name" : "UMU",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://tecnomod-um.org"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "UMU",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://tecnomod-um.org"
+    }]
+  }],
   "description" : "This ValueSet constrains `Observation.code` for functional outcome and severity instruments represented in this guide:\n- Modified Rankin Scale score (mRS)\n- NIH Stroke Scale total score (NIHSS)\n\n**Primary use-case**\n- Bind to `Observation.code` in `FunctionalScoreObservationProfile`.\n\n**Datatype expectations enforced via invariants**\n- mRS: `Observation.valueCodeableConcept` bound to MRsScoreVS (ordinal categories 0–6).\n- NIHSS: `Observation.valueInteger` as total NIHSS score.",
   "compose" : {
-    "include" : [
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "1255866005",
+        "display" : "Modified Rankin Scale score (observable entity)"
+      },
       {
-        "system" : "http://snomed.info/sct",
-        "concept" : [
-          {
-            "code" : "1255866005",
-            "display" : "Modified Rankin Scale score (observable entity)"
-          },
-          {
-            "code" : "450743008",
-            "display" : "National Institutes of Health stroke scale score (observable entity)"
-          }
-        ]
-      }
-    ]
+        "code" : "450743008",
+        "display" : "National Institutes of Health stroke scale score (observable entity)"
+      }]
+    }]
   }
 }
 

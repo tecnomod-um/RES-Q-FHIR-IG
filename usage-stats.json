@@ -109,7 +109,7 @@
     "MedicationRequest": [
       {
         "url": "http://tecnomod-um.org/StructureDefinition/discharge-medication-request-profile",
-        "title": "Discharge Medication Request Profile"
+        "title": "Discharge MedicationRequest Profile"
       }
     ],
     "Patient": [

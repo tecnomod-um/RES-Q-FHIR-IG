@@ -29,29 +29,21 @@ Profile: [Stroke Timing Metric Observation Profile (R5)](StructureDefinition-tim
   "resourceType" : "Observation",
   "id" : "TimingMetricObservationExample",
   "meta" : {
-    "profile" : [
-      "http://tecnomod-um.org/StructureDefinition/timing-metric-observation-profile"
-    ]
+    "profile" : ["http://tecnomod-um.org/StructureDefinition/timing-metric-observation-profile"]
   },
   "status" : "final",
-  "category" : [
-    {
-      "coding" : [
-        {
-          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
-          "code" : "procedure"
-        }
-      ]
-    }
-  ],
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "procedure"
+    }]
+  }],
   "code" : {
-    "coding" : [
-      {
-        "system" : "http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs",
-        "code" : "D2N",
-        "display" : "Door to Needle"
-      }
-    ]
+    "coding" : [{
+      "system" : "http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs",
+      "code" : "D2N",
+      "display" : "Door to Needle"
+    }]
   },
   "subject" : {
     "reference" : "Patient/example-patient"

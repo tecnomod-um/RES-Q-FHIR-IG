@@ -8,9 +8,9 @@
   <url value="http://tecnomod-um.org/ValueSet/medication-vs"/>
   <version value="0.1.0"/>
   <name value="MedicationVS"/>
-  <title value="Medications ValueSet"/>
+  <title value="Discharge Medications ValueSet"/>
   <status value="draft"/>
-  <date value="2026-02-19T14:52:32+00:00"/>
+  <date value="2026-02-20T08:36:31+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>
@@ -19,7 +19,7 @@
       <value value="http://tecnomod-um.org"/>
     </telecom>
   </contact>
-  <description value="SNOMED CT codes for drug products or substances."/>
+  <description value="ValueSet defining allowable coded medications (or medication categories) for discharge MedicationRequests.&#xA;&#xA;**Primary use-case**&#xA;- Required binding to `MedicationRequest.medication` in `DischargeMedicationRequestProfile`.&#xA;&#xA;**What this ValueSet supports**&#xA;1) **Specific SNOMED CT substance concepts** (e.g., aspirin, clopidogrel, warfarin) for agent-level capture.&#xA;2) **Local category codes** (from `MedicationCS`) for minimum-data capture when only the class is known.&#xA;&#xA;**Scope and modeling notes**&#xA;- This ValueSet does not encode dose, route, frequency, or duration; those are expressed in MedicationRequest elements."/>
   <compose>
     <include>
       <system value="http://snomed.info/sct"/>

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/vs-gender-snomed | *Version*:0.1.0 |
-| Active as of 2026-02-19 | *Computable Name*:GenderSNOMEDVS |
+| Active as of 2026-02-20 | *Computable Name*:GenderSNOMEDVS |
 
  
 Value set to represent patient gender using SNOMED CT codes, analogous to AdministrativeGender. 
@@ -51,40 +51,32 @@ Value set to represent patient gender using SNOMED CT codes, analogous to Admini
   "title" : "Gender (SNOMED CT)",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-02-19T14:52:32+00:00",
+  "date" : "2026-02-20T08:36:31+00:00",
   "publisher" : "UMU",
-  "contact" : [
-    {
-      "name" : "UMU",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://tecnomod-um.org"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "UMU",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://tecnomod-um.org"
+    }]
+  }],
   "description" : "Value set to represent patient gender using SNOMED CT codes, analogous to AdministrativeGender.",
   "compose" : {
-    "include" : [
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "248153007",
+        "display" : "Male (finding)"
+      },
       {
-        "system" : "http://snomed.info/sct",
-        "concept" : [
-          {
-            "code" : "248153007",
-            "display" : "Male (finding)"
-          },
-          {
-            "code" : "248152002",
-            "display" : "Female (finding)"
-          },
-          {
-            "code" : "32570681000036106",
-            "display" : "Indeterminate sex (finding)"
-          }
-        ]
-      }
-    ]
+        "code" : "248152002",
+        "display" : "Female (finding)"
+      },
+      {
+        "code" : "32570681000036106",
+        "display" : "Indeterminate sex (finding)"
+      }]
+    }]
   }
 }
 

@@ -29,42 +29,32 @@ Profile: [Stroke Carotid Imaging Procedure Profile](StructureDefinition-stroke-c
   "resourceType" : "Procedure",
   "id" : "StrokeCarotidImagingExample",
   "meta" : {
-    "profile" : [
-      "http://tecnomod-um.org/StructureDefinition/stroke-carotid-imaging-procedure-profile"
-    ]
+    "profile" : ["http://tecnomod-um.org/StructureDefinition/stroke-carotid-imaging-procedure-profile"]
   },
-  "extension" : [
-    {
-      "url" : "http://tecnomod-um.org/StructureDefinition/procedure-timing-context-ext",
-      "valueCodeableConcept" : {
-        "coding" : [
-          {
-            "system" : "http://tecnomod-um.org/CodeSystem/procedure-timing-context-cs",
-            "code" : "post-acute",
-            "display" : "Post-Acute Phase (>=24h)"
-          }
-        ]
-      }
+  "extension" : [{
+    "url" : "http://tecnomod-um.org/StructureDefinition/procedure-timing-context-ext",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://tecnomod-um.org/CodeSystem/procedure-timing-context-cs",
+        "code" : "post-acute",
+        "display" : "Post-Acute Phase (>=24h)"
+      }]
     }
-  ],
+  }],
   "status" : "not-done",
   "statusReason" : {
-    "coding" : [
-      {
-        "system" : "http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs",
-        "code" : "unknown",
-        "display" : "Reason Unknown"
-      }
-    ]
+    "coding" : [{
+      "system" : "http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs",
+      "code" : "unknown",
+      "display" : "Reason Unknown"
+    }]
   },
   "code" : {
-    "coding" : [
-      {
-        "system" : "http://snomed.info/sct",
-        "code" : "58920005",
-        "display" : "Angiography of carotid artery (procedure)"
-      }
-    ]
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "58920005",
+      "display" : "Angiography of carotid artery (procedure)"
+    }]
   },
   "subject" : {
     "reference" : "Patient/example-patient"

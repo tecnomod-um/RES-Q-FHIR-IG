@@ -47,107 +47,97 @@ Other representations of profile: [CSV](StructureDefinition-stroke-registry-orga
   "experimental" : false,
   "date" : "2025-10-09",
   "publisher" : "UMU",
-  "contact" : [
-    {
-      "name" : "UMU",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://tecnomod-um.org"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "UMU",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://tecnomod-um.org"
+    }]
+  }],
   "description" : "Organization profile ensuring an active organization with a registry identifier (system=https://stroke.qualityregistry.org) and a required name, aligned with the build_organization() transformation.",
   "purpose" : "To ensure a canonical form for Organizations used by the stroke quality registry, matching the ETL mapping (active=true, required name, and registry identifier).",
   "fhirVersion" : "5.0.0",
-  "mapping" : [
-    {
-      "identity" : "w5",
-      "uri" : "http://hl7.org/fhir/fivews",
-      "name" : "FiveWs Pattern Mapping"
-    },
-    {
-      "identity" : "v2",
-      "uri" : "http://hl7.org/v2",
-      "name" : "HL7 V2 Mapping"
-    },
-    {
-      "identity" : "rim",
-      "uri" : "http://hl7.org/v3",
-      "name" : "RIM Mapping"
-    },
-    {
-      "identity" : "interface",
-      "uri" : "http://hl7.org/fhir/interface",
-      "name" : "Interface Pattern"
-    },
-    {
-      "identity" : "servd",
-      "uri" : "http://www.omg.org/spec/ServD/1.0/",
-      "name" : "ServD"
-    }
-  ],
+  "mapping" : [{
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  },
+  {
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 V2 Mapping"
+  },
+  {
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  },
+  {
+    "identity" : "interface",
+    "uri" : "http://hl7.org/fhir/interface",
+    "name" : "Interface Pattern"
+  },
+  {
+    "identity" : "servd",
+    "uri" : "http://www.omg.org/spec/ServD/1.0/",
+    "name" : "ServD"
+  }],
   "kind" : "resource",
   "abstract" : false,
   "type" : "Organization",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Organization",
   "derivation" : "constraint",
   "differential" : {
-    "element" : [
-      {
-        "id" : "Organization",
-        "path" : "Organization"
+    "element" : [{
+      "id" : "Organization",
+      "path" : "Organization"
+    },
+    {
+      "id" : "Organization.identifier",
+      "path" : "Organization.identifier",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "system"
+        }],
+        "rules" : "open"
       },
-      {
-        "id" : "Organization.identifier",
-        "path" : "Organization.identifier",
-        "slicing" : {
-          "discriminator" : [
-            {
-              "type" : "value",
-              "path" : "system"
-            }
-          ],
-          "rules" : "open"
-        },
-        "min" : 1,
-        "mustSupport" : true
-      },
-      {
-        "id" : "Organization.identifier:registry",
-        "path" : "Organization.identifier",
-        "sliceName" : "registry",
-        "min" : 1,
-        "max" : "1",
-        "mustSupport" : true
-      },
-      {
-        "id" : "Organization.identifier:registry.system",
-        "path" : "Organization.identifier.system",
-        "min" : 1,
-        "fixedUri" : "https://stroke.qualityregistry.org"
-      },
-      {
-        "id" : "Organization.identifier:registry.value",
-        "path" : "Organization.identifier.value",
-        "min" : 1,
-        "mustSupport" : true
-      },
-      {
-        "id" : "Organization.active",
-        "path" : "Organization.active",
-        "min" : 1,
-        "patternBoolean" : true,
-        "mustSupport" : true
-      },
-      {
-        "id" : "Organization.name",
-        "path" : "Organization.name",
-        "min" : 1,
-        "mustSupport" : true
-      }
-    ]
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "Organization.identifier:registry",
+      "path" : "Organization.identifier",
+      "sliceName" : "registry",
+      "min" : 1,
+      "max" : "1",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Organization.identifier:registry.system",
+      "path" : "Organization.identifier.system",
+      "min" : 1,
+      "fixedUri" : "https://stroke.qualityregistry.org"
+    },
+    {
+      "id" : "Organization.identifier:registry.value",
+      "path" : "Organization.identifier.value",
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "Organization.active",
+      "path" : "Organization.active",
+      "min" : 1,
+      "patternBoolean" : true,
+      "mustSupport" : true
+    },
+    {
+      "id" : "Organization.name",
+      "path" : "Organization.name",
+      "min" : 1,
+      "mustSupport" : true
+    }]
   }
 }
 

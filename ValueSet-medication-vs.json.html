@@ -5,7 +5,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Medications ValueSet - JSON Representation -  v0.1.0</title>
+    <title>Discharge Medications ValueSet - JSON Representation -  v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -43,8 +43,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"11.42"}
-    h3,h4,h5,h6{--heading-prefix:"11.42"}</style>
+    <style type="text/css">h2{--heading-prefix:"11.39"}
+    h3,h4,h5,h6{--heading-prefix:"11.39"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -133,7 +133,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Medications ValueSet</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Discharge Medications ValueSet</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -192,7 +192,7 @@
 <a name="root"> </a>
 
 
-<h2 id="root">: Medications ValueSet - JSON Representation</h2>
+<h2 id="root">: Discharge Medications ValueSet - JSON Representation</h2>
 
   <table class="colsd">
     <tr>
@@ -201,7 +201,7 @@
         
           Draft
           
-            as of 2026-02-19
+            as of 2026-02-20
           
         
       </td>
@@ -227,9 +227,9 @@
   "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.url">url</a>" : "http://tecnomod-um.org/ValueSet/medication-vs",
   "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.version">version</a>" : "0.1.0",
   "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.name">name</a>" : "MedicationVS",
-  "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.title">title</a>" : "Medications ValueSet",
+  "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.title">title</a>" : "Discharge Medications ValueSet",
   "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.status">status</a>" : "draft",
-  "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.date">date</a>" : "2026-02-19T14:52:32+00:00",
+  "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.date">date</a>" : "2026-02-20T08:36:31+00:00",
   "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.publisher">publisher</a>" : "UMU",
   "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.contact">contact</a>" : [
     {
@@ -242,7 +242,7 @@
       ]
     }
   ],
-  "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.description">description</a>" : "SNOMED CT codes for drug products or substances.",
+  "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.description">description</a>" : "ValueSet defining allowable coded medications (or medication categories) for discharge MedicationRequests.\n\n**Primary use-case**\n- Required binding to `MedicationRequest.medication` in `DischargeMedicationRequestProfile`.\n\n**What this ValueSet supports**\n1) **Specific SNOMED CT substance concepts** (e.g., aspirin, clopidogrel, warfarin) for agent-level capture.\n2) **Local category codes** (from `MedicationCS`) for minimum-data capture when only the class is known.\n\n**Scope and modeling notes**\n- This ValueSet does not encode dose, route, frequency, or duration; those are expressed in MedicationRequest elements.",
   "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.compose">compose</a>" : {
     "<a href="http://hl7.org/fhir/R5/valueset.html#XValueSet.compose.include">include</a>" : [
       {
@@ -311,7 +311,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Thu, Feb 19, 2026 14:52+0000">2026-02-19</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Fri, Feb 20, 2026 08:36+0000">2026-02-20</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

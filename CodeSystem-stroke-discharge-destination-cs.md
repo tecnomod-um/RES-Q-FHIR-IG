@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/CodeSystem/stroke-discharge-destination-cs | *Version*:0.1.0 |
-| Active as of 2026-02-19 | *Computable Name*:StrokeDischargeDestinationCS |
+| Active as of 2026-02-20 | *Computable Name*:StrokeDischargeDestinationCS |
 
  
 Local CodeSystem for discharge disposition values that are not sufficiently covered (or not consistently available) in the chosen standard terminology set. 
@@ -32,29 +32,23 @@ Local CodeSystem for discharge disposition values that are not sufficiently cove
   "title" : "Stroke Discharge Destination CodeSystem",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-19T14:52:32+00:00",
+  "date" : "2026-02-20T08:36:31+00:00",
   "publisher" : "UMU",
-  "contact" : [
-    {
-      "name" : "UMU",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://tecnomod-um.org"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "UMU",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://tecnomod-um.org"
+    }]
+  }],
   "description" : "Local CodeSystem for discharge disposition values that are not sufficiently covered (or not consistently available)\nin the chosen standard terminology set.",
   "content" : "complete",
   "count" : 1,
-  "concept" : [
-    {
-      "code" : "dead",
-      "display" : "Patient Deceased",
-      "definition" : "The patient died during the hospital stay."
-    }
-  ]
+  "concept" : [{
+    "code" : "dead",
+    "display" : "Patient Deceased",
+    "definition" : "The patient died during the hospital stay."
+  }]
 }
 
 ```

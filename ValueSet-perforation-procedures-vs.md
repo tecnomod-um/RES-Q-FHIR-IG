@@ -56,34 +56,26 @@ ValueSet restricting Procedure codes to stroke **reperfusion interventions**:
   "experimental" : true,
   "date" : "2025-03-31",
   "publisher" : "UMU",
-  "contact" : [
-    {
-      "name" : "UMU",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://tecnomod-um.org"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "UMU",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://tecnomod-um.org"
+    }]
+  }],
   "description" : "ValueSet restricting Procedure codes to stroke **reperfusion interventions**:\n- IV thrombolysis (IVT)\n- Mechanical thrombectomy (MT)\n",
   "compose" : {
-    "include" : [
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "472191000119101",
+        "display" : "Thrombolysis of cerebral artery by intravenous infusion (procedure)"
+      },
       {
-        "system" : "http://snomed.info/sct",
-        "concept" : [
-          {
-            "code" : "472191000119101",
-            "display" : "Thrombolysis of cerebral artery by intravenous infusion (procedure)"
-          },
-          {
-            "code" : "397046001",
-            "display" : "Thrombectomy of artery (procedure)"
-          }
-        ]
-      }
-    ]
+        "code" : "397046001",
+        "display" : "Thrombectomy of artery (procedure)"
+      }]
+    }]
   }
 }
 

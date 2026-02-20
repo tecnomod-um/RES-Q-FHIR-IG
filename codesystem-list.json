@@ -1,156 +1,154 @@
 {
-  "codeSystems" : [
-    {
-      "url" : "http://tecnomod-um.org/CodeSystem/assessment-context-cs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "AssessmentContextCS",
-      "title" : "Assessment Context Code System",
-      "description" : "This CodeSystem defines normalized codes for the **clinical context / relative timepoint** at which a stroke-related assessment is performed.\nIt is primarily used to contextualize instruments whose interpretation depends on phase (e.g., mRS/NIHSS at baseline vs discharge vs follow-up).\n\n**Primary use-case**\n- Use as the value in `ObservationTimingContextExtension.valueCodeableConcept` to label the phase of an assessment.\n\n**How it complements effective[x]**\n- `Observation.effective[x]` records the actual date/time (when known).\n- This CodeSystem records the standardized phase label used for reporting and comparability.\n\n**Why this is needed**\n- Many workflows report outcomes by phase even when the exact timestamp is unknown or operationally variable (“mRS at 90 days”)."
-    },
-    {
-      "url" : "http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "BrainImagingTypeCS",
-      "title" : "Brain Imaging Type Code System",
-      "description" : "Codes specifying the type of brain imaging performed (e.g., CT, MRI)."
-    },
-    {
-      "url" : "http://tecnomod-um.org/CodeSystem/discharge-dept-cs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "DischargeDeptCS",
-      "title" : "Discharge Department/Service CodeSystem",
-      "description" : "Local CodeSystem representing the **clinical service/department** responsible for the patient at discharge/transfer\n(or the service the patient is transferred to).\n\n**Primary use-case**\n- Populate `DischargeDepartmentServiceExtension` on Encounter to support:\n  - bed management and service-level reporting,\n  - pathway characterization (e.g., discharge under neurology vs rehab),\n  - operational analytics and capacity planning.\n\n**Modeling notes**\n- This captures *service classification*, not the physical ward/room. Physical location should be modeled using `Encounter.location`\n  (and references to Location resources) if needed."
-    },
-    {
-      "url" : "http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "HemorrhagicStrokeBleedingReasonCS",
-      "title" : "Hemorrhagic Stroke Bleeding Reason CodeSystem",
-      "description" : "Local CodeSystem representing **locally governed reasons/causes** for intracranial bleeding in hemorrhagic stroke.\n\n**Primary use-case**\n- Used via `HemorrhagicStrokeBleedingReasonVS` as the allowed vocabulary for `HemorrhagicStrokeBleedingReasonExt.valueCodeableConcept`\n  on a definitive hemorrhagic stroke Condition."
-    },
-    {
-      "url" : "http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "InitialCareIntensityCS",
-      "title" : "Initial Care Intensity CodeSystem",
-      "description" : "Local CodeSystem representing the **initial intensity of care** during the first day(s) of the stroke encounter.\n\n**Primary use-case**\n- Populate `InitialCareIntensityExtension` on Encounter to support:\n  - case-mix characterization (ICU/stroke unit vs monitored vs standard bed),\n  - operational benchmarking and staffing analysis,\n  - research stratification where initial level-of-care is a confounder.\n\n**Interpretation guidance**\n- `standard`: no continuous monitoring beyond standard nursing observation.\n- `monitored`: telemetry or continuous monitoring outside ICU.\n- `icu-stroke`: ICU or dedicated stroke unit level care (per local definitions)."
-    },
-    {
-      "url" : "http://tecnomod-um.org/CodeSystem/medication-cs",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "MedicationCS",
-      "title" : "Medications CodeSystem",
-      "description" : "Codes for drug products or substances representing the Medications on the patient discharge."
-    },
-    {
-      "url" : "http://tecnomod-um.org/CodeSystem/mrs-score-cs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "MRsScoreCS",
-      "title" : "Modified Rankin Scale Score Code System",
-      "description" : "This CodeSystem defines codes for the **modified Rankin Scale (mRS)**, an ordinal measure of global disability and functional outcome.\nScores range from 0 (no symptoms) to 5 (severe disability), with 6 indicating death.\n\n**Primary use-case**\n- Use as the coded result in `Observation.valueCodeableConcept` (bound via MRsScoreVS) when recording an mRS outcome.\n\n**Modeling notes**\n- mRS is a global disability scale and does not capture domain-specific limitations (mobility, ADLs, cognition).\n  Capture those via additional instruments/Observations when needed.\n- Method of ascertainment and assessor details should be recorded separately (e.g., Observation.method, performer, Provenance)."
-    },
-    {
-      "url" : "http://tecnomod-um.org/CodeSystem/mtici-code-cs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "MTICICodeCS",
-      "title" : "Modified Thrombolysis in Cerebral Infarction Assessment CodeSystem",
-      "description" : "This CodeSystem defines the *assessment concept code* used to indicate that an Observation is reporting an mTICI reperfusion grade.\n\n**Design pattern**\n- `Observation.code` identifies the kind of assessment (“mTICI reperfusion grade”).\n- `Observation.valueCodeableConcept` carries the result (one of the grades in MticiScoreVS)."
-    },
-    {
-      "url" : "http://tecnomod-um.org/CodeSystem/mtici-score-cs",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "MticiScoreCS",
-      "title" : "Modified Treatment in Cerebral Infarction Grade Score CodeSystem",
-      "description" : "This CodeSystem defines the **modified Thrombolysis in Cerebral Infarction (mTICI)** reperfusion grade values.\nmTICI is an ordinal angiographic scale used to quantify the extent of reperfusion after endovascular therapy for acute ischemic stroke.\n\n**Primary use-case**\n- Use as the coded result in `Observation.valueCodeableConcept` (bound via MticiScoreVS) when recording the *final angiographic reperfusion grade*.\n\n**Modeling notes**\n- Represents the *final* reperfusion grade for the downstream ischemic territory (typically adjudicated from the final angiographic run).\n- Does not encode target vessel, device/technique, number of passes, timestamps, or adjudication workflow; capture those via Procedure, ImagingStudy, Observation.method, or additional Observations/Provenance."
-    },
-    {
-      "url" : "http://tecnomod-um.org/CodeSystem/procedure-timing-context-cs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "ProcedureTimingContextCS",
-      "title" : "Procedure Timing Context CodeSystem",
-      "description" : "Local CodeSystem for classifying a procedure into a **timing context** relative to encounter start.\n\n**Primary use-case**\n- Normalize reporting into acute (<24h) vs post-acute (>=24h) phases for stroke process measures.\n\n\n**FHIR placement**\n- Used in `ProcedureTimingContextExtension` attached to Procedure."
-    },
-    {
-      "url" : "http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "StrokeArrivalModeCS",
-      "title" : "Stroke Arrival Mode CodeSystem",
-      "description" : "Local CodeSystem describing **how and from where** the patient arrived to the treating hospital for the index stroke encounter.\n\n**Primary use-case**\n- Populate `Encounter.admission.admitSource` (via StrokeArrivalModeVS) to support:\n  - workflow analysis (EMS vs private transport),\n  - pathway compliance reporting (direct-to-stroke-center vs inter-facility transfer),\n  - operational dashboards and registries.\n\n**Modeling notes**\n- These codes describe *arrival origin and transport pathway*, not clinical triage severity.\n- If you need transport timestamps, EMS unit identifiers, or handover details, model them separately"
-    },
-    {
-      "url" : "http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "StrokeCircumstanceCodesCS",
-      "title" : "Stroke Circumstance Codes CodeSystem",
-      "description" : "This CodeSystem defines coded circumstances related to stroke symptom onset that are clinically relevant when onset time is unknown or atypical.\n\n**Primary use-case**\n- Use as `Observation.code` in `StrokeCircumstanceObservationProfile`.\n- Presence of the Observation asserts that the circumstance applies to the index stroke event."
-    },
-    {
-      "url" : "http://tecnomod-um.org/CodeSystem/stroke-discharge-destination-cs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "StrokeDischargeDestinationCS",
-      "title" : "Stroke Discharge Destination CodeSystem",
-      "description" : "Local CodeSystem for discharge disposition values that are not sufficiently covered (or not consistently available)\nin the chosen standard terminology set."
-    },
-    {
-      "url" : "http://tecnomod-um.org/CodeSystem/stroke-etiology-cs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "StrokeEtiologyCS",
-      "title" : "Stroke Etiology CodeSystem",
-      "description" : "Local CodeSystem defining categories for **ischemic stroke etiology** classification.\n\n**Primary use-case**\n- Used via `StrokeEtiologyVS` as the required vocabulary for `StrokeStrokeEtiologyExt.valueCodeableConcept`\n  on a definitive ischemic stroke Condition.\n\n**Why it exists**\n- Stroke etiology classification often mixes internationally standard categories (cardioembolic, lacunar, cryptogenic) with local operational buckets.\n\n**Modeling notes**\n- This CodeSystem is intended for “final etiology classification” after diagnostic workup, not for provisional hypotheses."
-    },
-    {
-      "url" : "http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "StrokeProcNotDoneReasonCS",
-      "title" : "Stroke Procedure Not Done Reasons CodeSystem",
-      "description" : " Local CodeSystem enumerating standardized reasons why a key stroke procedure (e.g., IV thrombolysis or mechanical thrombectomy) was **not performed**.\n\n**Primary use-case**\n- Populate `Procedure.statusReason` when `Procedure.status = not-done`.\n\n**Why it matters**\n- Captures the difference between:\n  - clinical ineligibility (contraindication),\n  - time-based ineligibility (outside window),\n  - operational constraints (unavailable),\n  - patient choice (refusal),\n  - care pathway differences (performed elsewhere / transfer)."
-    },
-    {
-      "url" : "http://tecnomod-um.org/CodeSystem/swallow-procedures-cs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "SwallowProceduresCS",
-      "title" : "Swallow Procedures CodeSystem",
-      "description" : "Local CodeSystem representing swallowing screening/assessment tools often documented by acronym or local naming.\n\n**FHIR placement**\n- Included in `SwallowProceduresVS` to be used in `Procedure.code`"
-    },
-    {
-      "url" : "http://tecnomod-um.org/CodeSystem/swallow-screen-time-cs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "SwallowScreenTimeCS",
-      "title" : "Swallowing Screening Timing Category Code System",
-      "description" : "Temporal categories relative to stroke onset for swallowing screening."
-    },
-    {
-      "url" : "http://tecnomod-um.org/CodeSystem/thrombectomy-complication-cs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "ThrombectomyComplicationCS",
-      "title" : "Thrombectomy Complication CodeSystem",
-      "description" : "Local CodeSystem for complications occurring during mechanical thrombectomy.\n\n**When to use**\n- If you need a controlled internal vocabulary for adverse events/complications, especially when upstream systems do not provide SNOMED-coded diagnoses.\n\n**How it is used in FHIR R5**\n- Usually referenced from `Procedure.complication` which is a `CodeableReference(Condition)` in R5.\n- You may represent the complication as a `Condition` (preferred), and/or record a code directly depending on your implementation pattern.\n\n**Why it exists**\n- Supports minimum-set reporting across sites and enables consistent quality/safety analytics."
-    },
-    {
-      "url" : "http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "TimingMetricCodesCS",
-      "title" : "Stroke Timing Metric Codes CodeSystem",
-      "description" : "This CodeSystem defines codes for key **time-interval process metrics** in acute stroke care.\nEach code represents a duration measured between two clinically meaningful events (e.g., arrival to thrombolysis start).\n\n**Primary use-case**\n- Use as `Observation.code` in `TimingMetricObservationProfile`.\n- Store the measured interval in `Observation.valueQuantity` with UCUM minutes (`min`)."
-    }
-  ]
+  "codeSystems" : [{
+    "url" : "http://tecnomod-um.org/CodeSystem/assessment-context-cs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "AssessmentContextCS",
+    "title" : "Assessment Context Code System",
+    "description" : "This CodeSystem defines normalized codes for the **clinical context / relative timepoint** at which a stroke-related assessment is performed.\nIt is primarily used to contextualize instruments whose interpretation depends on phase (e.g., mRS/NIHSS at baseline vs discharge vs follow-up).\n\n**Primary use-case**\n- Use as the value in `ObservationTimingContextExtension.valueCodeableConcept` to label the phase of an assessment.\n\n**How it complements effective[x]**\n- `Observation.effective[x]` records the actual date/time (when known).\n- This CodeSystem records the standardized phase label used for reporting and comparability.\n\n**Why this is needed**\n- Many workflows report outcomes by phase even when the exact timestamp is unknown or operationally variable (“mRS at 90 days”)."
+  },
+  {
+    "url" : "http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "BrainImagingTypeCS",
+    "title" : "Brain Imaging Type Code System",
+    "description" : "Codes specifying the type of brain imaging performed (e.g., CT, MRI)."
+  },
+  {
+    "url" : "http://tecnomod-um.org/CodeSystem/discharge-dept-cs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "DischargeDeptCS",
+    "title" : "Discharge Department/Service CodeSystem",
+    "description" : "Local CodeSystem representing the **clinical service/department** responsible for the patient at discharge/transfer\n(or the service the patient is transferred to).\n\n**Primary use-case**\n- Populate `DischargeDepartmentServiceExtension` on Encounter to support:\n  - bed management and service-level reporting,\n  - pathway characterization (e.g., discharge under neurology vs rehab),\n  - operational analytics and capacity planning.\n\n**Modeling notes**\n- This captures *service classification*, not the physical ward/room. Physical location should be modeled using `Encounter.location`\n  (and references to Location resources) if needed."
+  },
+  {
+    "url" : "http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "HemorrhagicStrokeBleedingReasonCS",
+    "title" : "Hemorrhagic Stroke Bleeding Reason CodeSystem",
+    "description" : "Local CodeSystem representing **locally governed reasons/causes** for intracranial bleeding in hemorrhagic stroke.\n\n**Primary use-case**\n- Used via `HemorrhagicStrokeBleedingReasonVS` as the allowed vocabulary for `HemorrhagicStrokeBleedingReasonExt.valueCodeableConcept`\n  on a definitive hemorrhagic stroke Condition."
+  },
+  {
+    "url" : "http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "InitialCareIntensityCS",
+    "title" : "Initial Care Intensity CodeSystem",
+    "description" : "Local CodeSystem representing the **initial intensity of care** during the first day(s) of the stroke encounter.\n\n**Primary use-case**\n- Populate `InitialCareIntensityExtension` on Encounter to support:\n  - case-mix characterization (ICU/stroke unit vs monitored vs standard bed),\n  - operational benchmarking and staffing analysis,\n  - research stratification where initial level-of-care is a confounder.\n\n**Interpretation guidance**\n- `standard`: no continuous monitoring beyond standard nursing observation.\n- `monitored`: telemetry or continuous monitoring outside ICU.\n- `icu-stroke`: ICU or dedicated stroke unit level care (per local definitions)."
+  },
+  {
+    "url" : "http://tecnomod-um.org/CodeSystem/medication-cs",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "MedicationCS",
+    "title" : "Discharge Medication Category CodeSystem",
+    "description" : "Local CodeSystem providing **coarse medication categories** used in discharge prescribing when the source system cannot\n(or does not) provide a specific coded drug product/substance.\n\n**Primary use-cases**\n- Minimum-data capture for discharge medication classes relevant to stroke secondary prevention (e.g., anticoagulant vs antiplatelet).\n- Registry reporting where only “medication class prescribed at discharge” is available.\n- Analytics and quality indicators (e.g., “antithrombotic at discharge”) when specific agent is unknown.\n\n**How it is used in FHIR**\n- Included in `MedicationVS` so it can be used in `MedicationRequest.medication` (CodeableConcept)."
+  },
+  {
+    "url" : "http://tecnomod-um.org/CodeSystem/mrs-score-cs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "MRsScoreCS",
+    "title" : "Modified Rankin Scale Score Code System",
+    "description" : "This CodeSystem defines codes for the **modified Rankin Scale (mRS)**, an ordinal measure of global disability and functional outcome.\nScores range from 0 (no symptoms) to 5 (severe disability), with 6 indicating death.\n\n**Primary use-case**\n- Use as the coded result in `Observation.valueCodeableConcept` (bound via MRsScoreVS) when recording an mRS outcome.\n\n**Modeling notes**\n- mRS is a global disability scale and does not capture domain-specific limitations (mobility, ADLs, cognition).\n  Capture those via additional instruments/Observations when needed.\n- Method of ascertainment and assessor details should be recorded separately (e.g., Observation.method, performer, Provenance)."
+  },
+  {
+    "url" : "http://tecnomod-um.org/CodeSystem/mtici-code-cs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "MTICICodeCS",
+    "title" : "Modified Thrombolysis in Cerebral Infarction Assessment CodeSystem",
+    "description" : "This CodeSystem defines the *assessment concept code* used to indicate that an Observation is reporting an mTICI reperfusion grade.\n\n**Design pattern**\n- `Observation.code` identifies the kind of assessment (“mTICI reperfusion grade”).\n- `Observation.valueCodeableConcept` carries the result (one of the grades in MticiScoreVS)."
+  },
+  {
+    "url" : "http://tecnomod-um.org/CodeSystem/mtici-score-cs",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "MticiScoreCS",
+    "title" : "Modified Treatment in Cerebral Infarction Grade Score CodeSystem",
+    "description" : "This CodeSystem defines the **modified Thrombolysis in Cerebral Infarction (mTICI)** reperfusion grade values.\nmTICI is an ordinal angiographic scale used to quantify the extent of reperfusion after endovascular therapy for acute ischemic stroke.\n\n**Primary use-case**\n- Use as the coded result in `Observation.valueCodeableConcept` (bound via MticiScoreVS) when recording the *final angiographic reperfusion grade*.\n\n**Modeling notes**\n- Represents the *final* reperfusion grade for the downstream ischemic territory (typically adjudicated from the final angiographic run).\n- Does not encode target vessel, device/technique, number of passes, timestamps, or adjudication workflow; capture those via Procedure, ImagingStudy, Observation.method, or additional Observations/Provenance."
+  },
+  {
+    "url" : "http://tecnomod-um.org/CodeSystem/procedure-timing-context-cs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "ProcedureTimingContextCS",
+    "title" : "Procedure Timing Context CodeSystem",
+    "description" : "Local CodeSystem for classifying a procedure into a **timing context** relative to encounter start.\n\n**Primary use-case**\n- Normalize reporting into acute (<24h) vs post-acute (>=24h) phases for stroke process measures.\n\n\n**FHIR placement**\n- Used in `ProcedureTimingContextExtension` attached to Procedure."
+  },
+  {
+    "url" : "http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "StrokeArrivalModeCS",
+    "title" : "Stroke Arrival Mode CodeSystem",
+    "description" : "Local CodeSystem describing **how and from where** the patient arrived to the treating hospital for the index stroke encounter.\n\n**Primary use-case**\n- Populate `Encounter.admission.admitSource` (via StrokeArrivalModeVS) to support:\n  - workflow analysis (EMS vs private transport),\n  - pathway compliance reporting (direct-to-stroke-center vs inter-facility transfer),\n  - operational dashboards and registries.\n\n**Modeling notes**\n- These codes describe *arrival origin and transport pathway*, not clinical triage severity.\n- If you need transport timestamps, EMS unit identifiers, or handover details, model them separately"
+  },
+  {
+    "url" : "http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "StrokeCircumstanceCodesCS",
+    "title" : "Stroke Circumstance Codes CodeSystem",
+    "description" : "This CodeSystem defines coded circumstances related to stroke symptom onset that are clinically relevant when onset time is unknown or atypical.\n\n**Primary use-case**\n- Use as `Observation.code` in `StrokeCircumstanceObservationProfile`.\n- Presence of the Observation asserts that the circumstance applies to the index stroke event."
+  },
+  {
+    "url" : "http://tecnomod-um.org/CodeSystem/stroke-discharge-destination-cs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "StrokeDischargeDestinationCS",
+    "title" : "Stroke Discharge Destination CodeSystem",
+    "description" : "Local CodeSystem for discharge disposition values that are not sufficiently covered (or not consistently available)\nin the chosen standard terminology set."
+  },
+  {
+    "url" : "http://tecnomod-um.org/CodeSystem/stroke-etiology-cs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "StrokeEtiologyCS",
+    "title" : "Stroke Etiology CodeSystem",
+    "description" : "Local CodeSystem defining categories for **ischemic stroke etiology** classification.\n\n**Primary use-case**\n- Used via `StrokeEtiologyVS` as the required vocabulary for `StrokeStrokeEtiologyExt.valueCodeableConcept`\n  on a definitive ischemic stroke Condition.\n\n**Why it exists**\n- Stroke etiology classification often mixes internationally standard categories (cardioembolic, lacunar, cryptogenic) with local operational buckets.\n\n**Modeling notes**\n- This CodeSystem is intended for “final etiology classification” after diagnostic workup, not for provisional hypotheses."
+  },
+  {
+    "url" : "http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "StrokeProcNotDoneReasonCS",
+    "title" : "Stroke Procedure Not Done Reasons CodeSystem",
+    "description" : " Local CodeSystem enumerating standardized reasons why a key stroke procedure (e.g., IV thrombolysis or mechanical thrombectomy) was **not performed**.\n\n**Primary use-case**\n- Populate `Procedure.statusReason` when `Procedure.status = not-done`.\n\n**Why it matters**\n- Captures the difference between:\n  - clinical ineligibility (contraindication),\n  - time-based ineligibility (outside window),\n  - operational constraints (unavailable),\n  - patient choice (refusal),\n  - care pathway differences (performed elsewhere / transfer)."
+  },
+  {
+    "url" : "http://tecnomod-um.org/CodeSystem/swallow-procedures-cs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "SwallowProceduresCS",
+    "title" : "Swallow Procedures CodeSystem",
+    "description" : "Local CodeSystem representing swallowing screening/assessment tools often documented by acronym or local naming.\n\n**FHIR placement**\n- Included in `SwallowProceduresVS` to be used in `Procedure.code`"
+  },
+  {
+    "url" : "http://tecnomod-um.org/CodeSystem/swallow-screen-time-cs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "SwallowScreenTimeCS",
+    "title" : "Swallowing Screening Timing Category Code System",
+    "description" : "Temporal categories relative to stroke onset for swallowing screening."
+  },
+  {
+    "url" : "http://tecnomod-um.org/CodeSystem/thrombectomy-complication-cs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "ThrombectomyComplicationCS",
+    "title" : "Thrombectomy Complication CodeSystem",
+    "description" : "Local CodeSystem for complications occurring during mechanical thrombectomy.\n\n**When to use**\n- If you need a controlled internal vocabulary for adverse events/complications, especially when upstream systems do not provide SNOMED-coded diagnoses.\n\n**How it is used in FHIR R5**\n- Usually referenced from `Procedure.complication` which is a `CodeableReference(Condition)` in R5.\n- You may represent the complication as a `Condition` (preferred), and/or record a code directly depending on your implementation pattern.\n\n**Why it exists**\n- Supports minimum-set reporting across sites and enables consistent quality/safety analytics."
+  },
+  {
+    "url" : "http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "TimingMetricCodesCS",
+    "title" : "Stroke Timing Metric Codes CodeSystem",
+    "description" : "This CodeSystem defines codes for key **time-interval process metrics** in acute stroke care.\nEach code represents a duration measured between two clinically meaningful events (e.g., arrival to thrombolysis start).\n\n**Primary use-case**\n- Use as `Observation.code` in `TimingMetricObservationProfile`.\n- Store the measured interval in `Observation.valueQuantity` with UCUM minutes (`min`)."
+  }]
 }

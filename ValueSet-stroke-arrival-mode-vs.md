@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/stroke-arrival-mode-vs | *Version*:0.1.0 |
-| Active as of 2026-02-19 | *Computable Name*:StrokeArrivalModeVS |
+| Active as of 2026-02-20 | *Computable Name*:StrokeArrivalModeVS |
 
  
 ValueSet restricting the allowed values for documenting the patient's arrival mode/origin. 
@@ -53,26 +53,20 @@ ValueSet restricting the allowed values for documenting the patient's arrival mo
   "name" : "StrokeArrivalModeVS",
   "title" : "Stroke Arrival Mode ValueSet",
   "status" : "active",
-  "date" : "2026-02-19T14:52:32+00:00",
+  "date" : "2026-02-20T08:36:31+00:00",
   "publisher" : "UMU",
-  "contact" : [
-    {
-      "name" : "UMU",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://tecnomod-um.org"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "UMU",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://tecnomod-um.org"
+    }]
+  }],
   "description" : "ValueSet restricting the allowed values for documenting the patient's arrival mode/origin.\n\n**Primary use-case**\n- Required binding to `Encounter.admission.admitSource` in `StrokeEncounterProfile`.\n",
   "compose" : {
-    "include" : [
-      {
-        "system" : "http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs"
-      }
-    ]
+    "include" : [{
+      "system" : "http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs"
+    }]
   }
 }
 

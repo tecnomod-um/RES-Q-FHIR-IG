@@ -29,45 +29,33 @@ Profile: [Stroke Risk Factor Condition Profile](StructureDefinition-stroke-risk-
   "resourceType" : "Condition",
   "id" : "StrokeDiagnosisConditionAFlutter",
   "meta" : {
-    "profile" : [
-      "http://tecnomod-um.org/StructureDefinition/stroke-risk-factor-condition-profile"
-    ]
+    "profile" : ["http://tecnomod-um.org/StructureDefinition/stroke-risk-factor-condition-profile"]
   },
   "clinicalStatus" : {
-    "coding" : [
-      {
-        "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
-        "code" : "active"
-      }
-    ]
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+      "code" : "active"
+    }]
   },
   "verificationStatus" : {
-    "coding" : [
-      {
-        "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
-        "code" : "differential"
-      }
-    ]
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+      "code" : "differential"
+    }]
   },
-  "category" : [
-    {
-      "coding" : [
-        {
-          "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
-          "code" : "problem-list-item",
-          "display" : "Problem List Item"
-        }
-      ]
-    }
-  ],
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
+      "code" : "problem-list-item",
+      "display" : "Problem List Item"
+    }]
+  }],
   "code" : {
-    "coding" : [
-      {
-        "system" : "http://snomed.info/sct",
-        "code" : "5370000",
-        "display" : "Atrial flutter (disorder)"
-      }
-    ]
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "5370000",
+      "display" : "Atrial flutter (disorder)"
+    }]
   },
   "subject" : {
     "reference" : "Patient/example-patient"

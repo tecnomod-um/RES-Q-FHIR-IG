@@ -31,43 +31,31 @@ Profile: [Stroke Functional Score Observation Profile](StructureDefinition-funct
   "resourceType" : "Observation",
   "id" : "FunctionalScoreObservationExample",
   "meta" : {
-    "profile" : [
-      "http://tecnomod-um.org/StructureDefinition/functional-score-observation-profile"
-    ]
+    "profile" : ["http://tecnomod-um.org/StructureDefinition/functional-score-observation-profile"]
   },
-  "extension" : [
-    {
-      "url" : "http://tecnomod-um.org/StructureDefinition/observation-timing-context-ext",
-      "valueCodeableConcept" : {
-        "coding" : [
-          {
-            "system" : "http://tecnomod-um.org/CodeSystem/assessment-context-cs",
-            "code" : "pre-stroke",
-            "display" : "Pre-stroke"
-          }
-        ]
-      }
+  "extension" : [{
+    "url" : "http://tecnomod-um.org/StructureDefinition/observation-timing-context-ext",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://tecnomod-um.org/CodeSystem/assessment-context-cs",
+        "code" : "pre-stroke",
+        "display" : "Pre-stroke"
+      }]
     }
-  ],
+  }],
   "status" : "final",
-  "category" : [
-    {
-      "coding" : [
-        {
-          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
-          "code" : "exam"
-        }
-      ]
-    }
-  ],
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "exam"
+    }]
+  }],
   "code" : {
-    "coding" : [
-      {
-        "system" : "http://snomed.info/sct",
-        "code" : "1255866005",
-        "display" : "Modified Rankin Scale score (observable entity)"
-      }
-    ]
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "1255866005",
+      "display" : "Modified Rankin Scale score (observable entity)"
+    }]
   },
   "subject" : {
     "reference" : "Patient/example-patient"
@@ -76,13 +64,11 @@ Profile: [Stroke Functional Score Observation Profile](StructureDefinition-funct
     "reference" : "Encounter/StrokeEncounterExample"
   },
   "valueCodeableConcept" : {
-    "coding" : [
-      {
-        "system" : "http://tecnomod-um.org/CodeSystem/mrs-score-cs",
-        "code" : "0",
-        "display" : "No symptoms"
-      }
-    ]
+    "coding" : [{
+      "system" : "http://tecnomod-um.org/CodeSystem/mrs-score-cs",
+      "code" : "0",
+      "display" : "No symptoms"
+    }]
   }
 }
 

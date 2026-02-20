@@ -1,1799 +1,1601 @@
 {
-  "codeSystems" : [
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/administrative-gender",
-      "version" : "5.0.0",
-      "status" : "active",
-      "name" : "AdministrativeGender",
-      "title" : "AdministrativeGender",
-      "description" : "The gender of a person used for administrative purposes.",
-      "systems" : ["http://hl7.org/fhir/administrative-gender"],
-      "oids" : ["2.16.840.1.113883.4.642.3.1"],
-      "sources" : ["2.16.840.1.113883.4.642.3.1"],
-      "uses" : {
-      },
-      "StructureDefinition-patient-age-gender-snomed-profile.html" : "Patient with SNOMED Gender and Age (extensions)"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/all-languages",
-      "version" : "5.0.0",
-      "status" : "active",
-      "name" : "AllLanguages",
-      "title" : "All Languages",
-      "description" : "This value set includes all possible codes from BCP-47 (see http://tools.ietf.org/html/bcp47)",
-      "systems" : ["urn:ietf:bcp:47"],
-      "oids" : ["2.16.840.1.113883.4.642.3.21"],
-      "sources" : ["2.16.840.1.113883.4.642.3.21"],
-      "uses" : {
-      },
-      "StructureDefinition-patient-age-gender-snomed-profile.html" : "Patient with SNOMED Gender and Age (extensions)",
-      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
-      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
-      "StructureDefinition-discharge-medication-request-profile.html" : "Discharge Medication Request Profile",
-      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile",
-      "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile",
-      "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
-      "StructureDefinition-stroke-risk-factor-condition-profile.html" : "Stroke Risk Factor Condition Profile",
-      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
-      "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)",
-      "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
-      "StructureDefinition-prior-medication-statement-profile.html" : "Prior Medication Statement Profile (R5)",
-      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
-      "StructureDefinition-stroke-diagnosis-condition-profile.html" : "Stroke Diagnosis Condition Profile",
-      "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
-      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
-      "StructureDefinition-stroke-registry-organization-profile.html" : "Stroke Registry Organization Profile",
-      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/body-site",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "SNOMEDCTBodyStructures",
-      "title" : "SNOMED CT Body Structures",
-      "description" : "This value set includes all codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 442083009 (Anatomical or acquired body site (body structure)).",
-      "systems" : ["http://snomed.info/sct"],
-      "oids" : [
-        "2.16.840.1.113883.4.642.3.653",
-        "2.16.840.1.113883.4.642.2.78",
-        "2.16.840.1.113883.4.642.3.141"
-      ],
-      "sources" : [
-        "2.16.840.1.113883.4.642.3.653",
-        "2.16.840.1.113883.4.642.2.78",
-        "2.16.840.1.113883.4.642.3.141"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
-      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
-      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile",
-      "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
-      "StructureDefinition-stroke-risk-factor-condition-profile.html" : "Stroke Risk Factor Condition Profile",
-      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
-      "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)",
-      "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
-      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
-      "StructureDefinition-stroke-diagnosis-condition-profile.html" : "Stroke Diagnosis Condition Profile",
-      "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
-      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
-      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/clinical-findings",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "SNOMEDCTClinicalFindings",
-      "title" : "SNOMED CT Clinical Findings",
-      "description" : "This value set includes all the \"Clinical finding\" [SNOMED CT](http://snomed.info/sct) codes - concepts where concept is-a 404684003 (Clinical finding (finding)).",
-      "systems" : ["http://snomed.info/sct"],
-      "oids" : [
-        "2.16.840.1.113883.4.642.3.232",
-        "2.16.840.1.113883.4.642.3.227",
-        "2.16.840.1.113883.4.642.2.115"
-      ],
-      "sources" : [
-        "2.16.840.1.113883.4.642.3.232",
-        "2.16.840.1.113883.4.642.3.227",
-        "2.16.840.1.113883.4.642.2.115"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-diagnosis-condition-profile.html" : "Stroke Diagnosis Condition Profile",
-      "StructureDefinition-stroke-risk-factor-condition-profile.html" : "Stroke Risk Factor Condition Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/condition-category",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "ConditionCategoryCodes",
-      "title" : "Condition Category Codes",
-      "description" : "Preferred value set for Condition Categories.",
-      "systems" : ["http://terminology.hl7.org/CodeSystem/condition-category"],
-      "oids" : [
-        "2.16.840.1.113883.4.642.3.153",
-        "2.16.840.1.113883.4.642.3.162",
-        "2.16.840.1.113883.4.642.2.73"
-      ],
-      "sources" : [
-        "2.16.840.1.113883.4.642.3.153",
-        "2.16.840.1.113883.4.642.3.162",
-        "2.16.840.1.113883.4.642.2.73"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-diagnosis-condition-profile.html" : "Stroke Diagnosis Condition Profile",
-      "StructureDefinition-stroke-risk-factor-condition-profile.html" : "Stroke Risk Factor Condition Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/condition-clinical",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "ConditionClinicalStatusCodes",
-      "title" : "Condition Clinical Status Codes",
-      "description" : "Preferred value set for Condition Clinical Status.",
-      "systems" : ["http://terminology.hl7.org/CodeSystem/condition-clinical"],
-      "oids" : [
-        "2.16.840.1.113883.4.642.3.155",
-        "2.16.840.1.113883.4.642.3.164",
-        "2.16.840.1.113883.4.642.2.74"
-      ],
-      "sources" : [
-        "2.16.840.1.113883.4.642.3.155",
-        "2.16.840.1.113883.4.642.3.164",
-        "2.16.840.1.113883.4.642.2.74"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-diagnosis-condition-profile.html" : "Stroke Diagnosis Condition Profile",
-      "StructureDefinition-stroke-risk-factor-condition-profile.html" : "Stroke Risk Factor Condition Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/condition-code",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "ConditionProblemDiagnosisCodes",
-      "title" : "Condition/Problem/Diagnosis Codes",
-      "description" : "Example value set for Condition/Problem/Diagnosis codes.",
-      "systems" : ["http://snomed.info/sct"],
-      "oids" : [
-        "2.16.840.1.113883.4.642.3.161",
-        "2.16.840.1.113883.4.642.2.72",
-        "2.16.840.1.113883.4.642.3.152"
-      ],
-      "sources" : [
-        "2.16.840.1.113883.4.642.3.161",
-        "2.16.840.1.113883.4.642.2.72",
-        "2.16.840.1.113883.4.642.3.152"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
-      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
-      "StructureDefinition-prior-medication-statement-profile.html" : "Prior Medication Statement Profile (R5)",
-      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
-      "StructureDefinition-discharge-medication-request-profile.html" : "Discharge Medication Request Profile",
-      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile",
-      "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/condition-severity",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "ConditionDiagnosisSeverity",
-      "title" : "Condition/Diagnosis Severity",
-      "description" : "Preferred value set for Condition/Diagnosis severity grading.",
-      "systems" : ["http://snomed.info/sct"],
-      "oids" : [
-        "2.16.840.1.113883.4.642.3.168",
-        "2.16.840.1.113883.4.642.2.76",
-        "2.16.840.1.113883.4.642.3.159"
-      ],
-      "sources" : [
-        "2.16.840.1.113883.4.642.3.168",
-        "2.16.840.1.113883.4.642.2.76",
-        "2.16.840.1.113883.4.642.3.159"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-diagnosis-condition-profile.html" : "Stroke Diagnosis Condition Profile",
-      "StructureDefinition-stroke-risk-factor-condition-profile.html" : "Stroke Risk Factor Condition Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/condition-stage",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "ConditionStage",
-      "title" : "Condition Stage",
-      "description" : "Value set for stages of cancer and other conditions.",
-      "systems" : ["http://snomed.info/sct"],
-      "oids" : [
-        "2.16.840.1.113883.4.642.3.161",
-        "2.16.840.1.113883.4.642.3.170",
-        "2.16.840.1.113883.4.642.2.408"
-      ],
-      "sources" : [
-        "2.16.840.1.113883.4.642.3.161",
-        "2.16.840.1.113883.4.642.3.170",
-        "2.16.840.1.113883.4.642.2.408"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-diagnosis-condition-profile.html" : "Stroke Diagnosis Condition Profile",
-      "StructureDefinition-stroke-risk-factor-condition-profile.html" : "Stroke Risk Factor Condition Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/condition-stage-type",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "ConditionStageType",
-      "title" : "Condition Stage Type",
-      "description" : "Example value set for the type of stages of cancer and other conditions",
-      "systems" : ["http://snomed.info/sct"],
-      "oids" : ["2.16.840.1.113883.4.642.3.171"],
-      "sources" : ["2.16.840.1.113883.4.642.3.171"],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-diagnosis-condition-profile.html" : "Stroke Diagnosis Condition Profile",
-      "StructureDefinition-stroke-risk-factor-condition-profile.html" : "Stroke Risk Factor Condition Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/condition-ver-status",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "ConditionVerificationStatus",
-      "title" : "Condition Verification Status",
-      "description" : "The verification status to support or decline the clinical status of the condition or diagnosis.",
-      "systems" : ["http://terminology.hl7.org/CodeSystem/condition-ver-status"],
-      "oids" : [
-        "2.16.840.1.113883.4.642.3.157",
-        "2.16.840.1.113883.4.642.2.75",
-        "2.16.840.1.113883.4.642.3.166"
-      ],
-      "sources" : [
-        "2.16.840.1.113883.4.642.3.157",
-        "2.16.840.1.113883.4.642.2.75",
-        "2.16.840.1.113883.4.642.3.166"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-diagnosis-condition-profile.html" : "Stroke Diagnosis Condition Profile",
-      "StructureDefinition-stroke-risk-factor-condition-profile.html" : "Stroke Risk Factor Condition Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/data-absent-reason",
-      "version" : "5.0.0",
-      "status" : "active",
-      "name" : "DataAbsentReason",
-      "title" : "Data Absent Reason",
-      "description" : "Used to specify why the normally expected content of the data element is missing.",
-      "systems" : ["http://terminology.hl7.org/CodeSystem/data-absent-reason"],
-      "oids" : ["2.16.840.1.113883.4.642.3.5"],
-      "sources" : ["2.16.840.1.113883.4.642.3.5"],
-      "uses" : {
-      },
-      "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
-      "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
-      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
-      "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
-      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
-      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
-      "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/device-action",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "ProcedureDeviceActionCodes",
-      "title" : "Procedure Device Action Codes",
-      "description" : "Example codes indicating the change that happened to the device during the procedure.  Note that these are in no way complete and might not even be appropriate for some uses.",
-      "systems" : ["http://snomed.info/sct"],
-      "oids" : [
-        "2.16.840.1.113883.4.642.3.425",
-        "2.16.840.1.113883.4.642.2.236",
-        "2.16.840.1.113883.4.642.3.416"
-      ],
-      "sources" : [
-        "2.16.840.1.113883.4.642.3.425",
-        "2.16.840.1.113883.4.642.2.236",
-        "2.16.840.1.113883.4.642.3.416"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
-      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
-      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
-      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/device-type",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "DeviceType",
-      "title" : "Device Type",
-      "description" : "Codes used to identify medical devices. Includes concepts from SNOMED CT (http://www.snomed.org/) where concept is-a 49062001 (Device)  and is provided as a suggestive example.",
-      "systems" : [
-        "urn:iso:std:iso:11073:10101",
-        "urn:oid:2.16.840.1.113883.6.276",
-        "http://snomed.info/sct"
-      ],
-      "oids" : ["2.16.840.1.113883.4.642.3.1376"],
-      "sources" : ["2.16.840.1.113883.4.642.3.1376"],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
-      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
-      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
-      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/encounter-diagnosis-use",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "EncounterDiagnosisUse",
-      "title" : "Encounter Diagnosis Use",
-      "description" : "What a specific Encounter/EpisodeOfCare `diagnosis.condition` is to be used for.",
-      "systems" : ["http://hl7.org/fhir/encounter-diagnosis-use"],
-      "oids" : ["2.16.840.1.113883.4.642.4.3321"],
-      "sources" : ["2.16.840.1.113883.4.642.4.3321"],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/encounter-diet",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "EncounterDiet",
-      "title" : "Diet",
-      "description" : "This value set defines a set of codes that can be used to indicate dietary preferences or restrictions a patient may have.",
-      "systems" : ["http://terminology.hl7.org/CodeSystem/diet"],
-      "oids" : [
-        "2.16.840.1.113883.4.642.3.255",
-        "2.16.840.1.113883.4.642.2.142",
-        "2.16.840.1.113883.4.642.3.250"
-      ],
-      "sources" : [
-        "2.16.840.1.113883.4.642.3.255",
-        "2.16.840.1.113883.4.642.2.142",
-        "2.16.840.1.113883.4.642.3.250"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/encounter-location-status",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "EncounterLocationStatus",
-      "title" : "Encounter Location Status",
-      "description" : "The status of the location.",
-      "systems" : ["http://hl7.org/fhir/encounter-location-status"],
-      "oids" : [
-        "2.16.840.1.113883.4.642.3.257",
-        "2.16.840.1.113883.4.642.2.147",
-        "2.16.840.1.113883.4.642.3.262"
-      ],
-      "sources" : [
-        "2.16.840.1.113883.4.642.3.257",
-        "2.16.840.1.113883.4.642.2.147",
-        "2.16.840.1.113883.4.642.3.262"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/encounter-participant-type",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "ParticipantType",
-      "title" : "Participant Type",
-      "description" : "This value set defines a set of codes that can be used to indicate how an individual participates in an encounter.",
-      "systems" : [
-        "http://terminology.hl7.org/CodeSystem/participant-type",
-        "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
-      ],
-      "oids" : [
-        "2.16.840.1.113883.4.642.3.245",
-        "2.16.840.1.113883.4.642.2.139",
-        "2.16.840.1.113883.4.642.3.250"
-      ],
-      "sources" : [
-        "2.16.840.1.113883.4.642.3.245",
-        "2.16.840.1.113883.4.642.2.139",
-        "2.16.840.1.113883.4.642.3.250"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/encounter-reason",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "EncounterReasonCodes",
-      "title" : "Encounter Reason Codes",
-      "description" : "This examples value set defines the set of codes that can be used to indicate reasons for an encounter.",
-      "systems" : ["http://snomed.info/sct"],
-      "oids" : [
-        "2.16.840.1.113883.4.642.3.256",
-        "2.16.840.1.113883.4.642.2.146",
-        "2.16.840.1.113883.4.642.3.261"
-      ],
-      "sources" : [
-        "2.16.840.1.113883.4.642.3.256",
-        "2.16.840.1.113883.4.642.2.146",
-        "2.16.840.1.113883.4.642.3.261"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/encounter-reason-use",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "EncounterReasonUse",
-      "title" : "Encounter Reason Use",
-      "description" : "What a specific Encounter/EpisodeOfCare `reason.value` is to be used for.",
-      "systems" : ["http://hl7.org/fhir/encounter-reason-use"],
-      "oids" : ["2.16.840.1.113883.4.642.4.3320"],
-      "sources" : ["2.16.840.1.113883.4.642.4.3320"],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/encounter-special-arrangements",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "SpecialArrangements",
-      "title" : "Special Arrangements",
-      "description" : "This value set defines a set of codes that can be used to indicate the kinds of special arrangements in place for a patients visit.",
-      "systems" : [
-        "http://terminology.hl7.org/CodeSystem/encounter-special-arrangements"
-      ],
-      "oids" : [
-        "2.16.840.1.113883.4.642.3.248",
-        "2.16.840.1.113883.4.642.2.141",
-        "2.16.840.1.113883.4.642.3.253"
-      ],
-      "sources" : [
-        "2.16.840.1.113883.4.642.3.248",
-        "2.16.840.1.113883.4.642.2.141",
-        "2.16.840.1.113883.4.642.3.253"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/encounter-special-courtesy",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "SpecialCourtesy",
-      "title" : "Special Courtesy",
-      "description" : "This value set defines a set of codes that can be used to indicate special courtesies provided to the patient.",
-      "systems" : [
-        "http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy",
-        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
-      ],
-      "oids" : [
-        "2.16.840.1.113883.4.642.3.247",
-        "2.16.840.1.113883.4.642.3.252",
-        "2.16.840.1.113883.4.642.2.140"
-      ],
-      "sources" : [
-        "2.16.840.1.113883.4.642.3.247",
-        "2.16.840.1.113883.4.642.3.252",
-        "2.16.840.1.113883.4.642.2.140"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/encounter-status",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "EncounterStatus",
-      "title" : "Encounter Status",
-      "description" : "Current state of the encounter.",
-      "systems" : ["http://hl7.org/fhir/encounter-status"],
-      "oids" : [
-        "2.16.840.1.113883.4.642.3.246",
-        "2.16.840.1.113883.4.642.3.241"
-      ],
-      "sources" : [
-        "2.16.840.1.113883.4.642.3.246",
-        "2.16.840.1.113883.4.642.3.241"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/encounter-subject-status",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "EncounterSubjectStatus",
-      "title" : "Encounter Subject Status",
-      "description" : "This example value set defines a set of codes that can be used to indicate the status of the subject within the encounter",
-      "systems" : [
-        "http://terminology.hl7.org/CodeSystem/encounter-subject-status"
-      ],
-      "oids" : ["2.16.840.1.113883.4.642.3.3159"],
-      "sources" : ["2.16.840.1.113883.4.642.3.3159"],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/encounter-type",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "EncounterType",
-      "title" : "Encounter Type",
-      "description" : "This example value set defines a set of codes that can be used to indicate the type of encounter: a specific code indicating type of service provided.",
-      "systems" : ["http://terminology.hl7.org/CodeSystem/encounter-type"],
-      "oids" : [
-        "2.16.840.1.113883.4.642.3.243",
-        "2.16.840.1.113883.4.642.3.248",
-        "2.16.840.1.113883.4.642.2.137"
-      ],
-      "sources" : [
-        "2.16.840.1.113883.4.642.3.243",
-        "2.16.840.1.113883.4.642.3.248",
-        "2.16.840.1.113883.4.642.2.137"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/event-status",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "EventStatus",
-      "title" : "EventStatus",
-      "description" : "Codes identifying the lifecycle stage of an event.",
-      "systems" : ["http://hl7.org/fhir/event-status"],
-      "oids" : ["2.16.840.1.113883.4.642.3.109"],
-      "sources" : ["2.16.840.1.113883.4.642.3.109"],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
-      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
-      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
-      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/identifier-type",
-      "version" : "5.0.0",
-      "status" : "active",
-      "name" : "IdentifierTypeCodes",
-      "title" : "Identifier Type Codes",
-      "description" : "A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.",
-      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0203"],
-      "oids" : ["2.16.840.1.113883.4.642.3.45"],
-      "sources" : ["2.16.840.1.113883.4.642.3.45"],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-registry-organization-profile.html" : "Stroke Registry Organization Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/identifier-use",
-      "version" : "5.0.0",
-      "status" : "active",
-      "name" : "IdentifierUse",
-      "title" : "IdentifierUse",
-      "description" : "Identifies the purpose for this identifier, if known .",
-      "systems" : ["http://hl7.org/fhir/identifier-use"],
-      "oids" : ["2.16.840.1.113883.4.642.3.57"],
-      "sources" : ["2.16.840.1.113883.4.642.3.57"],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-registry-organization-profile.html" : "Stroke Registry Organization Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/languages",
-      "version" : "5.0.0",
-      "status" : "active",
-      "name" : "CommonLanguages",
-      "title" : "Common Languages",
-      "description" : "This value set includes common codes from BCP-47 (see http://tools.ietf.org/html/bcp47)",
-      "systems" : ["urn:ietf:bcp:47"],
-      "oids" : [
-        "2.16.840.1.113883.4.642.3.891",
-        "2.16.840.1.113883.4.642.3.20"
-      ],
-      "sources" : [
-        "2.16.840.1.113883.4.642.3.891",
-        "2.16.840.1.113883.4.642.3.20"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-patient-age-gender-snomed-profile.html" : "Patient with SNOMED Gender and Age (extensions)",
-      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
-      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
-      "StructureDefinition-discharge-medication-request-profile.html" : "Discharge Medication Request Profile",
-      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile",
-      "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile",
-      "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
-      "StructureDefinition-stroke-risk-factor-condition-profile.html" : "Stroke Risk Factor Condition Profile",
-      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
-      "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)",
-      "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
-      "StructureDefinition-prior-medication-statement-profile.html" : "Prior Medication Statement Profile (R5)",
-      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
-      "StructureDefinition-stroke-diagnosis-condition-profile.html" : "Stroke Diagnosis Condition Profile",
-      "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
-      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
-      "StructureDefinition-stroke-registry-organization-profile.html" : "Stroke Registry Organization Profile",
-      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/link-type",
-      "version" : "5.0.0",
-      "status" : "active",
-      "name" : "LinkType",
-      "title" : "Link Type",
-      "description" : "The type of link between this Patient resource and another Patient/RelatedPerson resource.",
-      "systems" : ["http://hl7.org/fhir/link-type"],
-      "oids" : [
-        "2.16.840.1.113883.4.642.2.234",
-        "2.16.840.1.113883.4.642.3.423",
-        "2.16.840.1.113883.4.642.3.412"
-      ],
-      "sources" : [
-        "2.16.840.1.113883.4.642.2.234",
-        "2.16.840.1.113883.4.642.3.423",
-        "2.16.840.1.113883.4.642.3.412"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-patient-age-gender-snomed-profile.html" : "Patient with SNOMED Gender and Age (extensions)"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/location-form",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "LocationForm",
-      "title" : "Location Form",
-      "description" : "This example value set defines a set of codes that can be used to indicate the physical form of the Location.",
-      "systems" : [
-        "http://terminology.hl7.org/CodeSystem/location-physical-type"
-      ],
-      "oids" : ["2.16.840.1.113883.4.642.3.328"],
-      "sources" : ["2.16.840.1.113883.4.642.3.328"],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/marital-status",
-      "version" : "5.0.0",
-      "status" : "active",
-      "name" : "MaritalStatusCodes",
-      "title" : "Marital Status Codes",
-      "description" : "This value set defines the set of codes that can be used to indicate the marital status of a person.",
-      "systems" : [
-        "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
-        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
-      ],
-      "oids" : ["2.16.840.1.113883.4.642.3.29"],
-      "sources" : ["2.16.840.1.113883.4.642.3.29"],
-      "uses" : {
-      },
-      "StructureDefinition-patient-age-gender-snomed-profile.html" : "Patient with SNOMED Gender and Age (extensions)"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/medication-dose-aid",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "MedicationDoseAids",
-      "title" : "Medication Dose Aids",
-      "description" : "Medication Dose Aids",
-      "systems" : ["http://hl7.org/fhir/CodeSystem/medication-dose-aid"],
-      "oids" : ["2.16.840.1.113883.4.642.3.3241"],
-      "sources" : ["2.16.840.1.113883.4.642.3.3241"],
-      "uses" : {
-      },
-      "StructureDefinition-discharge-medication-request-profile.html" : "Discharge Medication Request Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/medication-intended-performer-role",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "MedicationIntendedPerformerRole",
-      "title" : "Medication Intended Performer Role",
-      "description" : "Medication Intended Performer Role",
-      "systems" : [
-        "http://hl7.org/fhir/CodeSystem/medication-intended-performer-role"
-      ],
-      "oids" : ["2.16.840.1.113883.4.642.3.1979"],
-      "sources" : ["2.16.840.1.113883.4.642.3.1979"],
-      "uses" : {
-      },
-      "StructureDefinition-discharge-medication-request-profile.html" : "Discharge Medication Request Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/medication-statement-adherence",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "MedicationStatementAdherenceCodes",
-      "title" : "MedicationStatement Adherence Codes",
-      "description" : "MedicationStatement Adherence Codes",
-      "systems" : [
-        "http://hl7.org/fhir/CodeSystem/medication-statement-adherence"
-      ],
-      "oids" : ["2.16.840.1.113883.4.642.3.3090"],
-      "sources" : ["2.16.840.1.113883.4.642.3.3090"],
-      "uses" : {
-      },
-      "StructureDefinition-prior-medication-statement-profile.html" : "Prior Medication Statement Profile (R5)"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/medication-statement-status",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "MedicationStatementStatusCodes",
-      "title" : "MedicationStatement Status Codes",
-      "description" : "MedicationStatement Status Codes",
-      "systems" : ["http://hl7.org/fhir/CodeSystem/medication-statement-status"],
-      "oids" : ["2.16.840.1.113883.4.642.3.3088"],
-      "sources" : ["2.16.840.1.113883.4.642.3.3088"],
-      "uses" : {
-      },
-      "StructureDefinition-prior-medication-statement-profile.html" : "Prior Medication Statement Profile (R5)"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/medicationrequest-admin-location",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "MedicationRequestAdministrationLocationCodes",
-      "title" : "medicationRequest Administration Location Codes",
-      "description" : "MedicationRequest Administration Location Codes",
-      "systems" : [
-        "http://terminology.hl7.org/CodeSystem/medicationrequest-admin-location"
-      ],
-      "oids" : ["2.16.840.1.113883.4.642.3.3242"],
-      "sources" : ["2.16.840.1.113883.4.642.3.3242"],
-      "uses" : {
-      },
-      "StructureDefinition-prior-medication-statement-profile.html" : "Prior Medication Statement Profile (R5)",
-      "StructureDefinition-discharge-medication-request-profile.html" : "Discharge Medication Request Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/medicationrequest-course-of-therapy",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "MedicationRequestCourseOfTherapyCodes",
-      "title" : "medicationRequest Course of Therapy Codes",
-      "description" : "MedicationRequest Course of Therapy Codes",
-      "systems" : [
-        "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy"
-      ],
-      "oids" : ["2.16.840.1.113883.4.642.3.1326"],
-      "sources" : ["2.16.840.1.113883.4.642.3.1326"],
-      "uses" : {
-      },
-      "StructureDefinition-discharge-medication-request-profile.html" : "Discharge Medication Request Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/medicationrequest-intent",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "MedicationRequestIntent",
-      "title" : "medicationRequest Intent",
-      "description" : "MedicationRequest Intent Codes",
-      "systems" : ["http://hl7.org/fhir/CodeSystem/medicationrequest-intent"],
-      "oids" : ["2.16.840.1.113883.4.642.3.1321"],
-      "sources" : ["2.16.840.1.113883.4.642.3.1321"],
-      "uses" : {
-      },
-      "StructureDefinition-discharge-medication-request-profile.html" : "Discharge Medication Request Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/medicationrequest-status",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "MedicationrequestStatus",
-      "title" : "medicationrequest Status",
-      "description" : "MedicationRequest Status Codes",
-      "systems" : ["http://hl7.org/fhir/CodeSystem/medicationrequest-status"],
-      "oids" : ["2.16.840.1.113883.4.642.3.1320"],
-      "sources" : ["2.16.840.1.113883.4.642.3.1320"],
-      "uses" : {
-      },
-      "StructureDefinition-discharge-medication-request-profile.html" : "Discharge Medication Request Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/medicationrequest-status-reason",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "MedicationRequestStatusReasonCodes",
-      "title" : "medicationRequest Status Reason Codes",
-      "description" : "MedicationRequest Status Reason Codes",
-      "systems" : [
-        "http://terminology.hl7.org/CodeSystem/medicationrequest-status-reason"
-      ],
-      "oids" : ["2.16.840.1.113883.4.642.3.1324"],
-      "sources" : ["2.16.840.1.113883.4.642.3.1324"],
-      "uses" : {
-      },
-      "StructureDefinition-discharge-medication-request-profile.html" : "Discharge Medication Request Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/observation-category",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "ObservationCategoryCodes",
-      "title" : "Observation Category Codes",
-      "description" : "Observation Category codes.",
-      "systems" : ["http://terminology.hl7.org/CodeSystem/observation-category"],
-      "oids" : [
-        "2.16.840.1.113883.4.642.3.403",
-        "2.16.840.1.113883.4.642.2.222",
-        "2.16.840.1.113883.4.642.3.392"
-      ],
-      "sources" : [
-        "2.16.840.1.113883.4.642.3.403",
-        "2.16.840.1.113883.4.642.2.222",
-        "2.16.840.1.113883.4.642.3.392"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
-      "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
-      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
-      "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
-      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
-      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
-      "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/observation-codes",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "LOINCCodes",
-      "title" : "LOINC Codes",
-      "description" : "This value set includes all LOINC codes",
-      "systems" : ["http://loinc.org"],
-      "oids" : [
-        "2.16.840.1.113883.4.642.2.216",
-        "2.16.840.1.113883.4.642.3.396",
-        "2.16.840.1.113883.4.642.3.383"
-      ],
-      "sources" : [
-        "2.16.840.1.113883.4.642.2.216",
-        "2.16.840.1.113883.4.642.3.396",
-        "2.16.840.1.113883.4.642.3.383"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
-      "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
-      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
-      "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
-      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
-      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
-      "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/observation-interpretation",
-      "version" : "5.0.0",
-      "status" : "active",
-      "name" : "ObservationInterpretationCodes",
-      "title" : "Observation Interpretation Codes",
-      "description" : "A categorical assessment, providing a rough qualitative interpretation of the observation value,    such as “normal”/ “abnormal”,”low” / “high”, “better” / “worse”, “susceptible” / “resistant”, “expected”/ “not expected”.    The value set is intended to be for ANY use where coded representation of an interpretation is needed.   \r\n   \r\n   Notes:\r\n   \r\n   This is being communicated in v2.x in OBX-8 (Observation Interpretation), in v3 in ObservationInterpretation (CWE) in R1 (Representative Realm) and in FHIR in    Observation.interpretation. Historically these values come from the laboratory domain, and these codes are extensively    used. The value set binding is extensible, so codes outside the value set that are needed for interpretation concepts    (i.e. particular meanings) that are not included in the value set can be used, and these new codes may also be added to    the value set and published in a future version.",
-      "systems" : [
-        "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
-      ],
-      "oids" : [
-        "2.16.840.1.113883.4.642.3.399",
-        "2.16.840.1.113883.4.642.3.386",
-        "2.16.840.1.113883.4.642.2.218"
-      ],
-      "sources" : [
-        "2.16.840.1.113883.4.642.3.399",
-        "2.16.840.1.113883.4.642.3.386",
-        "2.16.840.1.113883.4.642.2.218"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
-      "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
-      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
-      "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
-      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
-      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
-      "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/observation-methods",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "ObservationMethods",
-      "title" : "Observation Methods",
-      "description" : "Observation Method codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 272394005 (Technique (qualifier value)) or is-a 129264002 (Action (qualifier value)) or is-a 386053000 (Evaluation procedure(procedure))",
-      "systems" : ["http://snomed.info/sct"],
-      "oids" : [
-        "2.16.840.1.113883.4.642.2.215",
-        "2.16.840.1.113883.4.642.3.395",
-        "2.16.840.1.113883.4.642.3.382"
-      ],
-      "sources" : [
-        "2.16.840.1.113883.4.642.2.215",
-        "2.16.840.1.113883.4.642.3.395",
-        "2.16.840.1.113883.4.642.3.382"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
-      "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
-      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
-      "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
-      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
-      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
-      "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/observation-referencerange-normalvalue",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "ObservationReferenceRangeNormalValueCodes",
-      "title" : "Observation Reference Range Normal Value Codes",
-      "description" : "Codes that describe the normal value in the reference range, such as “Negative” or “Absent”",
-      "systems" : ["http://hl7.org/fhir/observation-referencerange-normalvalue"],
-      "oids" : ["2.16.840.1.113883.4.642.3.3264"],
-      "sources" : ["2.16.840.1.113883.4.642.3.3264"],
-      "uses" : {
-      },
-      "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
-      "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
-      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
-      "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
-      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
-      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
-      "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/observation-status",
-      "version" : "5.0.0",
-      "status" : "active",
-      "name" : "ObservationStatus",
-      "title" : "Observation Status",
-      "description" : "Codes providing the status of an observation.",
-      "systems" : ["http://hl7.org/fhir/observation-status"],
-      "oids" : [
-        "2.16.840.1.113883.4.642.3.400",
-        "2.16.840.1.113883.4.642.3.387",
-        "2.16.840.1.113883.4.642.2.219"
-      ],
-      "sources" : [
-        "2.16.840.1.113883.4.642.3.400",
-        "2.16.840.1.113883.4.642.3.387",
-        "2.16.840.1.113883.4.642.2.219"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
-      "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
-      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
-      "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
-      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
-      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
-      "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/observation-triggeredbytype",
-      "version" : "5.0.0",
-      "status" : "active",
-      "name" : "TriggeredBytype",
-      "title" : "triggered Bytype",
-      "description" : "Codes providing the type of triggeredBy observation.",
-      "systems" : ["http://hl7.org/fhir/observation-triggeredbytype"],
-      "oids" : ["2.16.840.1.113883.4.642.3.3265"],
-      "sources" : ["2.16.840.1.113883.4.642.3.3265"],
-      "uses" : {
-      },
-      "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
-      "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
-      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
-      "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
-      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
-      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
-      "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/organization-type",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "OrganizationType",
-      "title" : "Organization Type",
-      "description" : "This example value set defines a set of codes that can be used to indicate a type of organization.",
-      "systems" : ["http://terminology.hl7.org/CodeSystem/organization-type"],
-      "oids" : [
-        "2.16.840.1.113883.4.642.2.228",
-        "2.16.840.1.113883.4.642.3.414",
-        "2.16.840.1.113883.4.642.3.403"
-      ],
-      "sources" : [
-        "2.16.840.1.113883.4.642.2.228",
-        "2.16.840.1.113883.4.642.3.414",
-        "2.16.840.1.113883.4.642.3.403"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-registry-organization-profile.html" : "Stroke Registry Organization Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/participation-role-type",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "ParticipationRoleType",
-      "title" : "Participation Role Type",
-      "description" : "This FHIR value set is comprised of Actor participation Type codes, which can be used to value FHIR agents, actors, and other role elements. The codes are intended to express how the agent participated in some activity. Sometimes refered to the agent functional-role relative to the activity.",
-      "systems" : [
-        "http://terminology.hl7.org/CodeSystem/extra-security-role-type",
-        "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
-        "http://dicom.nema.org/resources/ontology/DCM"
-      ],
-      "oids" : ["2.16.840.1.113883.4.642.3.54"],
-      "sources" : ["2.16.840.1.113883.4.642.3.54"],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-diagnosis-condition-profile.html" : "Stroke Diagnosis Condition Profile",
-      "StructureDefinition-stroke-risk-factor-condition-profile.html" : "Stroke Risk Factor Condition Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/patient-contactrelationship",
-      "version" : "5.0.0",
-      "status" : "active",
-      "name" : "PatientContactRelationship",
-      "title" : "Patient Contact Relationship ",
-      "description" : "The nature of the relationship between the patient and the contact person.",
-      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0131"],
-      "oids" : ["2.16.840.1.113883.4.642.3.1130"],
-      "sources" : ["2.16.840.1.113883.4.642.3.1130"],
-      "uses" : {
-      },
-      "StructureDefinition-patient-age-gender-snomed-profile.html" : "Patient with SNOMED Gender and Age (extensions)"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/performer-role",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "ProcedurePerformerRoleCodes",
-      "title" : "Procedure Performer Role Codes",
-      "description" : "This example value set defines the set of codes that can be used to indicate a role of a procedure performer.",
-      "systems" : ["http://snomed.info/sct"],
-      "oids" : [
-        "2.16.840.1.113883.4.642.3.433",
-        "2.16.840.1.113883.4.642.2.420",
-        "2.16.840.1.113883.4.642.3.424"
-      ],
-      "sources" : [
-        "2.16.840.1.113883.4.642.3.433",
-        "2.16.840.1.113883.4.642.2.420",
-        "2.16.840.1.113883.4.642.3.424"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
-      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
-      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
-      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/procedure-category",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "ProcedureCategoryCodesSNOMEDCT",
-      "title" : "Procedure Category Codes (SNOMED CT)",
-      "description" : "Procedure Category code: A selection of relevant SNOMED CT codes.",
-      "systems" : ["http://snomed.info/sct"],
-      "oids" : [
-        "2.16.840.1.113883.4.642.3.421",
-        "2.16.840.1.113883.4.642.3.430",
-        "2.16.840.1.113883.4.642.2.241"
-      ],
-      "sources" : [
-        "2.16.840.1.113883.4.642.3.421",
-        "2.16.840.1.113883.4.642.3.430",
-        "2.16.840.1.113883.4.642.2.241"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
-      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
-      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
-      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/procedure-code",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "ProcedureCodesSNOMEDCT",
-      "title" : "Procedure Codes (SNOMED CT)",
-      "description" : "Procedure Code: All SNOMED CT procedure codes.",
-      "systems" : ["http://snomed.info/sct"],
-      "oids" : [
-        "2.16.840.1.113883.4.642.3.418",
-        "2.16.840.1.113883.4.642.3.427",
-        "2.16.840.1.113883.4.642.2.417"
-      ],
-      "sources" : [
-        "2.16.840.1.113883.4.642.3.418",
-        "2.16.840.1.113883.4.642.3.427",
-        "2.16.840.1.113883.4.642.2.417"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/procedure-followup",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "ProcedureFollowUpCodesSNOMEDCT",
-      "title" : "Procedure Follow up Codes (SNOMED CT)",
-      "description" : "Procedure follow up codes: A selection of SNOMED CT codes relevant to procedure follow up.",
-      "systems" : ["http://snomed.info/sct"],
-      "oids" : [
-        "2.16.840.1.113883.4.642.3.420",
-        "2.16.840.1.113883.4.642.3.429",
-        "2.16.840.1.113883.4.642.2.240"
-      ],
-      "sources" : [
-        "2.16.840.1.113883.4.642.3.420",
-        "2.16.840.1.113883.4.642.3.429",
-        "2.16.840.1.113883.4.642.2.240"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
-      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
-      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
-      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/procedure-outcome",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "ProcedureOutcomeCodesSNOMEDCT",
-      "title" : "Procedure Outcome Codes (SNOMED CT)",
-      "description" : "Procedure Outcome code: A selection of relevant SNOMED CT codes.",
-      "systems" : ["http://snomed.info/sct"],
-      "oids" : [
-        "2.16.840.1.113883.4.642.2.239",
-        "2.16.840.1.113883.4.642.3.419",
-        "2.16.840.1.113883.4.642.3.428"
-      ],
-      "sources" : [
-        "2.16.840.1.113883.4.642.2.239",
-        "2.16.840.1.113883.4.642.3.419",
-        "2.16.840.1.113883.4.642.3.428"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
-      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
-      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
-      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/procedure-reason",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "ProcedureReasonCodes",
-      "title" : "Procedure Reason Codes",
-      "description" : "This example value set defines the set of codes that can be used to indicate a reason for a procedure.",
-      "systems" : ["http://snomed.info/sct"],
-      "oids" : [
-        "2.16.840.1.113883.4.642.3.432",
-        "2.16.840.1.113883.4.642.3.423",
-        "2.16.840.1.113883.4.642.2.419"
-      ],
-      "sources" : [
-        "2.16.840.1.113883.4.642.3.432",
-        "2.16.840.1.113883.4.642.3.423",
-        "2.16.840.1.113883.4.642.2.419"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
-      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
-      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
-      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/quantity-comparator",
-      "version" : "5.0.0",
-      "status" : "active",
-      "name" : "QuantityComparator",
-      "title" : "QuantityComparator",
-      "description" : "How the Quantity should be understood and represented.",
-      "systems" : ["http://hl7.org/fhir/quantity-comparator"],
-      "oids" : ["2.16.840.1.113883.4.642.3.59"],
-      "sources" : ["2.16.840.1.113883.4.642.3.59"],
-      "uses" : {
-      },
-      "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
-      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/reason-medication-status-codes",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "SNOMEDCTDrugTherapyStatusCodes",
-      "title" : "SNOMED CT Drug Therapy Status codes ",
-      "description" : "This value set includes some taken and not taken reason codes from SNOMED CT - provided as an exemplar",
-      "systems" : ["http://snomed.info/sct"],
-      "oids" : ["2.16.840.1.113883.4.642.3.369"],
-      "sources" : ["2.16.840.1.113883.4.642.3.369"],
-      "uses" : {
-      },
-      "StructureDefinition-prior-medication-statement-profile.html" : "Prior Medication Statement Profile (R5)"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/referencerange-appliesto",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "ObservationReferenceRangeAppliesToCodes",
-      "title" : "Observation Reference Range Applies To Codes",
-      "description" : "This value set defines a set of codes that can be used to indicate the particular target population the reference range applies to.",
-      "systems" : [
-        "http://terminology.hl7.org/CodeSystem/v3-Race",
-        "http://snomed.info/sct"
-      ],
-      "oids" : [
-        "2.16.840.1.113883.4.642.3.407",
-        "2.16.840.1.113883.4.642.3.396"
-      ],
-      "sources" : [
-        "2.16.840.1.113883.4.642.3.407",
-        "2.16.840.1.113883.4.642.3.396"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
-      "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
-      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
-      "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
-      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
-      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
-      "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/referencerange-meaning",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "ObservationReferenceRangeMeaningCodes",
-      "title" : "Observation Reference Range Meaning Codes",
-      "description" : "This value set defines a set of codes that can be used to indicate the meaning/use of a reference range for a particular target population.",
-      "systems" : [
-        "http://terminology.hl7.org/CodeSystem/referencerange-meaning"
-      ],
-      "oids" : [
-        "2.16.840.1.113883.4.642.3.397",
-        "2.16.840.1.113883.4.642.2.217",
-        "2.16.840.1.113883.4.642.3.384"
-      ],
-      "sources" : [
-        "2.16.840.1.113883.4.642.3.397",
-        "2.16.840.1.113883.4.642.2.217",
-        "2.16.840.1.113883.4.642.3.384"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
-      "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
-      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
-      "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
-      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
-      "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
-      "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/request-priority",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "RequestPriority",
-      "title" : "RequestPriority",
-      "description" : "Identifies the level of importance to be assigned to actioning the request.",
-      "systems" : ["http://hl7.org/fhir/request-priority"],
-      "oids" : ["2.16.840.1.113883.4.642.3.115"],
-      "sources" : ["2.16.840.1.113883.4.642.3.115"],
-      "uses" : {
-      },
-      "StructureDefinition-discharge-medication-request-profile.html" : "Discharge Medication Request Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/service-type",
-      "version" : "5.0.0",
-      "status" : "draft",
-      "name" : "ServiceType",
-      "title" : "Service Type",
-      "description" : "This value set defines an example set of codes of service-types.",
-      "systems" : ["http://terminology.hl7.org/CodeSystem/service-type"],
-      "oids" : [
-        "2.16.840.1.113883.4.642.3.512",
-        "2.16.840.1.113883.4.642.3.518"
-      ],
-      "sources" : [
-        "2.16.840.1.113883.4.642.3.512",
-        "2.16.840.1.113883.4.642.3.518"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
-    },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/admission-source-vs",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "AdmissionSourceValueSet",
-      "title" : "Admission Sources ValueSet",
-      "description" : "This ValueSet enumerates modes of transport or pathways by which a patient arrived for the index stroke encounter.\n\n**Primary use-cases**\n- Bind to admission source elements (commonly `Encounter.hospitalization.admitSource` or local equivalents) to support:\n  - operational reporting (ambulance vs own transport),\n  - pathway compliance (e.g., EMS prenotification pathways),\n  - inter-facility transfer analytics.",
-      "systems" : ["http://snomed.info/sct"]
-    },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/afib-flutter-status-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "AfibFlutterStatusVS",
-      "title" : "Atrial Fibrillation / Flutter Assessment Status ValueSet",
-      "description" : "This ValueSet constrains the allowable coded outcomes for documenting the **status of an AF/flutter assessment** within the stroke workflow.\n\n**Primary use-case**\n- Bind to `Observation.valueCodeableConcept` in the `SpecificFindingObservationProfile` when `Observation.code` refers to AF/flutter as a finding focus.\n- Enables harmonized interpretation for analytics and decision support (e.g., anticoagulation pathway triggers) without forcing a Condition assertion.\n\n**Scope and modeling notes**\n- This ValueSet expresses *assessment outcome/status* (detected/known/absent/not screened/unknown).\n- It does not replace Condition for diagnoses. When AF/flutter is confirmed as a diagnosis, represent it as a `Condition` with the appropriate SNOMED CT disorder code.",
-      "systems" : ["http://snomed.info/sct"]
-    },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/assessment-context-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "AssessmentContextVS",
-      "title" : "Assessment Context ValueSet",
-      "description" : "This ValueSet includes all phase/context codes from AssessmentContextCS.\n\n**Primary use-case**\n- Required binding for elements that must indicate the clinical phase of an assessment (e.g., timing context extensions).",
-      "systems" : ["http://tecnomod-um.org/CodeSystem/assessment-context-cs"],
-      "uses" : {
-      },
-      "StructureDefinition-observation-timing-context-ext.html" : "Observation Timing Context Extension"
-    },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/brain-imaging-modality-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "BrainImagingModalityVS",
-      "title" : "Brain Imaging Modality ValueSet",
-      "description" : "Defines the SNOMED CT codes for individual brain imaging modalities performed as procedures.",
-      "systems" : [
-        "http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs",
-        "http://snomed.info/sct"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile"
-    },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/carotid-imaging-modality-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "CarotidImagingModalityVS",
-      "title" : "Carotid Arteries Imaging Modality ValueSet",
-      "description" : "This ValueSet enumerates standardized codes (primarily SNOMED CT procedures) representing **carotid imaging modalities** used in stroke workflows.\n\n**Primary use-case**\n- Bind to `Procedure.code` when recording a carotid imaging study performed during the stroke episode.",
-      "systems" : ["http://snomed.info/sct"]
-    },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/discharge-dept-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "DischargeDeptVS",
-      "title" : "Discharge Department/Service ValueSet",
-      "description" : "ValueSet restricting the allowed department/service categories recorded at discharge.\n\n**Primary use-case**\n- Required binding for `DischargeDepartmentServiceExtension.valueCodeableConcept`.",
-      "systems" : ["http://tecnomod-um.org/CodeSystem/discharge-dept-cs"],
-      "uses" : {
-      },
-      "StructureDefinition-discharge-department-service-ext.html" : "Discharge Department/Service Extension"
-    },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/discharge-destination-vs",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "DischargeDestinationValueSet",
-      "title" : "Discharge Destination ValueSet",
-      "description" : "This ValueSet enumerates discharge destination concepts (primarily SNOMED CT procedure-like “discharge to …” concepts).\n\n**Primary use-cases**\n- Bind to discharge disposition elements in encounter/hospitalization modeling.\n  enabling consistent:\n  - care transition analytics,\n  - pathway reporting (home vs ward vs facility vs mortuary),\n  - downstream coordination workflows.",
-      "systems" : ["http://snomed.info/sct"]
-    },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/functional-score-codes-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "FunctionalScoreCodesVS",
-      "title" : "Stroke Functional Score Codes ValueSet",
-      "description" : "This ValueSet constrains `Observation.code` for functional outcome and severity instruments represented in this guide:\n- Modified Rankin Scale score (mRS)\n- NIH Stroke Scale total score (NIHSS)\n\n**Primary use-case**\n- Bind to `Observation.code` in `FunctionalScoreObservationProfile`.\n\n**Datatype expectations enforced via invariants**\n- mRS: `Observation.valueCodeableConcept` bound to MRsScoreVS (ordinal categories 0–6).\n- NIHSS: `Observation.valueInteger` as total NIHSS score.",
-      "systems" : ["http://snomed.info/sct"],
-      "uses" : {
-      },
-      "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile"
-    },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/hemorrhagic-stroke-bleeding-reason-vs",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "HemorrhagicStrokeBleedingReasonVS",
-      "title" : "Hemorrhagic Stroke Bleeding Reason ValueSet",
-      "description" : "This ValueSet defines allowable causes of bleeding for hemorrhagic stroke documentation.\n\n**Primary use-case**\n- Required binding for `HemorrhagicStrokeBleedingReasonExt.valueCodeableConcept` on a definitive hemorrhagic stroke Condition.\n\n**Implementation guidance**\n- Use when the cause is *identified* (e.g., aneurysm, vascular malformation).\n- If the cause is unknown/undetermined, prefer documenting that explicitly using narrative (`Condition.note`) and/or a dedicated assessment Observation;\n  if a coded placeholder is required, `Undetermined (qualifier value)` is included as an option.",
-      "systems" : [
-        "http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs",
-        "http://snomed.info/sct"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-hemorrhagic-stroke-bleeding-reason-ext.html" : "Hemorrhagic Stroke – Bleeding Reason"
-    },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/initial-care-intensity-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "InitialCareIntensityVS",
-      "title" : "Initial Care Intensity ValueSet",
-      "description" : "ValueSet restricting allowed initial care intensity categories.\n\n**Primary use-case**\n- Required binding for `InitialCareIntensityExtension.valueCodeableConcept`.",
-      "systems" : [
-        "http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-initial-care-intensity-ext.html" : "Initial Care Intensity Extension"
-    },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/medication-vs",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "MedicationVS",
-      "title" : "Medications ValueSet",
-      "description" : "SNOMED CT codes for drug products or substances.",
-      "systems" : [
-        "http://tecnomod-um.org/CodeSystem/medication-cs",
-        "http://snomed.info/sct"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-prior-medication-statement-profile.html" : "Prior Medication Statement Profile (R5)",
-      "StructureDefinition-discharge-medication-request-profile.html" : "Discharge Medication Request Profile"
-    },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/mrs-score-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "MRsScoreVS",
-      "title" : "Modified Rankin Scale (mRS) Score ValueSet",
-      "description" : "This ValueSet includes all mRS grades (0–6) defined in MRsScoreCS.\n\n**Primary use-case**\n- Bind to `Observation.valueCodeableConcept` when `Observation.code` indicates the Observation represents an mRS score.",
-      "systems" : ["http://tecnomod-um.org/CodeSystem/mrs-score-cs"],
-      "uses" : {
-      },
-      "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile"
-    },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/mtici-code-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "MTICICodeVS",
-      "title" : "Modified Thrombolysis in Cerebral Infarction Assessment ValueSet",
-      "description" : "This ValueSet includes the mTICI assessment concept code(s) from MTICICodeCS.\n\n**Primary use-case**\n- Bind to `Observation.code` when recording an mTICI reperfusion grade Observation.\n- Pair with `Observation.valueCodeableConcept` bound to MticiScoreVS.",
-      "systems" : ["http://tecnomod-um.org/CodeSystem/mtici-code-cs"],
-      "uses" : {
-      },
-      "ValueSet-stroke-finding-codes-vs.html" : "Specific Stroke Finding Codes ValueSet"
-    },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/mtici-score-vs",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "MTICIScoreValueSet",
-      "title" : "Modified Treatment in Cerebral Infarction Grade Score ValueSet",
-      "description" : "This ValueSet enumerates all allowable Modified Treatment in Cerebral Infarction reperfusion grade values (0, 1, 2a, 2b, 2c, 3) from MticiScoreCS.\n\n**Primary use-case**\n- Required binding to `Observation.valueCodeableConcept` when an Observation represents an mTICI grade outcome.\n\n**Why a dedicated ValueSet**\n- Ensures consistent coding across implementations and sites.\n- Enables reliable registry reporting, audit/quality measurement, and research analytics.",
-      "systems" : ["http://tecnomod-um.org/CodeSystem/mtici-score-cs"]
-    },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/perforation-procedures-vs",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "PerforationProceduresValueset",
-      "title" : "Perforation Procedures ValueSet",
-      "description" : "ValueSet restricting Procedure codes to stroke **reperfusion interventions**:\n- IV thrombolysis (IVT)\n- Mechanical thrombectomy (MT)",
-      "systems" : ["http://snomed.info/sct"],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile"
-    },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/procedure-timing-context-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "ProcedureTimingContextVS",
-      "title" : "Procedure Timing Context ValueSet",
-      "description" : "ValueSet limiting allowed values for the Procedure timing context extension (acute/post-acute/unknown).\n\n**Use-case**\n- Required binding to ensure comparable phase classification across systems and sites.",
-      "systems" : [
-        "http://tecnomod-um.org/CodeSystem/procedure-timing-context-cs"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-procedure-timing-context-ext.html" : "Procedure Timing Context Extension"
-    },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/specific-finding-codes-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "SpecificFindingCodesVS",
-      "title" : "Specific Stroke Finding Codes ValueSet",
-      "description" : "This ValueSet provides SNOMED CT disorder concepts for specific findings referenced in the stroke workup.\nCurrently includes:\n- Atrial fibrillation (disorder)\n- Atrial flutter (disorder)\n\n**Primary use-case**\n- Constrain `Observation.code` (as a *finding focus*) when using `SpecificFindingObservationProfile`.\n\n**Important modeling note**\n- Using a disorder concept in `Observation.code` here does not necessarily assert a diagnosis; the diagnosis should be modeled as a Condition.\n- The Observation can be interpreted as “assessment about this finding,” with the result in `Observation.valueCodeableConcept` (e.g., AF status).",
-      "systems" : ["http://snomed.info/sct"],
-      "uses" : {
-      },
-      "ValueSet-stroke-finding-codes-vs.html" : "Specific Stroke Finding Codes ValueSet"
-    },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/stroke-arrival-mode-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "StrokeArrivalModeVS",
-      "title" : "Stroke Arrival Mode ValueSet",
-      "description" : "ValueSet restricting the allowed values for documenting the patient's arrival mode/origin.\n\n**Primary use-case**\n- Required binding to `Encounter.admission.admitSource` in `StrokeEncounterProfile`.",
-      "systems" : ["http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs"],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
-    },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/stroke-circumstance-codes-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "StrokeCircumstanceCodesVS",
-      "title" : "Stroke Circumstance Codes ValueSet",
-      "description" : "This ValueSet includes all onset-circumstance codes from StrokeCircumstanceCodesCS.\n\n**Primary use-case**\n- Required binding for `StrokeCircumstanceObservationProfile.code`.",
-      "systems" : [
-        "http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)"
-    },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/stroke-diagnosis-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "StrokeDiagnosisVS",
-      "title" : "Stroke Diagnosis ValueSet",
-      "description" : "This ValueSet enumerates SNOMED CT concepts representing **final stroke-related diagnoses** for use in `Condition.code` within this Implementation Guide (IG).\n\n**Primary use-case**\n- Required binding to `Condition.code` in `StrokeDiagnosisConditionProfile`, representing the *definitive diagnosis* of the index stroke event for the linked encounter.\n\n**Scope**\n- Ischemic stroke\n- Intracerebral/cerebral hemorrhage\n- Subarachnoid hemorrhage\n- Cerebral venous thrombosis\n- Transient ischemic attack (TIA)\n- “Undetermined” qualifier (use cautiously; see notes)\n\n**Modeling notes**\n- This ValueSet is intended for definitive diagnoses (e.g., at discharge or after diagnostic workup), not “rule-out”, screening, history-of, or procedural concepts.\n- Terminology expansion should be performed against the appropriate SNOMED CT edition/version and preferred language(s). Localizations MAY add designations without changing meaning.\n- If “undetermined” is used, consider adding supporting narrative in `Condition.note` and/or linking evidence in Observations/DiagnosticReports to preserve interpretability.",
-      "systems" : ["http://snomed.info/sct"],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-diagnosis-condition-profile.html" : "Stroke Diagnosis Condition Profile"
-    },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/stroke-discharge-destination-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "StrokeDischargeDestinationVS",
-      "title" : "Stroke Discharge Destination ValueSet",
-      "description" : "ValueSet defining allowable discharge dispositions for the stroke encounter.\n\n**Primary use-case**\n- Required binding to `Encounter.admission.dischargeDisposition` in `StrokeEncounterProfile`.\n\n**Composition**\n- SNOMED CT “discharge/transfer” procedure concepts for common destinations.\n- Local supplement (StrokeDischargeDestinationCS) for outcomes such as “deceased during stay”.",
-      "systems" : [
-        "http://tecnomod-um.org/CodeSystem/stroke-discharge-destination-cs",
-        "http://snomed.info/sct"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
-    },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/stroke-etiology-vs",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "StrokeEtiologyVS",
-      "title" : "Stroke Etiology ValueSet",
-      "description" : "This ValueSet defines allowable values for recording the **determined ischemic stroke etiology**.\n\n**Primary use-case**\n- Required binding for `StrokeStrokeEtiologyExt.valueCodeableConcept` on definitive ischemic stroke Conditions.\n\n**Composition**\n- Local etiology categories (StrokeEtiologyCS), plus selected SNOMED CT disorder concepts for commonly used etiology groupings.\n\n**Implementation guidance**\n- Use after etiologic workup when a classification is assigned.\n- If etiology remains unknown/undetermined, use the included `Undetermined (qualifier value)`",
-      "systems" : [
-        "http://snomed.info/sct",
-        "http://tecnomod-um.org/CodeSystem/stroke-etiology-cs"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-ischemic-stroke-etiology-ext.html" : "Ischemic Stroke – Etiology"
-    },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/stroke-finding-codes-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "StrokeFindingCodesVS",
-      "title" : "Specific Stroke Finding Codes ValueSet",
-      "description" : "This ValueSet aggregates coded Observation.code concepts used by `SpecificFindingObservationProfile`.\n\nIt currently includes:\n- Specific disorder concepts used as a finding focus (SpecificFindingCodesVS), and\n- The mTICI assessment concept (MTICICodeVS).\n\n**How to interpret usage**\n- If `Observation.code` is a disorder concept (e.g., AF), the Observation should be interpreted as an assessment about that finding,\n  with the result/status carried in `Observation.valueCodeableConcept` (e.g., AfibFlutterStatusVS).\n- If `Observation.code` is an assessment concept (e.g., mTICI), `Observation.valueCodeableConcept` carries the score (MticiScoreVS).",
-      "systems" : [
-        "http://snomed.info/sct",
-        "http://tecnomod-um.org/CodeSystem/mtici-code-cs"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)"
-    },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/stroke-proc-not-done-reason-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "StrokeProcNotDoneReasonVS",
-      "title" : "Stroke Procedure Not Done Reason ValueSet",
-      "description" : "ValueSet containing the controlled vocabulary of reasons for `Procedure.statusReason` when a stroke procedure is `not-done`.",
-      "systems" : [
-        "http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
-      "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
-      "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
-      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
-    },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/stroke-risk-factor-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "StrokeRiskFactorValueSet",
-      "title" : "Stroke Risk Factor ValueSet",
-      "description" : "This ValueSet enumerates SNOMED CT disorder concepts representing **pre-existing or concurrent conditions** that increase stroke risk.\n\n**Primary use-case**\n- Required binding to `Condition.code` in `StrokeRiskFactorConditionProfile`, used to maintain a structured problem list supporting:\n  - etiologic reasoning (e.g., cardioembolic risk),\n  - clinical decision support (e.g., anticoagulation considerations),\n  - quality reporting and research cohort definition.\n\n**Modeling notes**\n- This ValueSet is for *previously documented conditions* (problems), not for “risk factor unknown”.\n  If a risk factor assessment is unknown/not assessed, represent that as an Observation (status/result) or use `dataAbsentReason` patterns rather than a Condition with an “Unknown” code.\n- The acute stroke event itself should be represented by `StrokeDiagnosisConditionProfile`, not by this risk factor profile.",
-      "systems" : ["http://snomed.info/sct"],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-risk-factor-condition-profile.html" : "Stroke Risk Factor Condition Profile"
-    },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/swallow-procedures-vs",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "SwallowProceduresValueset",
-      "title" : "Swallow Procedures ValueSet",
-      "description" : "ValueSet enumerating swallowing screening/assessment procedures/tools used in stroke care.\n\n**Implementation note**\n- `SCT#261665006 'Unknown'´ is included only as a provisional development workaround; in production, prefer FHIR `dataAbsentReason` for missing data rather than “Unknown” as a procedure code.",
-      "systems" : [
-        "http://tecnomod-um.org/CodeSystem/swallow-procedures-cs",
-        "http://snomed.info/sct"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
-    },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/swallowing-screening-timing-category-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "SwallowingScreeningTimingCategoryVS",
-      "title" : "Swallowing Screening Timing Category ValueSet",
-      "description" : "ValueSet defining allowed categories for swallowing screening timing, combining:\n- local categories (e.g., within 4 hours), and\n- SNOMED CT qualifier concepts for post-admission timing.\n\n**Use-case**\n- Required binding for the swallowing timing extension.",
-      "systems" : [
-        "http://tecnomod-um.org/CodeSystem/swallow-screen-time-cs",
-        "http://snomed.info/sct"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-swallowing-screening-timing-category-ext.html" : "Swallowing Screening Timing Category"
-    },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/thrombectomy-complication-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "ThrombectomyComplicationVS",
-      "title" : "Thrombectomy Complications ValueSet",
-      "description" : " ValueSet of SNOMED CT concepts representing complications of thrombectomy as clinical conditions.\n\n**Primary use-case**\n- Bind `Procedure.complication` (or the referenced Condition.code) to a SNOMED-based set for interoperability.",
-      "systems" : [
-        "http://tecnomod-um.org/CodeSystem/thrombectomy-complication-cs",
-        "http://snomed.info/sct"
-      ]
-    },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/timing-metric-codes-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "TimingMetricCodesVS",
-      "title" : "Stroke Timing Metric Codes ValueSet",
-      "description" : "This ValueSet includes all timing metric codes from TimingMetricCodesCS.\n\n**Primary use-case**\n- Required binding for `TimingMetricObservationProfile.code` to ensure only approved metrics are captured.",
-      "systems" : ["http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs"],
-      "uses" : {
-      },
-      "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)"
-    },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/vital-sign-codes-vs",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "VitalSignCodesVS",
-      "title" : "Stroke Vital Sign Codes ValueSet",
-      "description" : "This ValueSet defines SNOMED CT observable-entity codes for blood pressure components captured as vital signs:\n- Systolic blood pressure\n- Diastolic blood pressure\n\n**Primary use-case**\n- Bind to `Observation.component.code` in a single blood pressure Observation that records both components.\n\n**Implementation guidance**\n- Use `Observation.component.valueQuantity` with UCUM `mm[Hg]`.\n- Repeat the Observation across time with different `effective[x]` timestamps for monitoring.",
-      "systems" : ["http://snomed.info/sct"],
-      "uses" : {
-      },
-      "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile"
-    },
-    {
-      "url" : "http://tecnomod-um.org/ValueSet/vs-gender-snomed",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "GenderSNOMEDVS",
-      "title" : "Gender (SNOMED CT)",
-      "description" : "Value set to represent patient gender using SNOMED CT codes, analogous to AdministrativeGender.",
-      "systems" : ["http://snomed.info/sct"],
-      "uses" : {
-      },
-      "StructureDefinition-gender-snomed-ext.html" : "Gender (SNOMED CT)"
-    },
-    {
-      "url" : "http://terminology.hl7.org/ValueSet/encounter-class",
-      "version" : "2.0.1",
-      "status" : "active",
-      "name" : "EncounterClass",
-      "title" : "Encounter class",
-      "description" : "This value set defines a set of codes that can be used to indicate the class of encounter: a specific code indicating class of service provided.",
-      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
-    },
-    {
-      "url" : "http://terminology.hl7.org/ValueSet/v2-0092",
-      "version" : "2.0.0",
-      "status" : "active",
-      "name" : "Hl7VSReAdmissionIndicator",
-      "title" : "hl7VS-re-admissionIndicator",
-      "description" : "Value Set of codes which are used to specify that a patient is being re-admitted to a healthcare facility from which they were discharged, and indicates the circumstances around such re-admission.",
-      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0092"],
-      "oids" : ["2.16.840.1.113883.21.40"],
-      "sources" : ["2.16.840.1.113883.21.40"],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
-    },
-    {
-      "url" : "http://terminology.hl7.org/ValueSet/v3-ActPriority",
-      "version" : "3.0.0",
-      "status" : "active",
-      "name" : "ActPriority",
-      "title" : "ActPriority",
-      "description" : "A code or set of codes (e.g., for routine, emergency,) specifying the urgency under which the Act happened, can happen, is happening, is intended to happen, or is requested/demanded to happen.\r\n\r\n*Discussion:* This attribute is used in orders to indicate the ordered priority, and in event documentation it indicates the actual priority used to perform the act. In definition mood it indicates the available priorities.",
-      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActPriority"],
-      "oids" : ["2.16.840.1.113883.1.11.16866"],
-      "sources" : ["2.16.840.1.113883.1.11.16866"],
-      "uses" : {
-      },
-      "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
-    },
-    {
-      "url" : "http://terminology.hl7.org/ValueSet/v3-ActSubstanceAdminSubstitutionCode",
-      "version" : "3.0.0",
-      "status" : "active",
-      "name" : "ActSubstanceAdminSubstitutionCode",
-      "title" : "ActSubstanceAdminSubstitutionCode",
-      "description" : "***No description***",
-      "systems" : [
-        "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution"
-      ],
-      "oids" : ["2.16.840.1.113883.1.11.16621"],
-      "sources" : ["2.16.840.1.113883.1.11.16621"],
-      "uses" : {
-      },
-      "StructureDefinition-discharge-medication-request-profile.html" : "Discharge Medication Request Profile"
-    },
-    {
-      "url" : "http://terminology.hl7.org/ValueSet/v3-SubstanceAdminSubstitutionReason",
-      "version" : "3.0.0",
-      "status" : "active",
-      "name" : "SubstanceAdminSubstitutionReason",
-      "title" : "SubstanceAdminSubstitutionReason",
-      "description" : "***No description***",
-      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActReason"],
-      "oids" : ["2.16.840.1.113883.1.11.19377"],
-      "sources" : ["2.16.840.1.113883.1.11.19377"],
-      "uses" : {
-      },
-      "StructureDefinition-discharge-medication-request-profile.html" : "Discharge Medication Request Profile"
-    }
-  ]
+  "codeSystems" : [{
+    "url" : "http://hl7.org/fhir/ValueSet/administrative-gender",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "AdministrativeGender",
+    "title" : "AdministrativeGender",
+    "description" : "The gender of a person used for administrative purposes.",
+    "systems" : ["http://hl7.org/fhir/administrative-gender"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1"],
+    "uses" : {
+    },
+    "StructureDefinition-patient-age-gender-snomed-profile.html" : "Patient with SNOMED Gender and Age (extensions)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/all-languages",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "AllLanguages",
+    "title" : "All Languages",
+    "description" : "This value set includes all possible codes from BCP-47 (see http://tools.ietf.org/html/bcp47)",
+    "systems" : ["urn:ietf:bcp:47"],
+    "oids" : ["2.16.840.1.113883.4.642.3.21"],
+    "sources" : ["2.16.840.1.113883.4.642.3.21"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
+    "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
+    "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
+    "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
+    "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
+    "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
+    "StructureDefinition-patient-age-gender-snomed-profile.html" : "Patient with SNOMED Gender and Age (extensions)",
+    "StructureDefinition-discharge-medication-request-profile.html" : "Discharge MedicationRequest Profile",
+    "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
+    "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)",
+    "StructureDefinition-prior-medication-statement-profile.html" : "Prior Medication Statement Profile (R5)",
+    "StructureDefinition-stroke-registry-organization-profile.html" : "Stroke Registry Organization Profile",
+    "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile",
+    "StructureDefinition-stroke-diagnosis-condition-profile.html" : "Stroke Diagnosis Condition Profile",
+    "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile",
+    "StructureDefinition-stroke-risk-factor-condition-profile.html" : "Stroke Risk Factor Condition Profile",
+    "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
+    "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/body-site",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "SNOMEDCTBodyStructures",
+    "title" : "SNOMED CT Body Structures",
+    "description" : "This value set includes all codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 442083009 (Anatomical or acquired body site (body structure)).",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.653",
+    "2.16.840.1.113883.4.642.2.78",
+    "2.16.840.1.113883.4.642.3.141"],
+    "sources" : ["2.16.840.1.113883.4.642.3.653",
+    "2.16.840.1.113883.4.642.2.78",
+    "2.16.840.1.113883.4.642.3.141"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
+    "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
+    "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
+    "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
+    "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
+    "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
+    "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
+    "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)",
+    "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile",
+    "StructureDefinition-stroke-diagnosis-condition-profile.html" : "Stroke Diagnosis Condition Profile",
+    "StructureDefinition-stroke-risk-factor-condition-profile.html" : "Stroke Risk Factor Condition Profile",
+    "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
+    "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/clinical-findings",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "SNOMEDCTClinicalFindings",
+    "title" : "SNOMED CT Clinical Findings",
+    "description" : "This value set includes all the \"Clinical finding\" [SNOMED CT](http://snomed.info/sct) codes - concepts where concept is-a 404684003 (Clinical finding (finding)).",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.232",
+    "2.16.840.1.113883.4.642.3.227",
+    "2.16.840.1.113883.4.642.2.115"],
+    "sources" : ["2.16.840.1.113883.4.642.3.232",
+    "2.16.840.1.113883.4.642.3.227",
+    "2.16.840.1.113883.4.642.2.115"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-diagnosis-condition-profile.html" : "Stroke Diagnosis Condition Profile",
+    "StructureDefinition-stroke-risk-factor-condition-profile.html" : "Stroke Risk Factor Condition Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/condition-category",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "ConditionCategoryCodes",
+    "title" : "Condition Category Codes",
+    "description" : "Preferred value set for Condition Categories.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/condition-category"],
+    "oids" : ["2.16.840.1.113883.4.642.3.153",
+    "2.16.840.1.113883.4.642.3.162",
+    "2.16.840.1.113883.4.642.2.73"],
+    "sources" : ["2.16.840.1.113883.4.642.3.153",
+    "2.16.840.1.113883.4.642.3.162",
+    "2.16.840.1.113883.4.642.2.73"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-diagnosis-condition-profile.html" : "Stroke Diagnosis Condition Profile",
+    "StructureDefinition-stroke-risk-factor-condition-profile.html" : "Stroke Risk Factor Condition Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/condition-clinical",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "ConditionClinicalStatusCodes",
+    "title" : "Condition Clinical Status Codes",
+    "description" : "Preferred value set for Condition Clinical Status.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/condition-clinical"],
+    "oids" : ["2.16.840.1.113883.4.642.3.155",
+    "2.16.840.1.113883.4.642.3.164",
+    "2.16.840.1.113883.4.642.2.74"],
+    "sources" : ["2.16.840.1.113883.4.642.3.155",
+    "2.16.840.1.113883.4.642.3.164",
+    "2.16.840.1.113883.4.642.2.74"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-diagnosis-condition-profile.html" : "Stroke Diagnosis Condition Profile",
+    "StructureDefinition-stroke-risk-factor-condition-profile.html" : "Stroke Risk Factor Condition Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/condition-code",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "ConditionProblemDiagnosisCodes",
+    "title" : "Condition/Problem/Diagnosis Codes",
+    "description" : "Example value set for Condition/Problem/Diagnosis codes.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.161",
+    "2.16.840.1.113883.4.642.2.72",
+    "2.16.840.1.113883.4.642.3.152"],
+    "sources" : ["2.16.840.1.113883.4.642.3.161",
+    "2.16.840.1.113883.4.642.2.72",
+    "2.16.840.1.113883.4.642.3.152"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
+    "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
+    "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
+    "StructureDefinition-prior-medication-statement-profile.html" : "Prior Medication Statement Profile (R5)",
+    "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile",
+    "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile",
+    "StructureDefinition-discharge-medication-request-profile.html" : "Discharge MedicationRequest Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/condition-severity",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "ConditionDiagnosisSeverity",
+    "title" : "Condition/Diagnosis Severity",
+    "description" : "Preferred value set for Condition/Diagnosis severity grading.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.168",
+    "2.16.840.1.113883.4.642.2.76",
+    "2.16.840.1.113883.4.642.3.159"],
+    "sources" : ["2.16.840.1.113883.4.642.3.168",
+    "2.16.840.1.113883.4.642.2.76",
+    "2.16.840.1.113883.4.642.3.159"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-diagnosis-condition-profile.html" : "Stroke Diagnosis Condition Profile",
+    "StructureDefinition-stroke-risk-factor-condition-profile.html" : "Stroke Risk Factor Condition Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/condition-stage",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "ConditionStage",
+    "title" : "Condition Stage",
+    "description" : "Value set for stages of cancer and other conditions.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.161",
+    "2.16.840.1.113883.4.642.3.170",
+    "2.16.840.1.113883.4.642.2.408"],
+    "sources" : ["2.16.840.1.113883.4.642.3.161",
+    "2.16.840.1.113883.4.642.3.170",
+    "2.16.840.1.113883.4.642.2.408"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-diagnosis-condition-profile.html" : "Stroke Diagnosis Condition Profile",
+    "StructureDefinition-stroke-risk-factor-condition-profile.html" : "Stroke Risk Factor Condition Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/condition-stage-type",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "ConditionStageType",
+    "title" : "Condition Stage Type",
+    "description" : "Example value set for the type of stages of cancer and other conditions",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.171"],
+    "sources" : ["2.16.840.1.113883.4.642.3.171"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-diagnosis-condition-profile.html" : "Stroke Diagnosis Condition Profile",
+    "StructureDefinition-stroke-risk-factor-condition-profile.html" : "Stroke Risk Factor Condition Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/condition-ver-status",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "ConditionVerificationStatus",
+    "title" : "Condition Verification Status",
+    "description" : "The verification status to support or decline the clinical status of the condition or diagnosis.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/condition-ver-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.157",
+    "2.16.840.1.113883.4.642.2.75",
+    "2.16.840.1.113883.4.642.3.166"],
+    "sources" : ["2.16.840.1.113883.4.642.3.157",
+    "2.16.840.1.113883.4.642.2.75",
+    "2.16.840.1.113883.4.642.3.166"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-diagnosis-condition-profile.html" : "Stroke Diagnosis Condition Profile",
+    "StructureDefinition-stroke-risk-factor-condition-profile.html" : "Stroke Risk Factor Condition Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/data-absent-reason",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "DataAbsentReason",
+    "title" : "Data Absent Reason",
+    "description" : "Used to specify why the normally expected content of the data element is missing.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/data-absent-reason"],
+    "oids" : ["2.16.840.1.113883.4.642.3.5"],
+    "sources" : ["2.16.840.1.113883.4.642.3.5"],
+    "uses" : {
+    },
+    "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
+    "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)",
+    "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
+    "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
+    "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
+    "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
+    "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/device-action",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "ProcedureDeviceActionCodes",
+    "title" : "Procedure Device Action Codes",
+    "description" : "Example codes indicating the change that happened to the device during the procedure.  Note that these are in no way complete and might not even be appropriate for some uses.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.425",
+    "2.16.840.1.113883.4.642.2.236",
+    "2.16.840.1.113883.4.642.3.416"],
+    "sources" : ["2.16.840.1.113883.4.642.3.425",
+    "2.16.840.1.113883.4.642.2.236",
+    "2.16.840.1.113883.4.642.3.416"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
+    "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
+    "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
+    "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/device-type",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "DeviceType",
+    "title" : "Device Type",
+    "description" : "Codes used to identify medical devices. Includes concepts from SNOMED CT (http://www.snomed.org/) where concept is-a 49062001 (Device)  and is provided as a suggestive example.",
+    "systems" : ["urn:iso:std:iso:11073:10101",
+    "urn:oid:2.16.840.1.113883.6.276",
+    "http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1376"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1376"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
+    "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
+    "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
+    "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-diagnosis-use",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "EncounterDiagnosisUse",
+    "title" : "Encounter Diagnosis Use",
+    "description" : "What a specific Encounter/EpisodeOfCare `diagnosis.condition` is to be used for.",
+    "systems" : ["http://hl7.org/fhir/encounter-diagnosis-use"],
+    "oids" : ["2.16.840.1.113883.4.642.4.3321"],
+    "sources" : ["2.16.840.1.113883.4.642.4.3321"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-diet",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "EncounterDiet",
+    "title" : "Diet",
+    "description" : "This value set defines a set of codes that can be used to indicate dietary preferences or restrictions a patient may have.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/diet"],
+    "oids" : ["2.16.840.1.113883.4.642.3.255",
+    "2.16.840.1.113883.4.642.2.142",
+    "2.16.840.1.113883.4.642.3.250"],
+    "sources" : ["2.16.840.1.113883.4.642.3.255",
+    "2.16.840.1.113883.4.642.2.142",
+    "2.16.840.1.113883.4.642.3.250"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-location-status",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "EncounterLocationStatus",
+    "title" : "Encounter Location Status",
+    "description" : "The status of the location.",
+    "systems" : ["http://hl7.org/fhir/encounter-location-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.257",
+    "2.16.840.1.113883.4.642.2.147",
+    "2.16.840.1.113883.4.642.3.262"],
+    "sources" : ["2.16.840.1.113883.4.642.3.257",
+    "2.16.840.1.113883.4.642.2.147",
+    "2.16.840.1.113883.4.642.3.262"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-participant-type",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "ParticipantType",
+    "title" : "Participant Type",
+    "description" : "This value set defines a set of codes that can be used to indicate how an individual participates in an encounter.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/participant-type",
+    "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"],
+    "oids" : ["2.16.840.1.113883.4.642.3.245",
+    "2.16.840.1.113883.4.642.2.139",
+    "2.16.840.1.113883.4.642.3.250"],
+    "sources" : ["2.16.840.1.113883.4.642.3.245",
+    "2.16.840.1.113883.4.642.2.139",
+    "2.16.840.1.113883.4.642.3.250"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-reason",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "EncounterReasonCodes",
+    "title" : "Encounter Reason Codes",
+    "description" : "This examples value set defines the set of codes that can be used to indicate reasons for an encounter.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.256",
+    "2.16.840.1.113883.4.642.2.146",
+    "2.16.840.1.113883.4.642.3.261"],
+    "sources" : ["2.16.840.1.113883.4.642.3.256",
+    "2.16.840.1.113883.4.642.2.146",
+    "2.16.840.1.113883.4.642.3.261"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-reason-use",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "EncounterReasonUse",
+    "title" : "Encounter Reason Use",
+    "description" : "What a specific Encounter/EpisodeOfCare `reason.value` is to be used for.",
+    "systems" : ["http://hl7.org/fhir/encounter-reason-use"],
+    "oids" : ["2.16.840.1.113883.4.642.4.3320"],
+    "sources" : ["2.16.840.1.113883.4.642.4.3320"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-special-arrangements",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "SpecialArrangements",
+    "title" : "Special Arrangements",
+    "description" : "This value set defines a set of codes that can be used to indicate the kinds of special arrangements in place for a patients visit.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/encounter-special-arrangements"],
+    "oids" : ["2.16.840.1.113883.4.642.3.248",
+    "2.16.840.1.113883.4.642.2.141",
+    "2.16.840.1.113883.4.642.3.253"],
+    "sources" : ["2.16.840.1.113883.4.642.3.248",
+    "2.16.840.1.113883.4.642.2.141",
+    "2.16.840.1.113883.4.642.3.253"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-special-courtesy",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "SpecialCourtesy",
+    "title" : "Special Courtesy",
+    "description" : "This value set defines a set of codes that can be used to indicate special courtesies provided to the patient.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy",
+    "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"],
+    "oids" : ["2.16.840.1.113883.4.642.3.247",
+    "2.16.840.1.113883.4.642.3.252",
+    "2.16.840.1.113883.4.642.2.140"],
+    "sources" : ["2.16.840.1.113883.4.642.3.247",
+    "2.16.840.1.113883.4.642.3.252",
+    "2.16.840.1.113883.4.642.2.140"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-status",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "EncounterStatus",
+    "title" : "Encounter Status",
+    "description" : "Current state of the encounter.",
+    "systems" : ["http://hl7.org/fhir/encounter-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.246",
+    "2.16.840.1.113883.4.642.3.241"],
+    "sources" : ["2.16.840.1.113883.4.642.3.246",
+    "2.16.840.1.113883.4.642.3.241"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-subject-status",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "EncounterSubjectStatus",
+    "title" : "Encounter Subject Status",
+    "description" : "This example value set defines a set of codes that can be used to indicate the status of the subject within the encounter",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/encounter-subject-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.3159"],
+    "sources" : ["2.16.840.1.113883.4.642.3.3159"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/encounter-type",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "EncounterType",
+    "title" : "Encounter Type",
+    "description" : "This example value set defines a set of codes that can be used to indicate the type of encounter: a specific code indicating type of service provided.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/encounter-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.243",
+    "2.16.840.1.113883.4.642.3.248",
+    "2.16.840.1.113883.4.642.2.137"],
+    "sources" : ["2.16.840.1.113883.4.642.3.243",
+    "2.16.840.1.113883.4.642.3.248",
+    "2.16.840.1.113883.4.642.2.137"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/event-status",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "EventStatus",
+    "title" : "EventStatus",
+    "description" : "Codes identifying the lifecycle stage of an event.",
+    "systems" : ["http://hl7.org/fhir/event-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.109"],
+    "sources" : ["2.16.840.1.113883.4.642.3.109"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
+    "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
+    "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
+    "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/identifier-type",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "IdentifierTypeCodes",
+    "title" : "Identifier Type Codes",
+    "description" : "A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0203"],
+    "oids" : ["2.16.840.1.113883.4.642.3.45"],
+    "sources" : ["2.16.840.1.113883.4.642.3.45"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-registry-organization-profile.html" : "Stroke Registry Organization Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/identifier-use",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "IdentifierUse",
+    "title" : "IdentifierUse",
+    "description" : "Identifies the purpose for this identifier, if known .",
+    "systems" : ["http://hl7.org/fhir/identifier-use"],
+    "oids" : ["2.16.840.1.113883.4.642.3.57"],
+    "sources" : ["2.16.840.1.113883.4.642.3.57"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-registry-organization-profile.html" : "Stroke Registry Organization Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/languages",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "CommonLanguages",
+    "title" : "Common Languages",
+    "description" : "This value set includes common codes from BCP-47 (see http://tools.ietf.org/html/bcp47)",
+    "systems" : ["urn:ietf:bcp:47"],
+    "oids" : ["2.16.840.1.113883.4.642.3.891",
+    "2.16.840.1.113883.4.642.3.20"],
+    "sources" : ["2.16.840.1.113883.4.642.3.891",
+    "2.16.840.1.113883.4.642.3.20"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
+    "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
+    "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
+    "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
+    "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
+    "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
+    "StructureDefinition-patient-age-gender-snomed-profile.html" : "Patient with SNOMED Gender and Age (extensions)",
+    "StructureDefinition-discharge-medication-request-profile.html" : "Discharge MedicationRequest Profile",
+    "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile",
+    "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)",
+    "StructureDefinition-prior-medication-statement-profile.html" : "Prior Medication Statement Profile (R5)",
+    "StructureDefinition-stroke-registry-organization-profile.html" : "Stroke Registry Organization Profile",
+    "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile",
+    "StructureDefinition-stroke-diagnosis-condition-profile.html" : "Stroke Diagnosis Condition Profile",
+    "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile",
+    "StructureDefinition-stroke-risk-factor-condition-profile.html" : "Stroke Risk Factor Condition Profile",
+    "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
+    "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/link-type",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "LinkType",
+    "title" : "Link Type",
+    "description" : "The type of link between this Patient resource and another Patient/RelatedPerson resource.",
+    "systems" : ["http://hl7.org/fhir/link-type"],
+    "oids" : ["2.16.840.1.113883.4.642.2.234",
+    "2.16.840.1.113883.4.642.3.423",
+    "2.16.840.1.113883.4.642.3.412"],
+    "sources" : ["2.16.840.1.113883.4.642.2.234",
+    "2.16.840.1.113883.4.642.3.423",
+    "2.16.840.1.113883.4.642.3.412"],
+    "uses" : {
+    },
+    "StructureDefinition-patient-age-gender-snomed-profile.html" : "Patient with SNOMED Gender and Age (extensions)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/location-form",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "LocationForm",
+    "title" : "Location Form",
+    "description" : "This example value set defines a set of codes that can be used to indicate the physical form of the Location.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/location-physical-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.328"],
+    "sources" : ["2.16.840.1.113883.4.642.3.328"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/marital-status",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "MaritalStatusCodes",
+    "title" : "Marital Status Codes",
+    "description" : "This value set defines the set of codes that can be used to indicate the marital status of a person.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+    "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"],
+    "oids" : ["2.16.840.1.113883.4.642.3.29"],
+    "sources" : ["2.16.840.1.113883.4.642.3.29"],
+    "uses" : {
+    },
+    "StructureDefinition-patient-age-gender-snomed-profile.html" : "Patient with SNOMED Gender and Age (extensions)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/medication-dose-aid",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "MedicationDoseAids",
+    "title" : "Medication Dose Aids",
+    "description" : "Medication Dose Aids",
+    "systems" : ["http://hl7.org/fhir/CodeSystem/medication-dose-aid"],
+    "oids" : ["2.16.840.1.113883.4.642.3.3241"],
+    "sources" : ["2.16.840.1.113883.4.642.3.3241"],
+    "uses" : {
+    },
+    "StructureDefinition-discharge-medication-request-profile.html" : "Discharge MedicationRequest Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/medication-intended-performer-role",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "MedicationIntendedPerformerRole",
+    "title" : "Medication Intended Performer Role",
+    "description" : "Medication Intended Performer Role",
+    "systems" : ["http://hl7.org/fhir/CodeSystem/medication-intended-performer-role"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1979"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1979"],
+    "uses" : {
+    },
+    "StructureDefinition-discharge-medication-request-profile.html" : "Discharge MedicationRequest Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/medication-statement-adherence",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "MedicationStatementAdherenceCodes",
+    "title" : "MedicationStatement Adherence Codes",
+    "description" : "MedicationStatement Adherence Codes",
+    "systems" : ["http://hl7.org/fhir/CodeSystem/medication-statement-adherence"],
+    "oids" : ["2.16.840.1.113883.4.642.3.3090"],
+    "sources" : ["2.16.840.1.113883.4.642.3.3090"],
+    "uses" : {
+    },
+    "StructureDefinition-prior-medication-statement-profile.html" : "Prior Medication Statement Profile (R5)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/medication-statement-status",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "MedicationStatementStatusCodes",
+    "title" : "MedicationStatement Status Codes",
+    "description" : "MedicationStatement Status Codes",
+    "systems" : ["http://hl7.org/fhir/CodeSystem/medication-statement-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.3088"],
+    "sources" : ["2.16.840.1.113883.4.642.3.3088"],
+    "uses" : {
+    },
+    "StructureDefinition-prior-medication-statement-profile.html" : "Prior Medication Statement Profile (R5)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/medicationrequest-admin-location",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "MedicationRequestAdministrationLocationCodes",
+    "title" : "medicationRequest Administration Location Codes",
+    "description" : "MedicationRequest Administration Location Codes",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/medicationrequest-admin-location"],
+    "oids" : ["2.16.840.1.113883.4.642.3.3242"],
+    "sources" : ["2.16.840.1.113883.4.642.3.3242"],
+    "uses" : {
+    },
+    "StructureDefinition-prior-medication-statement-profile.html" : "Prior Medication Statement Profile (R5)",
+    "StructureDefinition-discharge-medication-request-profile.html" : "Discharge MedicationRequest Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/medicationrequest-course-of-therapy",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "MedicationRequestCourseOfTherapyCodes",
+    "title" : "medicationRequest Course of Therapy Codes",
+    "description" : "MedicationRequest Course of Therapy Codes",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1326"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1326"],
+    "uses" : {
+    },
+    "StructureDefinition-discharge-medication-request-profile.html" : "Discharge MedicationRequest Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/medicationrequest-intent",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "MedicationRequestIntent",
+    "title" : "medicationRequest Intent",
+    "description" : "MedicationRequest Intent Codes",
+    "systems" : ["http://hl7.org/fhir/CodeSystem/medicationrequest-intent"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1321"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1321"],
+    "uses" : {
+    },
+    "StructureDefinition-discharge-medication-request-profile.html" : "Discharge MedicationRequest Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/medicationrequest-status",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "MedicationrequestStatus",
+    "title" : "medicationrequest Status",
+    "description" : "MedicationRequest Status Codes",
+    "systems" : ["http://hl7.org/fhir/CodeSystem/medicationrequest-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1320"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1320"],
+    "uses" : {
+    },
+    "StructureDefinition-discharge-medication-request-profile.html" : "Discharge MedicationRequest Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/medicationrequest-status-reason",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "MedicationRequestStatusReasonCodes",
+    "title" : "medicationRequest Status Reason Codes",
+    "description" : "MedicationRequest Status Reason Codes",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/medicationrequest-status-reason"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1324"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1324"],
+    "uses" : {
+    },
+    "StructureDefinition-discharge-medication-request-profile.html" : "Discharge MedicationRequest Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/observation-category",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "ObservationCategoryCodes",
+    "title" : "Observation Category Codes",
+    "description" : "Observation Category codes.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/observation-category"],
+    "oids" : ["2.16.840.1.113883.4.642.3.403",
+    "2.16.840.1.113883.4.642.2.222",
+    "2.16.840.1.113883.4.642.3.392"],
+    "sources" : ["2.16.840.1.113883.4.642.3.403",
+    "2.16.840.1.113883.4.642.2.222",
+    "2.16.840.1.113883.4.642.3.392"],
+    "uses" : {
+    },
+    "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
+    "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)",
+    "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
+    "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
+    "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
+    "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
+    "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/observation-codes",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "LOINCCodes",
+    "title" : "LOINC Codes",
+    "description" : "This value set includes all LOINC codes",
+    "systems" : ["http://loinc.org"],
+    "oids" : ["2.16.840.1.113883.4.642.2.216",
+    "2.16.840.1.113883.4.642.3.396",
+    "2.16.840.1.113883.4.642.3.383"],
+    "sources" : ["2.16.840.1.113883.4.642.2.216",
+    "2.16.840.1.113883.4.642.3.396",
+    "2.16.840.1.113883.4.642.3.383"],
+    "uses" : {
+    },
+    "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
+    "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)",
+    "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
+    "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
+    "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
+    "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
+    "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/observation-interpretation",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "ObservationInterpretationCodes",
+    "title" : "Observation Interpretation Codes",
+    "description" : "A categorical assessment, providing a rough qualitative interpretation of the observation value,    such as “normal”/ “abnormal”,”low” / “high”, “better” / “worse”, “susceptible” / “resistant”, “expected”/ “not expected”.    The value set is intended to be for ANY use where coded representation of an interpretation is needed.   \r\n   \r\n   Notes:\r\n   \r\n   This is being communicated in v2.x in OBX-8 (Observation Interpretation), in v3 in ObservationInterpretation (CWE) in R1 (Representative Realm) and in FHIR in    Observation.interpretation. Historically these values come from the laboratory domain, and these codes are extensively    used. The value set binding is extensible, so codes outside the value set that are needed for interpretation concepts    (i.e. particular meanings) that are not included in the value set can be used, and these new codes may also be added to    the value set and published in a future version.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"],
+    "oids" : ["2.16.840.1.113883.4.642.3.399",
+    "2.16.840.1.113883.4.642.3.386",
+    "2.16.840.1.113883.4.642.2.218"],
+    "sources" : ["2.16.840.1.113883.4.642.3.399",
+    "2.16.840.1.113883.4.642.3.386",
+    "2.16.840.1.113883.4.642.2.218"],
+    "uses" : {
+    },
+    "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
+    "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)",
+    "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
+    "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
+    "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
+    "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
+    "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/observation-methods",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "ObservationMethods",
+    "title" : "Observation Methods",
+    "description" : "Observation Method codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 272394005 (Technique (qualifier value)) or is-a 129264002 (Action (qualifier value)) or is-a 386053000 (Evaluation procedure(procedure))",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.2.215",
+    "2.16.840.1.113883.4.642.3.395",
+    "2.16.840.1.113883.4.642.3.382"],
+    "sources" : ["2.16.840.1.113883.4.642.2.215",
+    "2.16.840.1.113883.4.642.3.395",
+    "2.16.840.1.113883.4.642.3.382"],
+    "uses" : {
+    },
+    "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
+    "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)",
+    "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
+    "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
+    "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
+    "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
+    "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/observation-referencerange-normalvalue",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "ObservationReferenceRangeNormalValueCodes",
+    "title" : "Observation Reference Range Normal Value Codes",
+    "description" : "Codes that describe the normal value in the reference range, such as “Negative” or “Absent”",
+    "systems" : ["http://hl7.org/fhir/observation-referencerange-normalvalue"],
+    "oids" : ["2.16.840.1.113883.4.642.3.3264"],
+    "sources" : ["2.16.840.1.113883.4.642.3.3264"],
+    "uses" : {
+    },
+    "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
+    "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)",
+    "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
+    "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
+    "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
+    "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
+    "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/observation-status",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "ObservationStatus",
+    "title" : "Observation Status",
+    "description" : "Codes providing the status of an observation.",
+    "systems" : ["http://hl7.org/fhir/observation-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.400",
+    "2.16.840.1.113883.4.642.3.387",
+    "2.16.840.1.113883.4.642.2.219"],
+    "sources" : ["2.16.840.1.113883.4.642.3.400",
+    "2.16.840.1.113883.4.642.3.387",
+    "2.16.840.1.113883.4.642.2.219"],
+    "uses" : {
+    },
+    "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
+    "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)",
+    "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
+    "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
+    "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
+    "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
+    "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/observation-triggeredbytype",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "TriggeredBytype",
+    "title" : "triggered Bytype",
+    "description" : "Codes providing the type of triggeredBy observation.",
+    "systems" : ["http://hl7.org/fhir/observation-triggeredbytype"],
+    "oids" : ["2.16.840.1.113883.4.642.3.3265"],
+    "sources" : ["2.16.840.1.113883.4.642.3.3265"],
+    "uses" : {
+    },
+    "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
+    "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)",
+    "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
+    "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
+    "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
+    "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
+    "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/organization-type",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "OrganizationType",
+    "title" : "Organization Type",
+    "description" : "This example value set defines a set of codes that can be used to indicate a type of organization.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/organization-type"],
+    "oids" : ["2.16.840.1.113883.4.642.2.228",
+    "2.16.840.1.113883.4.642.3.414",
+    "2.16.840.1.113883.4.642.3.403"],
+    "sources" : ["2.16.840.1.113883.4.642.2.228",
+    "2.16.840.1.113883.4.642.3.414",
+    "2.16.840.1.113883.4.642.3.403"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-registry-organization-profile.html" : "Stroke Registry Organization Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/participation-role-type",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "ParticipationRoleType",
+    "title" : "Participation Role Type",
+    "description" : "This FHIR value set is comprised of Actor participation Type codes, which can be used to value FHIR agents, actors, and other role elements. The codes are intended to express how the agent participated in some activity. Sometimes refered to the agent functional-role relative to the activity.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/extra-security-role-type",
+    "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+    "http://dicom.nema.org/resources/ontology/DCM"],
+    "oids" : ["2.16.840.1.113883.4.642.3.54"],
+    "sources" : ["2.16.840.1.113883.4.642.3.54"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-diagnosis-condition-profile.html" : "Stroke Diagnosis Condition Profile",
+    "StructureDefinition-stroke-risk-factor-condition-profile.html" : "Stroke Risk Factor Condition Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/patient-contactrelationship",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "PatientContactRelationship",
+    "title" : "Patient Contact Relationship ",
+    "description" : "The nature of the relationship between the patient and the contact person.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0131"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1130"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1130"],
+    "uses" : {
+    },
+    "StructureDefinition-patient-age-gender-snomed-profile.html" : "Patient with SNOMED Gender and Age (extensions)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/performer-role",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "ProcedurePerformerRoleCodes",
+    "title" : "Procedure Performer Role Codes",
+    "description" : "This example value set defines the set of codes that can be used to indicate a role of a procedure performer.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.433",
+    "2.16.840.1.113883.4.642.2.420",
+    "2.16.840.1.113883.4.642.3.424"],
+    "sources" : ["2.16.840.1.113883.4.642.3.433",
+    "2.16.840.1.113883.4.642.2.420",
+    "2.16.840.1.113883.4.642.3.424"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
+    "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
+    "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
+    "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/procedure-category",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "ProcedureCategoryCodesSNOMEDCT",
+    "title" : "Procedure Category Codes (SNOMED CT)",
+    "description" : "Procedure Category code: A selection of relevant SNOMED CT codes.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.421",
+    "2.16.840.1.113883.4.642.3.430",
+    "2.16.840.1.113883.4.642.2.241"],
+    "sources" : ["2.16.840.1.113883.4.642.3.421",
+    "2.16.840.1.113883.4.642.3.430",
+    "2.16.840.1.113883.4.642.2.241"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
+    "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
+    "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
+    "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/procedure-code",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "ProcedureCodesSNOMEDCT",
+    "title" : "Procedure Codes (SNOMED CT)",
+    "description" : "Procedure Code: All SNOMED CT procedure codes.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.418",
+    "2.16.840.1.113883.4.642.3.427",
+    "2.16.840.1.113883.4.642.2.417"],
+    "sources" : ["2.16.840.1.113883.4.642.3.418",
+    "2.16.840.1.113883.4.642.3.427",
+    "2.16.840.1.113883.4.642.2.417"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/procedure-followup",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "ProcedureFollowUpCodesSNOMEDCT",
+    "title" : "Procedure Follow up Codes (SNOMED CT)",
+    "description" : "Procedure follow up codes: A selection of SNOMED CT codes relevant to procedure follow up.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.420",
+    "2.16.840.1.113883.4.642.3.429",
+    "2.16.840.1.113883.4.642.2.240"],
+    "sources" : ["2.16.840.1.113883.4.642.3.420",
+    "2.16.840.1.113883.4.642.3.429",
+    "2.16.840.1.113883.4.642.2.240"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
+    "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
+    "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
+    "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/procedure-outcome",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "ProcedureOutcomeCodesSNOMEDCT",
+    "title" : "Procedure Outcome Codes (SNOMED CT)",
+    "description" : "Procedure Outcome code: A selection of relevant SNOMED CT codes.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.2.239",
+    "2.16.840.1.113883.4.642.3.419",
+    "2.16.840.1.113883.4.642.3.428"],
+    "sources" : ["2.16.840.1.113883.4.642.2.239",
+    "2.16.840.1.113883.4.642.3.419",
+    "2.16.840.1.113883.4.642.3.428"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
+    "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
+    "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
+    "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/procedure-reason",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "ProcedureReasonCodes",
+    "title" : "Procedure Reason Codes",
+    "description" : "This example value set defines the set of codes that can be used to indicate a reason for a procedure.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.432",
+    "2.16.840.1.113883.4.642.3.423",
+    "2.16.840.1.113883.4.642.2.419"],
+    "sources" : ["2.16.840.1.113883.4.642.3.432",
+    "2.16.840.1.113883.4.642.3.423",
+    "2.16.840.1.113883.4.642.2.419"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
+    "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
+    "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
+    "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/quantity-comparator",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "QuantityComparator",
+    "title" : "QuantityComparator",
+    "description" : "How the Quantity should be understood and represented.",
+    "systems" : ["http://hl7.org/fhir/quantity-comparator"],
+    "oids" : ["2.16.840.1.113883.4.642.3.59"],
+    "sources" : ["2.16.840.1.113883.4.642.3.59"],
+    "uses" : {
+    },
+    "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
+    "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/reason-medication-status-codes",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "SNOMEDCTDrugTherapyStatusCodes",
+    "title" : "SNOMED CT Drug Therapy Status codes ",
+    "description" : "This value set includes some taken and not taken reason codes from SNOMED CT - provided as an exemplar",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.369"],
+    "sources" : ["2.16.840.1.113883.4.642.3.369"],
+    "uses" : {
+    },
+    "StructureDefinition-prior-medication-statement-profile.html" : "Prior Medication Statement Profile (R5)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/referencerange-appliesto",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "ObservationReferenceRangeAppliesToCodes",
+    "title" : "Observation Reference Range Applies To Codes",
+    "description" : "This value set defines a set of codes that can be used to indicate the particular target population the reference range applies to.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-Race",
+    "http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.407",
+    "2.16.840.1.113883.4.642.3.396"],
+    "sources" : ["2.16.840.1.113883.4.642.3.407",
+    "2.16.840.1.113883.4.642.3.396"],
+    "uses" : {
+    },
+    "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
+    "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)",
+    "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
+    "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
+    "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
+    "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
+    "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/referencerange-meaning",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "ObservationReferenceRangeMeaningCodes",
+    "title" : "Observation Reference Range Meaning Codes",
+    "description" : "This value set defines a set of codes that can be used to indicate the meaning/use of a reference range for a particular target population.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/referencerange-meaning"],
+    "oids" : ["2.16.840.1.113883.4.642.3.397",
+    "2.16.840.1.113883.4.642.2.217",
+    "2.16.840.1.113883.4.642.3.384"],
+    "sources" : ["2.16.840.1.113883.4.642.3.397",
+    "2.16.840.1.113883.4.642.2.217",
+    "2.16.840.1.113883.4.642.3.384"],
+    "uses" : {
+    },
+    "StructureDefinition-base-stroke-observation.html" : "Base Profile for Stroke-Related Observations",
+    "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)",
+    "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)",
+    "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile",
+    "StructureDefinition-age-at-onset-observation-profile.html" : "Age at Stroke Onset Observation Profile (R5)",
+    "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)",
+    "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/request-priority",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "RequestPriority",
+    "title" : "RequestPriority",
+    "description" : "Identifies the level of importance to be assigned to actioning the request.",
+    "systems" : ["http://hl7.org/fhir/request-priority"],
+    "oids" : ["2.16.840.1.113883.4.642.3.115"],
+    "sources" : ["2.16.840.1.113883.4.642.3.115"],
+    "uses" : {
+    },
+    "StructureDefinition-discharge-medication-request-profile.html" : "Discharge MedicationRequest Profile"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/service-type",
+    "version" : "5.0.0",
+    "status" : "draft",
+    "name" : "ServiceType",
+    "title" : "Service Type",
+    "description" : "This value set defines an example set of codes of service-types.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/service-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.512",
+    "2.16.840.1.113883.4.642.3.518"],
+    "sources" : ["2.16.840.1.113883.4.642.3.512",
+    "2.16.840.1.113883.4.642.3.518"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/admission-source-vs",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "AdmissionSourceValueSet",
+    "title" : "Admission Sources ValueSet",
+    "description" : "This ValueSet enumerates modes of transport or pathways by which a patient arrived for the index stroke encounter.\n\n**Primary use-cases**\n- Bind to admission source elements (commonly `Encounter.hospitalization.admitSource` or local equivalents) to support:\n  - operational reporting (ambulance vs own transport),\n  - pathway compliance (e.g., EMS prenotification pathways),\n  - inter-facility transfer analytics.",
+    "systems" : ["http://snomed.info/sct"]
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/afib-flutter-status-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "AfibFlutterStatusVS",
+    "title" : "Atrial Fibrillation / Flutter Assessment Status ValueSet",
+    "description" : "This ValueSet constrains the allowable coded outcomes for documenting the **status of an AF/flutter assessment** within the stroke workflow.\n\n**Primary use-case**\n- Bind to `Observation.valueCodeableConcept` in the `SpecificFindingObservationProfile` when `Observation.code` refers to AF/flutter as a finding focus.\n- Enables harmonized interpretation for analytics and decision support (e.g., anticoagulation pathway triggers) without forcing a Condition assertion.\n\n**Scope and modeling notes**\n- This ValueSet expresses *assessment outcome/status* (detected/known/absent/not screened/unknown).\n- It does not replace Condition for diagnoses. When AF/flutter is confirmed as a diagnosis, represent it as a `Condition` with the appropriate SNOMED CT disorder code.",
+    "systems" : ["http://snomed.info/sct"]
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/assessment-context-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "AssessmentContextVS",
+    "title" : "Assessment Context ValueSet",
+    "description" : "This ValueSet includes all phase/context codes from AssessmentContextCS.\n\n**Primary use-case**\n- Required binding for elements that must indicate the clinical phase of an assessment (e.g., timing context extensions).",
+    "systems" : ["http://tecnomod-um.org/CodeSystem/assessment-context-cs"],
+    "uses" : {
+    },
+    "StructureDefinition-observation-timing-context-ext.html" : "Observation Timing Context Extension"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/brain-imaging-modality-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "BrainImagingModalityVS",
+    "title" : "Brain Imaging Modality ValueSet",
+    "description" : "Defines the SNOMED CT codes for individual brain imaging modalities performed as procedures.",
+    "systems" : ["http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs",
+    "http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/carotid-imaging-modality-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "CarotidImagingModalityVS",
+    "title" : "Carotid Arteries Imaging Modality ValueSet",
+    "description" : "This ValueSet enumerates standardized codes (primarily SNOMED CT procedures) representing **carotid imaging modalities** used in stroke workflows.\n\n**Primary use-case**\n- Bind to `Procedure.code` when recording a carotid imaging study performed during the stroke episode.",
+    "systems" : ["http://snomed.info/sct"]
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/discharge-dept-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "DischargeDeptVS",
+    "title" : "Discharge Department/Service ValueSet",
+    "description" : "ValueSet restricting the allowed department/service categories recorded at discharge.\n\n**Primary use-case**\n- Required binding for `DischargeDepartmentServiceExtension.valueCodeableConcept`.",
+    "systems" : ["http://tecnomod-um.org/CodeSystem/discharge-dept-cs"],
+    "uses" : {
+    },
+    "StructureDefinition-discharge-department-service-ext.html" : "Discharge Department/Service Extension"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/discharge-destination-vs",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "DischargeDestinationValueSet",
+    "title" : "Discharge Destination ValueSet",
+    "description" : "This ValueSet enumerates discharge destination concepts (primarily SNOMED CT procedure-like “discharge to …” concepts).\n\n**Primary use-cases**\n- Bind to discharge disposition elements in encounter/hospitalization modeling.\n  enabling consistent:\n  - care transition analytics,\n  - pathway reporting (home vs ward vs facility vs mortuary),\n  - downstream coordination workflows.",
+    "systems" : ["http://snomed.info/sct"]
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/functional-score-codes-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "FunctionalScoreCodesVS",
+    "title" : "Stroke Functional Score Codes ValueSet",
+    "description" : "This ValueSet constrains `Observation.code` for functional outcome and severity instruments represented in this guide:\n- Modified Rankin Scale score (mRS)\n- NIH Stroke Scale total score (NIHSS)\n\n**Primary use-case**\n- Bind to `Observation.code` in `FunctionalScoreObservationProfile`.\n\n**Datatype expectations enforced via invariants**\n- mRS: `Observation.valueCodeableConcept` bound to MRsScoreVS (ordinal categories 0–6).\n- NIHSS: `Observation.valueInteger` as total NIHSS score.",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/hemorrhagic-stroke-bleeding-reason-vs",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "HemorrhagicStrokeBleedingReasonVS",
+    "title" : "Hemorrhagic Stroke Bleeding Reason ValueSet",
+    "description" : "This ValueSet defines allowable causes of bleeding for hemorrhagic stroke documentation.\n\n**Primary use-case**\n- Required binding for `HemorrhagicStrokeBleedingReasonExt.valueCodeableConcept` on a definitive hemorrhagic stroke Condition.\n\n**Implementation guidance**\n- Use when the cause is *identified* (e.g., aneurysm, vascular malformation).\n- If the cause is unknown/undetermined, prefer documenting that explicitly using narrative (`Condition.note`) and/or a dedicated assessment Observation;\n  if a coded placeholder is required, `Undetermined (qualifier value)` is included as an option.",
+    "systems" : ["http://tecnomod-um.org/CodeSystem/hemorrhagic-stroke-bleeding-reason-cs",
+    "http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-hemorrhagic-stroke-bleeding-reason-ext.html" : "Hemorrhagic Stroke – Bleeding Reason"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/initial-care-intensity-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "InitialCareIntensityVS",
+    "title" : "Initial Care Intensity ValueSet",
+    "description" : "ValueSet restricting allowed initial care intensity categories.\n\n**Primary use-case**\n- Required binding for `InitialCareIntensityExtension.valueCodeableConcept`.",
+    "systems" : ["http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs"],
+    "uses" : {
+    },
+    "StructureDefinition-initial-care-intensity-ext.html" : "Initial Care Intensity Extension"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/medication-vs",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "MedicationVS",
+    "title" : "Discharge Medications ValueSet",
+    "description" : "ValueSet defining allowable coded medications (or medication categories) for discharge MedicationRequests.\n\n**Primary use-case**\n- Required binding to `MedicationRequest.medication` in `DischargeMedicationRequestProfile`.\n\n**What this ValueSet supports**\n1) **Specific SNOMED CT substance concepts** (e.g., aspirin, clopidogrel, warfarin) for agent-level capture.\n2) **Local category codes** (from `MedicationCS`) for minimum-data capture when only the class is known.\n\n**Scope and modeling notes**\n- This ValueSet does not encode dose, route, frequency, or duration; those are expressed in MedicationRequest elements.",
+    "systems" : ["http://tecnomod-um.org/CodeSystem/medication-cs",
+    "http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-prior-medication-statement-profile.html" : "Prior Medication Statement Profile (R5)",
+    "StructureDefinition-discharge-medication-request-profile.html" : "Discharge MedicationRequest Profile"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/mrs-score-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "MRsScoreVS",
+    "title" : "Modified Rankin Scale (mRS) Score ValueSet",
+    "description" : "This ValueSet includes all mRS grades (0–6) defined in MRsScoreCS.\n\n**Primary use-case**\n- Bind to `Observation.valueCodeableConcept` when `Observation.code` indicates the Observation represents an mRS score.",
+    "systems" : ["http://tecnomod-um.org/CodeSystem/mrs-score-cs"],
+    "uses" : {
+    },
+    "StructureDefinition-functional-score-observation-profile.html" : "Stroke Functional Score Observation Profile"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/mtici-code-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "MTICICodeVS",
+    "title" : "Modified Thrombolysis in Cerebral Infarction Assessment ValueSet",
+    "description" : "This ValueSet includes the mTICI assessment concept code(s) from MTICICodeCS.\n\n**Primary use-case**\n- Bind to `Observation.code` when recording an mTICI reperfusion grade Observation.\n- Pair with `Observation.valueCodeableConcept` bound to MticiScoreVS.",
+    "systems" : ["http://tecnomod-um.org/CodeSystem/mtici-code-cs"],
+    "uses" : {
+    },
+    "ValueSet-stroke-finding-codes-vs.html" : "Specific Stroke Finding Codes ValueSet"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/mtici-score-vs",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "MTICIScoreValueSet",
+    "title" : "Modified Treatment in Cerebral Infarction Grade Score ValueSet",
+    "description" : "This ValueSet enumerates all allowable Modified Treatment in Cerebral Infarction reperfusion grade values (0, 1, 2a, 2b, 2c, 3) from MticiScoreCS.\n\n**Primary use-case**\n- Required binding to `Observation.valueCodeableConcept` when an Observation represents an mTICI grade outcome.\n\n**Why a dedicated ValueSet**\n- Ensures consistent coding across implementations and sites.\n- Enables reliable registry reporting, audit/quality measurement, and research analytics.",
+    "systems" : ["http://tecnomod-um.org/CodeSystem/mtici-score-cs"]
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/perforation-procedures-vs",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "PerforationProceduresValueset",
+    "title" : "Perforation Procedures ValueSet",
+    "description" : "ValueSet restricting Procedure codes to stroke **reperfusion interventions**:\n- IV thrombolysis (IVT)\n- Mechanical thrombectomy (MT)",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/procedure-timing-context-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "ProcedureTimingContextVS",
+    "title" : "Procedure Timing Context ValueSet",
+    "description" : "ValueSet limiting allowed values for the Procedure timing context extension (acute/post-acute/unknown).\n\n**Use-case**\n- Required binding to ensure comparable phase classification across systems and sites.",
+    "systems" : ["http://tecnomod-um.org/CodeSystem/procedure-timing-context-cs"],
+    "uses" : {
+    },
+    "StructureDefinition-procedure-timing-context-ext.html" : "Procedure Timing Context Extension"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/specific-finding-codes-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "SpecificFindingCodesVS",
+    "title" : "Specific Stroke Finding Codes ValueSet",
+    "description" : "This ValueSet provides SNOMED CT disorder concepts for specific findings referenced in the stroke workup.\nCurrently includes:\n- Atrial fibrillation (disorder)\n- Atrial flutter (disorder)\n\n**Primary use-case**\n- Constrain `Observation.code` (as a *finding focus*) when using `SpecificFindingObservationProfile`.\n\n**Important modeling note**\n- Using a disorder concept in `Observation.code` here does not necessarily assert a diagnosis; the diagnosis should be modeled as a Condition.\n- The Observation can be interpreted as “assessment about this finding,” with the result in `Observation.valueCodeableConcept` (e.g., AF status).",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "ValueSet-stroke-finding-codes-vs.html" : "Specific Stroke Finding Codes ValueSet"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/stroke-arrival-mode-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "StrokeArrivalModeVS",
+    "title" : "Stroke Arrival Mode ValueSet",
+    "description" : "ValueSet restricting the allowed values for documenting the patient's arrival mode/origin.\n\n**Primary use-case**\n- Required binding to `Encounter.admission.admitSource` in `StrokeEncounterProfile`.",
+    "systems" : ["http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/stroke-circumstance-codes-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "StrokeCircumstanceCodesVS",
+    "title" : "Stroke Circumstance Codes ValueSet",
+    "description" : "This ValueSet includes all onset-circumstance codes from StrokeCircumstanceCodesCS.\n\n**Primary use-case**\n- Required binding for `StrokeCircumstanceObservationProfile.code`.",
+    "systems" : ["http://tecnomod-um.org/CodeSystem/stroke-circumstance-codes-cs"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-circumstance-observation-profile.html" : "Stroke Circumstance Observation Profile (R5)"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/stroke-diagnosis-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "StrokeDiagnosisVS",
+    "title" : "Stroke Diagnosis ValueSet",
+    "description" : "This ValueSet enumerates SNOMED CT concepts representing **final stroke-related diagnoses** for use in `Condition.code` within this Implementation Guide (IG).\n\n**Primary use-case**\n- Required binding to `Condition.code` in `StrokeDiagnosisConditionProfile`, representing the *definitive diagnosis* of the index stroke event for the linked encounter.\n\n**Scope**\n- Ischemic stroke\n- Intracerebral/cerebral hemorrhage\n- Subarachnoid hemorrhage\n- Cerebral venous thrombosis\n- Transient ischemic attack (TIA)\n- “Undetermined” qualifier (use cautiously; see notes)\n\n**Modeling notes**\n- This ValueSet is intended for definitive diagnoses (e.g., at discharge or after diagnostic workup), not “rule-out”, screening, history-of, or procedural concepts.\n- Terminology expansion should be performed against the appropriate SNOMED CT edition/version and preferred language(s). Localizations MAY add designations without changing meaning.\n- If “undetermined” is used, consider adding supporting narrative in `Condition.note` and/or linking evidence in Observations/DiagnosticReports to preserve interpretability.",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-diagnosis-condition-profile.html" : "Stroke Diagnosis Condition Profile"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/stroke-discharge-destination-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "StrokeDischargeDestinationVS",
+    "title" : "Stroke Discharge Destination ValueSet",
+    "description" : "ValueSet defining allowable discharge dispositions for the stroke encounter.\n\n**Primary use-case**\n- Required binding to `Encounter.admission.dischargeDisposition` in `StrokeEncounterProfile`.\n\n**Composition**\n- SNOMED CT “discharge/transfer” procedure concepts for common destinations.\n- Local supplement (StrokeDischargeDestinationCS) for outcomes such as “deceased during stay”.",
+    "systems" : ["http://tecnomod-um.org/CodeSystem/stroke-discharge-destination-cs",
+    "http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/stroke-etiology-vs",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "StrokeEtiologyVS",
+    "title" : "Stroke Etiology ValueSet",
+    "description" : "This ValueSet defines allowable values for recording the **determined ischemic stroke etiology**.\n\n**Primary use-case**\n- Required binding for `StrokeStrokeEtiologyExt.valueCodeableConcept` on definitive ischemic stroke Conditions.\n\n**Composition**\n- Local etiology categories (StrokeEtiologyCS), plus selected SNOMED CT disorder concepts for commonly used etiology groupings.\n\n**Implementation guidance**\n- Use after etiologic workup when a classification is assigned.\n- If etiology remains unknown/undetermined, use the included `Undetermined (qualifier value)`",
+    "systems" : ["http://snomed.info/sct",
+    "http://tecnomod-um.org/CodeSystem/stroke-etiology-cs"],
+    "uses" : {
+    },
+    "StructureDefinition-ischemic-stroke-etiology-ext.html" : "Ischemic Stroke – Etiology"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/stroke-finding-codes-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "StrokeFindingCodesVS",
+    "title" : "Specific Stroke Finding Codes ValueSet",
+    "description" : "This ValueSet aggregates coded Observation.code concepts used by `SpecificFindingObservationProfile`.\n\nIt currently includes:\n- Specific disorder concepts used as a finding focus (SpecificFindingCodesVS), and\n- The mTICI assessment concept (MTICICodeVS).\n\n**How to interpret usage**\n- If `Observation.code` is a disorder concept (e.g., AF), the Observation should be interpreted as an assessment about that finding,\n  with the result/status carried in `Observation.valueCodeableConcept` (e.g., AfibFlutterStatusVS).\n- If `Observation.code` is an assessment concept (e.g., mTICI), `Observation.valueCodeableConcept` carries the score (MticiScoreVS).",
+    "systems" : ["http://snomed.info/sct",
+    "http://tecnomod-um.org/CodeSystem/mtici-code-cs"],
+    "uses" : {
+    },
+    "StructureDefinition-specific-finding-observation-profile.html" : "Specific Stroke Finding Observation Profile (R5)"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/stroke-proc-not-done-reason-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "StrokeProcNotDoneReasonVS",
+    "title" : "Stroke Procedure Not Done Reason ValueSet",
+    "description" : "ValueSet containing the controlled vocabulary of reasons for `Procedure.statusReason` when a stroke procedure is `not-done`.",
+    "systems" : ["http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-brain-imaging-procedure-profile.html" : "Stroke Brain Imaging Procedure Profile",
+    "StructureDefinition-stroke-carotid-imaging-procedure-profile.html" : "Stroke Carotid Imaging Procedure Profile",
+    "StructureDefinition-stroke-mechanical-procedure-profile.html" : "Stroke Thrombolysis Procedure Profile",
+    "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/stroke-risk-factor-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "StrokeRiskFactorValueSet",
+    "title" : "Stroke Risk Factor ValueSet",
+    "description" : "This ValueSet enumerates SNOMED CT disorder concepts representing **pre-existing or concurrent conditions** that increase stroke risk.\n\n**Primary use-case**\n- Required binding to `Condition.code` in `StrokeRiskFactorConditionProfile`, used to maintain a structured problem list supporting:\n  - etiologic reasoning (e.g., cardioembolic risk),\n  - clinical decision support (e.g., anticoagulation considerations),\n  - quality reporting and research cohort definition.\n\n**Modeling notes**\n- This ValueSet is for *previously documented conditions* (problems), not for “risk factor unknown”.\n  If a risk factor assessment is unknown/not assessed, represent that as an Observation (status/result) or use `dataAbsentReason` patterns rather than a Condition with an “Unknown” code.\n- The acute stroke event itself should be represented by `StrokeDiagnosisConditionProfile`, not by this risk factor profile.",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-risk-factor-condition-profile.html" : "Stroke Risk Factor Condition Profile"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/swallow-procedures-vs",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "SwallowProceduresValueset",
+    "title" : "Swallow Procedures ValueSet",
+    "description" : "ValueSet enumerating swallowing screening/assessment procedures/tools used in stroke care.\n\n**Implementation note**\n- `SCT#261665006 'Unknown'´ is included only as a provisional development workaround; in production, prefer FHIR `dataAbsentReason` for missing data rather than “Unknown” as a procedure code.",
+    "systems" : ["http://tecnomod-um.org/CodeSystem/swallow-procedures-cs",
+    "http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-swallow-procedure-profile.html" : "Stroke Swallow Procedure Profile"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/swallowing-screening-timing-category-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "SwallowingScreeningTimingCategoryVS",
+    "title" : "Swallowing Screening Timing Category ValueSet",
+    "description" : "ValueSet defining allowed categories for swallowing screening timing, combining:\n- local categories (e.g., within 4 hours), and\n- SNOMED CT qualifier concepts for post-admission timing.\n\n**Use-case**\n- Required binding for the swallowing timing extension.",
+    "systems" : ["http://tecnomod-um.org/CodeSystem/swallow-screen-time-cs",
+    "http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-swallowing-screening-timing-category-ext.html" : "Swallowing Screening Timing Category"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/thrombectomy-complication-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "ThrombectomyComplicationVS",
+    "title" : "Thrombectomy Complications ValueSet",
+    "description" : " ValueSet of SNOMED CT concepts representing complications of thrombectomy as clinical conditions.\n\n**Primary use-case**\n- Bind `Procedure.complication` (or the referenced Condition.code) to a SNOMED-based set for interoperability.",
+    "systems" : ["http://tecnomod-um.org/CodeSystem/thrombectomy-complication-cs",
+    "http://snomed.info/sct"]
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/timing-metric-codes-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "TimingMetricCodesVS",
+    "title" : "Stroke Timing Metric Codes ValueSet",
+    "description" : "This ValueSet includes all timing metric codes from TimingMetricCodesCS.\n\n**Primary use-case**\n- Required binding for `TimingMetricObservationProfile.code` to ensure only approved metrics are captured.",
+    "systems" : ["http://tecnomod-um.org/CodeSystem/timing-metric-codes-cs"],
+    "uses" : {
+    },
+    "StructureDefinition-timing-metric-observation-profile.html" : "Stroke Timing Metric Observation Profile (R5)"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/vital-sign-codes-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "VitalSignCodesVS",
+    "title" : "Stroke Vital Sign Codes ValueSet",
+    "description" : "This ValueSet defines SNOMED CT observable-entity codes for blood pressure components captured as vital signs:\n- Systolic blood pressure\n- Diastolic blood pressure\n\n**Primary use-case**\n- Bind to `Observation.component.code` in a single blood pressure Observation that records both components.\n\n**Implementation guidance**\n- Use `Observation.component.valueQuantity` with UCUM `mm[Hg]`.\n- Repeat the Observation across time with different `effective[x]` timestamps for monitoring.",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-vital-sign-observation-profile.html" : "Stroke Vital Sign Observation Profile"
+  },
+  {
+    "url" : "http://tecnomod-um.org/ValueSet/vs-gender-snomed",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "GenderSNOMEDVS",
+    "title" : "Gender (SNOMED CT)",
+    "description" : "Value set to represent patient gender using SNOMED CT codes, analogous to AdministrativeGender.",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-gender-snomed-ext.html" : "Gender (SNOMED CT)"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/encounter-class",
+    "version" : "2.0.1",
+    "status" : "active",
+    "name" : "EncounterClass",
+    "title" : "Encounter class",
+    "description" : "This value set defines a set of codes that can be used to indicate the class of encounter: a specific code indicating class of service provided.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v2-0092",
+    "version" : "2.0.0",
+    "status" : "active",
+    "name" : "Hl7VSReAdmissionIndicator",
+    "title" : "hl7VS-re-admissionIndicator",
+    "description" : "Value Set of codes which are used to specify that a patient is being re-admitted to a healthcare facility from which they were discharged, and indicates the circumstances around such re-admission.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0092"],
+    "oids" : ["2.16.840.1.113883.21.40"],
+    "sources" : ["2.16.840.1.113883.21.40"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v3-ActPriority",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "ActPriority",
+    "title" : "ActPriority",
+    "description" : "A code or set of codes (e.g., for routine, emergency,) specifying the urgency under which the Act happened, can happen, is happening, is intended to happen, or is requested/demanded to happen.\r\n\r\n*Discussion:* This attribute is used in orders to indicate the ordered priority, and in event documentation it indicates the actual priority used to perform the act. In definition mood it indicates the available priorities.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActPriority"],
+    "oids" : ["2.16.840.1.113883.1.11.16866"],
+    "sources" : ["2.16.840.1.113883.1.11.16866"],
+    "uses" : {
+    },
+    "StructureDefinition-stroke-encounter-profile.html" : "Stroke Encounter Profile"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v3-ActSubstanceAdminSubstitutionCode",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "ActSubstanceAdminSubstitutionCode",
+    "title" : "ActSubstanceAdminSubstitutionCode",
+    "description" : "***No description***",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution"],
+    "oids" : ["2.16.840.1.113883.1.11.16621"],
+    "sources" : ["2.16.840.1.113883.1.11.16621"],
+    "uses" : {
+    },
+    "StructureDefinition-discharge-medication-request-profile.html" : "Discharge MedicationRequest Profile"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v3-SubstanceAdminSubstitutionReason",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "SubstanceAdminSubstitutionReason",
+    "title" : "SubstanceAdminSubstitutionReason",
+    "description" : "***No description***",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActReason"],
+    "oids" : ["2.16.840.1.113883.1.11.19377"],
+    "sources" : ["2.16.840.1.113883.1.11.19377"],
+    "uses" : {
+    },
+    "StructureDefinition-discharge-medication-request-profile.html" : "Discharge MedicationRequest Profile"
+  }]
 }

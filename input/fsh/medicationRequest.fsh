@@ -17,11 +17,23 @@ Alias: MedicationCS_URL = http://tecnomod-um.org/CodeSystem/medication-cs
 
 CodeSystem: MedicationCS
 Id: medication-cs
+Title: "Discharge Medication Category CodeSystem"
+Description: """
+Local CodeSystem providing **coarse medication categories** used in discharge prescribing when the source system cannot
+(or does not) provide a specific coded drug product/substance.
+
+**Primary use-cases**
+- Minimum-data capture for discharge medication classes relevant to stroke secondary prevention (e.g., anticoagulant vs antiplatelet).
+- Registry reporting where only “medication class prescribed at discharge” is available.
+- Analytics and quality indicators (e.g., “antithrombotic at discharge”) when specific agent is unknown.
+
+**How it is used in FHIR**
+- Included in `MedicationVS` so it can be used in `MedicationRequest.medication` (CodeableConcept).
+
+"""
 * ^url = MedicationCS_URL
 * ^version = "1.0.0"
 * ^name = "MedicationCS"
-* ^title = "Medications CodeSystem"
-* ^description = "Codes for drug products or substances representing the Medications on the patient discharge."
 * ^status = #draft
 * #other-anticoagulant "Other Anticoagulant" "Any anticoagulant medication"
 * #antiplatelet "Any Antiplatelet" "Any antiplatelet medication"
@@ -30,11 +42,23 @@ Id: medication-cs
 
 ValueSet: MedicationVS
 Id: medication-vs
+Title: "Discharge Medications ValueSet"
+Description: """
+ValueSet defining allowable coded medications (or medication categories) for discharge MedicationRequests.
+
+**Primary use-case**
+- Required binding to `MedicationRequest.medication` in `DischargeMedicationRequestProfile`.
+
+**What this ValueSet supports**
+1) **Specific SNOMED CT substance concepts** (e.g., aspirin, clopidogrel, warfarin) for agent-level capture.
+2) **Local category codes** (from `MedicationCS`) for minimum-data capture when only the class is known.
+
+**Scope and modeling notes**
+- This ValueSet does not encode dose, route, frequency, or duration; those are expressed in MedicationRequest elements.
+"""
 * ^url = MedicationVS_URL
 * ^version = "1.0.0"
 * ^name = "MedicationVS"
-* ^title = "Medications ValueSet"
-* ^description = "SNOMED CT codes for drug products or substances."
 * ^status = #draft
 * include SCT#372756006 "Warfarin (substance)"
 * include SCT#372586001 "Hypotensive agent (substance)"
@@ -52,12 +76,34 @@ Id: medication-vs
 Profile: DischargeMedicationRequestProfile
 Id: discharge-medication-request-profile
 Parent: FHIR_MedicationRequest
+Title: "Discharge MedicationRequest Profile"
+Description: """
+Profile for representing a medication prescription issued as part of the patient’s **discharge plan** following a stroke encounter.
+
+**Primary use-case**
+- Capture secondary prevention and chronic therapy prescriptions intended to be taken **after discharge** (community setting),
+  enabling:
+  - discharge medication reconciliation,
+  - continuity of care between hospital and primary care,
+  - registry submission and quality improvement (e.g., antithrombotic/statin at discharge),
+  - episode-linked analytics (tie to the index stroke Encounter).
+
+**Key elements and how to use them**
+- `status` (fixed to active): indicates the prescription is currently intended/valid at the time of discharge documentation.
+  - Use `stopped` or `cancelled` in your broader implementation if a discharge prescription is later withdrawn (not constrained here).
+- `category` (fixed to community): indicates the medication is intended for administration in the community/outpatient context.
+  - This helps distinguish discharge prescriptions from inpatient medication orders.
+- `medication` (required; bound to MedicationVS): identifies the prescribed agent or, if unavailable, a coarse category.
+  - Prefer specific SNOMED CT substance concepts (e.g., aspirin) when available.
+  - Use `MedicationCS` category codes only when the specific agent cannot be coded.
+- `subject` (required): the patient who will take the medication.
+- `encounter` (required): links the prescription to the index stroke admission encounter.
+- `authoredOn` (optional but recommended): the date/time the discharge prescription was authored.
+"""
 * ^url = "http://tecnomod-um.org/StructureDefinition/discharge-medication-request-profile"
 * ^version = "1.0.0"
 * ^name = "DischargeMedicationRequestProfile"
-* ^title = "Discharge Medication Request Profile"
 * ^status = #active
-* ^description = "Represents a medication prescription made as part of the patient's discharge plan, categorized as community administration." 
 
 
 * status = #active

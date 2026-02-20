@@ -174,22 +174,18 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul id="markdown-toc">
   <li><a href="#general-principles" id="markdown-toc-general-principles">General Principles</a>    <ul>
       <li><a href="#purpose-of-this-implementation-guide" id="markdown-toc-purpose-of-this-implementation-guide">Purpose of this Implementation Guide</a></li>
-      <li><a href="#scope-and-non-goals" id="markdown-toc-scope-and-non-goals">Scope and Non-Goals</a>        <ul>
-          <li><a href="#in-scope" id="markdown-toc-in-scope">In scope</a></li>
-          <li><a href="#out-of-scope-explicit-non-goals" id="markdown-toc-out-of-scope-explicit-non-goals">Out of scope (explicit non-goals)</a></li>
+      <li><a href="#scope-and-non-goals" id="markdown-toc-scope-and-non-goals">Scope and Non-Goals</a></li>
+      <li><a href="#general-modeling-principles" id="markdown-toc-general-modeling-principles">General Modeling Principles</a>        <ul>
+          <li><a href="#implementation-centered-design" id="markdown-toc-implementation-centered-design">Implementation-centered design</a></li>
+          <li><a href="#episode-anchoring-and-linkage" id="markdown-toc-episode-anchoring-and-linkage">Episode anchoring and linkage</a></li>
+          <li><a href="#terminology-reuse" id="markdown-toc-terminology-reuse">Terminology reuse</a></li>
+          <li><a href="#critical-stroke-timings" id="markdown-toc-critical-stroke-timings">Critical stroke timings</a></li>
+          <li><a href="#explicit-timing-and-assessment-context" id="markdown-toc-explicit-timing-and-assessment-context">Explicit timing and assessment context</a></li>
+          <li><a href="#data-quality-and-validation" id="markdown-toc-data-quality-and-validation">Data quality and validation</a></li>
+          <li><a href="#interoperability-and-downstream-reuse" id="markdown-toc-interoperability-and-downstream-reuse">Interoperability and downstream reuse</a></li>
+          <li><a href="#versioning-and-evolution" id="markdown-toc-versioning-and-evolution">Versioning and evolution</a></li>
         </ul>
       </li>
-    </ul>
-  </li>
-  <li><a href="#general-modeling-principles" id="markdown-toc-general-modeling-principles">General Modeling Principles</a>    <ul>
-      <li><a href="#implementation-centered-design" id="markdown-toc-implementation-centered-design">Implementation-centered design</a></li>
-      <li><a href="#episode-anchoring-and-linkage" id="markdown-toc-episode-anchoring-and-linkage">Episode anchoring and linkage</a></li>
-      <li><a href="#terminology-reuse" id="markdown-toc-terminology-reuse">Terminology reuse</a></li>
-      <li><a href="#critical-stroke-timings" id="markdown-toc-critical-stroke-timings">Critical stroke timings</a></li>
-      <li><a href="#explicit-timing-and-assessment-context" id="markdown-toc-explicit-timing-and-assessment-context">Explicit timing and assessment context</a></li>
-      <li><a href="#data-quality-and-validation" id="markdown-toc-data-quality-and-validation">Data quality and validation</a></li>
-      <li><a href="#interoperability-and-downstream-reuse" id="markdown-toc-interoperability-and-downstream-reuse">Interoperability and downstream reuse</a></li>
-      <li><a href="#versioning-and-evolution" id="markdown-toc-versioning-and-evolution">Versioning and evolution</a></li>
     </ul>
   </li>
 </ul>
@@ -198,7 +194,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h1 id="general-principles">General Principles</h1>
 
-<h2 id="purpose-of-this-implementation-guide">Purpose of this Implementation Guide</h2>
+<h3 id="purpose-of-this-implementation-guide">Purpose of this Implementation Guide</h3>
 
 <p>This Implementation Guide (IG) provides a HL7&reg; FHIR&reg; R5 interoperability specification to support the exchange of stroke-related data captured through the <a href="https://stroke.qualityregistry.org/">RES-Q Stroke Registry</a> form workflow. The main objective is to represent the RES-Q Stroke Registry dataset as a consistent, computable, and reusable set of FHIR artifacts (profiles, extensions, CodeSystems, ValueSets, invariants, and examples) so that participating hospitals and systems can submit, validate, and analyze stroke registry data in a harmonized way.</p>
 
@@ -210,9 +206,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li>integration between EHRs, stroke unit systems, and registry tooling.</li>
 </ul>
 
-<h2 id="scope-and-non-goals">Scope and Non-Goals</h2>
+<h3 id="scope-and-non-goals">Scope and Non-Goals</h3>
 
-<h3 id="in-scope">In scope</h3>
+<h4 id="in-scope">In scope</h4>
 <p>This IG covers the data elements needed to represent common RES-Q Stroke Registry stroke workflow concepts, including:</p>
 <ul>
   <li><strong>Episode anchoring</strong> via the index stroke hospital admission (<code class="language-plaintext highlighter-rouge">Encounter</code>).</li>
@@ -227,16 +223,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </li>
 </ul>
 
-<h3 id="out-of-scope-explicit-non-goals">Out of scope (explicit non-goals)</h3>
+<h4 id="out-of-scope-explicit-non-goals">Out of scope (explicit non-goals)</h4>
 <ul>
   <li>Full clinical documentation of stroke care beyond the RES-Q Stroke Registry minimum dataset (e.g., comprehensive imaging study modeling or device-level thrombectomy details).</li>
   <li>National drug dictionaries or product-level medication normalization policies (e.g., RxNorm or country-specific medicinal products), unless adopted by an implementation.</li>
   <li>Item-level NIHSS subscores (this IG captures the NIHSS <strong>total</strong> score only).</li>
 </ul>
 
-<h1 id="general-modeling-principles">General Modeling Principles</h1>
+<h2 id="general-modeling-principles">General Modeling Principles</h2>
 
-<h2 id="implementation-centered-design">Implementation-centered design</h2>
+<h3 id="implementation-centered-design">Implementation-centered design</h3>
 <ul>
   <li><strong>Minimal but sufficient</strong> profiles to cover key clinical indicators, registry fields, and reporting needs.</li>
   <li><strong>Compatibility</strong> with HL7&reg; FHIR&reg; <strong>R5</strong> base resources and established modeling patterns.</li>
@@ -252,7 +248,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </li>
 </ul>
 
-<h2 id="episode-anchoring-and-linkage">Episode anchoring and linkage</h2>
+<h3 id="episode-anchoring-and-linkage">Episode anchoring and linkage</h3>
 <ul>
   <li>Most clinical resources in this IG are expected to reference the <strong>index stroke encounter</strong> (<code class="language-plaintext highlighter-rouge">Encounter</code>) to support:
     <ul>
@@ -263,7 +259,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </li>
 </ul>
 
-<h2 id="terminology-reuse">Terminology reuse</h2>
+<h3 id="terminology-reuse">Terminology reuse</h3>
 <ul>
   <li><strong>SNOMED CT</strong> is the default terminology for clinical concepts including diagnoses, procedures, observable entities, disorders, and qualifiers.</li>
   <li><strong>UCUM</strong> is used for all quantitative units (e.g., minutes, mm[Hg]) to ensure computability.</li>
@@ -283,7 +279,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </li>
 </ul>
 
-<h2 id="critical-stroke-timings">Critical stroke timings</h2>
+<h3 id="critical-stroke-timings">Critical stroke timings</h3>
 <ul>
   <li>Time-sensitive performance indicators (e.g., door-to-needle, door-to-groin) are represented as <code class="language-plaintext highlighter-rouge">Observation</code> resources using timing-focused profiles.</li>
   <li>Metrics are modeled as <strong>durations</strong> (typically in UCUM minutes) to optimize registry reporting:
@@ -301,7 +297,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li>Where exact timestamps are not available or are operationally unreliable, the IG uses <strong>contextual timing extensions</strong> to preserve interpretability and comparability (e.g., “acute vs post-acute”, “within 4 hours”, “baseline vs discharge vs 90-day follow-up”).</li>
 </ul>
 
-<h2 id="explicit-timing-and-assessment-context">Explicit timing and assessment context</h2>
+<h3 id="explicit-timing-and-assessment-context">Explicit timing and assessment context</h3>
 <ul>
   <li>Several stroke measures are meaningful only when their <strong>clinical phase/timepoint</strong> is known (e.g., mRS at baseline vs at 90 days).</li>
   <li>This IG therefore supports two complementary approaches:
@@ -316,7 +312,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </li>
 </ul>
 
-<h2 id="data-quality-and-validation">Data quality and validation</h2>
+<h3 id="data-quality-and-validation">Data quality and validation</h3>
 <ul>
   <li>Cardinalities and <code class="language-plaintext highlighter-rouge">mustSupport</code> are aligned with registry completeness expectations and core quality indicators.</li>
   <li>Required <code class="language-plaintext highlighter-rouge">ValueSet</code> bindings constrain key coded fields to prevent ambiguity and improve comparability.</li>
@@ -330,7 +326,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </li>
 </ul>
 
-<h2 id="interoperability-and-downstream-reuse">Interoperability and downstream reuse</h2>
+<h3 id="interoperability-and-downstream-reuse">Interoperability and downstream reuse</h3>
 <ul>
   <li>Prefer standard concepts and standard FHIR elements whenever possible.</li>
   <li>Avoid local concepts when standard equivalents exist; when local codes are necessary:
@@ -347,7 +343,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </li>
 </ul>
 
-<h2 id="versioning-and-evolution">Versioning and evolution</h2>
+<h3 id="versioning-and-evolution">Versioning and evolution</h3>
 <ul>
   <li>Profiles, extensions, CodeSystems, and ValueSets are versioned to support controlled evolution as the registry dataset changes.</li>
   <li>Local terminology is governance-controlled within the IG to preserve stability across implementations and across time.</li>
@@ -372,7 +368,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Fri, Feb 20, 2026 10:05+0000">2026-02-20</span>
+          IG &copy; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Fri, Feb 20, 2026 10:17+0000">2026-02-20</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

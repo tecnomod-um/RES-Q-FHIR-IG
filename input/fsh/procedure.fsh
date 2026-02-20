@@ -68,8 +68,6 @@ This local CodeSystem defines codes for **brain imaging protocol bundles** commo
 """ 
 * ^url = BrainImagingTypeCS_URL
 * ^version = "1.0.0"
-* ^title = "Brain Imaging Type Code System"
-* ^description = "Codes specifying the type of brain imaging performed (e.g., CT, MRI)."
 * ^status = #active
 * #ct-cta "CT-CTA" "CT + CT Angiography. Use when recorded as a combined protocol and not decomposed into separate procedure entries."
 * #ct-cta-perfusion "CT-CTA and Perfusion" "CT + CTA + CT Perfusion. Often used for penumbra/mismatch-based selection in acute stroke."
@@ -93,8 +91,6 @@ It intentionally supports two levels of coding:
 """ 
 * ^url = BrainImagingModalityVS_URL
 * ^version = "1.0.0"
-* ^title = "Brain Imaging Modality ValueSet"
-* ^description = "Defines the SNOMED CT codes for individual brain imaging modalities performed as procedures."
 * ^status = #active
 * include SCT#419949007 "Computed tomography angiography of intracranial artery with contrast (procedure)"
 * include codes from system BrainImagingTypeCS_URL
@@ -200,8 +196,6 @@ Local CodeSystem that categorizes when a swallowing screening occurred relative 
 """
 * ^url = SwallowScreenTimeCS_URL
 * ^version = "1.0.0"
-* ^title = "Swallowing Screening Timing Category Code System"
-* ^description = "Temporal categories relative to stroke onset for swallowing screening."
 * ^status = #active
 * ^experimental = true
 * ^caseSensitive = false 
@@ -340,8 +334,6 @@ Description: """ Extension capturing the **timing category** of swallowing scree
  """
 * ^url = SwallowScreenTimeExt_URL
 * ^version = "1.0.0"
-* ^title = "Swallowing Screening Timing Category"
-* ^description = "Temporal category relative to stroke onset in which the swallowing screening was performed."
 * ^context[0].type = #element
 * ^context[0].expression = "Procedure"
 * value[x] only CodeableConcept

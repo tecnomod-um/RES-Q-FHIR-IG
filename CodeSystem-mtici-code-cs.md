@@ -36,7 +36,7 @@ This CodeSystem defines the **assessment concept code** used to indicate that an
   "title" : "Modified Thrombolysis in Cerebral Infarction Assessment CodeSystem",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-20T09:50:49+00:00",
+  "date" : "2026-02-20T10:05:07+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

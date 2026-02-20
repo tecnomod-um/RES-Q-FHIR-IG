@@ -41,7 +41,7 @@ Local CodeSystem for complications occurring during mechanical thrombectomy.
   "name" : "ThrombectomyComplicationCS",
   "title" : "Thrombectomy Complication CodeSystem",
   "status" : "active",
-  "date" : "2026-02-20T09:50:49+00:00",
+  "date" : "2026-02-20T10:05:07+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

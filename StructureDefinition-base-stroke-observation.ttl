@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "BaseStrokeObservation"] ; # 
   fhir:title [ fhir:v "Base Profile for Stroke-Related Observations"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-02-20T09:50:49+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-20T10:05:07+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;

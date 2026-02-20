@@ -53,7 +53,7 @@ ValueSet restricting the allowed values for documenting the patient's arrival mo
   "name" : "StrokeArrivalModeVS",
   "title" : "Stroke Arrival Mode ValueSet",
   "status" : "active",
-  "date" : "2026-02-20T09:50:49+00:00",
+  "date" : "2026-02-20T10:05:07+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

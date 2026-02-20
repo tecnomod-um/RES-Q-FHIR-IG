@@ -51,10 +51,8 @@ Profile for documenting a statement about the patient’s medication use **befor
 * ^url = "http://tecnomod-um.org/StructureDefinition/prior-medication-statement-profile"
 * ^version = "1.0.0"
 * ^name = "PriorMedicationStatementProfile"
-* ^title = "Prior Medication Statement Profile (R5)" // Indicate R5
 * ^experimental = true
 * ^status = #active
-* ^description = "Represents a statement about the patient's medication use *before* the index event." 
 
 // Key fields for prior medication reporting
 * medication 1..1 MS

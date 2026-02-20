@@ -258,6 +258,7 @@ parameters:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
+  General Principles: general-principles.html
   Conformance: conformance.html
   Guidance: guidance.html
   FHIR Artifacts:

@@ -30,3 +30,12 @@ Each example is organized under its corresponding profile to make navigation and
 
 ## Patient Examples
 {% include list-folder.html srcpath='Patient' %}
+
+## MedicationRequest
+{% include list-folder.html srcpath='MedicationRequest' %}
+
+## MedicationStatement
+{% include list-folder.html srcpath='MedicationStatement' %}
+
+## Organization
+{% include list-folder.html srcpath='Organization' %}

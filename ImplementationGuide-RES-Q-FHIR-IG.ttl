@@ -20,7 +20,7 @@
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "RESQIG"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-02-20T08:43:58+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-20T08:47:00+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;
@@ -225,7 +225,7 @@
          fhir:reference [ fhir:v "ValueSet/brain-imaging-modality-vs" ]
        ] ;
        fhir:name [ fhir:v "Brain Imaging Modality ValueSet" ] ;
-       fhir:description [ fhir:v "Defines the SNOMED CT codes for individual brain imaging modalities performed as procedures." ] ;
+       fhir:description [ fhir:v "This ValueSet defines the allowed codes for documenting **stroke-related brain imaging** as a Procedure.\n\nIt intentionally supports two levels of coding:\n1) **Granular SNOMED CT procedures** (preferred when available).\n2) **Local combined-protocol codes** from `BrainImagingTypeCS` (used when the source reports protocol bundles).\n\n**Primary use-case**\n- Required binding to `Procedure.code` for brain imaging within the stroke episode." ] ;
        fhir:isExample [ fhir:v false ]
      ] [
        fhir:extension ( [
@@ -242,8 +242,8 @@
          fhir:l <http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs> ;
          fhir:reference [ fhir:v "CodeSystem/brain-imaging-type-cs" ]
        ] ;
-       fhir:name [ fhir:v "Brain Imaging Type Code System" ] ;
-       fhir:description [ fhir:v "Codes specifying the type of brain imaging performed (e.g., CT, MRI)." ] ;
+       fhir:name [ fhir:v "Brain Imaging Type CodeSystem" ] ;
+       fhir:description [ fhir:v "This local CodeSystem defines codes for **brain imaging protocol bundles** commonly used in acute stroke, such as CT+CTA+perfusion.\n\n**When to use**\n- The source system reports the study as a combined protocol (e.g., \"CT/CTA/CTP\") without individual modality breakdown.\n- You need a stable code for quality indicators and cohort definitions (e.g., “patients who had CT+CTA+perfusion”)." ] ;
        fhir:isExample [ fhir:v false ]
      ] [
        fhir:extension ( [
@@ -1852,15 +1852,15 @@
          ] ;
          fhir:value [
            a fhir:String ;
-           fhir:v "StructureDefinition:extension"
+           fhir:v "CodeSystem"
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <http://tecnomod-um.org/StructureDefinition/swallowing-screening-timing-category-ext> ;
-         fhir:reference [ fhir:v "StructureDefinition/swallowing-screening-timing-category-ext" ]
+         fhir:l <http://tecnomod-um.org/CodeSystem/swallow-screen-time-cs> ;
+         fhir:reference [ fhir:v "CodeSystem/swallow-screen-time-cs" ]
        ] ;
-       fhir:name [ fhir:v "Swallowing Screening Timing Category" ] ;
-       fhir:description [ fhir:v "Temporal category relative to stroke onset in which the swallowing screening was performed." ] ;
+       fhir:name [ fhir:v "Swallowing Screening Timing Category CodeSystem" ] ;
+       fhir:description [ fhir:v "Local CodeSystem that categorizes when a swallowing screening occurred relative to stroke onset/admission.\n\n**Primary use-case**\n- Support process metrics such as “screening completed within 4 hours”.\n\n**FHIR placement**\n- Used as a CodeableConcept in a Procedure extension (`SwallowingScreeningTimingCategoryExt`)." ] ;
        fhir:isExample [ fhir:v false ]
      ] [
        fhir:extension ( [
@@ -1870,15 +1870,15 @@
          ] ;
          fhir:value [
            a fhir:String ;
-           fhir:v "CodeSystem"
+           fhir:v "StructureDefinition:extension"
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <http://tecnomod-um.org/CodeSystem/swallow-screen-time-cs> ;
-         fhir:reference [ fhir:v "CodeSystem/swallow-screen-time-cs" ]
+         fhir:l <http://tecnomod-um.org/StructureDefinition/swallowing-screening-timing-category-ext> ;
+         fhir:reference [ fhir:v "StructureDefinition/swallowing-screening-timing-category-ext" ]
        ] ;
-       fhir:name [ fhir:v "Swallowing Screening Timing Category Code System" ] ;
-       fhir:description [ fhir:v "Temporal categories relative to stroke onset for swallowing screening." ] ;
+       fhir:name [ fhir:v "Swallowing Screening Timing Category Extension" ] ;
+       fhir:description [ fhir:v " Extension capturing the **timing category** of swallowing screening relative to stroke onset/admission.\n\n**When to use**\n- When you cannot reliably store an exact timestamp (or want an additional categorical indicator even if a timestamp exists).\n\n**How it complements base elements**\n- `Procedure.occurrence[x]` stores the exact time when available.\n- This extension stores a categorical bucket to support standardized reporting." ] ;
        fhir:isExample [ fhir:v false ]
      ] [
        fhir:extension ( [

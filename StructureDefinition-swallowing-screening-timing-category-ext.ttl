@@ -29,9 +29,9 @@
   ] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "SwallowingScreeningTimingCategoryExt"] ; # 
-  fhir:title [ fhir:v "Swallowing Screening Timing Category"] ; # 
+  fhir:title [ fhir:v "Swallowing Screening Timing Category Extension"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-02-20T08:43:58+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-20T08:47:00+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;
@@ -40,7 +40,7 @@
        fhir:value [ fhir:v "http://tecnomod-um.org" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "Temporal category relative to stroke onset in which the swallowing screening was performed."] ; # 
+  fhir:description [ fhir:v " Extension capturing the **timing category** of swallowing screening relative to stroke onset/admission.\n\n**When to use**\n- When you cannot reliably store an exact timestamp (or want an additional categorical indicator even if a timestamp exists).\n\n**How it complements base elements**\n- `Procedure.occurrence[x]` stores the exact time when available.\n- This extension stores a categorical bucket to support standardized reporting."] ; # 
   fhir:fhirVersion [ fhir:v "5.0.0"] ; # 
   fhir:mapping ( [
      fhir:identity [ fhir:v "rim" ] ;

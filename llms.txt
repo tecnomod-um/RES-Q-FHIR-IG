@@ -19,7 +19,7 @@
 ### CodeSystems
 
 * [Assessment Context Code System](CodeSystem-assessment-context-cs.md)
-* [Brain Imaging Type Code System](CodeSystem-brain-imaging-type-cs.md)
+* [Brain Imaging Type CodeSystem](CodeSystem-brain-imaging-type-cs.md)
 * [Discharge Department/Service CodeSystem](CodeSystem-discharge-dept-cs.md)
 * [Hemorrhagic Stroke Bleeding Reason CodeSystem](CodeSystem-hemorrhagic-stroke-bleeding-reason-cs.md)
 * [Initial Care Intensity CodeSystem](CodeSystem-initial-care-intensity-cs.md)
@@ -34,7 +34,7 @@
 * [Stroke Etiology CodeSystem](CodeSystem-stroke-etiology-cs.md)
 * [Stroke Procedure Not Done Reasons CodeSystem](CodeSystem-stroke-proc-not-done-reason-cs.md)
 * [Swallow Procedures CodeSystem](CodeSystem-swallow-procedures-cs.md)
-* [Swallowing Screening Timing Category Code System](CodeSystem-swallow-screen-time-cs.md)
+* [Swallowing Screening Timing Category CodeSystem](CodeSystem-swallow-screen-time-cs.md)
 * [Thrombectomy Complication CodeSystem](CodeSystem-thrombectomy-complication-cs.md)
 * [Stroke Timing Metric Codes CodeSystem](CodeSystem-timing-metric-codes-cs.md)
 
@@ -107,7 +107,7 @@
 * [Patient Age (integer)](StructureDefinition-patient-age-ext.md)
 * [Procedure Timing Context Extension](StructureDefinition-procedure-timing-context-ext.md)
 * [Required Post-Acute Care Extension](StructureDefinition-required-post-acute-care-ext.md)
-* [Swallowing Screening Timing Category](StructureDefinition-swallowing-screening-timing-category-ext.md)
+* [Swallowing Screening Timing Category Extension](StructureDefinition-swallowing-screening-timing-category-ext.md)
 
 ### ImplementationGuides
 

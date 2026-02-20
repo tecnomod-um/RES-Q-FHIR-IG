@@ -89,7 +89,7 @@
     },
     {
       "url": "http://tecnomod-um.org/StructureDefinition/swallowing-screening-timing-category-ext",
-      "title": "Swallowing Screening Timing Category",
+      "title": "Swallowing Screening Timing Category Extension",
       "types": [
         "CodeableConcept"
       ]

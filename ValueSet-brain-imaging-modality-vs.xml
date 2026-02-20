@@ -10,7 +10,7 @@
   <name value="BrainImagingModalityVS"/>
   <title value="Brain Imaging Modality ValueSet"/>
   <status value="active"/>
-  <date value="2026-02-20T08:43:58+00:00"/>
+  <date value="2026-02-20T08:47:00+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>
@@ -19,7 +19,7 @@
       <value value="http://tecnomod-um.org"/>
     </telecom>
   </contact>
-  <description value="Defines the SNOMED CT codes for individual brain imaging modalities performed as procedures."/>
+  <description value="This ValueSet defines the allowed codes for documenting **stroke-related brain imaging** as a Procedure.&#xA;&#xA;It intentionally supports two levels of coding:&#xA;1) **Granular SNOMED CT procedures** (preferred when available).&#xA;2) **Local combined-protocol codes** from `BrainImagingTypeCS` (used when the source reports protocol bundles).&#xA;&#xA;**Primary use-case**&#xA;- Required binding to `Procedure.code` for brain imaging within the stroke episode.&#xA;"/>
   <compose>
     <include>
       <system value="http://snomed.info/sct"/>

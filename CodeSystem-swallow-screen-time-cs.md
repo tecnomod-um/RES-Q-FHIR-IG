@@ -1,10 +1,10 @@
-# Swallowing Screening Timing Category Code System - v0.1.0
+# Swallowing Screening Timing Category CodeSystem - v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **Swallowing Screening Timing Category Code System**
+* **Swallowing Screening Timing Category CodeSystem**
 
-## CodeSystem: Swallowing Screening Timing Category Code System (Experimental) 
+## CodeSystem: Swallowing Screening Timing Category CodeSystem (Experimental) 
 
 | | |
 | :--- | :--- |
@@ -12,7 +12,13 @@
 | Active as of 2026-02-20 | *Computable Name*:SwallowScreenTimeCS |
 
  
-Temporal categories relative to stroke onset for swallowing screening. 
+Local CodeSystem that categorizes when a swallowing screening occurred relative to stroke onset/admission. 
+**Primary use-case** 
+* Support process metrics such as “screening completed within 4 hours”.
+ 
+**FHIR placement** 
+* Used as a CodeableConcept in a Procedure extension (`SwallowingScreeningTimingCategoryExt`).
+ 
 
  This Code system is referenced in the content logical definition of the following value sets: 
 
@@ -29,10 +35,10 @@ Temporal categories relative to stroke onset for swallowing screening.
   "url" : "http://tecnomod-um.org/CodeSystem/swallow-screen-time-cs",
   "version" : "0.1.0",
   "name" : "SwallowScreenTimeCS",
-  "title" : "Swallowing Screening Timing Category Code System",
+  "title" : "Swallowing Screening Timing Category CodeSystem",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-20T08:43:58+00:00",
+  "date" : "2026-02-20T08:47:00+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",
@@ -41,7 +47,7 @@ Temporal categories relative to stroke onset for swallowing screening.
       "value" : "http://tecnomod-um.org"
     }]
   }],
-  "description" : "Temporal categories relative to stroke onset for swallowing screening.",
+  "description" : "Local CodeSystem that categorizes when a swallowing screening occurred relative to stroke onset/admission.\n\n**Primary use-case**\n- Support process metrics such as “screening completed within 4 hours”.\n\n**FHIR placement**\n- Used as a CodeableConcept in a Procedure extension (`SwallowingScreeningTimingCategoryExt`).",
   "caseSensitive" : false,
   "content" : "complete",
   "count" : 1,

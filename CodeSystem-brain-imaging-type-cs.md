@@ -1,10 +1,10 @@
-# Brain Imaging Type Code System - v0.1.0
+# Brain Imaging Type CodeSystem - v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **Brain Imaging Type Code System**
+* **Brain Imaging Type CodeSystem**
 
-## CodeSystem: Brain Imaging Type Code System 
+## CodeSystem: Brain Imaging Type CodeSystem 
 
 | | |
 | :--- | :--- |
@@ -12,7 +12,11 @@
 | Active as of 2026-02-20 | *Computable Name*:BrainImagingTypeCS |
 
  
-Codes specifying the type of brain imaging performed (e.g., CT, MRI). 
+This local CodeSystem defines codes for **brain imaging protocol bundles** commonly used in acute stroke, such as CT+CTA+perfusion. 
+**When to use** 
+* The source system reports the study as a combined protocol (e.g., "CT/CTA/CTP") without individual modality breakdown.
+* You need a stable code for quality indicators and cohort definitions (e.g., “patients who had CT+CTA+perfusion”).
+ 
 
  This Code system is referenced in the content logical definition of the following value sets: 
 
@@ -29,9 +33,9 @@ Codes specifying the type of brain imaging performed (e.g., CT, MRI).
   "url" : "http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs",
   "version" : "0.1.0",
   "name" : "BrainImagingTypeCS",
-  "title" : "Brain Imaging Type Code System",
+  "title" : "Brain Imaging Type CodeSystem",
   "status" : "active",
-  "date" : "2026-02-20T08:43:58+00:00",
+  "date" : "2026-02-20T08:47:00+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",
@@ -40,7 +44,7 @@ Codes specifying the type of brain imaging performed (e.g., CT, MRI).
       "value" : "http://tecnomod-um.org"
     }]
   }],
-  "description" : "Codes specifying the type of brain imaging performed (e.g., CT, MRI).",
+  "description" : "This local CodeSystem defines codes for **brain imaging protocol bundles** commonly used in acute stroke, such as CT+CTA+perfusion.\n\n**When to use**\n- The source system reports the study as a combined protocol (e.g., \"CT/CTA/CTP\") without individual modality breakdown.\n- You need a stable code for quality indicators and cohort definitions (e.g., “patients who had CT+CTA+perfusion”).",
   "content" : "complete",
   "count" : 5,
   "concept" : [{

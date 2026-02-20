@@ -8,7 +8,7 @@
 
 Profile: [Stroke Swallow Procedure Profile](StructureDefinition-stroke-swallow-procedure-profile.md)
 
-**Swallowing Screening Timing Category**: Within 4 hours
+**Swallowing Screening Timing Category Extension**: Within 4 hours
 
 **Procedure Timing Context Extension**: Acute Phase (<24h)
 

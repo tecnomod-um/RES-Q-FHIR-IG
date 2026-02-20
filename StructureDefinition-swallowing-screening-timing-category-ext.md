@@ -1,17 +1,26 @@
-# Swallowing Screening Timing Category - v0.1.0
+# Swallowing Screening Timing Category Extension - v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **Swallowing Screening Timing Category**
+* **Swallowing Screening Timing Category Extension**
 
-## Extension: Swallowing Screening Timing Category 
+## Extension: Swallowing Screening Timing Category Extension 
 
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/swallowing-screening-timing-category-ext | *Version*:0.1.0 |
 | Draft as of 2026-02-20 | *Computable Name*:SwallowingScreeningTimingCategoryExt |
 
-Temporal category relative to stroke onset in which the swallowing screening was performed.
+Extension capturing the **timing category** of swallowing screening relative to stroke onset/admission.
+
+**When to use**
+
+* When you cannot reliably store an exact timestamp (or want an additional categorical indicator even if a timestamp exists).
+
+**How it complements base elements**
+
+* `Procedure.occurrence[x]` stores the exact time when available.
+* This extension stores a categorical bucket to support standardized reporting.
 
 **Context of Use**
 
@@ -51,9 +60,9 @@ Other representations of profile: [CSV](StructureDefinition-swallowing-screening
   "url" : "http://tecnomod-um.org/StructureDefinition/swallowing-screening-timing-category-ext",
   "version" : "0.1.0",
   "name" : "SwallowingScreeningTimingCategoryExt",
-  "title" : "Swallowing Screening Timing Category",
+  "title" : "Swallowing Screening Timing Category Extension",
   "status" : "draft",
-  "date" : "2026-02-20T08:43:58+00:00",
+  "date" : "2026-02-20T08:47:00+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",
@@ -62,7 +71,7 @@ Other representations of profile: [CSV](StructureDefinition-swallowing-screening
       "value" : "http://tecnomod-um.org"
     }]
   }],
-  "description" : "Temporal category relative to stroke onset in which the swallowing screening was performed.",
+  "description" : " Extension capturing the **timing category** of swallowing screening relative to stroke onset/admission.\n\n**When to use**\n- When you cannot reliably store an exact timestamp (or want an additional categorical indicator even if a timestamp exists).\n\n**How it complements base elements**\n- `Procedure.occurrence[x]` stores the exact time when available.\n- This extension stores a categorical bucket to support standardized reporting.",
   "fhirVersion" : "5.0.0",
   "mapping" : [{
     "identity" : "rim",

@@ -22,9 +22,9 @@
   <url value="http://tecnomod-um.org/StructureDefinition/swallowing-screening-timing-category-ext"/>
   <version value="0.1.0"/>
   <name value="SwallowingScreeningTimingCategoryExt"/>
-  <title value="Swallowing Screening Timing Category"/>
+  <title value="Swallowing Screening Timing Category Extension"/>
   <status value="draft"/>
-  <date value="2026-02-20T08:43:58+00:00"/>
+  <date value="2026-02-20T08:47:00+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>
@@ -33,7 +33,7 @@
       <value value="http://tecnomod-um.org"/>
     </telecom>
   </contact>
-  <description value="Temporal category relative to stroke onset in which the swallowing screening was performed."/>
+  <description value=" Extension capturing the **timing category** of swallowing screening relative to stroke onset/admission.&#xA;&#xA;**When to use**&#xA;- When you cannot reliably store an exact timestamp (or want an additional categorical indicator even if a timestamp exists).&#xA;&#xA;**How it complements base elements**&#xA;- `Procedure.occurrence[x]` stores the exact time when available.&#xA;- This extension stores a categorical bucket to support standardized reporting."/>
   <fhirVersion value="5.0.0"/>
   <mapping>
     <identity value="rim"/>

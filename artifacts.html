@@ -935,10 +935,21 @@ for this stroke episode.</p>
          <tr>
             <td style="column-width:30%">
                <a href="StructureDefinition-swallowing-screening-timing-category-ext.html"
-                  title="StructureDefinition/swallowing-screening-timing-category-ext">Swallowing Screening Timing Category</a>
+                  title="StructureDefinition/swallowing-screening-timing-category-ext">Swallowing Screening Timing Category Extension</a>
             </td>
             <td>
-<p>Temporal category relative to stroke onset in which the swallowing screening was performed.</p>
+<p>Extension capturing the <strong>timing category</strong> of swallowing screening relative to stroke onset/admission.</p>
+
+<p><strong>When to use</strong></p>
+<ul>
+  <li>When you cannot reliably store an exact timestamp (or want an additional categorical indicator even if a timestamp exists).</li>
+</ul>
+
+<p><strong>How it complements base elements</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Procedure.occurrence[x]</code> stores the exact time when available.</li>
+  <li>This extension stores a categorical bucket to support standardized reporting.</li>
+</ul>
 </td>
          </tr>
       </tbody>
@@ -1010,7 +1021,16 @@ for this stroke episode.</p>
                   title="ValueSet/brain-imaging-modality-vs">Brain Imaging Modality ValueSet</a>
             </td>
             <td>
-<p>Defines the SNOMED CT codes for individual brain imaging modalities performed as procedures.</p>
+<p>This ValueSet defines the allowed codes for documenting <strong>stroke-related brain imaging</strong> as a Procedure.</p>
+
+<p>It intentionally supports two levels of coding:
+1) <strong>Granular SNOMED CT procedures</strong> (preferred when available).
+2) <strong>Local combined-protocol codes</strong> from <code class="language-plaintext highlighter-rouge">BrainImagingTypeCS</code> (used when the source reports protocol bundles).</p>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Required binding to <code class="language-plaintext highlighter-rouge">Procedure.code</code> for brain imaging within the stroke episode.</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -1532,10 +1552,16 @@ It is primarily used to contextualize instruments whose interpretation depends o
          <tr>
             <td style="column-width:30%">
                <a href="CodeSystem-brain-imaging-type-cs.html"
-                  title="CodeSystem/brain-imaging-type-cs">Brain Imaging Type Code System</a>
+                  title="CodeSystem/brain-imaging-type-cs">Brain Imaging Type CodeSystem</a>
             </td>
             <td>
-<p>Codes specifying the type of brain imaging performed (e.g., CT, MRI).</p>
+<p>This local CodeSystem defines codes for <strong>brain imaging protocol bundles</strong> commonly used in acute stroke, such as CT+CTA+perfusion.</p>
+
+<p><strong>When to use</strong></p>
+<ul>
+  <li>The source system reports the study as a combined protocol (e.g., "CT/CTA/CTP") without individual modality breakdown.</li>
+  <li>You need a stable code for quality indicators and cohort definitions (e.g., “patients who had CT+CTA+perfusion”).</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -1838,10 +1864,20 @@ Each code represents a duration measured between two clinically meaningful event
          <tr>
             <td style="column-width:30%">
                <a href="CodeSystem-swallow-screen-time-cs.html"
-                  title="CodeSystem/swallow-screen-time-cs">Swallowing Screening Timing Category Code System</a>
+                  title="CodeSystem/swallow-screen-time-cs">Swallowing Screening Timing Category CodeSystem</a>
             </td>
             <td>
-<p>Temporal categories relative to stroke onset for swallowing screening.</p>
+<p>Local CodeSystem that categorizes when a swallowing screening occurred relative to stroke onset/admission.</p>
+
+<p><strong>Primary use-case</strong></p>
+<ul>
+  <li>Support process metrics such as “screening completed within 4 hours”.</li>
+</ul>
+
+<p><strong>FHIR placement</strong></p>
+<ul>
+  <li>Used as a CodeableConcept in a Procedure extension (<code class="language-plaintext highlighter-rouge">SwallowingScreeningTimingCategoryExt</code>).</li>
+</ul>
 </td>
          </tr>
          <tr>
@@ -2085,7 +2121,7 @@ Each code represents a duration measured between two clinically meaningful event
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Fri, Feb 20, 2026 08:43+0000">2026-02-20</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://tecnomod-um.org">UMU</a>.  Package RES-Q-FHIR-IG#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Fri, Feb 20, 2026 08:47+0000">2026-02-20</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

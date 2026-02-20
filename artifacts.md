@@ -211,7 +211,10 @@ These define constraints on FHIR data types for systems conforming to this imple
 **FHIR placement*** `Condition.extension[onsetTime].valueTime`
 **Implementation note*** If `OnsetTimeExt` is present, `OnsetDateExt` should generally also be present (enforced as a warning invariant below).
  |
-| [Swallowing Screening Timing Category](StructureDefinition-swallowing-screening-timing-category-ext.md) | Temporal category relative to stroke onset in which the swallowing screening was performed. |
+| [Swallowing Screening Timing Category Extension](StructureDefinition-swallowing-screening-timing-category-ext.md) | Extension capturing the **timing category** of swallowing screening relative to stroke onset/admission.**When to use*** When you cannot reliably store an exact timestamp (or want an additional categorical indicator even if a timestamp exists).
+**How it complements base elements*** `Procedure.occurrence[x]` stores the exact time when available.
+* This extension stores a categorical bucket to support standardized reporting.
+ |
 
 ### Terminology: Value Sets 
 
@@ -232,7 +235,8 @@ These define sets of codes used by systems conforming to this implementation gui
 **Scope and modeling notes*** This ValueSet expresses **assessment outcome/status** (detected/known/absent/not screened/unknown).
 * It does not replace Condition for diagnoses. When AF/flutter is confirmed as a diagnosis, represent it as a `Condition` with the appropriate SNOMED CT disorder code.
  |
-| [Brain Imaging Modality ValueSet](ValueSet-brain-imaging-modality-vs.md) | Defines the SNOMED CT codes for individual brain imaging modalities performed as procedures. |
+| [Brain Imaging Modality ValueSet](ValueSet-brain-imaging-modality-vs.md) | This ValueSet defines the allowed codes for documenting **stroke-related brain imaging** as a Procedure.It intentionally supports two levels of coding: 1) **Granular SNOMED CT procedures** (preferred when available). 2) **Local combined-protocol codes** from `BrainImagingTypeCS` (used when the source reports protocol bundles).**Primary use-case*** Required binding to `Procedure.code` for brain imaging within the stroke episode.
+ |
 | [Carotid Arteries Imaging Modality ValueSet](ValueSet-carotid-imaging-modality-vs.md) | This ValueSet enumerates standardized codes (primarily SNOMED CT procedures) representing **carotid imaging modalities** used in stroke workflows.**Primary use-case*** Bind to `Procedure.code` when recording a carotid imaging study performed during the stroke episode.
  |
 | [Discharge Department/Service ValueSet](ValueSet-discharge-dept-vs.md) | ValueSet restricting the allowed department/service categories recorded at discharge.**Primary use-case*** Required binding for `DischargeDepartmentServiceExtension.valueCodeableConcept`.
@@ -345,7 +349,9 @@ These define new code systems used by systems conforming to this implementation 
 * This CodeSystem records the standardized phase label used for reporting and comparability.
 **Why this is needed*** Many workflows report outcomes by phase even when the exact timestamp is unknown or operationally variable (“mRS at 90 days”).
  |
-| [Brain Imaging Type Code System](CodeSystem-brain-imaging-type-cs.md) | Codes specifying the type of brain imaging performed (e.g., CT, MRI). |
+| [Brain Imaging Type CodeSystem](CodeSystem-brain-imaging-type-cs.md) | This local CodeSystem defines codes for **brain imaging protocol bundles** commonly used in acute stroke, such as CT+CTA+perfusion.**When to use*** The source system reports the study as a combined protocol (e.g., "CT/CTA/CTP") without individual modality breakdown.
+* You need a stable code for quality indicators and cohort definitions (e.g., “patients who had CT+CTA+perfusion”).
+ |
 | [Discharge Department/Service CodeSystem](CodeSystem-discharge-dept-cs.md) | Local CodeSystem representing the **clinical service/department** responsible for the patient at discharge/transfer (or the service the patient is transferred to).**Primary use-case*** Populate `DischargeDepartmentServiceExtension` on Encounter to support: 
 * bed management and service-level reporting,
 * pathway characterization (e.g., discharge under neurology vs rehab),
@@ -413,7 +419,9 @@ These define new code systems used by systems conforming to this implementation 
  |
 | [Swallow Procedures CodeSystem](CodeSystem-swallow-procedures-cs.md) | Local CodeSystem representing swallowing screening/assessment tools often documented by acronym or local naming.**FHIR placement*** Included in `SwallowProceduresVS` to be used in `Procedure.code`
  |
-| [Swallowing Screening Timing Category Code System](CodeSystem-swallow-screen-time-cs.md) | Temporal categories relative to stroke onset for swallowing screening. |
+| [Swallowing Screening Timing Category CodeSystem](CodeSystem-swallow-screen-time-cs.md) | Local CodeSystem that categorizes when a swallowing screening occurred relative to stroke onset/admission.**Primary use-case*** Support process metrics such as “screening completed within 4 hours”.
+**FHIR placement*** Used as a CodeableConcept in a Procedure extension (`SwallowingScreeningTimingCategoryExt`).
+ |
 | [Thrombectomy Complication CodeSystem](CodeSystem-thrombectomy-complication-cs.md) | Local CodeSystem for complications occurring during mechanical thrombectomy.**When to use*** If you need a controlled internal vocabulary for adverse events/complications, especially when upstream systems do not provide SNOMED-coded diagnoses.
 **How it is used in FHIR R5*** Usually referenced from `Procedure.complication` which is a `CodeableReference(Condition)` in R5.
 * You may represent the complication as a `Condition` (preferred), and/or record a code directly depending on your implementation pattern.

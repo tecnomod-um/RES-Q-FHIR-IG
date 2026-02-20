@@ -19,9 +19,9 @@
   ] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "BrainImagingTypeCS"] ; # 
-  fhir:title [ fhir:v "Brain Imaging Type Code System"] ; # 
+  fhir:title [ fhir:v "Brain Imaging Type CodeSystem"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-02-20T08:43:58+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-20T08:47:00+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "UMU"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "UMU" ] ;
@@ -30,7 +30,7 @@
        fhir:value [ fhir:v "http://tecnomod-um.org" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "Codes specifying the type of brain imaging performed (e.g., CT, MRI)."] ; # 
+  fhir:description [ fhir:v "This local CodeSystem defines codes for **brain imaging protocol bundles** commonly used in acute stroke, such as CT+CTA+perfusion.\n\n**When to use**\n- The source system reports the study as a combined protocol (e.g., \"CT/CTA/CTP\") without individual modality breakdown.\n- You need a stable code for quality indicators and cohort definitions (e.g., “patients who had CT+CTA+perfusion”)."] ; # 
   fhir:content [ fhir:v "complete"] ; # 
   fhir:count [ fhir:v "5"^^xsd:nonNegativeInteger] ; # 
   fhir:concept ( [

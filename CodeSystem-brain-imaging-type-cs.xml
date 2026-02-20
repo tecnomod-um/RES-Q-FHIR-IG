@@ -8,9 +8,9 @@
   <url value="http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs"/>
   <version value="0.1.0"/>
   <name value="BrainImagingTypeCS"/>
-  <title value="Brain Imaging Type Code System"/>
+  <title value="Brain Imaging Type CodeSystem"/>
   <status value="active"/>
-  <date value="2026-02-20T08:43:58+00:00"/>
+  <date value="2026-02-20T08:47:00+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>
@@ -19,7 +19,7 @@
       <value value="http://tecnomod-um.org"/>
     </telecom>
   </contact>
-  <description value="Codes specifying the type of brain imaging performed (e.g., CT, MRI)."/>
+  <description value="This local CodeSystem defines codes for **brain imaging protocol bundles** commonly used in acute stroke, such as CT+CTA+perfusion.&#xA;&#xA;**When to use**&#xA;- The source system reports the study as a combined protocol (e.g., &quot;CT/CTA/CTP&quot;) without individual modality breakdown.&#xA;- You need a stable code for quality indicators and cohort definitions (e.g., “patients who had CT+CTA+perfusion”)."/>
   <content value="complete"/>
   <count value="5"/>
   <concept>

@@ -1,8 +1,8 @@
 {
   "resourceType" : "Bundle",
-  "id" : "15495c67-e2cc-4790-9cde-ec1f24885146",
+  "id" : "8a43dddb-82c9-4266-9fd4-bee00fed702f",
   "meta" : {
-    "lastUpdated" : "2026-02-20T08:43:58.900+00:00"
+    "lastUpdated" : "2026-02-20T08:47:00.989+00:00"
   },
   "type" : "collection",
   "entry" : [{
@@ -22,8 +22,8 @@
       "date" : "2025-03-31",
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:9c2df16e-3a3a-4950-9352-a39e80801f31",
-        "timestamp" : "2026-02-20T08:44:58+00:00",
+        "identifier" : "urn:uuid:657f606e-c27b-4233-b04f-b6cf943c4dc3",
+        "timestamp" : "2026-02-20T08:48:01+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -87,8 +87,8 @@
       "status" : "active",
       "date" : "2025-03-31",
       "expansion" : {
-        "identifier" : "urn:uuid:9f3991df-105b-4c3b-8e96-04b09aac54ff",
-        "timestamp" : "2026-02-20T08:44:58+00:00",
+        "identifier" : "urn:uuid:6edc1671-6d74-41d0-8970-9f3b364c8ea5",
+        "timestamp" : "2026-02-20T08:48:01+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -151,10 +151,10 @@
       "title" : "Assessment Context ValueSet",
       "status" : "active",
       "experimental" : true,
-      "date" : "2026-02-20T08:43:58+00:00",
+      "date" : "2026-02-20T08:47:00+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:e8939d97-fddb-417d-9088-b60997a7306a",
-        "timestamp" : "2026-02-20T08:44:58+00:00",
+        "identifier" : "urn:uuid:a6074a82-545d-4938-95cb-74e6fd6f8b30",
+        "timestamp" : "2026-02-20T08:48:01+00:00",
         "total" : 4,
         "offset" : 0,
         "parameter" : [{
@@ -206,17 +206,17 @@
       "resourceType" : "ValueSet",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><div style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\"><p>Expansion from tx.fhir.org based on:</p><ul><li>SNOMED CT International edition 01-Feb 2025<span class=\"copy-text-inline\"><button data-clipboard-text=\"http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></li><li><a href=\"CodeSystem-brain-imaging-type-cs.html\">codesystem Brain Imaging Type Code System v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></li></ul></div><p>This value set contains 6 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://snomed.info/sct-419949007\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/419949007\">419949007</a></td><td>Computed tomography angiography of intracranial artery with contrast</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;419949007&quot;, &quot;display&quot;: &quot;Computed tomography angiography of intracranial artery with contrast&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;419949007&quot;&gt;&lt;display value=&quot;Computed tomography angiography of intracranial artery with contrast&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs-ct-cta\"> </a><code>http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-brain-imaging-type-cs.html#brain-imaging-type-cs-ct-cta\">ct-cta</a></td><td>CT-CTA</td><td>CT + CT Angiography. Use when recorded as a combined protocol and not decomposed into separate procedure entries.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;ct-cta&quot;, &quot;display&quot;: &quot;CT-CTA&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;ct-cta&quot;&gt;&lt;display value=&quot;CT-CTA&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs-ct-cta-perfusion\"> </a><code>http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-brain-imaging-type-cs.html#brain-imaging-type-cs-ct-cta-perfusion\">ct-cta-perfusion</a></td><td>CT-CTA and Perfusion</td><td>CT + CTA + CT Perfusion. Often used for penumbra/mismatch-based selection in acute stroke.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;ct-cta-perfusion&quot;, &quot;display&quot;: &quot;CT-CTA and Perfusion&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;ct-cta-perfusion&quot;&gt;&lt;display value=&quot;CT-CTA and Perfusion&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs-mr-dwi-flair\"> </a><code>http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-brain-imaging-type-cs.html#brain-imaging-type-cs-mr-dwi-flair\">mr-dwi-flair</a></td><td>MR DWI-FLAIR</td><td>MRI with DWI and/or FLAIR. Supports imaging-based estimates of lesion age and tissue characterization.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;mr-dwi-flair&quot;, &quot;display&quot;: &quot;MR DWI-FLAIR&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;mr-dwi-flair&quot;&gt;&lt;display value=&quot;MR DWI-FLAIR&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs-mr-dwi-flair-mra\"> </a><code>http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-brain-imaging-type-cs.html#brain-imaging-type-cs-mr-dwi-flair-mra\">mr-dwi-flair-mra</a></td><td>MR DWI-FLAIR and MRA</td><td>MRI (DWI/FLAIR) + MRA. Represents combined parenchymal and vascular assessment.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;mr-dwi-flair-mra&quot;, &quot;display&quot;: &quot;MR DWI-FLAIR and MRA&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;mr-dwi-flair-mra&quot;&gt;&lt;display value=&quot;MR DWI-FLAIR and MRA&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs-mr-dwi-flair-mra-perfusion\"> </a><code>http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-brain-imaging-type-cs.html#brain-imaging-type-cs-mr-dwi-flair-mra-perfusion\">mr-dwi-flair-mra-perfusion</a></td><td>MR DWI-FLAIR, MRA, and Perfusion</td><td>MRI (DWI/FLAIR) + MRA + perfusion. Represents advanced tissue and vessel evaluation.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;mr-dwi-flair-mra-perfusion&quot;, &quot;display&quot;: &quot;MR DWI-FLAIR, MRA, and Perfusion&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;mr-dwi-flair-mra-perfusion&quot;&gt;&lt;display value=&quot;MR DWI-FLAIR, MRA, and Perfusion&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><div style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\"><p>Expansion from tx.fhir.org based on:</p><ul><li>SNOMED CT International edition 01-Feb 2025<span class=\"copy-text-inline\"><button data-clipboard-text=\"http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></li><li><a href=\"CodeSystem-brain-imaging-type-cs.html\">codesystem Brain Imaging Type CodeSystem v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></li></ul></div><p>This value set contains 6 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://snomed.info/sct-419949007\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/419949007\">419949007</a></td><td>Computed tomography angiography of intracranial artery with contrast</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;419949007&quot;, &quot;display&quot;: &quot;Computed tomography angiography of intracranial artery with contrast&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;419949007&quot;&gt;&lt;display value=&quot;Computed tomography angiography of intracranial artery with contrast&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs-ct-cta\"> </a><code>http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-brain-imaging-type-cs.html#brain-imaging-type-cs-ct-cta\">ct-cta</a></td><td>CT-CTA</td><td>CT + CT Angiography. Use when recorded as a combined protocol and not decomposed into separate procedure entries.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;ct-cta&quot;, &quot;display&quot;: &quot;CT-CTA&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;ct-cta&quot;&gt;&lt;display value=&quot;CT-CTA&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs-ct-cta-perfusion\"> </a><code>http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-brain-imaging-type-cs.html#brain-imaging-type-cs-ct-cta-perfusion\">ct-cta-perfusion</a></td><td>CT-CTA and Perfusion</td><td>CT + CTA + CT Perfusion. Often used for penumbra/mismatch-based selection in acute stroke.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;ct-cta-perfusion&quot;, &quot;display&quot;: &quot;CT-CTA and Perfusion&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;ct-cta-perfusion&quot;&gt;&lt;display value=&quot;CT-CTA and Perfusion&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs-mr-dwi-flair\"> </a><code>http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-brain-imaging-type-cs.html#brain-imaging-type-cs-mr-dwi-flair\">mr-dwi-flair</a></td><td>MR DWI-FLAIR</td><td>MRI with DWI and/or FLAIR. Supports imaging-based estimates of lesion age and tissue characterization.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;mr-dwi-flair&quot;, &quot;display&quot;: &quot;MR DWI-FLAIR&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;mr-dwi-flair&quot;&gt;&lt;display value=&quot;MR DWI-FLAIR&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs-mr-dwi-flair-mra\"> </a><code>http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-brain-imaging-type-cs.html#brain-imaging-type-cs-mr-dwi-flair-mra\">mr-dwi-flair-mra</a></td><td>MR DWI-FLAIR and MRA</td><td>MRI (DWI/FLAIR) + MRA. Represents combined parenchymal and vascular assessment.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;mr-dwi-flair-mra&quot;, &quot;display&quot;: &quot;MR DWI-FLAIR and MRA&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;mr-dwi-flair-mra&quot;&gt;&lt;display value=&quot;MR DWI-FLAIR and MRA&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs-mr-dwi-flair-mra-perfusion\"> </a><code>http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-brain-imaging-type-cs.html#brain-imaging-type-cs-mr-dwi-flair-mra-perfusion\">mr-dwi-flair-mra-perfusion</a></td><td>MR DWI-FLAIR, MRA, and Perfusion</td><td>MRI (DWI/FLAIR) + MRA + perfusion. Represents advanced tissue and vessel evaluation.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;mr-dwi-flair-mra-perfusion&quot;, &quot;display&quot;: &quot;MR DWI-FLAIR, MRA, and Perfusion&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;mr-dwi-flair-mra-perfusion&quot;&gt;&lt;display value=&quot;MR DWI-FLAIR, MRA, and Perfusion&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
       },
       "url" : "http://tecnomod-um.org/ValueSet/brain-imaging-modality-vs",
       "version" : "0.1.0",
       "name" : "BrainImagingModalityVS",
       "title" : "Brain Imaging Modality ValueSet",
       "status" : "active",
-      "date" : "2026-02-20T08:43:58+00:00",
+      "date" : "2026-02-20T08:47:00+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:08997ea3-c51b-400c-899b-a60678d2390e",
-        "timestamp" : "2026-02-20T08:44:58+00:00",
+        "identifier" : "urn:uuid:44cbf912-beb8-4af2-9b15-0e487063b576",
+        "timestamp" : "2026-02-20T08:48:01+00:00",
         "total" : 6,
         "offset" : 0,
         "parameter" : [{
@@ -297,10 +297,10 @@
       "name" : "CarotidImagingModalityVS",
       "title" : "Carotid Arteries Imaging Modality ValueSet",
       "status" : "active",
-      "date" : "2026-02-20T08:43:58+00:00",
+      "date" : "2026-02-20T08:47:00+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:7b25e5a9-5419-42a9-b400-6bc701aebb3f",
-        "timestamp" : "2026-02-20T08:44:59+00:00",
+        "identifier" : "urn:uuid:34b03459-488f-4228-bbe1-29b50e1953db",
+        "timestamp" : "2026-02-20T08:48:02+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -362,10 +362,10 @@
       "name" : "DischargeDeptVS",
       "title" : "Discharge Department/Service ValueSet",
       "status" : "active",
-      "date" : "2026-02-20T08:43:58+00:00",
+      "date" : "2026-02-20T08:47:00+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:9f3d230b-2d1f-4b08-b0ab-ea7a2c6587ba",
-        "timestamp" : "2026-02-20T08:44:59+00:00",
+        "identifier" : "urn:uuid:a741e135-d2e8-41b5-8f65-7c7ab771eda4",
+        "timestamp" : "2026-02-20T08:48:02+00:00",
         "total" : 4,
         "offset" : 0,
         "parameter" : [{
@@ -428,8 +428,8 @@
       "date" : "2025-03-31",
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:9114000e-1888-459c-9990-8856d6619363",
-        "timestamp" : "2026-02-20T08:44:59+00:00",
+        "identifier" : "urn:uuid:87e9c284-31aa-4a6f-85b1-4bac3b750db6",
+        "timestamp" : "2026-02-20T08:48:02+00:00",
         "total" : 5,
         "offset" : 0,
         "parameter" : [{
@@ -501,10 +501,10 @@
       "name" : "FunctionalScoreCodesVS",
       "title" : "Stroke Functional Score Codes ValueSet",
       "status" : "active",
-      "date" : "2026-02-20T08:43:58+00:00",
+      "date" : "2026-02-20T08:47:00+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:5352a7ae-f59a-402b-91dd-088bdbb5851b",
-        "timestamp" : "2026-02-20T08:44:51+00:00",
+        "identifier" : "urn:uuid:6694837e-6fb4-408b-ba25-e48e8f3550d1",
+        "timestamp" : "2026-02-20T08:47:54+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -565,8 +565,8 @@
       "date" : "2025-09-08",
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:4474c36c-4e02-4222-9e69-db64bb802178",
-        "timestamp" : "2026-02-20T08:44:59+00:00",
+        "identifier" : "urn:uuid:f2707c19-9c55-4d38-8e8d-f77170766611",
+        "timestamp" : "2026-02-20T08:48:02+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -636,10 +636,10 @@
       "name" : "InitialCareIntensityVS",
       "title" : "Initial Care Intensity ValueSet",
       "status" : "active",
-      "date" : "2026-02-20T08:43:58+00:00",
+      "date" : "2026-02-20T08:47:00+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:af6c5b66-ef91-47a3-8f9c-9c9e5ec8d6d4",
-        "timestamp" : "2026-02-20T08:45:00+00:00",
+        "identifier" : "urn:uuid:e2e15ff8-091d-46f1-a8a1-e43bcff6421b",
+        "timestamp" : "2026-02-20T08:48:02+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -697,10 +697,10 @@
       "name" : "MedicationVS",
       "title" : "Discharge Medications ValueSet",
       "status" : "draft",
-      "date" : "2026-02-20T08:43:58+00:00",
+      "date" : "2026-02-20T08:47:00+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:274ab4cc-bee6-428d-a7f3-454e835b6b9f",
-        "timestamp" : "2026-02-20T08:45:00+00:00",
+        "identifier" : "urn:uuid:bac74b11-3e52-473d-987c-67e2cdb37a78",
+        "timestamp" : "2026-02-20T08:48:02+00:00",
         "total" : 12,
         "offset" : 0,
         "parameter" : [{
@@ -812,10 +812,10 @@
       "title" : "Modified Rankin Scale (mRS) Score ValueSet",
       "status" : "active",
       "experimental" : true,
-      "date" : "2026-02-20T08:43:58+00:00",
+      "date" : "2026-02-20T08:47:00+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:dc5942a3-6464-46ed-b81f-da18d791ba56",
-        "timestamp" : "2026-02-20T08:44:51+00:00",
+        "identifier" : "urn:uuid:892c8660-66a7-4e64-93a4-c6da4058344d",
+        "timestamp" : "2026-02-20T08:47:55+00:00",
         "total" : 7,
         "offset" : 0,
         "parameter" : [{
@@ -889,10 +889,10 @@
       "name" : "MTICICodeVS",
       "title" : "Modified Thrombolysis in Cerebral Infarction Assessment ValueSet",
       "status" : "active",
-      "date" : "2026-02-20T08:43:58+00:00",
+      "date" : "2026-02-20T08:47:00+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:581cd689-82c1-46e0-a62c-87f80e277a41",
-        "timestamp" : "2026-02-20T08:45:00+00:00",
+        "identifier" : "urn:uuid:8fcdde0f-7062-4da2-bb7f-bebc8f65d9b4",
+        "timestamp" : "2026-02-20T08:48:03+00:00",
         "total" : 1,
         "offset" : 0,
         "parameter" : [{
@@ -943,8 +943,8 @@
       "experimental" : true,
       "date" : "2025-03-31",
       "expansion" : {
-        "identifier" : "urn:uuid:f3fbcd65-f900-4c23-a4f5-5f237bf77421",
-        "timestamp" : "2026-02-20T08:45:00+00:00",
+        "identifier" : "urn:uuid:a3bb1a87-f7db-4805-8301-bcf95c86be1f",
+        "timestamp" : "2026-02-20T08:48:03+00:00",
         "total" : 6,
         "offset" : 0,
         "parameter" : [{
@@ -1016,8 +1016,8 @@
       "experimental" : true,
       "date" : "2025-03-31",
       "expansion" : {
-        "identifier" : "urn:uuid:1092e6aa-b225-4f5e-b372-e3354ed164c8",
-        "timestamp" : "2026-02-20T08:45:00+00:00",
+        "identifier" : "urn:uuid:9fd702b6-1f7f-40ad-b47f-3b3fd5ca25c3",
+        "timestamp" : "2026-02-20T08:48:03+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -1074,10 +1074,10 @@
       "name" : "ProcedureTimingContextVS",
       "title" : "Procedure Timing Context ValueSet",
       "status" : "active",
-      "date" : "2026-02-20T08:43:58+00:00",
+      "date" : "2026-02-20T08:47:00+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:6fa853fd-150c-411f-b625-affae30fc7ef",
-        "timestamp" : "2026-02-20T08:45:00+00:00",
+        "identifier" : "urn:uuid:ea86fce9-d458-414a-a1b3-8b0a7572df6e",
+        "timestamp" : "2026-02-20T08:48:03+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -1135,10 +1135,10 @@
       "name" : "SpecificFindingCodesVS",
       "title" : "Specific Stroke Finding Codes ValueSet",
       "status" : "active",
-      "date" : "2026-02-20T08:43:58+00:00",
+      "date" : "2026-02-20T08:47:00+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:7a22cc9d-969c-4ee5-9a8b-e72d8afeebfe",
-        "timestamp" : "2026-02-20T08:45:00+00:00",
+        "identifier" : "urn:uuid:994e7a1f-ed9c-429d-8e3e-7df08e212dec",
+        "timestamp" : "2026-02-20T08:48:03+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -1195,10 +1195,10 @@
       "name" : "StrokeArrivalModeVS",
       "title" : "Stroke Arrival Mode ValueSet",
       "status" : "active",
-      "date" : "2026-02-20T08:43:58+00:00",
+      "date" : "2026-02-20T08:47:00+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:85308d38-3802-4914-a0ac-50f95cad3955",
-        "timestamp" : "2026-02-20T08:45:00+00:00",
+        "identifier" : "urn:uuid:3f21dc02-b9eb-4ace-9fea-6c08a04f8e8c",
+        "timestamp" : "2026-02-20T08:48:03+00:00",
         "total" : 6,
         "offset" : 0,
         "parameter" : [{
@@ -1271,10 +1271,10 @@
       "name" : "StrokeCircumstanceCodesVS",
       "title" : "Stroke Circumstance Codes ValueSet",
       "status" : "active",
-      "date" : "2026-02-20T08:43:58+00:00",
+      "date" : "2026-02-20T08:47:00+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:6a6965a7-08c3-46e0-baa2-20f3dd0ed07d",
-        "timestamp" : "2026-02-20T08:44:54+00:00",
+        "identifier" : "urn:uuid:76015b0b-7134-49af-b521-940fd5d6f914",
+        "timestamp" : "2026-02-20T08:47:58+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -1327,8 +1327,8 @@
       "date" : "2025-10-07",
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:adf0c0b3-1bf3-4657-9a41-cb37ab5200de",
-        "timestamp" : "2026-02-20T08:44:55+00:00",
+        "identifier" : "urn:uuid:8378d9ed-ef59-417e-95e5-b13f9f250f8d",
+        "timestamp" : "2026-02-20T08:47:58+00:00",
         "total" : 6,
         "offset" : 0,
         "parameter" : [{
@@ -1405,10 +1405,10 @@
       "name" : "StrokeDischargeDestinationVS",
       "title" : "Stroke Discharge Destination ValueSet",
       "status" : "active",
-      "date" : "2026-02-20T08:43:58+00:00",
+      "date" : "2026-02-20T08:47:00+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:fb9a2e1f-0ce9-436f-b633-c5f15c30b549",
-        "timestamp" : "2026-02-20T08:45:00+00:00",
+        "identifier" : "urn:uuid:0a90cf85-95b3-4614-9c08-e7fcc2db96bf",
+        "timestamp" : "2026-02-20T08:48:03+00:00",
         "total" : 5,
         "offset" : 0,
         "parameter" : [{
@@ -1492,8 +1492,8 @@
       "date" : "2025-03-31",
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:96c399a2-59e4-4b5b-a90f-46351f63913a",
-        "timestamp" : "2026-02-20T08:45:01+00:00",
+        "identifier" : "urn:uuid:9b002de5-bd71-4358-98fc-82478dba85d4",
+        "timestamp" : "2026-02-20T08:48:03+00:00",
         "total" : 5,
         "offset" : 0,
         "parameter" : [{
@@ -1573,10 +1573,10 @@
       "name" : "StrokeFindingCodesVS",
       "title" : "Specific Stroke Finding Codes ValueSet",
       "status" : "active",
-      "date" : "2026-02-20T08:43:58+00:00",
+      "date" : "2026-02-20T08:47:00+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:ffcae74a-73a5-4288-814d-8578537bc93c",
-        "timestamp" : "2026-02-20T08:44:53+00:00",
+        "identifier" : "urn:uuid:240fab37-61b5-4fcb-9849-53983dcc6004",
+        "timestamp" : "2026-02-20T08:47:56+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -1654,10 +1654,10 @@
       "name" : "StrokeProcNotDoneReasonVS",
       "title" : "Stroke Procedure Not Done Reason ValueSet",
       "status" : "active",
-      "date" : "2026-02-20T08:43:58+00:00",
+      "date" : "2026-02-20T08:47:00+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:927e7bb8-f33d-4c63-b82a-03b5e298744d",
-        "timestamp" : "2026-02-20T08:45:01+00:00",
+        "identifier" : "urn:uuid:35d274fc-648a-41f6-8cb6-197547beb326",
+        "timestamp" : "2026-02-20T08:48:04+00:00",
         "total" : 16,
         "offset" : 0,
         "parameter" : [{
@@ -1784,8 +1784,8 @@
       "date" : "2025-10-07",
       "immutable" : false,
       "expansion" : {
-        "identifier" : "urn:uuid:7ce5b78f-8f17-47fd-b783-dc29bd7b7823",
-        "timestamp" : "2026-02-20T08:44:56+00:00",
+        "identifier" : "urn:uuid:ee28bb76-dc9b-4f16-bb45-4fadf93a71ee",
+        "timestamp" : "2026-02-20T08:47:59+00:00",
         "total" : 11,
         "offset" : 0,
         "parameter" : [{
@@ -1890,8 +1890,8 @@
       "experimental" : true,
       "date" : "2025-03-31",
       "expansion" : {
-        "identifier" : "urn:uuid:68fbfc25-8936-46c1-97b9-f105e6fd3b12",
-        "timestamp" : "2026-02-20T08:45:01+00:00",
+        "identifier" : "urn:uuid:3120f795-2765-4039-9b7c-eeaaa5912ef1",
+        "timestamp" : "2026-02-20T08:48:04+00:00",
         "total" : 6,
         "offset" : 0,
         "parameter" : [{
@@ -1965,17 +1965,17 @@
       "resourceType" : "ValueSet",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><div style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\"><p>Expansion from tx.fhir.org based on:</p><ul><li>SNOMED CT International edition 01-Feb 2025<span class=\"copy-text-inline\"><button data-clipboard-text=\"http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></li><li><a href=\"CodeSystem-swallow-screen-time-cs.html\">codesystem Swallowing Screening Timing Category Code System v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://tecnomod-um.org/CodeSystem/swallow-screen-time-cs|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></li></ul></div><p>This value set contains 3 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/swallow-screen-time-cs-T4H\"> </a><code>http://tecnomod-um.org/CodeSystem/swallow-screen-time-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-swallow-screen-time-cs.html#swallow-screen-time-cs-T4H\">T4H</a></td><td>Within 4 hours</td><td>Screening performed within 4 hours of symptom onset.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/swallow-screen-time-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;T4H&quot;, &quot;display&quot;: &quot;Within 4 hours&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/swallow-screen-time-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;T4H&quot;&gt;&lt;display value=&quot;Within 4 hours&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://snomed.info/sct-281380002\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/281380002\">281380002</a></td><td>24 hours post admission</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;281380002&quot;, &quot;display&quot;: &quot;24 hours post admission&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;281380002&quot;&gt;&lt;display value=&quot;24 hours post admission&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://snomed.info/sct-281381003\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/281381003\">281381003</a></td><td>More than 24 hours after admission</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;281381003&quot;, &quot;display&quot;: &quot;More than 24 hours after admission&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;281381003&quot;&gt;&lt;display value=&quot;More than 24 hours after admission&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><div style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\"><p>Expansion from tx.fhir.org based on:</p><ul><li>SNOMED CT International edition 01-Feb 2025<span class=\"copy-text-inline\"><button data-clipboard-text=\"http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></li><li><a href=\"CodeSystem-swallow-screen-time-cs.html\">codesystem Swallowing Screening Timing Category CodeSystem v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://tecnomod-um.org/CodeSystem/swallow-screen-time-cs|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></li></ul></div><p>This value set contains 3 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://tecnomod-um.org/CodeSystem/swallow-screen-time-cs-T4H\"> </a><code>http://tecnomod-um.org/CodeSystem/swallow-screen-time-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-swallow-screen-time-cs.html#swallow-screen-time-cs-T4H\">T4H</a></td><td>Within 4 hours</td><td>Screening performed within 4 hours of symptom onset.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://tecnomod-um.org/CodeSystem/swallow-screen-time-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;T4H&quot;, &quot;display&quot;: &quot;Within 4 hours&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://tecnomod-um.org/CodeSystem/swallow-screen-time-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;T4H&quot;&gt;&lt;display value=&quot;Within 4 hours&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://snomed.info/sct-281380002\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/281380002\">281380002</a></td><td>24 hours post admission</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;281380002&quot;, &quot;display&quot;: &quot;24 hours post admission&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;281380002&quot;&gt;&lt;display value=&quot;24 hours post admission&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://snomed.info/sct-281381003\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/281381003\">281381003</a></td><td>More than 24 hours after admission</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;281381003&quot;, &quot;display&quot;: &quot;More than 24 hours after admission&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;281381003&quot;&gt;&lt;display value=&quot;More than 24 hours after admission&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
       },
       "url" : "http://tecnomod-um.org/ValueSet/swallowing-screening-timing-category-vs",
       "version" : "0.1.0",
       "name" : "SwallowingScreeningTimingCategoryVS",
       "title" : "Swallowing Screening Timing Category ValueSet",
       "status" : "active",
-      "date" : "2026-02-20T08:43:58+00:00",
+      "date" : "2026-02-20T08:47:00+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:5a805b24-46ef-4ffa-a044-94307282ee0f",
-        "timestamp" : "2026-02-20T08:45:01+00:00",
+        "identifier" : "urn:uuid:a2a31df5-74b9-4851-bc04-afd7f45d3ffb",
+        "timestamp" : "2026-02-20T08:48:04+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -2049,10 +2049,10 @@
       "name" : "ThrombectomyComplicationVS",
       "title" : "Thrombectomy Complications ValueSet",
       "status" : "active",
-      "date" : "2026-02-20T08:43:58+00:00",
+      "date" : "2026-02-20T08:47:00+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:0f60ff1a-7dbe-42f8-9349-b827954ec43b",
-        "timestamp" : "2026-02-20T08:45:01+00:00",
+        "identifier" : "urn:uuid:e101a0c0-9d84-4c01-a6dc-2fc1132048c4",
+        "timestamp" : "2026-02-20T08:48:04+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -2113,10 +2113,10 @@
       "name" : "TimingMetricCodesVS",
       "title" : "Stroke Timing Metric Codes ValueSet",
       "status" : "active",
-      "date" : "2026-02-20T08:43:58+00:00",
+      "date" : "2026-02-20T08:47:00+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:6b8c3c0f-3c7d-415c-bddb-20506c6dda9f",
-        "timestamp" : "2026-02-20T08:44:57+00:00",
+        "identifier" : "urn:uuid:67be1c78-2419-40bd-af19-d60065c8dfe2",
+        "timestamp" : "2026-02-20T08:48:00+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -2166,10 +2166,10 @@
       "title" : "Stroke Vital Sign Codes ValueSet",
       "status" : "active",
       "experimental" : true,
-      "date" : "2026-02-20T08:43:58+00:00",
+      "date" : "2026-02-20T08:47:00+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:5d24557f-20f4-477f-9d55-52c13e4d29ae",
-        "timestamp" : "2026-02-20T08:45:02+00:00",
+        "identifier" : "urn:uuid:680f3c18-558f-4d38-92c9-4815e42e4eb8",
+        "timestamp" : "2026-02-20T08:48:05+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -2227,10 +2227,10 @@
       "title" : "Gender (SNOMED CT)",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-02-20T08:43:58+00:00",
+      "date" : "2026-02-20T08:47:00+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:08c6b0d3-e9d6-438f-b395-aaff2285c04e",
-        "timestamp" : "2026-02-20T08:45:02+00:00",
+        "identifier" : "urn:uuid:57e33c82-a9ef-44b6-9912-114b603b1b8b",
+        "timestamp" : "2026-02-20T08:48:05+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{

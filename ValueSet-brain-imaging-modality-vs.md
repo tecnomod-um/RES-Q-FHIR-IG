@@ -12,7 +12,11 @@
 | Active as of 2026-02-20 | *Computable Name*:BrainImagingModalityVS |
 
  
-Defines the SNOMED CT codes for individual brain imaging modalities performed as procedures. 
+This ValueSet defines the allowed codes for documenting **stroke-related brain imaging** as a Procedure. 
+It intentionally supports two levels of coding: 1) **Granular SNOMED CT procedures** (preferred when available). 2) **Local combined-protocol codes** from `BrainImagingTypeCS` (used when the source reports protocol bundles). 
+**Primary use-case** 
+* Required binding to `Procedure.code` for brain imaging within the stroke episode.
+ 
 
  **References** 
 
@@ -50,7 +54,7 @@ Defines the SNOMED CT codes for individual brain imaging modalities performed as
   "name" : "BrainImagingModalityVS",
   "title" : "Brain Imaging Modality ValueSet",
   "status" : "active",
-  "date" : "2026-02-20T08:43:58+00:00",
+  "date" : "2026-02-20T08:47:00+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",
@@ -59,7 +63,7 @@ Defines the SNOMED CT codes for individual brain imaging modalities performed as
       "value" : "http://tecnomod-um.org"
     }]
   }],
-  "description" : "Defines the SNOMED CT codes for individual brain imaging modalities performed as procedures.",
+  "description" : "This ValueSet defines the allowed codes for documenting **stroke-related brain imaging** as a Procedure.\n\nIt intentionally supports two levels of coding:\n1) **Granular SNOMED CT procedures** (preferred when available).\n2) **Local combined-protocol codes** from `BrainImagingTypeCS` (used when the source reports protocol bundles).\n\n**Primary use-case**\n- Required binding to `Procedure.code` for brain imaging within the stroke episode.\n",
   "compose" : {
     "include" : [{
       "system" : "http://snomed.info/sct",

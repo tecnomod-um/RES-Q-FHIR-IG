@@ -22,7 +22,7 @@ ValueSet defining allowed categories for swallowing screening timing, combining:
 
  **References** 
 
-* [Swallowing Screening Timing Category](StructureDefinition-swallowing-screening-timing-category-ext.md)
+* [Swallowing Screening Timing Category Extension](StructureDefinition-swallowing-screening-timing-category-ext.md)
 
 ### Logical Definition (CLD)
 
@@ -56,7 +56,7 @@ ValueSet defining allowed categories for swallowing screening timing, combining:
   "name" : "SwallowingScreeningTimingCategoryVS",
   "title" : "Swallowing Screening Timing Category ValueSet",
   "status" : "active",
-  "date" : "2026-02-20T08:43:58+00:00",
+  "date" : "2026-02-20T08:47:00+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

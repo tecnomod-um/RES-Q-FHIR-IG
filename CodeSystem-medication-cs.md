@@ -39,7 +39,7 @@ Local CodeSystem providing **coarse medication categories** used in discharge pr
   "name" : "MedicationCS",
   "title" : "Discharge Medication Category CodeSystem",
   "status" : "draft",
-  "date" : "2026-02-20T08:43:58+00:00",
+  "date" : "2026-02-20T08:47:00+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

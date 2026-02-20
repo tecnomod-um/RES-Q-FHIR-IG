@@ -9,7 +9,7 @@
   <version value="0.1.0"/>
   <name value="RESQIG"/>
   <status value="draft"/>
-  <date value="2026-02-20T08:43:58+00:00"/>
+  <date value="2026-02-20T08:47:00+00:00"/>
   <publisher value="UMU"/>
   <contact>
     <name value="UMU"/>
@@ -126,7 +126,7 @@
         <reference value="ValueSet/brain-imaging-modality-vs"/>
       </reference>
       <name value="Brain Imaging Modality ValueSet"/>
-      <description value="Defines the SNOMED CT codes for individual brain imaging modalities performed as procedures."/>
+      <description value="This ValueSet defines the allowed codes for documenting **stroke-related brain imaging** as a Procedure.&#xA;&#xA;It intentionally supports two levels of coding:&#xA;1) **Granular SNOMED CT procedures** (preferred when available).&#xA;2) **Local combined-protocol codes** from `BrainImagingTypeCS` (used when the source reports protocol bundles).&#xA;&#xA;**Primary use-case**&#xA;- Required binding to `Procedure.code` for brain imaging within the stroke episode."/>
       <isExample value="false"/>
     </resource>
     <resource>
@@ -136,8 +136,8 @@
       <reference>
         <reference value="CodeSystem/brain-imaging-type-cs"/>
       </reference>
-      <name value="Brain Imaging Type Code System"/>
-      <description value="Codes specifying the type of brain imaging performed (e.g., CT, MRI)."/>
+      <name value="Brain Imaging Type CodeSystem"/>
+      <description value="This local CodeSystem defines codes for **brain imaging protocol bundles** commonly used in acute stroke, such as CT+CTA+perfusion.&#xA;&#xA;**When to use**&#xA;- The source system reports the study as a combined protocol (e.g., &quot;CT/CTA/CTP&quot;) without individual modality breakdown.&#xA;- You need a stable code for quality indicators and cohort definitions (e.g., “patients who had CT+CTA+perfusion”)."/>
       <isExample value="false"/>
     </resource>
     <resource>
@@ -1088,24 +1088,24 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/swallowing-screening-timing-category-ext"/>
-      </reference>
-      <name value="Swallowing Screening Timing Category"/>
-      <description value="Temporal category relative to stroke onset in which the swallowing screening was performed."/>
-      <isExample value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
         <reference value="CodeSystem/swallow-screen-time-cs"/>
       </reference>
-      <name value="Swallowing Screening Timing Category Code System"/>
-      <description value="Temporal categories relative to stroke onset for swallowing screening."/>
+      <name value="Swallowing Screening Timing Category CodeSystem"/>
+      <description value="Local CodeSystem that categorizes when a swallowing screening occurred relative to stroke onset/admission.&#xA;&#xA;**Primary use-case**&#xA;- Support process metrics such as “screening completed within 4 hours”.&#xA;&#xA;**FHIR placement**&#xA;- Used as a CodeableConcept in a Procedure extension (`SwallowingScreeningTimingCategoryExt`)."/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/swallowing-screening-timing-category-ext"/>
+      </reference>
+      <name value="Swallowing Screening Timing Category Extension"/>
+      <description value=" Extension capturing the **timing category** of swallowing screening relative to stroke onset/admission.&#xA;&#xA;**When to use**&#xA;- When you cannot reliably store an exact timestamp (or want an additional categorical indicator even if a timestamp exists).&#xA;&#xA;**How it complements base elements**&#xA;- `Procedure.occurrence[x]` stores the exact time when available.&#xA;- This extension stores a categorical bucket to support standardized reporting."/>
       <isExample value="false"/>
     </resource>
     <resource>

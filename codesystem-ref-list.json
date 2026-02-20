@@ -39,8 +39,8 @@
     "version" : "0.1.0",
     "status" : "active",
     "name" : "BrainImagingTypeCS",
-    "title" : "Brain Imaging Type Code System",
-    "description" : "Codes specifying the type of brain imaging performed (e.g., CT, MRI).",
+    "title" : "Brain Imaging Type CodeSystem",
+    "description" : "This local CodeSystem defines codes for **brain imaging protocol bundles** commonly used in acute stroke, such as CT+CTA+perfusion.\n\n**When to use**\n- The source system reports the study as a combined protocol (e.g., \"CT/CTA/CTP\") without individual modality breakdown.\n- You need a stable code for quality indicators and cohort definitions (e.g., “patients who had CT+CTA+perfusion”).",
     "uses" : {
     },
     "ValueSet-brain-imaging-modality-vs.html" : "Brain Imaging Modality ValueSet"
@@ -204,8 +204,8 @@
     "version" : "0.1.0",
     "status" : "active",
     "name" : "SwallowScreenTimeCS",
-    "title" : "Swallowing Screening Timing Category Code System",
-    "description" : "Temporal categories relative to stroke onset for swallowing screening.",
+    "title" : "Swallowing Screening Timing Category CodeSystem",
+    "description" : "Local CodeSystem that categorizes when a swallowing screening occurred relative to stroke onset/admission.\n\n**Primary use-case**\n- Support process metrics such as “screening completed within 4 hours”.\n\n**FHIR placement**\n- Used as a CodeableConcept in a Procedure extension (`SwallowingScreeningTimingCategoryExt`).",
     "uses" : {
     },
     "ValueSet-swallowing-screening-timing-category-vs.html" : "Swallowing Screening Timing Category ValueSet"

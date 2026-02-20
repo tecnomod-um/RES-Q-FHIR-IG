@@ -43,7 +43,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
   "version" : "0.1.0",
   "name" : "RESQIG",
   "status" : "draft",
-  "date" : "2026-02-20T08:43:58+00:00",
+  "date" : "2026-02-20T08:47:00+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",
@@ -173,7 +173,7 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
         "reference" : "ValueSet/brain-imaging-modality-vs"
       },
       "name" : "Brain Imaging Modality ValueSet",
-      "description" : "Defines the SNOMED CT codes for individual brain imaging modalities performed as procedures.",
+      "description" : "This ValueSet defines the allowed codes for documenting **stroke-related brain imaging** as a Procedure.\n\nIt intentionally supports two levels of coding:\n1) **Granular SNOMED CT procedures** (preferred when available).\n2) **Local combined-protocol codes** from `BrainImagingTypeCS` (used when the source reports protocol bundles).\n\n**Primary use-case**\n- Required binding to `Procedure.code` for brain imaging within the stroke episode.",
       "isExample" : false
     },
     {
@@ -184,8 +184,8 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
       "reference" : {
         "reference" : "CodeSystem/brain-imaging-type-cs"
       },
-      "name" : "Brain Imaging Type Code System",
-      "description" : "Codes specifying the type of brain imaging performed (e.g., CT, MRI).",
+      "name" : "Brain Imaging Type CodeSystem",
+      "description" : "This local CodeSystem defines codes for **brain imaging protocol bundles** commonly used in acute stroke, such as CT+CTA+perfusion.\n\n**When to use**\n- The source system reports the study as a combined protocol (e.g., \"CT/CTA/CTP\") without individual modality breakdown.\n- You need a stable code for quality indicators and cohort definitions (e.g., “patients who had CT+CTA+perfusion”).",
       "isExample" : false
     },
     {
@@ -1223,25 +1223,25 @@ This work has been made as part of the [RES-Q+ project](https://www.resqplus.eu)
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/swallowing-screening-timing-category-ext"
-      },
-      "name" : "Swallowing Screening Timing Category",
-      "description" : "Temporal category relative to stroke onset in which the swallowing screening was performed.",
-      "isExample" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
       }],
       "reference" : {
         "reference" : "CodeSystem/swallow-screen-time-cs"
       },
-      "name" : "Swallowing Screening Timing Category Code System",
-      "description" : "Temporal categories relative to stroke onset for swallowing screening.",
+      "name" : "Swallowing Screening Timing Category CodeSystem",
+      "description" : "Local CodeSystem that categorizes when a swallowing screening occurred relative to stroke onset/admission.\n\n**Primary use-case**\n- Support process metrics such as “screening completed within 4 hours”.\n\n**FHIR placement**\n- Used as a CodeableConcept in a Procedure extension (`SwallowingScreeningTimingCategoryExt`).",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/swallowing-screening-timing-category-ext"
+      },
+      "name" : "Swallowing Screening Timing Category Extension",
+      "description" : " Extension capturing the **timing category** of swallowing screening relative to stroke onset/admission.\n\n**When to use**\n- When you cannot reliably store an exact timestamp (or want an additional categorical indicator even if a timestamp exists).\n\n**How it complements base elements**\n- `Procedure.occurrence[x]` stores the exact time when available.\n- This extension stores a categorical bucket to support standardized reporting.",
       "isExample" : false
     },
     {

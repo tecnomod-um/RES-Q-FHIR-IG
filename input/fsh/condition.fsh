@@ -106,6 +106,7 @@ This ValueSet enumerates SNOMED CT disorder concepts representing **pre-existing
 * SCT#266257000 "Transient ischemic attack (disorder)"
 * SCT#422504002 "Ischemic stroke (disorder)"
 * SCT#230690007 "Cerebrovascular accident (disorder)"
+* SCT#77176002 "Smoker (finding)"
 
 
 ValueSet: DischargeDestinationVS

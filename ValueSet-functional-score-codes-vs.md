@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/functional-score-codes-vs | *Version*:1.0.0 |
-| Active as of 2026-02-20 | *Computable Name*:FunctionalScoreCodesVS |
+| Active as of 2026-02-24 | *Computable Name*:FunctionalScoreCodesVS |
 
  
 This ValueSet constrains `Observation.code` for functional outcome and severity instruments represented in this guide: 
@@ -60,7 +60,7 @@ This ValueSet constrains `Observation.code` for functional outcome and severity 
   "name" : "FunctionalScoreCodesVS",
   "title" : "Stroke Functional Score Codes ValueSet",
   "status" : "active",
-  "date" : "2026-02-20T10:31:35+00:00",
+  "date" : "2026-02-24T10:24:43+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

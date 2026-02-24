@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/gender-snomed-ext | *Version*:1.0.0 |
-| Draft as of 2026-02-20 | *Computable Name*:GenderSNOMED |
+| Draft as of 2026-02-24 | *Computable Name*:GenderSNOMED |
 
 Patient gender represented with SNOMED CT codes.
 
@@ -53,7 +53,7 @@ Other representations of profile: [CSV](StructureDefinition-gender-snomed-ext.cs
   "name" : "GenderSNOMED",
   "title" : "Gender (SNOMED CT)",
   "status" : "draft",
-  "date" : "2026-02-20T10:31:35+00:00",
+  "date" : "2026-02-24T10:24:43+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

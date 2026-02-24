@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/base-stroke-observation | *Version*:1.0.0 |
-| Active as of 2026-02-20 | *Computable Name*:BaseStrokeObservation |
+| Active as of 2026-02-24 | *Computable Name*:BaseStrokeObservation |
 
  
 Common constraints for Observations captured in the context of stroke care across acute management and follow-up. This base profile establishes a consistent minimum dataset and reference structure so specialized observation profiles behave uniformly. 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-base-stroke-observat
   "name" : "BaseStrokeObservation",
   "title" : "Base Profile for Stroke-Related Observations",
   "status" : "active",
-  "date" : "2026-02-20T10:31:35+00:00",
+  "date" : "2026-02-24T10:24:43+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

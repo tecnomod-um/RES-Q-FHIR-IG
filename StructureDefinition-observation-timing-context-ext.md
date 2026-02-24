@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/observation-timing-context-ext | *Version*:1.0.0 |
-| Draft as of 2026-02-20 | *Computable Name*:ObservationTimingContextExtension |
+| Draft as of 2026-02-24 | *Computable Name*:ObservationTimingContextExtension |
 
 This extension captures the **clinical timing context (phase)** in which an observation or assessment was made (e.g., pre-stroke baseline, admission, discharge, ~3-month follow-up).
 
@@ -66,7 +66,7 @@ Other representations of profile: [CSV](StructureDefinition-observation-timing-c
   "name" : "ObservationTimingContextExtension",
   "title" : "Observation Timing Context Extension",
   "status" : "draft",
-  "date" : "2026-02-20T10:31:35+00:00",
+  "date" : "2026-02-24T10:24:43+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

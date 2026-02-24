@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/CodeSystem/medication-cs | *Version*:1.0.0 |
-| Draft as of 2026-02-20 | *Computable Name*:MedicationCS |
+| Draft as of 2026-02-24 | *Computable Name*:MedicationCS |
 
  
 Local CodeSystem providing **coarse medication categories** used in discharge prescribing when the source system cannot (or does not) provide a specific coded drug product/substance. 
@@ -39,7 +39,7 @@ Local CodeSystem providing **coarse medication categories** used in discharge pr
   "name" : "MedicationCS",
   "title" : "Discharge Medication Category CodeSystem",
   "status" : "draft",
-  "date" : "2026-02-20T10:31:35+00:00",
+  "date" : "2026-02-24T10:24:43+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

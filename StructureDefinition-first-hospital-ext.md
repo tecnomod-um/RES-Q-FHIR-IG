@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/first-hospital-ext | *Version*:1.0.0 |
-| Draft as of 2026-02-20 | *Computable Name*:FirstHospitalExtension |
+| Draft as of 2026-02-24 | *Computable Name*:FirstHospitalExtension |
 
 Boolean extension indicating whether the reporting hospital was the **first medical facility** to admit the patient for this stroke episode.
 
@@ -65,7 +65,7 @@ Other representations of profile: [CSV](StructureDefinition-first-hospital-ext.c
   "name" : "FirstHospitalExtension",
   "title" : "First Hospital Indicator Extension",
   "status" : "draft",
-  "date" : "2026-02-20T10:31:35+00:00",
+  "date" : "2026-02-24T10:24:43+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

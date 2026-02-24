@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/CodeSystem/stroke-arrival-mode-cs | *Version*:1.0.0 |
-| Active as of 2026-02-20 | *Computable Name*:StrokeArrivalModeCS |
+| Active as of 2026-02-24 | *Computable Name*:StrokeArrivalModeCS |
 
  
 Local CodeSystem describing **how and from where** the patient arrived to the treating hospital for the index stroke encounter. 
@@ -43,7 +43,7 @@ Local CodeSystem describing **how and from where** the patient arrived to the tr
   "title" : "Stroke Arrival Mode CodeSystem",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-20T10:31:35+00:00",
+  "date" : "2026-02-24T10:24:43+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

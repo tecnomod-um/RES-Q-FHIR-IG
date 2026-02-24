@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/assessment-context-vs | *Version*:1.0.0 |
-| Active as of 2026-02-20 | *Computable Name*:AssessmentContextVS |
+| Active as of 2026-02-24 | *Computable Name*:AssessmentContextVS |
 
  
 This ValueSet includes all phase/context codes from AssessmentContextCS. 
@@ -54,7 +54,7 @@ This ValueSet includes all phase/context codes from AssessmentContextCS.
   "title" : "Assessment Context ValueSet",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-20T10:31:35+00:00",
+  "date" : "2026-02-24T10:24:43+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

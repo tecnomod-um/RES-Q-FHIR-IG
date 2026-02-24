@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/vital-sign-codes-vs | *Version*:1.0.0 |
-| Active as of 2026-02-20 | *Computable Name*:VitalSignCodesVS |
+| Active as of 2026-02-24 | *Computable Name*:VitalSignCodesVS |
 
  
 This ValueSet defines SNOMED CT observable-entity codes for blood pressure components captured as vital signs: 
@@ -61,7 +61,7 @@ This ValueSet defines SNOMED CT observable-entity codes for blood pressure compo
   "title" : "Stroke Vital Sign Codes ValueSet",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-20T10:31:35+00:00",
+  "date" : "2026-02-24T10:24:43+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/prior-medication-statement-profile | *Version*:1.0.0 |
-| Active as of 2026-02-20 | *Computable Name*:PriorMedicationStatementProfile |
+| Active as of 2026-02-24 | *Computable Name*:PriorMedicationStatementProfile |
 
  
 Profile for documenting a statement about the patient’s medication use **before** the index stroke encounter. 
@@ -66,7 +66,7 @@ Other representations of profile: [CSV](StructureDefinition-prior-medication-sta
   "title" : "Prior MedicationStatement Profile",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-20T10:31:35+00:00",
+  "date" : "2026-02-24T10:24:43+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

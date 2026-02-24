@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/age-at-onset-observation-profile | *Version*:1.0.0 |
-| Draft as of 2026-02-20 | *Computable Name*:AgeAtOnsetObservationProfile |
+| Draft as of 2026-02-24 | *Computable Name*:AgeAtOnsetObservationProfile |
 
  
 Profile for recording the patient’s age at the time of stroke onset as an integer value in years. 
@@ -50,7 +50,7 @@ Other representations of profile: [CSV](StructureDefinition-age-at-onset-observa
   "name" : "AgeAtOnsetObservationProfile",
   "title" : "Age at Stroke Onset Observation Profile (R5)",
   "status" : "draft",
-  "date" : "2026-02-20T10:31:35+00:00",
+  "date" : "2026-02-24T10:24:43+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

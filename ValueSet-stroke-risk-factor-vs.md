@@ -125,6 +125,10 @@ To provide a standardized set of SNOMED CT concepts representing stroke-related 
       {
         "code" : "230690007",
         "display" : "Cerebrovascular accident (disorder)"
+      },
+      {
+        "code" : "77176002",
+        "display" : "Smoker (finding)"
       }]
     }]
   }

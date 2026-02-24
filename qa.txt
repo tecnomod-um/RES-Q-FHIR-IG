@@ -3,7 +3,7 @@ RESQIG : Validation Results
 
 err = 4, warn = 127, info = 42
 IG Publisher Version: 2.1.1
-Generated Fri Feb 20 10:33:08 UTC 2026. FHIR version 5.0.0 for RES-Q-FHIR-IG#1.0.0 (canonical = http://tecnomod-um.org)
+Generated Tue Feb 24 10:26:15 UTC 2026. FHIR version 5.0.0 for RES-Q-FHIR-IG#1.0.0 (canonical = http://tecnomod-um.org)
  Build Errors : 684 / 706 / 0
  /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/CodeSystem-assessment-context-cs : 0 / 0 / 1
  /home/runner/work/RES-Q-FHIR-IG/RES-Q-FHIR-IG/fsh-generated/resources/CodeSystem-brain-imaging-type-cs : 0 / 2 / 2
@@ -1396,11 +1396,11 @@ WARNING: ValueSet-stroke-risk-factor-vs.change.history.html#/html/body/div/div/d
 ERROR: ValueSet-stroke-risk-factor-vs.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 103, column 10: The link 'extensions.html' for "Extensions" cannot be resolved
 WARNING: ValueSet-stroke-risk-factor-vs.html#/html/body/div/div/div/p/a at Line 351, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 ERROR: ValueSet-stroke-risk-factor-vs.json.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 105, column 10: The link 'extensions.html' for "Extensions" cannot be resolved
-WARNING: ValueSet-stroke-risk-factor-vs.json.html#/html/body/div/div/div/p/a at Line 330, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
+WARNING: ValueSet-stroke-risk-factor-vs.json.html#/html/body/div/div/div/p/a at Line 334, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 ERROR: ValueSet-stroke-risk-factor-vs.ttl.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 105, column 10: The link 'extensions.html' for "Extensions" cannot be resolved
-WARNING: ValueSet-stroke-risk-factor-vs.ttl.html#/html/body/div/div/div/p/a at Line 315, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
+WARNING: ValueSet-stroke-risk-factor-vs.ttl.html#/html/body/div/div/div/p/a at Line 317, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 ERROR: ValueSet-stroke-risk-factor-vs.xml.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 105, column 10: The link 'extensions.html' for "Extensions" cannot be resolved
-WARNING: ValueSet-stroke-risk-factor-vs.xml.html#/html/body/div/div/div/p/a at Line 336, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
+WARNING: ValueSet-stroke-risk-factor-vs.xml.html#/html/body/div/div/div/p/a at Line 340, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 ERROR: ValueSet-swallow-procedures-vs-testing.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 103, column 10: The link 'extensions.html' for "Extensions" cannot be resolved
 WARNING: ValueSet-swallow-procedures-vs-testing.html#/html/body/div/div/div/p/a at Line 254, column 28: The link 'http://tecnomod-um.org' for "UMU" is a canonical link and is therefore unsafe with regard to versions
 ERROR: ValueSet-swallow-procedures-vs.change.history.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 107, column 10: The link 'extensions.html' for "Extensions" cannot be resolved

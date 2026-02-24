@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/stroke-swallow-procedure-profile | *Version*:1.0.0 |
-| Active as of 2026-02-20 | *Computable Name*:StrokeSwallowProcedureProfile |
+| Active as of 2026-02-24 | *Computable Name*:StrokeSwallowProcedureProfile |
 
  
 Profile for documenting **swallow screening / dysphagia assessment** during a stroke episode. 
@@ -49,7 +49,7 @@ Other representations of profile: [CSV](StructureDefinition-stroke-swallow-proce
   "name" : "StrokeSwallowProcedureProfile",
   "title" : "Stroke Swallow Procedure Profile",
   "status" : "active",
-  "date" : "2026-02-20T10:31:35+00:00",
+  "date" : "2026-02-24T10:24:43+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

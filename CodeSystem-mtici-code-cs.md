@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/CodeSystem/mtici-code-cs | *Version*:1.0.0 |
-| Active as of 2026-02-20 | *Computable Name*:MTICICodeCS |
+| Active as of 2026-02-24 | *Computable Name*:MTICICodeCS |
 
  
 This CodeSystem defines the **assessment concept code** used to indicate that an Observation is reporting an mTICI reperfusion grade. 
@@ -36,7 +36,7 @@ This CodeSystem defines the **assessment concept code** used to indicate that an
   "title" : "Modified Thrombolysis in Cerebral Infarction Assessment CodeSystem",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-20T10:31:35+00:00",
+  "date" : "2026-02-24T10:24:43+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/brain-imaging-modality-vs | *Version*:1.0.0 |
-| Active as of 2026-02-20 | *Computable Name*:BrainImagingModalityVS |
+| Active as of 2026-02-24 | *Computable Name*:BrainImagingModalityVS |
 
  
 This ValueSet defines the allowed codes for documenting **stroke-related brain imaging** as a Procedure. 
@@ -54,7 +54,7 @@ It intentionally supports two levels of coding: 1) **Granular SNOMED CT procedur
   "name" : "BrainImagingModalityVS",
   "title" : "Brain Imaging Modality ValueSet",
   "status" : "active",
-  "date" : "2026-02-20T10:31:35+00:00",
+  "date" : "2026-02-24T10:24:43+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

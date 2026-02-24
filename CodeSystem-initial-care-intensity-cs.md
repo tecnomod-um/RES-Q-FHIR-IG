@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/CodeSystem/initial-care-intensity-cs | *Version*:1.0.0 |
-| Active as of 2026-02-20 | *Computable Name*:InitialCareIntensityCS |
+| Active as of 2026-02-24 | *Computable Name*:InitialCareIntensityCS |
 
  
 Local CodeSystem representing the **initial intensity of care** during the first day(s) of the stroke encounter. 
@@ -44,7 +44,7 @@ Local CodeSystem representing the **initial intensity of care** during the first
   "title" : "Initial Care Intensity CodeSystem",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-20T10:31:35+00:00",
+  "date" : "2026-02-24T10:24:43+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

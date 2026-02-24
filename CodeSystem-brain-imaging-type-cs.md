@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/CodeSystem/brain-imaging-type-cs | *Version*:1.0.0 |
-| Active as of 2026-02-20 | *Computable Name*:BrainImagingTypeCS |
+| Active as of 2026-02-24 | *Computable Name*:BrainImagingTypeCS |
 
  
 This local CodeSystem defines codes for **brain imaging protocol bundles** commonly used in acute stroke, such as CT+CTA+perfusion. 
@@ -35,7 +35,7 @@ This local CodeSystem defines codes for **brain imaging protocol bundles** commo
   "name" : "BrainImagingTypeCS",
   "title" : "Brain Imaging Type CodeSystem",
   "status" : "active",
-  "date" : "2026-02-20T10:31:35+00:00",
+  "date" : "2026-02-24T10:24:43+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

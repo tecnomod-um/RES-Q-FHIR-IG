@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/CodeSystem/swallow-screen-time-cs | *Version*:1.0.0 |
-| Active as of 2026-02-20 | *Computable Name*:SwallowScreenTimeCS |
+| Active as of 2026-02-24 | *Computable Name*:SwallowScreenTimeCS |
 
  
 Local CodeSystem that categorizes when a swallowing screening occurred relative to stroke onset/admission. 
@@ -38,7 +38,7 @@ Local CodeSystem that categorizes when a swallowing screening occurred relative 
   "title" : "Swallowing Screening Timing Category CodeSystem",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-20T10:31:35+00:00",
+  "date" : "2026-02-24T10:24:43+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

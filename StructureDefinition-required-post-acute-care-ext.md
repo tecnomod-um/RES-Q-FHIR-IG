@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/required-post-acute-care-ext | *Version*:1.0.0 |
-| Draft as of 2026-02-20 | *Computable Name*:RequiredPostAcuteCareExtension |
+| Draft as of 2026-02-24 | *Computable Name*:RequiredPostAcuteCareExtension |
 
 Boolean extension indicating whether the patient required **ongoing inpatient care beyond the acute phase**.
 
@@ -60,7 +60,7 @@ Other representations of profile: [CSV](StructureDefinition-required-post-acute-
   "name" : "RequiredPostAcuteCareExtension",
   "title" : "Required Post-Acute Care Extension",
   "status" : "draft",
-  "date" : "2026-02-20T10:31:35+00:00",
+  "date" : "2026-02-24T10:24:43+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

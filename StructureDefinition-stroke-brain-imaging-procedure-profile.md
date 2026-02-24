@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/stroke-brain-imaging-procedure-profile | *Version*:1.0.0 |
-| Active as of 2026-02-20 | *Computable Name*:StrokeBrainImagingProcedureProfile |
+| Active as of 2026-02-24 | *Computable Name*:StrokeBrainImagingProcedureProfile |
 
  
 Profile for documenting **brain imaging performed during a stroke episode** as a FHIR R5 Procedure. 
@@ -49,7 +49,7 @@ Other representations of profile: [CSV](StructureDefinition-stroke-brain-imaging
   "name" : "StrokeBrainImagingProcedureProfile",
   "title" : "Stroke Brain Imaging Procedure Profile",
   "status" : "active",
-  "date" : "2026-02-20T10:31:35+00:00",
+  "date" : "2026-02-24T10:24:43+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

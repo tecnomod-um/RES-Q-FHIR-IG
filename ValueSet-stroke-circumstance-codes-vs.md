@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/stroke-circumstance-codes-vs | *Version*:1.0.0 |
-| Active as of 2026-02-20 | *Computable Name*:StrokeCircumstanceCodesVS |
+| Active as of 2026-02-24 | *Computable Name*:StrokeCircumstanceCodesVS |
 
  
 This ValueSet includes all onset-circumstance codes from StrokeCircumstanceCodesCS. 
@@ -53,7 +53,7 @@ This ValueSet includes all onset-circumstance codes from StrokeCircumstanceCodes
   "name" : "StrokeCircumstanceCodesVS",
   "title" : "Stroke Circumstance Codes ValueSet",
   "status" : "active",
-  "date" : "2026-02-20T10:31:35+00:00",
+  "date" : "2026-02-24T10:24:43+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

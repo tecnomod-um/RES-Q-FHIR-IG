@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/medication-vs | *Version*:1.0.0 |
-| Draft as of 2026-02-20 | *Computable Name*:MedicationVS |
+| Draft as of 2026-02-24 | *Computable Name*:MedicationVS |
 
  
 ValueSet defining allowable coded medications (or medication categories) for discharge MedicationRequests. 
@@ -58,7 +58,7 @@ ValueSet defining allowable coded medications (or medication categories) for dis
   "name" : "MedicationVS",
   "title" : "Discharge Medications ValueSet",
   "status" : "draft",
-  "date" : "2026-02-20T10:31:35+00:00",
+  "date" : "2026-02-24T10:24:43+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

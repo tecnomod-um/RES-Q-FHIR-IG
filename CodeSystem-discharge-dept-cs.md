@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/CodeSystem/discharge-dept-cs | *Version*:1.0.0 |
-| Active as of 2026-02-20 | *Computable Name*:DischargeDeptCS |
+| Active as of 2026-02-24 | *Computable Name*:DischargeDeptCS |
 
  
 Local CodeSystem representing the **clinical service/department** responsible for the patient at discharge/transfer (or the service the patient is transferred to). 
@@ -41,7 +41,7 @@ Local CodeSystem representing the **clinical service/department** responsible fo
   "name" : "DischargeDeptCS",
   "title" : "Discharge Department/Service CodeSystem",
   "status" : "active",
-  "date" : "2026-02-20T10:31:35+00:00",
+  "date" : "2026-02-24T10:24:43+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

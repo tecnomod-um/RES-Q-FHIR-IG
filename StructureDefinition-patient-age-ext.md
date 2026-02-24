@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/patient-age-ext | *Version*:1.0.0 |
-| Draft as of 2026-02-20 | *Computable Name*:PatientAge |
+| Draft as of 2026-02-24 | *Computable Name*:PatientAge |
 
 Patient age in years represented as an integer.
 
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-patient-age-ext.csv)
   "name" : "PatientAge",
   "title" : "Patient Age (integer)",
   "status" : "draft",
-  "date" : "2026-02-20T10:31:35+00:00",
+  "date" : "2026-02-24T10:24:43+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

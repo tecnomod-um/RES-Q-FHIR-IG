@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/stroke-encounter-profile | *Version*:1.0.0 |
-| Active as of 2026-02-20 | *Computable Name*:StrokeEncounterProfile |
+| Active as of 2026-02-24 | *Computable Name*:StrokeEncounterProfile |
 
  
 Profile for an Encounter representing a patient's **inpatient admission and hospital stay** for an index stroke event. 
@@ -58,7 +58,7 @@ Other representations of profile: [CSV](StructureDefinition-stroke-encounter-pro
   "name" : "StrokeEncounterProfile",
   "title" : "Stroke Encounter Profile",
   "status" : "active",
-  "date" : "2026-02-20T10:31:35+00:00",
+  "date" : "2026-02-24T10:24:43+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

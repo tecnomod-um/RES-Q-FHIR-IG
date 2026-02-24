@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/discharge-dept-vs | *Version*:1.0.0 |
-| Active as of 2026-02-20 | *Computable Name*:DischargeDeptVS |
+| Active as of 2026-02-24 | *Computable Name*:DischargeDeptVS |
 
  
 ValueSet restricting the allowed department/service categories recorded at discharge. 
@@ -53,7 +53,7 @@ ValueSet restricting the allowed department/service categories recorded at disch
   "name" : "DischargeDeptVS",
   "title" : "Discharge Department/Service ValueSet",
   "status" : "active",
-  "date" : "2026-02-20T10:31:35+00:00",
+  "date" : "2026-02-24T10:24:43+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

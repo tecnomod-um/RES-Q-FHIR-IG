@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/stroke-carotid-imaging-procedure-profile | *Version*:1.0.0 |
-| Active as of 2026-02-20 | *Computable Name*:StrokeCarotidImagingProcedureProfile |
+| Active as of 2026-02-24 | *Computable Name*:StrokeCarotidImagingProcedureProfile |
 
  
 Profile for documenting **carotid angiography** within a stroke episode. 
@@ -50,7 +50,7 @@ Other representations of profile: [CSV](StructureDefinition-stroke-carotid-imagi
   "name" : "StrokeCarotidImagingProcedureProfile",
   "title" : "Stroke Carotid Imaging Procedure Profile",
   "status" : "active",
-  "date" : "2026-02-20T10:31:35+00:00",
+  "date" : "2026-02-24T10:24:43+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

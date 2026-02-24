@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/CodeSystem/thrombectomy-complication-cs | *Version*:1.0.0 |
-| Active as of 2026-02-20 | *Computable Name*:ThrombectomyComplicationCS |
+| Active as of 2026-02-24 | *Computable Name*:ThrombectomyComplicationCS |
 
  
 Local CodeSystem for complications occurring during mechanical thrombectomy. 
@@ -41,7 +41,7 @@ Local CodeSystem for complications occurring during mechanical thrombectomy.
   "name" : "ThrombectomyComplicationCS",
   "title" : "Thrombectomy Complication CodeSystem",
   "status" : "active",
-  "date" : "2026-02-20T10:31:35+00:00",
+  "date" : "2026-02-24T10:24:43+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

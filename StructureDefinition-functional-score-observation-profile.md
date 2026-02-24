@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/functional-score-observation-profile | *Version*:1.0.0 |
-| Draft as of 2026-02-20 | *Computable Name*:FunctionalScoreObservationProfile |
+| Draft as of 2026-02-24 | *Computable Name*:FunctionalScoreObservationProfile |
 
  
 Profile for recording stroke functional outcome and severity scores (currently mRS and NIHSS) in an interoperable, context-aware way. 
@@ -53,7 +53,7 @@ Other representations of profile: [CSV](StructureDefinition-functional-score-obs
   "name" : "FunctionalScoreObservationProfile",
   "title" : "Stroke Functional Score Observation Profile",
   "status" : "draft",
-  "date" : "2026-02-20T10:31:35+00:00",
+  "date" : "2026-02-24T10:24:43+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

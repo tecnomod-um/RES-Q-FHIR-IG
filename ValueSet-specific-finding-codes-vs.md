@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/specific-finding-codes-vs | *Version*:1.0.0 |
-| Active as of 2026-02-20 | *Computable Name*:SpecificFindingCodesVS |
+| Active as of 2026-02-24 | *Computable Name*:SpecificFindingCodesVS |
 
  
 This ValueSet provides SNOMED CT disorder concepts for specific findings referenced in the stroke workup. Currently includes: 
@@ -60,7 +60,7 @@ This ValueSet provides SNOMED CT disorder concepts for specific findings referen
   "name" : "SpecificFindingCodesVS",
   "title" : "Specific Stroke Finding Codes ValueSet",
   "status" : "active",
-  "date" : "2026-02-20T10:31:35+00:00",
+  "date" : "2026-02-24T10:24:43+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

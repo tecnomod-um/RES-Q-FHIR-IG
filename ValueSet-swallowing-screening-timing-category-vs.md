@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/ValueSet/swallowing-screening-timing-category-vs | *Version*:1.0.0 |
-| Active as of 2026-02-20 | *Computable Name*:SwallowingScreeningTimingCategoryVS |
+| Active as of 2026-02-24 | *Computable Name*:SwallowingScreeningTimingCategoryVS |
 
  
 ValueSet defining allowed categories for swallowing screening timing, combining: 
@@ -56,7 +56,7 @@ ValueSet defining allowed categories for swallowing screening timing, combining:
   "name" : "SwallowingScreeningTimingCategoryVS",
   "title" : "Swallowing Screening Timing Category ValueSet",
   "status" : "active",
-  "date" : "2026-02-20T10:31:35+00:00",
+  "date" : "2026-02-24T10:24:43+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

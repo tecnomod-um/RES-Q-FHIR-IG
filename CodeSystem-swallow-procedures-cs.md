@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/CodeSystem/swallow-procedures-cs | *Version*:1.0.0 |
-| Active as of 2026-02-20 | *Computable Name*:SwallowProceduresCS |
+| Active as of 2026-02-24 | *Computable Name*:SwallowProceduresCS |
 
  
 Local CodeSystem representing swallowing screening/assessment tools often documented by acronym or local naming. 
@@ -34,7 +34,7 @@ Local CodeSystem representing swallowing screening/assessment tools often docume
   "name" : "SwallowProceduresCS",
   "title" : "Swallow Procedures CodeSystem",
   "status" : "active",
-  "date" : "2026-02-20T10:31:35+00:00",
+  "date" : "2026-02-24T10:24:43+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

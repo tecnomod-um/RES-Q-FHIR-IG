@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/StructureDefinition/discharge-medication-request-profile | *Version*:1.0.0 |
-| Active as of 2026-02-20 | *Computable Name*:DischargeMedicationRequestProfile |
+| Active as of 2026-02-24 | *Computable Name*:DischargeMedicationRequestProfile |
 
  
 Profile for representing a medication prescription issued as part of the patient’s **discharge plan** following a stroke encounter. 
@@ -64,7 +64,7 @@ Other representations of profile: [CSV](StructureDefinition-discharge-medication
   "name" : "DischargeMedicationRequestProfile",
   "title" : "Discharge MedicationRequest Profile",
   "status" : "active",
-  "date" : "2026-02-20T10:31:35+00:00",
+  "date" : "2026-02-24T10:24:43+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

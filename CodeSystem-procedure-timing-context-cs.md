@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/CodeSystem/procedure-timing-context-cs | *Version*:1.0.0 |
-| Active as of 2026-02-20 | *Computable Name*:ProcedureTimingContextCS |
+| Active as of 2026-02-24 | *Computable Name*:ProcedureTimingContextCS |
 
  
 Local CodeSystem for classifying a procedure into a **timing context** relative to encounter start. 
@@ -38,7 +38,7 @@ Local CodeSystem for classifying a procedure into a **timing context** relative 
   "title" : "Procedure Timing Context CodeSystem",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-20T10:31:35+00:00",
+  "date" : "2026-02-24T10:24:43+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

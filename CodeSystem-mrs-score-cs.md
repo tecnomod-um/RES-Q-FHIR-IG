@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/CodeSystem/mrs-score-cs | *Version*:1.0.0 |
-| Active as of 2026-02-20 | *Computable Name*:MRsScoreCS |
+| Active as of 2026-02-24 | *Computable Name*:MRsScoreCS |
 
  
 This CodeSystem defines codes for the **modified Rankin Scale (mRS)**, an ordinal measure of global disability and functional outcome. Scores range from 0 (no symptoms) to 5 (severe disability), with 6 indicating death. 
@@ -39,7 +39,7 @@ This CodeSystem defines codes for the **modified Rankin Scale (mRS)**, an ordina
   "title" : "Modified Rankin Scale Score Code System",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-20T10:31:35+00:00",
+  "date" : "2026-02-24T10:24:43+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://tecnomod-um.org/CodeSystem/stroke-proc-not-done-reason-cs | *Version*:1.0.0 |
-| Active as of 2026-02-20 | *Computable Name*:StrokeProcNotDoneReasonCS |
+| Active as of 2026-02-24 | *Computable Name*:StrokeProcNotDoneReasonCS |
 
  
 Local CodeSystem enumerating standardized reasons why a key stroke procedure (e.g., IV thrombolysis or mechanical thrombectomy) was **not performed**. 
@@ -44,7 +44,7 @@ Local CodeSystem enumerating standardized reasons why a key stroke procedure (e.
   "title" : "Stroke Procedure Not Done Reasons CodeSystem",
   "status" : "active",
   "experimental" : true,
-  "date" : "2026-02-20T10:31:35+00:00",
+  "date" : "2026-02-24T10:24:43+00:00",
   "publisher" : "UMU",
   "contact" : [{
     "name" : "UMU",
